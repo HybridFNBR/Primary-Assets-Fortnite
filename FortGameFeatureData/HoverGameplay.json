@@ -1,0 +1,101 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "HoverGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/HoverGameplay/Levels/HoverGameplay_LevelOverlay.HoverGameplay_LevelOverlay",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/HoverGameplay/Input/Mobile/HoverHUDWidgetRegistry.HoverHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "ContextualTutorials": [
+      {
+        "AssetPathName": "/HoverGameplay/Tutorial/HoverGameplay_TutorialData_HoverCancel.HoverGameplay_TutorialData_HoverCancel",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/HoverGameplay/Tutorial/HoverGameplay_TutorialData_HoverSprint.HoverGameplay_TutorialData_HoverSprint",
+        "SubPathString": ""
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Evergreen",
+        "DisplayName": "Jetpack",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/AGID_BoostJumpPack_VR 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'HoverGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/HoverGameplay/HoverGameplay.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddComponents'HoverGameplay:GameFeatureAction_AddComponents_0'",
+        "ObjectPath": "/HoverGameplay/HoverGameplay.3"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddInputContextMapping'HoverGameplay:GameFeatureAction_AddInputContextMapping_0'",
+        "ObjectPath": "/HoverGameplay/HoverGameplay.4"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddAttributeDefaults'HoverGameplay:GameFeatureAction_AddAttributeDefaults_0'",
+        "ObjectPath": "/HoverGameplay/HoverGameplay.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "AthenaGadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "Type": "FortGameplayModifierItemDefinition",
+  "Name": "GM_Enemy_OnDeath_ApplySpeedMods",
+  "Class": "UScriptClass'FortGameplayModifierItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "PersistentAbilitySets": [
+      {
+        "DeliveryRequirements": {
+          "SourceTagRequirements": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTagRequirements": {
+            "RequireTags": [],
+            "IgnoreTags": [
+              "NPC.CharacterType.MiniBoss",
+              "Pawn.Athena.NPC.Wildlife"
+            ],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "ApplicableTeamAffiliation": "EFortTeamAffiliation::Friendly",
+          "bConsiderTeamAffiliationToInstigator": false,
+          "ApplicableTeam": "EFortTeam::Monster",
+          "bConsiderTeam": true,
+          "bApplyToPlayerPawns": false,
+          "bApplyToAIPawns": true,
+          "bApplyToBuildingActors": false,
+          "BuildingActorSpecification": "EFortDeliveryInfoBuildingActorSpecification::All",
+          "bApplyToGlobalEnvironmentAbilityActor": false
+        },
+        "AbilitySets": [
+          {
+            "AssetPathName": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Enemy/GAS_GM_OnDeath_SpeedUpFriends.GAS_GM_OnDeath_SpeedUpFriends",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "DEC6608D43DBD526E025DF9AC7704951",
+      "SourceString": "Frenzied Deathburst",
+      "LocalizedString": "Frenzied Deathburst"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "4F8FB260435FBB3803AEA3A08A8B0566",
+      "SourceString": "When enemies die, they grant nearby enemies a brief increase in attack as well as both movement and attack speed.",
+      "LocalizedString": "When enemies die, they grant nearby enemies a brief increase in attack as well as both movement and attack speed."
+    },
+    "DataList": [
+      {
+        "MinLevel": 1,
+        "MaxLevel": 1
+      },
+      {
+        "Icon": {
+          "AssetPathName": "/SaveTheWorld/UI/Foundation/Textures/Icons/MissionModifiers/T-Icon-Modifier-Neg-Enemy-OnDeath-ApplySpeedMods-64.T-Icon-Modifier-Neg-Enemy-OnDeath-ApplySpeedMods-64",
+          "SubPathString": ""
+        }
+      },
+      {
+        "LargeIcon": {
+          "AssetPathName": "/SaveTheWorld/UI/Foundation/Textures/Icons/MissionModifiers/T-Icon-Modifier-Neg-Enemy-OnDeath-ApplySpeedMods-128.T-Icon-Modifier-Neg-Enemy-OnDeath-ApplySpeedMods-128",
+          "SubPathString": ""
+        }
+      }
+    ]
+  }
+}

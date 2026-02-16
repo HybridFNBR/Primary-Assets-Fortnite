@@ -1,0 +1,89 @@
+{
+  "Type": "FortMissionGenerationList",
+  "Name": "MGL_FightTheStorm",
+  "Class": "UScriptClass'FortMissionGenerationList'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "PerDifficultyMissionGenerationInfos": [
+      {
+        "MinDifficulty": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "MaxDifficulty": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "MissionGenerationInfos": [
+          {
+            "NumMissionsRequired": 1,
+            "MaxMissionsAllowed": -1,
+            "MissionTagRequirements": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [
+                {
+                  "TagName": "Stat.Mission.Secondary.Encampment"
+                },
+                {
+                  "TagName": "Stat.Mission.Size.Large"
+                }
+              ],
+              "QueryTokenStream": [
+                0,
+                1,
+                2,
+                2,
+                0,
+                1
+              ],
+              "UserDescription": "",
+              "AutoDescription": " ALL( Stat.Mission.Secondary.Encampment, Stat.Mission.Size.Large )"
+            }
+          },
+          {
+            "NumMissionsRequired": 8,
+            "MaxMissionsAllowed": 10,
+            "MissionTagRequirements": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [
+                {
+                  "TagName": "Activities.DynamicPlacement.Mission.Secondary"
+                }
+              ],
+              "QueryTokenStream": [
+                0,
+                1,
+                1,
+                1,
+                0
+              ],
+              "UserDescription": "Require Minimum Number of all Secondaries",
+              "AutoDescription": " ANY( Activities.DynamicPlacement.Mission.Secondary )"
+            }
+          },
+          {
+            "NumMissionsRequired": 2,
+            "MaxMissionsAllowed": 2,
+            "MissionTagRequirements": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [
+                {
+                  "TagName": "Stat.Mission.Survivor"
+                }
+              ],
+              "QueryTokenStream": [
+                0,
+                1,
+                1,
+                1,
+                0
+              ],
+              "UserDescription": "Survivor Missions",
+              "AutoDescription": " ANY( Stat.Mission.Survivor )"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

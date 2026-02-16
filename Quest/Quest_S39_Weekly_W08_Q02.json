@@ -1,0 +1,442 @@
+{
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_S39_Weekly_W08_Q02",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S39/T_Soldier_MarineCarve_Anklet_L.T_Soldier_MarineCarve_Anklet_L",
+      "SubPathString": ""
+    },
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S39_Weekly_W08_Q02_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "bIncrementByDamageAmount": true,
+            "bUseDamageAmount": false,
+            "bIncrementByUncappedDamage": false,
+            "bUseUncappedDamage": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Faction.Generic.Hostile"
+                  },
+                  {
+                    "TagName": "Homebase.Class"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Duel.IsBeingChallenged"
+                  },
+                  {
+                    "TagName": "Athena.Gameplay.Status.Converted"
+                  },
+                  {
+                    "TagName": "Quests.Wildlife.IsOpponent"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Tandem"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Specialist"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Wildlife"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Labrador"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  4,
+                  2,
+                  1,
+                  5,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  2,
+                  1,
+                  1,
+                  5,
+                  3,
+                  3,
+                  6,
+                  7,
+                  8,
+                  3,
+                  1,
+                  9
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ANY(  ANY( Athena.Faction.Generic.Hostile, Homebase.Class, Pawn.Athena.NPC.Duel.IsBeingChallenged, Athena.Gameplay.Status.Converted, Quests.Wildlife.IsOpponent ),  ALL(  ANY( AISpawnerData.Type ),  NONE( AISpawnerData.Type.Tandem, AISpawnerData.Type.Specialist, Pawn.Athena.NPC.Wildlife ) ) ),  NONE( Pawn.Athena.NPC.Labrador ) )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "UncappedDamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "MovementMode.Falling"
+                  },
+                  {
+                    "TagName": "MovementMode.Flying"
+                  },
+                  {
+                    "TagName": "Gameplay.MovementMode.DoubleJumpActivated"
+                  },
+                  {
+                    "TagName": "Athena.Gameplay.HotAirBalloon.PlayerOnBoard"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  4,
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( MovementMode.Falling, MovementMode.Flying, Gameplay.MovementMode.DoubleJumpActivated, Athena.Gameplay.HotAirBalloon.PlayerOnBoard )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          },
+          {
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "bIncrementByDamageAmount": true,
+            "bUseDamageAmount": false,
+            "bIncrementByUncappedDamage": false,
+            "bUseUncappedDamage": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "MovementMode.Falling"
+                  },
+                  {
+                    "TagName": "MovementMode.Flying"
+                  },
+                  {
+                    "TagName": "Gameplay.MovementMode.DoubleJumpActivated"
+                  },
+                  {
+                    "TagName": "Athena.Gameplay.HotAirBalloon.PlayerOnBoard"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  4,
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( MovementMode.Falling, MovementMode.Flying, Gameplay.MovementMode.DoubleJumpActivated, Athena.Gameplay.HotAirBalloon.PlayerOnBoard )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "UncappedDamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "7B3695854315A5F2F93D40A3384A5690",
+          "SourceString": "Damage opponents while airborne",
+          "LocalizedString": "Damage opponents while airborne"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 250,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        },
+        {
+          "TagName": "Product.BR.BlastBerry"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        2,
+        1,
+        0,
+        3,
+        1,
+        1
+      ],
+      "UserDescription": "BR Excluding BlastBerry",
+      "AutoDescription": " ALL(  ALL( Product.BR ),  NONE( Product.BR.BlastBerry ) )"
+    },
+    "Category": {
+      "DataTable": {
+        "ObjectName": "DataTable'QuestCategoryTable'",
+        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+      },
+      "RowName": "WeeklyQuests"
+    },
+    "SortPriority": 2,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S39_Weekly_W08_Q02:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S39_Weekly_W08_Q02.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S39_Weekly_W08_Q02:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S39_Weekly_W08_Q02.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S39_Weekly_W08_Q02_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "2585256145A582E0701151AF161840D7",
+      "SourceString": "Damage opponents while airborne",
+      "LocalizedString": "Damage opponents while airborne"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "C755CD8F46C4873943BDC792775DB8E7",
+      "SourceString": "Damage opponents while airborne",
+      "LocalizedString": "Damage opponents while airborne"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "B63EEDF94C815AF4038388B552FB1655",
+      "SourceString": "Investigate from the best vantage point possible.",
+      "LocalizedString": "Investigate from the best vantage point possible."
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.BR.Weekly.Character.04"
+        ]
+      }
+    ]
+  }
+}

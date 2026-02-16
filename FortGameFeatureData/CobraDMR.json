@@ -1,0 +1,55 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "CobraDMR",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/CobraDMR/CobraDMR_LevelOverlay.CobraDMR_LevelOverlay",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S22",
+        "DisplayName": "Give Cobra DMR",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /CobraDMR/DMR/WID_DMR22_Athena_R 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CobraDMR:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/CobraDMR/CobraDMR.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'CobraDMR:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/CobraDMR/CobraDMR.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "DMR"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

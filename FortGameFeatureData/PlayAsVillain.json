@@ -1,0 +1,133 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "PlayAsVillain",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultGameData": {
+      "AssetPathName": "/PlayAsVillain/DataTables/PlayAsVillain_GameData.PlayAsVillain_GameData",
+      "SubPathString": ""
+    },
+    "PlaylistOverrideGameDataMappings": [
+      {
+        "TagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Plugin.Playlist.Arena"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ANY( Plugin.Playlist.Arena )"
+        },
+        "OverrideGameData": {
+          "AssetPathName": "/PlayAsVillain/DataTables/Comp/PlayAsVillain_GameData_Comp.PlayAsVillain_GameData_Comp",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch7S1 - Play As Boss",
+        "DisplayName": "Cancel PaV transformation",
+        "ConsoleCommands": [
+          "cheat givespecificitem /PlayAsVillain/Gameplay/AGID_VillainTransformation_Cancel 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PlayAsVillain:FortGameFeatureAction_AddToPlaylists_1'",
+        "ObjectPath": "/PlayAsVillain/PlayAsVillain.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'PlayAsVillain:GameFeatureAction_AddWorldPartitionContent_0'",
+        "ObjectPath": "/PlayAsVillain/PlayAsVillain.4"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddComponents'PlayAsVillain:GameFeatureAction_AddComponents_0'",
+        "ObjectPath": "/PlayAsVillain/PlayAsVillain.3"
+      },
+      {
+        "ObjectName": "FortUIGameFeatureAction_AddMapLegendEntries'PlayAsVillain:FortUIGameFeatureAction_AddMapLegendEntries_0'",
+        "ObjectPath": "/PlayAsVillain/PlayAsVillain.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Gadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "AthenaGadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

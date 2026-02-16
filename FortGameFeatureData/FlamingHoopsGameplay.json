@@ -1,0 +1,66 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "FlamingHoopsGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/FlamingHoopsGameplay/Levels/FlamingHoopsGameplay_LevelOverlay.FlamingHoopsGameplay_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch5S3",
+        "DisplayName": "Give Flaming Hoops Spawner",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /FlamingHoopsGameplay/Gameplay/WID_Moonflax_FlamingHoops_Spawner 3 3"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'FlamingHoopsGameplay:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/FlamingHoopsGameplay/FlamingHoopsGameplay.2"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'FlamingHoopsGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/FlamingHoopsGameplay/FlamingHoopsGameplay.1"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddWPContent'FlamingHoopsGameplay:GameFeatureAction_AddWPContent_0'",
+        "ObjectPath": "/FlamingHoopsGameplay/FlamingHoopsGameplay.4"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistrySource'FlamingHoopsGameplay:GameFeatureAction_DataRegistrySource_0'",
+        "ObjectPath": "/FlamingHoopsGameplay/FlamingHoopsGameplay.5"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

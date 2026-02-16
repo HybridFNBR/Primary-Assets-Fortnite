@@ -1,0 +1,387 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "MissionInfo_STN",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/SurviveTheNight/Mission_STN.Mission_STN_C",
+      "SubPathString": ""
+    },
+    "MissionTags": [
+      "Stat.Mission.Primary.Event.SurviveTheNight"
+    ],
+    "ZoneEndDelay": 15.0,
+    "MissionRewardBadge": {
+      "ObjectName": "FortBadgeItemDefinition'STN_Victory'",
+      "ObjectPath": "/SaveTheWorld/Items/Badges/MissionBadges/SurviveTheNight/STN_Victory.0"
+    },
+    "MissionRewardItemsLootTierGroup": "Mission_Complete_Rewards",
+    "MaxMissionPoints": 24,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "60175FC744B47140980B4F9254BB151E",
+      "SourceString": "Battle ghosts and survive the night!",
+      "LocalizedString": "Battle ghosts and survive the night!"
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Icon_SurviveTheNight_32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T_Icon_SurviveTheNight_32.0"
+        }
+      },
+      "Brush_XS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Icon_SurviveTheNight_32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T_Icon_SurviveTheNight_32.0"
+        }
+      },
+      "Brush_S": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Icon_SurviveTheNight_32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T_Icon_SurviveTheNight_32.0"
+        }
+      },
+      "Brush_M": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Icon_SurviveTheNight_64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T_Icon_SurviveTheNight_64.0"
+        }
+      },
+      "Brush_L": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Icon_SurviveTheNight_64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T_Icon_SurviveTheNight_64.0"
+        }
+      },
+      "Brush_XL": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_Icon_SurviveTheNight_128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T_Icon_SurviveTheNight_128.0"
+        }
+      }
+    },
+    "EndOfMissionMediaSource": {
+      "ObjectName": "FileMediaSource'FMS_mission_success_generic'",
+      "ObjectPath": "/SaveTheWorld/Movies/VictoryMovies/FMS_mission_success_generic.0"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Timer/Gen_Timer.Gen_Timer_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_BonusArbitrary/Gen_BonusArbitrary.Gen_BonusArbitrary_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Bonus",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_BonusArbitrary/Gen_BonusArbitrary.Gen_BonusArbitrary_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Bonus",
+              "Activities.ObjectiveHandle.Num.02"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_BonusArbitrary/Gen_BonusArbitrary.Gen_BonusArbitrary_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Bonus",
+              "Activities.ObjectiveHandle.Num.03"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_BonusArbitrary/Gen_BonusArbitrary.Gen_BonusArbitrary_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Bonus",
+              "Activities.ObjectiveHandle.Num.04"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "bStartPlayingOnLoad": true,
+    "bRequiresActivation": false,
+    "bAllowDifficultyIncrease": false,
+    "MissionName": {
+      "Namespace": "",
+      "Key": "581D9FA1497A642A0F0AC49C4F0A97E0",
+      "SourceString": "Survive the Night",
+      "LocalizedString": "Survive the Night"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Patrol_Night.EDO_Set_Patrol_Night",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_Distance'MissionInfo_STN:FortDifficultyOptionCategoryEncounter_Distance_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/SurviveTheNight/MissionInfo_STN.0"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_STN:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/SurviveTheNight/MissionInfo_STN.5"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_PawnNumberCap'MissionInfo_STN:FortDifficultyOptionCategoryEncounter_PawnNumberCap_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/SurviveTheNight/MissionInfo_STN.2"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Patrol_Night.EDO_Set_Patrol_Night",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_Distance'MissionInfo_STN:FortDifficultyOptionCategoryEncounter_Distance_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/SurviveTheNight/MissionInfo_STN.1"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_STN:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/SurviveTheNight/MissionInfo_STN.4"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_PawnNumberCap'MissionInfo_STN:FortDifficultyOptionCategoryEncounter_PawnNumberCap_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/SurviveTheNight/MissionInfo_STN.3"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Endless_4Players0.EDO_Set_Endless_4Players0",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_STN:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_2'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/SurviveTheNight/MissionInfo_STN.6"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": true,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_LoneTaker.EDO_Set_LoneTaker",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          null
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.Standard",
+          "Encounter.Enable.MiniBoss"
+        ]
+      }
+    ],
+    "TaggedRewards": [
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Bonus1"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/SurviveTheNight/Bonus_EliminateHusks_150.Bonus_EliminateHusks_150",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Bonus2"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/SurviveTheNight/Bonus_EliminateHusks_300.Bonus_EliminateHusks_300",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Bonus3"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/SurviveTheNight/Bonus_NoDown.Bonus_NoDown",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Participation"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/SurviveTheNight/STN_Participation.STN_Participation",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Bonus4"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/SurviveTheNight/Bonus_Takers.Bonus_Takers",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ],
+    "AIServices": [
+      {
+        "ObjectName": "Class'AthenaAIServiceLoot'",
+        "ObjectPath": "/Script/FortniteAI"
+      }
+    ],
+    "GameData": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/Gate/STW_CompositeGameData.STW_CompositeGameData",
+      "SubPathString": ""
+    }
+  }
+}

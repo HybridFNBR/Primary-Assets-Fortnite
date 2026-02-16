@@ -1,0 +1,70 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "BallisticShieldGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/BallisticShieldGameplay/BallisticShieldGameplay_LevelOverlay.BallisticShieldGameplay_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/BallisticShieldGameplay/DeathCauseData_BallisticShield.DeathCauseData_BallisticShield",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch5S1",
+        "DisplayName": "Give Ballistic Shield",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /BallisticShieldGameplay/Gameplay/WID_Paprika_BallisticShield 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BallisticShieldGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/BallisticShieldGameplay/BallisticShieldGameplay.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddUnableToPerformActionText'BallisticShieldGameplay:FortGameFeatureAction_AddUnableToPerformActionText_0'",
+        "ObjectPath": "/BallisticShieldGameplay/BallisticShieldGameplay.3"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddMovementModeExtension'BallisticShieldGameplay:FortGameFeatureAction_AddMovementModeExtension_0'",
+        "ObjectPath": "/BallisticShieldGameplay/BallisticShieldGameplay.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'BallisticShieldGameplay:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/BallisticShieldGameplay/BallisticShieldGameplay.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

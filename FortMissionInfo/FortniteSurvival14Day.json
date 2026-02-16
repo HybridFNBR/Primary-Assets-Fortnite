@@ -1,0 +1,734 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "FortniteSurvival14Day",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Modes/FortniteSurvival/Mission_FortniteSurvival.Mission_FortniteSurvival_C",
+      "SubPathString": ""
+    },
+    "MissionTags": [
+      "Stat.Mission.Survival.Survival14Day"
+    ],
+    "ZoneEndDelay": 2.0,
+    "MissionRewardItemsLootTierGroup": "Mission_Complete_Rewards",
+    "MaxMissionPoints": 24,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "71846C2B4546D6CB52B3BC9AB3FE8985",
+      "SourceString": "Survive the Storm 14 Days",
+      "LocalizedString": "Survive the Storm 14 Days"
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ImageSize": {
+          "X": 24.0,
+          "Y": 24.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-32.0"
+        }
+      },
+      "Brush_XS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-32.0"
+        }
+      },
+      "Brush_S": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-64.0"
+        }
+      },
+      "Brush_M": {
+        "ImageSize": {
+          "X": 52.0,
+          "Y": 52.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-64.0"
+        }
+      },
+      "Brush_L": {
+        "ImageSize": {
+          "X": 76.0,
+          "Y": 76.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-128'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-128.0"
+        }
+      },
+      "Brush_XL": {
+        "ImageSize": {
+          "X": 104.0,
+          "Y": 104.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-128'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-128.0"
+        }
+      }
+    },
+    "EndOfMissionMediaSource": {
+      "ObjectName": "FileMediaSource'FMS_mission_success_generic'",
+      "ObjectPath": "/SaveTheWorld/Movies/VictoryMovies/FMS_mission_success_generic.0"
+    },
+    "bSkipEndOfMissionVideo": true,
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Defense/Gen_Defense.Gen_Defense_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Defense",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Locate/Gen_Locate.Gen_Locate_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Locate",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Interact/Gen_Interact.Gen_Interact_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.KillDestroyPickupInteract",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Interact/Gen_Interact.Gen_Interact_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.KillDestroyPickupInteract",
+              "Activities.ObjectiveHandle.Num.02"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Interact/Gen_Interact.Gen_Interact_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.KillDestroyPickupInteract",
+              "Activities.ObjectiveHandle.Num.03"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_UIEvent/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_UIEvent/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.02"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "bShowMinimapIconsOnlyIfFocused": false,
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.DynamicPlacement.Mission.Primary",
+        "Activities.Placement.LocationUsed"
+      ],
+      "ActorsAndLocations": [
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'SurvivalPlacementQuery_MainGen'",
+            "ObjectPath": "/SaveTheWorld/Missions/Modes/FortniteSurvival/SurvivalPlacementQuery_MainGen.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Modes/FortniteSurvival/Props/SurvivalMainGenerator.SurvivalMainGenerator_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        },
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'SurvivalPlacementQuery_SubGen_00'",
+            "ObjectPath": "/SaveTheWorld/Missions/Modes/FortniteSurvival/SurvivalPlacementQuery_SubGen_00.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Modes/FortniteSurvival/Props/SurvivalMainGenerator.SurvivalMainGenerator_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        },
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'SurvivalPlacementQuery_SubGen_01'",
+            "ObjectPath": "/SaveTheWorld/Missions/Modes/FortniteSurvival/SurvivalPlacementQuery_SubGen_01.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Modes/FortniteSurvival/Props/SurvivalMainGenerator.SurvivalMainGenerator_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        },
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'SurvivalPlacementQuery_SubGen_02'",
+            "ObjectPath": "/SaveTheWorld/Missions/Modes/FortniteSurvival/SurvivalPlacementQuery_SubGen_02.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Modes/FortniteSurvival/Props/SurvivalMainGenerator.SurvivalMainGenerator_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        },
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'SurvivalPlacementQuery_SubGen_03'",
+            "ObjectPath": "/SaveTheWorld/Missions/Modes/FortniteSurvival/SurvivalPlacementQuery_SubGen_03.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Modes/FortniteSurvival/Props/SurvivalMainGenerator.SurvivalMainGenerator_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        },
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'SurvivalPlacementQuery_SubGen_04'",
+            "ObjectPath": "/SaveTheWorld/Missions/Modes/FortniteSurvival/SurvivalPlacementQuery_SubGen_04.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Modes/FortniteSurvival/Props/SurvivalMainGenerator.SurvivalMainGenerator_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        },
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'SurvivalPlacementQuery_SubGen_05'",
+            "ObjectPath": "/SaveTheWorld/Missions/Modes/FortniteSurvival/SurvivalPlacementQuery_SubGen_05.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Modes/FortniteSurvival/Props/SurvivalMainGenerator.SurvivalMainGenerator_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        }
+      ]
+    },
+    "bStartPlayingOnLoad": true,
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'Rewards_High_LargeMats'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/Rewards_High_LargeMats.0"
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "5A22361F4EDE733C01A9F380D03CB075",
+      "SourceString": "Survive the Storm 14 Days",
+      "LocalizedString": "Survive the Storm 14 Days"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survival_1.EDO_Set_Survival_1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.4Player",
+          "Encounter.EnemyDifficulty.4Player"
+        ]
+      }
+    ],
+    "TaggedRewards": [
+      {
+        "Tag": {
+          "TagName": "SurvivalReward.Badge.Day1"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay1.SurvivorMode14Day_Badge_ParticipationDay1",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "SurvivalReward.Badge.Day2"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay2.SurvivorMode14Day_Badge_ParticipationDay2",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "SurvivalReward.Badge.Day3"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay3.SurvivorMode14Day_Badge_ParticipationDay3",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "SurvivalReward.Badge.Day4"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay4.SurvivorMode14Day_Badge_ParticipationDay4",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "SurvivalReward.Badge.Day5"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay5.SurvivorMode14Day_Badge_ParticipationDay5",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "SurvivalReward.Badge.Day6"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay6.SurvivorMode14Day_Badge_ParticipationDay6",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "SurvivalReward.Badge.Day7"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay7.SurvivorMode14Day_Badge_ParticipationDay7",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "SurvivalReward.Badge.Day8"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay8.SurvivorMode14Day_Badge_ParticipationDay8",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "SurvivalReward.Badge.Day9"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay9.SurvivorMode14Day_Badge_ParticipationDay9",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Survival.Reward.Badge.Day10"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay10.SurvivorMode14Day_Badge_ParticipationDay10",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Survival.Reward.Badge.Day11"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay11.SurvivorMode14Day_Badge_ParticipationDay11",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Survival.Reward.Badge.Day12"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay12.SurvivorMode14Day_Badge_ParticipationDay12",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Survival.Reward.Badge.Day13"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_ParticipationDay13.SurvivorMode14Day_Badge_ParticipationDay13",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Survival.Reward.Badge.Day14"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/SurvivalModeBadges/14Day/SurvivorMode14Day_Badge_Victory.SurvivorMode14Day_Badge_Victory",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ]
+  }
+}

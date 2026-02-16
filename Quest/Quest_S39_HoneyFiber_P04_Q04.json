@@ -1,0 +1,327 @@
+{
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_S39_HoneyFiber_P04_Q04",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S39/T_Soldier_MorningSoak_Cook_HelmetOff.T_Soldier_MorningSoak_Cook_HelmetOff",
+      "SubPathString": ""
+    },
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S39_HoneyFiber_P04_Q04_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "SubjectHealed": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "TeammateHealingRequirement": "ETeammateHealingRequirement::Ignored",
+            "HealingType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "GameplayCue.HoneyFiber_Incident"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( GameplayCue.HoneyFiber_Incident )"
+              }
+            },
+            "IncrementBy": "EFortHealingIncrementType::Single",
+            "bRequireHealedToFull": false,
+            "bUseHealingAmount": false,
+            "bUseOverHealing": false,
+            "bUsePercentHealed": false,
+            "SelfHealingBehavior": "EFortSelfHealingHandling::Allowed",
+            "HealingAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "HealthOverHealed": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "PercentHealed": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          },
+          {
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "bIncrementByDamageAmount": false,
+            "bUseDamageAmount": false,
+            "bIncrementByUncappedDamage": false,
+            "bUseUncappedDamage": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "GameplayCue.HoneyFiber_Incident"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( GameplayCue.HoneyFiber_Incident )"
+              }
+            },
+            "DamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "UncappedDamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "02E709804EA160C11BD261B56635A028",
+          "SourceString": "Eat or hit players with Cheesy Poofs",
+          "LocalizedString": "Eat or hit players with Cheesy Poofs"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 15,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 50,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.BR )"
+    },
+    "SortPriority": 4,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S39_HoneyFiber_P04_Q04:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/HoneyFiber/P04/Quest_S39_HoneyFiber_P04_Q04.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S39_HoneyFiber_P04_Q04:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/HoneyFiber/P04/Quest_S39_HoneyFiber_P04_Q04.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S39_HoneyFiber_P04_Q04_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "EE1A7E134A5958D1D96079AE52C30EAE",
+      "SourceString": "Eat or hit players with Cheesy Poofs",
+      "LocalizedString": "Eat or hit players with Cheesy Poofs"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "B9E9834E4BDADAD650D274917320F684",
+      "SourceString": "Eat or hit players with Cheesy Poofs",
+      "LocalizedString": "Eat or hit players with Cheesy Poofs"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "16F18A65417635E789CA16832460331B",
+      "SourceString": "I love Cheesy Poofs! You love Cheesy Poofs!",
+      "LocalizedString": "I love Cheesy Poofs! You love Cheesy Poofs!"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.BR.S39.HoneyFiber.P04"
+        ]
+      }
+    ]
+  }
+}

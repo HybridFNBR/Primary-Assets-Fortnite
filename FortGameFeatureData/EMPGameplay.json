@@ -1,0 +1,64 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "EMPGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/EMPGameplay/HUD/EMPGrenadeHudWidgetRegistry.EMPGrenadeHudWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "ContextualTutorials": [
+      {
+        "AssetPathName": "/EMPGameplay/Tutorial/ContextualTutorial_EMPPickup.ContextualTutorial_EMPPickup",
+        "SubPathString": ""
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch4S4",
+        "DisplayName": "Give EMP Grenades",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /EMPGameplay/Items/EMPGrenade/WID_Athena_Grenade_EMP 6 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'EMPGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/EMPGameplay/EMPGameplay.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'EMPGameplay:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/EMPGameplay/EMPGameplay.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

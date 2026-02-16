@@ -1,0 +1,253 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "quest_daily_mapmarker_35",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "Evergreen_BR_Mapmarker",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "quest_daily_mapmarker_35_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "bIncrementByDamageAmount": true,
+            "bUseDamageAmount": false,
+            "bIncrementByUncappedDamage": false,
+            "bUseUncappedDamage": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "FlopperSpawn.Type.World"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( FlopperSpawn.Type.World )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Trait.Explosive"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Trait.Explosive )"
+              }
+            },
+            "DamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "UncappedDamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "UserDescription": "BR",
+      "AutoDescription": " ALL( Product.BR )"
+    },
+    "Category": {
+      "DataTable": {
+        "ObjectName": "DataTable'QuestCategoryTable'",
+        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+      },
+      "RowName": "BRDailyChallenges"
+    },
+    "SortPriority": 1,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_daily_mapmarker_35:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Zero_Out/quest_daily_mapmarker_35.3"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'quest_daily_mapmarker_35:FortQuestDefinitionComponent_MapMarkers_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Zero_Out/quest_daily_mapmarker_35.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_daily_mapmarker_35:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Zero_Out/quest_daily_mapmarker_35.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "quest_daily_mapmarker_35_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "CDBB60504D284531B644BEBBEBA8989A",
+      "SourceString": "Blow up a Fishing Spot",
+      "LocalizedString": "Blow up a Fishing Spot"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "7EDC50C94B44BE1436D328AA866A718F",
+      "SourceString": "Blow up a Fishing Spot",
+      "LocalizedString": "Blow up a Fishing Spot"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.BR.Daily",
+          "ChallengeCategory.XP"
+        ]
+      },
+      {}
+    ]
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "Incubation_Chamber_MissionInfo",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/Starlight2021/Missions/BP_Incubation_Chamber_Mission.BP_Incubation_Chamber_Mission_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Timer/Gen_Timer.Gen_Timer_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_ClearEncounter/Gen_ClearEncounter.Gen_ClearEncounter_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Num.01",
+              "Activities.ObjectiveHandle.Generic.Kill"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/Game/Missions/GenericObjectives/GenericObjective_Blank.GenericObjective_Blank_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.MissionComplete"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "MissionPlacementInfo": {
+      "ActorsAndLocations": [
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [
+            "Activities.Placement.LocationUsed"
+          ],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'Incubation_Chamber_Placement_Query'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight2021/Missions/Incubation_Chamber_Placement_Query.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/Starlight2021/IncubationChamber/BP_Science_Incubator.BP_Science_Incubator_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": false,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        }
+      ]
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn_Search.EDO_Set_ScriptedSpawn_Search",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'Incubation_Chamber_MissionInfo:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight2021/Missions/Incubation_Chamber_MissionInfo.3"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_PawnNumberCap'Incubation_Chamber_MissionInfo:FortDifficultyOptionCategoryEncounter_PawnNumberCap_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight2021/Missions/Incubation_Chamber_MissionInfo.0"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn_Search.EDO_Set_ScriptedSpawn_Search",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'Incubation_Chamber_MissionInfo:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight2021/Missions/Incubation_Chamber_MissionInfo.4"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_PawnNumberCap'Incubation_Chamber_MissionInfo:FortDifficultyOptionCategoryEncounter_PawnNumberCap_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight2021/Missions/Incubation_Chamber_MissionInfo.1"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn_Search.EDO_Set_ScriptedSpawn_Search",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'Incubation_Chamber_MissionInfo:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_2'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight2021/Missions/Incubation_Chamber_MissionInfo.5"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_PawnNumberCap'Incubation_Chamber_MissionInfo:FortDifficultyOptionCategoryEncounter_PawnNumberCap_2'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight2021/Missions/Incubation_Chamber_MissionInfo.2"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
+      }
+    ]
+  }
+}

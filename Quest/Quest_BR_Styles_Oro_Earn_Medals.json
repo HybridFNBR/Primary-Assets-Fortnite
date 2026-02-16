@@ -1,0 +1,191 @@
+{
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_BR_Styles_Oro_Earn_Medals",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "athena_oro_earn_accolades",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementType": "EAcquireIncrementType::TotalMatchingItemCounts",
+            "bUseItemCount": false,
+            "ItemAcquired": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Accolade.Metadata"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Accolade.Metadata )"
+              }
+            },
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AcquireSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "4A3F34914F4A4DB22DD59BB3C80EE4CF",
+          "SourceString": "Collect medals",
+          "LocalizedString": "Collect medals"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "CAA945644FD45CCE5EE648B47C25145D",
+          "SourceString": "Collect medals",
+          "LocalizedString": "Collect medals"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 40,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 1.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_BR_Styles_Oro_Earn_Medals:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/Game/Athena/Items/Quests/Styles/Quest_BR_Styles_Oro_Earn_Medals.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_BR_Styles_Oro_Earn_Medals:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/Game/Athena/Items/Quests/Styles/Quest_BR_Styles_Oro_Earn_Medals.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "athena_oro_earn_accolades"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "A31C6E8A44D6D3D2C8036586A5D5925B",
+      "SourceString": "Collect medals",
+      "LocalizedString": "Collect medals"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "40C1C3B842968D613564D0B36FD55E82",
+      "SourceString": "Collect medals",
+      "LocalizedString": "Collect medals"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "6E9D428A4798E5D5223D63883FAC42C4",
+      "SourceString": "Collect medals",
+      "LocalizedString": "Collect medals"
+    },
+    "DataList": [
+      {
+        "Icon": {
+          "AssetPathName": "/Game/UI/Foundation/Textures/Icons/Mission/T-Icon-Exterminate-128.T-Icon-Exterminate-128",
+          "SubPathString": ""
+        }
+      },
+      {
+        "Tags": [
+          "Quest.Metadata.PartyAssist",
+          "Quest.ChallengeIcon.Medals"
+        ]
+      }
+    ]
+  }
+}

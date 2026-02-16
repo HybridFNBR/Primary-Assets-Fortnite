@@ -1,0 +1,81 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "OnionBasketGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/OnionBasketGameplay/Levels/OnionBasketGameplay_LevelOverlay.OnionBasketGameplay_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": true,
+        "SectionName": "Blitz",
+        "DisplayName": "OnionBasket",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /OnionBasketGameplay/Gameplay/OnionBasketAR/WID_Assault_OnionBasket_HS 1 1",
+          "Cheat GiveSpecificItem /OnionBasketGameplay/Gameplay/OnionBasketRevolver/WID_OnionBasket_Revolver 1 1",
+          "Cheat GiveSpecificItem /OnionBasketGameplay/Gameplay/OnionBasketShotgun/WID_OnionBasket_Shotgun 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'OnionBasketGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/OnionBasketGameplay/OnionBasketGameplay.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistrySource'OnionBasketGameplay:GameFeatureAction_DataRegistrySource_0'",
+        "ObjectPath": "/OnionBasketGameplay/OnionBasketGameplay.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "AthenaBattleBus",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaBattleBusItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "BattleBus"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

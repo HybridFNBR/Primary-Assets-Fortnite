@@ -1,0 +1,165 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "SpiresGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": true,
+        "SectionName": "Ch6S3 - Spire Events",
+        "DisplayName": "Go to Major Spire (Cycles through them)",
+        "ConsoleCommands": [
+          "cheat LivingWorldManagerTeleportTo _Spire_"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": true,
+        "SectionName": "Ch6S3 - Spire Events",
+        "DisplayName": "Go to Minor Spire (Cycles through them)",
+        "ConsoleCommands": [
+          "cheat LivingWorldManagerTeleportTo MinorSpire"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": true,
+        "SectionName": "Ch6S3 - Spire Events",
+        "DisplayName": "Spawn Major Spire (Location based on reticle)",
+        "ConsoleCommands": [
+          "cheat lwms MajorSpire"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": true,
+        "SectionName": "Ch6S3 - Spire Events",
+        "DisplayName": "Trigger Closest Spire Activation",
+        "ConsoleCommands": [
+          "cheat MajorSpire_TriggerClosestSpireActivation"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'SpiresGameplay:FortGameFeatureAction_AddToPlaylists_1'",
+        "ObjectPath": "/SpiresGameplay/SpiresGameplay.1"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'SpiresGameplay:GameFeatureAction_AddWorldPartitionContent_0'",
+        "ObjectPath": "/SpiresGameplay/SpiresGameplay.7"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddCategoryTableToConfig'SpiresGameplay:FortGameFeatureAction_AddCategoryTableToConfig_0'",
+        "ObjectPath": "/SpiresGameplay/SpiresGameplay.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistrySource'SpiresGameplay:GameFeatureAction_DataRegistrySource_0'",
+        "ObjectPath": "/SpiresGameplay/SpiresGameplay.8"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddComponents'SpiresGameplay:GameFeatureAction_AddComponents_0'",
+        "ObjectPath": "/SpiresGameplay/SpiresGameplay.5"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddProcessors'SpiresGameplay:GameFeatureAction_AddProcessors_0'",
+        "ObjectPath": "/SpiresGameplay/SpiresGameplay.6"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddCheats'SpiresGameplay:GameFeatureAction_AddCheats_0'",
+        "ObjectPath": "/SpiresGameplay/SpiresGameplay.4"
+      },
+      {
+        "ObjectName": "FortUIGameFeatureAction_AddMapLegendEntries'SpiresGameplay:FortUIGameFeatureAction_AddMapLegendEntries_0'",
+        "ObjectPath": "/SpiresGameplay/SpiresGameplay.3"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "ActorSpawnerData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortAthenaActorSpawnerData",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Lager"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Quest",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortQuestItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Scenarios"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "Encounter",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/EncountersRuntime.EncounterItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Scenarios"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "WorldItem",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWorldItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Scenarios"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Milestone_A_Q08",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "QuestSubtype": "EFortQuestSubtype::Milestone",
+    "QuestType": "EFortQuestType::AthenaLooseQuest",
+    "bAthenaUpdateObjectiveOncePerMatch": true,
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S37_Milestone_A_Q08_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "GameplayEventTag": {
+              "TagName": "Gameplay.Action.Player.ThankBusDriver"
+            },
+            "GameplayEventFilter": {
+              "AdvancedInstigatorClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "InstigatorTags": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              },
+              "AdvancedTargetClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "TargetTags": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              },
+              "AdvancedObject1ClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "Object1TagFilter": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              },
+              "AdvancedObject2ClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "Object2TagFilter": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              },
+              "EventMagnitude": {
+                "LowerBound": {
+                  "Type": "ERangeBoundTypes::Exclusive",
+                  "Value": 0.0
+                },
+                "UpperBound": {
+                  "Type": "ERangeBoundTypes::Open",
+                  "Value": 0.0
+                }
+              },
+              "bUseAdvancedInstigatorClassFilter": false,
+              "bUseInstigatorTags": false,
+              "bUseAdvancedTargetClassFilter": false,
+              "bUseTargetTags": false,
+              "bUseAdvancedObject1ClassFilter": false,
+              "bUseObject1Tags": false,
+              "bUseAdvancedObject2ClassFilter": false,
+              "bUseObject2Tags": false,
+              "bUseEventMagnitude": false
+            },
+            "bRequireAuthorInstigator": false,
+            "bRequireAuthorTarget": false,
+            "bIncrementByEventMagnitude": false,
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "MovementMode.YokeHopKeeper"
+                  },
+                  {
+                    "TagName": "MovementMode.YokeHopKeeperLaunch"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  3,
+                  2,
+                  0,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " NONE( MovementMode.YokeHopKeeper, MovementMode.YokeHopKeeperLaunch )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Playlist"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Athena.Playlist )"
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "376C74B447100A200ED90D8D1C4335AA",
+          "SourceString": "Thank the Bus Driver",
+          "LocalizedString": "Thank the Bus Driver"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 8,
+          "DisplayMaxStage": 20
+        },
+        "Count": 80,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 1.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        },
+        {
+          "TagName": "Product.BR.BlastBerry"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        2,
+        1,
+        0,
+        3,
+        1,
+        1
+      ],
+      "UserDescription": "BR Excluding BlastBerry",
+      "AutoDescription": " ALL(  ALL( Product.BR ),  NONE( Product.BR.BlastBerry ) )"
+    },
+    "SortPriority": 1,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Milestone_A_Q08:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Milestones/Quest_Milestone_A_Q08.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_CopyProgress'Quest_Milestone_A_Q08:FortQuestDefinitionComponent_CopyProgress_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Milestones/Quest_Milestone_A_Q08.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Milestone_A_Q08:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Milestones/Quest_Milestone_A_Q08.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S37_Milestone_A_Q08_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "1D0AC68940D925E8FA57E2A91ADA8BE6",
+      "SourceString": "Thank the Bus Driver",
+      "LocalizedString": "Thank the Bus Driver"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "C0495E67491C708AD1811C8EEF305381",
+      "SourceString": "Thank the Bus Driver",
+      "LocalizedString": "Thank the Bus Driver"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.BR.Milestones"
+        ]
+      }
+    ]
+  }
+}

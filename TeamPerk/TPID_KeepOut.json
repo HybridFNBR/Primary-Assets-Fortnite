@@ -1,0 +1,97 @@
+{
+  "Type": "FortTeamPerkItemDefinition",
+  "Name": "TPID_KeepOut",
+  "Class": "UScriptClass'FortTeamPerkItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "GrantedAbilityKit": {
+      "AssetPathName": "/SaveTheWorld/Abilities/Player/Perks/Leader/KeepOut/Kit_Perk_L_KeepOut_T01.Kit_Perk_L_KeepOut_T01",
+      "SubPathString": ""
+    },
+    "bProgressiveBonus": true,
+    "RequiredCommanderTagQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Granted.Ability.Commando.FragGrenade"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Granted.Ability.Commando.FragGrenade )"
+    },
+    "CommanderRequirementsText": {
+      "Namespace": "",
+      "Key": "91E7F9354D3E917A284C8BBC96AD6C7A",
+      "SourceString": "Requires commander with Frag Grenade ability.",
+      "LocalizedString": "Requires commander with Frag Grenade ability."
+    },
+    "TeamPerkLoadoutConditions": [
+      {
+        "NumTimesSatisfiable": 5,
+        "RequiredTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Class.IsCommando"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "Is Soldier",
+          "AutoDescription": " ALL( Class.IsCommando )"
+        },
+        "bConsiderMinimumTier": false,
+        "bConsiderMaximumTier": false,
+        "bConsiderMinimumLevel": false,
+        "bConsiderMaximumLevel": false,
+        "bConsiderMinimumRarity": false,
+        "bConsiderMaximumRarity": false,
+        "MinimumHeroTier": "EFortItemTier::I",
+        "MaximumHeroTier": "EFortItemTier::V",
+        "MinimumHeroLevel": 1,
+        "MaximumHeroLevel": 50,
+        "MinimumHeroRarity": "EFortRarity::Common",
+        "MaximumHeroRarity": "EFortRarity::Legendary"
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "075FD02A4D280BAB5D4257813627B53A",
+      "SourceString": "Keep Out!!!",
+      "LocalizedString": "Keep Out!!!"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "E4169CD744BD0D02A4ADF688B4485B4F",
+      "SourceString": "New Team Perk unlocked!",
+      "LocalizedString": "New Team Perk unlocked!"
+    },
+    "DataList": [
+      {
+        "TooltipClass": {
+          "AssetPathName": "/SaveTheWorld/Abilities/Player/Perks/Leader/KeepOut/TT_Perk_L_KeepOut_Req.TT_Perk_L_KeepOut_Req_C",
+          "SubPathString": ""
+        },
+        "StatList": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "Traits": [
+          "Item.Trait.SingleStack"
+        ]
+      }
+    ]
+  }
+}

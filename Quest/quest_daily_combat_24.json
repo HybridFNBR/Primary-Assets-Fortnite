@@ -1,0 +1,201 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "quest_daily_combat_24",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "Evergreen_BR_Combat1",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "quest_daily_combat_24_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Item": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Pickup.Source.PlayerElimination"
+                  },
+                  {
+                    "TagName": "Item.Ammo"
+                  },
+                  {
+                    "TagName": "phoebe.items.ammo"
+                  },
+                  {
+                    "TagName": "supplies.ammo"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  2,
+                  1,
+                  0,
+                  1,
+                  3,
+                  1,
+                  2,
+                  3
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ALL( Pickup.Source.PlayerElimination ),  ANY( Item.Ammo, phoebe.items.ammo, supplies.ammo ) )"
+              }
+            },
+            "bIncrementByItemCount": true,
+            "AcceptedGatherType": "EInventoryGatherType::PreviouslyGathered",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 100,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "UserDescription": "BR",
+      "AutoDescription": " ALL( Product.BR )"
+    },
+    "Category": {
+      "DataTable": {
+        "ObjectName": "DataTable'QuestCategoryTable'",
+        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+      },
+      "RowName": "BRDailyChallenges"
+    },
+    "SortPriority": 1,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_daily_combat_24:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Zero_Out/quest_daily_combat_24.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_daily_combat_24:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Zero_Out/quest_daily_combat_24.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_TrackedData'quest_daily_combat_24:FortQuestDefinitionComponent_TrackedData_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Zero_Out/quest_daily_combat_24.3"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "quest_daily_combat_24_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "C262E06542330E22B09D9AAED8C92DFE",
+      "SourceString": "Collect ammo from eliminated players",
+      "LocalizedString": "Collect ammo from eliminated players"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "599BE2B14F058B610BB6A88F1323E13A",
+      "SourceString": "Collect ammo from eliminated players",
+      "LocalizedString": "Collect ammo from eliminated players"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.BR.Daily",
+          "ChallengeCategory.XP"
+        ]
+      },
+      {}
+    ]
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "SupplyDropRadioGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/SupplyDropRadioGameplay/SupplyDropRadioGameplay_LevelOverlay.SupplyDropRadioGameplay_LevelOverlay",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/SupplyDropRadioGameplay/HUD/SupplyDropRadioHUDWidgetRegistry.SupplyDropRadioHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultGameData": {
+      "AssetPathName": "/SupplyDropRadioGameplay/DataTables/SupplyDropRadioGameplayGameData.SupplyDropRadioGameplayGameData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S22",
+        "DisplayName": "Give Supply Drop Radio",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /SupplyDropRadioGameplay/Items/SupplyDropRadio_Handheld/WID_SupplyDropRadio_Handheld 3 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'SupplyDropRadioGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/SupplyDropRadioGameplay/SupplyDropRadioGameplay.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddComponents'SupplyDropRadioGameplay:GameFeatureAction_AddComponents_0'",
+        "ObjectPath": "/SupplyDropRadioGameplay/SupplyDropRadioGameplay.4"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddAttributeDefaults'SupplyDropRadioGameplay:GameFeatureAction_AddAttributeDefaults_0'",
+        "ObjectPath": "/SupplyDropRadioGameplay/SupplyDropRadioGameplay.3"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'SupplyDropRadioGameplay:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/SupplyDropRadioGameplay/SupplyDropRadioGameplay.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "ConversationDatabase",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/CommonConversationRuntime.ConversationDatabase",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Conversations"
+          }
+        ],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/SupplyDropRadioGameplay/Conversations/Conversation_SupplyDropRadio.Conversation_SupplyDropRadio",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Consumable",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

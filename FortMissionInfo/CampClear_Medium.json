@@ -1,0 +1,148 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "CampClear_Medium",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Secondary/Encampments/CampClear/CampClear01_Mission.CampClear01_Mission_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MissionTags": [
+      "Stat.Mission.Secondary.Encampment",
+      "Stat.Mission.Kill",
+      "Stat.Mission.Provides.BluGlo",
+      "Stat.Mission.Encounter.Burst.Multiple",
+      "Stat.Mission.Size.Medium"
+    ],
+    "MaxMissionPoints": 0,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "F00B2AB04E96A0D3275216A3FF5B18C0",
+      "SourceString": "Clear the Encampment",
+      "LocalizedString": "Clear the Encampment"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_ClearEncounter/Gen_ClearEncounter.Gen_ClearEncounter_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Kill"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.Placement.LocationUsed",
+        "Activities.DynamicPlacement.Actor.Encampment",
+        "Activities.DynamicPlacement.Mission.Secondary"
+      ],
+      "ActorsAndLocations": [
+        {
+          "ItemIdentifyingTags": [
+            "Activities.ObjectiveHandle.Num.01"
+          ],
+          "TagsToAddToChosenPlacementActor": [
+            "Activities.DynamicPlacement.Proximity.DangerZone"
+          ],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'EncampmentMissionPlacementQuery'",
+            "ObjectPath": "/SaveTheWorld/Missions/EQSQueries/EncampmentMissionPlacementQuery.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Secondary/Encampments/CampClear/Encampment_Lvl2.Encampment_Lvl2_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        }
+      ]
+    },
+    "MinDistanceToAllowSpawnPad": 5000.0,
+    "PopupWidgetData": {
+      "AvailableIcon": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.25,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0089FF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-32.0"
+        }
+      },
+      "UnavailableIcon": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.25,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0089FF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-32.0"
+        }
+      }
+    },
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'Rewards_High'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/Rewards_High.0"
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "805D3D72439348AFCC7626821CDEA1D9",
+      "SourceString": "Medium Encampment",
+      "LocalizedString": "Medium Encampment"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_CampClear_Medium.EDO_Set_CampClear_Medium",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.NonScaling.2Player"
+        ]
+      }
+    ],
+    "MissionOptions": {
+      "AssetPathName": "/SaveTheWorld/AIDirector/Missions/MissionOptionData_Default.MissionOptionData_Default",
+      "SubPathString": ""
+    }
+  }
+}

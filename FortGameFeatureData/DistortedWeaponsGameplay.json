@@ -1,0 +1,121 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "DistortedWeaponsGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/DistortedWeaponsGameplay/DistortedWeaponsGameplay_LevelOverlay.DistortedWeaponsGameplay_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlaylistBaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/DistortedWeaponsGameplay/DataTables/DistortedWeaponsGameplayGameData.DistortedWeaponsGameplayGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": []
+      }
+    ],
+    "DefaultLootTableData": {
+      "LootTierData": {
+        "AssetPathName": "/DistortedWeaponsGameplay/DataTables/LootTierData.LootTierData",
+        "SubPathString": ""
+      },
+      "LootPackageData": {
+        "AssetPathName": "/DistortedWeaponsGameplay/DataTables/LootPackageData.LootPackageData",
+        "SubPathString": ""
+      }
+    },
+    "PlayerAbilitySet": {
+      "AssetPathName": "/DistortedWeaponsGameplay/AS_DistortedWeapons.AS_DistortedWeapons",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S22",
+        "DisplayName": "Give DMR (R)",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /DistortedWeaponsGameplay/DMR/WID_DMR22_Athena_R 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S22",
+        "DisplayName": "Give Chrome AR",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /DistortedWeaponsGameplay/Chrome/Assault/WMID_Assault_Chrome_Athena_UC 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S22",
+        "DisplayName": "Give Chrome Shotgun",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /DistortedWeaponsGameplay/Chrome/Shotgun/WMID_Shotgun_Chrome_Athena_UC 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DistortedWeaponsGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/DistortedWeaponsGameplay/DistortedWeaponsGameplay.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'DistortedWeaponsGameplay:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/DistortedWeaponsGameplay/DistortedWeaponsGameplay.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "DMR"
+          },
+          {
+            "Path": "Chrome"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "MultiItem",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWorldMultiItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Chrome"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

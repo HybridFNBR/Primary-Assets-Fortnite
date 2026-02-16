@@ -1,0 +1,388 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "WalkThePlank",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/EventLandmarks/Spring2019/WalkThePlank/Mission_WalkThePlank.Mission_WalkThePlank_C",
+      "SubPathString": ""
+    },
+    "MissionTags": [
+      "Stat.Mission.Primary.Landmark.WalkThePlank"
+    ],
+    "ZoneEndDelay": 65.0,
+    "MissionRewardBadge": {
+      "ObjectName": "FortBadgeItemDefinition'WTP_Victory'",
+      "ObjectPath": "/SaveTheWorld/Items/Badges/MissionBadges/WalkThePlank/WTP_Victory.0"
+    },
+    "MissionRewardItemsLootTierGroup": "Mission_Complete_Rewards",
+    "ParTime": 2,
+    "UnderParBadge": {
+      "ObjectName": "FortBadgeItemDefinition'MissionBadge_Par2'",
+      "ObjectPath": "/SaveTheWorld/Items/Badges/MissionBadges/Par/MissionBadge_Par2.0"
+    },
+    "MaxMissionPoints": 24,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "BFC77F504F0AED63B39F01A653D7F1FB",
+      "SourceString": "Walk the Plank!",
+      "LocalizedString": "Walk the Plank!"
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-32.0"
+        }
+      },
+      "Brush_XS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-32.0"
+        }
+      },
+      "Brush_S": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-64.0"
+        }
+      },
+      "Brush_M": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-64.0"
+        }
+      },
+      "Brush_L": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-128'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-128.0"
+        }
+      },
+      "Brush_XL": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-128'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-128.0"
+        }
+      }
+    },
+    "EndOfMissionMediaSource": {
+      "ObjectName": "FileMediaSource'FMS_mission_success_generic'",
+      "ObjectPath": "/SaveTheWorld/Movies/VictoryMovies/FMS_mission_success_generic.0"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Locate/Gen_Locate.Gen_Locate_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Locate"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_BonusTimeLimit/Gen_BonusTimeLimit.Gen_BonusTimeLimit_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Bonus"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.08"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.09"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.10"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "bShowMinimapIconsOnlyIfFocused": false,
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.Placement.LocationUsed",
+        "Activities.DynamicPlacement.Mission.Primary"
+      ],
+      "ActorsAndLocations": [
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'PlacementQuery_WTP_LocateActor'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/EventLandmarks/Spring2019/WalkThePlank/PlacementQuery_WTP_LocateActor.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/EventLandmarks/Spring2019/WalkThePlank/Props/WTP_LocateActor.WTP_LocateActor_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": true,
+          "bShouldReserveLocations": false,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": true,
+          "bDontCreateSpawnRiftsNearby": false
+        },
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'PlacementQuery_WTP_MastLocation'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/EventLandmarks/Spring2019/WalkThePlank/PlacementQuery_WTP_MastLocation.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/EventLandmarks/Spring2019/WalkThePlank/Props/WTP_InteractLocationHolder.WTP_InteractLocationHolder_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": true,
+          "bShouldReserveLocations": false,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        }
+      ]
+    },
+    "bStartPlayingOnLoad": true,
+    "bRequiresActivation": false,
+    "bAllowDifficultyIncrease": false,
+    "PopupWidgetData": {
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "CBE490B2447D74D834CF678D2BDD05A7",
+        "SourceString": "Walk the Plank!",
+        "LocalizedString": "Walk the Plank!"
+      },
+      "AvailableIcon": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-RadarPointSecondary-S'",
+          "ObjectPath": "/SaveTheWorld/UI/HUD/Textures/Icon-RadarPointSecondary-S.0"
+        }
+      },
+      "UnavailableIcon": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-RadarPointSecondary-S'",
+          "ObjectPath": "/SaveTheWorld/UI/HUD/Textures/Icon-RadarPointSecondary-S.0"
+        }
+      }
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "F1B442864C57AC528691B6B61C1BA471",
+      "SourceString": "Walk the Plank!",
+      "LocalizedString": "Walk the Plank!"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Gate.EDO_Set_Gate",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.1Player"
+        ]
+      }
+    ],
+    "MissionOptions": {
+      "AssetPathName": "/SaveTheWorld/AIDirector/Missions/MissionOptionData_Default.MissionOptionData_Default",
+      "SubPathString": ""
+    },
+    "TaggedRewards": [
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Bonus1"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/WalkThePlank/WTP_BuildQuick.WTP_BuildQuick",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.RetrieveTheData.Participation"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/WalkThePlank/WTP_Participation.WTP_Participation",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ],
+    "AIServices": [
+      {
+        "ObjectName": "Class'AthenaAIServiceLoot'",
+        "ObjectPath": "/Script/FortniteAI"
+      }
+    ],
+    "GameData": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/Gate/STW_CompositeGameData.STW_CompositeGameData",
+      "SubPathString": ""
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "Type": "FortTeamPerkItemDefinition",
+  "Name": "TPID_ShiftingGears",
+  "Class": "UScriptClass'FortTeamPerkItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "GrantedAbilityKit": {
+      "AssetPathName": "/SaveTheWorld/Abilities/Player/Perks/Leader/ShiftingGears/Kit_Perk_L_ShiftingGears_T01.Kit_Perk_L_ShiftingGears_T01",
+      "SubPathString": ""
+    },
+    "bProgressiveBonus": true,
+    "RequiredCommanderTagQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Granted.Ability.Outlander.PhaseShift"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Granted.Ability.Outlander.PhaseShift )"
+    },
+    "CommanderRequirementsText": {
+      "Namespace": "",
+      "Key": "9DD1ADBF456BC5B900AF5C8537008412",
+      "SourceString": "Requires Outlander as commander.",
+      "LocalizedString": "Requires Outlander as commander."
+    },
+    "TeamPerkLoadoutConditions": [
+      {
+        "NumTimesSatisfiable": 5,
+        "RequiredTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Class.IsOutlander"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Class.IsOutlander )"
+        },
+        "bConsiderMinimumTier": false,
+        "bConsiderMaximumTier": false,
+        "bConsiderMinimumLevel": false,
+        "bConsiderMaximumLevel": false,
+        "bConsiderMinimumRarity": true,
+        "bConsiderMaximumRarity": false,
+        "MinimumHeroTier": "EFortItemTier::I",
+        "MaximumHeroTier": "EFortItemTier::V",
+        "MinimumHeroLevel": 1,
+        "MaximumHeroLevel": 50,
+        "MinimumHeroRarity": "EFortRarity::Epic",
+        "MaximumHeroRarity": "EFortRarity::Legendary"
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "BE0D096048D99AE6FFD496BBC92C5F00",
+      "SourceString": "Shifting Gears",
+      "LocalizedString": "Shifting Gears"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "AD36C8CB4624377304E992955B11B54C",
+      "SourceString": "New Team Perk unlocked!",
+      "LocalizedString": "New Team Perk unlocked!"
+    },
+    "DataList": [
+      {
+        "TooltipClass": {
+          "AssetPathName": "/SaveTheWorld/Abilities/Player/Perks/Leader/ShiftingGears/TT_Perk_L_ShiftingGears_Req.TT_Perk_L_ShiftingGears_Req_C",
+          "SubPathString": ""
+        },
+        "StatList": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "Traits": [
+          "Item.Trait.SingleStack"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "ArmoryMarkets",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/ArmoryMarkets/Levels/ArmoryMarkets_LevelOverlay.ArmoryMarkets_LevelOverlay",
+      "SubPathString": ""
+    },
+    "DynamicUIDirectorClass": {
+      "AssetPathName": "/DragonPopGameplayContent/Gameplay/HideoutsMarket/UI/BP_DragonPop_Director.BP_DragonPop_Director_C",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlaylistBaseDataTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/ArmoryMarkets/DataTables/PurchaseGroupData_TidalCrane.PurchaseGroupData_TidalCrane",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Plugin.Playlist.Arena"
+            },
+            "Value": {
+              "AssetPathName": "/ArmoryMarkets/DataTables/Comp/PurchaseGroupData_TidalCrane_Comp.PurchaseGroupData_TidalCrane_Comp",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      {
+        "BaseTable": {
+          "AssetPathName": "/ArmoryMarkets/DataTables/PurchaseListData_TidalCrane.PurchaseListData_TidalCrane",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Plugin.Playlist.Arena"
+            },
+            "Value": {
+              "AssetPathName": "/ArmoryMarkets/DataTables/Comp/PurchaseListData_TidalCrane_Comp.PurchaseListData_TidalCrane_Comp",
+              "SubPathString": ""
+            }
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ArmoryMarkets:FortGameFeatureAction_AddToPlaylists_1'",
+        "ObjectPath": "/ArmoryMarkets/ArmoryMarkets.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddComponents'ArmoryMarkets:GameFeatureAction_AddComponents_0'",
+        "ObjectPath": "/ArmoryMarkets/ArmoryMarkets.2"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'ArmoryMarkets:GameFeatureAction_AddWorldPartitionContent_0'",
+        "ObjectPath": "/ArmoryMarkets/ArmoryMarkets.3"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "WorldItem",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWorldItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Reload_Boost_R01_Q07",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Reload_Boost_R01_Q07_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "bIncrementByDistance": false,
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": true,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Faction.Generic.Hostile"
+                  },
+                  {
+                    "TagName": "Homebase.Class"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Duel.IsBeingChallenged"
+                  },
+                  {
+                    "TagName": "Athena.Gameplay.Status.Converted"
+                  },
+                  {
+                    "TagName": "Quests.Wildlife.IsOpponent"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Tandem"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Specialist"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Wildlife"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Labrador"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  4,
+                  2,
+                  1,
+                  5,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  2,
+                  1,
+                  1,
+                  5,
+                  3,
+                  3,
+                  6,
+                  7,
+                  8,
+                  3,
+                  1,
+                  9
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ANY(  ANY( Athena.Faction.Generic.Hostile, Homebase.Class, Pawn.Athena.NPC.Duel.IsBeingChallenged, Athena.Gameplay.Status.Converted, Quests.Wildlife.IsOpponent ),  ALL(  ANY( AISpawnerData.Type ),  NONE( AISpawnerData.Type.Tandem, AISpawnerData.Type.Specialist, Pawn.Athena.NPC.Wildlife ) ) ),  NONE( Pawn.Athena.NPC.Labrador ) )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "2C13847549562577A6FCF6BA60AF57DF",
+          "SourceString": "Headshot players",
+          "LocalizedString": "Headshot players"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 25,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 20,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BlastBerry"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.BlastBerry )"
+    },
+    "SortPriority": 6,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Reload_Boost_R01_Q07:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/BlastBerryQuests/Items/QuestItems/ReloadBoost/Quest_Reload_Boost_R01_Q07.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Reload_Boost_R01_Q07:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/BlastBerryQuests/Items/QuestItems/ReloadBoost/Quest_Reload_Boost_R01_Q07.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Reload_Boost_R01_Q07_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "642EEF35416CB004B078E29327F16563",
+      "SourceString": "Headshot players",
+      "LocalizedString": "Headshot players"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "045BD58741AC529D69E52484C55CA3B8",
+      "SourceString": "Headshot players",
+      "LocalizedString": "Headshot players"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.BB.Boost.Quests"
+        ]
+      }
+    ]
+  }
+}

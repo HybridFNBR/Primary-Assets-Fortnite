@@ -1,0 +1,190 @@
+{
+  "Type": "FortPlaylistAthena",
+  "Name": "Playlist_ShowdownTournament_BlastBerryNoBuildDuo_NoFill",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::Duo",
+    "RewardsPlacementThreshold": 5,
+    "InMatchXPRewardScalar": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaPlaylistXpToggle'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaPlaylistXpToggle.0"
+        },
+        "RowName": "Playlist_DefaultDuo"
+      }
+    },
+    "FirstWinRewards": [
+      {
+        "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Umbrella_BlastBerry_Season_30.Umbrella_BlastBerry_Season_30",
+        "SubPathString": ""
+      }
+    ],
+    "Strategy": "BattleRoyaleStrategy_Showdown",
+    "bUsePlayerRating": true,
+    "bEnableRatingUpdate": true,
+    "bEnableDynamicBotBackfill": true,
+    "RatingType": "blastberry_nobuild",
+    "bAllowedInLeto": true,
+    "bShouldErrorOnAdditionalContentFailure": true,
+    "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
+    "NumWinningTeamsCN": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "NumWinningTeamsCN"
+      }
+    },
+    "InventorySystemConfiguration": {
+      "AssetPathName": "/Itemization/BRStyle/ItemizationConfiguration_FNBR.ItemizationConfiguration_FNBR",
+      "SubPathString": ""
+    },
+    "bForceCameraFadeOnRespawn": false,
+    "RespawnType": "EAthenaRespawnType::InfiniteRespawn",
+    "PlaylistMissionGen": {
+      "ObjectName": "BlueprintGeneratedClass'MissionGen_BlastBerryNoBuildDuo_C'",
+      "ObjectPath": "/BlastBerry/Playlists/MissionGen_BlastBerryNoBuildDuo.0"
+    },
+    "LoadingScreenWidget": {
+      "AssetPathName": "/FortniteCoreUI/Frontend/Showdown/ShowdownLoading.ShowdownLoading_C",
+      "SubPathString": ""
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::PrioritizedContextualSlot",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/HUD_ContextualTips_Base.HUD_ContextualTips_Base_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "MissionIcon": {
+      "ObjectName": "Texture2D'T_Icon_Matchmaking_Duo_64'",
+      "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Social/T_Icon_Matchmaking_Duo_64.0"
+    },
+    "bLimitedTimeMode": false,
+    "bEnforceFullSquadInUI": true,
+    "bShowEliminationIndicatorForSquadmates": true,
+    "bShowEliminationIndicatorForTeammates": true,
+    "MapManagerClass": {
+      "AssetPathName": "/BlastBerry/Playlists/UIMapManager_BlastBerry.UIMapManager_BlastBerry_C",
+      "SubPathString": ""
+    },
+    "ServerMaxTickRate": "EFortServerTickRate::Sixty",
+    "SafeZoneLocationBlacklist": {
+      "AssetPathName": "/BlastBerryLoot/DataTables/BlastBerry_SafeZoneBlocklist.BlastBerry_SafeZoneBlocklist",
+      "SubPathString": ""
+    },
+    "bAllowSpectateAPartyMember": true,
+    "AISettings": {
+      "AssetPathName": "/BlastBerry/AI/Bots/PlayerBotsFlow_AISettings_BlastBerry.PlayerBotsFlow_AISettings_BlastBerry",
+      "SubPathString": ""
+    },
+    "MaxVehiclesCanSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.MaxVehiclesCanSpawnWith"
+      }
+    },
+    "PercentChanceSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
+      }
+    },
+    "PlaylistId": 9546099,
+    "PlaylistName": "Playlist_ShowdownTournament_BlastBerryNoBuildDuo_NoFill",
+    "GameType": "EFortGameType::BRArena",
+    "MinPlayers": 36,
+    "MaxPlayers": 40,
+    "bOverrideMaxPlayers": true,
+    "MaxHumanAndBotParticipants": 40,
+    "MaxTeamCount": 40,
+    "MaxTeamSize": 2,
+    "MaxSocialPartySize": 2,
+    "MaxSquadSize": 2,
+    "EnforceSquadFill": false,
+    "bAllowSquadFillOption": false,
+    "bShouldFillWhenNoSquadFillOption": true,
+    "bEnableBackfillDuringWarmupPhase": false,
+    "RichPresenceAssetName": "duos",
+    "bAllowKeepPlayingTogether": true,
+    "BuiltInGameFeaturePluginsToLoad": [
+      "BlastBerry"
+    ],
+    "GameplayTagContainer": [
+      "Athena.Playlist.DefaultXP",
+      "Athena.Playlist.Core",
+      "Athena.Plugin.GameMod.Gasket",
+      "Athena.Playlist.NoBuildingMaterials",
+      "Athena.Playlist.BlastBerry.NoBuildDuo",
+      "Plugin.Playlist.BlastBerry",
+      "Athena.Playlist.NoBuildBR.Duo",
+      "Athena.Playlist.Duo",
+      "Plugin.Playlist.Tournament",
+      "Product.BlastBerry.NoBuild",
+      "Athena.Playlist.BlastBerry.Tournament"
+    ],
+    "ModifierList": [
+      {
+        "AssetPathName": "/BlastBerry/Mutators/MaterialDropOnElim_BlastBerry_NoBuild.MaterialDropOnElim_BlastBerry_NoBuild",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/ContextTutorial/ContextTutorial_AthenaContextTutorial.ContextTutorial_AthenaContextTutorial",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/AI/Phoebe/GameplayMod_Phoebe_DM.GameplayMod_Phoebe_DM",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Deimos/GameplayMod_DeimosAI.GameplayMod_DeimosAI",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/NoBuildBR/Modifiers/NoBuildBRModifier.NoBuildBRModifier",
+        "SubPathString": ""
+      }
+    ],
+    "bIsDefaultPlaylist": true,
+    "UIDisplayName": {
+      "Namespace": "",
+      "Key": "C9D9090D45EDE094CCB08D879A2A12B7",
+      "SourceString": "Reload - Zero Build Duo",
+      "LocalizedString": "Reload - Zero Build Duo"
+    },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "E9C9D47747DCA06B3AB25E9D859B39DF",
+      "SourceString": "Testing mode no build duo",
+      "LocalizedString": "Testing mode no build duo"
+    },
+    "LootTierData": {
+      "AssetPathName": "/BlastBerryLoot/DataTables/NoBuild/BlastBerryComposite_LT_NoBuild.BlastBerryComposite_LT_NoBuild",
+      "SubPathString": ""
+    },
+    "LootPackages": {
+      "AssetPathName": "/BlastBerryLoot/DataTables/NoBuild/BlastBerryComposite_LP_NoBuild.BlastBerryComposite_LP_NoBuild",
+      "SubPathString": ""
+    },
+    "GameData": {
+      "AssetPathName": "/BlastBerryLoot/DataTables/Duos/NoBuild/BlastBerry_CompositeGD_DuosNoBuild.BlastBerry_CompositeGD_DuosNoBuild",
+      "SubPathString": ""
+    }
+  }
+}

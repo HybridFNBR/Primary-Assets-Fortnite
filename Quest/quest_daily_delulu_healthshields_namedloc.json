@@ -1,0 +1,322 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "quest_daily_delulu_healthshields_namedloc",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "Evergreen_Delulu",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "quest_daily_delulu_healthshields_namedloc_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementBy": "EFortShieldGainIncrementType::ShieldGainAmount",
+            "bRequireFullShields": false,
+            "bRequireShieldGainedFromTeammate": false,
+            "bRequireAuthorIsTheShieldGainSource": false,
+            "bUseShieldAmountGained": false,
+            "bUseOverFullShields": false,
+            "bUseShieldGainedPercent": false,
+            "bUseTotalShieldsGained": false,
+            "ShieldGainSource": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "ShieldGainType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AmountOfShieldsGained": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "ShieldsGainedOverFullAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "ShieldsPercentGained": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "TotalShieldGain": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Location.POI.Generic"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Location.POI.Generic )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          },
+          {
+            "bRequireHealingReceivedFromTeammate": false,
+            "HealSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "HealingType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "IncrementBy": "EFortHealingIncrementType::HealingAmount",
+            "bRequireHealedToFull": false,
+            "bUseHealingAmount": false,
+            "bUseOverHealing": false,
+            "bUsePercentHealed": false,
+            "SelfHealingBehavior": "EFortSelfHealingHandling::Allowed",
+            "HealingAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "HealthOverHealed": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "PercentHealed": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Location.POI.Generic"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Location.POI.Generic )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 200,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Delulu"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.Delulu )"
+    },
+    "Category": {
+      "DataTable": {
+        "ObjectName": "DataTable'QuestCategoryTable'",
+        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+      },
+      "RowName": "BRDailyChallenges"
+    },
+    "SortPriority": 3,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_daily_delulu_healthshields_namedloc:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/DeluluQuests/Items/QuestItems/Quests/Dailies/quest_daily_delulu_healthshields_namedloc.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_daily_delulu_healthshields_namedloc:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/DeluluQuests/Items/QuestItems/Quests/Dailies/quest_daily_delulu_healthshields_namedloc.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "quest_daily_delulu_healthshields_namedloc_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "E5F33C69440A92F9EDD5BFA64E685A21",
+      "SourceString": "Restore health or gain shields in Named Locations",
+      "LocalizedString": "Restore health or gain shields in Named Locations"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "16F95DFA4315B4F321EE8B8FA1AAD6E6",
+      "SourceString": "Restore health or gain shields in Named Locations",
+      "LocalizedString": "Restore health or gain shields in Named Locations"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.Delulu.Daily"
+        ]
+      },
+      {}
+    ]
+  }
+}

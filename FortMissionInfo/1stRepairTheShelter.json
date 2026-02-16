@@ -1,0 +1,664 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "1stRepairTheShelter",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/RepairTheShelter/Mission_RepairTheShelter.Mission_RepairTheShelter_C",
+      "SubPathString": ""
+    },
+    "MissionTags": [
+      "Stat.Mission.Primary.PowerReactor.Normal"
+    ],
+    "ZoneEndDelay": 8.0,
+    "MissionRewardBadge": {
+      "ObjectName": "FortBadgeItemDefinition'PowerTheReactor_Victory'",
+      "ObjectPath": "/SaveTheWorld/Items/Badges/MissionBadges/PowerTheReactor/PowerTheReactor_Victory.0"
+    },
+    "MissionRewardItemsLootTierGroup": "Mission_Complete_Rewards",
+    "ParTime": 3,
+    "UnderParBadge": {
+      "ObjectName": "FortBadgeItemDefinition'MissionBadge_Par3'",
+      "ObjectPath": "/SaveTheWorld/Items/Badges/MissionBadges/Par/MissionBadge_Par3.0"
+    },
+    "MaxMissionPoints": 24,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "0809351A47A2C9E42F580BB7578EDADD",
+      "SourceString": "Find the missing modules to Repair the Shelter",
+      "LocalizedString": "Find the missing modules to Repair the Shelter"
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ImageSize": {
+          "X": 24.0,
+          "Y": 24.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Shelter-Repair-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Shelter-Repair-32.0"
+        }
+      },
+      "Brush_XS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Shelter-Repair-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Shelter-Repair-32.0"
+        }
+      },
+      "Brush_S": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Shelter-Repair-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Shelter-Repair-64.0"
+        }
+      },
+      "Brush_M": {
+        "ImageSize": {
+          "X": 52.0,
+          "Y": 52.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Shelter-Repair-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Shelter-Repair-64.0"
+        }
+      },
+      "Brush_L": {
+        "ImageSize": {
+          "X": 76.0,
+          "Y": 76.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Shelter-Repair-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Shelter-Repair-128.0"
+        }
+      },
+      "Brush_XL": {
+        "ImageSize": {
+          "X": 104.0,
+          "Y": 104.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Shelter-Repair-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Shelter-Repair-128.0"
+        }
+      }
+    },
+    "EndOfMissionMediaSource": {
+      "ObjectName": "FileMediaSource'FMS_mission_success_generic'",
+      "ObjectPath": "/SaveTheWorld/Movies/VictoryMovies/FMS_mission_success_generic.0"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Locate",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/Primary/RepairTheShelter/RTs_Obj_DefendRaid.RTs_Obj_DefendRaid_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_TimedBar/Gen_TimedBar.Gen_TimedBar_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_TimedBar/Gen_TimedBar.Gen_TimedBar_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed",
+              "Activities.ObjectiveHandle.Num.02"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Interact/Gen_Interact.Gen_Interact_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.KillDestroyPickupInteract",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Interact/Gen_Interact.Gen_Interact_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.KillDestroyPickupInteract",
+              "Activities.ObjectiveHandle.Num.02"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/Primary/RepairTheShelter/RtS_Obj_InstallDevice.RtS_Obj_InstallDevice_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Defense/Gen_Defense.Gen_Defense_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Defense",
+              "Activities.ObjectiveHandle.Num.02"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Defense/Gen_Defense.Gen_Defense_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Defense",
+              "Activities.ObjectiveHandle.Num.03"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Defense/Gen_Defense.Gen_Defense_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Defense",
+              "Activities.ObjectiveHandle.Num.04"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/Primary/RepairTheShelter/RtS_Obj_FindMissingParts.RtS_Obj_FindMissingParts_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.08"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.09"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Locate/Gen_Locate.Gen_Locate_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Locate",
+              "Activities.ObjectiveHandle.Num.10"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/Primary/RepairTheShelter/RtS_Obj_Victory.RtS_Obj_Victory_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_RecommendedBuild/Gen_RecommendedBuild.Gen_RecommendedBuild_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Build",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Timer/Gen_Timer.Gen_Timer_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed",
+              "Activities.ObjectiveHandle.Num.06"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_ReadyUp/GenericObjective_ReadyUp.GenericObjective_ReadyUp_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed",
+              "Activities.ObjectiveHandle.Num.05"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "bShowMinimapIconsOnlyIfFocused": false,
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.Placement.LocationUsed"
+      ],
+      "ActorsAndLocations": [
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [
+            "Activities.DynamicPlacement.Mission.Primary"
+          ],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'RepairTheShelterMissionPlacementQuery'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/RepairTheShelter/RepairTheShelterMissionPlacementQuery.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/RepairTheShelter/Props/BP_RepairShelter.BP_RepairShelter_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        }
+      ]
+    },
+    "bStartPlayingOnLoad": true,
+    "MissionName": {
+      "Namespace": "",
+      "Key": "55EBD4ED43C83A4A630BF7AAE3638733",
+      "SourceString": "Repair the Shelter",
+      "LocalizedString": "Repair the Shelter"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_RepairTheShelter_Raid1.EDO_Set_RepairTheShelter_Raid1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.1Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_CampClear_Medium.EDO_Set_CampClear_Medium",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.NonScaling.2Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_SEEBotScan_Encounter.EDO_Set_SEEBotScan_Encounter",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.NonScaling.2Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_PowerTheReactor_Raid.EDO_Set_PowerTheReactor_Raid",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_TimedModifierTags'1stRepairTheShelter:FortDifficultyOptionCategoryEncounter_TimedModifierTags_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/RepairTheShelter/1stRepairTheShelter.0"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.1Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_RepairTheShelter_Raid2.EDO_Set_RepairTheShelter_Raid2",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.1Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_RepairTheShelter_Raid3Plus.EDO_Set_RepairTheShelter_Raid3Plus",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.1Player"
+        ]
+      }
+    ],
+    "TaggedRewards": [
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.SpeedRun"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/Par/MissionBadge_Par3.MissionBadge_Par3",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Bonus1"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/Outpost/BonusBuildLimit.BonusBuildLimit",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ],
+    "AIServices": [
+      {
+        "ObjectName": "Class'AthenaAIServiceLoot'",
+        "ObjectPath": "/Script/FortniteAI"
+      }
+    ],
+    "GameData": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/Gate/STW_CompositeGameData.STW_CompositeGameData",
+      "SubPathString": ""
+    }
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "Type": "FortPlaylistAthena",
+  "Name": "Playlist_Habanero_NoBuild_Sunflower_Duos",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::Duo",
+    "InMatchXPRewardScalar": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaPlaylistXpToggle'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaPlaylistXpToggle.0"
+        },
+        "RowName": "Playlist_DefaultDuo"
+      }
+    },
+    "FirstWinRewards": [
+      {
+        "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Umbrella_BlastBerry_Season_30.Umbrella_BlastBerry_Season_30",
+        "SubPathString": ""
+      }
+    ],
+    "FillRateTable": [
+      {
+        "MinMmr": 750,
+        "MaxMmr": 949,
+        "MinFillPct": 0.2,
+        "MaxFillPct": 0.2,
+        "MaxPriority": 0.0
+      },
+      {
+        "MinMmr": 950,
+        "MaxMmr": 1049,
+        "MinFillPct": 0.4,
+        "MaxFillPct": 0.4,
+        "MaxPriority": 0.0
+      },
+      {
+        "MinMmr": 1050,
+        "MaxMmr": 1214,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1215,
+        "MaxMmr": 2250,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 90.0
+      }
+    ],
+    "BotFillMMRCutoff": 1049,
+    "PlayerRatingBrackets": [
+      {
+        "MinMmr": 750,
+        "MaxMmr": 799
+      },
+      {
+        "MinMmr": 800,
+        "MaxMmr": 849
+      },
+      {
+        "MinMmr": 850,
+        "MaxMmr": 899
+      },
+      {
+        "MinMmr": 900,
+        "MaxMmr": 949
+      },
+      {
+        "MinMmr": 950,
+        "MaxMmr": 999
+      },
+      {
+        "MinMmr": 1000,
+        "MaxMmr": 1049
+      },
+      {
+        "MinMmr": 1050,
+        "MaxMmr": 1104
+      },
+      {
+        "MinMmr": 1105,
+        "MaxMmr": 1159
+      },
+      {
+        "MinMmr": 1160,
+        "MaxMmr": 1214
+      },
+      {
+        "MinMmr": 1215,
+        "MaxMmr": 1424
+      },
+      {
+        "MinMmr": 1425,
+        "MaxMmr": 1714
+      },
+      {
+        "MinMmr": 1715,
+        "MaxMmr": 2225
+      }
+    ],
+    "MinBracketSize": 25,
+    "MaxBracketSize": 510,
+    "BracketBalanceMergeInterval": "3 seconds",
+    "BracketBalanceSplitInterval": "5 seconds",
+    "OutlierBracketBalanceMergeInterval": "10 seconds",
+    "MinBracketPriority": 30.0,
+    "MaxBracketPriority": 60.0,
+    "MaxOutlierBracketPriority": 180.0,
+    "MaxOutlierBracketMergeMmrGap": 1275,
+    "MmrThresholdForPrioritySession": 1710,
+    "bUsePlayerRating": true,
+    "bEnableRatingUpdate": true,
+    "bRestrictSquadFillToSoloPlayers": true,
+    "bIsRankedMode": true,
+    "bUseReloadRankedFormula": true,
+    "RankLossMax": 18.0,
+    "RankLossFloorMod": 0.75,
+    "KillerRankShare": 0.25,
+    "bUseRankScaling": true,
+    "RankScalingStandardDeviation": 800.0,
+    "RankKillFarmCutoff": 3,
+    "RankKillFarmFloor": 0.05,
+    "RankKillFarmMultiplier": 0.3,
+    "DamageTakenMax": 150.0,
+    "PlacementLossMin": 10.0,
+    "PlacementGainMin": 0.162,
+    "SeasonNumber": 20006,
+    "bEnableDynamicBotBackfill": true,
+    "RatingType": "ranked_blastberry_nobuild",
+    "bAllowedInLeto": true,
+    "bShouldErrorOnAdditionalContentFailure": true,
+    "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
+    "NumWinningTeamsCN": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "NumWinningTeamsCN"
+      }
+    },
+    "InventorySystemConfiguration": {
+      "AssetPathName": "/Itemization/BRStyle/ItemizationConfiguration_FNBR.ItemizationConfiguration_FNBR",
+      "SubPathString": ""
+    },
+    "bForceCameraFadeOnRespawn": false,
+    "RespawnType": "EAthenaRespawnType::InfiniteRespawn",
+    "PlaylistMissionGen": {
+      "ObjectName": "BlueprintGeneratedClass'MissionGen_Habanero_BlastBerryNoBuildDuo_C'",
+      "ObjectPath": "/BlastBerry/Playlists/MissionGen_Habanero_BlastBerryNoBuildDuo.0"
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::PrioritizedContextualSlot",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/HUD_ContextualTips_Base.HUD_ContextualTips_Base_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "MissionIcon": {
+      "ObjectName": "Texture2D'T_Icon_Matchmaking_Duo_64'",
+      "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Social/T_Icon_Matchmaking_Duo_64.0"
+    },
+    "bLimitedTimeMode": false,
+    "bShowEliminationIndicatorForSquadmates": true,
+    "bShowEliminationIndicatorForTeammates": true,
+    "MapManagerClass": {
+      "AssetPathName": "/BlastBerry/Playlists/UIMapManager_BlastBerry.UIMapManager_BlastBerry_C",
+      "SubPathString": ""
+    },
+    "ServerMaxTickRate": "EFortServerTickRate::Sixty",
+    "SafeZoneLocationBlacklist": {
+      "AssetPathName": "/BlastBerryLoot/DataTables/BlastBerry_SafeZoneBlocklist.BlastBerry_SafeZoneBlocklist",
+      "SubPathString": ""
+    },
+    "bAllowSpectateAPartyMember": true,
+    "AISettings": {
+      "AssetPathName": "/BlastBerry/AI/Bots/PlayerBotsFlow_AISettings_BlastBerry.PlayerBotsFlow_AISettings_BlastBerry",
+      "SubPathString": ""
+    },
+    "MaxVehiclesCanSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.MaxVehiclesCanSpawnWith"
+      }
+    },
+    "PercentChanceSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
+      }
+    },
+    "PlaylistId": 9836725,
+    "PlaylistName": "Playlist_Habanero_NoBuild_Sunflower_Duos",
+    "GameType": "EFortGameType::BlastBerry",
+    "MinPlayers": 30,
+    "MaxPlayers": 40,
+    "bOverrideMaxPlayers": true,
+    "MaxHumanAndBotParticipants": 40,
+    "MaxTeamCount": 40,
+    "MaxTeamSize": 2,
+    "MaxSocialPartySize": 2,
+    "MaxSquadSize": 2,
+    "bEnableBackfillDuringWarmupPhase": false,
+    "RichPresenceAssetName": "duos",
+    "bAllowKeepPlayingTogether": true,
+    "PreloadPersistentLevel": {
+      "AssetPathName": "/Game/Athena/Maps/Athena_Empty.Athena_Empty",
+      "SubPathString": ""
+    },
+    "BuiltInGameFeaturePluginsToLoad": [
+      "BlastBerry",
+      "Koala"
+    ],
+    "GameplayTagContainer": [
+      "Athena.Playlist.DefaultXP",
+      "Athena.Playlist.Core",
+      "Athena.Plugin.GameMod.Gasket",
+      "Athena.Playlist.NoBuildingMaterials",
+      "Athena.Playlist.BlastBerry.NoBuildDuo",
+      "Plugin.Playlist.BlastBerry",
+      "Athena.Playlist.NoBuildBR.Duo",
+      "Athena.Playlist.Duo",
+      "Athena.Playlist.Sunflower",
+      "Product.BlastBerry.NoBuild",
+      "Athena.Playlist.Habanero",
+      "Athena.Playlist.BlastBerry.Ranked"
+    ],
+    "SpawnImmunityTime": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'BlastBerryGameDataHF'",
+          "ObjectPath": "/BlastBerryLoot/DataTables/BlastBerryGameDataHF.0"
+        },
+        "RowName": "BlastBerry.StandardRespawn.SpawnImmunity"
+      }
+    },
+    "ModifierList": [
+      {
+        "AssetPathName": "/BlastBerry/Mutators/MaterialDropOnElim_BlastBerry_NoBuild.MaterialDropOnElim_BlastBerry_NoBuild",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/ContextTutorial/ContextTutorial_AthenaContextTutorial.ContextTutorial_AthenaContextTutorial",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/AI/Phoebe/GameplayMod_Phoebe_DM.GameplayMod_Phoebe_DM",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Deimos/GameplayMod_DeimosAI.GameplayMod_DeimosAI",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/NoBuildBR/Modifiers/NoBuildBRModifier.NoBuildBRModifier",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Showdown/Siphon/GameplayMod_Siphon.GameplayMod_Siphon",
+        "SubPathString": ""
+      }
+    ],
+    "TimeOfDayManager": {
+      "AssetPathName": "/BlastBerryMap/Game/TimeOfDay/TODM/DSA_UEFN_Sunflower.DSA_UEFN_Sunflower_C",
+      "SubPathString": ""
+    },
+    "bIsDefaultPlaylist": true,
+    "UIDisplayName": {
+      "Namespace": "",
+      "Key": "1307E7ED4FCEE944033A5D9A7B8EAB33",
+      "SourceString": "Ranked Reload - Zero Build Duo",
+      "LocalizedString": "Ranked Reload - Zero Build Duo"
+    },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "AB9F9C5347BAB49E3F4FBBAC57814E14",
+      "SourceString": "Testing mode no build duo",
+      "LocalizedString": "Testing mode no build duo"
+    },
+    "LootTierData": {
+      "AssetPathName": "/BlastBerryLoot/DataTables/NoBuild/BlastBerryComposite_LT_NoBuild.BlastBerryComposite_LT_NoBuild",
+      "SubPathString": ""
+    },
+    "LootPackages": {
+      "AssetPathName": "/BlastBerryLoot/DataTables/NoBuild/BlastBerryComposite_LP_NoBuild.BlastBerryComposite_LP_NoBuild",
+      "SubPathString": ""
+    },
+    "GameData": {
+      "AssetPathName": "/BlastBerryLoot/DataTables/Duos/NoBuild/BlastBerry_CompositeGD_DuosNoBuild.BlastBerry_CompositeGD_DuosNoBuild",
+      "SubPathString": ""
+    }
+  }
+}

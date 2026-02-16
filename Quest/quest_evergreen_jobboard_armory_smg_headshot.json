@@ -1,0 +1,355 @@
+{
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "quest_evergreen_jobboard_armory_smg_headshot",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAllowCustomCompletionPath": true,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      },
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "quest_evergreen_jobboard_armory_smg_headshot_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "bIncrementByDamageAmount": true,
+            "bUseDamageAmount": false,
+            "bIncrementByUncappedDamage": false,
+            "bUseUncappedDamage": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Homebase.Class"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Homebase.Class )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Item.Weapon.Ranged.SMG"
+                  },
+                  {
+                    "TagName": "Gameplay.Damage.Critical"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  2,
+                  0,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Item.Weapon.Ranged.SMG, Gameplay.Damage.Critical )"
+              }
+            },
+            "DamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "UncappedDamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "4518FE9049F223316D0F7AB9EB96BDA9",
+          "SourceString": "Headshot a player with an SMG",
+          "LocalizedString": "Headshot a player with an SMG"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "AA659F2E466CB992B2AA91807E0FC9E0",
+          "SourceString": "Headshot a player with an SMG",
+          "LocalizedString": "Headshot a player with an SMG"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "BackendName": "quest_evergreen_jobboard_armory_smg_headshot_obj1",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": true,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.JobBoard.Failed"
+            },
+            "Subjects": [],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "AC34B81F47F90DB3373DBB8229BA3E53",
+          "SourceString": "Objective failed",
+          "LocalizedString": "Objective failed"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "4C17F1EF40E05E5680F10999C7FF8509",
+          "SourceString": "Objective failed",
+          "LocalizedString": "Objective failed"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.BR )"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_UrgentQuest'quest_evergreen_jobboard_armory_smg_headshot:FortQuestDefinitionComponent_UrgentQuest_0'",
+        "ObjectPath": "/JobBoard/QuestItems/WeaponSpecialist/SMG/quest_evergreen_jobboard_armory_smg_headshot.3"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_evergreen_jobboard_armory_smg_headshot:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/JobBoard/QuestItems/WeaponSpecialist/SMG/quest_evergreen_jobboard_armory_smg_headshot.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_GameplayAbilities'quest_evergreen_jobboard_armory_smg_headshot:FortQuestDefinitionComponent_GameplayAbilities_0'",
+        "ObjectPath": "/JobBoard/QuestItems/WeaponSpecialist/SMG/quest_evergreen_jobboard_armory_smg_headshot.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_evergreen_jobboard_armory_smg_headshot:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JobBoard/QuestItems/WeaponSpecialist/SMG/quest_evergreen_jobboard_armory_smg_headshot.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "quest_evergreen_jobboard_armory_smg_headshot_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      },
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "quest_evergreen_jobboard_armory_smg_headshot_obj1"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": [
+          "Athena.Quests.CompletionPath.Failed"
+        ]
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "7E5CBD9A474A8CA86D7604AAD3A85702",
+      "SourceString": "Grants an Uncommon SMG. Headshot a player to earn bars!",
+      "LocalizedString": "Grants an Uncommon SMG. Headshot a player to earn bars!"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "58099B97432DCC8CE6A8D181034D00E1",
+      "SourceString": "Grants an Uncommon SMG. Headshot a player to earn bars!",
+      "LocalizedString": "Grants an Uncommon SMG. Headshot a player to earn bars!"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Athena.Quests.JobBoardBriefing.JobType.WeaponSpecialist"
+        ]
+      }
+    ]
+  }
+}

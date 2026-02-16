@@ -1,0 +1,263 @@
+{
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_S20_EGS_Volcanic_Q03",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S20_EGS_Volcanic_Q03_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "bIncrementByDamageAmount": true,
+            "bUseDamageAmount": false,
+            "bIncrementByUncappedDamage": false,
+            "bUseUncappedDamage": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Homebase.Class"
+                  },
+                  {
+                    "TagName": "Athena.Faction.Generic.Hostile"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Duel.IsBeingChallenged"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Wildlife.Predator"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  4,
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Homebase.Class, Athena.Faction.Generic.Hostile, Pawn.Athena.NPC.Duel.IsBeingChallenged, Pawn.Athena.NPC.Wildlife.Predator )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "UncappedDamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Playlist"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Playlist )"
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "9019D53D41918959A44D20B55F2EE7C6",
+          "SourceString": "Deal damage to opponents",
+          "LocalizedString": "Deal damage to opponents"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "370E0981485C6FE14A2B59B2C7E7011E",
+          "SourceString": "When combat erupts, make the first move.",
+          "LocalizedString": "When combat erupts, make the first move."
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 2100,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.BR )"
+    },
+    "SortPriority": 3,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S20_EGS_Volcanic_Q03:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/LegacyRMTs/Items/Quests/EGS/Quest_S20_EGS_Volcanic_Q03.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S20_EGS_Volcanic_Q03:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/LegacyRMTs/Items/Quests/EGS/Quest_S20_EGS_Volcanic_Q03.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S20_EGS_Volcanic_Q03_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "332019D34CD375F8EAF3B4867B0FCDA9",
+      "SourceString": "Deal damage to opponents",
+      "LocalizedString": "Deal damage to opponents"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "51B66B9C45CAE5466CCE96AAA9B8E401",
+      "SourceString": "Deal damage to opponents",
+      "LocalizedString": "Deal damage to opponents"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "7D5B8C564DF4B2D0287923A4B4FAB911",
+      "SourceString": "When combat erupts, make the first move.",
+      "LocalizedString": "When combat erupts, make the first move."
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.EGS.Volcanic"
+        ]
+      }
+    ]
+  }
+}

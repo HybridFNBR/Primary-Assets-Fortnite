@@ -1,0 +1,88 @@
+{
+  "Type": "CosmeticsGatingRule",
+  "Name": "Rule_BarnTowel_Check",
+  "Class": "UScriptClass'CosmeticsGatingRule'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "GatingRequirementQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "BarnTowelArmory"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        3,
+        1,
+        0
+      ],
+      "AutoDescription": " NONE( BarnTowelArmory )"
+    },
+    "CosmeticStage": "EGatingCosmeticStage::PartLevel",
+    "CosmeticLoadoutSlotOrPortQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "CharacterPart.Type.Gameplay"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( CharacterPart.Type.Gameplay )"
+    },
+    "AdditionalTagSourceGatheringQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Item.Power.WiseOtter.Combo"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Item.Power.WiseOtter.Combo )"
+    },
+    "FallbackCosmetics": [
+      {
+        "CosmeticLoadoutSlotQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "CosmeticPortQuery": {
+          "PortQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "CharacterPart.Type.Gameplay"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( CharacterPart.Type.Gameplay )"
+          }
+        },
+        "CosmeticFallback": {
+          "ObjectName": "CustomCharacterPart'CP_PROTO_BarnTowel_Boots_Gauntlets'",
+          "ObjectPath": "/BarnTowelGameplay/Assets/CP_PROTO_BarnTowel_Boots_Gauntlets.1"
+        }
+      }
+    ]
+  }
+}

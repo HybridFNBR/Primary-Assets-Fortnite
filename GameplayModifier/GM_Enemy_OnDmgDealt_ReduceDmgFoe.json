@@ -1,0 +1,78 @@
+{
+  "Type": "FortGameplayModifierItemDefinition",
+  "Name": "GM_Enemy_OnDmgDealt_ReduceDmgFoe",
+  "Class": "UScriptClass'FortGameplayModifierItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "PersistentAbilitySets": [
+      {
+        "DeliveryRequirements": {
+          "SourceTagRequirements": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTagRequirements": {
+            "RequireTags": [],
+            "IgnoreTags": [
+              "NPC.CharacterType.MiniBoss",
+              "Pawn.Athena.NPC.Wildlife"
+            ],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "ApplicableTeamAffiliation": "EFortTeamAffiliation::Friendly",
+          "bConsiderTeamAffiliationToInstigator": false,
+          "ApplicableTeam": "EFortTeam::Monster",
+          "bConsiderTeam": true,
+          "bApplyToPlayerPawns": false,
+          "bApplyToAIPawns": true,
+          "bApplyToBuildingActors": false,
+          "BuildingActorSpecification": "EFortDeliveryInfoBuildingActorSpecification::All",
+          "bApplyToGlobalEnvironmentAbilityActor": false
+        },
+        "AbilitySets": [
+          {
+            "AssetPathName": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Enemy/GAS_GM_OnDmgDealt_ReduceDmgFoe.GAS_GM_OnDmgDealt_ReduceDmgFoe",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "037DA65F4F4A8B605614F19BE0BAEE55",
+      "SourceString": "Slap-fest",
+      "LocalizedString": "Slap-fest"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "7940104541FD3C43C0D0A1A38774DD00",
+      "SourceString": "Players deal less damage after being struck by enemies",
+      "LocalizedString": "Players deal less damage after being struck by enemies"
+    },
+    "DataList": [
+      {
+        "MinLevel": 1,
+        "MaxLevel": 1
+      },
+      {
+        "Icon": {
+          "AssetPathName": "/SaveTheWorld/UI/Icons/Icon-Theater/Icon-Theater-3-M.Icon-Theater-3-M",
+          "SubPathString": ""
+        }
+      }
+    ]
+  }
+}

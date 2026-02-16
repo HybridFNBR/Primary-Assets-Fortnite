@@ -1,0 +1,130 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "BuildRadarTower_Large_002",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Secondary/BuildRadarTower/Mission_BuildRadarTower.Mission_BuildRadarTower_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MissionTags": [
+      "Stat.Mission.Secondary.BuildRadarTower"
+    ],
+    "MaxMissionPoints": 1,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "B1C56A98451D05503598679544B4289A",
+      "SourceString": "Bulid the Radar Tower and activate the Radar Dish at the top of the tower.",
+      "LocalizedString": "Bulid the Radar Tower and activate the Radar Dish at the top of the tower."
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.03"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.Placement.LocationUsed"
+      ],
+      "AdditionalWorldFoundations": [
+        {
+          "ItemIdentifyingTags": [
+            "Activities.ObjectiveHandle.Num.01"
+          ],
+          "TagsToAddToChosenPlacementActorOrFoundationActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'RadarTowerMissionPlacementQuery'",
+            "ObjectPath": "/SaveTheWorld/Missions/EQSQueries/RadarTowerMissionPlacementQuery.0"
+          },
+          "BuildingFoundationToPlace": {
+            "AssetPathName": "/SaveTheWorld/WorldTiles/LayoutFoundations/Missions/BuildRadarGrid/LF_RadarTowers_Large_002.LF_RadarTowers_Large_002_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bAdjustFoundationPlacementForFloors": false
+        }
+      ]
+    },
+    "MinDistanceToAllowSpawnPad": 50000.0,
+    "PopupWidgetData": {
+      "AvailableIcon": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-RadarPointSecondary-S'",
+          "ObjectPath": "/SaveTheWorld/UI/HUD/Textures/Icon-RadarPointSecondary-S.0"
+        }
+      },
+      "UnavailableIcon": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-RadarPointSecondary-S'",
+          "ObjectPath": "/SaveTheWorld/UI/HUD/Textures/Icon-RadarPointSecondary-S.0"
+        }
+      }
+    },
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'Rewards_VeryHigh'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/Rewards_VeryHigh.0"
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "C1A28A964C998AF44A740189E2282F08",
+      "SourceString": "Build the Radar Tower",
+      "LocalizedString": "Build the Radar Tower"
+    },
+    "MissionOptions": {
+      "AssetPathName": "/SaveTheWorld/AIDirector/Missions/MissionOptionData_Default.MissionOptionData_Default",
+      "SubPathString": ""
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "Type": "FortPlaylistAthena",
+  "Name": "Playlist_FutureMapItemTest",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bRewardsTrackPlacement": false,
+    "bRewardForRevivingTeammates": true,
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::TwoTeam",
+    "RewardsPlacementThreshold": 1,
+    "InMatchXPRewardScalar": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaPlaylistXpToggle'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaPlaylistXpToggle.0"
+        },
+        "RowName": "Playlist_ItemTest"
+      }
+    },
+    "RatingType": "largeTeam",
+    "WinConditionType": "EAthenaWinCondition::MutatorControlledGoalScore",
+    "TimedWinConditionTime": {
+      "Value": 60.0
+    },
+    "FinalWinConditionTime": {
+      "Value": 60.0
+    },
+    "bIsLargeTeamGame": true,
+    "RespawnHeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CompositeCurveTable'AthenaCompositeGD'",
+          "ObjectPath": "/BRPlaylists/Athena/Playlists/ItemTest/AthenaCompositeGD.0"
+        },
+        "RowName": "Respawn.RespawnHeight"
+      }
+    },
+    "RespawnTime": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CompositeCurveTable'AthenaCompositeGD'",
+          "ObjectPath": "/BRPlaylists/Athena/Playlists/ItemTest/AthenaCompositeGD.0"
+        },
+        "RowName": "Respawn.RespawnTime"
+      }
+    },
+    "AirCraftBehavior": "EAirCraftBehavior::FlyTowardFirstCircleCenter",
+    "bUseCustomAircraftPathSelection": true,
+    "AircraftPathMidpointSelectionRadiusMin": 52500.0,
+    "AircraftPathMidpointSelectionRadiusMax": 52500.0,
+    "PlaylistMissionGen": {
+      "ObjectName": "BlueprintGeneratedClass'MissionGen_Respawn_C'",
+      "ObjectPath": "/Game/Athena/Playlists/Respawn/MissionGen_Respawn.0"
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::TopRightCorner",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/Respawn/RespawnHUD_TwoTeamScores.RespawnHUD_TwoTeamScores_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      },
+      {
+        "Slot": "EUIExtensionSlot::PrioritizedContextualSlot",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/HUD_ContextualTips_Base.HUD_ContextualTips_Base_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "MissionIcon": {
+      "ObjectName": "Texture2D'T_Icon_Matchmaking_Squad_64'",
+      "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Social/T_Icon_Matchmaking_Squad_64.0"
+    },
+    "UIDisplaySubName": {
+      "Namespace": "",
+      "Key": "94976AD340BC1D6AB3923392FE1EAD01",
+      "SourceString": "Duo",
+      "LocalizedString": "Duo"
+    },
+    "MapManagerClass": {
+      "AssetPathName": "/Ch7UI/Minimap/UI_Hera_MapManagerBR.UI_Hera_MapManagerBR_C",
+      "SubPathString": ""
+    },
+    "SafeZoneStartUp": "ESafeZoneStartUp::StartsWithAirCraft",
+    "bDisplayFinalStormPosition": true,
+    "LastSafeZoneIndex": 3,
+    "bUsesAnimationSharing": true,
+    "AnimationSharingSetup": {
+      "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
+      "SubPathString": ""
+    },
+    "AISettings": {
+      "AssetPathName": "/Game/Athena/AI/AISettings/Phoebe_Default_AISettings.Phoebe_Default_AISettings",
+      "SubPathString": ""
+    },
+    "PlaylistId": 1050,
+    "PlaylistName": "Playlist_FutureMapItemTest",
+    "GameType": "EFortGameType::BRLTM",
+    "MinPlayers": 24,
+    "MaxPlayers": 40,
+    "MaxTeamCount": 40,
+    "MaxTeamSize": 2,
+    "MaxSocialPartySize": 2,
+    "MaxSquadSize": 2,
+    "bAllowJoinInProgress": true,
+    "PreloadPersistentLevel": {
+      "AssetPathName": "/Hera_Map/Maps/Hera_Terrain.Hera_Terrain",
+      "SubPathString": ""
+    },
+    "GameplayTagContainer": [
+      "Athena.Playlist.IsALargeTeamMode",
+      "Athena.Playlist.DefaultXP",
+      "Athena.Playlist.ItemsTest",
+      "Athena.Playlist.Default"
+    ],
+    "DBNOType": "EDBNOType::NotWhenRespawning",
+    "ModifierList": [
+      {
+        "AssetPathName": "/BRPlaylists/Athena/Playlists/ItemTest/RespawnGameplayModifier.RespawnGameplayModifier",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/BRPlaylists/Athena/Playlists/ItemTest/ModifierDefinition.ModifierDefinition",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Deimos/GameplayMod_DeimosAI.GameplayMod_DeimosAI",
+        "SubPathString": ""
+      }
+    ],
+    "UIDisplayName": {
+      "Namespace": "",
+      "Key": "9540889947FF5299A5C867882FEF1A52",
+      "SourceString": "Prototype Testing",
+      "LocalizedString": "Prototype Testing"
+    },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "27D6A6284B77741005B3DAAB80FFB11C",
+      "SourceString": "Players start with a full kit of up coming Prototype items in a Team Rumble match",
+      "LocalizedString": "Players start with a full kit of up coming Prototype items in a Team Rumble match"
+    },
+    "LootTierData": {
+      "AssetPathName": "/BRPlaylists/Athena/Playlists/ItemTest/AthenaCompositeLTD.AthenaCompositeLTD",
+      "SubPathString": ""
+    },
+    "LootPackages": {
+      "AssetPathName": "/BRPlaylists/Athena/Playlists/ItemTest/AthenaCompositeLP.AthenaCompositeLP",
+      "SubPathString": ""
+    },
+    "GameData": {
+      "AssetPathName": "/BRPlaylists/Athena/Playlists/ItemTest/AthenaCompositeGD.AthenaCompositeGD",
+      "SubPathString": ""
+    },
+    "ResourceRates": {
+      "AssetPathName": "/Game/Athena/Playlists/ItemTest/AthenaResourceRates.AthenaResourceRates",
+      "SubPathString": ""
+    }
+  }
+}

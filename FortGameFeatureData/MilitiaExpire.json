@@ -1,0 +1,75 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "MilitiaExpire",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/MilitiaExpire/Levels/MilitiaExpire_LevelOverlay.MilitiaExpire_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Evergreen",
+        "DisplayName": "Give Self-Revive MedKit",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /MilitiaExpire/Items/AID_MilitiaExpire_Medallion 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "CH7S1",
+        "DisplayName": "Give Self-Revive MedKit",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /MilitiaExpire/Items/AID_MilitiaExpire_Medallion 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'MilitiaExpire:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/MilitiaExpire/MilitiaExpire.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddMutators'MilitiaExpire:FortGameFeatureAction_AddMutators_0'",
+        "ObjectPath": "/MilitiaExpire/MilitiaExpire.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddUnableToPerformActionText'MilitiaExpire:FortGameFeatureAction_AddUnableToPerformActionText_0'",
+        "ObjectPath": "/MilitiaExpire/MilitiaExpire.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "PlayerAugment",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/MilitiaExpire/Items"
+          }
+        ],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/MilitiaExpire/Items/AID_MilitiaExpire_Medallion.AID_MilitiaExpire_Medallion",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

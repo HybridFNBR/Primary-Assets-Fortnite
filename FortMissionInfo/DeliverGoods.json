@@ -1,0 +1,589 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "DeliverGoods",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/DeliverGoods/Mission/Mission_DeliverGoods.Mission_DeliverGoods_C",
+      "SubPathString": ""
+    },
+    "MissionTags": [
+      "Stat.Mission.Primary.DeliverGoods.Normal"
+    ],
+    "MissionRewardBadge": {
+      "ObjectName": "FortBadgeItemDefinition'DeliverTheGoods_Victory'",
+      "ObjectPath": "/SaveTheWorld/Items/Badges/MissionBadges/DeliverGoods/DeliverTheGoods_Victory.0"
+    },
+    "MissionRewardItemsLootTierGroup": "Mission_Complete_Rewards",
+    "ParTime": 3,
+    "UnderParBadge": {
+      "ObjectName": "FortBadgeItemDefinition'MissionBadge_Par3'",
+      "ObjectPath": "/SaveTheWorld/Items/Badges/MissionBadges/Par/MissionBadge_Par3.0"
+    },
+    "MaxMissionPoints": 24,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "985475584CD119C63072B294CAC32ED6",
+      "SourceString": "Deliver the Goods!",
+      "LocalizedString": "Deliver the Goods!"
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ImageSize": {
+          "X": 16.0,
+          "Y": 16.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Goods-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Goods-32.0"
+        }
+      },
+      "Brush_XS": {
+        "ImageSize": {
+          "X": 16.0,
+          "Y": 16.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Goods-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Goods-32.0"
+        }
+      },
+      "Brush_S": {
+        "ImageSize": {
+          "X": 24.0,
+          "Y": 24.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Goods-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Goods-32.0"
+        }
+      },
+      "Brush_M": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Goods-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Goods-64.0"
+        }
+      },
+      "Brush_L": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Goods-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Goods-128.0"
+        }
+      },
+      "Brush_XL": {
+        "ImageSize": {
+          "X": 104.0,
+          "Y": 104.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Goods-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Goods-128.0"
+        }
+      }
+    },
+    "EndOfMissionMediaSource": {
+      "ObjectName": "FileMediaSource'FMS_mission_success_generic'",
+      "ObjectPath": "/SaveTheWorld/Movies/VictoryMovies/FMS_mission_success_generic.0"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Num.01",
+              "Activities.ObjectiveHandle.Generic.TextDisplay"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Num.02",
+              "Activities.ObjectiveHandle.Generic.TextDisplay"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.03"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.04"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Deposit/Gen_Deposit.Gen_Deposit_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.DepositItems"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Num.05",
+              "Activities.ObjectiveHandle.Generic.TextDisplay"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Num.06",
+              "Activities.ObjectiveHandle.Generic.TextDisplay"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.07"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Defense/Gen_Defense.Gen_Defense_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Defense"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_TimedBar/Gen_TimedBar.Gen_TimedBar_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_TimedBar/Gen_TimedBar.Gen_TimedBar_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Num.02",
+              "Activities.ObjectiveHandle.Generic.Timed"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.08"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.09"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "PlacementActorInfo": {
+      "DistanceRangeMin": 6656.0,
+      "DistanceRangeMax": 9472.0,
+      "BuildingData": [
+        {
+          "BuildingToSpawn": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/DeliverGoods/Props/BP_Refinery.BP_Refinery_C",
+            "SubPathString": ""
+          },
+          "BuildingClassesToFind": [
+            {
+              "ObjectName": "Class'FortPlacementActor'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          ],
+          "RequiredTags": [
+            "Activities.Placement.Generic",
+            "Activities.Placement.OnGround",
+            "Activities.Placement.OnNonDestructible",
+            "Activities.Placement.Large"
+          ],
+          "PreferredTags": [
+            "Activities.Placement.HighElevation",
+            "Activities.Placement.LowElevation"
+          ],
+          "ExlusionTags": [
+            "Activities.Placement.Indoor",
+            "Activities.Placement.LowCeiling",
+            "Activities.Placement.Floating",
+            "Activities.Placement.OnDynamic",
+            "Activities.Placement.NonCombat",
+            "Activities.Placement.LocationUsed"
+          ],
+          "RequiredProperties": [],
+          "bIgnoreCollisionCheck": true,
+          "bSnapToGrid": true
+        },
+        {
+          "BuildingToSpawn": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/DeliverGoods/Props/BP_Stockpile.BP_Stockpile_C",
+            "SubPathString": ""
+          },
+          "BuildingClassesToFind": [
+            {
+              "ObjectName": "Class'FortPlacementActor'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          ],
+          "RequiredTags": [
+            "Activities.Placement.Generic",
+            "Activities.Placement.OnGround",
+            "Activities.Placement.OnNonDestructible",
+            "Activities.Placement.Large"
+          ],
+          "PreferredTags": [
+            "Activities.Placement.HighElevation",
+            "Activities.Placement.LowElevation"
+          ],
+          "ExlusionTags": [
+            "Activities.Placement.NonCombat",
+            "Activities.Placement.Floating",
+            "Activities.Placement.Indoor",
+            "Activities.Placement.LowCeiling",
+            "Activities.Placement.OnDynamic"
+          ],
+          "RequiredProperties": [],
+          "bIgnoreCollisionCheck": true,
+          "bSnapToGrid": true
+        }
+      ]
+    },
+    "bStartPlayingOnLoad": true,
+    "MissionName": {
+      "Namespace": "",
+      "Key": "AD9A90E3415195481879CFACF5C25ACA",
+      "SourceString": "Deliver the Goods!",
+      "LocalizedString": "Deliver the Goods!"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_DeliverGoods.EDO_Set_DeliverGoods",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.1Player"
+        ]
+      }
+    ],
+    "MissionOptions": {
+      "AssetPathName": "/SaveTheWorld/AIDirector/Missions/MissionOptionData_Default.MissionOptionData_Default",
+      "SubPathString": ""
+    },
+    "TaggedRewards": [
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Participation"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/DeliverGoods/DeliverTheGoods_Participation.DeliverTheGoods_Participation",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Bronze"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/DeliverGoods/DeliverTheGoods_Bronze.DeliverTheGoods_Bronze",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Silver"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/DeliverGoods/DeliverTheGoods_Silver.DeliverTheGoods_Silver",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Gold"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/DeliverGoods/DeliverTheGoods_Gold.DeliverTheGoods_Gold",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Platinum"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/DeliverGoods/DeliverTheGoods_Platinum.DeliverTheGoods_Platinum",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.OutpostBonus"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/DeliverGoods/DeliverTheGoods_ParticipationFailure.DeliverTheGoods_ParticipationFailure",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.SpeedRun"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/Par/MissionBadge_Par3.MissionBadge_Par3",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ]
+  }
+}

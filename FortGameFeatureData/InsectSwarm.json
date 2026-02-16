@@ -1,0 +1,102 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "InsectSwarm",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/InsectSwarm/InsectSwarm_LevelOverlay.InsectSwarm_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/InsectSwarm/InsectSwarm_DeathCauseData.InsectSwarm_DeathCauseData",
+      "SubPathString": ""
+    },
+    "FactionMapping": {
+      "AssetPathName": "/InsectSwarm/InsectSwarm_FactionMapping.InsectSwarm_FactionMapping",
+      "SubPathString": ""
+    },
+    "PawnGoalSelectionTable": [
+      {
+        "RequiredGameplayTags": [
+          "NPC.GoalSelection.InsectSwarm"
+        ],
+        "PawnGoalSelectionCriteria": {
+          "IncludeEnemiesWithTags": [],
+          "ExcludeEnemiesWithTags": [],
+          "GoalSelectionCriteria": [
+            {
+              "GoalSelectionQuery": {
+                "AssetPathName": "/InsectSwarm/EQS/EQS_GoalSelection_Swarm.EQS_GoalSelection_Swarm",
+                "SubPathString": ""
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "CH4S3",
+        "DisplayName": "Spawn Insect Swarm",
+        "ConsoleCommands": [
+          "cheat lwms insect"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'InsectSwarm:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/InsectSwarm/InsectSwarm.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "AISpawnerData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "NPC"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "FortExposedAssetList",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "UEFNExposedAssets"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "ChronoEnviroItems",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/ChronoEnviroItems/ChronoEnviroItems_LevelOverlay.ChronoEnviroItems_LevelOverlay",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/ChronoEnviroItems/HUD/ChronoEnviroHUDWidgetRegistry.ChronoEnviroHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultGameData": {
+      "AssetPathName": "/ChronoEnviroItems/DataTables/ChronoEnviroItemsGameData.ChronoEnviroItemsGameData",
+      "SubPathString": ""
+    },
+    "PlaylistOverrideGameDataMappings": [
+      {
+        "TagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Plugin.Playlist.Arena"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ANY( Plugin.Playlist.Arena )"
+        },
+        "OverrideGameData": {
+          "AssetPathName": "/ChronoEnviroItems/DataTables/Comp/ChronoEnviroItemsGameData_Comp.ChronoEnviroItemsGameData_Comp",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ContextualTutorials": [
+      {
+        "AssetPathName": "/ChronoEnviroItems/JungleGrindRails/ContextTutorials/ContextualTutorial_GrindRailSprint_Jungle.ContextualTutorial_GrindRailSprint_Jungle",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/ChronoEnviroItems/LaunchablePlants/ContextTutorial/ContextualTutorial_LaunchablePodPlant.ContextualTutorial_LaunchablePodPlant",
+        "SubPathString": ""
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch4S3",
+        "DisplayName": "Give Pod Plant Spawner",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /ChronoEnviroItems/LaunchablePlants/Gameplay/WID_Proto_PodPlant_Spawner 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch4S3",
+        "DisplayName": "Spawn Canopy Tree",
+        "ConsoleCommands": [
+          "Cheat SummonLoadIfNeeded BGA_Chrono_Canopy_Hiding_C 0.0 0.0"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ChronoEnviroItems:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/ChronoEnviroItems/ChronoEnviroItems.1"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddWPContent'ChronoEnviroItems:GameFeatureAction_AddWPContent_0'",
+        "ObjectPath": "/ChronoEnviroItems/ChronoEnviroItems.7"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_PrimaryAssetBehaviors'ChronoEnviroItems:FortGameFeatureAction_PrimaryAssetBehaviors_0'",
+        "ObjectPath": "/ChronoEnviroItems/ChronoEnviroItems.3"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddAttributeDefaults'ChronoEnviroItems:GameFeatureAction_AddAttributeDefaults_0'",
+        "ObjectPath": "/ChronoEnviroItems/ChronoEnviroItems.5"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'ChronoEnviroItems:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/ChronoEnviroItems/ChronoEnviroItems.2"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'ChronoEnviroItems:GameFeatureAction_AddWorldPartitionContent_0'",
+        "ObjectPath": "/ChronoEnviroItems/ChronoEnviroItems.6"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/ChronoEnviroItems/LaunchablePlants/Gameplay/WID_Proto_PodPlant_Spawner.WID_Proto_PodPlant_Spawner",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "ConversationDatabase",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/CommonConversationRuntime.ConversationDatabase",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Conversation"
+          }
+        ],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/ChronoEnviroItems/TemplePuzzles/ItemCheck/Gameplay/Conversation/NPCLibrary_Chrono_ItemDoor_Conversation.NPCLibrary_Chrono_ItemDoor_Conversation",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/ChronoEnviroItems/TemplePuzzles/ItemCheck/Gameplay/Conversation/NPCLibrary_Chrono_PatternDoor_Conversation.NPCLibrary_Chrono_PatternDoor_Conversation",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/ChronoEnviroItems/TemplePuzzles/ItemCheck/Gameplay/Conversation/NPCLibrary_Chrono_PortalDoor_Conversation.NPCLibrary_Chrono_PortalDoor_Conversation",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
+  }
+}

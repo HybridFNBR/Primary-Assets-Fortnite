@@ -1,0 +1,123 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "HiddenTreasure",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Secondary/HiddenTreasure/Mission/HiddenTreasure_Mission.HiddenTreasure_Mission_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MissionTags": [
+      "Stat.Mission.Test",
+      "Stat.Mission.Search"
+    ],
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "10AB22514337F6165AE9A69AAF7CC75E",
+      "SourceString": "Use the radar pulses to locate the hidden treasure",
+      "LocalizedString": "Use the radar pulses to locate the hidden treasure"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/Secondary/HiddenTreasure/Mission/HT_Objective.HT_Objective_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 2.0,
+    "MinDistanceToAllowSpawnPad": 5000.0,
+    "PlacementActorInfo": {
+      "DistanceRangeMin": 3000.0,
+      "DistanceRangeMax": 10000.0,
+      "BuildingData": [
+        {
+          "BuildingToSpawn": {
+            "AssetPathName": "/SaveTheWorld/Missions/Secondary/HiddenTreasure/BP_PulseMachine.BP_PulseMachine_C",
+            "SubPathString": ""
+          },
+          "BuildingClassesToFind": [
+            {
+              "ObjectName": "Class'FortPlacementActor'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          ],
+          "RequiredTags": [
+            "Activities.Placement.OnNonDestructible",
+            "Activities.Placement.Generic"
+          ],
+          "PreferredTags": [
+            "Activities.Placement.Indoor"
+          ],
+          "ExlusionTags": [],
+          "RequiredProperties": [],
+          "bIgnoreCollisionCheck": true,
+          "bSnapToGrid": true
+        },
+        {
+          "BuildingToSpawn": {
+            "AssetPathName": "/SaveTheWorld/Missions/Secondary/HiddenTreasure/BP_HiddenTreasure.BP_HiddenTreasure_C",
+            "SubPathString": ""
+          },
+          "BuildingClassesToFind": [
+            {
+              "ObjectName": "BlueprintGeneratedClass'Tiered_Chest_3_Child_C'",
+              "ObjectPath": "/SaveTheWorld/Building/ActorBlueprints/Containers/Tiered_Chest_3_Child.1"
+            }
+          ],
+          "RequiredTags": [],
+          "PreferredTags": [],
+          "ExlusionTags": [],
+          "RequiredProperties": [],
+          "bIgnoreCollisionCheck": true,
+          "bSnapToGrid": true
+        }
+      ]
+    },
+    "PopupWidgetData": {
+      "AvailableIcon": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-RadarPointSecondary-S'",
+          "ObjectPath": "/SaveTheWorld/UI/HUD/Textures/Icon-RadarPointSecondary-S.0"
+        }
+      },
+      "UnavailableIcon": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-RadarPointSecondary-S'",
+          "ObjectPath": "/SaveTheWorld/UI/HUD/Textures/Icon-RadarPointSecondary-S.0"
+        }
+      }
+    },
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'DefaultRewards'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/DefaultRewards.0"
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "9B41E74A479089F562F2BABF4096CD8D",
+      "SourceString": "Find Hidden Treasure",
+      "LocalizedString": "Find Hidden Treasure"
+    }
+  }
+}

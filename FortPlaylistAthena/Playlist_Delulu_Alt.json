@@ -1,0 +1,289 @@
+{
+  "Type": "FortPlaylistAthena",
+  "Name": "Playlist_Delulu_Alt",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "InMatchXPRewardScalar": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaPlaylistXpToggle'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaPlaylistXpToggle.0"
+        },
+        "RowName": "Playlist_DefaultSquad"
+      }
+    },
+    "FirstWinRewards": [
+      {
+        "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Umbrella_Unhinged.Umbrella_Unhinged",
+        "SubPathString": ""
+      }
+    ],
+    "FillRateTable": [
+      {
+        "MinMmr": 0,
+        "MaxMmr": 400,
+        "MinFillPct": 0.2,
+        "MaxFillPct": 0.2,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 401,
+        "MaxMmr": 600,
+        "MinFillPct": 0.2,
+        "MaxFillPct": 0.25,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 601,
+        "MaxMmr": 800,
+        "MinFillPct": 0.2,
+        "MaxFillPct": 0.25,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 801,
+        "MaxMmr": 1000,
+        "MinFillPct": 0.2,
+        "MaxFillPct": 0.25,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1001,
+        "MaxMmr": 1100,
+        "MinFillPct": 0.2,
+        "MaxFillPct": 0.25,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1101,
+        "MaxMmr": 1200,
+        "MinFillPct": 0.2,
+        "MaxFillPct": 0.25,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1201,
+        "MaxMmr": 1300,
+        "MinFillPct": 0.25,
+        "MaxFillPct": 0.35,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1301,
+        "MaxMmr": 1400,
+        "MinFillPct": 0.4,
+        "MaxFillPct": 0.7,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1401,
+        "MaxMmr": 1500,
+        "MinFillPct": 0.5,
+        "MaxFillPct": 0.75,
+        "MaxPriority": 119.0
+      },
+      {
+        "MinMmr": 1501,
+        "MaxMmr": 2000,
+        "MinFillPct": 0.5,
+        "MaxFillPct": 0.85,
+        "MaxPriority": 119.0
+      }
+    ],
+    "RatingType": "fun",
+    "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
+    "NumWinningTeamsCN": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "NumWinningTeamsCN"
+      }
+    },
+    "InventorySystemConfiguration": {
+      "AssetPathName": "/Itemization/BRStyle/ItemizationConfiguration_FNBR.ItemizationConfiguration_FNBR",
+      "SubPathString": ""
+    },
+    "bSkipAircraft": true,
+    "PlaylistMissionGen": {
+      "ObjectName": "BlueprintGeneratedClass'MissionGen_Delulu_C'",
+      "ObjectPath": "/Delulu/Playlist/MissionGen_Delulu.0"
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::PrioritizedContextualSlot",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/HUD_ContextualTips_Base.HUD_ContextualTips_Base_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "MissionIcon": {
+      "ObjectName": "Texture2D'T_Icon_Matchmaking_Squad_64'",
+      "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Social/T_Icon_Matchmaking_Squad_64.0"
+    },
+    "bDisable_ReportAPlayerReason_TeamingUpWithEnemies_WhileInGame": true,
+    "bShowEliminationIndicatorForSquadmates": true,
+    "bShowEliminationIndicatorForTeammates": true,
+    "ShouldUseCustomGameChannel": {
+      "Value": 1.0
+    },
+    "CustomGameChannel": "ECustomGameVoiceChannel::WholeServer",
+    "bForceGameChannel": true,
+    "bForceEnableProximityVoiceChat": true,
+    "bEnableCustomProximityChatPriorityList": true,
+    "ProximityVoiceChatAttenuationSettings": {
+      "ObjectName": "SoundAttenuation'Delulu_Proximity_Chat_Att'",
+      "ObjectPath": "/Delulu/Assets/Audio/Delulu_Proximity_Chat_Att.0"
+    },
+    "ProximityChatPriorityListProvider": {
+      "ObjectName": "Class'FortProximityChatPriorityListProvider_Default'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "MapManagerClass": {
+      "AssetPathName": "/Game/UI/IngameMap/UIMapManagerBR.UIMapManagerBR_C",
+      "SubPathString": ""
+    },
+    "StormEffectDelay": 120.0,
+    "SafeZoneLocationBlacklist": {
+      "AssetPathName": "/Game/Athena/Balance/DataTables/AthenaSafeZoneBlacklist.AthenaSafeZoneBlacklist",
+      "SubPathString": ""
+    },
+    "bUseDefaultSupplyDrops": false,
+    "SupplyDropInfoList": [
+      {
+        "AssetPathName": "/Delulu/Playlist/SupplyDrop_Delulu.SupplyDrop_Delulu",
+        "SubPathString": ""
+      }
+    ],
+    "bAllowTeamSwitching": true,
+    "AISettings": {
+      "AssetPathName": "/Game/Athena/AI/AISettings/PlayerBotsFlow_AISettings.PlayerBotsFlow_AISettings",
+      "SubPathString": ""
+    },
+    "MaxVehiclesCanSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.MaxVehiclesCanSpawnWith"
+      }
+    },
+    "PercentChanceSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
+      }
+    },
+    "PlaylistId": 97148,
+    "PlaylistName": "Playlist_Delulu_Alt",
+    "GameType": "EFortGameType::Delulu",
+    "MinPlayers": 25,
+    "MaxPlayers": 50,
+    "bOverrideMaxPlayers": true,
+    "MaxHumanAndBotParticipants": 50,
+    "MaxTeamCount": 123,
+    "MaxTeamSize": 8,
+    "MaxSocialPartySize": 8,
+    "MaxSquadSize": 8,
+    "EnforceSquadFill": false,
+    "bAllowSquadFillOption": false,
+    "bEnableBackfillDuringWarmupPhase": false,
+    "RichPresenceAssetName": "squads",
+    "DefaultLastTeam": 122,
+    "GameplayTagContainer": [
+      "Athena.Playlist.DefaultXP",
+      "Athena.Playlist.Default",
+      "Athena.Playlist.Core",
+      "Athena.Playlist.Squad",
+      "Athena.Plugin.GameMod.Gasket",
+      "Plugin.Playlist.Delulu",
+      "Athena.Quests.NoBuild.Exclude",
+      "Athena.Playlist.DisplaysVoiceIndicatorForAll",
+      "Plugin.Playlist.Exclude.ImmunityCarriage",
+      "Plugin.Playlist.Exclude.PlayAsVillain",
+      "Plugin.Playlist.Exclude.PlayAsVillainBosses",
+      "Plugin.Playlist.Exclude.GreaseClipDunmurry",
+      "Plugin.Playlist.Exclude.Umbramolt",
+      "Plugin.Playlist.Exclude.YokeHop",
+      "Plugin.Playlist.Exclude.YokeHopUnkind",
+      "Plugin.Playlist.Exclude.HotAirBalloon",
+      "Plugin.Playlist.Exclude.Tram",
+      "Plugin.Playlist.Exclude.FerrisWheelGameplay"
+    ],
+    "ModifierList": [
+      {
+        "AssetPathName": "/Game/Athena/Playlists/DefaultModifiers/MaterialDropOnElim_Default.MaterialDropOnElim_Default",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/ContextTutorial/ContextTutorial_AthenaContextTutorial.ContextTutorial_AthenaContextTutorial",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/AI/Phoebe/GameplayMod_Phoebe_DM.GameplayMod_Phoebe_DM",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Deimos/GameplayMod_DeimosAI.GameplayMod_DeimosAI",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Delulu/Playlist/Delulu_Modifier.Delulu_Modifier",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Delulu/Playlist/Delulu_Modifier_HealthandShields.Delulu_Modifier_HealthandShields",
+        "SubPathString": ""
+      }
+    ],
+    "bIsDefaultPlaylist": true,
+    "UIDisplayName": {
+      "Namespace": "",
+      "Key": "EF3A6D104760AFD32F25BD89BC836F6B",
+      "SourceString": "Delulu",
+      "LocalizedString": "Delulu"
+    },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "1C793F9D4F233A33EB7AF49B1AF22D06",
+      "SourceString": "Drop solo, crash the party, team up (or not), and be the last one standing.",
+      "LocalizedString": "Drop solo, crash the party, team up (or not), and be the last one standing."
+    },
+    "LootTierData": {
+      "AssetPathName": "/Game/Athena/Playlists/AthenaCompositeLTD.AthenaCompositeLTD",
+      "SubPathString": ""
+    },
+    "LootPackages": {
+      "AssetPathName": "/BRPlaylists/Athena/Playlists/AthenaCompositeLP.AthenaCompositeLP",
+      "SubPathString": ""
+    },
+    "BaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/Game/Athena/Balance/DataTables/JobBoardSettings.JobBoardSettings",
+          "SubPathString": ""
+        },
+        "OverrideTable": {
+          "AssetPathName": "/Delulu/DataTables/Delulu_Composite_JobBoards.Delulu_Composite_JobBoards",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "GameData": {
+      "AssetPathName": "/Delulu/DataTables/Delulu_CompositeGD_Build.Delulu_CompositeGD_Build",
+      "SubPathString": ""
+    }
+  }
+}

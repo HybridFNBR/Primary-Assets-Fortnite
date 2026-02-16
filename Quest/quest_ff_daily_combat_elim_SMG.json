@@ -1,0 +1,243 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "quest_ff_daily_combat_elim_SMG",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "Evergreen_FF_Combat1",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "quest_ff_daily_combat_elim_SMG_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "EliminatedPawn": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Homebase.Class"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Homebase.Class )"
+              }
+            },
+            "Killer": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Weapon.Ranged.SMG"
+                  },
+                  {
+                    "TagName": "item.weapon.ranged.dualwield.shotgunSMG.SMG"
+                  },
+                  {
+                    "TagName": "Item.Weapon.Ranged.SMG"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  3,
+                  0,
+                  1,
+                  2
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Weapon.Ranged.SMG, item.weapon.ranged.dualwield.shotgunSMG.SMG, Item.Weapon.Ranged.SMG )"
+              }
+            },
+            "EliminationSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AllowedTeamAffiliations": [],
+            "ProhibitedTeamAffiliations": [],
+            "AllowedKilledPawnTypes": [],
+            "ProhibitedKilledPawnTypes": [],
+            "bAllowSelfEliminations": false,
+            "bRequirePawnWasEliminatedByConvertedPawn": false,
+            "bUseDistance": false,
+            "bIncrementByDistance": false,
+            "bUseKillStreak": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "KillStreak": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.ForbiddenFruit.NoBuild"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.ForbiddenFruit.NoBuild )"
+    },
+    "Category": {
+      "DataTable": {
+        "ObjectName": "DataTable'QuestCategoryTable'",
+        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+      },
+      "RowName": "BRDailyChallenges"
+    },
+    "SortPriority": 2,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_ff_daily_combat_elim_SMG:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Dailies/Combat_1/quest_ff_daily_combat_elim_SMG.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_ff_daily_combat_elim_SMG:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Dailies/Combat_1/quest_ff_daily_combat_elim_SMG.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "quest_ff_daily_combat_elim_SMG_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "AEDAC06B43FF31D180007383AB5218B5",
+      "SourceString": "Eliminate a player with an SMG",
+      "LocalizedString": "Eliminate a player with an SMG"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "BE93997D45B5431C655934A062F175B2",
+      "SourceString": "Eliminate a player with an SMG",
+      "LocalizedString": "Eliminate a player with an SMG"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.ForbiddenFruit.Dailies"
+        ]
+      },
+      {}
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "MissionInfo_LoneWolf",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Tertiary/Events/Winter2018/LoneWolf/Mission_LoneWolf.Mission_LoneWolf_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MaxMissionPoints": 0,
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 1.5,
+    "MissionPlacementInfo": {
+      "ActorsAndLocations": [
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [
+            "Activities.Placement.LocationUsed"
+          ],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'EQS_LoneWolfPlacement'",
+            "ObjectPath": "/SaveTheWorld/Missions/Tertiary/Events/Winter2018/LoneWolf/EQS_LoneWolfPlacement.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Tertiary/Events/Winter2018/LoneWolf/LoneWolf_Spawner_BP.LoneWolf_Spawner_BP_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        }
+      ]
+    },
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'Rewards_High'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/Rewards_High.0"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_LoneWolf.EDO_Set_LoneWolf",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": true,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.Endless"
+        ]
+      }
+    ]
+  }
+}

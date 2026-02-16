@@ -1,0 +1,182 @@
+{
+  "Type": "FortPlaylistAthena",
+  "Name": "Playlist_Deliver_Squads_ZB",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "InMatchXPRewardScalar": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaPlaylistXpToggle'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaPlaylistXpToggle.0"
+        },
+        "RowName": "Playlist_DefaultSquad"
+      }
+    },
+    "RatingType": "nobuild",
+    "bAllowedInLeto": true,
+    "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
+    "NumWinningTeamsCN": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "NumWinningTeamsCN"
+      }
+    },
+    "PlaylistMissionGen": {
+      "ObjectName": "BlueprintGeneratedClass'MissionGen_Deliver_C'",
+      "ObjectPath": "/Deliver/Playlists/MissionGen_Deliver.0"
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::PrioritizedContextualSlot",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/HUD_ContextualTips_Base.HUD_ContextualTips_Base_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "MissionIcon": {
+      "ObjectName": "Texture2D'T_Icon_Matchmaking_Squad_64'",
+      "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Social/T_Icon_Matchmaking_Squad_64.0"
+    },
+    "bLimitedTimeMode": false,
+    "bShowEliminationIndicatorForSquadmates": true,
+    "bShowEliminationIndicatorForTeammates": true,
+    "MapManagerClass": {
+      "AssetPathName": "/Game/UI/IngameMap/UIMapManagerBR.UIMapManagerBR_C",
+      "SubPathString": ""
+    },
+    "SafeZoneLocationBlacklist": {
+      "AssetPathName": "/Game/Athena/Balance/DataTables/AthenaSafeZoneBlacklist.AthenaSafeZoneBlacklist",
+      "SubPathString": ""
+    },
+    "AILootOnDeathData": {
+      "AssetPathName": "/Deliver/DataTables/AILoot_Composite_Deliver.AILoot_Composite_Deliver",
+      "SubPathString": ""
+    },
+    "bAllowSpectateAPartyMember": true,
+    "AISettings": {
+      "AssetPathName": "/Game/Athena/AI/AISettings/PlayerBotsFlow_AISettings.PlayerBotsFlow_AISettings",
+      "SubPathString": ""
+    },
+    "MaxVehiclesCanSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.MaxVehiclesCanSpawnWith"
+      }
+    },
+    "PercentChanceSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
+      }
+    },
+    "PlaylistId": 12,
+    "PlaylistName": "Playlist_Deliver_Squads_ZB",
+    "GameType": "EFortGameType::ZeroBuild",
+    "MaxPlayers": 100,
+    "bOverrideMaxPlayers": true,
+    "MaxHumanAndBotParticipants": 100,
+    "MaxTeamCount": 100,
+    "MaxTeamSize": 4,
+    "MaxSocialPartySize": 4,
+    "MaxSquadSize": 4,
+    "bEnableBackfillDuringWarmupPhase": false,
+    "RichPresenceAssetName": "squads",
+    "bAllowKeepPlayingTogether": true,
+    "GameplayTagContainer": [
+      "Athena.Playlist.DefaultXP",
+      "Athena.Playlist.Squad",
+      "Athena.Plugin.GameMod.Gasket",
+      "Athena.Playlist.NoBuildingMaterials",
+      "Athena.Playlist.Deliver",
+      "Product.BR.Deliver",
+      "Athena.Playlist.Default"
+    ],
+    "ModifierList": [
+      {
+        "AssetPathName": "/Game/Athena/Playlists/DefaultModifiers/MaterialDropOnElim_Default.MaterialDropOnElim_Default",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/ContextTutorial/ContextTutorial_AthenaContextTutorial.ContextTutorial_AthenaContextTutorial",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/AI/Phoebe/GameplayMod_Phoebe_DM.GameplayMod_Phoebe_DM",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Deimos/GameplayMod_DeimosAI.GameplayMod_DeimosAI",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/NoBuildBR/Modifiers/NoBuildBRModifier.NoBuildBRModifier",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/RufusGameplayModifiers/Rufus_SafeZoneBlacklist_Modifier.Rufus_SafeZoneBlacklist_Modifier",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Deliver/Playlists/Deliver_Modifiers.Deliver_Modifiers",
+        "SubPathString": ""
+      }
+    ],
+    "bIsDefaultPlaylist": true,
+    "UIDisplayName": {
+      "Namespace": "",
+      "Key": "8EA814434999FB4A6923A9B7136B5F72",
+      "SourceString": "Ship It! Express",
+      "LocalizedString": "Ship It! Express"
+    },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "EF2F34EF4AABD79CBF2893AAF023681F",
+      "SourceString": "You are a valuable member of the Ship It! Express family! As one of our star employees, you are expected to handle delivering holiday packages to our customers until they are all completely satisfied. No order is too large, and no location too remote for the hardworking members of Ship It! Express. Thanks to your hard work, our customers can rest assured they will get their deliveries in a timely manner, whether they want to or not.\r\n",
+      "LocalizedString": "You are a valuable member of the Ship It! Express family! As one of our star employees, you are expected to handle delivering holiday packages to our customers until they are all completely satisfied. No order is too large, and no location too remote for the hardworking members of Ship It! Express. Thanks to your hard work, our customers can rest assured they will get their deliveries in a timely manner, whether they want to or not.\r\n"
+    },
+    "HUDElementsToHide": [
+      "Athena.MiniMap.FullScreen.ResourceCount.Gold",
+      "HUD.CashResource"
+    ],
+    "LootTierData": {
+      "AssetPathName": "/Deliver/DataTables/AthenaCompositeLTD_Deliver.AthenaCompositeLTD_Deliver",
+      "SubPathString": ""
+    },
+    "LootPackages": {
+      "AssetPathName": "/Deliver/DataTables/AthenaCompositeLP_Deliver.AthenaCompositeLP_Deliver",
+      "SubPathString": ""
+    },
+    "BaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/Game/Athena/Balance/DataTables/NPCServiceSettings.NPCServiceSettings",
+          "SubPathString": ""
+        },
+        "OverrideTable": {
+          "AssetPathName": "/Deliver/DataTables/OverrideNPCServiceSettings_Deliver.OverrideNPCServiceSettings_Deliver",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "GameData": {
+      "AssetPathName": "/Deliver/DataTables/AthenaCompositeGD_Deliver.AthenaCompositeGD_Deliver",
+      "SubPathString": ""
+    }
+  }
+}

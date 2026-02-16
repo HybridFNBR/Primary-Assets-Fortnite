@@ -1,0 +1,204 @@
+{
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_S38_RoadTrip_05",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S38_RoadTrip_05_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementType": "EAcquireIncrementType::TotalMatchingItemCounts",
+            "bUseItemCount": false,
+            "ItemAcquired": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Resource.XP"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Resource.XP )"
+              }
+            },
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AcquireSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "104AB515470E9255D77A328179A6DA54",
+          "SourceString": "Earn XP in Battle Royale Creator-made Islands in a party with friends",
+          "LocalizedString": "Earn XP in Battle Royale Creator-made Islands in a party with friends"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 80000,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 50,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.FNE"
+        },
+        {
+          "TagName": "LinkEntry.Category.BattleRoyale"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ALL( Product.FNE, LinkEntry.Category.BattleRoyale )"
+    },
+    "SortPriority": 5,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S38_RoadTrip_05:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/WinterRush/Items/QuestItems/Standard_Quests/Quest_S38_RoadTrip_05.3"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S38_RoadTrip_05:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/WinterRush/Items/QuestItems/Standard_Quests/Quest_S38_RoadTrip_05.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_ModularGates'Quest_S38_RoadTrip_05:FortQuestDefinitionComponent_ModularGates_0'",
+        "ObjectPath": "/WinterRush/Items/QuestItems/Standard_Quests/Quest_S38_RoadTrip_05.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_ProductCompatibilityInjector_IslandMetadata'Quest_S38_RoadTrip_05:FortQuestDefinitionComponent_ProductCompatibilityInjector_IslandMetadata_0'",
+        "ObjectPath": "/WinterRush/Items/QuestItems/Standard_Quests/Quest_S38_RoadTrip_05.2"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S38_RoadTrip_05_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "027EF8634FF8267919855BB354D99E1D",
+      "SourceString": "Earn XP in Battle Royale Creator-made Islands in a party with friends",
+      "LocalizedString": "Earn XP in Battle Royale Creator-made Islands in a party with friends"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "EDE6E1244DE0343CD21990B418545EC4",
+      "SourceString": "Earn XP in Battle Royale Creator-made Islands in a party with friends",
+      "LocalizedString": "Earn XP in Battle Royale Creator-made Islands in a party with friends"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.All.S38.RoadTrip.CreatorMade"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "MissionInfo_ChallengeTheHorde",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/ChallengeTheHorde/Mission_ChallengeTheHorde.Mission_ChallengeTheHorde_C",
+      "SubPathString": ""
+    },
+    "MissionTags": [
+      "Stat.Mission.Primary.Horde"
+    ],
+    "ZoneEndDelay": 0.5,
+    "MissionRewardBadge": {
+      "ObjectName": "FortBadgeItemDefinition'HordeMode_Victory_Badge'",
+      "ObjectPath": "/SaveTheWorld/Items/Badges/HordeModeBadges/HordeMode_Victory_Badge.0"
+    },
+    "MissionRewardItemsLootTierGroup": "Mission_Complete_Rewards",
+    "MaxMissionPoints": 24,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "40AEDEBD4CE587997890AEAA5AB949CD",
+      "SourceString": "Defend your deployable forts from the unrelenting horde!",
+      "LocalizedString": "Defend your deployable forts from the unrelenting horde!"
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ImageSize": {
+          "X": 16.0,
+          "Y": 16.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Score-Combat-XS'",
+          "ObjectPath": "/SaveTheWorld/UI/Icons/Icon-Score/Icon-Score-Combat-XS.0"
+        }
+      },
+      "Brush_XS": {
+        "ImageSize": {
+          "X": 16.0,
+          "Y": 16.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Score-Combat-XS'",
+          "ObjectPath": "/SaveTheWorld/UI/Icons/Icon-Score/Icon-Score-Combat-XS.0"
+        }
+      },
+      "Brush_S": {
+        "ImageSize": {
+          "X": 24.0,
+          "Y": 24.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Score-Combat-S'",
+          "ObjectPath": "/SaveTheWorld/UI/Icons/Icon-Score/Icon-Score-Combat-S.0"
+        }
+      },
+      "Brush_M": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Score-Combat-M'",
+          "ObjectPath": "/SaveTheWorld/UI/Icons/Icon-Score/Icon-Score-Combat-M.0"
+        }
+      },
+      "Brush_L": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Score-Combat-L'",
+          "ObjectPath": "/SaveTheWorld/UI/Icons/Icon-Score/Icon-Score-Combat-L.0"
+        }
+      },
+      "Brush_XL": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Score-Combat-L'",
+          "ObjectPath": "/SaveTheWorld/UI/Icons/Icon-Score/Icon-Score-Combat-L.0"
+        }
+      }
+    },
+    "EndOfMissionMediaSource": {
+      "ObjectName": "FileMediaSource'FMS_mission_success_generic'",
+      "ObjectPath": "/SaveTheWorld/Movies/VictoryMovies/FMS_mission_success_generic.0"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Defense/Gen_Defense.Gen_Defense_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Defense"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Timer/Gen_Timer.Gen_Timer_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.02"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "MinDistanceToAllowSpawnPad": 0.0,
+    "PlacementActorInfo": {
+      "DistanceRangeMin": 0.0,
+      "BuildingData": [
+        {
+          "BuildingToSpawn": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/ChallengeTheHorde/Actors/BP_KeepConsole.BP_KeepConsole_C",
+            "SubPathString": ""
+          },
+          "BuildingClassesToFind": [],
+          "RequiredTags": [
+            "DeployableBase.Placement.HordeConfigActor"
+          ],
+          "PreferredTags": [],
+          "ExlusionTags": [],
+          "RequiredProperties": [],
+          "bIgnoreCollisionCheck": true,
+          "bSnapToGrid": true
+        },
+        {
+          "BuildingToSpawn": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/ChallengeTheHorde/Actors/BP_SpawnContainmentBubble.BP_SpawnContainmentBubble_C",
+            "SubPathString": ""
+          },
+          "BuildingClassesToFind": [
+            {
+              "ObjectName": "Class'FortPlacementActor'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          ],
+          "RequiredTags": [
+            "DeployableBase.Placement.Bubble"
+          ],
+          "PreferredTags": [],
+          "ExlusionTags": [],
+          "RequiredProperties": [],
+          "bIgnoreCollisionCheck": false,
+          "bSnapToGrid": true
+        }
+      ]
+    },
+    "bStartPlayingOnLoad": true,
+    "bIsGroupContent": true,
+    "MissionName": {
+      "Namespace": "",
+      "Key": "F1DF5E784621C186AA23189C671DD187",
+      "SourceString": "Challenge the Horde",
+      "LocalizedString": "Challenge the Horde"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Horde_4Players.EDO_Set_Horde_4Players",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.EnemyDifficulty.4Player",
+          "Encounter.Type.PvE.Primary.Group.4Player"
+        ]
+      }
+    ],
+    "TaggedRewards": [
+      {
+        "Tag": {
+          "TagName": "Horde.Reward.Badge.Wave1"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/HordeModeBadges/HordeMode_Wave1_Badge.HordeMode_Wave1_Badge",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Horde.Reward.Badge.Wave2"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/HordeModeBadges/HordeMode_Wave2_Badge.HordeMode_Wave2_Badge",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Horde.Reward.Badge.Wave3"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/HordeModeBadges/HordeMode_Wave3_Badge.HordeMode_Wave3_Badge",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Horde.Reward.Badge.Wave4"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/HordeModeBadges/HordeMode_Wave4_Badge.HordeMode_Wave4_Badge",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Horde.Reward.Badge.Wave5"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/HordeModeBadges/HordeMode_Wave5_Badge.HordeMode_Wave5_Badge",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Horde.Reward.Badge.Wave6"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/HordeModeBadges/HordeMode_Wave6_Badge.HordeMode_Wave6_Badge",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Horde.Reward.Badge.Wave7"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/HordeModeBadges/HordeMode_Wave7_Badge.HordeMode_Wave7_Badge",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Horde.Reward.Badge.Victory"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/HordeModeBadges/HordeMode_Victory_Badge.HordeMode_Victory_Badge",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ]
+  }
+}

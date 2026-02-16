@@ -1,0 +1,126 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "WoundedSurvivor",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Secondary/SurvivorWounded/Mission/Mission_WoundedSurvivor.Mission_WoundedSurvivor_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MissionTags": [
+      "Stat.Mission.Secondary.Medbot",
+      "Stat.Mission.Survivor",
+      "Stat.Mission.Requires.BluGlo"
+    ],
+    "MaxMissionPoints": 0,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "45B0C271468CD134C16AA3872B0910F0",
+      "SourceString": "Use the M*E*D Bot to assist the Survivor",
+      "LocalizedString": "Use the M*E*D Bot to assist the Survivor"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Interact/Gen_Interact.Gen_Interact_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.KillDestroyPickupInteract",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Deposit/Gen_Deposit.Gen_Deposit_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Num.01",
+              "Activities.ObjectiveHandle.Generic.DepositItems"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.Placement.LocationUsed"
+      ],
+      "AdditionalWorldFoundations": [
+        {
+          "ItemIdentifyingTags": [
+            "Activities.ObjectiveHandle.Num.01"
+          ],
+          "TagsToAddToChosenPlacementActorOrFoundationActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'WoundedSurvivorMissionPlacementQuery'",
+            "ObjectPath": "/SaveTheWorld/Missions/EQSQueries/WoundedSurvivorMissionPlacementQuery.0"
+          },
+          "BuildingFoundationToPlace": {
+            "AssetPathName": "/SaveTheWorld/WorldTiles/LayoutFoundations/Missions/WoundedSurvivor/LF_WoundedSurvivor.LF_WoundedSurvivor_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bAdjustFoundationPlacementForFloors": true
+        }
+      ]
+    },
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'Rewards_Low'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/Rewards_Low.0"
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "68EBCC564F78DBEF6F413092899E2AFF",
+      "SourceString": "Wounded Survivor",
+      "LocalizedString": "Wounded Survivor"
+    },
+    "TaggedRewards": [
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Participation"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/Survivors/MissionBadge_Survivor_Silver.MissionBadge_Survivor_Silver",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ]
+  }
+}

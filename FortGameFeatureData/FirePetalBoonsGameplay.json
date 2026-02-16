@@ -1,0 +1,240 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "FirePetalBoonsGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/FirePetalBoonsGameplay/Levels/FirePetalBoonsGameplay_LevelOverlay.FirePetalBoonsGameplay_LevelOverlay",
+      "SubPathString": ""
+    },
+    "DynamicUIDirectorClass": {
+      "AssetPathName": "/FirePetalBoonsGameplay/UI/FirePetalBoonsUIDirector.FirePetalBoonsUIDirector_C",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/FirePetalBoonsGameplay/HUD/FirePetalBoonsGameplay_HUDWidgetRegistry.FirePetalBoonsGameplay_HUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlaylistBaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/FirePetalBoonsGameplay/DataTables/HotHandsGameplayGameData.HotHandsGameplayGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Plugin.Playlist.Arena"
+            },
+            "Value": {
+              "AssetPathName": "/FirePetalBoonsGameplay/DataTables/Comp/HotHandsGameplayGameData_Comp.HotHandsGameplayGameData_Comp",
+              "SubPathString": ""
+            }
+          }
+        ]
+      }
+    ],
+    "PlaylistBaseDataTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/FirePetalBoonsGameplay/DataTables/PhoebeFirePetalAugmentsData.PhoebeFirePetalAugmentsData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Plugin.Playlist.Arena"
+            },
+            "Value": {
+              "AssetPathName": "/FirePetalBoonsGameplay/DataTables/Comp/PhoebeFirePetalAugmentsData_Comp.PhoebeFirePetalAugmentsData_Comp",
+              "SubPathString": ""
+            }
+          }
+        ]
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S1 - Boons",
+        "DisplayName": "Boon Spawning Grenade",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /FirePetalBoonsGameplay/Spawner/WID_Athena_Grenade_FirePetalBoonSpawner 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S1 - Boons",
+        "DisplayName": "Water Normal Medallion",
+        "ConsoleCommands": [
+          "Cheat spawnpickup PAID_FirePetal_PoolParty 1 172 0"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S1 - Boons",
+        "DisplayName": "Air Normal Medallion",
+        "ConsoleCommands": [
+          "Cheat spawnpickup PAID_FirePetal_PickaxeGO 1 172 0"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S1 - Boons",
+        "DisplayName": "Fire Normal Medallion",
+        "ConsoleCommands": [
+          "Cheat spawnpickup PAID_FirePetal_HotHands 1 172 0"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S1 - Boons",
+        "DisplayName": "Void Normal Medallion",
+        "ConsoleCommands": [
+          "Cheat spawnpickup PAID_FirePetal_RevellingRevealer 1 172 0"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S1 - Boons",
+        "DisplayName": "Puppeteer Boss Medallion",
+        "ConsoleCommands": [
+          "Cheat spawnpickup PAID_HauntedHelpers 1 172 0"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S1 - Boons",
+        "DisplayName": "Wandering Samurai Boss Medallion",
+        "ConsoleCommands": [
+          "Cheat spawnpickup PAID_FirePetal_VoidRun 1 172 0"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'FirePetalBoonsGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/FirePetalBoonsGameplay/FirePetalBoonsGameplay.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistrySource'FirePetalBoonsGameplay:GameFeatureAction_DataRegistrySource_0'",
+        "ObjectPath": "/FirePetalBoonsGameplay/FirePetalBoonsGameplay.3"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddComponents'FirePetalBoonsGameplay:GameFeatureAction_AddComponents_0'",
+        "ObjectPath": "/FirePetalBoonsGameplay/FirePetalBoonsGameplay.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "PlayerAugment",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "PlayerAugment",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Item",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Spawner"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Weapon Ranged",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Spawner"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Spawner"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

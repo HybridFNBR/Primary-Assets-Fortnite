@@ -1,0 +1,92 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "UnstableLiquidGun",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/UnstableLiquidGun/Maps/OverlayConfig.OverlayConfig",
+      "SubPathString": ""
+    },
+    "PlaylistBaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/UnstableLiquidGun/DataTables/UnstableLiquidGunGameData.UnstableLiquidGunGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Mash"
+            },
+            "Value": {
+              "AssetPathName": "/UnstableLiquidGun/DataTables/Mash/Override_UnstableLiquidGunGameData_Mash.Override_UnstableLiquidGunGameData_Mash",
+              "SubPathString": ""
+            }
+          }
+        ]
+      }
+    ],
+    "DefaultLootTableData": {
+      "LootTierData": {
+        "AssetPathName": "/UnstableLiquidGun/DataTables/LootTierData.LootTierData",
+        "SubPathString": ""
+      },
+      "LootPackageData": {
+        "AssetPathName": "/UnstableLiquidGun/DataTables/LootPackageData.LootPackageData",
+        "SubPathString": ""
+      }
+    },
+    "SharedItemIdsToFullyLoad": [
+      {
+        "PrimaryAssetType": {
+          "Name": "Weapon"
+        },
+        "PrimaryAssetName": "WID_NitroglycerineGun"
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S22",
+        "DisplayName": "Give Unstable Liquid Gun",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /UnstableLiquidGun/Items/UnstableLiquidGun/WID_NitroglycerineGun.WID_NitroglycerineGun 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'UnstableLiquidGun:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/UnstableLiquidGun/UnstableLiquidGun.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'UnstableLiquidGun:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/UnstableLiquidGun/UnstableLiquidGun.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

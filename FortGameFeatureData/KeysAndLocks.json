@@ -1,0 +1,242 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "KeysAndLocks",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/KeysAndLocks/KeysAndLocks_LevelOverlay.KeysAndLocks_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultGameData": {
+      "AssetPathName": "/KeysAndLocks/DataTables/KeysAndLocksGameData.KeysAndLocksGameData",
+      "SubPathString": ""
+    },
+    "PlaylistOverrideGameDataMappings": [
+      {
+        "TagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Plugin.Playlist.BattleLab"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Plugin.Playlist.BattleLab )"
+        },
+        "OverrideGameData": {
+          "AssetPathName": "/KeysAndLocks/DataTables/BattleLab/AthenaCompositeGD.AthenaCompositeGD",
+          "SubPathString": ""
+        }
+      },
+      {
+        "TagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Athena.Playlist.Mash"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Athena.Playlist.Mash )"
+        },
+        "OverrideGameData": {
+          "AssetPathName": "/KeysAndLocks/DataTables/HordeRush/KeysAndLocksGameData_Mash.KeysAndLocksGameData_Mash",
+          "SubPathString": ""
+        }
+      },
+      {
+        "TagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Athena.Playlist.SolidGold"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Athena.Playlist.SolidGold )"
+        },
+        "OverrideGameData": {
+          "AssetPathName": "/KeysAndLocks/DataTables/SolidGold/KeysAndLocksGameData_SolidGold.KeysAndLocksGameData_SolidGold",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S22",
+        "DisplayName": "Give Key",
+        "ConsoleCommands": [
+          "cheat givespecificitem /KeysAndLocks/Items/KeysAndLocks/AGID_KeysAndLocks_Key.AGID_KeysAndLocks_Key 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'KeysAndLocks:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/KeysAndLocks/KeysAndLocks.1"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddWPContent'KeysAndLocks:GameFeatureAction_AddWPContent_0'",
+        "ObjectPath": "/KeysAndLocks/KeysAndLocks.4"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'KeysAndLocks:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/KeysAndLocks/KeysAndLocks.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "AthenaGadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "Consumable",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "Ingredient",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortIngredientItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "WorldItem",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWorldItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "VictoryCrown",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortVictoryCrownAccountItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Persistence"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
+  }
+}

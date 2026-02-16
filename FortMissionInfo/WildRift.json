@@ -1,0 +1,79 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "WildRift",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Secondary/WildRift/WildRift_Mission.WildRift_Mission_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MissionTags": [
+      "Stat.Mission.Unique"
+    ],
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "E830BC6D40DC502DDAD7A987D401F8A7",
+      "SourceString": "Destroy the Rift",
+      "LocalizedString": "Destroy the Rift"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.Placement.LocationUsed",
+        "Activities.DynamicPlacement.Proximity.DangerZone"
+      ],
+      "AdditionalWorldFoundations": [
+        {
+          "ItemIdentifyingTags": [
+            "Activities.ObjectiveHandle.Num.01"
+          ],
+          "TagsToAddToChosenPlacementActorOrFoundationActor": [
+            "Activities.DynamicPlacement.Actor.WildRift",
+            "Activities.Placement.LocationUsed"
+          ],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'WildRiftMissionPlacementQuery'",
+            "ObjectPath": "/SaveTheWorld/Missions/EQSQueries/WildRiftMissionPlacementQuery.0"
+          },
+          "BuildingFoundationToPlace": {
+            "AssetPathName": "/SaveTheWorld/WorldTiles/LayoutFoundations/Missions/WildRift/LF_WildRift.LF_WildRift_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bAdjustFoundationPlacementForFloors": true
+        }
+      ]
+    },
+    "bStartPlayingOnLoad": true
+  }
+}

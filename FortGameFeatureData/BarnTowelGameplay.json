@@ -1,0 +1,151 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "BarnTowelGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/BarnTowelGameplay/Levels/BarnTowelGameplay_LevelOverlay.BarnTowelGameplay_LevelOverlay",
+      "SubPathString": ""
+    },
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/BarnTowelGameplay/UI/RE_BarnTowel_ReticleExtension.RE_BarnTowel_ReticleExtension",
+      "SubPathString": ""
+    },
+    "DynamicUIDirectorClass": {
+      "AssetPathName": "/BarnTowelGameplay/UI/BP_UIDirector_BarnTowel.BP_UIDirector_BarnTowel_C",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/BarnTowelGameplay/HUD/BarnTowelGameplayHUDWidgetRegistry.BarnTowelGameplayHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultLootTableData": {
+      "LootTierData": {
+        "AssetPathName": "/BarnTowelGameplay/DataTables/BarnTowelTierData.BarnTowelTierData",
+        "SubPathString": ""
+      },
+      "LootPackageData": {
+        "AssetPathName": "/BarnTowelGameplay/DataTables/BarnTowelLootPackages.BarnTowelLootPackages",
+        "SubPathString": ""
+      }
+    },
+    "PlaylistOverrideLootTableData": [
+      {
+        "Key": {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        "Value": {
+          "LootTierData": {
+            "AssetPathName": "/BarnTowelGameplay/DataTables/OtherModes/BarnTowel_LootTierData_LTMEmpty.BarnTowel_LootTierData_LTMEmpty",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/BarnTowelGameplay/DataTables/OtherModes/BarnTowel_LootPackages_LTMEmpty.BarnTowel_LootPackages_LTMEmpty",
+            "SubPathString": ""
+          },
+          "LootGroupData": []
+        }
+      },
+      {
+        "Key": {
+          "TagName": "Plugin.Playlist.BlastBerry"
+        },
+        "Value": {
+          "LootTierData": {
+            "AssetPathName": "/BarnTowelGameplay/DataTables/OtherModes/BarnTowel_LootTierData_LTMEmpty.BarnTowel_LootTierData_LTMEmpty",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/BarnTowelGameplay/DataTables/OtherModes/BarnTowel_LootPackages_LTMEmpty.BarnTowel_LootPackages_LTMEmpty",
+            "SubPathString": ""
+          },
+          "LootGroupData": []
+        }
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "CH5S4",
+        "DisplayName": "Iron Man Flight",
+        "ConsoleCommands": [
+          "cheat givespecificitem /BarnTowelGameplay/Gameplay/AGID_BarnTowel.AGID_BarnTowel 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddMovementModeExtension'BarnTowelGameplay:FortGameFeatureAction_AddMovementModeExtension_0'",
+        "ObjectPath": "/BarnTowelGameplay/BarnTowelGameplay.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BarnTowelGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/BarnTowelGameplay/BarnTowelGameplay.2"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddUnableToPerformActionText'BarnTowelGameplay:FortGameFeatureAction_AddUnableToPerformActionText_0'",
+        "ObjectPath": "/BarnTowelGameplay/BarnTowelGameplay.3"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddAttributeDefaults'BarnTowelGameplay:GameFeatureAction_AddAttributeDefaults_0'",
+        "ObjectPath": "/BarnTowelGameplay/BarnTowelGameplay.5"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddInputContextMapping'BarnTowelGameplay:GameFeatureAction_AddInputContextMapping_0'",
+        "ObjectPath": "/BarnTowelGameplay/BarnTowelGameplay.6"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddAttributesToPlayer'BarnTowelGameplay:FortGameFeatureAction_AddAttributesToPlayer_0'",
+        "ObjectPath": "/BarnTowelGameplay/BarnTowelGameplay.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "AthenaGadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

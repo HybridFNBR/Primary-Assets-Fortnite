@@ -1,0 +1,274 @@
+{
+  "Type": "FortPlaylistAthena",
+  "Name": "Playlist_ForbiddenFruitNoBuildBRStackPC",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bRewardsTrackPlacement": false,
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::Solo",
+    "RewardsPlacementThreshold": 5,
+    "InMatchXPRewardScalar": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaPlaylistXpToggle'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaPlaylistXpToggle.0"
+        },
+        "RowName": "Playlist_DefaultSquad"
+      }
+    },
+    "FillRateTable": [
+      {
+        "MinMmr": 0,
+        "MaxMmr": 400,
+        "MinFillPct": 0.2,
+        "MaxFillPct": 0.3,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 401,
+        "MaxMmr": 600,
+        "MinFillPct": 0.3,
+        "MaxFillPct": 0.5,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 601,
+        "MaxMmr": 800,
+        "MinFillPct": 0.4,
+        "MaxFillPct": 0.6,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 801,
+        "MaxMmr": 1000,
+        "MinFillPct": 0.5,
+        "MaxFillPct": 0.7,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1001,
+        "MaxMmr": 1100,
+        "MinFillPct": 0.6,
+        "MaxFillPct": 0.8,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1101,
+        "MaxMmr": 1200,
+        "MinFillPct": 0.6,
+        "MaxFillPct": 0.9,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1201,
+        "MaxMmr": 1300,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 0.9,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1301,
+        "MaxMmr": 1400,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1401,
+        "MaxMmr": 2000,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 119.0
+      }
+    ],
+    "MinBracketSize": 25,
+    "MaxBracketSize": 400,
+    "OutlierBracketBalanceMergeInterval": "6",
+    "MinBracketPriority": 5.0,
+    "MaxBracketPriority": 15.0,
+    "MaxOutlierBracketPriority": 20.0,
+    "MaxOutlierBracketMergeMmrGap": 800,
+    "bUsePlayerRating": true,
+    "bEnableRatingUpdate": true,
+    "RatingType": "nobuild",
+    "bAllowedInLeto": true,
+    "bShouldErrorOnAdditionalContentFailure": true,
+    "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
+    "NumWinningTeamsCN": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "NumWinningTeamsCN"
+      }
+    },
+    "PawnForcedCullDistance": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'ForbiddenFruitGameDataHF'",
+          "ObjectPath": "/ForbiddenFruitDataTables/DataTables/ForbiddenFruitGameDataHF.0"
+        },
+        "RowName": "FF.PawnCullOverride"
+      }
+    },
+    "InventorySystemConfiguration": {
+      "AssetPathName": "/Itemization/BRStyle/ItemizationConfiguration_FNBR.ItemizationConfiguration_FNBR",
+      "SubPathString": ""
+    },
+    "bForceCameraFadeOnRespawn": false,
+    "WarmupEarlyRequiredPlayerPercent": 0.8,
+    "WarmupCountdownDuration": 23.0,
+    "WarmupEarlyCountdownDuration": 7.0,
+    "AircraftPathMidpointSelectionRadiusMin": 2000.0,
+    "AircraftPathMidpointSelectionRadiusMax": 4000.0,
+    "PlaylistMissionGen": {
+      "ObjectName": "BlueprintGeneratedClass'MissionGen_ForbiddenFruitNoBuildStackPC_C'",
+      "ObjectPath": "/ForbiddenFruit/Playlists/MissionGen_ForbiddenFruitNoBuildStackPC.0"
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::PrioritizedContextualSlot",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/HUD_ContextualTips_Base.HUD_ContextualTips_Base_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "MissionIcon": {
+      "ObjectName": "Texture2D'T_Icon_Matchmaking_Squad_64'",
+      "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Social/T_Icon_Matchmaking_Squad_64.0"
+    },
+    "bLimitedTimeMode": false,
+    "bShowEliminationIndicatorForSquadmates": true,
+    "bShowEliminationIndicatorForTeammates": true,
+    "MapManagerClass": {
+      "AssetPathName": "/ForbiddenFruit/Playlists/UIMapManager_ForbiddenFruit.UIMapManager_ForbiddenFruit_C",
+      "SubPathString": ""
+    },
+    "SafeZoneStartUp": "ESafeZoneStartUp::StartsWithAirCraft",
+    "StormEffectDelay": 120.0,
+    "SafeZoneLocationBlacklist": {
+      "AssetPathName": "/ForbiddenFruitDataTables/DataTables/ForbiddenFruit_SafeZoneBlocklist.ForbiddenFruit_SafeZoneBlocklist",
+      "SubPathString": ""
+    },
+    "bAllowSpectateAPartyMember": true,
+    "MaxVehiclesCanSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.MaxVehiclesCanSpawnWith"
+      }
+    },
+    "PercentChanceSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
+      }
+    },
+    "PlaylistId": 9546554,
+    "PlaylistName": "Playlist_ForbiddenFruitNoBuildBRStackPC",
+    "GameType": "EFortGameType::ForbiddenFruit",
+    "MinPlayers": 26,
+    "MaxPlayers": 30,
+    "bOverrideMaxPlayers": true,
+    "MaxHumanAndBotParticipants": 30,
+    "MaxTeamCount": 30,
+    "MaxTeamSize": 6,
+    "MaxSocialPartySize": 6,
+    "MaxSquadSize": 6,
+    "bEnableBackfillDuringWarmupPhase": false,
+    "RichPresenceAssetName": "stack",
+    "bAllowKeepPlayingTogether": true,
+    "PreloadPersistentLevel": {
+      "AssetPathName": "/Game/Athena/Maps/Athena_Empty.Athena_Empty",
+      "SubPathString": ""
+    },
+    "GameplayTagContainer": [
+      "Athena.Playlist.DefaultXP",
+      "Athena.Playlist.Core",
+      "Athena.Plugin.GameMod.Gasket",
+      "Athena.Playlist.NoBuildingMaterials",
+      "Plugin.Playlist.ForbiddenFruit",
+      "Athena.Playlist.ForbiddenFruit.BlastBerry",
+      "Athena.Playlist.Solo",
+      "Athena.Playlist.ForbiddenFruit.BRLoot",
+      "LoadingScreen.IsForPreview",
+      "Athena.Playlist.NoBuildBR.Trios",
+      "Athena.Playlist.ForbiddenFruit.NoBuildTrio",
+      "Product.ForbiddenFruit.NoBuild.PureChaos"
+    ],
+    "SpawnImmunityTime": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'ForbiddenFruitGameDataHF'",
+          "ObjectPath": "/ForbiddenFruitDataTables/DataTables/ForbiddenFruitGameDataHF.0"
+        },
+        "RowName": "BlastBerry.StandardRespawn.SpawnImmunity"
+      }
+    },
+    "ModifierList": [
+      {
+        "AssetPathName": "/ForbiddenFruit/Mutators/MaterialDropOnElim_ForbiddenFruit_NoBuildBR.MaterialDropOnElim_ForbiddenFruit_NoBuildBR",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/ContextTutorial/ContextTutorial_AthenaContextTutorial.ContextTutorial_AthenaContextTutorial",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/AI/Phoebe/GameplayMod_Phoebe_DM.GameplayMod_Phoebe_DM",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Deimos/GameplayMod_DeimosAI.GameplayMod_DeimosAI",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/NoBuildBR/Modifiers/NoBuildBRModifier.NoBuildBRModifier",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Showdown/Siphon/GameplayMod_Siphon.GameplayMod_Siphon",
+        "SubPathString": ""
+      }
+    ],
+    "bIsDefaultPlaylist": true,
+    "UIDisplayName": {
+      "Namespace": "",
+      "Key": "697BC0B9470403A27D28E9AE6AF39666",
+      "SourceString": "Blitz Royale - Six Stack (Pure Chaos)",
+      "LocalizedString": "Blitz Royale - Six Stack (Pure Chaos)"
+    },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "115C0CE044106B9188D5D2912AF7C203",
+      "SourceString": "Testing mode no build",
+      "LocalizedString": "Testing mode no build"
+    },
+    "LootTierData": {
+      "AssetPathName": "/ForbiddenFruitDataTables/DataTables/Composite_ForbiddenFruitChapter_LTD_NoBuild.Composite_ForbiddenFruitChapter_LTD_NoBuild",
+      "SubPathString": ""
+    },
+    "LootPackages": {
+      "AssetPathName": "/ForbiddenFruitDataTables/DataTables/Composite_ForbiddenFruitChapter_LPD_NoBuild.Composite_ForbiddenFruitChapter_LPD_NoBuild",
+      "SubPathString": ""
+    },
+    "GameData": {
+      "AssetPathName": "/ForbiddenFruitDataTables/DataTables/ForbiddenFruit_CompositeGD_NoBuildChaos.ForbiddenFruit_CompositeGD_NoBuildChaos",
+      "SubPathString": ""
+    }
+  }
+}

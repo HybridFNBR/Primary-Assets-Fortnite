@@ -1,0 +1,93 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "LemonExam",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/LemonExam/Levels/LemonExam_LevelOverlay.LemonExam_LevelOverlay",
+      "SubPathString": ""
+    },
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/LemonExam/UI/UI_LemonExam_ReticleExtension.UI_LemonExam_ReticleExtension",
+      "SubPathString": ""
+    },
+    "DynamicUIDirectorClass": {
+      "AssetPathName": "/LemonExam/UI/DynamicUI/BP_UIDirector_LemonExam.BP_UIDirector_LemonExam_C",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/LemonExam/HUD/LemonExamHUDWidgetRegistry.LemonExamHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlaylistBaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/LemonExam/DataTables/LemonExamGameplayGameData.LemonExamGameplayGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Mash"
+            },
+            "Value": {
+              "AssetPathName": "/LemonExam/DataTables/Mash/Override_LemonExamGameplay_Mash_Composite.Override_LemonExamGameplay_Mash_Composite",
+              "SubPathString": ""
+            }
+          }
+        ]
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch7S1 Unvaults",
+        "DisplayName": "Rumi's Buster Sword",
+        "ConsoleCommands": [
+          "cheat givespecificitem /Script/FortniteGame.FortWeaponMeleeItemDefinition'/LemonExam/Gameplay/WID_Athena_LemonExam_SR.WID_Athena_LemonExam_SR' 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'LemonExam:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/LemonExam/LemonExam.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddMovementModeExtension'LemonExam:FortGameFeatureAction_AddMovementModeExtension_0'",
+        "ObjectPath": "/LemonExam/LemonExam.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistrySource'LemonExam:GameFeatureAction_DataRegistrySource_0'",
+        "ObjectPath": "/LemonExam/LemonExam.3"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

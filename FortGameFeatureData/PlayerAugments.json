@@ -1,0 +1,115 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "PlayerAugments",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlaylistBaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/PlayerAugments/DataTables/PlayerAugmentsGameData.PlayerAugmentsGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Plugin.Playlist.Arena"
+            },
+            "Value": {
+              "AssetPathName": "/PlayerAugments/DataTables/Comp/CompOverride_CompositePlayerAugmentGameData.CompOverride_CompositePlayerAugmentGameData",
+              "SubPathString": ""
+            }
+          },
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Mash"
+            },
+            "Value": {
+              "AssetPathName": "/PlayerAugments/DataTables/Mash/Mash_CompOverride_CompositePlayerAugmentGameData.Mash_CompOverride_CompositePlayerAugmentGameData",
+              "SubPathString": ""
+            }
+          }
+        ]
+      }
+    ],
+    "ContextualTutorials": [
+      {
+        "AssetPathName": "/PlayerAugments/ContextualTutorials/ContextTutorial_MultipleAugmentsQueued.ContextTutorial_MultipleAugmentsQueued",
+        "SubPathString": ""
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PlayerAugments:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/PlayerAugments/PlayerAugments.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PlayerAugments:FortGameFeatureAction_AddToPlaylists_1'",
+        "ObjectPath": "/PlayerAugments/PlayerAugments.1"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddComponents'PlayerAugments:GameFeatureAction_AddComponents_0'",
+        "ObjectPath": "/PlayerAugments/PlayerAugments.5"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistry'PlayerAugments:GameFeatureAction_DataRegistry_0'",
+        "ObjectPath": "/PlayerAugments/PlayerAugments.6"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'PlayerAugments:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/PlayerAugments/PlayerAugments.2"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_InjectAIBehavior'PlayerAugments:FortGameFeatureAction_InjectAIBehavior_0'",
+        "ObjectPath": "/PlayerAugments/PlayerAugments.3"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "PlayerAugment",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "GiftBox",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGiftBoxItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items/GiftBoxes"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

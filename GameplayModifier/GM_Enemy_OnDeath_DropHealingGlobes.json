@@ -1,0 +1,79 @@
+{
+  "Type": "FortGameplayModifierItemDefinition",
+  "Name": "GM_Enemy_OnDeath_DropHealingGlobes",
+  "Class": "UScriptClass'FortGameplayModifierItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "PersistentAbilitySets": [
+      {
+        "DeliveryRequirements": {
+          "SourceTagRequirements": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTagRequirements": {
+            "RequireTags": [
+              "NPC.CharacterType.Husk"
+            ],
+            "IgnoreTags": [
+              "Pawn.Athena.NPC.Wildlife"
+            ],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "ApplicableTeamAffiliation": "EFortTeamAffiliation::Friendly",
+          "bConsiderTeamAffiliationToInstigator": false,
+          "ApplicableTeam": "EFortTeam::Monster",
+          "bConsiderTeam": true,
+          "bApplyToPlayerPawns": false,
+          "bApplyToAIPawns": true,
+          "bApplyToBuildingActors": false,
+          "BuildingActorSpecification": "EFortDeliveryInfoBuildingActorSpecification::All",
+          "bApplyToGlobalEnvironmentAbilityActor": false
+        },
+        "AbilitySets": [
+          {
+            "AssetPathName": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Enemy/GAS_GM_OnDeath_DropHealingGlobes.GAS_GM_OnDeath_DropHealingGlobes",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ],
+    "bHiddenInUI": true,
+    "DataList": [
+      {
+        "MinLevel": 1,
+        "MaxLevel": 1
+      },
+      {
+        "Icon": {
+          "AssetPathName": "/SaveTheWorld/UI/Foundation/Textures/Icons/MissionModifiers/T-Icon-Modifier-Pos-Bldg-OnDeath-BuffEnemyEnvDmg-64.T-Icon-Modifier-Pos-Bldg-OnDeath-BuffEnemyEnvDmg-64",
+          "SubPathString": ""
+        }
+      },
+      {
+        "LargeIcon": {
+          "AssetPathName": "/SaveTheWorld/UI/Foundation/Textures/Icons/MissionModifiers/T-Icon-Modifier-Pos-Bldg-OnDeath-BuffEnemyEnvDmg-128.T-Icon-Modifier-Pos-Bldg-OnDeath-BuffEnemyEnvDmg-128",
+          "SubPathString": ""
+        }
+      },
+      {
+        "Traits": [
+          "Item.Trait.Transient"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "GoliathBurst",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/GoliathBurst/Levels/GoliathBurst_LevelOverlay.GoliathBurst_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "CH7S1 Core Weapons",
+        "DisplayName": "Give Scoped SMG",
+        "ConsoleCommands": [
+          "cheat giveweapon WID_SMG_GoliathBurst_R 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "CH7S1 Core Weapons",
+        "DisplayName": "Give Sniper",
+        "ConsoleCommands": [
+          "cheat giveweapon WID_Sniper_GoliathBurst_R 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'GoliathBurst:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/GoliathBurst/GoliathBurst.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistrySource'GoliathBurst:GameFeatureAction_DataRegistrySource_0'",
+        "ObjectPath": "/GoliathBurst/GoliathBurst.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

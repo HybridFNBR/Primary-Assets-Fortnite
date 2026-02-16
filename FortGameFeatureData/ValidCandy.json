@@ -1,0 +1,77 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "ValidCandy",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/ValidCandy/Levels/ValidCandy_LevelOverlay.ValidCandy_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlaylistBaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/ValidCandy/DataTables/ValidCandy_GameplayData.ValidCandy_GameplayData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Mash"
+            },
+            "Value": {
+              "AssetPathName": "/ValidCandy/DataTables/Override_ValidCandy_GameplayData_Smash.Override_ValidCandy_GameplayData_Smash",
+              "SubPathString": ""
+            }
+          }
+        ]
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch7S1 Unvaults",
+        "DisplayName": "Zoey's Bubble Shield",
+        "ConsoleCommands": [
+          "cheat givespecificitem /ValidCandy/Gameplay/WID_Athena_ValidCandy.WID_Athena_ValidCandy 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ValidCandy:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/ValidCandy/ValidCandy.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistrySource'ValidCandy:GameFeatureAction_DataRegistrySource_0'",
+        "ObjectPath": "/ValidCandy/ValidCandy.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Consumable",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

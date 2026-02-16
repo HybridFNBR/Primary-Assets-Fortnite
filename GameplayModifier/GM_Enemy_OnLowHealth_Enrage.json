@@ -1,0 +1,84 @@
+{
+  "Type": "FortGameplayModifierItemDefinition",
+  "Name": "GM_Enemy_OnLowHealth_Enrage",
+  "Class": "UScriptClass'FortGameplayModifierItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "PersistentAbilitySets": [
+      {
+        "DeliveryRequirements": {
+          "SourceTagRequirements": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTagRequirements": {
+            "RequireTags": [],
+            "IgnoreTags": [
+              "NPC.CharacterType.MiniBoss",
+              "Pawn.Athena.NPC.Wildlife"
+            ],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "ApplicableTeamAffiliation": "EFortTeamAffiliation::Friendly",
+          "bConsiderTeamAffiliationToInstigator": false,
+          "ApplicableTeam": "EFortTeam::Monster",
+          "bConsiderTeam": true,
+          "bApplyToPlayerPawns": false,
+          "bApplyToAIPawns": true,
+          "bApplyToBuildingActors": false,
+          "BuildingActorSpecification": "EFortDeliveryInfoBuildingActorSpecification::All",
+          "bApplyToGlobalEnvironmentAbilityActor": false
+        },
+        "AbilitySets": [
+          {
+            "AssetPathName": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Enemy/GAS_GM_OnLowHealth_Enrage.GAS_GM_OnLowHealth_Enrage",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "0746813D416FC00615F908A226DB4134",
+      "SourceString": "Enraged",
+      "LocalizedString": "Enraged"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "BA63091D43868BCFA3A458B06A89DD03",
+      "SourceString": "When enemies are near death they become enraged, dealing more damage.",
+      "LocalizedString": "When enemies are near death they become enraged, dealing more damage."
+    },
+    "DataList": [
+      {
+        "MinLevel": 1,
+        "MaxLevel": 1
+      },
+      {
+        "Icon": {
+          "AssetPathName": "/SaveTheWorld/UI/Foundation/Textures/Icons/MissionModifiers/T-Icon-Modifier-Neg-Enemy-OnLowHealth-Enrage-64.T-Icon-Modifier-Neg-Enemy-OnLowHealth-Enrage-64",
+          "SubPathString": ""
+        }
+      },
+      {
+        "LargeIcon": {
+          "AssetPathName": "/SaveTheWorld/UI/Foundation/Textures/Icons/MissionModifiers/T-Icon-Modifier-Neg-Enemy-OnLowHealth-Enrage-128.T-Icon-Modifier-Neg-Enemy-OnLowHealth-Enrage-128",
+          "SubPathString": ""
+        }
+      }
+    ]
+  }
+}

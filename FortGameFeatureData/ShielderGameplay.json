@@ -1,0 +1,68 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "ShielderGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/ShielderGameplay/ShielderReticleData.ShielderReticleData",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/ShielderGameplay/HUD/ShielderHUDWidgetRegistry.ShielderHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlaylistItemsToFullyLoad": [
+      {
+        "PlaylistTags": [],
+        "ItemIdsToFullyLoad": []
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S23",
+        "DisplayName": "Give Shielder",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /ShielderGameplay/Gameplay/WID_Athena_ShieldWeapon 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ShielderGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/ShielderGameplay/ShielderGameplay.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'ShielderGameplay:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/ShielderGameplay/ShielderGameplay.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

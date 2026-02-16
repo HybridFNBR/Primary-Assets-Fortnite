@@ -1,0 +1,253 @@
+{
+  "Type": "FortPlaylistAthena",
+  "Name": "Playlist_Delulu",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "InMatchXPRewardScalar": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaPlaylistXpToggle'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaPlaylistXpToggle.0"
+        },
+        "RowName": "Playlist_DefaultSquad"
+      }
+    },
+    "FirstWinRewards": [
+      {
+        "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Umbrella_Unhinged.Umbrella_Unhinged",
+        "SubPathString": ""
+      }
+    ],
+    "FillRateTable": [
+      {
+        "MinMmr": 1,
+        "MaxMmr": 2000,
+        "MinFillPct": 0.5,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 75.0
+      }
+    ],
+    "BotFillMMRCutoff": 1,
+    "bUsePlayerRating": true,
+    "bEnableDynamicBotBackfill": true,
+    "RatingType": "nobuild",
+    "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
+    "NumWinningTeamsCN": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "NumWinningTeamsCN"
+      }
+    },
+    "InventorySystemConfiguration": {
+      "AssetPathName": "/Itemization/BRStyle/ItemizationConfiguration_FNBR.ItemizationConfiguration_FNBR",
+      "SubPathString": ""
+    },
+    "PlaylistMissionGen": {
+      "ObjectName": "BlueprintGeneratedClass'MissionGen_Delulu_C'",
+      "ObjectPath": "/Delulu/Playlist/MissionGen_Delulu.0"
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::PrioritizedContextualSlot",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/HUD_ContextualTips_Base.HUD_ContextualTips_Base_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "MissionIcon": {
+      "ObjectName": "Texture2D'T_Icon_Matchmaking_Squad_64'",
+      "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Social/T_Icon_Matchmaking_Squad_64.0"
+    },
+    "bDisable_ReportAPlayerReason_TeamingUpWithEnemies_WhileInGame": true,
+    "bShowEliminationIndicatorForSquadmates": true,
+    "bShowEliminationIndicatorForTeammates": true,
+    "ShouldUseCustomGameChannel": {
+      "Value": 1.0
+    },
+    "CustomGameChannel": "ECustomGameVoiceChannel::WholeServer",
+    "bForceGameChannel": true,
+    "ForcePlayersToJoinGameChannel": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'Delulu_OverrideGameData'",
+          "ObjectPath": "/Delulu/DataTables/Delulu_OverrideGameData.0"
+        },
+        "RowName": "Delulu.ForcePlayersJoinGameChannel"
+      }
+    },
+    "bForceEnableProximityVoiceChat": true,
+    "bEnableCustomProximityChatPriorityList": true,
+    "ProximityVoiceChatAttenuationSettings": {
+      "ObjectName": "SoundAttenuation'Delulu_Proximity_Chat_Att'",
+      "ObjectPath": "/Delulu/Assets/Audio/Delulu_Proximity_Chat_Att.0"
+    },
+    "ProximityChatPriorityListProvider": {
+      "ObjectName": "Class'FortProximityChatPriorityListProvider_Default'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "MapManagerClass": {
+      "AssetPathName": "/Game/UI/IngameMap/UIMapManagerBR.UIMapManagerBR_C",
+      "SubPathString": ""
+    },
+    "StormEffectDelay": 120.0,
+    "SafeZoneLocationBlacklist": {
+      "AssetPathName": "/Game/Athena/Balance/DataTables/AthenaSafeZoneBlacklist.AthenaSafeZoneBlacklist",
+      "SubPathString": ""
+    },
+    "bUseDefaultSupplyDrops": false,
+    "SupplyDropInfoList": [
+      {
+        "AssetPathName": "/Delulu/Playlist/SupplyDrop_Delulu.SupplyDrop_Delulu",
+        "SubPathString": ""
+      }
+    ],
+    "bAllowTeamSwitching": true,
+    "AISettings": {
+      "AssetPathName": "/Game/Athena/AI/AISettings/PlayerBotsFlow_AISettings.PlayerBotsFlow_AISettings",
+      "SubPathString": ""
+    },
+    "MaxVehiclesCanSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.MaxVehiclesCanSpawnWith"
+      }
+    },
+    "PercentChanceSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
+      }
+    },
+    "PlaylistId": 97098,
+    "PlaylistName": "Playlist_Delulu",
+    "GameType": "EFortGameType::Delulu",
+    "MinPlayers": 25,
+    "MaxPlayers": 50,
+    "MaxPriority": 90.0,
+    "bOverrideMaxPlayers": true,
+    "MaxHumanAndBotParticipants": 50,
+    "MaxTeamCount": 123,
+    "MaxTeamSize": 8,
+    "MaxSocialPartySize": 8,
+    "MaxSquadSize": 8,
+    "EnforceSquadFill": false,
+    "bAllowSquadFillOption": false,
+    "bEnableBackfillDuringWarmupPhase": false,
+    "RichPresenceAssetName": "squads",
+    "GameModeClassOverride": {
+      "AssetPathName": "/Delulu/Gameplay/Delulu_GameMode.Delulu_GameMode_C",
+      "SubPathString": ""
+    },
+    "DefaultLastTeam": 122,
+    "GameplayTagContainer": [
+      "Athena.Playlist.DefaultXP",
+      "Athena.Playlist.Default",
+      "Athena.Playlist.Core",
+      "Athena.Playlist.Squad",
+      "Athena.Plugin.GameMod.Gasket",
+      "Athena.Playlist.NoBuildingMaterials",
+      "Athena.Playlist.NoBuildBR.Squad",
+      "Plugin.Playlist.Delulu",
+      "Athena.Playlist.DisplaysVoiceIndicatorForAll",
+      "Plugin.Playlist.Exclude.ImmunityCarriage",
+      "Plugin.Playlist.Exclude.PlayAsVillain",
+      "Plugin.Playlist.Exclude.PlayAsVillainBosses",
+      "Plugin.Playlist.Exclude.Umbramolt",
+      "Plugin.Playlist.Exclude.GreaseClipDunmurry",
+      "Plugin.Playlist.Exclude.YokeHop",
+      "Plugin.Playlist.Exclude.YokeHopUnkind",
+      "DanceSpotlight.Enable",
+      "Plugin.Playlist.Exclude.HotAirBalloon",
+      "Plugin.Playlist.Exclude.Tram",
+      "Plugin.Playlist.Exclude.FerrisWheelGameplay"
+    ],
+    "ModifierList": [
+      {
+        "AssetPathName": "/Game/Athena/Playlists/DefaultModifiers/MaterialDropOnElim_Default.MaterialDropOnElim_Default",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/ContextTutorial/ContextTutorial_AthenaContextTutorial.ContextTutorial_AthenaContextTutorial",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/AI/Phoebe/GameplayMod_Phoebe_DM.GameplayMod_Phoebe_DM",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Deimos/GameplayMod_DeimosAI.GameplayMod_DeimosAI",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/NoBuildBR/Modifiers/NoBuildBRModifier.NoBuildBRModifier",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Delulu/Playlist/Delulu_Modifier.Delulu_Modifier",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Delulu/Playlist/Delulu_Modifier_HealthandShields.Delulu_Modifier_HealthandShields",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Delulu/Playlist/Delulu_Modifier_DontDropInventory.Delulu_Modifier_DontDropInventory",
+        "SubPathString": ""
+      }
+    ],
+    "bIsDefaultPlaylist": true,
+    "UIDisplayName": {
+      "Namespace": "",
+      "Key": "E21E2CEB4F87AA6FC60132B00DCB85F8",
+      "SourceString": "Delulu",
+      "LocalizedString": "Delulu"
+    },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "1F30B8C84BABC637B284FEBBBC09C323",
+      "SourceString": "Drop solo, crash the party, team up (or not), and be the last one standing.",
+      "LocalizedString": "Drop solo, crash the party, team up (or not), and be the last one standing."
+    },
+    "LootTierData": {
+      "AssetPathName": "/BRPlaylists/Athena/Playlists/NoBuildBR/AthenaCompositeLTD_NoBuildBR.AthenaCompositeLTD_NoBuildBR",
+      "SubPathString": ""
+    },
+    "LootPackages": {
+      "AssetPathName": "/BRPlaylists/Athena/Playlists/NoBuildBR/AthenaCompositeLP_NoBuildBR.AthenaCompositeLP_NoBuildBR",
+      "SubPathString": ""
+    },
+    "BaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/Game/Athena/Balance/DataTables/JobBoardSettings.JobBoardSettings",
+          "SubPathString": ""
+        },
+        "OverrideTable": {
+          "AssetPathName": "/Delulu/DataTables/Delulu_Composite_JobBoards.Delulu_Composite_JobBoards",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "GameData": {
+      "AssetPathName": "/Delulu/DataTables/Delulu_CompositeGD_NoBuild.Delulu_CompositeGD_NoBuild",
+      "SubPathString": ""
+    }
+  }
+}

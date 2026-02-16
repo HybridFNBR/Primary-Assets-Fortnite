@@ -1,0 +1,452 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "Outlandish_Quest_A07_LandmarkVending",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Quests/ReactiveQuests/Outlandish/Outlandish_Quest_A07_Landmark_Mission.Outlandish_Quest_A07_Landmark_Mission_C",
+      "SubPathString": ""
+    },
+    "MissionTags": [
+      "Stat.Mission.Primary.Landmark",
+      "Stat.Mission.Landmark.Outlandish"
+    ],
+    "ZoneEndDelayOverrideForFailure": 6.0,
+    "MissionRewardBadge": {
+      "ObjectName": "FortBadgeItemDefinition'InvendingDoom_Victory'",
+      "ObjectPath": "/SaveTheWorld/Items/Badges/MissionBadges/Outlandish/InvendingDoom_Victory.0"
+    },
+    "MissionRewardItemsLootTierGroup": "Mission_Complete_Rewards",
+    "ParTime": 2,
+    "UnderParBadge": {
+      "ObjectName": "FortBadgeItemDefinition'MissionBadge_Par2'",
+      "ObjectPath": "/SaveTheWorld/Items/Badges/MissionBadges/Par/MissionBadge_Par2.0"
+    },
+    "MaxMissionPoints": 24,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "CC01236949495C8F876822841870FF28",
+      "SourceString": "Defeat the corrupted vending machine.",
+      "LocalizedString": "Defeat the corrupted vending machine."
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ImageSize": {
+          "X": 24.0,
+          "Y": 24.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-32.0"
+        }
+      },
+      "Brush_XS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-32.0"
+        }
+      },
+      "Brush_S": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-64.0"
+        }
+      },
+      "Brush_M": {
+        "ImageSize": {
+          "X": 52.0,
+          "Y": 52.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-64.0"
+        }
+      },
+      "Brush_L": {
+        "ImageSize": {
+          "X": 76.0,
+          "Y": 76.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-128'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-128.0"
+        }
+      },
+      "Brush_XL": {
+        "ImageSize": {
+          "X": 104.0,
+          "Y": 104.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Story-128'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Mission/T-Icon-Story-128.0"
+        }
+      }
+    },
+    "EndOfMissionMediaSource": {
+      "ObjectName": "FileMediaSource'FMS_mission_success_generic'",
+      "ObjectPath": "/SaveTheWorld/Movies/VictoryMovies/FMS_mission_success_generic.0"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Locate/Gen_Locate.Gen_Locate_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Locate",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_ProgressBar/Gen_ProgressBar.Gen_ProgressBar_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Num.02",
+              "Activities.ObjectiveHandle.Generic.ProgressBar"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Interact/Gen_Interact.Gen_Interact_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Num.03",
+              "Activities.ObjectiveHandle.Generic.KillDestroyPickupInteract"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Timer/Gen_Timer.Gen_Timer_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed",
+              "Activities.ObjectiveHandle.Num.07"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Defense/Gen_Defense.Gen_Defense_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Defense",
+              "Activities.ObjectiveHandle.Num.08"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.03"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.10"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay",
+              "Activities.ObjectiveHandle.Num.09"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.DynamicPlacement.Mission.Primary",
+        "Activities.Placement.LocationUsed"
+      ],
+      "ActorsAndLocations": [
+        {
+          "ItemIdentifyingTags": [
+            "Activities.ObjectiveHandle.Num.01",
+            "Activities.ObjectiveHandle.Generic.Locate"
+          ],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'Outlandish_Landmark_EQS_00_LocateVendingArena'",
+            "ObjectPath": "/SaveTheWorld/Missions/Quests/ReactiveQuests/Outlandish/EQS/Outlandish_Landmark_EQS_00_LocateVendingArena.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/Outlandish2024/BPs/BP_Outlandish_Landmark_TriggerVolPlacement.BP_Outlandish_Landmark_TriggerVolPlacement_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": true,
+          "bShouldReserveLocations": false,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": true,
+          "bDontCreateSpawnRiftsNearby": false
+        },
+        {
+          "ItemIdentifyingTags": [
+            "Activities.ObjectiveHandle.Num.03",
+            "Activities.ObjectiveHandle.Generic.KillDestroyPickupInteract"
+          ],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'Outlandish_Landmark_EQS_02_Pipes'",
+            "ObjectPath": "/SaveTheWorld/Missions/Quests/ReactiveQuests/Outlandish/EQS/Outlandish_Landmark_EQS_02_Pipes.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/Outlandish2024/BPs/BP_Outlandish_DestroyPipe.BP_Outlandish_DestroyPipe_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 4,
+          "bSpawnActorAutomatically": true,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": false,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        },
+        {
+          "ItemIdentifyingTags": [
+            "Activities.ObjectiveHandle.Num.02",
+            "Activities.ObjectiveHandle.Generic.ProgressBar"
+          ],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'Outlandish_Landmark_EQS_01_VendingBoss'",
+            "ObjectPath": "/SaveTheWorld/Missions/Quests/ReactiveQuests/Outlandish/EQS/Outlandish_Landmark_EQS_01_VendingBoss.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/Outlandish2024/BPs/BP_VendingBoss_LocateActor.BP_VendingBoss_LocateActor_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": true,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": true,
+          "bDontCreateSpawnRiftsNearby": false
+        }
+      ]
+    },
+    "bStartPlayingOnLoad": true,
+    "bRequiresActivation": false,
+    "bAllowDifficultyIncrease": false,
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'Rewards_Treasure_Tiered'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/Rewards_Treasure_Tiered.0"
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "5D6FA3B44A9384F8F1F14E87C533F881",
+      "SourceString": "In-vending Doom",
+      "LocalizedString": "In-vending Doom"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn.EDO_Set_ScriptedSpawn",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'Outlandish_Quest_A07_LandmarkVending:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Quests/ReactiveQuests/Outlandish/Outlandish_Quest_A07_LandmarkVending.0"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": true,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Outlandish_InVendingDoom_Defend.EDO_Set_Outlandish_InVendingDoom_Defend",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.1Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Outlandish_InVendingDoom_Attack.EDO_Set_Outlandish_InVendingDoom_Attack",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.1Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Outlandish_InVendingDoom_Pipes.EDO_Set_Outlandish_InVendingDoom_Pipes",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.NonScaling.1Player"
+        ]
+      }
+    ],
+    "TaggedRewards": [
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Participation"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/Outlandish/InvendingDoom_Participation.InvendingDoom_Participation",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ],
+    "AIServices": [
+      {
+        "ObjectName": "Class'AthenaAIServiceLoot'",
+        "ObjectPath": "/Script/FortniteAI"
+      }
+    ],
+    "GameData": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/Gate/STW_CompositeGameData.STW_CompositeGameData",
+      "SubPathString": ""
+    }
+  }
+}

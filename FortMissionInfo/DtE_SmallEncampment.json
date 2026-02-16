@@ -1,0 +1,188 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "DtE_SmallEncampment",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Secondary/Encampments/CampClear/CampClear01_Mission.CampClear01_Mission_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MissionTags": [
+      "Stat.Mission.Secondary.Encampment"
+    ],
+    "MaxMissionPoints": 1,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "F00B2AB04E96A0D3275216A3FF5B18C0",
+      "SourceString": "Clear the Encampment",
+      "LocalizedString": "Clear the Encampment"
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ImageSize": {
+          "X": 12.0,
+          "Y": 12.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-32.0"
+        }
+      },
+      "Brush_XS": {
+        "ImageSize": {
+          "X": 16.0,
+          "Y": 16.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-32.0"
+        }
+      },
+      "Brush_S": {
+        "ImageSize": {
+          "X": 24.0,
+          "Y": 24.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-32.0"
+        }
+      },
+      "Brush_M": {
+        "ImageSize": {
+          "X": 40.0,
+          "Y": 40.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-64.0"
+        }
+      },
+      "Brush_L": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-128.0"
+        }
+      },
+      "Brush_XL": {
+        "ImageSize": {
+          "X": 104.0,
+          "Y": 104.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-128.0"
+        }
+      }
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_ClearEncounter/Gen_ClearEncounter.Gen_ClearEncounter_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Kill"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.Placement.LocationUsed",
+        "Activities.DynamicPlacement.Actor.Encampment",
+        "Activities.DynamicPlacement.Mission.Primary"
+      ],
+      "ActorsAndLocations": [
+        {
+          "ItemIdentifyingTags": [
+            "Activities.ObjectiveHandle.Num.01"
+          ],
+          "TagsToAddToChosenPlacementActor": [
+            "Activities.DynamicPlacement.Proximity.DangerZone"
+          ],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'EncampmentPrimaryMissionPlacementQuery'",
+            "ObjectPath": "/SaveTheWorld/Missions/EQSQueries/EncampmentPrimaryMissionPlacementQuery.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Secondary/Encampments/CampClear/Encampment_Lvl1.Encampment_Lvl1_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        }
+      ]
+    },
+    "MinDistanceToAllowSpawnPad": 5000.0,
+    "PopupWidgetData": {
+      "AvailableIcon": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-RadarPointSecondary-S'",
+          "ObjectPath": "/SaveTheWorld/UI/HUD/Textures/Icon-RadarPointSecondary-S.0"
+        }
+      },
+      "UnavailableIcon": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-RadarPointSecondary-S'",
+          "ObjectPath": "/SaveTheWorld/UI/HUD/Textures/Icon-RadarPointSecondary-S.0"
+        }
+      }
+    },
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'DefaultRewards'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/DefaultRewards.0"
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "2EC7750F4B2AC8F895F77186DB266A90",
+      "SourceString": "Small Encampment",
+      "LocalizedString": "Small Encampment"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_DtE_Small.EDO_Set_DtE_Small",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.NonScaling.4Player"
+        ]
+      }
+    ],
+    "MissionOptions": {
+      "AssetPathName": "/SaveTheWorld/AIDirector/Missions/MissionOptionData_Default.MissionOptionData_Default",
+      "SubPathString": ""
+    }
+  }
+}

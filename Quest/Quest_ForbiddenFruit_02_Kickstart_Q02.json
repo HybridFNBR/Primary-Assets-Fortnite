@@ -1,0 +1,205 @@
+{
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_ForbiddenFruit_02_Kickstart_Q02",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_ForbiddenFruit_Kickstart_02_Q02_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Item": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Rarity.Mythic"
+                  },
+                  {
+                    "TagName": "Rarity.Transcendent"
+                  },
+                  {
+                    "TagName": "Item.Weapon"
+                  },
+                  {
+                    "TagName": "Item.Consumable.Bucket.Nice"
+                  },
+                  {
+                    "TagName": "Pickup.Source.TossedByPlayer"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  3,
+                  1,
+                  2,
+                  0,
+                  1,
+                  1,
+                  2,
+                  2,
+                  3,
+                  3,
+                  1,
+                  4
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ANY( Rarity.Mythic, Rarity.Transcendent ),  ANY( Item.Weapon, Item.Consumable.Bucket.Nice ),  NONE( Pickup.Source.TossedByPlayer ) )"
+              }
+            },
+            "bIncrementByItemCount": false,
+            "AcceptedGatherType": "EInventoryGatherType::PreviouslyGathered",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "630716F44491A50FA824D2BDFC3DE493",
+          "SourceString": "Collect Mythic or Exotic weapons",
+          "LocalizedString": "Collect Mythic or Exotic weapons"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 12,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 50,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.ForbiddenFruit"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.ForbiddenFruit )"
+    },
+    "SortPriority": 2,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_ForbiddenFruit_02_Kickstart_Q02:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Kickstart_02/Quest_ForbiddenFruit_02_Kickstart_Q02.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_ForbiddenFruit_02_Kickstart_Q02:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Kickstart_02/Quest_ForbiddenFruit_02_Kickstart_Q02.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_TrackedData'Quest_ForbiddenFruit_02_Kickstart_Q02:FortQuestDefinitionComponent_TrackedData_0'",
+        "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Kickstart_02/Quest_ForbiddenFruit_02_Kickstart_Q02.3"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_ModularGates'Quest_ForbiddenFruit_02_Kickstart_Q02:FortQuestDefinitionComponent_ModularGates_0'",
+        "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Kickstart_02/Quest_ForbiddenFruit_02_Kickstart_Q02.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_ForbiddenFruit_Kickstart_02_Q02_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "AD3EB5E9411816F208D60BB19BDE3161",
+      "SourceString": "Collect Mythic or Exotic weapons",
+      "LocalizedString": "Collect Mythic or Exotic weapons"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "22C42E1340A1B4150E94078A77BC22FA",
+      "SourceString": "Collect Mythic or Exotic weapons",
+      "LocalizedString": "Collect Mythic or Exotic weapons"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.ForbiddenFruit.Kickstart.Quests"
+        ]
+      }
+    ]
+  }
+}

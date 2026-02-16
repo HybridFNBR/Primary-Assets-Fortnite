@@ -1,0 +1,94 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "ForbiddenFruit",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/ForbiddenFruit/Levels/ForbiddenFruit_LevelOverlay.ForbiddenFruit_LevelOverlay",
+      "SubPathString": ""
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::PostGamePlacementOverlayLosing",
+        "WidgetClass": {
+          "AssetPathName": "/ForbiddenFruit/UI/PlayerRank/WBP_ForbiddenFruit_HeroRanking_PostmatchPlacement.WBP_ForbiddenFruit_HeroRanking_PostmatchPlacement_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "DynamicUIDirectorClass": {
+      "AssetPathName": "/ForbiddenFruit/UI/ForbiddenFruitUIDirector.ForbiddenFruitUIDirector_C",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlaylistBaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/DragonCartWads/DataTables/DragonCartWadsGameData.DragonCartWadsGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.ForbiddenFruit"
+            },
+            "Value": {
+              "AssetPathName": "/ForbiddenFruitDataTables/DataTables/ForbiddenFruit_DragonCartWadsGameData.ForbiddenFruit_DragonCartWadsGameData",
+              "SubPathString": ""
+            }
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "GameFeatureAction_AddComponents'ForbiddenFruit:GameFeatureAction_AddComponents_0'",
+        "ObjectPath": "/ForbiddenFruit/ForbiddenFruit.3"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ForbiddenFruit:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/ForbiddenFruit/ForbiddenFruit.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistry'ForbiddenFruit:GameFeatureAction_DataRegistry_0'",
+        "ObjectPath": "/ForbiddenFruit/ForbiddenFruit.4"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddCheats'ForbiddenFruit:GameFeatureAction_AddCheats_0'",
+        "ObjectPath": "/ForbiddenFruit/ForbiddenFruit.2"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistrySource'ForbiddenFruit:GameFeatureAction_DataRegistrySource_0'",
+        "ObjectPath": "/ForbiddenFruit/ForbiddenFruit.5"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortPlaylistAthena",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlaylistAthena",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Playlists"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
+  }
+}

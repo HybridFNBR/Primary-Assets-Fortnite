@@ -1,0 +1,93 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "PortAShackGameplay",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "LevelOverlayConfig": {
+      "AssetPathName": "/PortAShackGameplay/PortAShackGameplay_LevelOverlay.PortAShackGameplay_LevelOverlay",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/PortAShackGameplay/HUD/PortAShackHUDWidgetRegistry.PortAShackHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultLootTableData": {
+      "LootTierData": {
+        "AssetPathName": "/PortAShackGameplay/DataTables/LootTierData.LootTierData",
+        "SubPathString": ""
+      },
+      "LootPackageData": {
+        "AssetPathName": "/PortAShackGameplay/DataTables/LootPackageData.LootPackageData",
+        "SubPathString": ""
+      }
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S22",
+        "DisplayName": "Give Port-A-Shack",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /PortAShackGameplay/Items/WID/Athena_PortAShackGrenade_A 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PortAShackGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/PortAShackGameplay/PortAShackGameplay.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'PortAShackGameplay:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/PortAShackGameplay/PortAShackGameplay.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "FortExposedAssetList",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "UEFNExposedAssets"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
+  }
+}

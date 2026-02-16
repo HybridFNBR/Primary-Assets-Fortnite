@@ -1,0 +1,179 @@
+{
+  "Type": "FortMissionInfo",
+  "Name": "SurvivorWanderEncounterNature",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Secondary/SurvivorWanderEncounter/Mission_SurvivorWanderEncounter.Mission_SurvivorWanderEncounter_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MissionTags": [
+      "Stat.Mission.Survivor",
+      "Stat.Mission.Mobile",
+      "Stat.Mission.Defend",
+      "Stat.Mission.Encounter.Burst"
+    ],
+    "MaxMissionPoints": 0,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "17EA42E64E9B1CC6400468B38E82537E",
+      "SourceString": "Survivor Rescue",
+      "LocalizedString": "Survivor Rescue"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Locate/Gen_Locate.Gen_Locate_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Locate"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_ClearEncounter/Gen_ClearEncounter.Gen_ClearEncounter_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Kill"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Interact/Gen_Interact.Gen_Interact_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.KillDestroyPickupInteract"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.DynamicPlacement.Mission.Secondary",
+        "Activities.Placement.LocationUsed",
+        "Activities.DynamicPlacement.Proximity.DangerZone"
+      ],
+      "ActorsAndLocations": [
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'WandererEncounterNatureMissionPlacementQuery'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/SurvivorWanderEncounter/WandererEncounterNatureMissionPlacementQuery.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Secondary/SurvivorWanderEncounter/Props/BP_WandererLocalNature.BP_WandererLocalNature_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": false,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        }
+      ]
+    },
+    "MinDistanceToAllowSpawnPad": 5000.0,
+    "bStartPlayingOnLoad": true,
+    "PopupWidgetData": {
+      "AvailableIcon": {
+        "ImageSize": {
+          "X": 24.0,
+          "Y": 24.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-RadarPointSecondary-S'",
+          "ObjectPath": "/SaveTheWorld/UI/HUD/Textures/Icon-RadarPointSecondary-S.0"
+        }
+      }
+    },
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'Rewards_Low'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/Rewards_Low.0"
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "87FFFC6644D2E8F78ED42B8D3D1EF7EA",
+      "SourceString": "Survivor Rescue",
+      "LocalizedString": "Survivor Rescue"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_Survivor_Wanderer.EDO_Set_Survivor_Wanderer",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Tertiary.Standard"
+        ]
+      }
+    ],
+    "TaggedRewards": [
+      {
+        "Tag": {
+          "TagName": "MissionReward.Badge.Participation"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/MissionBadges/Survivors/MissionBadge_Survivor_Silver.MissionBadge_Survivor_Silver",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "Type": "FortAbilitySet",
+  "Name": "AS_HighTower_Date_ChainLightning_Jump",
+  "Class": "UScriptClass'FortAbilitySet'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "GameplayAbilities": [
+      {
+        "ObjectName": "BlueprintGeneratedClass'GA_HighTower_Date_ChainLightning_RemoveCoolDown_C'",
+        "ObjectPath": "/HighTower/Items/Date/ChainLightning/GA_HighTower_Date_ChainLightning_RemoveCoolDown.0"
+      }
+    ],
+    "AbilityActivatedByInputKeyTag": {
+      "TagName": "Granted.HighTower.Power.Date.Jump"
+    },
+    "AbilityActivatedByInputTag": {
+      "TagName": "Trait.HighTower.Power.Type.Jump"
+    },
+    "AbilityActivatedByInputCooldownTag": {
+      "TagName": "Granted.Cooldown.HighTower.Date.ChainLightning.Boost"
+    },
+    "AbilitiesActivatedByInput": [
+      {
+        "Ability": {
+          "ObjectName": "BlueprintGeneratedClass'GA_HighTower_Date_ChainLightning_Boost_C'",
+          "ObjectPath": "/HighTower/Items/Date/ChainLightning/GA_HighTower_Date_ChainLightning_Boost.0"
+        },
+        "ActivationTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "MovementMode.Falling"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "Falling",
+          "AutoDescription": " ALL( MovementMode.Falling )"
+        }
+      },
+      {
+        "Ability": {
+          "ObjectName": "BlueprintGeneratedClass'GA_HighTower_Jump_C'",
+          "ObjectPath": "/HighTower/Items/Global/GA_HighTower_Jump.0"
+        },
+        "ActivationTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        }
+      }
+    ]
+  }
+}
