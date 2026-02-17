@@ -113,8 +113,24 @@
             }
           },
           {
-            "Target": {
-              "TagQuery": {
+            "GameplayEventTag": {
+              "TagName": "Event.Interact.Completed"
+            },
+            "GameplayEventFilter": {
+              "AdvancedInstigatorClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "InstigatorTags": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              },
+              "AdvancedTargetClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "TargetTags": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
                   {
@@ -130,30 +146,58 @@
                 ],
                 "UserDescription": "",
                 "AutoDescription": " ANY( Athena.Vehicle.SpecialActor.DrivableRebootVan )"
-              }
+              },
+              "AdvancedObject1ClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "Object1TagFilter": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              },
+              "AdvancedObject2ClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "Object2TagFilter": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              },
+              "EventMagnitude": {
+                "LowerBound": {
+                  "Type": "ERangeBoundTypes::Exclusive",
+                  "Value": 0.0
+                },
+                "UpperBound": {
+                  "Type": "ERangeBoundTypes::Open",
+                  "Value": 0.0
+                }
+              },
+              "bUseAdvancedInstigatorClassFilter": false,
+              "bUseInstigatorTags": false,
+              "bUseAdvancedTargetClassFilter": false,
+              "bUseTargetTags": true,
+              "bUseAdvancedObject1ClassFilter": false,
+              "bUseObject1Tags": false,
+              "bUseAdvancedObject2ClassFilter": false,
+              "bUseObject2Tags": false,
+              "bUseEventMagnitude": false
             },
+            "bRequireAuthorInstigator": false,
+            "bRequireAuthorTarget": false,
+            "bIncrementByEventMagnitude": false,
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
                 "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Gameplay.Action.Player.InteractSearch"
-                  },
-                  {
-                    "TagName": "Gameplay.Interact.ValidateLongInteract"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  2,
-                  2,
-                  0,
-                  1
-                ],
+                "TagDictionary": [],
+                "QueryTokenStream": [],
                 "UserDescription": "",
-                "AutoDescription": " ALL( Gameplay.Action.Player.InteractSearch, Gameplay.Interact.ValidateLongInteract )"
+                "AutoDescription": ""
               }
             },
             "Context": {

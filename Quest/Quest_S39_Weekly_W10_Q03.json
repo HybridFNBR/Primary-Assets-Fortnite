@@ -5,6 +5,10 @@
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S28/T-Soldier-Hero-UnderGroundRebel-Fashion.T-Soldier-Hero-UnderGroundRebel-Fashion",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "bAthenaGrantRarityToken": false,
     "CompletionPathResults": [
@@ -20,25 +24,30 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
-            },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
+            "AllowedSurfaces": [],
+            "ExcludedSurfaces": [],
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
                 "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Gameplay.HotAirBalloon.PlayerOnBoard"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
                 "UserDescription": "",
-                "AutoDescription": ""
+                "AutoDescription": " ANY( Athena.Gameplay.HotAirBalloon.PlayerOnBoard )"
               }
             },
             "Context": {
@@ -68,8 +77,8 @@
         "Description": {
           "Namespace": "",
           "Key": "913B817446A9BD9A76EA7E889E3EEEC6",
-          "SourceString": "Do the thing!",
-          "LocalizedString": "Do the thing!"
+          "SourceString": "Land in a Hot Air Balloon from the bus",
+          "LocalizedString": "Land in a Hot Air Balloon from the bus"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -157,20 +166,26 @@
     "ItemName": {
       "Namespace": "",
       "Key": "1EFFEF2744172543A66F1896ABE5B5D3",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "SourceString": "Land in a Hot Air Balloon from the bus",
+      "LocalizedString": "Land in a Hot Air Balloon from the bus"
     },
     "ItemDescription": {
       "Namespace": "",
       "Key": "B64E019C483F361D66B00B9937DFA791",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "SourceString": "Land in a Hot Air Balloon from the bus",
+      "LocalizedString": "Land in a Hot Air Balloon from the bus"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "B00810CB4376B0B6B765AFBBC58F0990",
+      "SourceString": "Get some high ground.",
+      "LocalizedString": "Get some high ground."
     },
     "DataList": [
       {
         "Tags": [
           "ChallengeCategory.XP",
-          "QuestCategory.BR.Weekly.10.Quest"
+          "QuestCategory.BR.Weekly.Character.05"
         ]
       }
     ]

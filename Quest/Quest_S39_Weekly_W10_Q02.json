@@ -5,6 +5,10 @@
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S28/T-Soldier-Hero-UnderGroundRebel-Fashion.T-Soldier-Hero-UnderGroundRebel-Fashion",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "bAthenaGrantRarityToken": false,
     "CompletionPathResults": [
@@ -24,13 +28,75 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
+            "EliminatedPawn": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
             },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
+            "Killer": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "EliminationSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Item.Weapon.Ranged.AR.LockOn"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Item.Weapon.Ranged.AR.LockOn )"
+              }
+            },
+            "AllowedTeamAffiliations": [],
+            "ProhibitedTeamAffiliations": [],
+            "AllowedKilledPawnTypes": [
+              "EEliminationKillType::Player",
+              "EEliminationKillType::NPC"
+            ],
+            "ProhibitedKilledPawnTypes": [],
+            "bAllowSelfEliminations": false,
+            "bRequirePawnWasEliminatedByConvertedPawn": false,
+            "bUseDistance": false,
+            "bIncrementByDistance": false,
+            "bUseKillStreak": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "KillStreak": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
@@ -67,9 +133,9 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "490C58644DF7AE8995FD9D9A9B1F11DF",
-          "SourceString": "Do the thing!",
-          "LocalizedString": "Do the thing!"
+          "Key": "F8D5B8014B66A1F377D04491A87B8988",
+          "SourceString": "Eliminate opponents with a Lock On Assault Rifle",
+          "LocalizedString": "Eliminate opponents with a Lock On Assault Rifle"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -79,7 +145,7 @@
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 5,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 25,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -133,10 +199,6 @@
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S39_Weekly_W10_Q02:FortQuestDefinitionComponent_DisplaySettings_0'",
         "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/WeeklyQuests/Week_10/Quest_S39_Weekly_W10_Q02.0"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_SharedQuest'Quest_S39_Weekly_W10_Q02:FortQuestDefinitionComponent_SharedQuest_0'",
-        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/WeeklyQuests/Week_10/Quest_S39_Weekly_W10_Q02.2"
       }
     ],
     "CompletionPaths": [
@@ -161,20 +223,26 @@
     "ItemName": {
       "Namespace": "",
       "Key": "F8D5B8014B66A1F377D04491A87B8988",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "SourceString": "Eliminate opponents with a Lock On Assault Rifle",
+      "LocalizedString": "Eliminate opponents with a Lock On Assault Rifle"
     },
     "ItemDescription": {
       "Namespace": "",
       "Key": "BF814581437C291F2511768A9E01A005",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "SourceString": "Eliminate opponents with a Lock On Assault Rifle",
+      "LocalizedString": "Eliminate opponents with a Lock On Assault Rifle"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "21EEF04F3CEC74EB2FF584913CEC74EB",
+      "SourceString": "Train up. We don't know the scope of what we're facing yet.",
+      "LocalizedString": "Train up. We don't know the scope of what we're facing yet."
     },
     "DataList": [
       {
         "Tags": [
           "ChallengeCategory.XP",
-          "QuestCategory.BR.Weekly.10.Quest"
+          "QuestCategory.BR.Weekly.Character.05"
         ]
       }
     ]

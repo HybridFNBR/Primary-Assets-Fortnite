@@ -5,6 +5,10 @@
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S28/T-Soldier-Hero-UnderGroundRebel-Fashion.T-Soldier-Hero-UnderGroundRebel-Fashion",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "bAthenaGrantRarityToken": false,
     "CompletionPathResults": [
@@ -24,13 +28,46 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
+            "IncrementType": "EAcquireIncrementType::Single",
+            "bUseItemCount": false,
+            "ItemAcquired": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Quests.S39.Token.Weekly.Character.05"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Quests.S39.Token.Weekly.Character.05 )"
+              }
             },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AcquireSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
@@ -67,9 +104,9 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "C201F9734BA6CC9A8A01A2886DCF8213",
-          "SourceString": "Do the thing!",
-          "LocalizedString": "Do the thing!"
+          "Key": "910E716E4FC8D5163D141B83B9C33154",
+          "SourceString": "Help Jones by completing his quests",
+          "LocalizedString": "Help Jones by completing his quests"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -79,7 +116,7 @@
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 7,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 25,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -157,20 +194,26 @@
     "ItemName": {
       "Namespace": "",
       "Key": "A90B393C4964DAB8F3E0518C1924359D",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "SourceString": "Help Jones by completing his quests",
+      "LocalizedString": "Help Jones by completing his quests"
     },
     "ItemDescription": {
       "Namespace": "",
       "Key": "910E716E4FC8D5163D141B83B9C33154",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "SourceString": "Help Jones by completing his quests",
+      "LocalizedString": "Help Jones by completing his quests"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "155A74813CEC74EB2FF584913CEC74EB",
+      "SourceString": "A fight's coming. It's time to get ourselves ready.",
+      "LocalizedString": "A fight's coming. It's time to get ourselves ready."
     },
     "DataList": [
       {
         "Tags": [
           "ChallengeCategory.XP",
-          "QuestCategory.BR.Weekly.10.Quest"
+          "QuestCategory.BR.Weekly.Character.05"
         ]
       }
     ]

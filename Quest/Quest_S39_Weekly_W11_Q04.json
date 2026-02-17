@@ -5,6 +5,10 @@
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S28/T-Soldier-Hero-UnderGroundRebel-Fashion.T-Soldier-Hero-UnderGroundRebel-Fashion",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "bAthenaGrantRarityToken": false,
     "CompletionPathResults": [
@@ -24,13 +28,32 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
+            "QuestTags": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Quests.JobBoardBriefing"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Quests.JobBoardBriefing )"
+              }
             },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
+            "QuestType": "EFortQuestType::All",
+            "QuestSubtype": "EFortQuestSubtype::None",
+            "QuestState": "EFortQuestState::Completed",
+            "bUseQuestDefinitionsFilter": false,
+            "QuestDefinitions": {
+              "AdvancedQuestFilters": []
+            },
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
@@ -68,8 +91,8 @@
         "Description": {
           "Namespace": "",
           "Key": "66DC65734424937B57970BBCDA82DB98",
-          "SourceString": "Do the thing!",
-          "LocalizedString": "Do the thing!"
+          "SourceString": "Complete Shadow Briefings",
+          "LocalizedString": "Complete Shadow Briefings"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -79,7 +102,7 @@
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 3,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 25,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -124,23 +147,15 @@
       },
       "RowName": "WeeklyQuests"
     },
-    "SortPriority": 4,
+    "SortPriority": 9,
     "QuestDefinitionComponents": [
       {
         "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S39_Weekly_W11_Q04:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/WeeklyQuests/Week_11/Quest_S39_Weekly_W11_Q04.2"
+        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/WeeklyQuests/Week_11/Quest_S39_Weekly_W11_Q04.1"
       },
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S39_Weekly_W11_Q04:FortQuestDefinitionComponent_DisplaySettings_0'",
         "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/WeeklyQuests/Week_11/Quest_S39_Weekly_W11_Q04.0"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_TrackedData'Quest_S39_Weekly_W11_Q04:FortQuestDefinitionComponent_TrackedData_0'",
-        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/WeeklyQuests/Week_11/Quest_S39_Weekly_W11_Q04.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_S39_Weekly_W11_Q04:FortQuestDefinitionComponent_MapMarkers_0'",
-        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/WeeklyQuests/Week_11/Quest_S39_Weekly_W11_Q04.1"
       }
     ],
     "CompletionPaths": [
@@ -164,21 +179,27 @@
     "Rarity": "EFortRarity::Common",
     "ItemName": {
       "Namespace": "",
-      "Key": "6B1C44DD4D43045C3073C79025B5EAE2",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "Key": "66DC65734424937B57970BBCDA82DB98",
+      "SourceString": "Complete Shadow Briefings",
+      "LocalizedString": "Complete Shadow Briefings"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "86F45E944177374E107BFFBF3C6081A6",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "Key": "66DC65734424937B57970BBCDA82DB98",
+      "SourceString": "Complete Shadow Briefings",
+      "LocalizedString": "Complete Shadow Briefings"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "4A655AA83CEC74EB2FF584913CEC74EB",
+      "SourceString": "Finish what you start.",
+      "LocalizedString": "Finish what you start."
     },
     "DataList": [
       {
         "Tags": [
           "ChallengeCategory.XP",
-          "QuestCategory.BR.Weekly.11.Quest"
+          "QuestCategory.BR.Weekly.Character.05"
         ]
       }
     ]

@@ -24,7 +24,8 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "EliminatedPawn": {
+            "KilledActor": {
+              "bCanGainProgressForThisObjective": false,
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
@@ -47,16 +48,7 @@
                 "AutoDescription": " ANY( Pawn.Athena.NPC.Mang.Boss, AISpawnerData.Type.Boss )"
               }
             },
-            "Killer": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "EliminationSource": {
+            "KillerTags": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [],
@@ -67,31 +59,38 @@
             },
             "AllowedTeamAffiliations": [],
             "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
-            "bIncrementByDistance": false,
-            "bUseKillStreak": false,
-            "Distance": {
+            "FinalBlowGivesCredit": "EFinalBlowAllowance::WhenPassingFilter",
+            "bUseDamageContributed": false,
+            "bUseDamageContributedPercent": false,
+            "bUseDistanceFromEliminatedPawn": false,
+            "DamageContributed": {
               "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": 0
               },
               "UpperBound": {
                 "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
+                "Value": 0
               }
             },
-            "KillStreak": {
+            "PercentageOfDamageContributed": {
               "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
+                "Type": "ERangeBoundTypes::Exclusive",
                 "Value": 0
               },
               "UpperBound": {
                 "Type": "ERangeBoundTypes::Open",
                 "Value": 0
+              }
+            },
+            "DistanceFromEliminatedPawn": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": 5000.0
               }
             },
             "Author": {

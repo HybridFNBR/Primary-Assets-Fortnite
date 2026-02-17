@@ -24,11 +24,44 @@
       "AssetPathName": "/Game/Characters/Player/Female/Medium/Bodies/F_Med_Nautilus/Meshes/F_MED_Nautilus_FaceAcc.F_MED_Nautilus_FaceAcc_helmet_MESH",
       "SubPathString": ""
     },
-    "IdleEffect": {
-      "AssetPathName": "/Game/Characters/Player/Female/Medium/Bodies/F_MED_Nautilus/FX/P_Female_F_Nautilus_Light.P_Female_F_Nautilus_Light",
-      "SubPathString": ""
-    },
     "IdleFXSocketName": "clavicle_l",
-    "bAutoActivate": true
+    "bAutoActivate": true,
+    "CosmeticPartDataList": [
+      {
+        "EffectParameters": [
+          {
+            "Tag": {
+              "TagName": "CosmeticPart.VFX.Idle"
+            },
+            "Effect": {
+              "AssetPathName": "/BRCosmetics/Characters/Player/Female/Medium/Bodies/F_MED_Nautilus/FX/NS_Character_Nautilus_Idle.NS_Character_Nautilus_Idle",
+              "SubPathString": ""
+            },
+            "LocationOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "RotationOffset": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "bIsPersistent": true,
+            "bAutoActivate": true,
+            "AttachmentParams": {
+              "SocketName": "FX_headSocket",
+              "AttachmentTarget": "ECharacterPartAttachmentTargetType::SkeletalMeshForAssociatedPlayerPawnPartType",
+              "AttachmentRules": {
+                "LocationRule": "EAttachmentRule::SnapToTarget",
+                "RotationRule": "EAttachmentRule::SnapToTarget",
+                "ScaleRule": "EAttachmentRule::SnapToTarget",
+                "bWeldSimulatedBodies": false
+              }
+            }
+          }
+        ]
+      }
+    ]
   }
 }

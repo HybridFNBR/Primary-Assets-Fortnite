@@ -1,0 +1,59 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "SmartRifle",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/SmartRifle/UI/DA_AutoAim_ReticleExtension.DA_AutoAim_ReticleExtension",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "CH7S1 Core Weapons",
+        "DisplayName": "Give Lock-On AR",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /SmartRifle/Gameplay/WID_Rifle_AutoAim_R 1 1",
+          "Cheat GiveSpecificItem /SmartRifle/Gameplay/WID_Rifle_AutoAim_SR 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'SmartRifle:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/SmartRifle/SmartRifle.0"
+      },
+      {
+        "ObjectName": "GameFeatureAction_AddComponents'SmartRifle:GameFeatureAction_AddComponents_0'",
+        "ObjectPath": "/SmartRifle/SmartRifle.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

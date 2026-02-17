@@ -5,6 +5,10 @@
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S28/T-Soldier-Hero-UnderGroundRebel-Fashion.T-Soldier-Hero-UnderGroundRebel-Fashion",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "bAthenaGrantRarityToken": false,
     "CompletionPathResults": [
@@ -20,17 +24,91 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
+            "IncrementBy": "EFortShieldGainIncrementType::ShieldGainAmount",
+            "bRequireFullShields": false,
+            "bRequireShieldGainedFromTeammate": false,
+            "bRequireAuthorIsTheShieldGainSource": false,
+            "bUseShieldAmountGained": false,
+            "bUseOverFullShields": false,
+            "bUseShieldGainedPercent": false,
+            "bUseTotalShieldsGained": false,
+            "ShieldGainSource": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Item.Consumable.FizzyCloud"
+                  },
+                  {
+                    "TagName": "Status.LowGravity.FizzyCloud"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  2,
+                  0,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Item.Consumable.FizzyCloud, Status.LowGravity.FizzyCloud )"
+              }
             },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
+            "ShieldGainType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AmountOfShieldsGained": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "ShieldsGainedOverFullAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "ShieldsPercentGained": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "TotalShieldGain": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
@@ -67,9 +145,9 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "C5DFC118492F3941FEBF57B074C301FD",
-          "SourceString": "Do the thing!",
-          "LocalizedString": "Do the thing!"
+          "Key": "64B3CA7FA6541F792FF58491A6541F79",
+          "SourceString": "Gain shields with FlowBerry Mist Grenade",
+          "LocalizedString": "Gain shields with FlowBerry Mist Grenade"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -79,7 +157,7 @@
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 150,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 25,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -164,21 +242,27 @@
     "Rarity": "EFortRarity::Common",
     "ItemName": {
       "Namespace": "",
-      "Key": "CD44848643E4BA3ED2A72096731E547E",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "Key": "64B3CA7FA6541F792FF58491A6541F79",
+      "SourceString": "Gain shields with FlowBerry Mist Grenade",
+      "LocalizedString": "Gain shields with FlowBerry Mist Grenade"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "0E08B2C04AD440BA3FD318A59C05895B",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "Key": "64B3CA7FA6541F792FF58491A6541F79",
+      "SourceString": "Gain shields with FlowBerry Mist Grenade",
+      "LocalizedString": "Gain shields with FlowBerry Mist Grenade"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "64B3CA7F3CEC74EB2FF584913CEC74EB",
+      "SourceString": "Protect your back. And, uh, your front.",
+      "LocalizedString": "Protect your back. And, uh, your front."
     },
     "DataList": [
       {
         "Tags": [
           "ChallengeCategory.XP",
-          "QuestCategory.BR.Weekly.10.Quest"
+          "QuestCategory.BR.Weekly.Character.05"
         ]
       }
     ]

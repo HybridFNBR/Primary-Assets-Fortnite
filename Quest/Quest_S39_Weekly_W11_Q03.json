@@ -5,6 +5,10 @@
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S28/T-Soldier-Hero-UnderGroundRebel-Fashion.T-Soldier-Hero-UnderGroundRebel-Fashion",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "bAthenaGrantRarityToken": false,
     "CompletionPathResults": [
@@ -20,25 +24,167 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "bIncrementByDamageAmount": true,
+            "bUseDamageAmount": false,
+            "bIncrementByUncappedDamage": false,
+            "bUseUncappedDamage": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
             },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
+            "DamageSource": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [],
                 "QueryTokenStream": [],
                 "UserDescription": "",
                 "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Faction.Generic.Hostile"
+                  },
+                  {
+                    "TagName": "Homebase.Class"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Duel.IsBeingChallenged"
+                  },
+                  {
+                    "TagName": "Athena.Gameplay.Status.Converted"
+                  },
+                  {
+                    "TagName": "Quests.Wildlife.IsOpponent"
+                  },
+                  {
+                    "TagName": "Athena.Faction.BuzzCool.Hostile"
+                  },
+                  {
+                    "TagName": "NPC.GoalSelection.BuzzCool.Clone"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Tandem"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Specialist"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Wildlife"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Labrador"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  4,
+                  2,
+                  1,
+                  7,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  5,
+                  2,
+                  1,
+                  1,
+                  7,
+                  3,
+                  3,
+                  8,
+                  9,
+                  10,
+                  3,
+                  1,
+                  11
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ANY(  ANY( Athena.Faction.Generic.Hostile, Homebase.Class, Pawn.Athena.NPC.Duel.IsBeingChallenged, Athena.Gameplay.Status.Converted, Quests.Wildlife.IsOpponent, Athena.Faction.BuzzCool.Hostile, NPC.GoalSelection.BuzzCool.Clone ),  ALL(  ANY( AISpawnerData.Type ),  NONE( AISpawnerData.Type.Tandem, AISpawnerData.Type.Specialist, Pawn.Athena.NPC.Wildlife ) ) ),  NONE( Pawn.Athena.NPC.Labrador ) )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "UncappedDamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Gameplay.Status.ImmuneFallingDamage"
+                  },
+                  {
+                    "TagName": "Status.LowGravity.FizzyCloud"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  2,
+                  0,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Gameplay.Status.ImmuneFallingDamage, Status.LowGravity.FizzyCloud )"
               }
             },
             "Context": {
@@ -68,8 +214,8 @@
         "Description": {
           "Namespace": "",
           "Key": "25D9D9494E85D73FF844ACACC3FF8D00",
-          "SourceString": "Do the thing!",
-          "LocalizedString": "Do the thing!"
+          "SourceString": "Damage opponents while under the effects of low-grav",
+          "LocalizedString": "Damage opponents while under the effects of low-grav"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -79,7 +225,7 @@
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 250,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 25,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -124,7 +270,7 @@
       },
       "RowName": "WeeklyQuests"
     },
-    "SortPriority": 3,
+    "SortPriority": 8,
     "QuestDefinitionComponents": [
       {
         "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S39_Weekly_W11_Q03:FortQuestDefinitionComponent_Rewards_0'",
@@ -157,20 +303,26 @@
     "ItemName": {
       "Namespace": "",
       "Key": "A4A50BE342216F11D22BD5B5A0B3377A",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "SourceString": "Damage opponents while under the effects of low-grav",
+      "LocalizedString": "Damage opponents while under the effects of low-grav"
     },
     "ItemDescription": {
       "Namespace": "",
       "Key": "2DF3943B4B92EE0DAB1266802592F541",
-      "SourceString": "Do the thing!",
-      "LocalizedString": "Do the thing!"
+      "SourceString": "Damage opponents while under the effects of low-grav",
+      "LocalizedString": "Damage opponents while under the effects of low-grav"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "91E3147F3CEC74EB2FF584913CEC74EB",
+      "SourceString": "When the world gets weird, stay combat ready.",
+      "LocalizedString": "When the world gets weird, stay combat ready."
     },
     "DataList": [
       {
         "Tags": [
           "ChallengeCategory.XP",
-          "QuestCategory.BR.Weekly.11.Quest"
+          "QuestCategory.BR.Weekly.Character.05"
         ]
       }
     ]
