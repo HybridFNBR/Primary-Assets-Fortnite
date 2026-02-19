@@ -1,0 +1,329 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "Q_Juno_NXS_Sandbox_Daily_Damage_Any",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "JunoNexusSandboxDaily",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Q_Juno_NXS_Sandbox_Daily_Damage_Any_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "bIncrementByDamageAmount": true,
+            "bUseDamageAmount": false,
+            "bIncrementByUncappedDamage": false,
+            "bUseUncappedDamage": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Minifig.Enemy"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Bear"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Brute"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Crawler"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Dragon"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Golem"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.Wolf"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.Crab"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.Rocky"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.Scorpion"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.ScorpionRed"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.ScorpionSand"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.Spider"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.SpiderRed"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.SpiderSand"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.StormKing"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Juno.Creature.SnowWolf"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  17,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( AISpawnerData.Type.Juno.Minifig.Enemy, AISpawnerData.Type.Juno.Bear, AISpawnerData.Type.Juno.Brute, AISpawnerData.Type.Juno.Crawler, AISpawnerData.Type.Juno.Dragon, AISpawnerData.Type.Juno.Golem, AISpawnerData.Type.Juno.Creature.Wolf, AISpawnerData.Type.Juno.Creature.Crab, AISpawnerData.Type.Juno.Creature.Rocky, AISpawnerData.Type.Juno.Creature.Scorpion, AISpawnerData.Type.Juno.Creature.ScorpionRed, AISpawnerData.Type.Juno.Creature.ScorpionSand, AISpawnerData.Type.Juno.Creature.Spider, AISpawnerData.Type.Juno.Creature.SpiderRed, AISpawnerData.Type.Juno.Creature.SpiderSand, AISpawnerData.Type.Juno.Creature.StormKing, AISpawnerData.Type.Juno.Creature.SnowWolf )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Gameplay.Damage.Physical"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Gameplay.Damage.Physical )"
+              }
+            },
+            "DamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "UncappedDamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Pawn.Athena.Player"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Pawn.Athena.Player )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 5000,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 10,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Juno.GameMode.Sandbox"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ALL( Product.Juno, Juno.GameMode.Sandbox )"
+    },
+    "Category": {
+      "DataTable": {
+        "ObjectName": "DataTable'QuestCategoryTable'",
+        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+      },
+      "RowName": "DailyQuests"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Q_Juno_NXS_Sandbox_Daily_Damage_Any:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SandboxDailies/Basic/Q_Juno_NXS_Sandbox_Daily_Damage_Any.2"
+      },
+      {
+        "ObjectName": "JunoQuestDefinitionComponent_ProductCompatibilityInjector_GameMode'Q_Juno_NXS_Sandbox_Daily_Damage_Any:JunoQuestDefinitionComponent_ProductCompatibilityInjector_GameMode_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SandboxDailies/Basic/Q_Juno_NXS_Sandbox_Daily_Damage_Any.3"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Q_Juno_NXS_Sandbox_Daily_Damage_Any:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SandboxDailies/Basic/Q_Juno_NXS_Sandbox_Daily_Damage_Any.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Q_Juno_NXS_Sandbox_Daily_Damage_Any_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "67BE67894F58721EF40F648B81D57A63",
+      "SourceString": "Deal Damage",
+      "LocalizedString": "Deal Damage"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "0CE090C34A228064E9B31F901591CC0F",
+      "SourceString": "Deal Damage",
+      "LocalizedString": "Deal Damage"
+    },
+    "DataList": [
+      {},
+      {
+        "Tags": [
+          "QuestCategory.Juno.Event.NXS.Sandbox.Daily.Basic",
+          "ChallengeCategory.XP"
+        ]
+      }
+    ]
+  }
+}

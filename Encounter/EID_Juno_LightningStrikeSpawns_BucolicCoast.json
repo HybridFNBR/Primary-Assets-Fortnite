@@ -1,0 +1,101 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_LightningStrikeSpawns_BucolicCoast",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoLightningStrikeSpawns/Levels/Juno_EncounterLevel_LightningStrikeSpawns.Juno_EncounterLevel_LightningStrikeSpawns",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoLightningStrikeSpawns/StateTrees/ST_Juno_LightningStrikeSpawns.ST_Juno_LightningStrikeSpawns",
+      "SubPathString": ""
+    },
+    "bUseOverlapTestForActorCollection": false,
+    "SuccessRewardBehavior": {
+      "RewardOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "RewardDirection": {
+        "X": 20.0,
+        "Y": 20.0,
+        "Z": 50.0
+      },
+      "RewardConeAngle": {
+        "Value": 120.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 800.0
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'JunoActorDensityValueData'",
+          "ObjectPath": "/JunoAI/CurveTables/JunoActorDensityValueData.0"
+        },
+        "RowName": "Juno.ActorDensityValue.Bear"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'Juno_LightningStrikeSpawns_GameData'",
+          "ObjectPath": "/JunoLightningStrikeSpawns/DataTables/Juno_LightningStrikeSpawns_GameData.0"
+        },
+        "RowName": "Juno.Sprinkle.LightningStrikeSpawns.DensityRange"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_LightningStrikeSpawns_AI_SpawnCount'",
+            "ObjectPath": "/JunoLightningStrikeSpawns/DataTables/DT_Juno_LightningStrikeSpawns_AI_SpawnCount.0"
+          },
+          "RowName": "Skirmish.FactionA.SpawnCount.Small"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionA"
+        }
+      }
+    ],
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoTabasco_LivingWorld/DataTables/ActorDescriptions/LS/DT_Juno_Encounters_AD_SelectionsRow_Tabasco_BucolicCoast.DT_Juno_Encounters_AD_SelectionsRow_Tabasco_BucolicCoast",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.EnemyNPC.01"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.LightningStrikeSpawns.Tabasco.BucolicCoast"
+        ]
+      }
+    ]
+  }
+}

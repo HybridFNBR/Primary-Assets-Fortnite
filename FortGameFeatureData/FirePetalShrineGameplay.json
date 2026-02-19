@@ -1,33 +1,97 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "FirePetalShrineGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "FirePetalShrineGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/FirePetalShrineGameplay/Levels/FirePetalShrineGameplay_LevelOverlay.FirePetalShrineGameplay_LevelOverlay",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "33.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "37.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.TeamRumble"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3,
+              3,
+              1,
+              4
+            ],
+            "UserDescription": "Any BR Playlists except team rumble",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Athena.Playlist.Test, Athena.Playlist.ItemsTest, Plugin.Playlist.Arena ),  NONE( Athena.Playlist.TeamRumble ) )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
     },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'FirePetalShrineGameplay:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/FirePetalShrineGameplay/FirePetalShrineGameplay.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'FirePetalShrineGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/FirePetalShrineGameplay/FirePetalShrineGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'FirePetalShrineGameplay:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/FirePetalShrineGameplay/FirePetalShrineGameplay.3"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistry'FirePetalShrineGameplay:GameFeatureAction_DataRegistry_0'",
-        "ObjectPath": "/FirePetalShrineGameplay/FirePetalShrineGameplay.4"
-      }
-    ]
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Athena.Playlist.Test"
+        },
+        {
+          "TagName": "Athena.Playlist.ItemsTest"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        {
+          "TagName": "Athena.Playlist.TeamRumble"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3,
+        3,
+        1,
+        4
+      ],
+      "UserDescription": "Any BR Playlists except team rumble",
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Athena.Playlist.Test, Athena.Playlist.ItemsTest, Plugin.Playlist.Arena ),  NONE( Athena.Playlist.TeamRumble ) )"
+    }
   }
 }

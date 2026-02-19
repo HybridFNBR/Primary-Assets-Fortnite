@@ -1,0 +1,63 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Tabasco_POIScenario_Boss_FTUE",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bUseLevel": false,
+    "ScenarioVolumeClass": {
+      "AssetPathName": "/JunoTabascoPOI_Scenarios/Encounters/EncounterVolumes/BP_Juno_EncounterVolume_Tabasco_FTUE_POI.BP_Juno_EncounterVolume_Tabasco_FTUE_POI_C",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoTabascoPOI_Monastery/DataTables/FTUE/ST_TabascoPOIScenarios_FTUE.ST_TabascoPOIScenarios_FTUE",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Tabasco_POIScenario_Encounter_Density'",
+          "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/CT_Tabasco_POIScenario_Encounter_Density.0"
+        },
+        "RowName": "Tabasco.POIScenario.Encounter.Boss.SMALL.Weight"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Tabasco_POIScenario_Encounter_Density'",
+          "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/CT_Tabasco_POIScenario_Encounter_Density.0"
+        },
+        "RowName": "Tabasco.POIScenario.Encounter.Range"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_TagQuery'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_TagQuery.0"
+          },
+          "RowName": "Reward_General"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.TagQuery"
+        }
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Tabasco.POI.Objective.Type.BossFight"
+        ]
+      }
+    ]
+  }
+}

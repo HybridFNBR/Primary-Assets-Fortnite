@@ -1,65 +1,84 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "PulseLancer",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "PulseLancer",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/PulseLancer/Levels/PulseLancer_LevelOverlay.PulseLancer_LevelOverlay",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.40"
+            },
+            "ExclusiveMax": {
+              "VersionName": "37.50"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.Mash"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Default, Athena.Playlist.Mash )"
+          },
+          "bMigratedFromOldData": false
+        },
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.50"
+            },
+            "ExclusiveMax": {
+              "VersionName": "38.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Mash"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Mash )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
     },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PulseLancer:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/PulseLancer/PulseLancer.0"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AthenaBattleBus",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaBattleBusItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Events"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "EventDescription",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortEventItemDefinitionBase",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Events"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      }
-    ]
+    "PlaylistQuery": {
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL(  ANY( ) )"
+    }
   }
 }

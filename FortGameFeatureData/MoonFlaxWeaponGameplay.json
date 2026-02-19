@@ -1,120 +1,88 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "MoonFlaxWeaponGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "MoonFlaxWeaponGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/MoonFlaxWeaponGameplay/Levels/MoonFlaxWeaponGameplay_LevelOverlay.MoonFlaxWeaponGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues",
-      "Items/Weapons/Crossbow/GameplayCues"
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/MoonFlaxWeaponGameplay/Items/Weapons/Crossbow/Crossbow_MoonFlax_DeathCauseData.Crossbow_MoonFlax_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch5S3",
-        "DisplayName": "Give Proto Crossbow",
-        "ConsoleCommands": [
-          "Cheat giveweapon WID_Crossbow_MoonFlax_Athena_R 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch5S3",
-        "DisplayName": "Give Proto Sniper",
-        "ConsoleCommands": [
-          "Cheat giveweapon WID_Sniper_MoonFlax_Athena_R 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch5S3",
-        "DisplayName": "Give Flintlock Pistol",
-        "ConsoleCommands": [
-          "Cheat GiveWeapon WID_Pistol_Flintlock_Athena_UC 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch5S3 - Unvaults",
-        "DisplayName": "Spawn Pirate Cannon",
-        "ConsoleCommands": [
-          "cheat spawnvehicle cannon 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch5S3",
-        "DisplayName": "Give Minigun",
-        "ConsoleCommands": [
-          "Cheat GiveWeapon WID_Assault_LMG_Athena_R_Ore_T03 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'MoonFlaxWeaponGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/MoonFlaxWeaponGameplay/MoonFlaxWeaponGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'MoonFlaxWeaponGameplay:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/MoonFlaxWeaponGameplay/MoonFlaxWeaponGameplay.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'MoonFlaxWeaponGameplay:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/MoonFlaxWeaponGameplay/MoonFlaxWeaponGameplay.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "30.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Athena.Playground"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Plugin.Playlist.BlastBerry"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              5,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playground, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Plugin.Playlist.BlastBerry ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      },
-      {
-        "PrimaryAssetType": "WeaponMod",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponModItemDefinition",
-          "SubPathString": ""
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Creative"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Playground"
+        },
+        {
+          "TagName": "Playlist.UGC.Core"
+        },
+        {
+          "TagName": "Playlist.Experience.PlayOnly"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playground, Playlist.UGC.Core, Playlist.Experience.PlayOnly ) )"
+    }
   }
 }

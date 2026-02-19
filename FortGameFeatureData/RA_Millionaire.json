@@ -1,58 +1,64 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "RA_Millionaire",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "RA_Millionaire",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/RA_Millionaire/Levels/RA_Millionaire_LevelOverlay.RA_Millionaire_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7 Rift Anomalies",
-        "DisplayName": "All cash rewards are tripled until the next storm phase!",
-        "ConsoleCommands": [
-          "Cheat ke* ForceSpawnRA Millionaire"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'RA_Millionaire:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/RA_Millionaire/RA_Millionaire.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'RA_Millionaire:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/RA_Millionaire/RA_Millionaire.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "None",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/RiftAnomaliesGameplayRuntime.FortRiftAnomaliesData",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "/RA_Millionaire/Gameplay/Data"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.RiftAnomalies.Millionaire"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.RiftAnomalies.All"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              2,
+              0,
+              1,
+              3,
+              3,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.Default ),  NONE( Plugin.Playlist.Exclude.RiftAnomalies.Millionaire, Plugin.Playlist.Exclude.RiftAnomalies.All, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
+      ]
+    },
+    "OptionalAdditionalPluginsToActivate": [
+      "RA_MillionaireUI"
     ]
   }
 }

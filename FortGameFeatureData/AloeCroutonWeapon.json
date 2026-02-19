@@ -1,127 +1,89 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "AloeCroutonWeapon",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "AloeCroutonWeapon",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/AloeCroutonWeapon/AloeCroutonWeapon_LevelOverlay.AloeCroutonWeapon_LevelOverlay",
-      "SubPathString": ""
-    },
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/AloeCroutonWeapon/Items/AloeCrouton/UI/UI_AloeCrouton_Reticle.UI_AloeCrouton_Reticle",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultLootTableData": {
-      "LootTierData": {
-        "AssetPathName": "/AloeCroutonWeapon/DataTables/AloeCroutonLootTierData_Client.AloeCroutonLootTierData_Client",
-        "SubPathString": ""
-      },
-      "LootPackageData": {
-        "AssetPathName": "/AloeCroutonWeapon/DataTables/AloeCroutonLootPackages_Client.AloeCroutonLootPackages_Client",
-        "SubPathString": ""
-      }
-    },
-    "PlaylistOverrideLootTableData": [
-      {
-        "Key": {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/AloeCroutonWeapon/DataTables/Comp/AloeCroutonLootTierData_Client_Comp.AloeCroutonLootTierData_Client_Comp",
-            "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "25.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
           },
-          "LootPackageData": {
-            "AssetPathName": "/AloeCroutonWeapon/DataTables/Comp/Composite_AloeCrouton_LP_Comp.Composite_AloeCrouton_LP_Comp",
-            "SubPathString": ""
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Athena.Playground"
+              },
+              {
+                "TagName": "Athena.Playlist.Event"
+              },
+              {
+                "TagName": "Athena.Playlist.Mash"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              2,
+              0,
+              1,
+              3,
+              2,
+              2,
+              3
+            ],
+            "UserDescription": "Playlists",
+            "AutoDescription": " ALL(  ANY( Athena.Creative, Athena.Playground ),  NONE( Athena.Playlist.Event, Athena.Playlist.Mash ) )"
           },
-          "LootGroupData": []
+          "bMigratedFromOldData": true
         }
-      }
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/AloeCroutonWeapon/DataTables/AloeCroutonWeaponGameData.AloeCroutonWeaponGameData",
-      "SubPathString": ""
+      ]
     },
-    "FortDeathCauseData": {
-      "AssetPathName": "/AloeCroutonWeapon/DeathCauseData_AloeCrouton.DeathCauseData_AloeCrouton",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch4s3",
-        "DisplayName": "Transformers Blaster WID",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /AloeCroutonWeapon/Items/AloeCrouton/AGID_AloeCrouton_Launcher_Athena 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'AloeCroutonWeapon:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/AloeCroutonWeapon/AloeCroutonWeapon.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddAttributeDefaults'AloeCroutonWeapon:GameFeatureAction_AddAttributeDefaults_0'",
-        "ObjectPath": "/AloeCroutonWeapon/AloeCroutonWeapon.4"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_RegisterCosmeticStat'AloeCroutonWeapon:FortGameFeatureAction_RegisterCosmeticStat_0'",
-        "ObjectPath": "/AloeCroutonWeapon/AloeCroutonWeapon.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'AloeCroutonWeapon:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/AloeCroutonWeapon/AloeCroutonWeapon.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Creative"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items/AloeCrouton"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "AthenaGadget",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
-          "SubPathString": ""
+        {
+          "TagName": "Athena.Playground"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items/AloeCrouton"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Playlist.Event"
+        },
+        {
+          "TagName": "Athena.Playlist.Mash"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        1,
+        2,
+        0,
+        1,
+        3,
+        2,
+        2,
+        3
+      ],
+      "UserDescription": "Playlists",
+      "AutoDescription": " ALL(  ANY( Athena.Creative, Athena.Playground ),  NONE( Athena.Playlist.Event, Athena.Playlist.Mash ) )"
+    }
   }
 }

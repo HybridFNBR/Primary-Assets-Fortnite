@@ -1,25 +1,124 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "AITokenProvider",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "AITokenProvider",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'AITokenProvider:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/AITokenProvider/AITokenProvider.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'AITokenProvider:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/AITokenProvider/AITokenProvider.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'AITokenProvider:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/AITokenProvider/AITokenProvider.3"
-      }
-    ]
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "17.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Plugin.Playlist.BattleLab"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.SpecialEvent"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              5,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Plugin.Playlist.Arena, Plugin.Playlist.BattleLab, Athena.Playlist.CreativeRoyale, Athena.Playlist.Default, Athena.Playlist.SpecialEvent ) )"
+          },
+          "bMigratedFromOldData": true
+        },
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.20"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        {
+          "TagName": "Plugin.Playlist.BattleLab"
+        },
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale"
+        },
+        {
+          "TagName": "Athena.Playlist.Default"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ANY(  ANY( Plugin.Playlist.Arena, Plugin.Playlist.BattleLab, Athena.Playlist.CreativeRoyale, Athena.Playlist.Default ) )"
+    }
   }
 }

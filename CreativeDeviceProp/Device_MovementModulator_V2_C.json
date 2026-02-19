@@ -1,0 +1,53 @@
+{
+  "Type": "BaseBuildingStaticMeshComponent",
+  "Name": "StaticMeshComponent0",
+  "Outer": "Default__Device_MovementModulator_V2_C",
+  "Class": "UScriptClass'BaseBuildingStaticMeshComponent'",
+  "Template": {
+    "ObjectName": "BaseBuildingStaticMeshComponent'Default__Creative_Device_Prop_Parent_C:StaticMeshComponent0'",
+    "ObjectPath": "/Game/Creative/Devices/Common/Creative_Device_Prop_Parent.0"
+  },
+  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bEvaluateWorldPositionOffsetInRayTracing": true,
+    "BodyInstance": {
+      "CollisionProfileName": "Custom",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "FCC_Trace_Interaction",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeakSpot",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "FCC_Object_PawnAI",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_World",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          }
+        ]
+      },
+      "bAutoWeld": false
+    },
+    "OnComponentPhysicsStateChanged": {
+      "InvocationList": [
+        {
+          "Object": {
+            "ObjectName": "Device_MovementModulator_V2_C'Default__Device_MovementModulator_V2_C'",
+            "ObjectPath": "/CreativeCoreDevices/Device_MovementModulator_V2.7"
+          },
+          "FunctionName": "OnPhysicsStateChanged"
+        }
+      ]
+    }
+  }
+}

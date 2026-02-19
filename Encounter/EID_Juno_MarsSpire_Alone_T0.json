@@ -1,0 +1,125 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_MarsSpire_Alone_T0",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoPOI_MarsSpire/Levels/JunoGameplayPlugin_OverlayLevel.JunoGameplayPlugin_OverlayLevel",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoPOI_MarsSpire/Assets/STs/ST_Juno_MarsSpire_T4.ST_Juno_MarsSpire_T4",
+      "SubPathString": ""
+    },
+    "SuccessRewardBehavior": {
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 20.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 1000.0
+      }
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "RowName": "CAMP.LivingWorldManager.Weight"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 7500.0,
+      "Curve": {
+        "RowName": "CAMP.LivingWorldManager.Range"
+      }
+    },
+    "bUseGlobalLWMBudget": true,
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Bool'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_Bool.0"
+          },
+          "RowName": "IsActivated"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.IsSpireActive"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Bool'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_Bool.0"
+          },
+          "RowName": "IsKillSwitchActive"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.IsKillSwitchActive"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_ActorClass'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_ActorClass.0"
+          },
+          "RowName": "SpireActor_T1"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.SpireActorClass"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_ActorClass'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_ActorClass.0"
+          },
+          "RowName": "RewardChestActor_T0"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.RewardChestClass"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    }
+  }
+}

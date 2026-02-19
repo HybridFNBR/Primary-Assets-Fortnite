@@ -1,86 +1,98 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "VividRazorMedallionsGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "VividRazorMedallionsGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/VividRazorMedallionsGameplay/Levels/VividRazorMedallionsGameplay_LevelOverlay.VividRazorMedallionsGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S2 - Medallions",
-        "DisplayName": "Super Shield",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /Script/FortniteGame.FortPlayerAugmentItemDefinition'/VividRazorMedallionsGameplay/Gameplay/SuperShield/PAID_VividRazor_SuperShield.PAID_VividRazor_SuperShield' 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S2 - Medallions",
-        "DisplayName": "Lucky",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /Script/FortniteGame.FortPlayerAugmentItemDefinition'/VividRazorMedallionsGameplay/Gameplay/Lucky/PAID_VividRazor_Lucky.PAID_VividRazor_Lucky' 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S2 - Medallions",
-        "DisplayName": "Power Diversion",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /Script/FortniteGame.FortPlayerAugmentItemDefinition'/VividRazorMedallionsGameplay/Gameplay/PowerDiversion/PAID_VividRazor_PowerDiversion.PAID_VividRazor_PowerDiversion' 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S2 - Medallions",
-        "DisplayName": "Unstoppable",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /Script/FortniteGame.FortPlayerAugmentItemDefinition'/VividRazorMedallionsGameplay/Gameplay/Unstoppable/PAID_VividRazor_Unstoppable.PAID_VividRazor_Unstoppable' 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S2 - Medallions",
-        "DisplayName": "Explosive",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /Script/FortniteGame.FortPlayerAugmentItemDefinition'/VividRazorMedallionsGameplay/Gameplay/Explosive/PAID_VividRazor_Explosive.PAID_VividRazor_Explosive' 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'VividRazorMedallionsGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/VividRazorMedallionsGameplay/VividRazorMedallionsGameplay.0"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "PlayerAugment",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentItemDefinition",
-          "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "34.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Plugin.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Plugin.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": true
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "34.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "38.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+    }
   }
 }

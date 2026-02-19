@@ -1,0 +1,82 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "Juno_Encounter_GhostChest_Scared",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoEncountersGhostChest/Juno_EncounterLevel_GhostChest.Juno_EncounterLevel_GhostChest",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersGhostChest/ST_Juno_GhostChest.ST_Juno_GhostChest",
+      "SubPathString": ""
+    },
+    "SuccessRewards": [
+      {
+        "bUseLootSelectionTable": false,
+        "LootTierName": "Loot_JunoSupplyDrop",
+        "LootTierSelection": {
+          "ValueChoiceTable": {
+            "bUseDataRegistry": false,
+            "Table": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "VarName": {
+            "TagName": "None"
+          },
+          "SelectionQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "bShowVariableName": false
+        }
+      }
+    ],
+    "SuccessRewardBehavior": {
+      "RewardOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 150.0
+      },
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 45.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 600.0
+      }
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_Encounter_GhostChest_GameplayTag'",
+            "ObjectPath": "/JunoEncountersGhostChest/DataTables/DT_Juno_Encounter_GhostChest_GameplayTag.0"
+          },
+          "RowName": "Encounter_Scared"
+        },
+        "VarName": {
+          "TagName": "Encounter.Variable.Juno.GhostChest.EncounterName"
+        }
+      }
+    ]
+  }
+}

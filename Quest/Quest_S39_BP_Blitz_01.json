@@ -1,190 +1,30 @@
 {
-  "Type": "FortQuestItemDefinition_Athena",
-  "Name": "Quest_S39_BP_Blitz_01",
-  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortQuestDefinitionComponent_DisplaySettings",
+  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
+  "Outer": "Quest_S39_BP_Blitz_01",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "NotificationIconOverride": {
-      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Weapons/Items/S39/T_UI_QuestGiver_Blitz_RowLiaison_Cast.T_UI_QuestGiver_Blitz_RowLiaison_Cast",
-      "SubPathString": ""
-    },
-    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
-    "bAthenaUpdateObjectiveOncePerMatch": true,
-    "CompletionPathResults": [
-      {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_S39_BP_Blitz_01_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
-          {
-            "Emote": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Target": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Location.POI"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Athena.Location.POI )"
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
-          }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "67D00EDA4D0D89ED6735BD8AB3B9DADF",
-          "SourceString": "<Bold>Socialite</>: Emote at Named Locations in different matches",
-          "LocalizedString": "<Bold>Socialite</>: Emote at Named Locations in different matches"
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 3,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.ForbiddenFruit"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL( Product.ForbiddenFruit )"
-    },
-    "SortPriority": 1,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S39_BP_Blitz_01:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/ForbiddenFruit_BPQuests/Items/QuestItems/BattlepassQuests/Blitz/Quest_S39_BP_Blitz_01.0"
+    "VisibilitySettings": {
+      "bOverrideBundleVisibilityData": true,
+      "QuestVisiblityData": {
+        "bIsVisibleWhenCompleted": true
       },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S39_BP_Blitz_01:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/ForbiddenFruit_BPQuests/Items/QuestItems/BattlepassQuests/Blitz/Quest_S39_BP_Blitz_01.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_S39_BP_Blitz_01_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "GrantToProfileType": "athena",
-    "ItemName": {
-      "Namespace": "",
-      "Key": "67D00EDA4D0D89ED6735BD8AB3B9DADF",
-      "SourceString": "<Bold>Socialite</>: Emote at Named Locations in different matches",
-      "LocalizedString": "<Bold>Socialite</>: Emote at Named Locations in different matches"
+      "bCanShowTimer": false
     },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "67D00EDA4D0D89ED6735BD8AB3B9DADF",
-      "SourceString": "<Bold>Socialite</>: Emote at Named Locations in different matches",
-      "LocalizedString": "<Bold>Socialite</>: Emote at Named Locations in different matches"
+    "ToastSettings": {
+      "bShouldDisplayStartingToast": false
     },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "9D288A4847F16F749C73C5B5F5902079",
-      "SourceString": "It's important to put in an appearance where it counts.",
-      "LocalizedString": "It's important to put in an appearance where it counts."
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.ForbiddenFruit.S39.BPQuests.Quests.Icons"
-        ]
+    "LockedQuestSettings": {
+      "DisplayQuantity": "ELockedWidgetDisplayQuantity::ShowNextOnly",
+      "OverrideData": {
+        "DisplayText": {
+          "Namespace": "",
+          "Key": "D72950484DB341AB80E4EA803B6B6575",
+          "SourceString": "Claim all Cat Holloway outfits in Battle Pass to unlock the Quests",
+          "LocalizedString": "Claim all Cat Holloway outfits in Battle Pass to unlock the Quests"
+        }
       }
-    ]
+    }
   }
 }

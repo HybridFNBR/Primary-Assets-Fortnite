@@ -1,0 +1,50 @@
+{
+  "Type": "AudioComponent",
+  "Name": "AudioComponent_GEN_VARIABLE",
+  "Outer": "Device_CRD_AudioPlayer_C",
+  "Class": "UScriptClass'AudioComponent'",
+  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bOverrideAttenuation": true,
+    "AttenuationOverrides": {
+      "bAttenuate": false,
+      "bSpatialize": false,
+      "bEnableReverbSend": false,
+      "bEnableSubmixSends": true,
+      "bEnableSendToAudioLink": false,
+      "SubmixSendSettings": [
+        {
+          "SendLevelControlMethod": "ESendLevelControlMethod::Linear",
+          "SoundSubmix": {
+            "ObjectName": "SoundSubmix'Fortnite_Reverb_Distant'",
+            "ObjectPath": "/Game/Sounds/SubMixes/Fortnite_Reverb_Distant.0"
+          },
+          "SendLevel": 0.2,
+          "DisableManualSendClamp": false,
+          "MinSendLevel": 0.0,
+          "MaxSendLevel": 0.25,
+          "MinSendDistance": 0.0,
+          "MaxSendDistance": 7500.0,
+          "CustomSendLevelCurve": {
+            "EditorCurveData": {
+              "Keys": [],
+              "DefaultValue": 3.4028235E+38,
+              "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+              "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+            },
+            "ExternalCurve": {
+              "ObjectName": "CurveFloat'Fortnite_Reverb_Distant_Send'",
+              "ObjectPath": "/Game/Sounds/SubMixes/Reverb/Fortnite_Reverb_Distant_Send.0"
+            }
+          }
+        }
+      ],
+      "PluginSettings": {
+        "ReverbPluginSettingsArray": [
+          null
+        ]
+      }
+    },
+    "bAutoActivate": false
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_LootLlama_Osiris_T4",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoEncountersLootLlama/PrefabMap_Juno_LootLlama.PrefabMap_Juno_LootLlama",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersLootLlama/ST_Juno_LootLlama.ST_Juno_LootLlama",
+      "SubPathString": ""
+    },
+    "SuccessRewards": [
+      {
+        "bUseLootSelectionTable": false,
+        "LootTierName": "Loot_GoldLootChest_Osiris_Frostlands_Surface_Jackpot",
+        "LootTierSelection": {
+          "ValueChoiceTable": {
+            "bUseDataRegistry": false,
+            "Table": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "VarName": {
+            "TagName": "None"
+          },
+          "SelectionQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "bShowVariableName": false
+        }
+      }
+    ],
+    "SuccessRewardBehavior": {
+      "RewardOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.Llama.ConeAngle"
+        }
+      },
+      "RewardFlingMagnitude": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.Llama.FlingMagnitude"
+        }
+      }
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_Encounter_LootLlama_Osiris_ActorDescription'",
+            "ObjectPath": "/JunoEncountersLootLlama_Osiris/DataTables/DT_Juno_Encounter_LootLlama_Osiris_ActorDescription.0"
+          },
+          "RowName": "Tauntaun"
+        },
+        "VarName": {
+          "TagName": "Encounter.Variable.Juno.LootLlama.EncounterName"
+        }
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.Osiris.LootLlama",
+          "Juno.Adventures.Encounters.LootLlama.Identifier"
+        ]
+      }
+    ]
+  }
+}

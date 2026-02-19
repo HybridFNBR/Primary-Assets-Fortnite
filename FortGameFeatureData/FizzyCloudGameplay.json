@@ -1,66 +1,120 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "FizzyCloudGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "FizzyCloudGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/FizzyCloudGameplay/Levels/FizzyCloudGameplay_LevelOverlay.FizzyCloudGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/FizzyCloudGameplay/HUD/HUDWidgetRegistry_FizzyCloud.HUDWidgetRegistry_FizzyCloud",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1",
-        "DisplayName": "FlowBerry Mist Consumable",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /FizzyCloudGameplay/Gameplay/WID_FizzyCloud 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'FizzyCloudGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/FizzyCloudGameplay/FizzyCloudGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'FizzyCloudGameplay:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/FizzyCloudGameplay/FizzyCloudGameplay.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'FizzyCloudGameplay:GameFeatureAction_DataRegistrySource_1'",
-        "ObjectPath": "/FizzyCloudGameplay/FizzyCloudGameplay.3"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Consumable",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.40"
+            },
+            "ExclusiveMax": {
+              "VersionName": "40.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Default, Plugin.Playlist.Arena )"
+          },
+          "bMigratedFromOldData": false
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.40"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Athena.Playlist.ItemsTest"
+        },
+        {
+          "TagName": "Athena.Creative"
+        },
+        {
+          "TagName": "Playlist.UGC.Core"
+        },
+        {
+          "TagName": "Playlist.Experience.PlayOnly"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        {
+          "TagName": "Plugin.Playlist.ForbiddenFruit"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        7,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "AutoDescription": " ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Plugin.Playlist.Arena, Plugin.Playlist.ForbiddenFruit )"
+    }
   }
 }

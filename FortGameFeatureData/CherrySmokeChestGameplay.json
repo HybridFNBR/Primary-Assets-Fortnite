@@ -1,62 +1,76 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "CherrySmokeChestGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "CherrySmokeChestGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/CherrySmokeChestGameplay/Levels/CherrySmokeChestGameplay_LevelOverlay.CherrySmokeChestGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH6S3",
-        "DisplayName": "Give Seasonal Chest Spawn Grenade",
-        "ConsoleCommands": [
-          "cheat givespecificitem /CherrySmokeChestGameplay/Gameplay/CheatSpawner/WID_CherrySmoke_Chest_Spawner 3 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CherrySmokeChestGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/CherrySmokeChestGameplay/CherrySmokeChestGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'CherrySmokeChestGameplay:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/CherrySmokeChestGameplay/CherrySmokeChestGameplay.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'CherrySmokeChestGameplay:GameFeatureAction_AddWorldPartitionContent_1'",
-        "ObjectPath": "/CherrySmokeChestGameplay/CherrySmokeChestGameplay.3"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "36.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "37.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Mash"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              0,
+              3,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( ),  NONE( Athena.Playlist.Mash ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Test"
+        },
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Athena.Playlist.ItemsTest"
+        },
+        {
+          "TagName": "Athena.Playlist.Mash"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        1,
+        3,
+        0,
+        1,
+        2,
+        3,
+        1,
+        3
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.Default, Athena.Playlist.ItemsTest ),  NONE( Athena.Playlist.Mash ) )"
+    }
   }
 }

@@ -1,178 +1,18 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "YokeHopKeeper",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddMovementModeExtension",
+  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Outer": "YokeHopKeeper",
+  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/YokeHopKeeper/Levels/YokeHopKeeper_LevelOverlay.YokeHopKeeper_LevelOverlay",
-      "SubPathString": ""
-    },
-    "DynamicUIDirectorClass": {
-      "AssetPathName": "/YokeHopKeeper/BP_YokeHopKeeper_DynamicUIDirector.BP_YokeHopKeeper_DynamicUIDirector_C",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/YokeHopKeeper/HUD/YokeHopKeeper_HUDWidgetRegistry.YokeHopKeeper_HUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PlaylistBaseCurveTableOverrides": [
+    "MovementModeRuntimeRefList": [
       {
-        "BaseTable": {
-          "AssetPathName": "/YokeHopKeeper/DataTables/YokeHopKeeper_MovementData.YokeHopKeeper_MovementData",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": [
-          {
-            "Key": {
-              "TagName": "Athena.Playlist.PiperBoot"
-            },
-            "Value": {
-              "AssetPathName": "/YokeHopKeeper/DataTables/PlaylistOverrides/PiperBoot/YokeHopKeeperMovementData_Composite_PiperBoot.YokeHopKeeperMovementData_Composite_PiperBoot",
-              "SubPathString": ""
-            }
-          }
-        ]
+        "AssetPathName": "/YokeHopKeeper/Movement/MME_Logic_YokeHopKeeper_Native.MME_Logic_YokeHopKeeper_Native_C",
+        "SubPathString": ""
       },
       {
-        "BaseTable": {
-          "AssetPathName": "/YokeHopUnkind/DataTables/YokeHopUnkind_StormOverrides_Hera.YokeHopUnkind_StormOverrides_Hera",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": [
-          {
-            "Key": {
-              "TagName": "Athena.Playlist.PiperBoot"
-            },
-            "Value": {
-              "AssetPathName": "/YokeHopUnkind/DataTables/PlaylistOverrides/PiperBoot/YokeHopUnkind_StormOverrides_PiperBoot.YokeHopUnkind_StormOverrides_PiperBoot",
-              "SubPathString": ""
-            }
-          }
-        ]
-      },
-      {
-        "BaseTable": {
-          "AssetPathName": "/YokeHopUnkind/DataTables/YokeHopUnkind_StormOverrides.YokeHopUnkind_StormOverrides",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": [
-          {
-            "Key": {
-              "TagName": "Athena.Playlist.PiperBoot"
-            },
-            "Value": {
-              "AssetPathName": "/YokeHopUnkind/DataTables/PlaylistOverrides/PiperBoot/YokeHopUnkind_StormOverrides_PiperBoot.YokeHopUnkind_StormOverrides_PiperBoot",
-              "SubPathString": ""
-            }
-          }
-        ]
-      }
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/YokeHopKeeper/DataTables/YokeHopKeeperGameData.YokeHopKeeperGameData",
-      "SubPathString": ""
-    },
-    "PlaylistOverrideGameDataMappings": [
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Athena.Playlist.PiperBoot"
-            }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            5,
-            1,
-            1,
-            1,
-            0
-          ],
-          "UserDescription": "",
-          "AutoDescription": " ALL(  ANY( Athena.Playlist.PiperBoot ) )"
-        },
-        "OverrideGameData": {
-          "AssetPathName": "/YokeHopKeeper/DataTables/PlaylistOverrides/PiperBoot/YokeHopKeeperGD_Composite_PiperBoot.YokeHopKeeperGD_Composite_PiperBoot",
-          "SubPathString": ""
-        }
-      },
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Athena.Playlist.ForbiddenFruit.CalmSambucus"
-            }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            1,
-            1,
-            0
-          ],
-          "UserDescription": "",
-          "AutoDescription": " ANY( Athena.Playlist.ForbiddenFruit.CalmSambucus )"
-        },
-        "OverrideGameData": {
-          "AssetPathName": "/YokeHopKeeper/DataTables/PlaylistOverrides/CalmSambucus/YokeHopKeeperGD_Composite_CalmSambucus.YokeHopKeeperGD_Composite_CalmSambucus",
-          "SubPathString": ""
-        }
-      },
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Plugin.Playlist.Arena"
-            }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            1,
-            1,
-            0
-          ],
-          "UserDescription": "",
-          "AutoDescription": " ANY( Plugin.Playlist.Arena )"
-        },
-        "OverrideGameData": {
-          "AssetPathName": "/YokeHopKeeper/DataTables/PlaylistOverrides/Comp/YokeHopKeeperGameData_Comp.YokeHopKeeperGameData_Comp",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'YokeHopKeeper:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/YokeHopKeeper/YokeHopKeeper.6"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'YokeHopKeeper:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/YokeHopKeeper/YokeHopKeeper.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'YokeHopKeeper:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/YokeHopKeeper/YokeHopKeeper.4"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddMovementModeExtension'YokeHopKeeper:FortGameFeatureAction_AddMovementModeExtension_0'",
-        "ObjectPath": "/YokeHopKeeper/YokeHopKeeper.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddMutators'YokeHopKeeper:FortGameFeatureAction_AddMutators_0'",
-        "ObjectPath": "/YokeHopKeeper/YokeHopKeeper.1"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'YokeHopKeeper:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/YokeHopKeeper/YokeHopKeeper.5"
+        "AssetPathName": "/YokeHopKeeper/Movement/MME_Logic_YokeHopKeeperLaunch.MME_Logic_YokeHopKeeperLaunch_C",
+        "SubPathString": ""
       }
     ]
   }

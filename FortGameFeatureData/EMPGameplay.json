@@ -1,64 +1,108 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "EMPGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "EMPGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/EMPGameplay/HUD/EMPGrenadeHudWidgetRegistry.EMPGrenadeHudWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "ContextualTutorials": [
-      {
-        "AssetPathName": "/EMPGameplay/Tutorial/ContextualTutorial_EMPPickup.ContextualTutorial_EMPPickup",
-        "SubPathString": ""
-      }
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch4S4",
-        "DisplayName": "Give EMP Grenades",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /EMPGameplay/Items/EMPGrenade/WID_Athena_Grenade_EMP 6 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'EMPGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/EMPGameplay/EMPGameplay.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'EMPGameplay:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/EMPGameplay/EMPGameplay.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "26.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Plugin.Playlist.BattleLab"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Plugin"
+              },
+              {
+                "TagName": "Plugin.Playlist.BlastBerry"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              7,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playlist.ItemsTest, Plugin.Playlist.BattleLab, Athena.Creative, Playlist.UGC.Core, Athena.Playlist.Default, Athena.Plugin, Plugin.Playlist.BlastBerry ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.ItemsTest"
+        },
+        {
+          "TagName": "Plugin.Playlist.BattleLab"
+        },
+        {
+          "TagName": "Athena.Creative"
+        },
+        {
+          "TagName": "Playlist.UGC.Core"
+        },
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Athena.Plugin"
+        },
+        {
+          "TagName": "Plugin.Playlist.BlastBerry"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        7,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Playlist.ItemsTest, Plugin.Playlist.BattleLab, Athena.Creative, Playlist.UGC.Core, Athena.Playlist.Default, Athena.Plugin, Plugin.Playlist.BlastBerry ) )"
+    }
   }
 }

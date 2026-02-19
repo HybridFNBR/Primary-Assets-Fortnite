@@ -1,91 +1,88 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "PlayAsVillainBosses",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_1",
+  "Outer": "PlayAsVillainBosses",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/PlayAsVillainBosses/HUD/HUDWidgetRegistry_PlayAsVillainBosses.HUDWidgetRegistry_PlayAsVillainBosses",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Play"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.PlayAsVillainBosses"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3,
+              3,
+              1,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play ),  NONE( Plugin.Playlist.Exclude.PlayAsVillainBosses ) )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
     },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1 - Play As Boss",
-        "DisplayName": "Spawn Henchmen Var 1",
-        "ConsoleCommands": [
-          "Cheat LWMS Player_HenchFans_Var1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1 - Play As Boss",
-        "DisplayName": "Spawn Henchmen Var 2",
-        "ConsoleCommands": [
-          "Cheat LWMS Player_HenchFans_Var2"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PlayAsVillainBosses:FortGameFeatureAction_AddToPlaylists_1'",
-        "ObjectPath": "/PlayAsVillainBosses/PlayAsVillainBosses.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'PlayAsVillainBosses:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/PlayAsVillainBosses/PlayAsVillainBosses.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'PlayAsVillainBosses:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/PlayAsVillainBosses/PlayAsVillainBosses.3"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AISpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
-          "SubPathString": ""
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
         },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "SpawnerDatas"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "ActorSpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortAthenaActorSpawnerData",
-          "SubPathString": ""
+        {
+          "TagName": "Plugin.Playlist.Arena"
         },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "LWPrefabs"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+        },
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Play"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play )"
+    }
   }
 }

@@ -1,24 +1,40 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "EmoteWheel",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddConditionalComponents",
+  "Name": "FortGameFeatureAction_AddConditionalComponents_0",
+  "Outer": "EmoteWheel",
+  "Class": "UScriptClass'FortGameFeatureAction_AddConditionalComponents'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/EmoteWheel/Assets/EmoteWheelWidgetRegistry.EmoteWheelWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
+    "ComponentList": [
       {
-        "ObjectName": "FortGameFeatureAction_RegisterSingleAsset'EmoteWheel:FortGameFeatureAction_RegisterSingleAsset_0'",
-        "ObjectPath": "/EmoteWheel/EmoteWheel.1"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddConditionalComponents'EmoteWheel:FortGameFeatureAction_AddConditionalComponents_0'",
-        "ObjectPath": "/EmoteWheel/EmoteWheel.0"
+        "PlaylistQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Plugin.Playlist.EmoteWheel.DoNotAddInputComponent"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            3,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " NONE( Plugin.Playlist.EmoteWheel.DoNotAddInputComponent )"
+        },
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerController",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/EmoteWheel/Input/BP_FortControllerComponent_EmoteWheelEnhancedInput.BP_FortControllerComponent_EmoteWheelEnhancedInput_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 1
       }
     ]
   }

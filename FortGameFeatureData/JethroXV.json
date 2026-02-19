@@ -1,111 +1,41 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "JethroXV",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddCategoryTableToConfig",
+  "Name": "FortGameFeatureAction_AddCategoryTableToConfig_0",
+  "Outer": "JethroXV",
+  "Class": "UScriptClass'FortGameFeatureAction_AddCategoryTableToConfig'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/JethroXV/Levels/JethroXV_LevelOverlay.JethroXV_LevelOverlay",
-      "SubPathString": ""
-    },
-    "DynamicUIDirectorClass": {
-      "AssetPathName": "/JethroXV/UI/Director/BP_JethroXV_DynamicUIDirector.BP_JethroXV_DynamicUIDirector_C",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/JethroXV/JethroXV_DeathCauseData.JethroXV_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
+    "ConfigToCategoryTableDatas": [
       {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH6MS1 Vehicles",
-        "DisplayName": "X-Wing",
-        "ConsoleCommands": [
-          "cheat spawnvehicle x_wing_fighter 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'JethroXV:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/JethroXV/JethroXV.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddCategoryTableToConfig'JethroXV:FortGameFeatureAction_AddCategoryTableToConfig_0'",
-        "ObjectPath": "/JethroXV/JethroXV.0"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Vehicle",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortVehicleItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "/"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "VehicleSpawner",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortAthenaVehicleSpawner",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Spawners"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay/Fighter/Weapon_Plasma"
-          },
-          {
-            "Path": "Gameplay/LockOn"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        "Key": "/Lager/Lager/Config/LagerConfigData_Jethro.LagerConfigData_Jethro",
+        "Value": {
+          "CategoryTableDatas": [
+            {
+              "Name": "JethroXV",
+              "CategoryTable": {
+                "AssetPathName": "/JethroXV/LWSpawner/LagerDataTables/Lager_CategoryTable_JethroXV.Lager_CategoryTable_JethroXV",
+                "SubPathString": ""
+              },
+              "IsEnabled": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": {
+                    "ObjectName": "CurveTable'JethroXVGameData'",
+                    "ObjectPath": "/JethroXV/DataTables/JethroXVGameData.0"
+                  },
+                  "RowName": "Default.Lager.Vehicle.JethroXV.Enabled"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              }
+            }
+          ]
         }
       }
-    ]
+    ],
+    "StartVersion": {
+      "VersionName": "35.00"
+    }
   }
 }

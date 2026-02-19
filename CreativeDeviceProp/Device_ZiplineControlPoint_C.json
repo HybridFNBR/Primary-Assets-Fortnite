@@ -1,0 +1,65 @@
+{
+  "Type": "BaseBuildingStaticMeshComponent",
+  "Name": "StaticMeshComponent0",
+  "Outer": "Default__Device_ZiplineControlPoint_C",
+  "Class": "UScriptClass'BaseBuildingStaticMeshComponent'",
+  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "BodyInstance": {
+      "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+      "CollisionProfileName": "Custom",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "FCC_Trace_Interaction",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeakSpot",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "FCC_Object_PawnAI",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "Pawn",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Vehicle",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "PhysicsBody",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "WorldStatic",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "WorldDynamic",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          }
+        ]
+      }
+    },
+    "OnComponentPhysicsStateChanged": {
+      "InvocationList": [
+        {
+          "Object": {
+            "ObjectName": "Device_ZiplineControlPoint_C'Default__Device_ZiplineControlPoint_C'",
+            "ObjectPath": "/CRD_Zipline/Device_ZiplineControlPoint.8"
+          },
+          "FunctionName": "OnPhysicsStateChanged"
+        }
+      ]
+    },
+    "Mobility": "EComponentMobility::Movable"
+  }
+}

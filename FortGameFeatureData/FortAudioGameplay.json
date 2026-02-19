@@ -1,29 +1,26 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "FortAudioGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "AudioMutator",
+  "Name": "AudioMutator_0",
+  "Outer": "GameFeatureAction_AddAudioMutators_0",
+  "Class": "UScriptClass'AudioMutator'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
+    "Selectors": [
+      {
+        "SoundClass": {
+          "ObjectName": "SoundClass'Fort_Creatures_Pets'",
+          "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Fort_Creatures_Pets.0"
+        },
+        "bExactClass": false
+      }
+    ],
     "Actions": [
       {
-        "ObjectName": "GameFeatureAction_AddComponents'FortAudioGameplay:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/FortAudioGameplay/FortAudioGameplay.3"
-      },
-      {
-        "ObjectName": "GameFeatureAction_SetPerPlatformCVar'FortAudioGameplay:GameFeatureAction_SetPerPlatformCVar_0'",
-        "ObjectPath": "/FortAudioGameplay/FortAudioGameplay.6"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddParameterInterfaceDefinitions'FortAudioGameplay:GameFeatureAction_AddParameterInterfaceDefinitions_0'",
-        "ObjectPath": "/FortAudioGameplay/FortAudioGameplay.4"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddAudioMutators'FortAudioGameplay:GameFeatureAction_AddAudioMutators_0'",
-        "ObjectPath": "/FortAudioGameplay/FortAudioGameplay.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddSoundLibraryCollection'FortAudioGameplay:GameFeatureAction_AddSoundLibraryCollection_0'",
-        "ObjectPath": "/FortAudioGameplay/FortAudioGameplay.5"
+        "Modulator": {
+          "ObjectName": "SoundModulationPatch'MPP_Mimosa_FortGameplay'",
+          "ObjectPath": "/Game/Sounds/Modulation/Patches/MPP_Mimosa_FortGameplay.0"
+        },
+        "Destination": "EModulationDestination::Volume"
       }
     ]
   }

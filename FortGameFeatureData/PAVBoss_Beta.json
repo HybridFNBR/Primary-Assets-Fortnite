@@ -1,113 +1,80 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "PAVBoss_Beta",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_1",
+  "Outer": "PAVBoss_Beta",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1 - Play As Boss",
-        "DisplayName": "Spawn PaV Beta Boss",
-        "ConsoleCommands": [
-          "cheat lwms Beta"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PAVBoss_Beta:FortGameFeatureAction_AddToPlaylists_1'",
-        "ObjectPath": "/PAVBoss_Beta/PAVBoss_Beta.0"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AISpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "SpawnerDatas"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "40.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Play"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play )"
+          },
+          "bMigratedFromOldData": false
         }
-      },
-      {
-        "PrimaryAssetType": "AthenaGadget",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
-          "SubPathString": ""
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "PlayAsBossDefinition",
-        "AssetBaseClass": {
-          "AssetPathName": "/PlayAsVillain/Gameplay/PlayAsBossDefinition.PlayAsBossDefinition_C",
-          "SubPathString": ""
+        {
+          "TagName": "Plugin.Playlist.Arena"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Edit"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Play"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play )"
+    }
   }
 }

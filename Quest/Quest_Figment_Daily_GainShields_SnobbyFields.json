@@ -1,0 +1,242 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "Quest_Figment_Daily_GainShields_SnobbyFields",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "FigmentEvergreenDailyQuestLocation",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Figment_Daily_GainShields_SnobbyFields_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementBy": "EFortShieldGainIncrementType::ShieldGainAmount",
+            "bRequireFullShields": false,
+            "bRequireShieldGainedFromTeammate": false,
+            "bRequireAuthorIsTheShieldGainSource": false,
+            "bUseShieldAmountGained": false,
+            "bUseOverFullShields": false,
+            "bUseShieldGainedPercent": false,
+            "bUseTotalShieldsGained": false,
+            "ShieldGainSource": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "ShieldGainType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AmountOfShieldsGained": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "ShieldsGainedOverFullAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "ShieldsPercentGained": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "TotalShieldGain": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Location.POI.SnobbyShores"
+                  },
+                  {
+                    "TagName": "Athena.Location.POI.FatalFields"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  2,
+                  0,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Location.POI.SnobbyShores, Athena.Location.POI.FatalFields )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "6630B0D04EE60DE0E76606A4D6E326F8",
+          "SourceString": "Gain shields at Snobby Shores or Fatal Fields",
+          "LocalizedString": "Gain shields at Snobby Shores or Fatal Fields"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "07D0822F437D6CDBEBA9E8813E5CFC61",
+          "SourceString": "Gain shields at Snobby Shores or Fatal Fields",
+          "LocalizedString": "Gain shields at Snobby Shores or Fatal Fields"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 50,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 50,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Figment"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.Figment )"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Daily_GainShields_SnobbyFields:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_SnobbyFields.3"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_Figment_Daily_GainShields_SnobbyFields:FortQuestDefinitionComponent_MapMarkers_1'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_SnobbyFields.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Daily_GainShields_SnobbyFields:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_SnobbyFields.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Figment_Daily_GainShields_SnobbyFields_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "F5F3BEB245083DAE22A54AB5E10C0EE1",
+      "SourceString": "Gain shields at Snobby Shores or Fatal Fields",
+      "LocalizedString": "Gain shields at Snobby Shores or Fatal Fields"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "FE70CC4749662B521273789B0C23AD51",
+      "SourceString": "Gain shields at Snobby Shores or Fatal Fields",
+      "LocalizedString": "Gain shields at Snobby Shores or Fatal Fields"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.Figment.Dailies"
+        ]
+      },
+      {}
+    ]
+  }
+}

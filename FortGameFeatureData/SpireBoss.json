@@ -1,96 +1,88 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "SpireBoss",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "SpireBoss",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/SpireBoss/Levels/SpireBoss_LevelOverlay.SpireBoss_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/SpireBoss/SpireBoss_DeathCauseData.SpireBoss_DeathCauseData",
-      "SubPathString": ""
-    },
-    "FactionMapping": {
-      "AssetPathName": "/SpireBoss/AI/DataAsset_FactionMapping_SpireBoss.DataAsset_FactionMapping_SpireBoss",
-      "SubPathString": ""
-    },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'SpireBoss:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/SpireBoss/SpireBoss.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'SpireBoss:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/SpireBoss/SpireBoss.4"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'SpireBoss:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/SpireBoss/SpireBoss.6"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddCheats'SpireBoss:GameFeatureAction_AddCheats_0'",
-        "ObjectPath": "/SpireBoss/SpireBoss.3"
-      },
-      {
-        "ObjectName": "FortUIGameFeatureAction_AddMapLegendEntries'SpireBoss:FortUIGameFeatureAction_AddMapLegendEntries_0'",
-        "ObjectPath": "/SpireBoss/SpireBoss.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistry'SpireBoss:GameFeatureAction_DataRegistry_0'",
-        "ObjectPath": "/SpireBoss/SpireBoss.5"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AISpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "NPCs"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "ActorSpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortAthenaActorSpawnerData",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Lager"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "36.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
           },
-          {
-            "Path": "LWPrefab"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Play"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              5,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play, Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+        },
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Play"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play, Plugin.Playlist.Arena ) )"
+    }
   }
 }

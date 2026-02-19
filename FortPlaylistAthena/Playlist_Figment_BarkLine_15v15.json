@@ -1,0 +1,280 @@
+{
+  "Type": "FortPlaylistAthena",
+  "Name": "Playlist_Figment_BarkLine_15v15",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bRewardsTrackPlacement": false,
+    "bRewardForRevivingTeammates": true,
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::TwoTeam",
+    "RewardsPlacementThreshold": 1,
+    "InMatchXPRewardScalar": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaPlaylistXpToggle'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaPlaylistXpToggle.0"
+        },
+        "RowName": "Playlist_DefaultSquad"
+      }
+    },
+    "FillRateTable": [
+      {
+        "MinMmr": 0,
+        "MaxMmr": 400,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 10.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 401,
+        "MaxMmr": 600,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 10.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 601,
+        "MaxMmr": 800,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 10.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 801,
+        "MaxMmr": 1000,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 10.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1001,
+        "MaxMmr": 1200,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1201,
+        "MaxMmr": 1400,
+        "MinFillPct": 0.9,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 119.0
+      },
+      {
+        "MinMmr": 0,
+        "MaxMmr": 0,
+        "MinFillPct": 0.0,
+        "MaxFillPct": 0.0,
+        "MaxPriority": 0.0
+      }
+    ],
+    "bUsePlayerRating": true,
+    "bEnableDynamicBotBackfill": true,
+    "RatingType": "fun",
+    "bAllowedInLeto": true,
+    "bAllowBotsInHumanTeams": true,
+    "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
+    "NumWinningTeamsCN": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "NumWinningTeamsCN"
+      }
+    },
+    "bIsLargeTeamGame": true,
+    "InventorySystemConfiguration": {
+      "AssetPathName": "/Itemization/BRStyle/ItemizationConfiguration_FNBR.ItemizationConfiguration_FNBR",
+      "SubPathString": ""
+    },
+    "AirCraftBehavior": "EAirCraftBehavior::OpposingAirCraftForEachTeam",
+    "bUseCustomAircraftPathSelection": true,
+    "AircraftPathMidpointSelectionRadiusMin": 52500.0,
+    "AircraftPathMidpointSelectionRadiusMax": 52500.0,
+    "PlaylistMissionGen": {
+      "ObjectName": "BlueprintGeneratedClass'MissionGen_Figment_BarkLine_C'",
+      "ObjectPath": "/FigmentPlaylists/Playlists/MissionGen/LTM/MissionGen_Figment_BarkLine.0"
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::PrioritizedContextualSlot",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/HUD_ContextualTips_Base.HUD_ContextualTips_Base_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "MissionIcon": {
+      "ObjectName": "Texture2D'T_Icon_Matchmaking_Squad_64'",
+      "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Social/T_Icon_Matchmaking_Squad_64.0"
+    },
+    "UIDisplaySubName": {
+      "Namespace": "",
+      "Key": "D4414F01489C8AE2061BD99C10B0FA94",
+      "SourceString": "Squads",
+      "LocalizedString": "Squads"
+    },
+    "bShowEliminationIndicatorForSquadmates": true,
+    "bShowEliminationIndicatorForTeammates": true,
+    "MapManagerClass": {
+      "AssetPathName": "/Figment_S07_Map/UI/UIMapManagerFigment_S07.UIMapManagerFigment_S07_C",
+      "SubPathString": ""
+    },
+    "SafeZoneStartUp": "ESafeZoneStartUp::StartsWithAirCraft",
+    "StormEffectDelay": 330.0,
+    "bDisplayFinalStormPosition": true,
+    "LastSafeZoneIndex": 3,
+    "SafeZoneLocationBlacklist": {
+      "AssetPathName": "/Game/Athena/Balance/DataTables/AthenaSafeZoneBlacklist.AthenaSafeZoneBlacklist",
+      "SubPathString": ""
+    },
+    "bUseDefaultSupplyDrops": false,
+    "SupplyDropInfoList": [
+      {
+        "AssetPathName": "/FigmentCore/Gameplay/SupplyDrop/FigmentSupplyDrop.FigmentSupplyDrop",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/FigmentCore/Gameplay/SupplyDrop/FigmentSupplyDropInfo_Aircraft.FigmentSupplyDropInfo_Aircraft",
+        "SubPathString": ""
+      }
+    ],
+    "bAllowSpectateAPartyMember": true,
+    "AISettings": {
+      "AssetPathName": "/Game/Athena/AI/AISettings/PlayerBotsFlow_AISettings.PlayerBotsFlow_AISettings",
+      "SubPathString": ""
+    },
+    "MaxVehiclesCanSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.MaxVehiclesCanSpawnWith"
+      }
+    },
+    "PercentChanceSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
+      }
+    },
+    "PlaylistId": 9234972,
+    "PlaylistName": "Playlist_Figment_BarkLine_15v15",
+    "GameType": "EFortGameType::Figment",
+    "MaxPlayers": 100,
+    "bOverrideMaxPlayers": true,
+    "MaxHumanAndBotParticipants": 100,
+    "MaxTeamCount": 2,
+    "MaxTeamSize": 15,
+    "MaxSocialPartySize": 5,
+    "MaxSquadSize": 5,
+    "EnforceSquadFill": false,
+    "bEnableBackfillDuringWarmupPhase": false,
+    "RichPresenceAssetName": "squads",
+    "bAllowKeepPlayingTogether": true,
+    "BuiltInGameFeaturePluginsToLoad": [
+      "BattleRoyaleContent",
+      "BattleRoyaleUI",
+      "VictoryCrownsGameplay",
+      "XpEverywhereUI",
+      "StormSickness",
+      "FinalCountdownGameplay",
+      "LocomotionInitiative",
+      "ContextualTraversal",
+      "ClamberingContent",
+      "DoorBashContent",
+      "TacticalSprintGame",
+      "TacticalSprintUI",
+      "VaultingContent",
+      "SlideImpulse",
+      "Sliding",
+      "RollLanding",
+      "BoostedJump",
+      "WallStick",
+      "WallJump"
+    ],
+    "GameplayTagContainer": [
+      "Athena.Plugin.GameMod.Gasket",
+      "Athena.Quests.NoBuild.Exclude",
+      "Athena.Playlist.DefaultXP",
+      "Athena.Playlist.Figment",
+      "Product.Figment.Build"
+    ],
+    "SpawnImmunityTime": {
+      "Value": 2.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CompositeCurveTable'Barkline_Athena_CompositeGD_Figment'",
+          "ObjectPath": "/Figment_LootTables/DataTables/Barkline/Barkline_Athena_CompositeGD_Figment.0"
+        },
+        "RowName": "Default.Van.Redux.SquadSpawnImmunityTime"
+      }
+    },
+    "ModifierList": [
+      {
+        "AssetPathName": "/Game/Athena/Playlists/DefaultModifiers/MaterialDropOnElim_Default.MaterialDropOnElim_Default",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/ContextTutorial/ContextTutorial_AthenaContextTutorial.ContextTutorial_AthenaContextTutorial",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/AI/Phoebe/GameplayMod_Phoebe_DM_Solo.GameplayMod_Phoebe_DM_Solo",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Deimos/GameplayMod_DeimosAI.GameplayMod_DeimosAI",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/RufusGameplayModifiers/Rufus_SafeZoneBlacklist_Modifier.Rufus_SafeZoneBlacklist_Modifier",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/FigmentPlaylists/Playlists/Modifiers/Modifiers/Figment_BarkLineModifier.Figment_BarkLineModifier",
+        "SubPathString": ""
+      }
+    ],
+    "bIsDefaultPlaylist": true,
+    "UIDisplayName": {
+      "Namespace": "",
+      "Key": "74BD7C3E4B38D453BF272C9A249AA703",
+      "SourceString": "50v50 OG",
+      "LocalizedString": "50v50 OG"
+    },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "4D6BECF542B66B707D5AC2A425905A99",
+      "SourceString": "Two teams of 50 players. Massive forts.",
+      "LocalizedString": "Two teams of 50 players. Massive forts."
+    },
+    "HUDElementsToHide": [
+      "HUD.CashResource",
+      "Athena.MiniMap.FullScreen.ResourceCount.Gold"
+    ],
+    "LootTierData": {
+      "AssetPathName": "/Figment_LootTables/DataTables/Barkline/Barkline_Composite_LTD_Figment.Barkline_Composite_LTD_Figment",
+      "SubPathString": ""
+    },
+    "LootPackages": {
+      "AssetPathName": "/Figment_LootTables/DataTables/Barkline/Barkline_Composite_LP_Figment.Barkline_Composite_LP_Figment",
+      "SubPathString": ""
+    },
+    "GameData": {
+      "AssetPathName": "/Figment_LootTables/DataTables/Barkline/Barkline_Athena_CompositeGD_Figment.Barkline_Athena_CompositeGD_Figment",
+      "SubPathString": ""
+    },
+    "ServerPerformanceEventFrequency": 300.0
+  }
+}

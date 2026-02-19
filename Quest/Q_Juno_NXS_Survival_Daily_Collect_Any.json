@@ -1,0 +1,231 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "Q_Juno_NXS_Survival_Daily_Collect_Any",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "JunoNexusSurvivalDaily",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Q_Juno_NXS_Survival_Daily_Collect_Any_obj1",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Item": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Juno.CraftingResource.Stone"
+                  },
+                  {
+                    "TagName": "Juno.CraftingResource.Wood"
+                  },
+                  {
+                    "TagName": "Juno.CraftingResource.Metal"
+                  },
+                  {
+                    "TagName": "Juno.CraftingResource.Crystal"
+                  },
+                  {
+                    "TagName": "Juno.CraftingResource.Stone.Intermediary"
+                  },
+                  {
+                    "TagName": "Juno.CraftingResource.Wood.Intermediary"
+                  },
+                  {
+                    "TagName": "Juno.CraftingResource.Metal.Intermediary"
+                  },
+                  {
+                    "TagName": "Juno.CraftingResource.Crystal.Intermediary"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  1,
+                  4,
+                  0,
+                  1,
+                  2,
+                  3,
+                  3,
+                  4,
+                  4,
+                  5,
+                  6,
+                  7
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ANY( Juno.CraftingResource.Stone, Juno.CraftingResource.Wood, Juno.CraftingResource.Metal, Juno.CraftingResource.Crystal ),  NONE( Juno.CraftingResource.Stone.Intermediary, Juno.CraftingResource.Wood.Intermediary, Juno.CraftingResource.Metal.Intermediary, Juno.CraftingResource.Crystal.Intermediary ) )"
+              }
+            },
+            "bIncrementByItemCount": true,
+            "AcceptedGatherType": "EInventoryGatherType::BrandNew",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 200,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 10,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Juno.GameMode.Survival"
+        },
+        {
+          "TagName": "Juno.QuestBlockingWorldSettingsTainted"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        2,
+        2,
+        0,
+        1,
+        3,
+        1,
+        2
+      ],
+      "AutoDescription": " ALL(  ALL( Product.Juno, Juno.GameMode.Survival ),  NONE( Juno.QuestBlockingWorldSettingsTainted ) )"
+    },
+    "Category": {
+      "DataTable": {
+        "ObjectName": "DataTable'QuestCategoryTable'",
+        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+      },
+      "RowName": "DailyQuests"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Q_Juno_NXS_Survival_Daily_Collect_Any:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Basic/Q_Juno_NXS_Survival_Daily_Collect_Any.2"
+      },
+      {
+        "ObjectName": "JunoQuestDefinitionComponent_ProductCompatibilityInjector_GameMode'Q_Juno_NXS_Survival_Daily_Collect_Any:JunoQuestDefinitionComponent_ProductCompatibilityInjector_GameMode_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Basic/Q_Juno_NXS_Survival_Daily_Collect_Any.4"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Q_Juno_NXS_Survival_Daily_Collect_Any:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Basic/Q_Juno_NXS_Survival_Daily_Collect_Any.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_TrackedData'Q_Juno_NXS_Survival_Daily_Collect_Any:FortQuestDefinitionComponent_TrackedData_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Basic/Q_Juno_NXS_Survival_Daily_Collect_Any.3"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Q_Juno_NXS_Survival_Daily_Collect_Any_obj1"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "4644DEB3476816FF301D52AE51B93D6F",
+      "SourceString": "Collect Wood, Stone, Metal, or Gem Resources",
+      "LocalizedString": "Collect Wood, Stone, Metal, or Gem Resources"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "7A3572934A6F51D8A319AFB5B4270629",
+      "SourceString": "Collect Wood, Stone, Metal, or Gem Resources",
+      "LocalizedString": "Collect Wood, Stone, Metal, or Gem Resources"
+    },
+    "DataList": [
+      {},
+      {
+        "Tags": [
+          "QuestCategory.Juno.Event.NXS.Survival.Daily.Basic",
+          "ChallengeCategory.XP"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_JunoEncounters_CS_StormRiftSpawner",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoRiftSpawner/Levels/Juno_EncounterLevel_StormRiftSpawner.Juno_EncounterLevel_StormRiftSpawner",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoRiftSpawner/StateTrees/ST_Juno_StormRiftSpawner.ST_Juno_StormRiftSpawner",
+      "SubPathString": ""
+    },
+    "SuccessRewardBehavior": {
+      "RewardDirection": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 500.0
+      },
+      "RewardConeAngle": {
+        "Value": 120.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 900.0
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'JunoRiftSpawner_GameData'",
+          "ObjectPath": "/JunoRiftSpawner/CurveTables/JunoRiftSpawner_GameData.0"
+        },
+        "RowName": "Juno.RiftSpawner.DensityWeight.Small"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'JunoRiftSpawner_GameData'",
+          "ObjectPath": "/JunoRiftSpawner/CurveTables/JunoRiftSpawner_GameData.0"
+        },
+        "RowName": "Juno.RiftSpawner.DensityRange.Normal"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CombatSprinkle_SpawnCount'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle/DataTables/DT_CombatSprinkle_SpawnCount.0"
+          },
+          "RowName": "CS.Enemies.SpawnCount.MonsetCloset.Small"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionA"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoRiftSpawener_EventTemplate'",
+            "ObjectPath": "/JunoRiftSpawner/DataTables/DT_JunoRiftSpawener_EventTemplate.0"
+          },
+          "RowName": "Juno.Neptune.StormRiftSpawner.Respawn.Min"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.RespawnTimer.Min"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoRiftSpawener_EventTemplate'",
+            "ObjectPath": "/JunoRiftSpawner/DataTables/DT_JunoRiftSpawener_EventTemplate.0"
+          },
+          "RowName": "Juno.Neptune.StormRiftSpawner.Respawn.Max"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.RespawnTimer.Max"
+        }
+      }
+    ],
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoRiftSpawner/ActorDescription/DT_Juno_Encounters_AD_SelectionsRow_Minifig_StormRiftSpawner.DT_Juno_Encounters_AD_SelectionsRow_Minifig_StormRiftSpawner",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.EnemyNPC.01"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.StormRiftSpawner"
+        ]
+      }
+    ]
+  }
+}

@@ -1,33 +1,89 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "MatchmakingPortal",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "MatchmakingPortal",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/MatchmakingPortal/MatchmakingPortal_LevelOverlay.MatchmakingPortal_LevelOverlay",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "25.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Athena.Playground"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              3,
+              0,
+              1,
+              2,
+              3,
+              1,
+              3
+            ],
+            "UserDescription": "Creative, Playground, or VKPlay. Exlude Creative Royale",
+            "AutoDescription": " ALL(  ANY( Athena.Creative, Athena.Playground, Playlist.Experience.PlayOnly ),  NONE( Athena.Playlist.CreativeRoyale ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
     },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'MatchmakingPortal:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/MatchmakingPortal/MatchmakingPortal.0"
-      },
-      {
-        "ObjectName": "FortUIGameFeatureAction_OverridePortalHUDDetails'MatchmakingPortal:FortUIGameFeatureAction_OverridePortalHUDDetails_0'",
-        "ObjectPath": "/MatchmakingPortal/MatchmakingPortal.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'MatchmakingPortal:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/MatchmakingPortal/MatchmakingPortal.1"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'MatchmakingPortal:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/MatchmakingPortal/MatchmakingPortal.4"
-      }
-    ]
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Creative"
+        },
+        {
+          "TagName": "Athena.Playground"
+        },
+        {
+          "TagName": "Playlist.Experience.PlayOnly"
+        },
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        1,
+        3,
+        0,
+        1,
+        2,
+        3,
+        1,
+        3
+      ],
+      "UserDescription": "Creative, Playground, or VKPlay. Exlude Creative Royale",
+      "AutoDescription": " ALL(  ANY( Athena.Creative, Athena.Playground, Playlist.Experience.PlayOnly ),  NONE( Athena.Playlist.CreativeRoyale ) )"
+    }
   }
 }

@@ -1,0 +1,242 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "Quest_Figment_Daily_GainShields_SpringsAnarchy",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "FigmentEvergreenDailyQuestLocation",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Figment_Daily_GainShields_SpringsAnarchy_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementBy": "EFortShieldGainIncrementType::ShieldGainAmount",
+            "bRequireFullShields": false,
+            "bRequireShieldGainedFromTeammate": false,
+            "bRequireAuthorIsTheShieldGainSource": false,
+            "bUseShieldAmountGained": false,
+            "bUseOverFullShields": false,
+            "bUseShieldGainedPercent": false,
+            "bUseTotalShieldsGained": false,
+            "ShieldGainSource": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "ShieldGainType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AmountOfShieldsGained": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "ShieldsGainedOverFullAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "ShieldsPercentGained": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "TotalShieldGain": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Location.POI.AnarchyAcres"
+                  },
+                  {
+                    "TagName": "Athena.Location.POI.SaltySprings"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  2,
+                  0,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Location.POI.AnarchyAcres, Athena.Location.POI.SaltySprings )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "3042171747D4DF143A84089DA58D56DA",
+          "SourceString": "Gain shields at Salty Springs or Anarchy Acres",
+          "LocalizedString": "Gain shields at Salty Springs or Anarchy Acres"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "B2C5320E4C94A190A77FFDB084846E0B",
+          "SourceString": "Gain shields at Salty Springs or Anarchy Acres",
+          "LocalizedString": "Gain shields at Salty Springs or Anarchy Acres"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 50,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 50,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Figment"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.Figment )"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Daily_GainShields_SpringsAnarchy:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_GainShields_SpringsAnarchy.3"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_Figment_Daily_GainShields_SpringsAnarchy:FortQuestDefinitionComponent_MapMarkers_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_GainShields_SpringsAnarchy.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Daily_GainShields_SpringsAnarchy:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_GainShields_SpringsAnarchy.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Figment_Daily_GainShields_SpringsAnarchy_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "B62C044043C71197B1C208923F19719A",
+      "SourceString": "Gain shields at Salty Springs or Anarchy Acres",
+      "LocalizedString": "Gain shields at Salty Springs or Anarchy Acres"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "510D30054D813C15F2012C8DFD109227",
+      "SourceString": "Gain shields at Salty Springs or Anarchy Acres",
+      "LocalizedString": "Gain shields at Salty Springs or Anarchy Acres"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.Figment.Dailies"
+        ]
+      },
+      {}
+    ]
+  }
+}

@@ -1,297 +1,32 @@
 {
-  "Type": "FortQuestItemDefinition_Athena",
-  "Name": "Quest_S39_HoneyFiber_P05_Q03",
-  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortQuestDefinitionComponent_DisplaySettings",
+  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
+  "Outer": "Quest_S39_HoneyFiber_P05_Q03",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "QuestGiverWidgetIconForToast": {
-      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S39/T_Soldier_PacificSweater_L.T_Soldier_PacificSweater_L",
-      "SubPathString": ""
-    },
-    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
-    "CompletionPathResults": [
-      {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_S39_HoneyFiber_P05_Q03_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
-          {
-            "bUseDistance": false,
-            "bAllowSelfInflictedDamage": false,
-            "bRequireCriticalHit": true,
-            "bIncrementByDamageAmount": false,
-            "bUseDamageAmount": false,
-            "bIncrementByUncappedDamage": false,
-            "bUseUncappedDamage": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "DamageSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamagedActor": {
-              "bCanGainProgressForThisObjective": false,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Faction.Generic.Hostile"
-                  },
-                  {
-                    "TagName": "Homebase.Class"
-                  },
-                  {
-                    "TagName": "Pawn.Athena.NPC.Duel.IsBeingChallenged"
-                  },
-                  {
-                    "TagName": "Athena.Gameplay.Status.Converted"
-                  },
-                  {
-                    "TagName": "Quests.Wildlife.IsOpponent"
-                  },
-                  {
-                    "TagName": "Athena.Faction.BuzzCool.Hostile"
-                  },
-                  {
-                    "TagName": "NPC.GoalSelection.BuzzCool.Clone"
-                  },
-                  {
-                    "TagName": "AISpawnerData.Type"
-                  },
-                  {
-                    "TagName": "AISpawnerData.Type.Tandem"
-                  },
-                  {
-                    "TagName": "AISpawnerData.Type.Specialist"
-                  },
-                  {
-                    "TagName": "Pawn.Athena.NPC.Wildlife"
-                  },
-                  {
-                    "TagName": "Pawn.Athena.NPC.Labrador"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  5,
-                  2,
-                  4,
-                  2,
-                  1,
-                  7,
-                  0,
-                  1,
-                  2,
-                  3,
-                  4,
-                  5,
-                  6,
-                  5,
-                  2,
-                  1,
-                  1,
-                  7,
-                  3,
-                  3,
-                  8,
-                  9,
-                  10,
-                  3,
-                  1,
-                  11
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ALL(  ANY(  ANY( Athena.Faction.Generic.Hostile, Homebase.Class, Pawn.Athena.NPC.Duel.IsBeingChallenged, Athena.Gameplay.Status.Converted, Quests.Wildlife.IsOpponent, Athena.Faction.BuzzCool.Hostile, NPC.GoalSelection.BuzzCool.Clone ),  ALL(  ANY( AISpawnerData.Type ),  NONE( AISpawnerData.Type.Tandem, AISpawnerData.Type.Specialist, Pawn.Athena.NPC.Wildlife ) ) ),  NONE( Pawn.Athena.NPC.Labrador ) )"
-              }
-            },
-            "DamageType": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamageAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "UncappedDamageAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
-            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
-          }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "23B0F5D145F4FFEA0605FF82FEB83C65",
-          "SourceString": "Mphmmph mhhmmph",
-          "LocalizedString": "Mphmmph mhhmmph"
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 10,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.BR"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Product.BR )"
-    },
-    "SortPriority": 4,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S39_HoneyFiber_P05_Q03:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/HoneyFiber/P05/Quest_S39_HoneyFiber_P05_Q03.0"
+    "InformationSettings": {
+      "CompletionText": {
+        "Namespace": "",
+        "Key": "C1F45E304E46BC784991AFB38880871A",
+        "SourceString": "Use your ninja star!",
+        "LocalizedString": "Use your ninja star!"
       },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S39_HoneyFiber_P05_Q03:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/HoneyFiber/P05/Quest_S39_HoneyFiber_P05_Q03.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_S39_HoneyFiber_P05_Q03_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "GrantToProfileType": "athena",
-    "ItemName": {
-      "Namespace": "",
-      "Key": "9AA9731E4083A064181EE29F83992C15",
-      "SourceString": "Mphmmph mhhmmph",
-      "LocalizedString": "Mphmmph mhhmmph"
+      "bShowMaxStageInDescription": false
     },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "4120E75D4C029175C36A49B502158F14",
-      "SourceString": "Mphmmph mhhmmph",
-      "LocalizedString": "Mphmmph mhhmmph"
+    "VisibilitySettings": {
+      "bOverrideBundleVisibilityData": true,
+      "QuestVisiblityData": {
+        "bIsVisibleWhenCompleted": true
+      },
+      "bCanShowTimer": false
     },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "265A0876449C291155D3DC829B1F323D",
-      "SourceString": "Use your ninja star!",
-      "LocalizedString": "Use your ninja star!"
+    "ToastSettings": {
+      "bShouldDisplayStartingToast": false
     },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.BR.S39.HoneyFiber.P05"
-        ]
-      }
-    ]
+    "LockedQuestSettings": {
+      "bShowLockedQuestWidgets": true,
+      "DisplayQuantity": "ELockedWidgetDisplayQuantity::ShowNextOnly"
+    }
   }
 }

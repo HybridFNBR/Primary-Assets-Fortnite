@@ -1,83 +1,64 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "RiftAnomaliesGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "RiftAnomaliesGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/RiftAnomaliesGameplay/Levels/RiftAnomaliesGameplay_LevelOverlay.RiftAnomaliesGameplay_LevelOverlay",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.ForbiddenFruit"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.RiftAnomaliesGameplay"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              3,
+              0,
+              1,
+              2,
+              3,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.Default, Athena.Playlist.ForbiddenFruit ),  NONE( Plugin.Playlist.Exclude.RiftAnomaliesGameplay, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
     },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1 Rift Anomalies",
-        "DisplayName": "Spawn random rift anomalie",
-        "ConsoleCommands": [
-          "Cheat ke* RiftAnomalyForceSpawnRandom"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1 Rift Anomalies",
-        "DisplayName": "Spawn Care Supply Drops ",
-        "ConsoleCommands": [
-          "Cheat ke* RiftAnomalyForceSpawn CavalCrates"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1 Rift Anomalies",
-        "DisplayName": "Spawn OG Armory",
-        "ConsoleCommands": [
-          "Cheat ke* RiftAnomalyForceSpawn OGChests"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1 Rift Anomalies",
-        "DisplayName": "Spawn Millionaire",
-        "ConsoleCommands": [
-          "Cheat ke*  RiftAnomalyForceSpawn MIllionaire"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1 Rift Anomalies",
-        "DisplayName": "Spawn Winter Ball",
-        "ConsoleCommands": [
-          "Cheat ke*  RiftAnomalyForceSpawn WinterBall"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'RiftAnomaliesGameplay:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/RiftAnomaliesGameplay/RiftAnomaliesGameplay.3"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistry'RiftAnomaliesGameplay:GameFeatureAction_DataRegistry_0'",
-        "ObjectPath": "/RiftAnomaliesGameplay/RiftAnomaliesGameplay.4"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'RiftAnomaliesGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/RiftAnomaliesGameplay/RiftAnomaliesGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistry'RiftAnomaliesGameplay:GameFeatureAction_DataRegistry_2'",
-        "ObjectPath": "/RiftAnomaliesGameplay/RiftAnomaliesGameplay.6"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddCheats'RiftAnomaliesGameplay:GameFeatureAction_AddCheats_0'",
-        "ObjectPath": "/RiftAnomaliesGameplay/RiftAnomaliesGameplay.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistry'RiftAnomaliesGameplay:GameFeatureAction_DataRegistry_1'",
-        "ObjectPath": "/RiftAnomaliesGameplay/RiftAnomaliesGameplay.5"
-      }
+    "OptionalAdditionalPluginsToActivate": [
+      "RiftAnomaliesUI"
     ]
   }
 }

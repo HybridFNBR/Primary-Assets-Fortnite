@@ -1,0 +1,108 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_RiftShrine_SpawnedChest",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoEncountersStatuePuzzle/Assets/SpawnedEncounters/Assets/Juno_EncounterLevel_StatuePuzzle_SpawnedEncounter.Juno_EncounterLevel_StatuePuzzle_SpawnedEncounter",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersStatuePuzzle/Assets/SpawnedEncounters/Assets/ST_Juno_Encounter_StatuePuzzle_SpawnedEncounter.ST_Juno_Encounter_StatuePuzzle_SpawnedEncounter",
+      "SubPathString": ""
+    },
+    "bUseOverlapTestForActorCollection": false,
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "FailureRewards": [
+      {
+        "bUseLootSelectionTable": false,
+        "LootTierName": "Loot_JunoWorldChest_Grasslands",
+        "LootTierSelection": {
+          "ValueChoiceTable": {
+            "bUseDataRegistry": false,
+            "Table": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "VarName": {
+            "TagName": "None"
+          },
+          "SelectionQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "bShowVariableName": false
+        }
+      }
+    ],
+    "FailureRewardBehavior": {
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.RiftButterfly.ConeAngle"
+        }
+      },
+      "RewardFlingMagnitude": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.RiftButterfly.FlingMagnitude"
+        }
+      }
+    },
+    "PlayerFailureGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 0.0
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_EncounterVars_SpawnedActorClass'",
+            "ObjectPath": "/JunoEncountersStatuePuzzle/Assets/SpawnedEncounters/DataTables/Juno_EncounterVars_SpawnedActorClass.0"
+          },
+          "RowName": "StorageChest"
+        },
+        "VarName": {
+          "TagName": "Encounter.Variable.Juno.Shrine.Resource.SpawnedActorClass"
+        }
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.RiftShrine.SpawnedEncounter.Chest"
+        ]
+      }
+    ]
+  }
+}

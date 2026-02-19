@@ -1,88 +1,64 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "OrbEtch",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "OrbEtch",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/OrbEtch/Levels/OrbEtch_LevelOverlay.OrbEtch_LevelOverlay",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/OrbEtch/HUD/HUDWidgetRegistry_OrbEtch.HUDWidgetRegistry_OrbEtch",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S4 FNM",
-        "DisplayName": "Scooby Snacks",
-        "ConsoleCommands": [
-          "cheat givespecificitem /Script/FortniteGame.FortWeaponRangedItemDefinition'/OrbEtch/Gameplay/WID_OrbEtch_VR.WID_OrbEtch_VR' 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'OrbEtch:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/OrbEtch/OrbEtch.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'OrbEtch:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/OrbEtch/OrbEtch.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Consumable",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [
-          {
-            "AssetPathName": "/OrbEtch/Gameplay/WID_OrbEtch_VR.WID_OrbEtch_VR",
-            "SubPathString": ""
-          }
-        ],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      },
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default ) )"
+    }
   }
 }

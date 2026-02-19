@@ -1,62 +1,89 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "PoliteDinner",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "PoliteDinner",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/PoliteDinner/Levels/PoliteDinner_LevelOverlay.PoliteDinner_LevelOverlay",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/PoliteDinner/HUD/PoliteDinnerHUDWidgetRegistry.PoliteDinnerHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1 Unvaults",
-        "DisplayName": "Mira's Spicy Ramyeon",
-        "ConsoleCommands": [
-          "cheat givespecificitem /Script/FortniteGame.FortWeaponRangedItemDefinition'/PoliteDinner/Gameplay/WID_PoliteDinner.WID_PoliteDinner' 3 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PoliteDinner:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/PoliteDinner/PoliteDinner.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'PoliteDinner:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/PoliteDinner/PoliteDinner.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Consumable",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.40"
+            },
+            "ExclusiveMax": {
+              "VersionName": "38.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Mash"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Mash ) )"
+          },
+          "bMigratedFromOldData": false
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.40"
+            },
+            "ExclusiveMax": {
+              "VersionName": "39.50"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Plugin.Playlist.ForbiddenFruit"
+              },
+              {
+                "TagName": "Plugin.Playlist.BlastBerry"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              5,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Plugin.Playlist.Arena, Athena.Playlist.Default, Athena.Playlist.Test, Plugin.Playlist.ForbiddenFruit, Plugin.Playlist.BlastBerry ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    }
   }
 }

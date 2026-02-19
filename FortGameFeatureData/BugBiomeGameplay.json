@@ -1,29 +1,86 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "BugBiomeGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "BugBiomeGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/BugBiomeGameplay/Levels/BugBiomeGameplay_LevelOverlay.BugBiomeGameplay_LevelOverlay",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.SpecialEvent.SkyMango"
+              },
+              {
+                "TagName": "Athena.Playlist.Mash"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3,
+              3,
+              1,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Plugin.Playlist.Arena, Athena.Playlist.SpecialEvent.SkyMango ),  NONE( Athena.Playlist.Mash ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
     },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'BugBiomeGameplay:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/BugBiomeGameplay/BugBiomeGameplay.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BugBiomeGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/BugBiomeGameplay/BugBiomeGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'BugBiomeGameplay:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/BugBiomeGameplay/BugBiomeGameplay.3"
-      }
-    ]
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Athena.Playlist.ItemsTest"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        3,
+        0,
+        1,
+        2
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Plugin.Playlist.Arena ) )"
+    }
   }
 }

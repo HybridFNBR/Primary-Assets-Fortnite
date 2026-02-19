@@ -1,25 +1,63 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "CustomDebugCommands",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddSettingRegistry",
+  "Name": "FortGameFeatureAction_AddSettingRegistry_0",
+  "Outer": "CustomDebugCommands",
+  "Class": "UScriptClass'FortGameFeatureAction_AddSettingRegistry'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "DynamicUIDirectorClass": {
-      "AssetPathName": "/CustomDebugCommands/UI/BP_CustomDebugCommandUIDirector.BP_CustomDebugCommandUIDirector_C",
-      "SubPathString": ""
-    },
-    "Actions": [
+    "RegistryManifests": [
       {
-        "ObjectName": "FortGameFeatureAction_AddSettingRegistry'CustomDebugCommands:FortGameFeatureAction_AddSettingRegistry_0'",
-        "ObjectPath": "/CustomDebugCommands/CustomDebugCommands.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'CustomDebugCommands:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/CustomDebugCommands/CustomDebugCommands.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CustomDebugCommands:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/CustomDebugCommands/CustomDebugCommands.1"
+        "SettingRegistryName": "CustomDebugCommands",
+        "SettingRegistryDisplayName": {
+          "Namespace": "",
+          "Key": "A1AC327F44991AE83891299C9DED62FA",
+          "SourceString": "Debug Commands",
+          "LocalizedString": "Debug Commands"
+        },
+        "SettingRegistryClass": {
+          "AssetPathName": "/Script/CustomDebugCommandsUI.CustomDebugCommandsRegistry",
+          "SubPathString": ""
+        },
+        "SettingScreenClass": {
+          "AssetPathName": "/CustomDebugCommands/UI/CustomDebugCommandsScreen.CustomDebugCommandsScreen_C",
+          "SubPathString": ""
+        },
+        "SettingAnalyticsAggregator": {
+          "ObjectName": "SettingAnalyticsAggregator_CustomDebugCommands'CustomDebugCommands:FortGameFeatureAction_AddSettingRegistry_0.SettingAnalyticsAggregator_CustomDebugCommands_0'",
+          "ObjectPath": "/CustomDebugCommands/CustomDebugCommands.4"
+        },
+        "bRequiresValidLocalPlayer": true,
+        "bRequiresValidPlayerController": true,
+        "bRequiresLoggedInOnlineAccount": true,
+        "bRequiresLoadedClientSettingsRecord": true,
+        "RegistryPrerequisites": [
+          {
+            "AssetPathName": "/Script/FortniteUI.FortSettingRegistryPrerequisite_ClientSettingsRecord",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/Script/FortniteUI.FortSettingRegistryPrerequisite_LoggedIn",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/Script/FortniteUI.FortSettingRegistryPrerequisite_PlayerController",
+            "SubPathString": ""
+          }
+        ],
+        "SettingRegistryPermissionRequirements": [
+          {
+            "ObjectName": "SettingRegistryPermissionRequirement_RequesterClass'CustomDebugCommands:FortGameFeatureAction_AddSettingRegistry_0.SettingRegistryPermissionRequirement_RequesterClass_0'",
+            "ObjectPath": "/CustomDebugCommands/CustomDebugCommands.7"
+          },
+          {
+            "ObjectName": "SettingRegistryPermissionRequirement_CVar'CustomDebugCommands:FortGameFeatureAction_AddSettingRegistry_0.SettingRegistryPermissionRequirement_CVar_0'",
+            "ObjectPath": "/CustomDebugCommands/CustomDebugCommands.5"
+          },
+          {
+            "ObjectName": "SettingRegistryPermissionRequirement_DebugCommands'CustomDebugCommands:FortGameFeatureAction_AddSettingRegistry_0.SettingRegistryPermissionRequirement_DebugCommands_0'",
+            "ObjectPath": "/CustomDebugCommands/CustomDebugCommands.6"
+          }
+        ]
       }
     ]
   }

@@ -1,25 +1,45 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "BusLoadoutItemGrants",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "BusLoadoutItemGrants",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/BusLoadoutItemGrants/Levels/BusLoadoutItemGrants_LevelOverlay.BusLoadoutItemGrants_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BusLoadoutItemGrants:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/BusLoadoutItemGrants/BusLoadoutItemGrants.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'BusLoadoutItemGrants:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/BusLoadoutItemGrants/BusLoadoutItemGrants.2"
-      }
-    ]
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.40"
+            },
+            "ExclusiveMax": {
+              "VersionName": "39.50"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Default, Athena.Playlist.Test )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
+    }
   }
 }

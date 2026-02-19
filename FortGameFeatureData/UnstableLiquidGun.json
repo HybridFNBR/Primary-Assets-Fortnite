@@ -1,92 +1,76 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "UnstableLiquidGun",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "UnstableLiquidGun",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/UnstableLiquidGun/Maps/OverlayConfig.OverlayConfig",
-      "SubPathString": ""
-    },
-    "PlaylistBaseCurveTableOverrides": [
-      {
-        "BaseTable": {
-          "AssetPathName": "/UnstableLiquidGun/DataTables/UnstableLiquidGunGameData.UnstableLiquidGunGameData",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": [
-          {
-            "Key": {
-              "TagName": "Athena.Playlist.Mash"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "22.10"
             },
-            "Value": {
-              "AssetPathName": "/UnstableLiquidGun/DataTables/Mash/Override_UnstableLiquidGunGameData_Mash.Override_UnstableLiquidGunGameData_Mash",
-              "SubPathString": ""
+            "ExclusiveMax": {
+              "VersionName": "Future"
             }
-          }
-        ]
-      }
-    ],
-    "DefaultLootTableData": {
-      "LootTierData": {
-        "AssetPathName": "/UnstableLiquidGun/DataTables/LootTierData.LootTierData",
-        "SubPathString": ""
-      },
-      "LootPackageData": {
-        "AssetPathName": "/UnstableLiquidGun/DataTables/LootPackageData.LootPackageData",
-        "SubPathString": ""
-      }
-    },
-    "SharedItemIdsToFullyLoad": [
-      {
-        "PrimaryAssetType": {
-          "Name": "Weapon"
-        },
-        "PrimaryAssetName": "WID_NitroglycerineGun"
-      }
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "S22",
-        "DisplayName": "Give Unstable Liquid Gun",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /UnstableLiquidGun/Items/UnstableLiquidGun/WID_NitroglycerineGun.WID_NitroglycerineGun 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'UnstableLiquidGun:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/UnstableLiquidGun/UnstableLiquidGun.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'UnstableLiquidGun:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/UnstableLiquidGun/UnstableLiquidGun.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Athena.Playlist.Mash"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Athena.Playlist.Mash )"
+          },
+          "bMigratedFromOldData": true
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Creative"
+        },
+        {
+          "TagName": "Playlist.UGC.Core"
+        },
+        {
+          "TagName": "Playlist.Experience.PlayOnly"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        3,
+        0,
+        1,
+        2
+      ],
+      "AutoDescription": " ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly )"
+    }
   }
 }

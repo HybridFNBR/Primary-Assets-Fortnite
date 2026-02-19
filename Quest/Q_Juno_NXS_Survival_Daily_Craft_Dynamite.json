@@ -1,0 +1,215 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "Q_Juno_NXS_Survival_Daily_Craft_Dynamite",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "JunoNexusSurvivalDaily_Choice",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Q_Juno_NXS_Survival_Daily_Craft_Dynamite_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementBy": "EFortCraftObjectiveIncrementType::Single",
+            "bUseItemCount": false,
+            "ItemCrafted": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Juno.Item.WeaponConsumable.Dynamite"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Juno.Item.WeaponConsumable.Dynamite )"
+              }
+            },
+            "CraftedFormula": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "CraftedIngredients": [],
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 5,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Juno.GameMode.Survival"
+        },
+        {
+          "TagName": "Juno.QuestBlockingWorldSettingsTainted"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        2,
+        2,
+        0,
+        1,
+        3,
+        1,
+        2
+      ],
+      "AutoDescription": " ALL(  ALL( Product.Juno, Juno.GameMode.Survival ),  NONE( Juno.QuestBlockingWorldSettingsTainted ) )"
+    },
+    "Category": {
+      "DataTable": {
+        "ObjectName": "DataTable'QuestCategoryTable'",
+        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+      },
+      "RowName": "DailyQuests"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Q_Juno_NXS_Survival_Daily_Craft_Dynamite:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Quests/Q_Juno_NXS_Survival_Daily_Craft_Dynamite.2"
+      },
+      {
+        "ObjectName": "JunoQuestDefinitionComponent_ProductCompatibilityInjector_GameMode'Q_Juno_NXS_Survival_Daily_Craft_Dynamite:JunoQuestDefinitionComponent_ProductCompatibilityInjector_GameMode_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Quests/Q_Juno_NXS_Survival_Daily_Craft_Dynamite.3"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Q_Juno_NXS_Survival_Daily_Craft_Dynamite:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Quests/Q_Juno_NXS_Survival_Daily_Craft_Dynamite.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Q_Juno_NXS_Survival_Daily_Craft_Dynamite_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "43B05213465218C5D9179AAF4A44B5D2",
+      "SourceString": "Craft Dynamite",
+      "LocalizedString": "Craft Dynamite"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "2BEDDF0E46D01D91073A6CB2D3AB207B",
+      "SourceString": "Craft Dynamite",
+      "LocalizedString": "Craft Dynamite"
+    },
+    "DataList": [
+      {},
+      {
+        "Tags": [
+          "QuestCategory.Juno.Event.NXS.Survival.Daily.Choice",
+          "ChallengeCategory.XP"
+        ]
+      }
+    ]
+  }
+}

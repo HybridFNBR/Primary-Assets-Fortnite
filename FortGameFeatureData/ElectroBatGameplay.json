@@ -1,80 +1,19 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "ElectroBatGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddAttributesToPlayer",
+  "Name": "FortGameFeatureAction_AddAttributesToPlayer_0",
+  "Outer": "ElectroBatGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddAttributesToPlayer'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/ElectroBatGameplay/Levels/ElectroBatGameplay_LevelOverlay.ElectroBatGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/ElectroBatGameplay/ElectroBatReticleExtension.ElectroBatReticleExtension",
-      "SubPathString": ""
-    },
-    "DynamicUIDirectorClass": {
-      "AssetPathName": "/ElectroBatGameplay/UI/BP_UIDirector_ElectroBat.BP_UIDirector_ElectroBat_C",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/ElectroBatGameplay/HUD/ElectroBatWidgetRegistry.ElectroBatWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/ElectroBatGameplay/ElectroBat_DeathCauseData.ElectroBat_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
+    "Attributes": [
       {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S2",
-        "DisplayName": "Electro Bat",
-        "ConsoleCommands": [
-          "cheat givespecificitem /Script/FortniteGame.FortWeaponMeleeItemDefinition'/ElectroBatGameplay/Gameplay/WID_Athena_ElectroBat.WID_Athena_ElectroBat' 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ElectroBatGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/ElectroBatGameplay/ElectroBatGameplay.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddAttributeDefaults'ElectroBatGameplay:GameFeatureAction_AddAttributeDefaults_0'",
-        "ObjectPath": "/ElectroBatGameplay/ElectroBatGameplay.4"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddAttributesToPlayer'ElectroBatGameplay:FortGameFeatureAction_AddAttributesToPlayer_0'",
-        "ObjectPath": "/ElectroBatGameplay/ElectroBatGameplay.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddMovementModeExtension'ElectroBatGameplay:FortGameFeatureAction_AddMovementModeExtension_0'",
-        "ObjectPath": "/ElectroBatGameplay/ElectroBatGameplay.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+        "AttributeSet": {
+          "AssetPathName": "/Script/ElectroBatGameplayRuntime.ElectroBatAttributeSet",
           "SubPathString": ""
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        "AttributeInitKey": {
+          "AttributeInitCategory": "ElectroBat",
+          "AttributeInitSubCategory": "Defaults"
         }
       }
     ]

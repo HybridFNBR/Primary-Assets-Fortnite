@@ -1,67 +1,70 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "SpecterGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddConditionalComponents",
+  "Name": "FortGameFeatureAction_AddConditionalComponents_0",
+  "Outer": "SpecterGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddConditionalComponents'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/SpecterGameplay/UI/Specter_ReticleExtensionData.Specter_ReticleExtensionData",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/SpecterGameplay/HUD/SpecterGameplay_HUDWidgetRegistry.SpecterGameplay_HUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
+    "ComponentList": [
       {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'SpecterGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/SpecterGameplay/SpecterGameplay.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddMutators'SpecterGameplay:FortGameFeatureAction_AddMutators_0'",
-        "ObjectPath": "/SpecterGameplay/SpecterGameplay.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'SpecterGameplay:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/SpecterGameplay/SpecterGameplay.5"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddMovementModeExtension'SpecterGameplay:FortGameFeatureAction_AddMovementModeExtension_0'",
-        "ObjectPath": "/SpecterGameplay/SpecterGameplay.1"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddConditionalComponents'SpecterGameplay:FortGameFeatureAction_AddConditionalComponents_0'",
-        "ObjectPath": "/SpecterGameplay/SpecterGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'SpecterGameplay:GameFeatureAction_DataRegistrySource_1'",
-        "ObjectPath": "/SpecterGameplay/SpecterGameplay.6"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+        "PlaylistQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Plugin.Playlist.Exclude.SpecterHaunting"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            3,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " NONE( Plugin.Playlist.Exclude.SpecterHaunting )"
+        },
+        "ActorClass": {
+          "AssetPathName": "/SpecterGameplay/Gameplay/BP_SpecterPawn.BP_SpecterPawn_C",
           "SubPathString": ""
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
+        "ComponentClass": {
+          "AssetPathName": "/SpecterGameplay/Gameplay/BP_SpecterHauntingComponent.BP_SpecterHauntingComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "PlaylistQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Plugin.Playlist.Exclude.SpecterHaunting"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            3,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " NONE( Plugin.Playlist.Exclude.SpecterHaunting )"
+        },
+        "ActorClass": {
+          "AssetPathName": "/Game/Athena/PlayerPawn_Athena.PlayerPawn_Athena_C",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/SpecterGameplay/Gameplay/BP_SpecterHauntInteractionExtensionComponent.BP_SpecterHauntInteractionExtensionComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
       }
     ]
   }

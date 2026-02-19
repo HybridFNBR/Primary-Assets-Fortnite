@@ -1,0 +1,127 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_POI_Creatures_MediumDocile_MedPOI",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoScenarios/Assets/PrefabMap_Juno_POI.PrefabMap_Juno_POI",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoScenarios/Assets/ST_Juno_Encounter_POI_Creatures_Docile.ST_Juno_Encounter_POI_Creatures_Docile",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_POI_Encounter_Density'",
+          "ObjectPath": "/JunoScenarios/DataTables/CT_Juno_POI_Encounter_Density.0"
+        },
+        "RowName": "Juno.Encounter.Creature.Weight.Medium"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_POI_Encounter_Density'",
+          "ObjectPath": "/JunoScenarios/DataTables/CT_Juno_POI_Encounter_Density.0"
+        },
+        "RowName": "Juno.Encounter.Creature.Range.Medium"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_POI_Creature_SpawnCounts'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_Juno_POI_Creature_SpawnCounts.0"
+          },
+          "RowName": "Medium_SpawnCount_MediumPOI"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Var.Int.SpawnCount"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_POI_Creature_SpawnCounts'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_Juno_POI_Creature_SpawnCounts.0"
+          },
+          "RowName": "Medium_MinActorCount"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Var.Int.MinActorCount"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_POI_Creature_SpawnCounts'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_Juno_POI_Creature_SpawnCounts.0"
+          },
+          "RowName": "Medium_MaxActorCount"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Var.Int.MaxActorCount"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_POI_Scenario_Var_TagQuery'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_Juno_POI_Scenario_Var_TagQuery.0"
+          },
+          "RowName": "MediumDocileCreatureProviderQuery"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Var.TagQuery.Provider"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.POI.Creature.Docile",
+          "Juno.Encounters.POI.Size.Medium"
+        ]
+      }
+    ]
+  }
+}

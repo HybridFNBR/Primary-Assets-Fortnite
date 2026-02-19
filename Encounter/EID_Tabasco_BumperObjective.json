@@ -1,0 +1,68 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Tabasco_BumperObjective",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoTabascoBumperObjective/Encounters/Levels/PrefabMap_Juno_Tabasco_BumperObjectives.PrefabMap_Juno_Tabasco_BumperObjectives",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoTabascoBumperObjective/Encounters/ST/ST_Tabasco_BumperObjective.ST_Tabasco_BumperObjective",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Tabasco.Encounter.Success"
+      }
+    },
+    "PlayerFailureGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Tabasco.Encounter.Failure"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 0.0
+    },
+    "LWMDensityRange": {
+      "Value": 0.0
+    },
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.Sprinkles",
+          "Juno.Adventures.Tabasco.Encounters.Bumpers"
+        ]
+      }
+    ]
+  }
+}

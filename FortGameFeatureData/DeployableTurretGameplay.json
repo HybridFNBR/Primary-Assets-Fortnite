@@ -1,138 +1,80 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "DeployableTurretGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "DeployableTurretGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/DeployableTurretGameplay/Items/DeployableTurret/HUD/DeployableTurretGameplayHUDWidgetRegistry.DeployableTurretGameplayHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultLootTableData": {
-      "LootPackageData": {
-        "AssetPathName": "/DeployableTurretGameplay/DataTables/DeployableTurretGameplayLootPackagesData.DeployableTurretGameplayLootPackagesData",
-        "SubPathString": ""
-      }
-    },
-    "PlaylistOverrideLootTableData": [
-      {
-        "Key": {
-          "TagName": "Athena.Playlist.Deliver"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/DeployableTurretGameplay/DataTables/Deliver/OverrideLootPackageData_Deliver.OverrideLootPackageData_Deliver",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
-        }
-      }
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/DeployableTurretGameplay/DataTables/DeployableTurretGameplayGameData.DeployableTurretGameplayGameData",
-      "SubPathString": ""
-    },
-    "PlaylistOverrideGameDataMappings": [
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Plugin.Playlist.Arena"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "26.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
             }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            1,
-            1,
-            0
-          ],
-          "UserDescription": "",
-          "AutoDescription": " ANY( Plugin.Playlist.Arena )"
-        },
-        "OverrideGameData": {
-          "AssetPathName": "/DeployableTurretGameplay/DataTables/Comp/CompositeGD_DeployableTurret_Comp.CompositeGD_DeployableTurret_Comp",
-          "SubPathString": ""
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Plugin.Playlist.BattleLab"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Athena.Playlist.Mash"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Plugin.Playlist.BattleLab, Athena.Creative, Playlist.UGC.Core, Athena.Playlist.Mash ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      },
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Athena.Playlist.Mash"
-            }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            1,
-            1,
-            0
-          ],
-          "UserDescription": "",
-          "AutoDescription": " ANY( Athena.Playlist.Mash )"
-        },
-        "OverrideGameData": {
-          "AssetPathName": "/DeployableTurretGameplay/DataTables/Mash/Mash_Override_DeployableTurretGameplayGameData.Mash_Override_DeployableTurretGameplayGameData",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/DeployableTurretGameplay/DeployableTurret_DeathCauseData.DeployableTurret_DeathCauseData",
-      "SubPathString": ""
+      ]
     },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch4S4",
-        "DisplayName": "Give Deployable Turrets",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /DeployableTurretGameplay/Items/DeployableTurret/WID_Athena_Sentry_Turret_Deployable 2 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DeployableTurretGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/DeployableTurretGameplay/DeployableTurretGameplay.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'DeployableTurretGameplay:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/DeployableTurretGameplay/DeployableTurretGameplay.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Plugin.Playlist.BattleLab"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Creative"
+        },
+        {
+          "TagName": "Playlist.UGC.Core"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        3,
+        0,
+        1,
+        2
+      ],
+      "AutoDescription": " ANY(  ANY( Plugin.Playlist.BattleLab, Athena.Creative, Playlist.UGC.Core ) )"
+    }
   }
 }

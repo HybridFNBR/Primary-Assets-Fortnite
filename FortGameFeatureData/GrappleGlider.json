@@ -1,55 +1,68 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "GrappleGlider",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "GrappleGlider",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "DefaultGameData": {
-      "AssetPathName": "/GrappleGlider/DataTables/GrappleGliderGameData.GrappleGliderGameData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "S22",
-        "DisplayName": "Give Grapple Glider",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /GrappleGlider/Items/WID_GrappleGlider 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'GrappleGlider:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/GrappleGlider/GrappleGlider.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'GrappleGlider:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/GrappleGlider/GrappleGlider.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "22.40"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Athena.Creative"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playlist.ItemsTest, Athena.Creative ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.ItemsTest"
+        },
+        {
+          "TagName": "Athena.Creative"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Playlist.ItemsTest, Athena.Creative ) )"
+    }
   }
 }

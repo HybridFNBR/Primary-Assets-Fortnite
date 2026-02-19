@@ -1,56 +1,49 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "BRPlaylists",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "BRPlaylists",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BRPlaylists:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/BRPlaylists/BRPlaylists.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_SetPerPlatformCVar'BRPlaylists:GameFeatureAction_SetPerPlatformCVar_0'",
-        "ObjectPath": "/BRPlaylists/BRPlaylists.5"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'BRPlaylists:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/BRPlaylists/BRPlaylists.3"
-      },
-      {
-        "ObjectName": "FortUIGameFeatureAction_EmoteWheelConfigModifier'BRPlaylists:FortUIGameFeatureAction_EmoteWheelConfigModifier_0'",
-        "ObjectPath": "/BRPlaylists/BRPlaylists.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddInputContextMapping'BRPlaylists:GameFeatureAction_AddInputContextMapping_0'",
-        "ObjectPath": "/BRPlaylists/BRPlaylists.4"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "FortPlaylistAthena",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlaylistAthena",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Athena/Playlists"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist"
+              },
+              {
+                "TagName": "Athena.ExcludePlugin.BRPlaylists"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              2,
+              1,
+              0,
+              3,
+              1,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ALL( Athena.Playlist ),  NONE( Athena.ExcludePlugin.BRPlaylists ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    }
   }
 }

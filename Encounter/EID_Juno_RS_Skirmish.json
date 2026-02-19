@@ -1,0 +1,198 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_RS_Skirmish",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoOWEncSkirmish/Sprinkle/LI_RS_Skirmish.LI_RS_Skirmish",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoOWEncSkirmish/Sprinkle/ST_Juno_RS_Skirmish.ST_Juno_RS_Skirmish",
+      "SubPathString": ""
+    },
+    "SuccessRewards": [
+      {
+        "bUseLootSelectionTable": false,
+        "LootTierName": "Loot_JunoLootLlama_Bronze_T1",
+        "LootTierSelection": {
+          "ValueChoiceTable": {
+            "bUseDataRegistry": false,
+            "Table": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "VarName": {
+            "TagName": "None"
+          },
+          "SelectionQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "bShowVariableName": false
+        }
+      }
+    ],
+    "SuccessRewardBehavior": {
+      "RewardDirection": {
+        "X": 20.0,
+        "Y": 20.0,
+        "Z": 20.0
+      },
+      "RewardConeAngle": {
+        "Value": 120.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 800.0
+      }
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_RiftSprinkle_Attributes'",
+          "ObjectPath": "/JunoOpenWorldEncounters/DataTables/CT_Juno_RiftSprinkle_Attributes.0"
+        },
+        "RowName": "Juno.Encounters.RiftSprinkles.Weight.Medium"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_RiftSprinkle_Attributes'",
+          "ObjectPath": "/JunoOpenWorldEncounters/DataTables/CT_Juno_RiftSprinkle_Attributes.0"
+        },
+        "RowName": "Juno.Encounters.RiftSprinkles.Range"
+      }
+    },
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoOWEncSkirmish/DataTables/DT_Juno_RiftSprinkle_Skirmish_Selection_Hostile.DT_Juno_RiftSprinkle_Skirmish_Selection_Hostile",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.RiftSprinkle.Var.GameplayTagContainer.FactionType.1"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      },
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoOWEncSkirmish/DataTables/DT_Juno_RiftSprinkle_Skirmish_Selection_Docile.DT_Juno_RiftSprinkle_Skirmish_Selection_Docile",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.RiftSprinkle.Var.GameplayTagContainer.FactionType.2"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "ActorSpawnerDatas": [
+      {
+        "ActorSpawnerGuid": "5F96BCF7-465B1412-737A6F8A-701D0768",
+        "ActorDescription": {
+          "ActorDensityValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "DensityComputationRangeOverride": {
+            "Value": -1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "TagDensityRegistrations": [],
+          "PostDestructionTagDensityPersistenceDuration": [],
+          "ActorClass": {
+            "AssetPathName": "",
+            "SubPathString": ""
+          },
+          "SpawnerData": {
+            "AssetPathName": "",
+            "SubPathString": ""
+          },
+          "SpawnerDataTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "AISpawnerData.Type.Juno.Minifig.Villager"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( AISpawnerData.Type.Juno.Minifig.Villager )"
+          },
+          "SpawnerDataProxyTable": {
+            "ProxyTable": null,
+            "ProxyAsset": null
+          },
+          "bPreloadOnClient": false
+        }
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.Sprinkles"
+        ]
+      }
+    ]
+  }
+}

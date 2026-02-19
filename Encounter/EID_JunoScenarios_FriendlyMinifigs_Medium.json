@@ -1,0 +1,146 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_JunoScenarios_FriendlyMinifigs_Medium",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoScenarios/Assets/PrefabMap_Juno_POI.PrefabMap_Juno_POI",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoScenarios/Assets/ST_JunoScenarios_FriendlyMinifigs.ST_JunoScenarios_FriendlyMinifigs",
+      "SubPathString": ""
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_POI_Encounter_Density'",
+          "ObjectPath": "/JunoScenarios/DataTables/CT_Juno_POI_Encounter_Density.0"
+        },
+        "RowName": "Juno.Encounter.Faction.Weight.Medium"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_POI_Encounter_Density'",
+          "ObjectPath": "/JunoScenarios/DataTables/CT_Juno_POI_Encounter_Density.0"
+        },
+        "RowName": "Juno.Encounter.Faction.Range.Medium"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_KillAndLoot_Var_Integer'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_JunoScenarios_KillAndLoot_Var_Integer.0"
+          },
+          "RowName": "SpawnCount_Defender_Medium"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.EnemyPatrol.Group.Defender.SpawnCount"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_KillAndLoot_Var_Integer'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_JunoScenarios_KillAndLoot_Var_Integer.0"
+          },
+          "RowName": "SpawnCount_Melee_Medium"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.EnemyPatrol.Group.Melee.SpawnCount"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_KillAndLoot_Var_Integer'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_JunoScenarios_KillAndLoot_Var_Integer.0"
+          },
+          "RowName": "SpawnCount_Ranged_Medium"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.EnemyPatrol.Group.Ranged.SpawnCount"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_KillAndLoot_Var_Integer'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_JunoScenarios_KillAndLoot_Var_Integer.0"
+          },
+          "RowName": "ActorCount_Defender_Medium"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.EnemyPatrol.Group.Defender.ActorCount"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_KillAndLoot_Var_Integer'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_JunoScenarios_KillAndLoot_Var_Integer.0"
+          },
+          "RowName": "ActorCount_Melee_Medium"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.EnemyPatrol.Group.Melee.ActorCount"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_KillAndLoot_Var_Integer'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_JunoScenarios_KillAndLoot_Var_Integer.0"
+          },
+          "RowName": "ActorCount_Ranged_Medium"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.EnemyPatrol.Group.Ranged.ActorCount"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.POI.Size.Large",
+          "Juno.Adventures.Encounters.POI.Combat.LootAndKill"
+        ]
+      }
+    ]
+  }
+}

@@ -1,22 +1,81 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "MilitiaExpireUI",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "MilitiaExpireUI",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/MilitiaExpireUI/Mobile/HUD/HUDWidgetRegistry_MilitiaExpire.HUDWidgetRegistry_MilitiaExpire",
-      "SubPathString": ""
-    },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'MilitiaExpireUI:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/MilitiaExpireUI/MilitiaExpireUI.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'MilitiaExpireUI:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/MilitiaExpireUI/MilitiaExpireUI.2"
-      }
-    ]
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Plugin.Playlist.Arena, Athena.Playlist.Default, Athena.Playlist.Test ) )"
+          },
+          "bMigratedFromOldData": false
+        },
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
+    }
   }
 }

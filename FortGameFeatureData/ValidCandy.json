@@ -1,77 +1,89 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "ValidCandy",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "ValidCandy",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/ValidCandy/Levels/ValidCandy_LevelOverlay.ValidCandy_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PlaylistBaseCurveTableOverrides": [
-      {
-        "BaseTable": {
-          "AssetPathName": "/ValidCandy/DataTables/ValidCandy_GameplayData.ValidCandy_GameplayData",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": [
-          {
-            "Key": {
-              "TagName": "Athena.Playlist.Mash"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.40"
             },
-            "Value": {
-              "AssetPathName": "/ValidCandy/DataTables/Override_ValidCandy_GameplayData_Smash.Override_ValidCandy_GameplayData_Smash",
-              "SubPathString": ""
+            "ExclusiveMax": {
+              "VersionName": "38.00"
             }
-          }
-        ]
-      }
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7S1 Unvaults",
-        "DisplayName": "Zoey's Bubble Shield",
-        "ConsoleCommands": [
-          "cheat givespecificitem /ValidCandy/Gameplay/WID_Athena_ValidCandy.WID_Athena_ValidCandy 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ValidCandy:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/ValidCandy/ValidCandy.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'ValidCandy:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/ValidCandy/ValidCandy.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Consumable",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Mash"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Mash ) )"
+          },
+          "bMigratedFromOldData": false
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.40"
+            },
+            "ExclusiveMax": {
+              "VersionName": "39.50"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Plugin.Playlist.ForbiddenFruit"
+              },
+              {
+                "TagName": "Plugin.Playlist.BlastBerry"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              5,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Plugin.Playlist.Arena, Athena.Playlist.Default, Athena.Playlist.Test, Plugin.Playlist.ForbiddenFruit, Plugin.Playlist.BlastBerry ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    }
   }
 }

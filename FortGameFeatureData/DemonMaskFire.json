@@ -1,124 +1,100 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "DemonMaskFire",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "DemonMaskFire",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/DemonMaskFire/Levels/DemonMaskFire_LevelOverlay.DemonMaskFire_LevelOverlay",
-      "SubPathString": ""
-    },
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/DemonMaskFire/UI/Reticle/RE_DemonMask_Fire_ReticleExtensionData.RE_DemonMask_Fire_ReticleExtensionData",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/DemonMaskFire/DataTables/DemonMaskFireGameData.DemonMaskFireGameData",
-      "SubPathString": ""
-    },
-    "FortDeathCauseData": {
-      "AssetPathName": "/DemonMaskFire/DemonMaskFire_DeathCauseData.DemonMaskFire_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S1",
-        "DisplayName": "Give Demon Mask: Fire",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /DemonMaskFire/Gameplay/WID_DemonMask_Fire 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S1",
-        "DisplayName": "Give Demon Mask: Fire Mythic",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /DemonMaskFire/Gameplay/WID_DemonMask_Fire_Mythic 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DemonMaskFire:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/DemonMaskFire/DemonMaskFire.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'DemonMaskFire:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/DemonMaskFire/DemonMaskFire.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddUnableToPerformActionText'DemonMaskFire:FortGameFeatureAction_AddUnableToPerformActionText_0'",
-        "ObjectPath": "/DemonMaskFire/DemonMaskFire.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "33.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Plugin.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              6,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.ItemsTest, Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Plugin.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      },
-      {
-        "PrimaryAssetType": "Gadget",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortGadgetItemDefinition",
-          "SubPathString": ""
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Test"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "AthenaGadget",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
-          "SubPathString": ""
+        {
+          "TagName": "Athena.Playlist.ItemsTest"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Creative"
+        },
+        {
+          "TagName": "Playlist.UGC.Core"
+        },
+        {
+          "TagName": "Playlist.Experience.PlayOnly"
+        },
+        {
+          "TagName": "Plugin.Playlist.ForbiddenFruit"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.ItemsTest, Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Plugin.Playlist.ForbiddenFruit ) )"
+    }
   }
 }

@@ -1,0 +1,85 @@
+{
+  "Type": "JamInLobbyConfig",
+  "Name": "JamInLobbyConfig",
+  "Class": "UScriptClass'JamInLobbyConfig'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "JamInLobbyEnabledConditions": [
+      {
+        "TagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "FMJam.InLobby.Disabled"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "UserDescription": "Blanket disable tag",
+          "AutoDescription": " ANY( FMJam.InLobby.Disabled )"
+        },
+        "RequiredCVar": "",
+        "bAlwaysDisableJamInLobby": true
+      },
+      {
+        "TagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Product.Beanstalk"
+            },
+            {
+              "TagName": "Product.FNE.Beanstalk"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            1,
+            2,
+            0,
+            1
+          ],
+          "UserDescription": "Disable for Beanstock",
+          "AutoDescription": " ANY( Product.Beanstalk, Product.FNE.Beanstalk )"
+        },
+        "RequiredCVar": "",
+        "bAlwaysDisableJamInLobby": true
+      },
+      {
+        "TagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Product.Juno"
+            },
+            {
+              "TagName": "Product.FNE.Lime"
+            },
+            {
+              "TagName": "Product.Sprout"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            1,
+            3,
+            0,
+            1,
+            2
+          ],
+          "UserDescription": "Conditions for Juno",
+          "AutoDescription": " ANY( Product.Juno, Product.FNE.Lime, Product.Sprout )"
+        },
+        "RequiredCVar": "FMJam.InLobby.EnabledForJuno",
+        "bAlwaysDisableJamInLobby": false
+      }
+    ]
+  }
+}

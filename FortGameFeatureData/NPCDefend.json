@@ -1,20 +1,48 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "NPCDefend",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_InjectAIBehavior",
+  "Name": "FortGameFeatureAction_InjectAIBehavior_0",
+  "Outer": "NPCDefend",
+  "Class": "UScriptClass'FortGameFeatureAction_InjectAIBehavior'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
+    "InjectedBehaviors": [
       {
-        "ObjectName": "GameFeatureAction_AddComponents'NPCDefend:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/NPCDefend/NPCDefend.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_InjectAIBehavior'NPCDefend:FortGameFeatureAction_InjectAIBehavior_0'",
-        "ObjectPath": "/NPCDefend/NPCDefend.0"
+        "SpawnerTagsQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Behavior.Injection.NPC.Defend"
+            },
+            {
+              "TagName": "Behavior.Injection.NPC.Defend.Excluded"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            5,
+            2,
+            1,
+            1,
+            0,
+            3,
+            1,
+            1
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL(  ANY( Behavior.Injection.NPC.Defend ),  NONE( Behavior.Injection.NPC.Defend.Excluded ) )"
+        },
+        "InjectedBehaviors": [
+          {
+            "InjectionTags": [
+              "Behavior.Injection.Threatened.HighPriority"
+            ],
+            "InjectedBehavior": {
+              "AssetPathName": "/NPCDefend/Behavior/IB_NPC_Defend.IB_NPC_Defend_C",
+              "SubPathString": ""
+            }
+          }
+        ]
       }
     ]
   }

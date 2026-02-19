@@ -1,0 +1,151 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Tabasco_POIScenario_DPS_Shield_SMALL",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bUseLevel": false,
+    "ScenarioVolumeClass": {
+      "AssetPathName": "/JunoTabascoPOI_Scenarios/Encounters/EncounterVolumes/BP_Juno_EncounterVolume_Tabasco_POI.BP_Juno_EncounterVolume_Tabasco_POI_C",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoTabascoPOI_Scenarios/Encounters/ST/ST_TabascoPOIScenarios_SpawnInteract_PROTO.ST_TabascoPOIScenarios_SpawnInteract_PROTO",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Tabasco_POIScenario_Encounter_Density'",
+          "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/CT_Tabasco_POIScenario_Encounter_Density.0"
+        },
+        "RowName": "Tabasco.POIScenario.Encounter.Objective.SMALL.Weight"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Tabasco_POIScenario_Encounter_Density'",
+          "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/CT_Tabasco_POIScenario_Encounter_Density.0"
+        },
+        "RowName": "Tabasco.POIScenario.Encounter.Range"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_Configs'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_Configs.0"
+          },
+          "RowName": "Objective_DPS_Shield"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.DynamicEncounter"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_Int'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_Int.0"
+          },
+          "RowName": "DPS_Shield"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.Int"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_TagQuery'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_TagQuery.0"
+          },
+          "RowName": "Reward_Barrier"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.TagQuery"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_QuestDefinition'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_QuestDefinition.0"
+          },
+          "RowName": "DPSRegenBarrier"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.Quest"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_Boolean'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_Boolean.0"
+          },
+          "RowName": "bBubbleShield"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.Boolean.BubbleShield"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_Float'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_Float.0"
+          },
+          "RowName": "PostSpawnDelay"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.Float.PostWaveDelay"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Tabasco.POI.Objective.Type.DPSShield"
+        ]
+      }
+    ]
+  }
+}

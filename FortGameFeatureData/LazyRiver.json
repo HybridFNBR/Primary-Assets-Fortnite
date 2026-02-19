@@ -1,25 +1,51 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "LazyRiver",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "LazyRiver",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/LazyRiver/Levels/LazyRiver_LevelOverlay.LazyRiver_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'LazyRiver:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/LazyRiver/LazyRiver.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'LazyRiver:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/LazyRiver/LazyRiver.0"
-      }
-    ]
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Athena.Playlist.Test, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
+    }
   }
 }

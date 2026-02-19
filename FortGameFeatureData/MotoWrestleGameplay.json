@@ -1,136 +1,26 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "MotoWrestleGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddMovementModeExtension",
+  "Name": "FortGameFeatureAction_AddMovementModeExtension_3",
+  "Outer": "MotoWrestleGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/MotoWrestleGameplay/Levels/MotoWrestleGameplay_LevelOverlay.MotoWrestleGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/MotoWrestleGameplay/UI/DA_UI_MotoWrestle_Reticle.DA_UI_MotoWrestle_Reticle",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/MotoWrestleGameplay/HUD/MotoWrestleHUDWidgetRegistry.MotoWrestleHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PlaylistBaseCurveTableOverrides": [
+    "MovementModeRuntimeRefList": [
       {
-        "BaseTable": {
-          "AssetPathName": "/MotoWrestleGameplay/DataTables/MotoWrestleGameData.MotoWrestleGameData",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": [
-          {
-            "Key": {
-              "TagName": "Athena.Playlist.Habanero.CoffeeMuffin"
-            },
-            "Value": {
-              "AssetPathName": "/MotoWrestleGameplay/DataTables/CoffeeMuffin/CoffeeMuffin_Comp_MW_GD_Override.CoffeeMuffin_Comp_MW_GD_Override",
-              "SubPathString": ""
-            }
-          }
-        ]
-      }
-    ],
-    "DefaultLootTableData": {
-      "LootTierData": {
-        "AssetPathName": "/MotoWrestleGameplay/DataTables/MotoWrestleGameplayTierData.MotoWrestleGameplayTierData",
+        "AssetPathName": "/MotoWrestleGameplay/Gameplay/Abilities/Slide/MME/FMM_GuidedMotion_MotoWrestle_AirToGroundDash.FMM_GuidedMotion_MotoWrestle_AirToGroundDash_C",
         "SubPathString": ""
       },
-      "LootPackageData": {
-        "AssetPathName": "/MotoWrestleGameplay/DataTables/MotoWrestleGameplayLootPackages.MotoWrestleGameplayLootPackages",
+      {
+        "AssetPathName": "/MotoWrestleGameplay/Gameplay/Abilities/Slide/MME/FMM_GuidedMotion_MotoWrestle_Dash.FMM_GuidedMotion_MotoWrestle_Dash_C",
         "SubPathString": ""
-      }
-    },
-    "PlaylistOverrideLootTableData": [
-      {
-        "Key": {
-          "TagName": "Plugin.Playlist.BlastBerry"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/MotoWrestleGameplay/DataTables/LootTierData_LTMEmpty.LootTierData_LTMEmpty",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/MotoWrestleGameplay/DataTables/LootPackages_LTMEmpty.LootPackages_LTMEmpty",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
-        }
       },
       {
-        "Key": {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/MotoWrestleGameplay/DataTables/Comp/MotoWrestleGameplayTierData_Comp.MotoWrestleGameplayTierData_Comp",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/MotoWrestleGameplay/DataTables/Comp/MotoWrestleGameplayLootPackages_Comp.MotoWrestleGameplayLootPackages_Comp",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
-        }
-      }
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/MotoWrestleGameplay/MotoWrestle_DeathCauseData.MotoWrestle_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S2",
-        "DisplayName": "Sub-Zero",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /Script/FortniteGame.FortWeaponMeleeItemDefinition'/MotoWrestleGameplay/Items/WID_MotoWrestle.WID_MotoWrestle' 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'MotoWrestleGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/MotoWrestleGameplay/MotoWrestleGameplay.1"
+        "AssetPathName": "/MotoWrestleGameplay/Gameplay/Abilities/Slide/MME/FMM_GuidedMotion_MotoWrestle_DashToActor.FMM_GuidedMotion_MotoWrestle_DashToActor_C",
+        "SubPathString": ""
       },
       {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'MotoWrestleGameplay:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/MotoWrestleGameplay/MotoWrestleGameplay.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddMovementModeExtension'MotoWrestleGameplay:FortGameFeatureAction_AddMovementModeExtension_3'",
-        "ObjectPath": "/MotoWrestleGameplay/MotoWrestleGameplay.0"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
+        "AssetPathName": "/MotoWrestleGameplay/Gameplay/Abilities/WaterWalking/MME_MotoWrestle_WaterWalking.MME_MotoWrestle_WaterWalking_C",
+        "SubPathString": ""
       }
     ]
   }

@@ -1,52 +1,84 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "HealthShieldRegen",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_1",
+  "Outer": "HealthShieldRegen",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/HealthShieldRegen/DataTables/HealthShieldRegenGameData.HealthShieldRegenGameData",
-      "SubPathString": ""
-    },
-    "PlaylistOverrideGameDataMappings": [
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [],
-          "QueryTokenStream": [],
-          "UserDescription": "",
-          "AutoDescription": ""
-        },
-        "OverrideGameData": {
-          "AssetPathName": "",
-          "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "23.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.NoBuildingMaterials"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Athena.Playground"
+              },
+              {
+                "TagName": "Playlist.UGC"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.NoBuildingMaterials, Athena.Creative, Athena.Playground, Playlist.UGC ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      }
-    ],
-    "PlayerAbilitySet": {
-      "AssetPathName": "/HealthShieldRegen/Gameplay/AS_HealthShieldRegen.AS_HealthShieldRegen",
-      "SubPathString": ""
+      ]
     },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'HealthShieldRegen:FortGameFeatureAction_AddToPlaylists_1'",
-        "ObjectPath": "/HealthShieldRegen/HealthShieldRegen.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistry'HealthShieldRegen:GameFeatureAction_DataRegistry_0'",
-        "ObjectPath": "/HealthShieldRegen/HealthShieldRegen.3"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'HealthShieldRegen:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/HealthShieldRegen/HealthShieldRegen.4"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'HealthShieldRegen:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/HealthShieldRegen/HealthShieldRegen.1"
-      }
-    ]
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.NoBuildingMaterials"
+        },
+        {
+          "TagName": "Athena.Creative"
+        },
+        {
+          "TagName": "Athena.Playground"
+        },
+        {
+          "TagName": "Playlist.UGC"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.NoBuildingMaterials, Athena.Creative, Athena.Playground, Playlist.UGC ) )"
+    }
   }
 }

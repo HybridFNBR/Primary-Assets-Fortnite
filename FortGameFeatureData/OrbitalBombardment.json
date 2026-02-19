@@ -1,93 +1,92 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "OrbitalBombardment",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "OrbitalBombardment",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/OrbitalBombardment/Levels/OrbitalBombardment_LevelOverlay.OrbitalBombardment_LevelOverlay",
-      "SubPathString": ""
-    },
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/OrbitalBombardment/UI/RE_OrbitalBombardment_ReticleExtenstionData.RE_OrbitalBombardment_ReticleExtenstionData",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/OrbitalBombardment/HUD/OrbitalBombardmentHWR.OrbitalBombardmentHWR",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PlaylistBaseCurveTableOverrides": [
-      {
-        "BaseTable": {
-          "AssetPathName": "/OrbitalBombardment/DataTables/OrbitalBombardment_GameData.OrbitalBombardment_GameData",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": [
-          {
-            "Key": {
-              "TagName": "Athena.Playlist.Mash"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.10"
             },
-            "Value": {
-              "AssetPathName": "/OrbitalBombardment/DataTables/Mash/Composite_OrbitalBombardmentGameData_Mash.Composite_OrbitalBombardmentGameData_Mash",
-              "SubPathString": ""
+            "ExclusiveMax": {
+              "VersionName": "Future"
             }
-          }
-        ]
-      }
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/OrbitalBombardment/DataTables/OrbitalBombardment_GameData.OrbitalBombardment_GameData",
-      "SubPathString": ""
-    },
-    "FortDeathCauseData": {
-      "AssetPathName": "/OrbitalBombardment/UI/OrbitalBombardment_DeathCauseData.OrbitalBombardment_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S4",
-        "DisplayName": "Precision Strike - Orbital Bombardment",
-        "ConsoleCommands": [
-          "cheat givespecificitem /Script/FortniteGame.FortWeaponRangedItemDefinition'/OrbitalBombardment/Gameplay/WID_OrbitalBombardment_Designator.WID_OrbitalBombardment_Designator' 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'OrbitalBombardment:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/OrbitalBombardment/OrbitalBombardment.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddUnableToPerformActionText'OrbitalBombardment:FortGameFeatureAction_AddUnableToPerformActionText_0'",
-        "ObjectPath": "/OrbitalBombardment/OrbitalBombardment.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly )"
+          },
+          "bMigratedFromOldData": false
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.10"
+            },
+            "ExclusiveMax": {
+              "VersionName": "38.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Default )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Athena.Playlist.Default )"
+    }
   }
 }

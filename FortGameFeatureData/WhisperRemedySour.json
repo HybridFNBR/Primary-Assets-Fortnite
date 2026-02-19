@@ -1,58 +1,84 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "WhisperRemedySour",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "WhisperRemedySour",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/WhisperRemedySour/Levels/WhisperRemedySour_LevelOverlay.WhisperRemedySour_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/WhisperRemedySour/WhisperRemedySour_DeathCauseData.WhisperRemedySour_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S3",
-        "DisplayName": "Give WhisperRemedy Sour",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /WhisperRemedySour/Gameplay/WID_WhisperRemedy_Sour 3 3"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'WhisperRemedySour:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/WhisperRemedySour/WhisperRemedySour.0"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "36.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "37.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Plugin.Playlist.Arena, Athena.Playlist.Arena, Athena.Playlist.Test, Athena.Playlist.Default ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        {
+          "TagName": "Athena.Playlist.Arena"
+        },
+        {
+          "TagName": "Athena.Playlist.Test"
+        },
+        {
+          "TagName": "Athena.Playlist.Default"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ANY(  ANY( Plugin.Playlist.Arena, Athena.Playlist.Arena, Athena.Playlist.Test, Athena.Playlist.Default ) )"
+    }
   }
 }

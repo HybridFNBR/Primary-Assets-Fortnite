@@ -1,219 +1,29 @@
 {
-  "Type": "FortQuestItemDefinition_Athena",
-  "Name": "Quest_S39_BP_Reload_01",
-  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortQuestDefinitionComponent_DisplaySettings",
+  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
+  "Outer": "Quest_S39_BP_Reload_01",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "NotificationIconOverride": {
-      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Weapons/Items/S39/T_UI_QuestGiver_Blitz_ZenCrash_Landfoil.T_UI_QuestGiver_Blitz_ZenCrash_Landfoil",
-      "SubPathString": ""
+    "VisibilitySettings": {
+      "bOverrideBundleVisibilityData": true,
+      "QuestVisiblityData": {
+        "bIsVisibleWhenCompleted": true
+      },
+      "bCanShowTimer": false
     },
-    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
-    "CompletionPathResults": [
-      {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_S39_BP_Reload_01_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
-          {
-            "bIncrementByDistance": false,
-            "bUseDistance": true,
-            "bAllowSelfInflictedDamage": false,
-            "bRequireCriticalHit": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 15.0
-              }
-            },
-            "DamageSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamagedActor": {
-              "bCanGainProgressForThisObjective": false,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Homebase.Class"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Homebase.Class )"
-              }
-            },
-            "DamageType": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
-          }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
+    "ToastSettings": {
+      "bShouldDisplayStartingToast": false
+    },
+    "LockedQuestSettings": {
+      "OverrideData": {
+        "DisplayText": {
           "Namespace": "",
-          "Key": "B12A914D41E13D106B875CA8622DFD12",
-          "SourceString": "<Bold>Stuntman</>: Hit a player within 15 meters after busting through a door",
-          "LocalizedString": "<Bold>Stuntman</>: Hit a player within 15 meters after busting through a door"
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 3,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
+          "Key": "D6C64EE747B46AAE0124B4BCEDFDB050",
+          "SourceString": "Claim all Carter Wu outfits in Battle Pass to unlock the Quests",
+          "LocalizedString": "Claim all Carter Wu outfits in Battle Pass to unlock the Quests"
         }
       }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.BlastBerry"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Product.BlastBerry )"
-    },
-    "SortPriority": 1,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S39_BP_Reload_01:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/BlastBerry_BPQuests/Items/QuestItems/BattlepassQuests/Reload/Quest_S39_BP_Reload_01.0"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S39_BP_Reload_01:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/BlastBerry_BPQuests/Items/QuestItems/BattlepassQuests/Reload/Quest_S39_BP_Reload_01.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_ModularGates'Quest_S39_BP_Reload_01:FortQuestDefinitionComponent_ModularGates_0'",
-        "ObjectPath": "/BlastBerry_BPQuests/Items/QuestItems/BattlepassQuests/Reload/Quest_S39_BP_Reload_01.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_S39_BP_Reload_01_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "GrantToProfileType": "athena",
-    "ItemName": {
-      "Namespace": "",
-      "Key": "B12A914D41E13D106B875CA8622DFD12",
-      "SourceString": "<Bold>Stuntman</>: Hit a player within 15 meters after busting through a door",
-      "LocalizedString": "<Bold>Stuntman</>: Hit a player within 15 meters after busting through a door"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "B12A914D41E13D106B875CA8622DFD12",
-      "SourceString": "<Bold>Stuntman</>: Hit a player within 15 meters after busting through a door",
-      "LocalizedString": "<Bold>Stuntman</>: Hit a player within 15 meters after busting through a door"
-    },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "8EA942614C90DA1B0D924988EDB19619",
-      "SourceString": "This is easiest with a breakaway door, but we'll manage.",
-      "LocalizedString": "This is easiest with a breakaway door, but we'll manage."
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.BB.S39.BPQuests.Quests.Icons"
-        ]
-      }
-    ]
+    }
   }
 }

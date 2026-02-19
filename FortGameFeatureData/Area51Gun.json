@@ -1,78 +1,100 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "Area51Gun",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "Area51Gun",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/Area51Gun/HUD/HUDWidgetRegistry_Area51Gun.HUDWidgetRegistry_Area51Gun",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/Area51Gun/Area51Gun_DeathCauseData.Area51Gun_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH7S1",
-        "DisplayName": "Give Area51 Gun",
-        "ConsoleCommands": [
-          "cheat giveweapon WID_DragonCart_LightningGun_VR 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH7S1",
-        "DisplayName": "Give Area51 Gun <Mythic>",
-        "ConsoleCommands": [
-          "cheat giveweapon WID_DragonCart_LightningGun_UR 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH7S1",
-        "DisplayName": "Give Area51 Gun <Legendary>",
-        "ConsoleCommands": [
-          "cheat giveweapon WID_DragonCart_LightningGun_SR 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'Area51Gun:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/Area51Gun/Area51Gun.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'Area51Gun:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/Area51Gun/Area51Gun.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "40.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Plugin.Playlist.BlastBerry"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              7,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Plugin.Playlist.Arena, Athena.Playlist.Default, Athena.Playlist.Test, Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Plugin.Playlist.BlastBerry ) )"
+          },
+          "bMigratedFromOldData": false
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
+      ]
+    },
+    "OptionalAdditionalPluginsToActivate": [
+      "Area51GunUI"
     ]
   }
 }

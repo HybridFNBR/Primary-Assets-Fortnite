@@ -1,48 +1,61 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "RiftAnomalies_Ch7s1_Base",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "RiftAnomalies_Ch7s1_Base",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/RiftAnomalies_Ch7s1_Base/Levels/RiftAnomalies_Ch7s1_Base_LevelOverlay.RiftAnomalies_Ch7s1_Base_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'RiftAnomalies_Ch7s1_Base:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/RiftAnomalies_Ch7s1_Base/RiftAnomalies_Ch7s1_Base.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'RiftAnomalies_Ch7s1_Base:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/RiftAnomalies_Ch7s1_Base/RiftAnomalies_Ch7s1_Base.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'RiftAnomalies_Ch7s1_Base:GameFeatureAction_DataRegistrySource_1'",
-        "ObjectPath": "/RiftAnomalies_Ch7s1_Base/RiftAnomalies_Ch7s1_Base.3"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "None",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/CoreUObject.Object",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.RiftAnomalies.Ch7s1"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.RiftAnomalies.All"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              2,
+              0,
+              1,
+              3,
+              3,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.Default ),  NONE( Plugin.Playlist.Exclude.RiftAnomalies.Ch7s1, Plugin.Playlist.Exclude.RiftAnomalies.All, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    }
   }
 }

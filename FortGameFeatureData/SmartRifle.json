@@ -1,59 +1,96 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "SmartRifle",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "SmartRifle",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/SmartRifle/UI/DA_AutoAim_ReticleExtension.DA_AutoAim_ReticleExtension",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH7S1 Core Weapons",
-        "DisplayName": "Give Lock-On AR",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /SmartRifle/Gameplay/WID_Rifle_AutoAim_R 1 1",
-          "Cheat GiveSpecificItem /SmartRifle/Gameplay/WID_Rifle_AutoAim_SR 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'SmartRifle:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/SmartRifle/SmartRifle.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'SmartRifle:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/SmartRifle/SmartRifle.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.30"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Athena.Playground"
+              },
+              {
+                "TagName": "Athena.Playlist.Arena"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Plugin.Playlist.BlastBerry"
+              },
+              {
+                "TagName": "Plugin.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              9,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playground, Athena.Playlist.Arena, Plugin.Playlist.Arena, Playlist.UGC.Core, Athena.Playlist.Default, Playlist.Experience.PlayOnly, Plugin.Playlist.BlastBerry, Plugin.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Test"
+        },
+        {
+          "TagName": "Athena.Playlist.Default"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.Default ) )"
+    }
   }
 }

@@ -1,29 +1,42 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "LACombatInference",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "LACombatInference",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/LACombatInference/Levels/LACombatInference_LevelOverlay.LACombatInference_LevelOverlay",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Core"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Core )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
     },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'LACombatInference:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/LACombatInference/LACombatInference.3"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'LACombatInference:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/LACombatInference/LACombatInference.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'LACombatInference:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/LACombatInference/LACombatInference.0"
-      }
-    ]
+    "RequiredCVar": "LACombatInference.Enabled"
   }
 }

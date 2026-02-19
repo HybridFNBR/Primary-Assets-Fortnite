@@ -1,44 +1,88 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "Umbramolt_Fraternal",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_1",
+  "Outer": "Umbramolt_Fraternal",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'Umbramolt_Fraternal:FortGameFeatureAction_AddToPlaylists_1'",
-        "ObjectPath": "/Umbramolt_Fraternal/Umbramolt_Fraternal.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'Umbramolt_Fraternal:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/Umbramolt_Fraternal/Umbramolt_Fraternal.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AISpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "SpawnerDatas"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "39.20"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Play"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.Umbramolt"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3,
+              3,
+              1,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play ),  NONE( Plugin.Playlist.Exclude.Umbramolt ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+        },
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Play"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play )"
+    }
   }
 }

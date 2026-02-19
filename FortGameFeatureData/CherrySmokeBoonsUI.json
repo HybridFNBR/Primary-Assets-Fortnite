@@ -1,29 +1,96 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "CherrySmokeBoonsUI",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "CherrySmokeBoonsUI",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "UIExtensions": [
-      {
-        "Slot": "EUIExtensionSlot::AthenaInventoryGroupMinorMedallionHeader",
-        "WidgetClass": {
-          "AssetPathName": "/CherrySmokeBoonsUI/HUD/WBP_CherrySmokeBoons_InventoryBacking.WBP_CherrySmokeBoons_InventoryBacking_C",
-          "SubPathString": ""
-        },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      }
-    ],
-    "DynamicUIDirectorClass": {
-      "AssetPathName": "/CherrySmokeBoonsUI/CherrySmokeBoonsUIDirector.CherrySmokeBoonsUIDirector_C",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "36.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "37.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.HUD"
+              },
+              {
+                "TagName": "Athena.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              2,
+              1,
+              3,
+              0,
+              1,
+              2,
+              3,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playlist.Test, Athena.Playlist.Default, Plugin.Playlist.Arena ),  NONE( Athena.HUD, Athena.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
     },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CherrySmokeBoonsUI:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/CherrySmokeBoonsUI/CherrySmokeBoonsUI.0"
-      }
-    ]
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Test"
+        },
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        {
+          "TagName": "Athena.HUD"
+        },
+        {
+          "TagName": "Athena.Playlist.ForbiddenFruit"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        2,
+        1,
+        3,
+        0,
+        1,
+        2,
+        3,
+        2,
+        3,
+        4
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Playlist.Test, Athena.Playlist.Default, Plugin.Playlist.Arena ),  NONE( Athena.HUD, Athena.Playlist.ForbiddenFruit ) )"
+    }
   }
 }

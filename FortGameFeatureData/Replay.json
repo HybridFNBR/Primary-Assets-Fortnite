@@ -1,33 +1,37 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "Replay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "Replay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "UIExtensions": [
-      {
-        "Slot": "EUIExtensionSlot::ReplayPluginSettingTabSlot",
-        "WidgetClass": {
-          "AssetPathName": "/Replay/HUD/Lighting/FortReplayLightingSettingsTab.FortReplayLightingSettingsTab_C",
-          "SubPathString": ""
-        },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylistsInReplay'Replay:FortGameFeatureAction_AddToPlaylistsInReplay_0'",
-        "ObjectPath": "/Replay/Replay.1"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'Replay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/Replay/Replay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'Replay:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/Replay/Replay.3"
-      }
-    ]
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "34.30"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [
+              0,
+              1,
+              3,
+              0
+            ],
+            "UserDescription": "All playlists",
+            "AutoDescription": " NONE( )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
+    },
+    "RequiredCVar": "ReplayPlugin.ActiveAlways"
   }
 }

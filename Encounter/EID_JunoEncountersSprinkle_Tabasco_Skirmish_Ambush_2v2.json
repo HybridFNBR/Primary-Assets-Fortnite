@@ -1,0 +1,152 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_JunoEncountersSprinkle_Tabasco_Skirmish_Ambush_2v2",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoTabasco_LivingWorld/Levels/Juno_EncounterLevel_CS_Tabasco_Skirmish.Juno_EncounterLevel_CS_Tabasco_Skirmish",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersCombatSprinkle/Assets/ST_Juno_Encounter_CombatSprinkle_Skirmish_Ambush.ST_Juno_Encounter_CombatSprinkle_Skirmish_Ambush",
+      "SubPathString": ""
+    },
+    "SuccessRewardBehavior": {
+      "RewardDirection": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 500.0
+      },
+      "RewardConeAngle": {
+        "Value": 120.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 900.0
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'JunoEncountersCombatSprinkle_Tabasco'",
+          "ObjectPath": "/JunoTabasco_LivingWorld/CurveTables/JunoEncountersCombatSprinkle_Tabasco.0"
+        },
+        "RowName": "Juno.Sprinkle.Tabasco.Skirmish.DensityWeight_4"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'JunoEncountersCombatSprinkle_Tabasco'",
+          "ObjectPath": "/JunoTabasco_LivingWorld/CurveTables/JunoEncountersCombatSprinkle_Tabasco.0"
+        },
+        "RowName": "Juno.Sprinkle.Tabasco.Skirmish.DensityRange"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CS_Tabasco_Skirmish_SpawnCount'",
+            "ObjectPath": "/JunoTabasco_LivingWorld/DataTables/DT_CS_Tabasco_Skirmish_SpawnCount.0"
+          },
+          "RowName": "Skirmish.FactionA.SpawnCount.Medium"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionA"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CS_Tabasco_Skirmish_SpawnCount'",
+            "ObjectPath": "/JunoTabasco_LivingWorld/DataTables/DT_CS_Tabasco_Skirmish_SpawnCount.0"
+          },
+          "RowName": "Skirmish.FactionB.SpawnCount.Medium"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionB"
+        }
+      }
+    ],
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoTabasco_LivingWorld/DataTables/ActorDescriptions/Minifigs/DT_Juno_Encounters_AD_SelectionsRow_Minifig_Tabasco.DT_Juno_Encounters_AD_SelectionsRow_Minifig_Tabasco",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.LWMEncounter.Skirmish.FactionA"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Encounters.CombatSprinkle.FactionA"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Encounters.CombatSprinkle.FactionA )"
+        },
+        "bShowVariableName": true
+      },
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoTabasco_LivingWorld/DataTables/ActorDescriptions/Minifigs/DT_Juno_Encounters_AD_SelectionsRow_Minifig_Tabasco.DT_Juno_Encounters_AD_SelectionsRow_Minifig_Tabasco",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.LWMEncounter.Skirmish.FactionB"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Encounters.CombatSprinkle.FactionB"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Encounters.CombatSprinkle.FactionB )"
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.Sprinkles",
+          "Juno.Adventures.CombatSprinkles.Skirmish.Tabasco.Ambush.2v2"
+        ]
+      }
+    ]
+  }
+}

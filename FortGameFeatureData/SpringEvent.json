@@ -1,201 +1,76 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "SpringEvent",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "SpringEvent",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/SpringEvent/LevelOverlays/SpringEvent_LevelOverlay.SpringEvent_LevelOverlay",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "24.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Plugin.Playlist.BattleLab"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Plugin.Playlist.BattleLab, Athena.Creative, Playlist.UGC.Core ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
     },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/SpringEvent/HUD/SpringEventHUDWidgetRegistry.SpringEventHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PlaylistOverrideLootTableData": [
-      {
-        "Key": {
-          "TagName": "Athena.Playlist.Default"
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Plugin.Playlist.BattleLab"
         },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/SpringEvent/DataTables/AthenaGatheredItemLootTierData_Client_SpringEgg.AthenaGatheredItemLootTierData_Client_SpringEgg",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/SpringEvent/DataTables/AthenaGatheredItemLootPackages_Client_SpringEgg.AthenaGatheredItemLootPackages_Client_SpringEgg",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
-        }
-      }
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "S24",
-        "DisplayName": "Spring Chicken",
-        "ConsoleCommands": [
-          "cheat lwms NugS"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "S24",
-        "DisplayName": "Spring Event: Egg Launcher",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /Game/Athena/Items/Weapons/Seasonal/WID_Launcher_Egg_Athena_R_Ore_T03 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "S24",
-        "DisplayName": "Spring Event: Heal Egg",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /SpringEvent/Items/HealEgg/WID_Athena_SpringEgg_Heal 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "S24",
-        "DisplayName": "Spring Event: Hop Egg",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /SpringEvent/Items/HopEgg/WID_Athena_SpringEgg_Hops 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'SpringEvent:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/SpringEvent/SpringEvent.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'SpringEvent:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/SpringEvent/SpringEvent.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'SpringEvent:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/SpringEvent/SpringEvent.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AISpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
-          "SubPathString": ""
+        {
+          "TagName": "Athena.Creative"
         },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "NugS"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Playlist.UGC.Core"
         }
-      },
-      {
-        "PrimaryAssetType": "FortAIPawnCustomizationDefinition",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAIPawnCustomizationDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "AiPawnCustomization"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [
-          {
-            "AssetPathName": "/SpringEvent/Items/HealEgg/WID_Athena_SpringEgg_Heal.WID_Athena_SpringEgg_Heal",
-            "SubPathString": ""
-          },
-          {
-            "AssetPathName": "/SpringEvent/Items/HopEgg/WID_Athena_SpringEgg_Hops.WID_Athena_SpringEgg_Hops",
-            "SubPathString": ""
-          }
-        ],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "Ammo",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortAmmoItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "Consumable",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        3,
+        0,
+        1,
+        2
+      ],
+      "AutoDescription": " ANY(  ANY( Plugin.Playlist.BattleLab, Athena.Creative, Playlist.UGC.Core ) )"
+    }
   }
 }

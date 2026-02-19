@@ -1,0 +1,124 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_Shrine_Resource_Test",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoEncountersStatuePuzzle/Assets/PrefabMap_Juno_Shrine_Resource.PrefabMap_Juno_Shrine_Resource",
+      "SubPathString": ""
+    },
+    "SuccessRewards": [
+      {
+        "bUseLootSelectionTable": false,
+        "LootTierName": "None",
+        "LootTierSelection": {
+          "ValueChoiceTable": {
+            "bUseDataRegistry": false,
+            "Table": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "VarName": {
+            "TagName": "None"
+          },
+          "SelectionQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "bShowVariableName": false
+        }
+      }
+    ],
+    "SuccessRewardBehavior": {
+      "RewardOffset": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 100.0
+      },
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.Llama.ConeAngle"
+        }
+      },
+      "RewardFlingMagnitude": {
+        "Value": 900.0,
+        "Curve": {
+          "RowName": "Juno.Encounter.Llama.FlingMagnitude"
+        }
+      }
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_EncounterVars_ItemDef_Shrine'",
+            "ObjectPath": "/JunoEncountersStatuePuzzle/DataTables/Juno_EncounterVars_ItemDef_Shrine.0"
+          },
+          "RowName": "Resource_Test"
+        },
+        "VarName": {
+          "TagName": "Encounter.Variable.Juno.Shrine.Resource.Hint"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_EncounterVars_TagQuery_Shrine'",
+            "ObjectPath": "/JunoEncountersStatuePuzzle/DataTables/Juno_EncounterVars_TagQuery_Shrine.0"
+          },
+          "RowName": "Resource_Test"
+        },
+        "VarName": {
+          "TagName": "Encounter.Variable.Juno.Shrine.Resource.Solution"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_EncounterVars_Int_Shrine'",
+            "ObjectPath": "/JunoEncountersStatuePuzzle/DataTables/Juno_EncounterVars_Int_Shrine.0"
+          },
+          "RowName": "Common"
+        },
+        "VarName": {
+          "TagName": "Encounter.Variable.Juno.Shrine.Resource.Count"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_EncounterVars_PrefabActorClass'",
+            "ObjectPath": "/JunoEncountersStatuePuzzle/DataTables/Juno_EncounterVars_PrefabActorClass.0"
+          },
+          "RowName": "WolfEncounter"
+        },
+        "VarName": {
+          "TagName": "Encounter.Variable.Juno.Shrine.Resource.Prefab"
+        }
+      }
+    ]
+  }
+}

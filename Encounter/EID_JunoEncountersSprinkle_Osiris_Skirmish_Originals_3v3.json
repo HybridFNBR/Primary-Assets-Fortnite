@@ -1,0 +1,132 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_JunoEncountersSprinkle_Osiris_Skirmish_Originals_3v3",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoEncountersCombatSprinkle_Osiris/Levels/Juno_EncounterLevel_CS_Osiris_Skirmish.Juno_EncounterLevel_CS_Osiris_Skirmish",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersCombatSprinkle/Assets/ST_Juno_Encounter_CombatSprinkle_Skirmish_Far.ST_Juno_Encounter_CombatSprinkle_Skirmish_Far",
+      "SubPathString": ""
+    },
+    "SuccessRewardBehavior": {
+      "RewardDirection": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 500.0
+      },
+      "RewardConeAngle": {
+        "Value": 120.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 900.0
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'JunoEncountersCombatSprinkle_Osiris_GameData'",
+          "ObjectPath": "/JunoEncountersCombatSprinkle_Osiris/DataTables/JunoEncountersCombatSprinkle_Osiris_GameData.0"
+        },
+        "RowName": "Juno.Sprinkle.Osiris.Skirmish.DensityWeight_6"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'JunoEncountersCombatSprinkle_Osiris_GameData'",
+          "ObjectPath": "/JunoEncountersCombatSprinkle_Osiris/DataTables/JunoEncountersCombatSprinkle_Osiris_GameData.0"
+        },
+        "RowName": "Juno.Sprinkle.Osiris.Skirmish.DensityRange"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CS_Osiris_Skirmish_SpawnCount'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle_Osiris/DataTables/DT_CS_Osiris_Skirmish_SpawnCount.0"
+          },
+          "RowName": "Skirmish.FactionA.SpawnCount.Large"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionA"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CS_Osiris_Skirmish_SpawnCount'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle_Osiris/DataTables/DT_CS_Osiris_Skirmish_SpawnCount.0"
+          },
+          "RowName": "Skirmish.FactionB.SpawnCount.Large"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionB"
+        }
+      }
+    ],
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoEncountersCombatSprinkle_Osiris/DataTables/ActorDescription/DT_CS_Osiris_Skirmish_Enemies_Originals_AD_SelectionsRow.DT_CS_Osiris_Skirmish_Enemies_Originals_AD_SelectionsRow",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.LWMEncounter.Skirmish.FactionA"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      },
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoEncountersCombatSprinkle_Osiris/DataTables/ActorDescription/DT_CS_Osiris_Skirmish_Imperials_AD_SelectionsRow.DT_CS_Osiris_Skirmish_Imperials_AD_SelectionsRow",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.LWMEncounter.Skirmish.FactionB"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.Sprinkles",
+          "Juno.Adventures.CombatSprinkles.Skirmish.Osiris.Originals.3v3"
+        ]
+      }
+    ]
+  }
+}

@@ -1,306 +1,51 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "StrideMiceGame",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddMutators",
+  "Name": "FortGameFeatureAction_AddMutators_0",
+  "Outer": "StrideMiceGame",
+  "Class": "UScriptClass'FortGameFeatureAction_AddMutators'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/StrideMiceGame/Common/StrideMiceGame_LevelOverlay.StrideMiceGame_LevelOverlay",
-      "SubPathString": ""
-    },
-    "DynamicUIDirectorClass": {
-      "AssetPathName": "/StrideMiceGame/Studio/UI/Actor/BP_UI_Studio_Director.BP_UI_Studio_Director_C",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/StrideMiceGame/HUD/StrideMiceHUDWidgetRegistry.StrideMiceHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
+    "MutatorsToAdd": [
       {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'StrideMiceGame:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.1"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'StrideMiceGame:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.8"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_PrimaryAssetBehaviors'StrideMiceGame:FortGameFeatureAction_PrimaryAssetBehaviors_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.3"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddSubmix'StrideMiceGame:GameFeatureAction_AddSubmix_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.10"
-      },
-      {
-        "ObjectName": "GameFeatureAction_ActivateControlBusMix'StrideMiceGame:GameFeatureAction_ActivateControlBusMix_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.7"
-      },
-      null,
-      {
-        "ObjectName": "GameFeatureAction_DataRegistry'StrideMiceGame:GameFeatureAction_DataRegistry_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.11"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'StrideMiceGame:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.12"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddMutators'StrideMiceGame:FortGameFeatureAction_AddMutators_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_RegisterDefaultHeroTypeFactory'StrideMiceGame:FortGameFeatureAction_RegisterDefaultHeroTypeFactory_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.4"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_GameplayOverrideProductTag'StrideMiceGame:FortGameFeatureAction_GameplayOverrideProductTag_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddCosmeticGatingRules'StrideMiceGame:GameFeatureAction_AddCosmeticGatingRules_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.9"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_SetAccountItemDefinitionOverrideManager'StrideMiceGame:FortGameFeatureAction_SetAccountItemDefinitionOverrideManager_0'",
-        "ObjectPath": "/StrideMiceGame/StrideMiceGame.5"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "FortPlaylistAthena",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlaylistAthena",
+        "Target": "EMutatorAddTarget::FortGameStateAthena",
+        "Mutator": {
+          "AssetPathName": "/StrideMiceGame/Common/Blueprints/Mutators/BP_SE_StrideMice_BlockInventory.BP_SE_StrideMice_BlockInventory_C",
           "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Playlist"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
       },
       {
-        "PrimaryAssetType": "FMJamSong",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FMJamCatalogRuntime.FMJamSong",
+        "Target": "EMutatorAddTarget::FortGameStateAthena",
+        "Mutator": {
+          "AssetPathName": "/StrideMiceGame/Common/Blueprints/Mutators/BP_SE_StrideMice_BlockReplayRecording.BP_SE_StrideMice_BlockReplayRecording_C",
           "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Studio/Audio/JAM_Songs"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 20,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
       },
       {
-        "PrimaryAssetType": "FMJamMiceLoop",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FMJamCatalogRuntime.FMJamLoop",
+        "Target": "EMutatorAddTarget::FortGameModeAthena",
+        "Mutator": {
+          "AssetPathName": "/Script/StrideMiceGameRuntime.FortAthenaMutator_StrideMicePlayerPawn",
           "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Studio/Audio/JAM_Songs"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 20,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
       },
       {
-        "PrimaryAssetType": "FragmentPrimaryDataAsset",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/StrideMiceGameRuntime.FragmentPrimaryDataAsset",
+        "Target": "EMutatorAddTarget::FortGameStateAthena",
+        "Mutator": {
+          "AssetPathName": "/StrideMiceGame/Common/Blueprints/Mutators/BP_SE_StrideMice_BlockTeamIndicators.BP_SE_StrideMice_BlockTeamIndicators_C",
           "SubPathString": ""
-        },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "/StrideMiceGame/Studio/UI/Data/Fragments"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 20,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
       },
       {
-        "PrimaryAssetType": "Quest",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortQuestItemDefinition",
+        "Target": "EMutatorAddTarget::FortGameStateAthena",
+        "Mutator": {
+          "AssetPathName": "/Script/StrideMiceGameRuntime.FortAthenaMutator_StrideMicePreventInventoryComponent",
           "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
       },
       {
-        "PrimaryAssetType": "ChallengeBundle",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortChallengeBundleItemDefinition",
+        "Target": "EMutatorAddTarget::FortGameStateAthena",
+        "Mutator": {
+          "AssetPathName": "/StrideMiceGame/Common/Blueprints/Mutators/BP_SE_StrideMice_SquadNames.BP_SE_StrideMice_SquadNames_C",
           "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "ChallengeBundleSchedule",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortChallengeBundleScheduleDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "QuestCategoryData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.QuestCategoryData",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "InventoryTransformDefinition",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortInventoryTransformDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "Hero",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortHeroType",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "JunoContent"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 5,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "PrimaryAssetLabel",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/Engine.PrimaryAssetLabel",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": true,
-        "Directories": [],
-        "SpecificAssets": [
-          {
-            "AssetPathName": "/StrideMiceGame/Studio/UI/Input/PAL_Studio_UI_Input.PAL_Studio_UI_Input",
-            "SubPathString": ""
-          }
-        ],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
       }
     ]

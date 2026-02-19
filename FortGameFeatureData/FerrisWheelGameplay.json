@@ -1,29 +1,57 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "FerrisWheelGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "FerrisWheelGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/FerrisWheelGameplay/Levels/FerrisWheelGameplay_LevelOverlay.FerrisWheelGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'FerrisWheelGameplay:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/FerrisWheelGameplay/FerrisWheelGameplay.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'FerrisWheelGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/FerrisWheelGameplay/FerrisWheelGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'FerrisWheelGameplay:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/FerrisWheelGameplay/FerrisWheelGameplay.3"
-      }
-    ]
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.FerrisWheelGameplay"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              3,
+              0,
+              1,
+              2,
+              3,
+              1,
+              3
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Athena.Playlist.Test, Plugin.Playlist.Arena ),  NONE( Plugin.Playlist.Exclude.FerrisWheelGameplay ) )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
+    }
   }
 }

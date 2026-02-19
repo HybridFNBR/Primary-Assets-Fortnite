@@ -1,33 +1,108 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "MedallionUI",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "MedallionUI",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "UIExtensions": [
-      {
-        "Slot": "EUIExtensionSlot::RightOfTeammateStatus",
-        "WidgetClass": {
-          "AssetPathName": "/MedallionUI/HUD/WBP_Medallion_Squad_PlayerInfoExtension.WBP_Medallion_Squad_PlayerInfoExtension_C",
-          "SubPathString": ""
-        },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      }
-    ],
-    "DynamicUIDirectorClass": {
-      "AssetPathName": "/MedallionUI/BP_Medallion_DynamicUIDirector.BP_Medallion_DynamicUIDirector_C",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "28.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Plugin.Playlist.ForbiddenFruit"
+              },
+              {
+                "TagName": "SpecialEvent.SkyMango"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.BlastBerry"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              6,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              3,
+              1,
+              6
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.ItemsTest, Plugin.Playlist.ForbiddenFruit, SpecialEvent.SkyMango, Athena.Playlist.Default, Plugin.Playlist.Arena ),  NONE( Athena.Playlist.BlastBerry ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
     },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'MedallionUI:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/MedallionUI/MedallionUI.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'MedallionUI:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/MedallionUI/MedallionUI.2"
-      }
-    ]
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Test"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        {
+          "TagName": "Athena.Playlist.ItemsTest"
+        },
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Plugin.Playlist.ForbiddenFruit"
+        },
+        {
+          "TagName": "Athena.Playlist.BlastBerry"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        1,
+        5,
+        0,
+        1,
+        2,
+        3,
+        4,
+        3,
+        1,
+        5
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Plugin.Playlist.Arena, Athena.Playlist.ItemsTest, Athena.Playlist.Default, Plugin.Playlist.ForbiddenFruit ),  NONE( Athena.Playlist.BlastBerry ) )"
+    }
   }
 }

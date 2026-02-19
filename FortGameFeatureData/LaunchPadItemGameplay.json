@@ -1,130 +1,126 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "LaunchPadItemGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "LaunchPadItemGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/LaunchPadItemGameplay/HUD/HUDWidgetRegistry_LaunchPad.HUDWidgetRegistry_LaunchPad",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "22.10"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Plugin.Playlist.BattleLab"
+              },
+              {
+                "TagName": "Plugin.Playlist.BlastBerry"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playlist.ItemsTest, Athena.Creative, Plugin.Playlist.BattleLab, Plugin.Playlist.BlastBerry ) )"
+          },
+          "bMigratedFromOldData": true
+        },
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
     },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "S22",
-        "DisplayName": "Launch Pad",
-        "ConsoleCommands": [
-          "GiveSpecificItem /LaunchPadItemGameplay/Items/WID/WID_Athena_LaunchPadThrown.WID_Athena_LaunchPadThrown 2 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH6S4",
-        "DisplayName": "Super Launch Pad",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /LaunchPadItemGameplay/Items/WID/WID_Athena_LaunchPadThrown_Super.WID_Athena_LaunchPadThrown_Super 2 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'LaunchPadItemGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/LaunchPadItemGameplay/LaunchPadItemGameplay.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'LaunchPadItemGameplay:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/LaunchPadItemGameplay/LaunchPadItemGameplay.1"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'LaunchPadItemGameplay:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/LaunchPadItemGameplay/LaunchPadItemGameplay.3"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Consumable",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+        {
+          "TagName": "Athena.Playlist.ItemsTest"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "FortExposedAssetList",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
-          "SubPathString": ""
+        {
+          "TagName": "Plugin.Playlist.Arena"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "UEFNExposedAssets"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 20,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "Trap",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortTrapItemDefinition",
-          "SubPathString": ""
+        {
+          "TagName": "Athena.Creative"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Plugin.Playlist.BattleLab"
+        },
+        {
+          "TagName": "Plugin.Playlist.BlastBerry"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Plugin.Playlist.Arena, Athena.Creative, Plugin.Playlist.BattleLab, Plugin.Playlist.BlastBerry ) )"
+    }
   }
 }

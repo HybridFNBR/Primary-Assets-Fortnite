@@ -1,0 +1,86 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_JunoScenarios_Boss_Neptune",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoScenarios_Boss_Neptune/Assets/PrefabMap_JunoScenarios_Boss_Neptune.PrefabMap_JunoScenarios_Boss_Neptune",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoScenarios_Boss_Neptune/Assets/ST_JunoScenarios_Boss_Neptune.ST_JunoScenarios_Boss_Neptune",
+      "SubPathString": ""
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_JunoScenarios_Boss_Neptune_ScenarioVars'",
+          "ObjectPath": "/JunoScenarios_Boss_Neptune/DataTables/CT_JunoScenarios_Boss_Neptune_ScenarioVars.0"
+        },
+        "RowName": "LWMDensityWeight_BossNeptune"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_JunoScenarios_Boss_Neptune_ScenarioVars'",
+          "ObjectPath": "/JunoScenarios_Boss_Neptune/DataTables/CT_JunoScenarios_Boss_Neptune_ScenarioVars.0"
+        },
+        "RowName": "LWMDensityRange_BossNeptune"
+      }
+    },
+    "bUseGlobalLWMBudget": true,
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_Boss_Neptune_Var_TagQuery'",
+            "ObjectPath": "/JunoScenarios_Boss_Neptune/DataTables/DT_JunoScenarios_Boss_Neptune_Var_TagQuery.0"
+          },
+          "RowName": "BossNeptune"
+        },
+        "VarName": {
+          "TagName": "Juno.Scenarios.Shared.Var.TagQuery.1"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Neptune.Encounter.StormKing"
+        ]
+      }
+    ]
+  }
+}

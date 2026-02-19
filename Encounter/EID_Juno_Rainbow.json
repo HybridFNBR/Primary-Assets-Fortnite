@@ -1,0 +1,93 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_Rainbow",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoEncountersRainbow/PrefabMap_Juno_Rainbow.PrefabMap_Juno_Rainbow",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersRainbow/ST_Juno_Rainbow.ST_Juno_Rainbow",
+      "SubPathString": ""
+    },
+    "SuccessRewards": [
+      {
+        "bUseLootSelectionTable": true,
+        "LootTierName": "None",
+        "LootTierSelection": {
+          "ValueChoiceTable": {
+            "bUseDataRegistry": true,
+            "Table": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "RegistryType": {
+              "Name": "Juno.Encounters.Rainbow.LootTables"
+            }
+          },
+          "VarName": {
+            "TagName": "None"
+          },
+          "SelectionQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "bShowVariableName": false
+        }
+      }
+    ],
+    "SuccessRewardBehavior": {
+      "RewardOffset": {
+        "X": 0.0,
+        "Y": 144.0,
+        "Z": 100.0
+      },
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": -0.1,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.Rainbow.ConeAngle"
+        }
+      },
+      "RewardFlingMagnitude": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.Rainbow.FlingMagnitude"
+        }
+      }
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 0.0
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.Rainbow"
+        ]
+      }
+    ]
+  }
+}

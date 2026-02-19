@@ -1,107 +1,47 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "DragonCartLoot",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "DragonCartLoot",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/DragonCartLoot/Levels/DragonCartLoot_LevelOverlay.DragonCartLoot_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultLootTableData": {
-      "LootTierData": {
-        "AssetPathName": "/DragonCartLoot/DataTables/DragonCartLootTierData_Client.DragonCartLootTierData_Client",
-        "SubPathString": ""
-      },
-      "LootPackageData": {
-        "AssetPathName": "/DragonCartLoot/DataTables/DragonCartLootPackages_Client.DragonCartLootPackages_Client",
-        "SubPathString": ""
-      },
-      "LootGroupData": [
+    "Playlists": {
+      "Entries": [
         {
-          "AssetPathName": "/DragonCartLoot/DragonCartLootGroupData.DragonCartLootGroupData",
-          "SubPathString": ""
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
         }
       ]
-    },
-    "PlaylistOverrideLootTableData": [
-      {
-        "Key": {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/DragonCartLoot/DataTables/Comp/DragonCartLoot_Composite_LTD_Comp.DragonCartLoot_Composite_LTD_Comp",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/DragonCartLoot/DataTables/Comp/DragonCartLoot_Composite_LP_Comp.DragonCartLoot_Composite_LP_Comp",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
-        }
-      },
-      {
-        "Key": {
-          "TagName": "Plugin.Playlist.Delulu"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/DragonCartLoot/DataTables/Delulu/DeluluLootTier_Comp.DeluluLootTier_Comp",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/DragonCartLoot/DataTables/Delulu/DeluluLootPackage_Comp.DeluluLootPackage_Comp",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
-        }
-      },
-      {
-        "Key": {
-          "TagName": "Athena.Playlist.NoBuildBR.Comp"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/DragonCartLoot/DataTables/Comp/DragonCartLoot_Composite_LTD_Comp.DragonCartLoot_Composite_LTD_Comp",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/DragonCartLoot/DataTables/NoBuildComp/DragonCartLoot_Composite_LP_Comp_NoBuild.DragonCartLoot_Composite_LP_Comp_NoBuild",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
-        }
-      },
-      {
-        "Key": {
-          "TagName": "Athena.Playlist.NoBuildBR"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/DragonCartLoot/DataTables/NoBuildBR/AthenaCompositeLTD_NoBuildBR.AthenaCompositeLTD_NoBuildBR",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/DragonCartLoot/DataTables/NoBuildBR/AthenaCompositeLP_NoBuildBR.AthenaCompositeLP_NoBuildBR",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
-        }
-      }
-    ],
-    "WeaponUpgradesDataTable": {
-      "AssetPathName": "/DragonCartLoot/DataTables/DragonCartLootWumbaData.DragonCartLootWumbaData",
-      "SubPathString": ""
-    },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DragonCartLoot:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/DragonCartLoot/DragonCartLoot.0"
-      }
-    ]
+    }
   }
 }

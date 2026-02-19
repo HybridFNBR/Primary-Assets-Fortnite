@@ -1,74 +1,68 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "ChronoPlayerAugments",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "ChronoPlayerAugments",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/ChronoPlayerAugments/HUD/ChronoPlayerAugmentsHUDWidgetRegistry.ChronoPlayerAugmentsHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "DefaultGameData": {
-      "AssetPathName": "/ChronoPlayerAugments/DataTables/ChronoPlayerAugmentsGameData.ChronoPlayerAugmentsGameData",
-      "SubPathString": ""
-    },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ChronoPlayerAugments:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/ChronoPlayerAugments/ChronoPlayerAugments.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'ChronoPlayerAugments:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/ChronoPlayerAugments/ChronoPlayerAugments.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'ChronoPlayerAugments:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/ChronoPlayerAugments/ChronoPlayerAugments.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "PlayerAugment",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "25.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playground"
+              },
+              {
+                "TagName": "Athena.Creative"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playground, Athena.Creative ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      },
-      {
-        "PrimaryAssetType": "PlayerAugmentsPersistence",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentsAccountItemDefinition",
-          "SubPathString": ""
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playground"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "PersistenceItems"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Creative"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Playground, Athena.Creative ) )"
+    }
   }
 }

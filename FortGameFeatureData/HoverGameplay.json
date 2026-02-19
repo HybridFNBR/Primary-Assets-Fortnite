@@ -1,101 +1,106 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "HoverGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "HoverGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/HoverGameplay/Levels/HoverGameplay_LevelOverlay.HoverGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/HoverGameplay/Input/Mobile/HoverHUDWidgetRegistry.HoverHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "ContextualTutorials": [
-      {
-        "AssetPathName": "/HoverGameplay/Tutorial/HoverGameplay_TutorialData_HoverCancel.HoverGameplay_TutorialData_HoverCancel",
-        "SubPathString": ""
-      },
-      {
-        "AssetPathName": "/HoverGameplay/Tutorial/HoverGameplay_TutorialData_HoverSprint.HoverGameplay_TutorialData_HoverSprint",
-        "SubPathString": ""
-      }
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Evergreen",
-        "DisplayName": "Jetpack",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /Game/Athena/Items/Gameplay/BackPacks/BoostJumpPack/AGID_BoostJumpPack_VR 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'HoverGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/HoverGameplay/HoverGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'HoverGameplay:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/HoverGameplay/HoverGameplay.3"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddInputContextMapping'HoverGameplay:GameFeatureAction_AddInputContextMapping_0'",
-        "ObjectPath": "/HoverGameplay/HoverGameplay.4"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddAttributeDefaults'HoverGameplay:GameFeatureAction_AddAttributeDefaults_0'",
-        "ObjectPath": "/HoverGameplay/HoverGameplay.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "31.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Playlist.Experience.PlayOnly, Athena.Creative, Playlist.UGC.Core ) )"
+          },
+          "bMigratedFromOldData": true
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.20"
+            },
+            "ExclusiveMax": {
+              "VersionName": "37.40"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      },
-      {
-        "PrimaryAssetType": "AthenaGadget",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
-          "SubPathString": ""
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Playlist.Experience.PlayOnly"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Creative"
+        },
+        {
+          "TagName": "Playlist.UGC.Core"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        3,
+        0,
+        1,
+        2
+      ],
+      "AutoDescription": " ANY(  ANY( Playlist.Experience.PlayOnly, Athena.Creative, Playlist.UGC.Core ) )"
+    }
   }
 }

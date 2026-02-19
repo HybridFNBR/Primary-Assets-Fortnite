@@ -1,0 +1,69 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_JunoScenarios_EIH_Klombo_Golem",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoScenarios_Relic_EIH_Klombo/Levels/Juno_EncounterLevel_JunoScenarios_EIH_Klombo.Juno_EncounterLevel_JunoScenarios_EIH_Klombo",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoScenarios_Relic_EIH_Klombo/StateTrees/ST_Juno_JunoScenarios_EIH_Klombo.ST_Juno_JunoScenarios_EIH_Klombo",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'JunoActorDensityValueData'",
+          "ObjectPath": "/JunoAI/CurveTables/JunoActorDensityValueData.0"
+        },
+        "RowName": "Juno.ActorDensityValue.Brute"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 10000.0
+    },
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.POI.Osiris.Pollen"
+        ]
+      }
+    ]
+  }
+}

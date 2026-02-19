@@ -1,49 +1,52 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "AthenaJackpot",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "AthenaJackpot",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PlaylistBaseCurveTableOverrides": [
-      {
-        "BaseTable": {
-          "AssetPathName": "/AthenaJackpot/DataTables/AthenaJackpotGameData.AthenaJackpotGameData",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": [
-          {
-            "Key": {
-              "TagName": "Athena.Playlist.BlastBerry.Tournament"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.00"
             },
-            "Value": {
-              "AssetPathName": "/AthenaJackpot/DataTables/AthenaJackpotGameData_Comp.AthenaJackpotGameData_Comp",
-              "SubPathString": ""
+            "ExclusiveMax": {
+              "VersionName": "Future"
             }
           },
-          {
-            "Key": {
-              "TagName": "Athena.Playlist.BlastBerry.Ranked"
-            },
-            "Value": {
-              "AssetPathName": "/AthenaJackpot/DataTables/AthenaJackpotGameData_Habenaro.AthenaJackpotGameData_Habenaro",
-              "SubPathString": ""
-            }
-          }
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'AthenaJackpot:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/AthenaJackpot/AthenaJackpot.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'AthenaJackpot:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/AthenaJackpot/AthenaJackpot.2"
-      }
-    ]
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Plugin.Playlist.BlastBerry"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Plugin.Playlist.BlastBerry ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
+    },
+    "PlaylistQuery": {
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( )"
+    }
   }
 }

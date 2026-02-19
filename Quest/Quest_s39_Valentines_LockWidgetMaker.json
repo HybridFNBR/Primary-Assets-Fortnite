@@ -1,174 +1,34 @@
 {
-  "Type": "FortQuestItemDefinition_Athena",
-  "Name": "Quest_s39_Valentines_LockWidgetMaker",
-  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortQuestDefinitionComponent_DisplaySettings",
+  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
+  "Outer": "Quest_s39_Valentines_LockWidgetMaker",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
-      {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_s39_Valentines_LockWidgetMaker_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
-          {
-            "IncrementType": "EAcquireIncrementType::Single",
-            "bUseItemCount": false,
-            "ItemAcquired": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Quests.S39.Token.Valentines"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Athena.Quests.S39.Token.Valentines )"
-              }
-            },
-            "ItemCount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "AcquireSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
-          }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "CultureInvariantString": null
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 1,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL( Product )"
+    "InformationSettings": {
+      "bShowMaxStageInDescription": false
     },
-    "SortPriority": 1,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_s39_Valentines_LockWidgetMaker:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/BattlePassS39_Quests/Items/QuestItems/Valentines/Drop1/Quest_s39_Valentines_LockWidgetMaker.0"
+    "VisibilitySettings": {
+      "bOverrideBundleVisibilityData": true,
+      "bCanShowInPostMatch": false,
+      "bCanShowTimer": false,
+      "bAllowPinning": false
+    },
+    "ToastSettings": {
+      "bShouldDisplayStartingToast": false,
+      "bHideQuestProgressNotification": true,
+      "bHideQuestRewardNotification": true
+    },
+    "LockedQuestSettings": {
+      "bShowLockedQuestWidgets": true,
+      "OverrideData": {
+        "DisplayText": {
+          "Namespace": "",
+          "Key": "7582CC604A1F426B97BB59A8BCA99A1F",
+          "SourceString": "More Rewards in {Time}",
+          "LocalizedString": "More Rewards in {Time}"
+        }
       }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_s39_Valentines_LockWidgetMaker_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "GrantToProfileType": "athena",
-    "Rarity": "EFortRarity::Common",
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.All.S39.Valentines.P02"
-        ]
-      }
-    ]
+    }
   }
 }

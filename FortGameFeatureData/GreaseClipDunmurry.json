@@ -1,122 +1,84 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "GreaseClipDunmurry",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_1",
+  "Outer": "GreaseClipDunmurry",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/GreaseClipDunmurry/Levels/GreaseClipDunmurry_LevelOverlay.GreaseClipDunmurry_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/GreaseClipDunmurry/DataTables/GreaseClipDunmurryGameData.GreaseClipDunmurryGameData",
-      "SubPathString": ""
-    },
-    "PlaylistOverrideGameDataMappings": [
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Plugin.Playlist.Arena"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "39.20"
             }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            1,
-            1,
-            0
-          ],
-          "UserDescription": "",
-          "AutoDescription": " ANY( Plugin.Playlist.Arena )"
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.ItemsTest )"
+          },
+          "bMigratedFromOldData": false
         },
-        "OverrideGameData": {
-          "AssetPathName": "/GreaseClipDunmurry/DataTables/Comp/GreaseClipDunmurryGameData_Comp.GreaseClipDunmurryGameData_Comp",
-          "SubPathString": ""
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "39.20"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.GreaseClipDunmurry"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              2,
+              0,
+              1,
+              3,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ),  NONE( Plugin.Playlist.Exclude.GreaseClipDunmurry ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH7S1",
-        "DisplayName": "Flux Capacitor",
-        "ConsoleCommands": [
-          "cheat givespecificitem /GreaseClipDunmurry/Gameplay/WID_GreaseClipDunmurry 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'GreaseClipDunmurry:FortGameFeatureAction_AddToPlaylists_1'",
-        "ObjectPath": "/GreaseClipDunmurry/GreaseClipDunmurry.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddVehicleModData'GreaseClipDunmurry:FortGameFeatureAction_AddVehicleModData_0'",
-        "ObjectPath": "/GreaseClipDunmurry/GreaseClipDunmurry.1"
-      },
-      null,
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'GreaseClipDunmurry:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/GreaseClipDunmurry/GreaseClipDunmurry.4"
-      },
-      {
-        "ObjectName": "FortUIGameFeatureAction_AddMapLegendEntries'GreaseClipDunmurry:FortUIGameFeatureAction_AddMapLegendEntries_0'",
-        "ObjectPath": "/GreaseClipDunmurry/GreaseClipDunmurry.3"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [
-          {
-            "AssetPathName": "/GreaseClipDunmurry/Gameplay/WID_GreaseClipDunmurry.WID_GreaseClipDunmurry",
-            "SubPathString": ""
-          }
-        ],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "FortExposedAssetList",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "/"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 20,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      }
+      ]
+    },
+    "OptionalAdditionalPluginsToActivate": [
+      "GreaseClipDunmurryUI"
     ]
   }
 }

@@ -1,143 +1,16 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "BeetCalf",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddMutators",
+  "Name": "FortGameFeatureAction_AddMutators_0",
+  "Outer": "BeetCalf",
+  "Class": "UScriptClass'FortGameFeatureAction_AddMutators'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/BeetCalf/Levels/BeetCalf_LevelOverlay.BeetCalf_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/BeetCalf/DataTables/BeetCalfGameData.BeetCalfGameData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
+    "MutatorsToAdd": [
       {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH6S5 (MS2) Map",
-        "DisplayName": "Give Radio Tower Keycard",
-        "ConsoleCommands": [
-          "cheat givespecificitem /BeetCalf/Gameplay/AGID_MMObj_BeetCalfKeycard 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH6S5 (MS2) Map",
-        "DisplayName": "Activate Radio Tower Objective",
-        "ConsoleCommands": [
-          "Cheat ke * DebugRadioTowerActivateObjective"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BeetCalf:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/BeetCalf/BeetCalf.1"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'BeetCalf:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/BeetCalf/BeetCalf.5"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'BeetCalf:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/BeetCalf/BeetCalf.4"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddMutators'BeetCalf:FortGameFeatureAction_AddMutators_0'",
-        "ObjectPath": "/BeetCalf/BeetCalf.0"
-      },
-      {
-        "ObjectName": "FortUIGameFeatureAction_AddMapLegendEntries'BeetCalf:FortUIGameFeatureAction_AddMapLegendEntries_0'",
-        "ObjectPath": "/BeetCalf/BeetCalf.3"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AthenaGadget",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+        "Target": "EMutatorAddTarget::FortGameStateAthena",
+        "Mutator": {
+          "AssetPathName": "/BeetCalf/Gameplay/Mutators/B_Mutator_BeetCalfDrawKeyCarrier.B_Mutator_BeetCalfDrawKeyCarrier_C",
           "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "WorldItem",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWorldItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "AISpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "AI"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
       }
     ]

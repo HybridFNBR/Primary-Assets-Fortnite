@@ -1,0 +1,78 @@
+{
+  "Type": "BaseBuildingStaticMeshComponent",
+  "Name": "StaticMeshComponent0",
+  "Outer": "Default__CP_CubeTown_Cube_Deco_01_C",
+  "Class": "UScriptClass'BaseBuildingStaticMeshComponent'",
+  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "StaticMesh": {
+      "ObjectName": "StaticMesh'S_CubetownDeco_1_S_CubeTown_Deco_01'",
+      "ObjectPath": "/Game/Environments/Apollo/Sets/CubeTownV2/Meshes/Deco/S_CubetownDeco_1_S_CubeTown_Deco_01.1"
+    },
+    "CanCharacterStepUpOn": "ECanBeCharacterBase::ECB_Yes",
+    "BodyInstance": {
+      "CollisionProfileName": "Custom",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "FCC_Trace_Interaction",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeakSpot",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponCapsule",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponMulti",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_Weapon",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_Projectile",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_ProjectileIgnoreAI",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_World",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_ProjectileMesh",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "Camera",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          }
+        ]
+      },
+      "bAutoWeld": false
+    },
+    "OnComponentPhysicsStateChanged": {
+      "InvocationList": [
+        {
+          "Object": {
+            "ObjectName": "CP_CubeTown_Cube_Deco_01_C'Default__CP_CubeTown_Cube_Deco_01_C'",
+            "ObjectPath": "/CRP_Corruption/SetupAssets/Blueprints/CP_CubeTown_Cube_Deco_01.2"
+          },
+          "FunctionName": "OnPhysicsStateChanged"
+        }
+      ]
+    },
+    "bCanEverAffectNavigation": true
+  }
+}

@@ -1,25 +1,66 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "FortLevelInjecting",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "FortLevelInjecting",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddCheats'FortLevelInjecting:GameFeatureAction_AddCheats_0'",
-        "ObjectPath": "/FortLevelInjecting/FortLevelInjecting.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'FortLevelInjecting:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/FortLevelInjecting/FortLevelInjecting.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'FortLevelInjecting:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/FortLevelInjecting/FortLevelInjecting.0"
-      }
-    ]
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "38.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "39.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.SpecialEvent.SkyMango"
+              },
+              {
+                "TagName": "Athena.Playlist.Mash"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.SpecialEvent.SkyMango, Athena.Playlist.Mash )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+    }
   }
 }

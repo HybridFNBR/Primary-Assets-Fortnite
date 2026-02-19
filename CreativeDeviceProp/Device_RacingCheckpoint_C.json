@@ -1,0 +1,100 @@
+{
+  "Type": "BaseBuildingStaticMeshComponent",
+  "Name": "StaticMeshComponent0",
+  "Outer": "Default__Device_RacingCheckpoint_C",
+  "Class": "UScriptClass'BaseBuildingStaticMeshComponent'",
+  "Template": {
+    "ObjectName": "BaseBuildingStaticMeshComponent'Default__Creative_Device_Prop_Parent_C:StaticMeshComponent0'",
+    "ObjectPath": "/Game/Creative/Devices/Common/Creative_Device_Prop_Parent.0"
+  },
+  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "StaticMesh": {
+      "ObjectName": "StaticMesh'1x1Plane_OnZ'",
+      "ObjectPath": "/Game/Athena/Prototype/1x1Plane_OnZ.1"
+    },
+    "OverrideMaterials": [
+      {
+        "ObjectName": "Material'02_-_Default'",
+        "ObjectPath": "/Game/Animation/Props/Galileo2/OLD/02_-_Default.0"
+      }
+    ],
+    "BodyInstance": {
+      "CollisionProfileName": "Custom",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "FCC_Trace_Interaction",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeakSpot",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponCapsule",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_PawnAI",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponMulti",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_Weapon",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_Projectile",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_ProjectileIgnoreAI",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_World",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_ProjectileMesh",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "Pawn",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Vehicle",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "PhysicsBody",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          }
+        ]
+      }
+    },
+    "OnComponentPhysicsStateChanged": {
+      "InvocationList": [
+        {
+          "Object": {
+            "ObjectName": "Device_RacingCheckpoint_C'Default__Device_RacingCheckpoint_C'",
+            "ObjectPath": "/CRD_RacingCheckpoint/Device_RacingCheckpoint.10"
+          },
+          "FunctionName": "OnPhysicsStateChanged"
+        }
+      ]
+    },
+    "ComponentTags": [
+      "RenderedByBlueprintPreviewer"
+    ]
+  }
+}

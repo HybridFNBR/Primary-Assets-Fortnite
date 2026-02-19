@@ -1,29 +1,73 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "GatedItemGrants",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "GatedItemGrants",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/GatedItemGrants/Levels/GatedItemGrants_LevelOverlay.GatedItemGrants_LevelOverlay",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "34.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist"
+              },
+              {
+                "TagName": "Athena.Playlist.Figment"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              1,
+              0,
+              3,
+              1,
+              1
+            ],
+            "UserDescription": "Athena Playlist with exclusions",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist ),  NONE( Athena.Playlist.Figment ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
     },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'GatedItemGrants:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/GatedItemGrants/GatedItemGrants.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'GatedItemGrants:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/GatedItemGrants/GatedItemGrants.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistry'GatedItemGrants:GameFeatureAction_DataRegistry_0'",
-        "ObjectPath": "/GatedItemGrants/GatedItemGrants.3"
-      }
-    ]
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist"
+        },
+        {
+          "TagName": "Athena.Playlist.Figment"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        1,
+        1,
+        0,
+        3,
+        1,
+        1
+      ],
+      "UserDescription": "Athena Playlist with exclusions",
+      "AutoDescription": " ALL(  ANY( Athena.Playlist ),  NONE( Athena.Playlist.Figment ) )"
+    }
   }
 }

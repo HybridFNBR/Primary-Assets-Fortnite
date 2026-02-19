@@ -1,48 +1,60 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "MeltUI",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "MeltUI",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "UIExtensions": [
-      {
-        "Slot": "EUIExtensionSlot::FullScreenMap",
-        "WidgetClass": {
-          "AssetPathName": "/Game/Athena/HUD/LTM/UI_LTM_ModeInfo.UI_LTM_ModeInfo_C",
-          "SubPathString": ""
-        },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      },
-      {
-        "Slot": "EUIExtensionSlot::Primary",
-        "WidgetClass": {
-          "AssetPathName": "/MeltUI/Widgets/WBP_Melt_LavaRiseNotification.WBP_Melt_LavaRiseNotification_C",
-          "SubPathString": ""
-        },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      }
-    ],
-    "ContextualTutorials": [
-      {
-        "AssetPathName": "/MeltUI/ContextTutorial_NearLava.ContextTutorial_NearLava",
-        "SubPathString": ""
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'MeltUI:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/MeltUI/MeltUI.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'MeltUI:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/MeltUI/MeltUI.1"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'MeltUI:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/MeltUI/MeltUI.3"
-      }
-    ]
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Melt"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Melt ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Melt"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Melt ) )"
+    }
   }
 }

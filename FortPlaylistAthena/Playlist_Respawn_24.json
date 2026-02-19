@@ -1,0 +1,195 @@
+{
+  "Type": "FortPlaylistAthena",
+  "Name": "Playlist_Respawn_24",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bRewardsTrackPlacement": false,
+    "bRewardForRevivingTeammates": true,
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::TwoTeam",
+    "RewardsPlacementThreshold": 1,
+    "InMatchXPRewardScalar": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaPlaylistXpToggle'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaPlaylistXpToggle.0"
+        },
+        "RowName": "Playlist_Respawn_24"
+      }
+    },
+    "MinBackfillMatchPlayers": 1,
+    "MaxTeamScoreAllowedForBackfill": 40,
+    "bUsePlayerRating": true,
+    "bEnableRatingUpdate": true,
+    "RatingType": "respawn",
+    "bRemoveFromSquadOnLogout": true,
+    "WinConditionType": "EAthenaWinCondition::MutatorControlledGoalScore",
+    "TimedWinConditionTime": {
+      "Value": 60.0
+    },
+    "FinalWinConditionTime": {
+      "Value": 60.0
+    },
+    "bIsLargeTeamGame": true,
+    "RespawnType": "EAthenaRespawnType::InfiniteRespawnExceptStorm",
+    "RespawnHeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CompositeCurveTable'AthenaCompositeGD_Respawn_24'",
+          "ObjectPath": "/Game/Athena/Playlists/Respawn/AthenaCompositeGD_Respawn_24.0"
+        },
+        "RowName": "Respawn.RespawnHeight"
+      }
+    },
+    "RespawnTime": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CompositeCurveTable'AthenaCompositeGD_Respawn_24'",
+          "ObjectPath": "/Game/Athena/Playlists/Respawn/AthenaCompositeGD_Respawn_24.0"
+        },
+        "RowName": "Respawn.RespawnTime"
+      }
+    },
+    "AirCraftBehavior": "EAirCraftBehavior::OpposingAirCraftForEachTeam",
+    "bUseCustomAircraftPathSelection": true,
+    "AircraftPathMidpointSelectionRadiusMin": 52500.0,
+    "AircraftPathMidpointSelectionRadiusMax": 52500.0,
+    "PlaylistMissionGen": {
+      "ObjectName": "BlueprintGeneratedClass'MissionGen_Respawn_C'",
+      "ObjectPath": "/Game/Athena/Playlists/Respawn/MissionGen_Respawn.0"
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::AboveQuestsMobileUI",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/Respawn/RespawnHUD_TwoTeamScores.RespawnHUD_TwoTeamScores_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      },
+      {
+        "Slot": "EUIExtensionSlot::PrioritizedContextualSlot",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/HUD_ContextualTips_Base.HUD_ContextualTips_Base_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      },
+      {
+        "Slot": "EUIExtensionSlot::Primary",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/RespawnAndSpectateSelect/RespawnAndSpectateSelectContainer.RespawnAndSpectateSelectContainer_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      },
+      {
+        "Slot": "EUIExtensionSlot::PostGamePlacementOverlayVictory",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/Respawn/RespawnPostgame_ScoreDisplay.RespawnPostgame_ScoreDisplay_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      },
+      {
+        "Slot": "EUIExtensionSlot::PostGamePlacementOverlayLosing",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/Respawn/RespawnPostgame_ScoreDisplay.RespawnPostgame_ScoreDisplay_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "MissionIcon": {
+      "ObjectName": "Texture2D'T_Icon_Matchmaking_Squad_64'",
+      "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Social/T_Icon_Matchmaking_Squad_64.0"
+    },
+    "UIDisplaySubName": {
+      "Namespace": "",
+      "Key": "A29BC419471B6AF9669F7FA9EFE27D1A",
+      "SourceString": "Squads",
+      "LocalizedString": "Squads"
+    },
+    "bShowEliminationIndicatorForSquadmates": true,
+    "bShowEliminationIndicatorForTeammates": true,
+    "MapManagerClass": {
+      "AssetPathName": "/Game/UI/IngameMap/UIMapManagerBR.UIMapManagerBR_C",
+      "SubPathString": ""
+    },
+    "SafeZoneStartUp": "ESafeZoneStartUp::StartsWithAirCraft",
+    "bDisplayFinalStormPosition": true,
+    "LastSafeZoneIndex": 3,
+    "AISettings": {
+      "AssetPathName": "/Game/Athena/AI/AISettings/Phoebe_Default_AISettings.Phoebe_Default_AISettings",
+      "SubPathString": ""
+    },
+    "PlaylistId": 280,
+    "PlaylistName": "Playlist_Respawn_24",
+    "GameType": "EFortGameType::BRLTM",
+    "MinPlayers": 24,
+    "MaxPlayers": 32,
+    "MaxTeamCount": 2,
+    "MaxTeamSize": 16,
+    "MaxSquadSize": 4,
+    "RichPresenceAssetName": "teamrumble",
+    "GameplayTagContainer": [
+      "Athena.Playlist.TeamRumble",
+      "Athena.Playlist.IsALargeTeamMode",
+      "Athena.Playlist.Core",
+      "Athena.Playlist.Default",
+      "Athena.Plugin.GameMod.Gasket",
+      "Athena.Accolade.Exclude.FirstLanding",
+      "Athena.Accolade.Exclude.ReachedNewCircle",
+      "Athena.Accolade.Exclude.Top10",
+      "Athena.Accolade.Exclude.Top25",
+      "Athena.Accolade.Exclude.Top50"
+    ],
+    "DBNOType": "EDBNOType::NotWhenRespawning",
+    "ModifierList": [
+      {
+        "AssetPathName": "/Rumble/RespawnGameplayModifier.RespawnGameplayModifier",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/ContextTutorial/ContextTutorial_AthenaContextTutorial.ContextTutorial_AthenaContextTutorial",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Playlists/Deimos/GameplayMod_DeimosAI.GameplayMod_DeimosAI",
+        "SubPathString": ""
+      }
+    ],
+    "UIDisplayName": {
+      "Namespace": "",
+      "Key": "7D9F08094550BED4BA3CB98D9E6A596F",
+      "SourceString": "Team Rumble",
+      "LocalizedString": "Team Rumble"
+    },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "C589AE6E4661AC20842243917543CE22",
+      "SourceString": "Two large teams fight for the Victory Royale in an action-packed mode where the first team to get the target number of eliminations wins! \r\n\r\nRespawn on elimination is ON for the entire match, and gliders can be freely deployed whenever you are far enough from the ground.",
+      "LocalizedString": "Two large teams fight for the Victory Royale in an action-packed mode where the first team to get the target number of eliminations wins! \r\n\r\nRespawn on elimination is ON for the entire match, and gliders can be freely deployed whenever you are far enough from the ground."
+    },
+    "HUDElementsToHide": [
+      "HUD.Athena.TeamKills",
+      "HUD.Athena.PlayersLeft"
+    ],
+    "GameData": {
+      "AssetPathName": "/Game/Athena/Playlists/Respawn/AthenaCompositeGD_Respawn_24.AthenaCompositeGD_Respawn_24",
+      "SubPathString": ""
+    },
+    "ResourceRates": {
+      "AssetPathName": "/Game/Athena/Playlists/50v50/AthenaResourceRates.AthenaResourceRates",
+      "SubPathString": ""
+    },
+    "ServerPerformanceEventFrequency": 300.0
+  }
+}

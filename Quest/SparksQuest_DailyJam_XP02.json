@@ -1,0 +1,226 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "SparksQuest_DailyJam_XP02",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "SparksDaily_Jam",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "SparksQuest_DailyJam_XP02_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementType": "EAcquireIncrementType::TotalMatchingItemCounts",
+            "bUseItemCount": true,
+            "ItemAcquired": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Resource.XP"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Resource.XP )"
+              }
+            },
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 1000
+              }
+            },
+            "AcquireSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "FMJam.Session"
+                  },
+                  {
+                    "TagName": "QuestCategory.BR.DailyCreative"
+                  },
+                  {
+                    "TagName": "QuestCategory.UniversalDailies"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  2,
+                  1,
+                  0,
+                  3,
+                  2,
+                  1,
+                  2
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ALL( FMJam.Session ),  NONE( QuestCategory.BR.DailyCreative, QuestCategory.UniversalDailies ) )"
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "95B8E22E4904ECD44ABF9FB4166CD859",
+          "SourceString": "Earn 10,000 XP by participating in Jams",
+          "LocalizedString": "Earn 10,000 XP by participating in Jams"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "AEA23D697875343103458DE378753431",
+          "SourceString": "Earn 10,000 XP by participating in Jams",
+          "LocalizedString": "Earn 10,000 XP by participating in Jams"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 10000,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 50,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Sparks.Jam"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.Sparks.Jam )"
+    },
+    "Category": {
+      "DataTable": {
+        "ObjectName": "DataTable'QuestCategoryTable'",
+        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+      },
+      "RowName": "DailyQuests"
+    },
+    "SortPriority": 6,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'SparksQuest_DailyJam_XP02:FortQuestDefinitionComponent_Rewards_1'",
+        "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyJam/SparksQuest_DailyJam_XP02.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'SparksQuest_DailyJam_XP02:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyJam/SparksQuest_DailyJam_XP02.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "SparksQuest_DailyJam_XP02_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "5E9FB4DA49681F5487A26CAD835EB564",
+      "SourceString": "Earn 10,000 XP by participating in Jams",
+      "LocalizedString": "Earn 10,000 XP by participating in Jams"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "E223278B4627B15E9E4A12800C5FEDE8",
+      "SourceString": "Earn 10,000 XP by participating in Jams",
+      "LocalizedString": "Earn 10,000 XP by participating in Jams"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.Sparks.Jam.Daily"
+        ]
+      },
+      {}
+    ]
+  }
+}

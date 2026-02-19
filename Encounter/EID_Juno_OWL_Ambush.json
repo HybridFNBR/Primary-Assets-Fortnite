@@ -1,0 +1,113 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_OWL_Ambush",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoOpenWorldLife/Levels/LI_OWL_Ambush.LI_OWL_Ambush",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoOpenWorldLife/StateTrees/ST_Juno_OWL_Ambush.ST_Juno_OWL_Ambush",
+      "SubPathString": ""
+    },
+    "SuccessRewards": [
+      {
+        "bUseLootSelectionTable": false,
+        "LootTierName": "Loot_JunoLootLlama_Bronze_T1",
+        "LootTierSelection": {
+          "ValueChoiceTable": {
+            "bUseDataRegistry": false,
+            "Table": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "VarName": {
+            "TagName": "None"
+          },
+          "SelectionQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "bShowVariableName": false
+        }
+      }
+    ],
+    "SuccessRewardBehavior": {
+      "RewardOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "RewardDirection": {
+        "X": 20.0,
+        "Y": 20.0,
+        "Z": 50.0
+      },
+      "RewardConeAngle": {
+        "Value": 120.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 800.0
+      }
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 0.0,
+      "Curve": {
+        "RowName": "Juno.Encounters.RiftSprinkles.Weight.Medium"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 0.0,
+      "Curve": {
+        "RowName": "Juno.Encounters.RiftSprinkles.Range"
+      }
+    },
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoOpenWorldLife/DataTables/DT_OWL_Ambush_LWMEncounters.DT_OWL_Ambush_LWMEncounters",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.OpenWorldLife.Variable.LWMEncounter.Ambush"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.OpenWorldLife"
+        ]
+      }
+    ]
+  }
+}

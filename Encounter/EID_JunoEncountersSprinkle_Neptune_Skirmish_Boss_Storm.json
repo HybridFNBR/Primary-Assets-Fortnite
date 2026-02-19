@@ -1,0 +1,144 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_JunoEncountersSprinkle_Neptune_Skirmish_Boss_Storm",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoEncountersCombatSprinkle_Neptune/Levels/Juno_EncounterLevel_CS_Neptune_Skirmish.Juno_EncounterLevel_CS_Neptune_Skirmish",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersCombatSprinkle/Assets/ST_Juno_Encounter_CombatSprinkle_Skirmish_Far_FactionData.ST_Juno_Encounter_CombatSprinkle_Skirmish_Far_FactionData",
+      "SubPathString": ""
+    },
+    "SuccessRewardBehavior": {
+      "RewardDirection": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 500.0
+      },
+      "RewardConeAngle": {
+        "Value": 120.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 900.0
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_CombatSprinkle_Attributes'",
+          "ObjectPath": "/JunoEncountersCombatSprinkle/DataTables/CT_Juno_CombatSprinkle_Attributes.0"
+        },
+        "RowName": "Juno.Encounters.CombatSprinkle.Weight.4"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_CombatSprinkle_Attributes'",
+          "ObjectPath": "/JunoEncountersCombatSprinkle/DataTables/CT_Juno_CombatSprinkle_Attributes.0"
+        },
+        "RowName": "Juno.Encounters.CombatSprinkles.Range.75m"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CombatSprinkle_SpawnCount'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle/DataTables/DT_CombatSprinkle_SpawnCount.0"
+          },
+          "RowName": "CS.FactionA.SpawnCount.Small"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionA"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CombatSprinkle_SpawnCount'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle/DataTables/DT_CombatSprinkle_SpawnCount.0"
+          },
+          "RowName": "CS.FactionB.SpawnCount.Large"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionB"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_Encounters_CS_VarRow_EnemyTypeTags'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle_Neptune/DataTables/SelectionRows/DT_Juno_Encounters_CS_VarRow_EnemyTypeTags.0"
+          },
+          "RowName": "Boss"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.TagQuery.EnemyTypeA"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_Encounters_CS_VarRow_EnemyTypeTags'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle_Neptune/DataTables/SelectionRows/DT_Juno_Encounters_CS_VarRow_EnemyTypeTags.0"
+          },
+          "RowName": "Ranged"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.TagQuery.EnemyTypeB"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_Encounters_CS_Faction_VarRow_StormAcolytes'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle_Neptune/DataTables/SelectionRows/DT_Juno_Encounters_CS_Faction_VarRow_StormAcolytes.0"
+          },
+          "RowName": "StormAcolytes_G2"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.LWMEncounter.Skirmish.FactionA"
+        }
+      }
+    ],
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoEncountersCombatSprinkle_Neptune/DataTables/SelectionRows/DT_Juno_Encounters_CS_Faction_SelectionsRow_Minifig_Opposing.DT_Juno_Encounters_CS_Faction_SelectionsRow_Minifig_Opposing",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.LWMEncounter.Skirmish.FactionB"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.Sprinkles"
+        ]
+      }
+    ]
+  }
+}

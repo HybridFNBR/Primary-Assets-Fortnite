@@ -1,131 +1,96 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "WiseOtter",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "WiseOtter",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/WiseOtter/Levels/WiseOtter_LevelOverlay.WiseOtter_LevelOverlay",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "31.20"
+            },
+            "ExclusiveMax": {
+              "VersionName": "32.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": true
+        },
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.20"
+            },
+            "ExclusiveMax": {
+              "VersionName": "37.40"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.ForbiddenFruit )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
     },
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/WiseOtter/WiseOtter_ReticleExtensions.WiseOtter_ReticleExtensions",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/WiseOtter/HUD/WiseOtterHUDWidgetRegistry.WiseOtterHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultLootTableData": {
-      "LootTierData": {
-        "AssetPathName": "/WiseOtter/DataTables/WiseOtterTierData.WiseOtterTierData",
-        "SubPathString": ""
-      },
-      "LootPackageData": {
-        "AssetPathName": "/WiseOtter/DataTables/WiseOtterLootPackages.WiseOtterLootPackages",
-        "SubPathString": ""
-      }
-    },
-    "PlaylistOverrideLootTableData": [
-      {
-        "Key": {
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
           "TagName": "Plugin.Playlist.Arena"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/WiseOtter/DataTables/OtherModes/WiseOtter_LootTierData_LTMEmpty.WiseOtter_LootTierData_LTMEmpty",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/WiseOtter/DataTables/OtherModes/WiseOtter_LootPackages_LTMEmpty.WiseOtter_LootPackages_LTMEmpty",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
         }
-      },
-      {
-        "Key": {
-          "TagName": "Plugin.Playlist.BlastBerry"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/WiseOtter/DataTables/OtherModes/WiseOtter_LootTierData_LTMEmpty.WiseOtter_LootTierData_LTMEmpty",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/WiseOtter/DataTables/OtherModes/WiseOtter_LootPackages_LTMEmpty.WiseOtter_LootPackages_LTMEmpty",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
-        }
-      }
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/WiseOtter/WiseOtter_DeathCauseData.WiseOtter_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch5S4",
-        "DisplayName": "Iron Man Combo Gauntlets",
-        "ConsoleCommands": [
-          "cheat GiveSpecificItem /WiseOtter/Gameplay/WID_WiseOtter_Combo 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'WiseOtter:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/WiseOtter/WiseOtter.0"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "Consumable",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+    }
   }
 }

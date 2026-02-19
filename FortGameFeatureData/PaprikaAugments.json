@@ -1,73 +1,68 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "PaprikaAugments",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "PaprikaAugments",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/PaprikaAugments/DataTables/PaprikaAugmentsGameData.PaprikaAugmentsGameData",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "28.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playground"
+              },
+              {
+                "TagName": "Athena.Creative"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playground, Athena.Creative ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
     },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PaprikaAugments:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/PaprikaAugments/PaprikaAugments.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'PaprikaAugments:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/PaprikaAugments/PaprikaAugments.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'PaprikaAugments:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/PaprikaAugments/PaprikaAugments.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "PlayerAugment",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentItemDefinition",
-          "SubPathString": ""
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playground"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Creative"
         }
-      },
-      {
-        "PrimaryAssetType": "PlayerAugmentsPersistence",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentsAccountItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "PersistenceItems"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Playground, Athena.Creative ) )"
+    }
   }
 }

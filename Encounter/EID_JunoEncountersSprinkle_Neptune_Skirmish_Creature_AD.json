@@ -1,0 +1,131 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_JunoEncountersSprinkle_Neptune_Skirmish_Creature_AD",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoEncountersCombatSprinkle_Neptune/Levels/Juno_EncounterLevel_CS_Neptune_Skirmish.Juno_EncounterLevel_CS_Neptune_Skirmish",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersCombatSprinkle/Assets/ST_Juno_Encounter_CombatSprinkle_Skirmish_Creature.ST_Juno_Encounter_CombatSprinkle_Skirmish_Creature",
+      "SubPathString": ""
+    },
+    "SuccessRewardBehavior": {
+      "RewardDirection": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 500.0
+      },
+      "RewardConeAngle": {
+        "Value": 120.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 900.0
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_CombatSprinkle_Attributes'",
+          "ObjectPath": "/JunoEncountersCombatSprinkle/DataTables/CT_Juno_CombatSprinkle_Attributes.0"
+        },
+        "RowName": "Juno.Encounters.CombatSprinkle.Weight.4.5"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_CombatSprinkle_Attributes'",
+          "ObjectPath": "/JunoEncountersCombatSprinkle/DataTables/CT_Juno_CombatSprinkle_Attributes.0"
+        },
+        "RowName": "Juno.Encounters.CombatSprinkles.Range.80m"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CombatSprinkle_SpawnCount'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle/DataTables/DT_CombatSprinkle_SpawnCount.0"
+          },
+          "RowName": "CS.FactionA.SpawnCount.Small"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionA"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CombatSprinkle_SpawnCount'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle/DataTables/DT_CombatSprinkle_SpawnCount.0"
+          },
+          "RowName": "CS.FactionB.SpawnCount.Large"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionB"
+        }
+      }
+    ],
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoOpenWorldLife/DataTables/ActorDescription/HostileCreatures/DT_Juno_Encounters_AD_SelectionsRow_WolvesAndRollers.DT_Juno_Encounters_AD_SelectionsRow_WolvesAndRollers",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.LWMEncounter.Skirmish.FactionA"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      },
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoEncountersCombatSprinkle_Neptune/ActorDescription/DT_Juno_Encounters_AD_SelRow_Minifig_CS_Skirmish_StormAcolytes_G1_Bypass.DT_Juno_Encounters_AD_SelRow_Minifig_CS_Skirmish_StormAcolytes_G1_Bypass",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.LWMEncounter.Skirmish.FactionB"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.Sprinkles"
+        ]
+      }
+    ]
+  }
+}

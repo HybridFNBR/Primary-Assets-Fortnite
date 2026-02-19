@@ -1,0 +1,132 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_JunoEncountersSprinkle_Klombo_Skirmish_Far_2v2_Plains",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoEncountersCombatSprinkle_Klombo/Levels/Juno_EncounterLevel_CS_Klombo_Skirmish.Juno_EncounterLevel_CS_Klombo_Skirmish",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersCombatSprinkle/Assets/ST_Juno_Encounter_CombatSprinkle_Skirmish_Far.ST_Juno_Encounter_CombatSprinkle_Skirmish_Far",
+      "SubPathString": ""
+    },
+    "SuccessRewardBehavior": {
+      "RewardDirection": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 500.0
+      },
+      "RewardConeAngle": {
+        "Value": 120.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 900.0
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'JunoEncountersCombatSprinkle_Klombo'",
+          "ObjectPath": "/JunoEncountersCombatSprinkle_Klombo/CurveTables/JunoEncountersCombatSprinkle_Klombo.0"
+        },
+        "RowName": "Juno.Sprinkle.Klombo.Skirmish.DensityWeight_4"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'JunoEncountersCombatSprinkle_Klombo'",
+          "ObjectPath": "/JunoEncountersCombatSprinkle_Klombo/CurveTables/JunoEncountersCombatSprinkle_Klombo.0"
+        },
+        "RowName": "Juno.Sprinkle.Klombo.Skirmish.DensityRange"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CS_Klombo_Skirmish_SpawnCount'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle_Klombo/DataTables/DT_CS_Klombo_Skirmish_SpawnCount.0"
+          },
+          "RowName": "Skirmish.FactionA.SpawnCount.Medium"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionA"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_CS_Klombo_Skirmish_SpawnCount'",
+            "ObjectPath": "/JunoEncountersCombatSprinkle_Klombo/DataTables/DT_CS_Klombo_Skirmish_SpawnCount.0"
+          },
+          "RowName": "Skirmish.FactionB.SpawnCount.Medium"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.Integer.SpawnCount.FactionB"
+        }
+      }
+    ],
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoKlombo_LivingWorld/DataTables/ActorDescription/Minifigs/DT_Juno_Encounters_AD_SelectionsRow_Minifig_Klombo.DT_Juno_Encounters_AD_SelectionsRow_Minifig_Klombo",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.LWMEncounter.Skirmish.FactionA"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      },
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoKlombo_LivingWorld/DataTables/ActorDescription/Minifigs/DT_Juno_Encounters_AD_SelectionsRow_Minifig_Klombo_Plains_Easy.DT_Juno_Encounters_AD_SelectionsRow_Minifig_Klombo_Plains_Easy",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.LWMEncounter.Skirmish.FactionB"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.Sprinkles",
+          "Juno.Adventures.CombatSprinkles.Skirmish.Klombo.Far.2v2.Plains"
+        ]
+      }
+    ]
+  }
+}

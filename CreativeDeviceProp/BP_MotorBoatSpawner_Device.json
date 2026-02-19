@@ -1,0 +1,90 @@
+{
+  "Type": "BaseBuildingStaticMeshComponent",
+  "Name": "StaticMeshComponent0",
+  "Outer": "Default__BP_MotorBoatSpawner_Device_C",
+  "Class": "UScriptClass'BaseBuildingStaticMeshComponent'",
+  "Template": {
+    "ObjectName": "BaseBuildingStaticMeshComponent'Default__BP_VehicleSpawnerParent_Device_C:StaticMeshComponent0'",
+    "ObjectPath": "/CRD_VehicleSpawners/BP_VehicleSpawnerParent_Device.0"
+  },
+  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "StaticMesh": {
+      "ObjectName": "StaticMesh'SM_Medium_Meatball'",
+      "ObjectPath": "/Game/Creative/Devices/VehicleSpawner/PreviewMeshes/SM_Medium_Meatball.1"
+    },
+    "OverrideMaterials": [
+      null,
+      null,
+      {
+        "ObjectName": "MaterialInstanceConstant'M_CP_Device_Hologram_Vehicles'",
+        "ObjectPath": "/Game/Creative/Devices/Generic/Materials/M_CP_Device_Hologram_Vehicles.0"
+      }
+    ],
+    "bRenderCustomDepth": true,
+    "BodyInstance": {
+      "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+      "CollisionProfileName": "Custom",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "FCC_Trace_Interaction",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "FCC_Trace_WeakSpot",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "FCC_Object_PawnAI",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "Camera",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Pawn",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Vehicle",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "PhysicsBody",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "WorldStatic",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "WorldDynamic",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          }
+        ]
+      }
+    },
+    "OnComponentPhysicsStateChanged": {
+      "InvocationList": [
+        {
+          "Object": {
+            "ObjectName": "BP_MotorBoatSpawner_Device_C'Default__BP_MotorBoatSpawner_Device_C'",
+            "ObjectPath": "/CRD_VehicleSpawners/SetupAssets/MotorBoat/BP_MotorBoatSpawner_Device.3"
+          },
+          "FunctionName": "OnPhysicsStateChanged"
+        }
+      ]
+    },
+    "RelativeScale3D": {
+      "X": 0.98,
+      "Y": 0.98,
+      "Z": 0.98
+    }
+  }
+}

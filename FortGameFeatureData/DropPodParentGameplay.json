@@ -1,54 +1,106 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "DropPodParentGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "DropPodParentGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/DropPodParentGameplay/Levels/DropPodParentGameplay_LevelOverlay.DropPodParentGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/DropPodParentGameplay/DataTables/DropPodParantGameData.DropPodParantGameData",
-      "SubPathString": ""
-    },
-    "PlaylistOverrideGameDataMappings": [
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Plugin.Playlist.Arena"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
             }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            7,
-            1,
-            0
-          ],
-          "UserDescription": "",
-          "AutoDescription": " ANY_EXACT( Plugin.Playlist.Arena )"
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly ) )"
+          },
+          "bMigratedFromOldData": true
         },
-        "OverrideGameData": {
-          "AssetPathName": "/DropPodParentGameplay/DataTables/Comp/Composite_GD_DropPodParent_Comp.Composite_GD_DropPodParent_Comp",
-          "SubPathString": ""
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "38.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/DropPodParentGameplay/DropPodParent_DeathCauseData.DropPodParent_DeathCauseData",
-      "SubPathString": ""
+      ]
     },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DropPodParentGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/DropPodParentGameplay/DropPodParentGameplay.0"
-      }
-    ]
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+    }
   }
 }

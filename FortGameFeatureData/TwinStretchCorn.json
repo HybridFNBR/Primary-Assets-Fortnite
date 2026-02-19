@@ -1,126 +1,49 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "TwinStretchCorn",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "TwinStretchCorn",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/TwinStretchCorn/Levels/TwinStretchCorn_LevelOverlay.TwinStretchCorn_LevelOverlay",
-      "SubPathString": ""
-    },
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/TwinStretchCorn/UI/MagnettoPower_ReticleExtensionData.MagnettoPower_ReticleExtensionData",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/TwinStretchCorn/HUD/TwinStretchCornHUDWidgetRegistry.TwinStretchCornHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultLootTableData": {
-      "LootTierData": {
-        "AssetPathName": "/TwinStretchCorn/DataTables/TwinStretchCornTierData.TwinStretchCornTierData",
-        "SubPathString": ""
-      },
-      "LootPackageData": {
-        "AssetPathName": "/TwinStretchCorn/DataTables/TwinStretchCornLootPackages.TwinStretchCornLootPackages",
-        "SubPathString": ""
-      }
-    },
-    "PlaylistOverrideLootTableData": [
-      {
-        "Key": {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/TwinStretchCorn/DataTables/Comp/TwinStretchCornTierData_Comp.TwinStretchCornTierData_Comp",
-            "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "30.20"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
           },
-          "LootPackageData": {
-            "AssetPathName": "/TwinStretchCorn/DataTables/Comp/TwinStretchCornLootPackages_Comp.TwinStretchCornLootPackages_Comp",
-            "SubPathString": ""
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( ) )"
           },
-          "LootGroupData": []
+          "bMigratedFromOldData": true
         }
-      },
-      {
-        "Key": {
-          "TagName": "Plugin.Playlist.BlastBerry"
-        },
-        "Value": {
-          "LootTierData": {
-            "AssetPathName": "/TwinStretchCorn/DataTables/LTM/TwinStretchCornLootTierData_LTMEmpty.TwinStretchCornLootTierData_LTMEmpty",
-            "SubPathString": ""
-          },
-          "LootPackageData": {
-            "AssetPathName": "/TwinStretchCorn/DataTables/LTM/TwinStretchCornLootPackages_LTMEmpty.TwinStretchCornLootPackages_LTMEmpty",
-            "SubPathString": ""
-          },
-          "LootGroupData": []
-        }
-      }
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/TwinStretchCorn/TwinStretchCorn_DeathCauseData.TwinStretchCorn_DeathCauseData",
-      "SubPathString": ""
+      ]
     },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch5S3",
-        "DisplayName": "Give Magneto Power",
-        "ConsoleCommands": [
-          "Cheat GiveWeapon WID_TwinStretchCorn 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'TwinStretchCorn:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/TwinStretchCorn/TwinStretchCorn.1"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'TwinStretchCorn:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/TwinStretchCorn/TwinStretchCorn.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddAttributeDefaults'TwinStretchCorn:GameFeatureAction_AddAttributeDefaults_0'",
-        "ObjectPath": "/TwinStretchCorn/TwinStretchCorn.4"
-      },
-      {
-        "ObjectName": "UFortGameFeatureAction_LootTierGroups'TwinStretchCorn:UFortGameFeatureAction_LootTierGroups_0'",
-        "ObjectPath": "/TwinStretchCorn/TwinStretchCorn.5"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddUnableToPerformActionText'TwinStretchCorn:FortGameFeatureAction_AddUnableToPerformActionText_0'",
-        "ObjectPath": "/TwinStretchCorn/TwinStretchCorn.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      }
-    ]
+    "PlaylistQuery": {
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL(  ANY( ) )"
+    }
   }
 }

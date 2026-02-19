@@ -1,92 +1,41 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "WildEstate",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "WildEstate",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/WildEstate/Levels/WildEstate_LevelOverlay.WildEstate_LevelOverlay",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/WildEstate/HUD/HUDWidgerRegistry_WildEstate.HUDWidgerRegistry_WildEstate",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "ExperienceData": {
-      "DefaultMap": {
-        "AssetPathName": "/WildEstate/Maps/WildEstate_Terrain.WildEstate_Terrain",
-        "SubPathString": ""
-      }
-    },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'WildEstate:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/WildEstate/WildEstate.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddAttributeDefaults'WildEstate:GameFeatureAction_AddAttributeDefaults_0'",
-        "ObjectPath": "/WildEstate/WildEstate.4"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_PhysicsObjectSetupData'WildEstate:FortGameFeatureAction_PhysicsObjectSetupData_0'",
-        "ObjectPath": "/WildEstate/WildEstate.1"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'WildEstate:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/WildEstate/WildEstate.5"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Map",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/Engine.World",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "/Maps"
-          }
-        ],
-        "SpecificAssets": [
-          {
-            "AssetPathName": "/WildEstate/Maps/WildEstate_Terrain.WildEstate_Terrain",
-            "SubPathString": ""
-          }
-        ],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "38.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "39.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Default )"
+          },
+          "bMigratedFromOldData": false
         }
-      },
-      {
-        "PrimaryAssetType": "AthenaBattleBus",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaBattleBusItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "BattleBus"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      }
-    ]
+      ]
+    }
   }
 }

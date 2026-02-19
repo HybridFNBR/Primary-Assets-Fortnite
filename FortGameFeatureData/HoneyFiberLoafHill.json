@@ -1,98 +1,16 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "HoneyFiberLoafHill",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddMutators",
+  "Name": "FortGameFeatureAction_AddMutators_0",
+  "Outer": "HoneyFiberLoafHill",
+  "Class": "UScriptClass'FortGameFeatureAction_AddMutators'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/HoneyFiberLoafHill/Levels/HoneyFiberLoafHill_LevelOverlay.HoneyFiberLoafHill_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
+    "MutatorsToAdd": [
       {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH7S1",
-        "DisplayName": "Honey Fiber Loafhill (Token)",
-        "ConsoleCommands": [
-          "cheat givespecificitem /HoneyFiberLoafHill/Gameplay/AID_HoneyFiber_LoafHill 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'HoneyFiberLoafHill:FortGameFeatureAction_AddToPlaylists_1'",
-        "ObjectPath": "/HoneyFiberLoafHill/HoneyFiberLoafHill.1"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddMutators'HoneyFiberLoafHill:FortGameFeatureAction_AddMutators_0'",
-        "ObjectPath": "/HoneyFiberLoafHill/HoneyFiberLoafHill.0"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AthenaGadget",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+        "Target": "EMutatorAddTarget::FortGameStateAthena",
+        "Mutator": {
+          "AssetPathName": "/HoneyFiberLoafHill/Gameplay/BP_GSMutator_HoneyFiber_LoafHill_OverrideDBNOSettings.BP_GSMutator_HoneyFiber_LoafHill_OverrideDBNOSettings_C",
           "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "Gadget",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortGadgetItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "PlayerAugment",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
       }
     ]

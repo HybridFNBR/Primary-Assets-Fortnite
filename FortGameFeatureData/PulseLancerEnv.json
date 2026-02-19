@@ -1,25 +1,51 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "PulseLancerEnv",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "PulseLancerEnv",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/PulseLancerEnv/Levels/PulseLancerEnv_LevelOverlay.PulseLancerEnv_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'PulseLancerEnv:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/PulseLancerEnv/PulseLancerEnv.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PulseLancerEnv:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/PulseLancerEnv/PulseLancerEnv.0"
-      }
-    ]
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "38.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
+    }
   }
 }

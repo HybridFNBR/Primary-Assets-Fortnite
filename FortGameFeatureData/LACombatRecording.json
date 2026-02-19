@@ -1,53 +1,60 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "LACombatRecording",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "LACombatRecording",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/LACombatRecording/Levels/LACombatRecording_LevelOverlay.LACombatRecording_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'LACombatRecording:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/LACombatRecording/LACombatRecording.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'LACombatRecording:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/LACombatRecording/LACombatRecording.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddCheats'LACombatRecording:GameFeatureAction_AddCheats_0'",
-        "ObjectPath": "/LACombatRecording/LACombatRecording.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "FortPlaylistAthena",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlaylistAthena",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [],
-        "SpecificAssets": [
-          {
-            "AssetPathName": "/LACombatRecording/Playlist_Hoplite.Playlist_Hoplite",
-            "SubPathString": ""
-          }
-        ],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Core"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Core )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    },
+    "OptionalAdditionalPluginsToActivate": [
+      "LACombatInference"
+    ],
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Playlist.Hoplite"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Playlist.Hoplite )"
+    },
+    "RequiredCVar": "LACombatRecording.Enabled"
   }
 }

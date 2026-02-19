@@ -1,0 +1,242 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "Quest_Figment_Daily_GainShields_TiltedShores",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "FigmentEvergreenDailyQuestLocation",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Figment_Daily_GainShields_TiltedSands_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementBy": "EFortShieldGainIncrementType::ShieldGainAmount",
+            "bRequireFullShields": false,
+            "bRequireShieldGainedFromTeammate": false,
+            "bRequireAuthorIsTheShieldGainSource": false,
+            "bUseShieldAmountGained": false,
+            "bUseOverFullShields": false,
+            "bUseShieldGainedPercent": false,
+            "bUseTotalShieldsGained": false,
+            "ShieldGainSource": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "ShieldGainType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AmountOfShieldsGained": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "ShieldsGainedOverFullAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "ShieldsPercentGained": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "TotalShieldGain": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Location.POI.TiltedTowers"
+                  },
+                  {
+                    "TagName": "Athena.Location.POI.SnobbyShores"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  2,
+                  0,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Location.POI.TiltedTowers, Athena.Location.POI.SnobbyShores )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "54C530454C646322ECDD4F8B4CE063ED",
+          "SourceString": "Gain shields at Tilted Towers or Snobby Shores",
+          "LocalizedString": "Gain shields at Tilted Towers or Snobby Shores"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "5C2620EF4D9F2E1691B01C96B14BDFA5",
+          "SourceString": "Gain shields at Tilted Towers or Snobby Shores",
+          "LocalizedString": "Gain shields at Tilted Towers or Snobby Shores"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 50,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 50,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Figment"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.Figment )"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Daily_GainShields_TiltedShores:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_TiltedShores.3"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_Figment_Daily_GainShields_TiltedShores:FortQuestDefinitionComponent_MapMarkers_1'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_TiltedShores.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Daily_GainShields_TiltedShores:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_TiltedShores.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Figment_Daily_GainShields_TiltedSands_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "0D2056A2436CA334AFA58D9C3CF487CB",
+      "SourceString": "Gain shields at Tilted Towers or Snobby Shores",
+      "LocalizedString": "Gain shields at Tilted Towers or Snobby Shores"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "CD0AFC1D4B3B5F7F734026A5536DB0EA",
+      "SourceString": "Gain shields at Tilted Towers or Snobby Shores",
+      "LocalizedString": "Gain shields at Tilted Towers or Snobby Shores"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.Figment.Dailies"
+        ]
+      },
+      {}
+    ]
+  }
+}

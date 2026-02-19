@@ -1,166 +1,17 @@
 {
-  "Type": "FortQuestItemDefinition_Athena",
-  "Name": "Quest_AccountProgression_RankedTrooper_Q01",
-  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortQuestDefinitionComponent_DisplaySettings",
+  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
+  "Outer": "Quest_AccountProgression_RankedTrooper_Q01",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "QuestSubtype": "EFortQuestSubtype::PunchCard",
-    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
-      {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_AccountProgression_RankedTrooper_Q01_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
-          {
-            "IncrementType": "ELevelUpIncrementType::TotalLevelsGained",
-            "bUseRequiredLevelCountRange": false,
-            "RequiredLevelCount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 1
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
-          }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "332B3F8C405ED8053ED43DA9F421898B",
-          "SourceString": "Earn Account Levels",
-          "LocalizedString": "Earn Account Levels"
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 15,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL( Product )"
-    },
-    "SortPriority": 10,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_AccountProgression_RankedTrooper_Q01:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/RankedTrooper/Items/QuestItems/Quest_AccountProgression_RankedTrooper_Q01.1"
+    "VisibilitySettings": {
+      "bOverrideBundleVisibilityData": true,
+      "QuestVisiblityData": {
+        "bIsVisibleWhenClaimed": true,
+        "bIsVisibleWhenCompleted": true
       },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_AccountProgression_RankedTrooper_Q01:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/RankedTrooper/Items/QuestItems/Quest_AccountProgression_RankedTrooper_Q01.0"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_AccountProgression_RankedTrooper_Q01_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "GrantToProfileType": "athena",
-    "Rarity": "EFortRarity::Common",
-    "ItemName": {
-      "Namespace": "",
-      "Key": "FAF524C54B915C43490485905D58F810",
-      "SourceString": "Earn Account Levels",
-      "LocalizedString": "Earn Account Levels"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "2FE9AE024C1FE64D43E47A98F926AC87",
-      "SourceString": "Earn Account Levels",
-      "LocalizedString": "Earn Account Levels"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.All.AccountProgression.RankedTrooper"
-        ]
-      }
-    ]
+      "bCanShowTimer": false
+    }
   }
 }

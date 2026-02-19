@@ -1,133 +1,100 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "Sprites_AirSprite",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "Sprites_AirSprite",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/Sprites_AirSprite/Levels/Sprites_AirSprite_LevelOverlay.Sprites_AirSprite_LevelOverlay",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "33.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Play"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Athena.Playground"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              6,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play, Athena.Playlist.Test, Athena.Creative, Athena.Playground, Playlist.UGC.Core ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
     },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/Sprites_AirSprite/HUD/HUDWidgetRegistryAirSprite.HUDWidgetRegistryAirSprite",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S1 - Sprites",
-        "DisplayName": "Spawn Air Sprite",
-        "ConsoleCommands": [
-          "cheat lwms AirSprite"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'Sprites_AirSprite:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/Sprites_AirSprite/Sprites_AirSprite.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'Sprites_AirSprite:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/Sprites_AirSprite/Sprites_AirSprite.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'Sprites_AirSprite:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/Sprites_AirSprite/Sprites_AirSprite.3"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'Sprites_AirSprite:GameFeatureAction_DataRegistrySource_1'",
-        "ObjectPath": "/Sprites_AirSprite/Sprites_AirSprite.4"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AISpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
-          "SubPathString": ""
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Edit"
         },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "NPCs"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "Consumable",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Play"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "ActorSpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortAthenaActorSpawnerData",
-          "SubPathString": ""
+        {
+          "TagName": "Athena.Playlist.Test"
         },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "NPCs"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "Ammo",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortAmmoItemDefinition",
-          "SubPathString": ""
+        {
+          "TagName": "Athena.Creative"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Playground"
+        },
+        {
+          "TagName": "Playlist.UGC.Core"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        6,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play, Athena.Playlist.Test, Athena.Creative, Athena.Playground, Playlist.UGC.Core ) )"
+    }
   }
 }

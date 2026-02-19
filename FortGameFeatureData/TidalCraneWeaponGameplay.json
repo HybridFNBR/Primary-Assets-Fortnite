@@ -1,100 +1,118 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "TidalCraneWeaponGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "TidalCraneWeaponGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/TidalCraneWeaponGameplay/Levels/TidalCraneWeaponGameplay_LevelOverlay.TidalCraneWeaponGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/TidalCraneWeaponGameplay/TidalCraneWeaponGameplay_DeathCauseData.TidalCraneWeaponGameplay_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S4 Weapons",
-        "DisplayName": "Wrecker Revolver",
-        "ConsoleCommands": [
-          "cheat giveweapon WID_Revolver_TidalCrane_Athena_R 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S4 Weapons",
-        "DisplayName": "TidalCrane AR",
-        "ConsoleCommands": [
-          "cheat giveweapon WID_Assault_TidalCrane_Athena_R 1 1",
-          "cheat giveweapon WID_Assault_TidalCrane_Athena_UR 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S4 Exotic",
-        "DisplayName": "Eradicator Marksman Wrecker",
-        "ConsoleCommands": [
-          "cheat giveweapon WID_Revolver_TidalCrane_Athena_X 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'TidalCraneWeaponGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/TidalCraneWeaponGameplay/TidalCraneWeaponGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'TidalCraneWeaponGameplay:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/TidalCraneWeaponGameplay/TidalCraneWeaponGameplay.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Plugin.Playlist.BlastBerry"
+              },
+              {
+                "TagName": "Plugin.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              6,
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core, Plugin.Playlist.BlastBerry, Plugin.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": true
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "37.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "38.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      },
-      {
-        "PrimaryAssetType": "MultiItem",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWorldMultiItemDefinition",
-          "SubPathString": ""
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Test"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Athena.Playlist.Default"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.Default ) )"
+    }
   }
 }

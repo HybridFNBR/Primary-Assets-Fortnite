@@ -1,66 +1,110 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "ChronoSwarmGrenade",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "ChronoSwarmGrenade",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/ChronoSwarmGrenade/ChronoSwarmGrenade_LevelOverlay.ChronoSwarmGrenade_LevelOverlay",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/ChronoSwarmGrenade/HUD/SwarmGrenadeHUDWidgetRegistry.SwarmGrenadeHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "Gameplaycues"
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/ChronoSwarmGrenade/ChronoSwarmGrenade_DeathCauseData.ChronoSwarmGrenade_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch4S3",
-        "DisplayName": "Give Swarm Grenade",
-        "ConsoleCommands": [
-          "Cheat Giveweapon WID_Athena_Swarm_Grenade 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ChronoSwarmGrenade:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/ChronoSwarmGrenade/ChronoSwarmGrenade.0"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'ChronoSwarmGrenade:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/ChronoSwarmGrenade/ChronoSwarmGrenade.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "25.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Play"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play )"
+          },
+          "bMigratedFromOldData": true
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "38.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "39.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Plugin.Playlist.BattleLab"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              5,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Plugin.Playlist.Arena, Plugin.Playlist.BattleLab, Playlist.UGC.Core ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+        },
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Play"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play )"
+    }
   }
 }

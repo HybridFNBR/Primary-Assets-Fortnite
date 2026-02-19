@@ -1,0 +1,76 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_JunoScenarios_Osiris_WindsorWreck",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoTheme_OsirisWreck_Pollen/Scenario/Levels/Juno_EncounterLevel_JunoScenarios_Osiris_WindsorWreck.Juno_EncounterLevel_JunoScenarios_Osiris_WindsorWreck",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoTheme_OsirisWreck_Pollen/Scenario/StateTrees/ST_Juno_JunoScenarios_Osiris_WindsorWreck.ST_Juno_JunoScenarios_Osiris_WindsorWreck",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 2.0
+    },
+    "LWMDensityRange": {
+      "Value": 7500.0
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_OsirisWreck_PPollen_SpawnCounts'",
+            "ObjectPath": "/JunoTheme_OsirisWreck_Pollen/Scenario/DataTables/DT_OsirisWreck_PPollen_SpawnCounts.0"
+          },
+          "RowName": "Pollen.Ranged.Enemy.Count"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.Pollen.EnemyCount"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.POI.Osiris.Pollen"
+        ]
+      }
+    ]
+  }
+}

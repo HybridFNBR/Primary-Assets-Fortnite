@@ -1,126 +1,13 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "ChainsawGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddMovementModeExtension",
+  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Outer": "ChainsawGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/ChainsawGameplay/Levels/ChainsawGameplay_LevelOverlay.ChainsawGameplay_LevelOverlay",
+    "MovementModeRuntimeRef": {
+      "AssetPathName": "/ChainsawGameplay/Gameplay/MME/MME_Logic_Chainsaw.MME_Logic_Chainsaw_C",
       "SubPathString": ""
-    },
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/ChainsawGameplay/UI/RE_Chainsaw_ReticleExtension.RE_Chainsaw_ReticleExtension",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/ChainsawGameplay/HUD/ChainsawHUDWidgetRegistry.ChainsawHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PlaylistBaseCurveTableOverrides": [
-      {
-        "BaseTable": {
-          "AssetPathName": "/ChainsawGameplay/DataTables/ChainsawGameplayGameData.ChainsawGameplayGameData",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": [
-          {
-            "Key": {
-              "TagName": "Athena.Playlist.Mash"
-            },
-            "Value": {
-              "AssetPathName": "/ChainsawGameplay/DataTables/Mash/ChainsawGamedataComposite_Mash.ChainsawGamedataComposite_Mash",
-              "SubPathString": ""
-            }
-          }
-        ]
-      }
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH5S4",
-        "DisplayName": "Chainsaw",
-        "ConsoleCommands": [
-          "cheat givespecificitem /ChainsawGameplay/Gameplay/AGID_Chainsaw.AGID_Chainsaw 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH5S4",
-        "DisplayName": "Chainsaw (Without Auto Scooter Attack)",
-        "ConsoleCommands": [
-          "cheat givespecificitem /ChainsawGameplay/Gameplay/AGID_Chainsaw_NoAuto.AGID_Chainsaw_NoAuto 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ChainsawGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/ChainsawGameplay/ChainsawGameplay.1"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddMovementModeExtension'ChainsawGameplay:FortGameFeatureAction_AddMovementModeExtension_0'",
-        "ObjectPath": "/ChainsawGameplay/ChainsawGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddAttributeDefaults'ChainsawGameplay:GameFeatureAction_AddAttributeDefaults_0'",
-        "ObjectPath": "/ChainsawGameplay/ChainsawGameplay.4"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddUnableToPerformActionText'ChainsawGameplay:FortGameFeatureAction_AddUnableToPerformActionText_0'",
-        "ObjectPath": "/ChainsawGameplay/ChainsawGameplay.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'ChainsawGameplay:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/ChainsawGameplay/ChainsawGameplay.5"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      },
-      {
-        "PrimaryAssetType": "AthenaGadget",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      }
-    ]
+    }
   }
 }

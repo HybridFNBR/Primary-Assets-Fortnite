@@ -1,22 +1,89 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "DeimosAudioNonFNE",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "DeimosAudioNonFNE",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DeimosAudioNonFNE:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/DeimosAudioNonFNE/DeimosAudioNonFNE.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddSoundLibraryCollection'DeimosAudioNonFNE:GameFeatureAction_AddSoundLibraryCollection_0'",
-        "ObjectPath": "/DeimosAudioNonFNE/DeimosAudioNonFNE.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'DeimosAudioNonFNE:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/DeimosAudioNonFNE/DeimosAudioNonFNE.1"
-      }
-    ]
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "25.20"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              3,
+              5,
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "NOT(Creative, Playground, Blitz or VKPlay)",
+            "AutoDescription": " ANY(  NONE( Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core, Athena.Playlist.Default, Athena.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Creative"
+        },
+        {
+          "TagName": "Playlist.Experience.PlayOnly"
+        },
+        {
+          "TagName": "Playlist.UGC.Core"
+        },
+        {
+          "TagName": "Athena.Playlist.Default"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        3,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "UserDescription": "NOT(Creative, Playground, or VKPlay)",
+      "AutoDescription": " ANY(  NONE( Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core, Athena.Playlist.Default ) )"
+    }
   }
 }

@@ -1,0 +1,74 @@
+{
+  "Type": "FortSmartBuildingItemDefinition",
+  "Name": "BID_SimpleBuild_AltWall",
+  "Class": "UScriptClass'FortSmartBuildingItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "SmartBuildMode": "ESmartBuildMode::Bridge",
+    "BuildSelections": [
+      {
+        "MinViewPitch": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'SimpleBuildIdealPitch'",
+              "ObjectPath": "/SimpleBuild/DataTables/SimpleBuildIdealPitch.0"
+            },
+            "RowName": "SimpleBuild.AltWall.MinPitch.Wall"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "BuildingActors": [
+          {
+            "BuildingMetaData": {
+              "AssetPathName": "/Game/Building/EditModePatterns/Wall/EMP_Wall_Solid.EMP_Wall_Solid",
+              "SubPathString": ""
+            },
+            "RotationIterations": 0,
+            "SelectOnlyIfPlayerLocationInCell": "ESmartBuildPlayerLocationInCell::Anywhere",
+            "BuildDistanceOffset": 0.0,
+            "bTryToConnectToPieceUnderPlayerFeet": false,
+            "bCanBeTurboBuilt": true
+          }
+        ]
+      }
+    ],
+    "WeaponActorClass": {
+      "AssetPathName": "/Game/Weapons/FORT_BuildingTools/Blueprints/DefaultBuildingTool.DefaultBuildingTool_C",
+      "SubPathString": ""
+    },
+    "bCanFireWhileNotTargetedInVehicle": true,
+    "ActualAnalyticFNames": [
+      "Tag:Weapon:bid_simplebuild_altwall"
+    ],
+    "DataList": [
+      {
+        "Icon": {
+          "AssetPathName": "/SimpleBuild/UI/T_SimpleBuildMode_WallOnly_128.T_SimpleBuildMode_WallOnly_128",
+          "SubPathString": ""
+        }
+      },
+      {
+        "InactiveIcon": {
+          "AssetPathName": "/SimpleBuild/UI/T_SimpleBuildMode_WallOnly_128.T_SimpleBuildMode_WallOnly_128",
+          "SubPathString": ""
+        }
+      },
+      {
+        "PreferredQuickbarSlot": 1
+      },
+      {
+        "Traits": [
+          "Item.Trait.HideItemToast"
+        ]
+      },
+      {
+        "Tags": [
+          "phoebe.items.BuildingTool"
+        ]
+      }
+    ]
+  }
+}

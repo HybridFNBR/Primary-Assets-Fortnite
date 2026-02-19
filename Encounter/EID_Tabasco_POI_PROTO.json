@@ -1,0 +1,132 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Tabasco_POI_PROTO",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bUseLevel": false,
+    "ScenarioVolumeClass": {
+      "AssetPathName": "/JunoTabascoPOI_Scenarios/Encounters/EncounterVolumes/BP_Juno_EncounterVolume_Tabasco_POI.BP_Juno_EncounterVolume_Tabasco_POI_C",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoTabascoPOI_Scenarios/Encounters/ST/ST_TabascoPOIScenarios_SpawnInteract_PROTO.ST_TabascoPOIScenarios_SpawnInteract_PROTO",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_Configs'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_Configs.0"
+          },
+          "RowName": "Objective_DamageTimeout"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.DynamicEncounter"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_ActorClass'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_ActorClass.0"
+          },
+          "RowName": "TreasureChest"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.ActorClass"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_Boolean'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_Boolean.0"
+          },
+          "RowName": "bSpawnObjectiveManager"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.Boolean"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_Int'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_Int.0"
+          },
+          "RowName": "TimedTraversal"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.Int"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_Configs'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_Configs.0"
+          },
+          "RowName": "EnemyAIAdds_SearchandFind"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.DynamicEncounter.AIFodder"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoPOI_Encounter_TagQuery'",
+            "ObjectPath": "/JunoTabascoPOI_Scenarios/DataTables/ScenarioVariables/DT_TabascoPOI_Encounter_TagQuery.0"
+          },
+          "RowName": "Reward_General"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.TagQuery"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.POI.Size.Large",
+          "Juno.Adventures.Encounters.POI.Combat.LootAndKill"
+        ]
+      }
+    ]
+  }
+}

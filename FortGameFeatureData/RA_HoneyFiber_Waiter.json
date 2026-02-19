@@ -1,62 +1,45 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "RA_HoneyFiber_Waiter",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "RA_HoneyFiber_Waiter",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/RA_HoneyFiber_Waiter/Levels/RA_HoneyFiber_Waiter_LevelOverlay.RA_HoneyFiber_Waiter_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch7 Rift Anomalies",
-        "DisplayName": "The truth is upon us! Spawn Stick of Truth",
-        "ConsoleCommands": [
-          "Cheat ke* ForceSpawnRA StickOfTruth"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'RA_HoneyFiber_Waiter:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/RA_HoneyFiber_Waiter/RA_HoneyFiber_Waiter.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'RA_HoneyFiber_Waiter:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/RA_HoneyFiber_Waiter/RA_HoneyFiber_Waiter.0"
-      },
-      {
-        "ObjectName": "FortUIGameFeatureAction_AddMapLegendEntries'RA_HoneyFiber_Waiter:FortUIGameFeatureAction_AddMapLegendEntries_0'",
-        "ObjectPath": "/RA_HoneyFiber_Waiter/RA_HoneyFiber_Waiter.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "None",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/RiftAnomaliesGameplayRuntime.FortRiftAnomaliesData",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "/RA_HoneyFiber_Waiter/Gameplay/Data"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "39.40"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Test, Athena.Playlist.Default )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    }
   }
 }

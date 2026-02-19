@@ -1,0 +1,66 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_JunoScenarios_Osiris_TransitionBunker",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoCaves_Osiris/Scenario/TransitionBunker/Levels/Juno_EncounterLevel_JunoScenarios_Osiris_TransitionBunker.Juno_EncounterLevel_JunoScenarios_Osiris_TransitionBunker",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoCaves_Osiris/Scenario/TransitionBunker/StateTrees/ST_Juno_JunoScenarios_Osiris_TransitionBunker.ST_Juno_JunoScenarios_Osiris_TransitionBunker",
+      "SubPathString": ""
+    },
+    "bUseGlobalLWMBudget": true,
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_BunkerEntrance_Var_GameplayTagContainer_Osiris'",
+            "ObjectPath": "/JunoCaves_Osiris/Scenario/BunkerEntrance/DataTables/DT_BunkerEntrance_Var_GameplayTagContainer_Osiris.0"
+          },
+          "RowName": "Rebel"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.CombatSprinkle.Var.GameplayTagContainer.FactionType"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.POI.Osiris.TransitionBunker"
+        ]
+      }
+    ]
+  }
+}

@@ -1,63 +1,80 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "DeliveryDrones",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_1",
+  "Outer": "DeliveryDrones",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PawnGoalSelectionTable": [
-      {
-        "RequiredGameplayTags": [
-          "NPC.GoalSelection.DeliveryDrones"
-        ],
-        "PawnGoalSelectionCriteria": {
-          "IncludeEnemiesWithTags": [],
-          "ExcludeEnemiesWithTags": [],
-          "GoalSelectionCriteria": [
-            {
-              "GoalSelectionQuery": {
-                "AssetPathName": "/DeliveryDrones/EQS/EQS_DeliveryDrones_GoalSelection.EQS_DeliveryDrones_GoalSelection",
-                "SubPathString": ""
-              }
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
             }
-          ]
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+              },
+              {
+                "TagName": "Athena.Playlist.CreativeRoyale.Play"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DeliveryDrones:FortGameFeatureAction_AddToPlaylists_1'",
-        "ObjectPath": "/DeliveryDrones/DeliveryDrones.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'DeliveryDrones:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/DeliveryDrones/DeliveryDrones.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AISpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
-          "SubPathString": ""
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
         },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "SpawnerDatas"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Edit"
+        },
+        {
+          "TagName": "Athena.Playlist.CreativeRoyale.Play"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play )"
+    }
   }
 }

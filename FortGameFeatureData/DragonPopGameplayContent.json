@@ -1,100 +1,80 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "DragonPopGameplayContent",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "DragonPopGameplayContent",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/DragonPopGameplayContent/Levels/DragonPopGameplayContent_LevelOverlay.DragonPopGameplayContent_LevelOverlay",
-      "SubPathString": ""
-    },
-    "DynamicUIDirectorClass": {
-      "AssetPathName": "/DragonPopGameplayContent/Gameplay/HideoutsMarket/UI/BP_DragonPop_Director.BP_DragonPop_Director_C",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PlaylistBaseDataTableOverrides": [
-      {
-        "BaseTable": {
-          "AssetPathName": "/DragonPopGameplayContent/DataTables/PurchaseListData_DragonPop.PurchaseListData_DragonPop",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": [
-          {
-            "Key": {
-              "TagName": "Plugin.Playlist.Arena"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "34.00"
             },
-            "Value": {
-              "AssetPathName": "/DragonPopGameplayContent/DataTables/Competitive/PurchaseListData_DragonPop_Comp.PurchaseListData_DragonPop_Comp",
-              "SubPathString": ""
+            "ExclusiveMax": {
+              "VersionName": "Future"
             }
-          }
-        ]
-      },
-      {
-        "BaseTable": {
-          "AssetPathName": "/DragonPopGameplayContent/DataTables/PurchaseGroupData_DragonPop.PurchaseGroupData_DragonPop",
-          "SubPathString": ""
-        },
-        "PlaylistToOverrideTableMap": []
-      }
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH6S2",
-        "DisplayName": "Diamond Currency",
-        "ConsoleCommands": [
-          "cheat GiveSpecificItem /DragonPopGameplayContent/Gameplay/DiamondCurrency/Athena_DiamondItemData 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "CH6S2",
-        "DisplayName": "Armored Convoy Intel (Mark on map)",
-        "ConsoleCommands": [
-          "Cheat EffectApply GE_MarkArmoredConvoy "
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'DragonPopGameplayContent:GameFeatureAction_AddWorldPartitionContent_0'",
-        "ObjectPath": "/DragonPopGameplayContent/DragonPopGameplayContent.3"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'DragonPopGameplayContent:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/DragonPopGameplayContent/DragonPopGameplayContent.2"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DragonPopGameplayContent:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/DragonPopGameplayContent/DragonPopGameplayContent.0"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "WorldItem",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWorldItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      }
-    ]
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Creative"
+        },
+        {
+          "TagName": "Playlist.UGC.Core"
+        },
+        {
+          "TagName": "Playlist.Experience.PlayOnly"
+        },
+        {
+          "TagName": "Athena.Playlist.Default"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ALL(  ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Athena.Playlist.Default ) )"
+    }
   }
 }

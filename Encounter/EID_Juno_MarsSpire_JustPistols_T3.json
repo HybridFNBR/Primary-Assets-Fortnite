@@ -1,0 +1,318 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_MarsSpire_JustPistols_T3",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoPOI_MarsSpire/Levels/JunoGameplayPlugin_OverlayLevel.JunoGameplayPlugin_OverlayLevel",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoPOI_MarsSpire/Assets/STs/ST_Juno_MarsSpire_T4.ST_Juno_MarsSpire_T4",
+      "SubPathString": ""
+    },
+    "SuccessRewardBehavior": {
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 20.0
+      },
+      "RewardFlingMagnitude": {
+        "Value": 1000.0
+      }
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "RowName": "CAMP.LivingWorldManager.Weight"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 7500.0,
+      "Curve": {
+        "RowName": "CAMP.LivingWorldManager.Range"
+      }
+    },
+    "bUseGlobalLWMBudget": true,
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Bool'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_Bool.0"
+          },
+          "RowName": "IsActivated"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.IsSpireActive"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Bool'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_Bool.0"
+          },
+          "RowName": "IsKillSwitchActive"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.IsKillSwitchActive"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_ActorClass'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_ActorClass.0"
+          },
+          "RowName": "SpireActor_T3"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.SpireActorClass"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_ActorClass'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_ActorClass.0"
+          },
+          "RowName": "RewardChestActor_T3"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.RewardChestClass"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Integer_T3'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/T3/DT_JunoScenarios_MarsSpire_Var_Integer_T3.0"
+          },
+          "RowName": "Wave_1_TotalSpawns"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.FodderTotalSpawns"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Integer_T3'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/T3/DT_JunoScenarios_MarsSpire_Var_Integer_T3.0"
+          },
+          "RowName": "Wave_1_ConcurrentSpawns"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.FodderConcurrentSpawns"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Integer_T3'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/T3/DT_JunoScenarios_MarsSpire_Var_Integer_T3.0"
+          },
+          "RowName": "Wave_2_TotalSpawns"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.EliteTotalSpawns"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Integer_T3'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/T3/DT_JunoScenarios_MarsSpire_Var_Integer_T3.0"
+          },
+          "RowName": "Wave_2_ConcurrentSpawns"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.EliteConcurrentSpawns"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Integer_T3'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/T3/DT_JunoScenarios_MarsSpire_Var_Integer_T3.0"
+          },
+          "RowName": "Wave_3_TotalSpawns"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.FinalWaveTotalSpawns"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Integer_T3'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/T3/DT_JunoScenarios_MarsSpire_Var_Integer_T3.0"
+          },
+          "RowName": "Wave_3_ConcurrentSpawns"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.FinalWaveConcurrentSpawns"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Integer_T3'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/T3/DT_JunoScenarios_MarsSpire_Var_Integer_T3.0"
+          },
+          "RowName": "Miniboss_TotalSpawns"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.MinibossTotalSpawns"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_TagQuery'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_TagQuery.0"
+          },
+          "RowName": "Henchmen_SpawnQuery_OnlyPistols"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.Wave1SpawnQuery"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_TagQuery'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_TagQuery.0"
+          },
+          "RowName": "Henchmen_SpawnQuery_OnlyPistols"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.Wave2SpawnQuery"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_TagQuery'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_TagQuery.0"
+          },
+          "RowName": "Henchmen_SpawnQuery_OnlyPistols"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.Wave3SpawnQuery"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_TagQuery'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_TagQuery.0"
+          },
+          "RowName": "Miniboss_Brute_SpawnQuery"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.MinibossSpawnQuery"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_TagQuery'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_TagQuery.0"
+          },
+          "RowName": "Miniboss_Brute_PointProviderQuery"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.MinibossPointProviderQuery"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Float'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_Float.0"
+          },
+          "RowName": "MinRespawnTime"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.MinRespawnDelay"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_JunoScenarios_MarsSpire_Var_Float'",
+            "ObjectPath": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/Shared/DT_JunoScenarios_MarsSpire_Var_Float.0"
+          },
+          "RowName": "MaxRespawnTimer"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.MaxRespawnDelay"
+        }
+      }
+    ],
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoPOI_MarsSpire/DataTables/StateTreeVars/T3/DT_JunoScenarios_MarsSpire_RVar_Spire_T3.DT_JunoScenarios_MarsSpire_RVar_Spire_T3",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.MarsSpire.SpireActorClass"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    }
+  }
+}

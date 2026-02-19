@@ -1,161 +1,18 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "KatanaGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "ContentBundleDescriptor",
+  "Name": "ContentBundleDescriptor",
+  "Outer": "GameFeatureAction_AddWPContent_0",
+  "Class": "UScriptClass'ContentBundleDescriptor'",
+  "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/KatanaGameplay/KatanaGameplay_LevelOverlay.KatanaGameplay_LevelOverlay",
-      "SubPathString": ""
+    "DisplayName": "KatanaGameplay",
+    "DebugColor": {
+      "B": 177,
+      "G": 140,
+      "R": 100,
+      "A": 255,
+      "Hex": "648CB1"
     },
-    "WeaponReticleExtensions": {
-      "AssetPathName": "/KatanaGameplay/UI/RE_Katana_ReticleExtensionData.RE_Katana_ReticleExtensionData",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/KatanaGameplay/HUD/KatanaHUDWidgetRegistry.KatanaHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "DefaultGameData": {
-      "AssetPathName": "/KatanaGameplay/DataTables/KatanaGameplayGameData.KatanaGameplayGameData",
-      "SubPathString": ""
-    },
-    "PlaylistOverrideGameDataMappings": [
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Plugin.Playlist.Arena"
-            }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            1,
-            1,
-            0
-          ],
-          "UserDescription": "",
-          "AutoDescription": " ANY( Plugin.Playlist.Arena )"
-        },
-        "OverrideGameData": {
-          "AssetPathName": "/KatanaGameplay/DataTables/Comp/CompositeGD_KatanaGameplay_Comp.CompositeGD_KatanaGameplay_Comp",
-          "SubPathString": ""
-        }
-      },
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Athena.Playlist.SolidGold"
-            }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            1,
-            1,
-            0
-          ],
-          "UserDescription": "",
-          "AutoDescription": " ANY( Athena.Playlist.SolidGold )"
-        },
-        "OverrideGameData": {
-          "AssetPathName": "/KatanaGameplay/DataTables/SolidGold/CompositeGD_KatanaGameplay_SolidGold.CompositeGD_KatanaGameplay_SolidGold",
-          "SubPathString": ""
-        }
-      },
-      {
-        "TagQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Athena.Playlist.Mash"
-            }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            1,
-            1,
-            0
-          ],
-          "UserDescription": "HordeRush",
-          "AutoDescription": " ANY( Athena.Playlist.Mash )"
-        },
-        "OverrideGameData": {
-          "AssetPathName": "/KatanaGameplay/DataTables/Mash/CompositeGD_KatanaGameplay_Mash.CompositeGD_KatanaGameplay_Mash",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/KatanaGameplay/Katana_DeathCauseData.Katana_DeathCauseData",
-      "SubPathString": ""
-    },
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "S24",
-        "DisplayName": "Give Katana",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /KatanaGameplay/Items/Katana/WID_Melee_Katana 1 1"
-        ]
-      },
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S1",
-        "DisplayName": "Give Katana Unvault",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /KatanaGameplay/Items/Katana/WID_Melee_Katana 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'KatanaGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/KatanaGameplay/KatanaGameplay.1"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddWPContent'KatanaGameplay:GameFeatureAction_AddWPContent_0'",
-        "ObjectPath": "/KatanaGameplay/KatanaGameplay.4"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'KatanaGameplay:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/KatanaGameplay/KatanaGameplay.5"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToRootGFP'KatanaGameplay:FortGameFeatureAction_AddToRootGFP_0'",
-        "ObjectPath": "/KatanaGameplay/KatanaGameplay.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Weapon",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Items"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
-      }
-    ]
+    "Guid": "6F56A2F6-456705CF-F235A980-1C63092E"
   }
 }

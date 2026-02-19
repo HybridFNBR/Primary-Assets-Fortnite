@@ -1,0 +1,108 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_POI_Fort_LK_Md_Empty_Osiris",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoScenarios/Assets/PrefabMap_Juno_POI.PrefabMap_Juno_POI",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoScenarios_Osiris/Assets/ST_Juno_DynamicEncounter_Osiris_POI_LK_Md_comms_unit.ST_Juno_DynamicEncounter_Osiris_POI_LK_Md_comms_unit",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_POI_Encounter_Density'",
+          "ObjectPath": "/JunoScenarios/DataTables/CT_Juno_POI_Encounter_Density.0"
+        },
+        "RowName": "Juno.Encounter.Faction.Weight.Medium"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_Juno_POI_Encounter_Density'",
+          "ObjectPath": "/JunoScenarios/DataTables/CT_Juno_POI_Encounter_Density.0"
+        },
+        "RowName": "Juno.Encounter.Faction.Range.Medium"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_POIScenario_Var_Bool'",
+            "ObjectPath": "/JunoScenarios/DataTables/DT_Juno_POIScenario_Var_Bool.0"
+          },
+          "RowName": "False"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Var.Bool.IsDefended"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_POIScenario_SpawnCounts_Osiris_Medium'",
+            "ObjectPath": "/JunoScenarios_Osiris/DataTables/DT_Juno_POIScenario_SpawnCounts_Osiris_Medium.0"
+          },
+          "RowName": "AmbushGroupCount"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Var.Int.GroupCount.Ambush"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_POIScenario_SpawnCounts_Osiris_Medium'",
+            "ObjectPath": "/JunoScenarios_Osiris/DataTables/DT_Juno_POIScenario_SpawnCounts_Osiris_Medium.0"
+          },
+          "RowName": "AmbushTotalCount"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Var.Int.SpawnCount.Ambush"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            },
+            null
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "Type": "AthenaDailyQuestDefinition",
+  "Name": "Q_Juno_NXS_Survival_Daily_Use_Toys_Driving",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Group": "JunoNexusSurvivalDaily_Choice",
+    "QuestSubtype": "EFortQuestSubtype::Autofill",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Q_Juno_NXS_Survival_Daily_Use_Thrusters_obj1",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "ParentActor": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "UpdatedChannel": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "UpdatedParts": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Juno.Item.PhysicsToys.Thruster"
+                  },
+                  {
+                    "TagName": "Juno.Item.PhysicsToys.ThrusterLarge"
+                  },
+                  {
+                    "TagName": "Juno.Item.PhysicsToys.ActivatedBalloon"
+                  },
+                  {
+                    "TagName": "Juno.Item.PhysicsToys.ActivatedBalloonLarge"
+                  },
+                  {
+                    "TagName": "Juno.Item.PhysicsToys.Cannon"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  5,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Juno.Item.PhysicsToys.Thruster, Juno.Item.PhysicsToys.ThrusterLarge, Juno.Item.PhysicsToys.ActivatedBalloon, Juno.Item.PhysicsToys.ActivatedBalloonLarge, Juno.Item.PhysicsToys.Cannon )"
+              }
+            },
+            "bUsePartsRequired": true,
+            "NumUpdatedPartsRequired": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 1
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "ChannelValue": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 1.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 12,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 34,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Juno.GameMode.Survival"
+        },
+        {
+          "TagName": "Juno.QuestBlockingWorldSettingsTainted"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        2,
+        2,
+        0,
+        1,
+        3,
+        1,
+        2
+      ],
+      "AutoDescription": " ALL(  ALL( Product.Juno, Juno.GameMode.Survival ),  NONE( Juno.QuestBlockingWorldSettingsTainted ) )"
+    },
+    "Category": {
+      "DataTable": {
+        "ObjectName": "DataTable'QuestCategoryTable'",
+        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
+      },
+      "RowName": "DailyQuests"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Q_Juno_NXS_Survival_Daily_Use_Toys_Driving:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Quests/Q_Juno_NXS_Survival_Daily_Use_Toys_Driving.3"
+      },
+      {
+        "ObjectName": "JunoQuestDefinitionComponent_ProductCompatibilityInjector_GameMode'Q_Juno_NXS_Survival_Daily_Use_Toys_Driving:JunoQuestDefinitionComponent_ProductCompatibilityInjector_GameMode_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Quests/Q_Juno_NXS_Survival_Daily_Use_Toys_Driving.4"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Q_Juno_NXS_Survival_Daily_Use_Toys_Driving:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Quests/Q_Juno_NXS_Survival_Daily_Use_Toys_Driving.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_ModularGates'Q_Juno_NXS_Survival_Daily_Use_Toys_Driving:FortQuestDefinitionComponent_ModularGates_1'",
+        "ObjectPath": "/JunoQuest_Repeatable/Items/QuestItems/SurvivalDailies/Quests/Q_Juno_NXS_Survival_Daily_Use_Toys_Driving.2"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Q_Juno_NXS_Survival_Daily_Use_Thrusters_obj1"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "Rarity": "EFortRarity::Common",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "CF1C2C1148696D425D48FCB47B5B9FB9",
+      "SourceString": "Trigger Toys while Driving",
+      "LocalizedString": "Trigger Toys while Driving"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "58A6689E4397A96913D689A9A9A4AAA0",
+      "SourceString": "Trigger Toys while Driving",
+      "LocalizedString": "Trigger Toys while Driving"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "2F7C4FA5457249E1506B7D8AD9B93277",
+      "SourceString": "Activate Toys from a Driver's seat",
+      "LocalizedString": "Activate Toys from a Driver's seat"
+    },
+    "DataList": [
+      {},
+      {
+        "Tags": [
+          "QuestCategory.Juno.Event.NXS.Survival.Daily.Choice",
+          "ChallengeCategory.XP"
+        ]
+      }
+    ]
+  }
+}

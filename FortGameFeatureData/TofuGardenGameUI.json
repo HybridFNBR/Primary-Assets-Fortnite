@@ -1,18 +1,42 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "TofuGardenGameUI",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "TofuGardenGameUI",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "DynamicUIDirectorClass": {
-      "AssetPathName": "/TofuGardenGameUI/DynamicUI/UIDirector_TofuGarden_PostMatch.UIDirector_TofuGarden_PostMatch_C",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "38.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Unset"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.ForbiddenFruit )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
     },
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'TofuGardenGameUI:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/TofuGardenGameUI/TofuGardenGameUI.0"
-      }
-    ]
+    "RequiredCVar": "Fort.TofuGarden.Enabled"
   }
 }

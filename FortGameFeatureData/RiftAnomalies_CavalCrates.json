@@ -1,52 +1,61 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "RiftAnomalies_CavalCrates",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "RiftAnomalies_CavalCrates",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/RiftAnomalies_CavalCrates/Levels/RiftAnomalies_CavalCrates_LevelOverlay.RiftAnomalies_CavalCrates_LevelOverlay",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'RiftAnomalies_CavalCrates:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/RiftAnomalies_CavalCrates/RiftAnomalies_CavalCrates.3"
-      },
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'RiftAnomalies_CavalCrates:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/RiftAnomalies_CavalCrates/RiftAnomalies_CavalCrates.0"
-      },
-      {
-        "ObjectName": "FortUIGameFeatureAction_AddMapLegendEntries'RiftAnomalies_CavalCrates:FortUIGameFeatureAction_AddMapLegendEntries_0'",
-        "ObjectPath": "/RiftAnomalies_CavalCrates/RiftAnomalies_CavalCrates.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "None",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/RiftAnomaliesGameplayRuntime.FortRiftAnomaliesData",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "/RiftAnomalies_CavalCrates/Gameplay/Data"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.RiftAnomalies.All"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.RiftAnomalies.CavalCrates"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              1,
+              2,
+              0,
+              1,
+              3,
+              3,
+              2,
+              3,
+              4
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.Default ),  NONE( Plugin.Playlist.Exclude.RiftAnomalies.All, Plugin.Playlist.Exclude.RiftAnomalies.CavalCrates, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
         }
-      }
-    ]
+      ]
+    }
   }
 }

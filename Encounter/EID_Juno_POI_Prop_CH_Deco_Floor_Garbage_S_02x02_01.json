@@ -1,0 +1,90 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_POI_Prop_CH_Deco_Floor_Garbage_S_02x02_01",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoScenarios/Assets/PrefabMap_Juno_POI.PrefabMap_Juno_POI",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoScenarios/Assets/ST_Juno_Encounter_POI_PropExplosion_Shared.ST_Juno_Encounter_POI_PropExplosion_Shared",
+      "SubPathString": ""
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_PropExplosion_ActorClasses'",
+            "ObjectPath": "/JunoScenarios/DataTables/PropExplosionVariants/DT_PropExplosion_ActorClasses.0"
+          },
+          "RowName": "CH_Deco_Floor_Garbage_S_02x02_01"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Var.Actor.Prop"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_PropExplosion_ActorCounts'",
+            "ObjectPath": "/JunoScenarios/DataTables/PropExplosionVariants/DT_PropExplosion_ActorCounts.0"
+          },
+          "RowName": "CH_Deco_Floor_Garbage_S_02x02_01"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Var.Actor.PropCount"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "WorldStateQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "WorldState.Juno.PropExplosion.Prop_CH_Deco_Floor_Garbage_S_02x02_01"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  3,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " NONE( WorldState.Juno.PropExplosion.Prop_CH_Deco_Floor_Garbage_S_02x02_01 )"
+              },
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "juno.encounters.tag.Prop_CH_Deco_Floor_Garbage_S_02x02_01"
+        ]
+      }
+    ]
+  }
+}

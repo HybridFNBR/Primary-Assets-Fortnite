@@ -1,68 +1,112 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "CherrySmokeHeroRankingUI",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "CherrySmokeHeroRankingUI",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "UIExtensions": [
-      {
-        "Slot": "EUIExtensionSlot::HUDPlayerActionAlertKillPlayerInfoExtension",
-        "WidgetClass": {
-          "AssetPathName": "/CherrySmokeHeroRankingUI/EliminationNotification/WBP_CherrySmoke_HeroRanking_PlayerActionAlertExtension.WBP_CherrySmoke_HeroRanking_PlayerActionAlertExtension_C",
-          "SubPathString": ""
-        },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      },
-      {
-        "Slot": "EUIExtensionSlot::TeammateStatusPortraitOverlay",
-        "WidgetClass": {
-          "AssetPathName": "/CherrySmokeHeroRankingUI/TeammateStatus/WBP_CherrySmoke_HeroRanking_TeammateRankNotify.WBP_CherrySmoke_HeroRanking_TeammateRankNotify_C",
-          "SubPathString": ""
-        },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      },
-      {
-        "Slot": "EUIExtensionSlot::PostGamePlacementOverlayVictory",
-        "WidgetClass": {
-          "AssetPathName": "/CherrySmokeHeroRankingUI/Postmatch/WBP_CherrySmoke_HeroRanking_PostmatchPlacement.WBP_CherrySmoke_HeroRanking_PostmatchPlacement_C",
-          "SubPathString": ""
-        },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      },
-      {
-        "Slot": "EUIExtensionSlot::PostGamePlacementOverlayLosing",
-        "WidgetClass": {
-          "AssetPathName": "/CherrySmokeHeroRankingUI/Postmatch/WBP_CherrySmoke_HeroRanking_PostmatchPlacement.WBP_CherrySmoke_HeroRanking_PostmatchPlacement_C",
-          "SubPathString": ""
-        },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      },
-      {
-        "Slot": "EUIExtensionSlot::LastKillerNameAddition",
-        "WidgetClass": {
-          "AssetPathName": "/CherrySmokeHeroRankingUI/LastKiller/WBP_CherrySmoke_HeroRanking_LastKillerInfo.WBP_CherrySmoke_HeroRanking_LastKillerInfo_C",
-          "SubPathString": ""
-        },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      }
-    ],
-    "DynamicUIDirectorClass": {
-      "AssetPathName": "/CherrySmokeHeroRankingUI/CherrySmokeHeroRankingUIDirector.CherrySmokeHeroRankingUIDirector_C",
-      "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "36.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "37.40"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.BlastBerry"
+              },
+              {
+                "TagName": "Athena.Playlist.ForbiddenFruit"
+              },
+              {
+                "TagName": "Athena.Playlist.Mash"
+              },
+              {
+                "TagName": "Plugin.Playlist.Exclude.MilitaryRank"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Athena.Playlist.Test"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              2,
+              3,
+              4,
+              0,
+              1,
+              2,
+              3,
+              1,
+              4,
+              4,
+              5,
+              6,
+              7
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  NONE( Athena.Playlist.BlastBerry, Athena.Playlist.ForbiddenFruit, Athena.Playlist.Mash, Plugin.Playlist.Exclude.MilitaryRank ),  ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Athena.Playlist.Test, Plugin.Playlist.Arena ) )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
     },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CherrySmokeHeroRankingUI:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/CherrySmokeHeroRankingUI/CherrySmokeHeroRankingUI.0"
-      }
-    ]
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.BlastBerry"
+        },
+        {
+          "TagName": "Athena.Playlist.ForbiddenFruit"
+        },
+        {
+          "TagName": "Athena.Playlist.Default"
+        },
+        {
+          "TagName": "Athena.Playlist.ItemsTest"
+        },
+        {
+          "TagName": "Athena.Playlist.Test"
+        },
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        3,
+        2,
+        0,
+        1,
+        1,
+        4,
+        2,
+        3,
+        4,
+        5
+      ],
+      "AutoDescription": " ALL(  NONE( Athena.Playlist.BlastBerry, Athena.Playlist.ForbiddenFruit ),  ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Athena.Playlist.Test, Plugin.Playlist.Arena ) )"
+    }
   }
 }

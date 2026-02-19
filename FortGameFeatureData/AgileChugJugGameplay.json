@@ -1,83 +1,84 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "AgileChugJugGameplay",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "AgileChugJugGameplay",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "LevelOverlayConfig": {
-      "AssetPathName": "/AgileChugJugGameplay/Levels/AgileChugJugGameplay_LevelOverlay.AgileChugJugGameplay_LevelOverlay",
-      "SubPathString": ""
-    },
-    "MobileHUDWidgetRegistry": {
-      "AssetPathName": "/AgileChugJugGameplay/HUD/AgileChugJugHUDWidgetRegistry.AgileChugJugHUDWidgetRegistry",
-      "SubPathString": ""
-    },
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "PluginCheats": [
-      {
-        "bIgnoreRunAllSeasonCheatsCommand": false,
-        "SectionName": "Ch6S2",
-        "DisplayName": "Agile Chug Jug",
-        "ConsoleCommands": [
-          "Cheat GiveSpecificItem /AgileChugJugGameplay/Gameplay/WID_AgileChug 1 1"
-        ]
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'AgileChugJugGameplay:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/AgileChugJugGameplay/AgileChugJugGameplay.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'AgileChugJugGameplay:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/AgileChugJugGameplay/AgileChugJugGameplay.2"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "Consumable",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "34.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              },
+              {
+                "TagName": "Plugin.Playlist.Arena"
+              },
+              {
+                "TagName": "Plugin.Playlist.BlastBerry"
+              },
+              {
+                "TagName": "Plugin.Playlist.ForbiddenFruit"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Plugin.Playlist.BlastBerry, Plugin.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": true
         }
-      },
-      {
-        "PrimaryAssetType": "Ammo",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortAmmoItemDefinition",
-          "SubPathString": ""
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Playlist.Default"
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        {
+          "TagName": "Plugin.Playlist.BlastBerry"
+        },
+        {
+          "TagName": "Plugin.Playlist.ForbiddenFruit"
         }
-      }
-    ]
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Plugin.Playlist.BlastBerry, Plugin.Playlist.ForbiddenFruit ) )"
+    }
   }
 }

@@ -1,0 +1,108 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_RiftButterfly_Osiris_V0",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/JunoEncountersRiftButterfly_Osiris/Assets/Juno_EncounterLevel_RiftButterfly_Osiris.Juno_EncounterLevel_RiftButterfly_Osiris",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersRiftButterfly/ST_Juno_RiftButterfly.ST_Juno_RiftButterfly",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "FailureRewards": [
+      {
+        "bUseLootSelectionTable": true,
+        "LootTierName": "None",
+        "LootTierSelection": {
+          "ValueChoiceTable": {
+            "bUseDataRegistry": true,
+            "Table": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "RegistryType": {
+              "Name": "Juno.Encounters.Butterfly.LootTables"
+            }
+          },
+          "VarName": {
+            "TagName": "None"
+          },
+          "SelectionQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "bShowVariableName": false
+        }
+      }
+    ],
+    "FailureRewardBehavior": {
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.RiftButterfly.ConeAngle"
+        }
+      },
+      "RewardFlingMagnitude": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.RiftButterfly.FlingMagnitude"
+        }
+      }
+    },
+    "PlayerFailureGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 0.0
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Osiris_EncounterVars_SpawnedActorClass'",
+            "ObjectPath": "/JunoEncountersRiftButterfly_Osiris/DataTables/Juno_Osiris_EncounterVars_SpawnedActorClass.0"
+          },
+          "RowName": "StorageChest"
+        },
+        "VarName": {
+          "TagName": "Encounter.VariableSelection.Juno.RiftButterfly.ActorClass"
+        }
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.RiftButterfly",
+          "Juno.Adventures.Encounters.Osiris.Butterfly.Chest"
+        ]
+      }
+    ]
+  }
+}

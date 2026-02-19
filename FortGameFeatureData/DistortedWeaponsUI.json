@@ -1,35 +1,80 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "DistortedWeaponsUI",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Outer": "DistortedWeaponsUI",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
   "Properties": {
-    "UIExtensions": [
-      {
-        "Slot": "EUIExtensionSlot::AboveBacchusEquippedItemReloadWidget",
-        "WidgetClass": {
-          "AssetPathName": "/DistortedWeaponsUI/HUD/WBP_ChromeWeaponItemWidget.WBP_ChromeWeaponItemWidget_C",
-          "SubPathString": ""
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "26.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              },
+              {
+                "TagName": "Athena.Playlist.BlastBerry"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              4,
+              0,
+              1,
+              2,
+              3
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Athena.Playlist.BlastBerry ) )"
+          },
+          "bMigratedFromOldData": true
+        }
+      ]
+    },
+    "PlaylistQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Athena.Creative"
         },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      }
-    ],
-    "ContextualTutorials": [
-      {
-        "AssetPathName": "/DistortedWeaponsUI/Tutorials/DistortedWeapons_Pickup.DistortedWeapons_Pickup",
-        "SubPathString": ""
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DistortedWeaponsUI:FortGameFeatureAction_AddToPlaylists_0'",
-        "ObjectPath": "/DistortedWeaponsUI/DistortedWeaponsUI.0"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'DistortedWeaponsUI:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/DistortedWeaponsUI/DistortedWeaponsUI.2"
-      }
-    ]
+        {
+          "TagName": "Playlist.UGC.Core"
+        },
+        {
+          "TagName": "Playlist.Experience.PlayOnly"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        4,
+        1,
+        1,
+        3,
+        0,
+        1,
+        2
+      ],
+      "AutoDescription": " ANY(  ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly ) )"
+    }
   }
 }

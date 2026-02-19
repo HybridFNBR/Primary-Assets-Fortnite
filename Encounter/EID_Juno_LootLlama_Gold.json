@@ -1,0 +1,114 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_LootLlama_Gold",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoEncountersLootLlama/PrefabMap_Juno_LootLlama.PrefabMap_Juno_LootLlama",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersLootLlama/ST_Juno_LootLlama.ST_Juno_LootLlama",
+      "SubPathString": ""
+    },
+    "SuccessRewards": [
+      {
+        "bUseLootSelectionTable": true,
+        "LootTierName": "None",
+        "LootTierSelection": {
+          "ValueChoiceTable": {
+            "bUseDataRegistry": true,
+            "Table": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "RegistryType": {
+              "Name": "Juno.Encounters.LootLlama.LootTables"
+            }
+          },
+          "VarName": {
+            "TagName": "None"
+          },
+          "SelectionQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Encounter.Variable.Juno.LootLlama.Capabilities.Gold"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Encounter.Variable.Juno.LootLlama.Capabilities.Gold )"
+          },
+          "bShowVariableName": false
+        }
+      }
+    ],
+    "SuccessRewardBehavior": {
+      "RewardOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.Llama.ConeAngle"
+        }
+      },
+      "RewardFlingMagnitude": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.Llama.FlingMagnitude"
+        }
+      }
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_Juno_Encounter_LootLlama_ActorDescription'",
+            "ObjectPath": "/JunoEncountersLootLlama/DataTables/DT_Juno_Encounter_LootLlama_ActorDescription.0"
+          },
+          "RowName": "Tier3"
+        },
+        "VarName": {
+          "TagName": "Encounter.Variable.Juno.LootLlama.EncounterName"
+        }
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.LootLlama.Bronze",
+          "Juno.Adventures.Encounters.LootLlama.Identifier"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_SupplyDrop",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoEncountersSupplyDrop/PrefabMap_Juno_SupplyDrop_Physics.PrefabMap_Juno_SupplyDrop_Physics",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersSupplyDrop/ST_Juno_SupplyDrop_Physics.ST_Juno_SupplyDrop_Physics",
+      "SubPathString": ""
+    },
+    "SuccessRewardBehavior": {
+      "RewardOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 20.0
+      },
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.SupplyDrop.ConeAngle"
+        }
+      },
+      "RewardFlingMagnitude": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.SupplyDrop.FlingMagnitude"
+        }
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 0.0
+    },
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": true,
+          "Table": {
+            "AssetPathName": "",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "Juno.Encounters.SupplyDrop.LootTables"
+          }
+        },
+        "VarName": {
+          "TagName": "Encounter.VariableSelection.Juno.SupplyDrop.String"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.SupplyDrop",
+          "Juno.Adventures.Encounters.SupplyDrop"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_RiftShrine_DynamicEncounter",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoEncountersStatuePuzzle/Assets/SpawnedEncounters/Assets/Juno_EncounterLevel_StatuePuzzle_SpawnedEncounter.Juno_EncounterLevel_StatuePuzzle_SpawnedEncounter",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoEncountersStatuePuzzle/Assets/SpawnedEncounters/Assets/ST_Juno_Encounter_StatuePuzzle_DynamicEncounter.ST_Juno_Encounter_StatuePuzzle_DynamicEncounter",
+      "SubPathString": ""
+    },
+    "FailureRewardBehavior": {
+      "RewardDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "RewardConeAngle": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.RiftButterfly.ConeAngle"
+        }
+      },
+      "RewardFlingMagnitude": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CT_Juno_Encounter_RewardMotion'",
+            "ObjectPath": "/JunoAdventures/DataTables/CT_Juno_Encounter_RewardMotion.0"
+          },
+          "RowName": "Juno.Encounter.RiftButterfly.FlingMagnitude"
+        }
+      }
+    },
+    "PlayerFailureGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "VariableSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoEncountersStatuePuzzle/Assets/SpawnedEncounters/DataTables/Juno_EncounterVariableSelection_Faction.Juno_EncounterVariableSelection_Faction",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "VarName": {
+          "TagName": "Encounter.Variable.Juno.Shrine.Resource.Faction"
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [],
+          "QueryTokenStream": [],
+          "UserDescription": "",
+          "AutoDescription": ""
+        },
+        "bShowVariableName": true
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Adventures.Encounters.RiftShrine.SpawnedEncounter.Enemies"
+        ]
+      }
+    ]
+  }
+}

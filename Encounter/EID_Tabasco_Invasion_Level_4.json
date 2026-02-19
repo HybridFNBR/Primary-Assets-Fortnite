@@ -1,0 +1,170 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Tabasco_Invasion_Level_4",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "Level": {
+      "AssetPathName": "/JunoTabascoInvasion/Encounters/Levels/PrefabMap_Juno_Tabasco_Invasion.PrefabMap_Juno_Tabasco_Invasion",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoTabascoInvasion/Encounters/ST/ST_Tabasco_Invasion.ST_Tabasco_Invasion",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_JunoTabascoInvasion_GameData'",
+          "ObjectPath": "/JunoTabascoInvasion/CurveTable/CT_JunoTabascoInvasion_GameData.0"
+        },
+        "RowName": "Juno.Tabasco.Invasion.Level4.Density"
+      }
+    },
+    "LWMDensityRange": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'CT_JunoTabascoInvasion_GameData'",
+          "ObjectPath": "/JunoTabascoInvasion/CurveTable/CT_JunoTabascoInvasion_GameData.0"
+        },
+        "RowName": "Juno.Tabasco.Invasion.DensityRange"
+      }
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoInvasion_Encounter_Faction'",
+            "ObjectPath": "/JunoTabascoInvasion/DataTables/ScenarioVariables/DT_TabascoInvasion_Encounter_Faction.0"
+          },
+          "RowName": "All"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.Tabasco.Invasion.Var.Faction"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoInvasion_Encounter_Float'",
+            "ObjectPath": "/JunoTabascoInvasion/DataTables/ScenarioVariables/DT_TabascoInvasion_Encounter_Float.0"
+          },
+          "RowName": "PreWaveDelay"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.Tabasco.Invasion.Var.Float.PreWaveDelay"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoInvasion_Encounter_Float'",
+            "ObjectPath": "/JunoTabascoInvasion/DataTables/ScenarioVariables/DT_TabascoInvasion_Encounter_Float.0"
+          },
+          "RowName": "PostWaveDelay"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.Tabasco.Invasion.Var.Float.PostWaveDelay"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoInvasion_Encounter_GameplayTagContainer'",
+            "ObjectPath": "/JunoTabascoInvasion/DataTables/ScenarioVariables/DT_TabascoInvasion_Encounter_GameplayTagContainer.0"
+          },
+          "RowName": "EncounterIdentifierTags"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.Tabasco.Invasion.Var.GameplayTagContainer"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoInvasion_Encounter_TagQuery'",
+            "ObjectPath": "/JunoTabascoInvasion/DataTables/ScenarioVariables/DT_TabascoInvasion_Encounter_TagQuery.0"
+          },
+          "RowName": "TargetEncounterQuery"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.Tabasco.Invasion.Var.TagQuery"
+        }
+      }
+    ],
+    "VariableCollectionSelections": [
+      {
+        "ValueChoiceTable": {
+          "bUseDataRegistry": false,
+          "Table": {
+            "AssetPathName": "/JunoTabascoInvasion/DataTables/ScenarioVariables/DT_TabascoInvasion_Selection_Collection.DT_TabascoInvasion_Selection_Collection",
+            "SubPathString": ""
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "SelectionQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Encounters.Tabasco.Invasion.Level.4"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Encounters.Tabasco.Invasion.Level.4 )"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.Sprinkles",
+          "Juno.Adventures.Tabasco.Encounters.Invasion"
+        ]
+      }
+    ]
+  }
+}
