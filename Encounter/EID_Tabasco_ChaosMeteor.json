@@ -1,0 +1,78 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Tabasco_ChaosMeteor",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "bAutoHandleSuccessFailure": false,
+    "Level": {
+      "AssetPathName": "/ChaosMeteor/Encounter/Levels/PrefabMap_Juno_Tabasco_ChaosMeteor.PrefabMap_Juno_Tabasco_ChaosMeteor",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/ChaosMeteor/Encounter/ST/ST_Tabasco_ChaosMeteor.ST_Tabasco_ChaosMeteor",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 4.0
+    },
+    "LWMDensityRange": {
+      "Value": 0.0
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_ChaosMeteor_Encounter_Configs'",
+            "ObjectPath": "/ChaosMeteor/DataTables/ScenarioVariables/DT_ChaosMeteor_Encounter_Configs.0"
+          },
+          "RowName": "ChaosMeteorTier1"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.Tabasco.ChaosMeteor.Var.DynamicEncounter"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.Sprinkles",
+          "Juno.Adventures.Tabasco.Encounters.ChaosMeteor"
+        ]
+      }
+    ]
+  }
+}
