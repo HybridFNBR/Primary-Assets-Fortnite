@@ -1,0 +1,531 @@
+{
+  "Type": "BlueprintGeneratedClass",
+  "Name": "GA_DCN_OrbActor_RadiusMarking_C",
+  "Class": "UScriptClass'BlueprintGeneratedClass'",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "UberGraphFunction": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:ExecuteUbergraph_GA_DCN_OrbActor_RadiusMarking'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.4"
+    }
+  },
+  "SuperStruct": {
+    "ObjectName": "Class'FortGameplayAbility'",
+    "ObjectPath": "/Script/FortniteGame"
+  },
+  "Children": [
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:CalculateExtraPingDelayForPlayer'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.2"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:StartNextDelayedPing'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.15"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:SetValidMarkedActors'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.14"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:GetSoundDelayByDistance'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.5"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:SendMarkFeedbackToAffectedPawns'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.12"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:ModifyFilterData'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.9"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:Targeted_9E66BC0641CB09C1F3F6CEA4BD69B512'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.17"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:EventReceived_E9E6267F4BC7FD9F2ECAD688B29F8755'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.3"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:K2_ActivateAbility'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.6"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:PingAreaForEnemies&Chest'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.10"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:K2_OnEndAbility'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.7"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:StartPingEffect'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.16"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:PlayDelayedPingSound'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.11"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:SendMarkFeedbackToClient'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.13"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:Apply Mark to Next Player'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.1"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:Log It'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.8"
+    },
+    {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:ExecuteUbergraph_GA_DCN_OrbActor_RadiusMarking'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.4"
+    }
+  ],
+  "ChildProperties": [
+    {
+      "Type": "StructProperty",
+      "Name": "UberGraphFrame",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 16,
+      "PropertyFlags": "Transient | DuplicateTransient",
+      "Struct": {
+        "ObjectName": "Class'PointerToUberGraphFrame'",
+        "ObjectPath": "/Script/Engine"
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "TimerH_PingEnemies",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | Transient | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'TimerHandle'",
+        "ObjectPath": "/Script/Engine"
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "Pulse Visual GC",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 12,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'GameplayTag'",
+        "ObjectPath": "/Script/GameplayTags"
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "SF_MarkingRadius",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 56,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'ScalableFloat'",
+        "ObjectPath": "/Script/GameplayAbilities"
+      }
+    },
+    {
+      "Type": "ObjectProperty",
+      "Name": "OwningPlayerPawn",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | Transient | DisableEditOnInstance",
+      "PropertyClass": {
+        "ObjectName": "Class'FortPlayerPawn'",
+        "ObjectPath": "/Script/FortniteGame"
+      }
+    },
+    {
+      "Type": "ArrayProperty",
+      "Name": "MarkedActors",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 16,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | Transient | DisableEditOnInstance",
+      "Inner": {
+        "Type": "ObjectProperty",
+        "Name": "MarkedActors",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    },
+    {
+      "Type": "ArrayProperty",
+      "Name": "PawnFilters",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 16,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+      "Inner": {
+        "Type": "StructProperty",
+        "Name": "PawnFilters",
+        "Flags": "RF_Public",
+        "ElementSize": 664,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'IndicatedActorDataWithFilter'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "SF_MarkingDuration",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 56,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'ScalableFloat'",
+        "ObjectPath": "/Script/GameplayAbilities"
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "PingOffset",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 24,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'Vector'",
+        "ObjectPath": "/Script/CoreUObject"
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "SF_VisualOffsetDuration",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 56,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'ScalableFloat'",
+        "ObjectPath": "/Script/GameplayAbilities"
+      }
+    },
+    {
+      "Type": "ObjectProperty",
+      "Name": "Targeting Preset",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "PropertyClass": {
+        "ObjectName": "Class'TargetingPreset'",
+        "ObjectPath": "/Script/TargetingSystem"
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "SF_TargetingFailsafeDelay",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 56,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'ScalableFloat'",
+        "ObjectPath": "/Script/GameplayAbilities"
+      }
+    },
+    {
+      "Type": "ClassProperty",
+      "Name": "GE_MarkedByOpponent",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "PropertyClass": {
+        "ObjectName": "Class'Class'",
+        "ObjectPath": "/Script/CoreUObject"
+      },
+      "MetaClass": {
+        "ObjectName": "Class'GameplayEffect'",
+        "ObjectPath": "/Script/GameplayAbilities"
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "GCN_MarkingByOwner",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 12,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'GameplayTag'",
+        "ObjectPath": "/Script/GameplayTags"
+      }
+    },
+    {
+      "Type": "DoubleProperty",
+      "Name": "DistanceMapMinRange",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+    },
+    {
+      "Type": "DoubleProperty",
+      "Name": "MinDelay",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+    },
+    {
+      "Type": "DoubleProperty",
+      "Name": "MaxDelay",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+    },
+    {
+      "Type": "ObjectProperty",
+      "Name": "SFX_Chest_MarkingPing",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "PropertyClass": {
+        "ObjectName": "Class'SoundBase'",
+        "ObjectPath": "/Script/Engine"
+      }
+    },
+    {
+      "Type": "MapProperty",
+      "Name": "ScheduledDelayedPingMap",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 80,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "KeyProp": {
+        "Type": "DoubleProperty",
+        "Name": "ScheduledDelayedPingMap",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      "ValueProp": {
+        "Type": "StructProperty",
+        "Name": "ScheduledDelayedPingMap_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    },
+    {
+      "Type": "DoubleProperty",
+      "Name": "LastDelayedPingTime",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "HFRow_bUseLocalPingSFXQueue",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 56,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'ScalableFloat'",
+        "ObjectPath": "/Script/GameplayAbilities"
+      }
+    },
+    {
+      "Type": "ObjectProperty",
+      "Name": "SFX_MarkingPingSelf",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "PropertyClass": {
+        "ObjectName": "Class'SoundBase'",
+        "ObjectPath": "/Script/Engine"
+      }
+    },
+    {
+      "Type": "ObjectProperty",
+      "Name": "CurrentMarkedActor",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 8,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+      "PropertyClass": {
+        "ObjectName": "Class'Actor'",
+        "ObjectPath": "/Script/Engine"
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "PingLocation",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 24,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'Vector'",
+        "ObjectPath": "/Script/CoreUObject"
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "ChestContainerTag",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 32,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'GameplayTagContainer'",
+        "ObjectPath": "/Script/GameplayTags"
+      }
+    },
+    {
+      "Type": "ArrayProperty",
+      "Name": "ChestFilters",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 16,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+      "Inner": {
+        "Type": "StructProperty",
+        "Name": "ChestFilters",
+        "Flags": "RF_Public",
+        "ElementSize": 664,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'IndicatedActorDataWithFilter'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "HF_Ping_VisualRadius",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 56,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'ScalableFloat'",
+        "ObjectPath": "/Script/GameplayAbilities"
+      }
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "Spread Mark Over Multiple Frames",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 56,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'ScalableFloat'",
+        "ObjectPath": "/Script/GameplayAbilities"
+      }
+    },
+    {
+      "Type": "IntProperty",
+      "Name": "Player to Mark Index",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 4,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+    },
+    {
+      "Type": "BoolProperty",
+      "Name": "Stop Marking Players",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 1,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "FieldSize": 1,
+      "ByteOffset": 0,
+      "ByteMask": 1,
+      "FieldMask": 255,
+      "BoolSize": 1,
+      "bIsNativeBool": true
+    },
+    {
+      "Type": "StructProperty",
+      "Name": "Random Delay When Marking Other Players",
+      "Flags": "RF_Public | RF_LoadCompleted",
+      "ElementSize": 56,
+      "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+      "Struct": {
+        "ObjectName": "Class'ScalableFloat'",
+        "ObjectPath": "/Script/GameplayAbilities"
+      }
+    }
+  ],
+  "FuncMap": {
+    "ExecuteUbergraph_GA_DCN_OrbActor_RadiusMarking": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:ExecuteUbergraph_GA_DCN_OrbActor_RadiusMarking'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.4"
+    },
+    "Log It": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:Log It'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.8"
+    },
+    "Apply Mark to Next Player": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:Apply Mark to Next Player'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.1"
+    },
+    "SendMarkFeedbackToClient": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:SendMarkFeedbackToClient'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.13"
+    },
+    "PlayDelayedPingSound": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:PlayDelayedPingSound'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.11"
+    },
+    "StartPingEffect": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:StartPingEffect'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.16"
+    },
+    "K2_OnEndAbility": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:K2_OnEndAbility'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.7"
+    },
+    "PingAreaForEnemies&Chest": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:PingAreaForEnemies&Chest'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.10"
+    },
+    "K2_ActivateAbility": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:K2_ActivateAbility'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.6"
+    },
+    "EventReceived_E9E6267F4BC7FD9F2ECAD688B29F8755": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:EventReceived_E9E6267F4BC7FD9F2ECAD688B29F8755'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.3"
+    },
+    "Targeted_9E66BC0641CB09C1F3F6CEA4BD69B512": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:Targeted_9E66BC0641CB09C1F3F6CEA4BD69B512'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.17"
+    },
+    "ModifyFilterData": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:ModifyFilterData'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.9"
+    },
+    "SendMarkFeedbackToAffectedPawns": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:SendMarkFeedbackToAffectedPawns'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.12"
+    },
+    "GetSoundDelayByDistance": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:GetSoundDelayByDistance'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.5"
+    },
+    "SetValidMarkedActors": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:SetValidMarkedActors'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.14"
+    },
+    "StartNextDelayedPing": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:StartNextDelayedPing'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.15"
+    },
+    "CalculateExtraPingDelayForPlayer": {
+      "ObjectName": "Function'GA_DCN_OrbActor_RadiusMarking_C:CalculateExtraPingDelayForPlayer'",
+      "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.2"
+    }
+  },
+  "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+  "ClassWithin": {
+    "ObjectName": "Class'Object'",
+    "ObjectPath": "/Script/CoreUObject"
+  },
+  "ClassConfigName": "Engine",
+  "bCooked": true,
+  "ClassDefaultObject": {
+    "ObjectName": "GA_DCN_OrbActor_RadiusMarking_C'Default__GA_DCN_OrbActor_RadiusMarking_C'",
+    "ObjectPath": "/DragonCartNarrative/Gameplay/Abilities/GA_DCN_OrbActor_RadiusMarking.18"
+  },
+  "EditorTags": {
+    "BlueprintType": "BPTYPE_Normal"
+  }
+}

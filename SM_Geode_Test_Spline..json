@@ -1,0 +1,55 @@
+{
+  "Type": "BodySetup",
+  "Name": "BodySetup_0",
+  "Outer": "SM_Geode_Test_Spline",
+  "Class": "UScriptClass'BodySetup'",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "DefaultInstance": {
+      "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+      "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+      "CollisionProfileName": "BlockAll",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "FCC_Trace_WeaponCapsule",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_PawnAI",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponMulti",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_Weapon",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_Projectile",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_ProjectileIgnoreAI",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_ProjectileMesh",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_SpectatorDroneCamera",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+            "Response": "ECollisionResponse::ECR_Block"
+          }
+        ]
+      }
+    }
+  },
+  "BodySetupGuid": "555F84AD49962AC72CCE3DBA83B277E2"
+}

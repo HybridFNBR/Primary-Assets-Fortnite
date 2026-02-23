@@ -1,0 +1,80 @@
+{
+  "Type": "BodySetup",
+  "Name": "BodySetup_0",
+  "Outer": "SM_FlyingOrb",
+  "Class": "UScriptClass'BodySetup'",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Properties": {
+    "AggGeom": {
+      "SphereElems": [
+        {
+          "Center": {
+            "X": 0.0,
+            "Y": 216.84595,
+            "Z": 0.0
+          },
+          "Radius": 5505.3096,
+          "RestOffset": 0.0,
+          "Name": "None",
+          "bContributeToMass": true,
+          "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+        }
+      ]
+    },
+    "DefaultInstance": {
+      "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+      "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+      "CollisionProfileName": "BlockAll",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "FCC_Trace_WeaponCapsule",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_PawnAI",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponMulti",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_Weapon",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_Projectile",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_ProjectileIgnoreAI",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_ProjectileMesh",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Object_SpectatorDroneCamera",
+            "Response": "ECollisionResponse::ECR_Block"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+            "Response": "ECollisionResponse::ECR_Block"
+          }
+        ]
+      }
+    },
+    "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+  },
+  "BodySetupGuid": "589C5B27459D95186B4085ABE29CBECC",
+  "CookedFormatData": {
+    "Chaos": {
+      "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+      "ElementCount": 28,
+      "SizeOnDisk": 28,
+      "OffsetInFile": "0xD1"
+    }
+  }
+}
