@@ -1,19 +1,19 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_VK_Edit",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/VKEdit/Playlists/Playlist_VK_Edit",
   "Properties": {
     "bRewardsTrackPlacement": false,
-    "RewardPlacementBonusType": "ERewardPlacementBonusType::None",
     "RewardsPlacementThreshold": 1,
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::None",
     "bAllowSinglePartyMatches": true,
     "bRequeueAfterFailedSessionAssignment": false,
     "RequiredEntitlementToken": "VKCreateUGC",
     "WinConditionType": "EAthenaWinCondition::LastManStandingIncludingAllies",
     "bShouldSpreadTeams": false,
     "bIgnoreDefaultQuests": true,
-    "RespawnType": "EAthenaRespawnType::InfiniteRespawn",
     "RespawnHeight": {
       "Value": 15000.0
     },
@@ -21,10 +21,11 @@
       "Value": 22575.0
     },
     "bUseMaxRespawnHeight": false,
+    "bRespawnInAir": false,
+    "RespawnType": "EAthenaRespawnType::InfiniteRespawn",
     "RespawnTime": {
       "Value": 0.5
     },
-    "bRespawnInAir": false,
     "RespawnLevelStreamDistanceToForceScreenFade": {
       "Value": 1.0,
       "Curve": {
@@ -99,10 +100,12 @@
     "bAllowTeamSwitching": true,
     "bShowTeamSelectButton": true,
     "bUsesAnimationSharing": true,
-    "AnimationSharingSetup": {
-      "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
-      "SubPathString": ""
-    },
+    "AnimationSharingSetups": [
+      {
+        "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
+        "SubPathString": ""
+      }
+    ],
     "AISettings": {
       "AssetPathName": "/VKAI/AIConfig/VK_Edit_AISettings.VK_Edit_AISettings",
       "SubPathString": ""

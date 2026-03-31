@@ -1,0 +1,55 @@
+{
+  "Type": "FortGameFeatureData",
+  "Name": "NPCSpecialist_Protector",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/NPCSpecialist_Protector/NPCSpecialist_Protector",
+  "Properties": {
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": true,
+        "SectionName": "CH7S2: AI",
+        "DisplayName": "Spawn NPC Specialist: Protector",
+        "ConsoleCommands": [
+          "cheat lwms protector"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "GameFeatureAction_AddWorldPartitionContent'NPCSpecialist_Protector:GameFeatureAction_AddWorldPartitionContent_0'",
+        "ObjectPath": "/NPCSpecialist_Protector/NPCSpecialist_Protector.1"
+      },
+      {
+        "ObjectName": "GameFeatureAction_DataRegistrySource'NPCSpecialist_Protector:GameFeatureAction_DataRegistrySource_0'",
+        "ObjectPath": "/NPCSpecialist_Protector/NPCSpecialist_Protector.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "AISpawnerData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "NPCs"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
+  }
+}

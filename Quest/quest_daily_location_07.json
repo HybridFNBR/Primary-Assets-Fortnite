@@ -1,10 +1,11 @@
 {
   "Type": "AthenaDailyQuestDefinition",
   "Name": "quest_daily_location_07",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Package": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_07",
   "Properties": {
-    "Group": "Evergreen_BR_NonCombat",
+    "Group": "Evergreen_BR_Location",
     "QuestSubtype": "EFortQuestSubtype::Autofill",
     "bAthenaGrantRarityToken": false,
     "CompletionPathResults": [
@@ -46,10 +47,20 @@
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
                 "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Location.POI.Generic"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
                 "UserDescription": "",
-                "AutoDescription": ""
+                "AutoDescription": " ANY( Athena.Location.POI.Generic )"
               }
             },
             "Context": {
@@ -88,19 +99,25 @@
                 "TagDictionary": [
                   {
                     "TagName": "Gameplay.Action.Player.Jam.Jamming"
+                  },
+                  {
+                    "TagName": "Athena.Location.POI.Generic"
                   }
                 ],
                 "QueryTokenStream": [
                   0,
                   1,
                   5,
+                  2,
                   1,
                   1,
+                  0,
                   1,
-                  0
+                  1,
+                  1
                 ],
                 "UserDescription": "",
-                "AutoDescription": " ALL(  ANY( Gameplay.Action.Player.Jam.Jamming ) )"
+                "AutoDescription": " ALL(  ANY( Gameplay.Action.Player.Jam.Jamming ),  ANY( Athena.Location.POI.Generic ) )"
               }
             },
             "Context": {
@@ -179,11 +196,11 @@
     "QuestDefinitionComponents": [
       {
         "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_daily_location_07:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Non_Combat/quest_daily_location_07.2"
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_07.2"
       },
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_daily_location_07:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Non_Combat/quest_daily_location_07.1"
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_07.1"
       }
     ],
     "CompletionPaths": [
@@ -203,18 +220,17 @@
         "Context": []
       }
     ],
-    "Rarity": "EFortRarity::Common",
     "ItemName": {
       "Namespace": "",
       "Key": "B8CA57964666E5D9BDA9AF90782FE149",
-      "SourceString": "Emote",
-      "LocalizedString": "Emote"
+      "SourceString": "Emote or jam in a Named Location",
+      "LocalizedString": "Emote or jam in a Named Location"
     },
     "ItemDescription": {
       "Namespace": "",
       "Key": "C93CDAFA45BFE5C1E22809BAB5706478",
-      "SourceString": "Emote",
-      "LocalizedString": "Emote"
+      "SourceString": "Emote or jam in a Named Location",
+      "LocalizedString": "Emote or jam in a Named Location"
     },
     "DataList": [
       {
@@ -223,7 +239,10 @@
           "ChallengeCategory.XP"
         ]
       },
-      {}
+      {},
+      {
+        "Rarity": "EFortRarity::Common"
+      }
     ]
   }
 }

@@ -1,10 +1,10 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_HabaneroSolo",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/BRPlaylists/Athena/Playlists/Habanero/Playlist_HabaneroSolo",
   "Properties": {
-    "RewardPlacementBonusType": "ERewardPlacementBonusType::Solo",
     "InMatchXPRewardScalar": {
       "Curve": {
         "CurveTable": {
@@ -14,32 +14,61 @@
         "RowName": "Playlist_DefaultSolo"
       }
     },
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::Solo",
     "FillRateTable": [
       {
         "MinMmr": 750,
         "MaxMmr": 949,
-        "MinFillPct": 0.1,
-        "MaxFillPct": 0.1,
-        "MaxPriority": 0.0
+        "MinFillPct": 0.3,
+        "MaxFillPct": 0.3,
+        "MaxPriority": 50.0
       },
       {
         "MinMmr": 950,
         "MaxMmr": 1049,
-        "MinFillPct": 0.4,
-        "MaxFillPct": 0.4,
-        "MaxPriority": 0.0
+        "MinFillPct": 0.5,
+        "MaxFillPct": 0.5,
+        "MaxPriority": 50.0
       },
       {
         "MinMmr": 1050,
         "MaxMmr": 1214,
-        "MinFillPct": 0.75,
+        "MinFillPct": 0.7,
         "MaxFillPct": 1.0,
         "MaxPriority": 60.0
       },
       {
         "MinMmr": 1215,
+        "MaxMmr": 1354,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1355,
+        "MaxMmr": 1519,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1520,
+        "MaxMmr": 1714,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1715,
+        "MaxMmr": 1919,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 75.0
+      },
+      {
+        "MinMmr": 1920,
         "MaxMmr": 2250,
-        "MinFillPct": 0.75,
+        "MinFillPct": 0.7,
         "MaxFillPct": 1.0,
         "MaxPriority": 90.0
       }
@@ -96,31 +125,29 @@
       }
     ],
     "MinBracketSize": 25,
-    "MaxBracketSize": 510,
     "BracketBalanceMergeInterval": "3 seconds",
     "BracketBalanceSplitInterval": "5 seconds",
     "OutlierBracketBalanceMergeInterval": "10 seconds",
     "MinBracketPriority": 30.0,
     "MaxBracketPriority": 60.0,
     "MaxOutlierBracketPriority": 300.0,
-    "MaxOutlierBracketMergeMmrGap": 1275,
     "MmrThresholdForPrioritySession": 1710,
     "bUsePlayerRating": true,
     "bEnableRatingUpdate": true,
     "bRestrictSquadFillToSoloPlayers": true,
     "bIsRankedMode": true,
+    "bUseRankScaling": true,
     "RankLossMax": 24.0,
     "RankLossFloorMod": 0.75,
     "KillerRankShare": 0.25,
-    "bUseRankScaling": true,
     "RankScalingStandardDeviation": 800.0,
     "DamageTakenMax": 300.0,
     "PlacementLossMin": 10.0,
     "PlacementGainMin": 0.192,
-    "SeasonNumber": 14,
-    "bEnableDynamicBotBackfill": true,
-    "RatingType": "ranked-br",
+    "SeasonNumber": 17,
+    "RatingType": "ranked-br-combined",
     "bLimitedPoolMatchmakingEnabled": true,
+    "bEnableDynamicBotBackfill": true,
     "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
     "NumWinningTeamsCN": {
       "Value": 1.0,
@@ -194,23 +221,24 @@
     "PlaylistId": 2967,
     "PlaylistName": "Playlist_HabaneroSolo",
     "GameType": "EFortGameType::BR",
-    "MaxPlayers": 80,
+    "MinPlayers": 10,
+    "MaxPlayers": 100,
     "bOverrideMaxPlayers": true,
-    "MaxHumanAndBotParticipants": 80,
-    "MaxTeamCount": 80,
+    "MaxHumanAndBotParticipants": 100,
+    "MaxTeamCount": 100,
     "MaxTeamSize": 1,
     "MaxSocialPartySize": 1,
     "MaxSquadSize": 1,
+    "bAllowSquadFillOption": false,
+    "bShouldFillWhenNoSquadFillOption": true,
     "bEnableBackfillDuringWarmupPhase": false,
     "RichPresenceAssetName": "solos",
     "BuiltInGameFeaturePluginsToLoad": [
-      "ProtoSwarm",
-      "POIBanner",
-      "GoldenPOI",
-      "MidMatchWeaponBunkerGameplay",
-      "FlipperGameplay",
-      "DaisyWeaponGameplay",
-      "BRAccolades"
+      "BRAccolades",
+      "VendingMachine",
+      "BrPlayerCompanion",
+      "WeaponModernizationFeatures",
+      "SimpleBuild"
     ],
     "GameplayTagContainer": [
       "Athena.Playlist.DefaultXP",
@@ -223,6 +251,16 @@
       "Athena.MapDiscoverability.Disable"
     ],
     "LootLevel": 1,
+    "SpawnImmunityTime": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Van.Redux.SquadSpawnImmunityTime"
+      }
+    },
     "ModifierList": [
       {
         "AssetPathName": "/Game/Athena/Playlists/DefaultModifiers/MaterialDropOnElim_Default.MaterialDropOnElim_Default",

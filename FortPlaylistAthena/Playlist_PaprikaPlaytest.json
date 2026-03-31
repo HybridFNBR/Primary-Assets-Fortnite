@@ -1,12 +1,12 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_PaprikaPlaytest",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/PaprikaCore/Playlists/Playlist_PaprikaPlaytest",
   "Properties": {
     "bRewardsTrackPlacement": false,
     "bRewardForRevivingTeammates": true,
-    "RewardPlacementBonusType": "ERewardPlacementBonusType::TwoTeam",
     "RewardsPlacementThreshold": 1,
     "InMatchXPRewardScalar": {
       "Curve": {
@@ -17,13 +17,14 @@
         "RowName": "Playlist_ItemTest"
       }
     },
-    "WinConditionType": "EAthenaWinCondition::MutatorControlledGoalScore",
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::TwoTeam",
     "TimedWinConditionTime": {
       "Value": 60.0
     },
     "FinalWinConditionTime": {
       "Value": 60.0
     },
+    "WinConditionType": "EAthenaWinCondition::MutatorControlledGoalScore",
     "bIsLargeTeamGame": true,
     "RespawnHeight": {
       "Value": 1.0,
@@ -71,10 +72,12 @@
     "bDisplayFinalStormPosition": true,
     "LastSafeZoneIndex": 3,
     "bUsesAnimationSharing": true,
-    "AnimationSharingSetup": {
-      "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
-      "SubPathString": ""
-    },
+    "AnimationSharingSetups": [
+      {
+        "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
+        "SubPathString": ""
+      }
+    ],
     "AISettings": {
       "AssetPathName": "/Game/Athena/AI/AISettings/Phoebe_Default_AISettings.Phoebe_Default_AISettings",
       "SubPathString": ""

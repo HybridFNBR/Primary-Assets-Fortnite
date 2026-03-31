@@ -1,10 +1,12 @@
 {
   "Type": "FortWeaponRangedItemDefinition",
   "Name": "WID_SMG_FirePetal_Quirky_Athena_C",
-  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
+  "Package": "/FirePetalWeaponGameplay/Gameplay/FirePetal_SMG_Quirky/WID_SMG_FirePetal_Quirky_Athena_C",
   "Properties": {
     "bShouldUsePerfectAimWhenTargetingMinSpread": false,
+    "bAllowADSInAir": true,
     "WeaponActorClass": {
       "AssetPathName": "/FirePetalWeaponGameplay/Gameplay/FirePetal_SMG_Quirky/B_SMG_FirePetal_Quirky_Athena.B_SMG_FirePetal_Quirky_Athena_C",
       "SubPathString": ""
@@ -29,6 +31,7 @@
       "SubPathString": ""
     },
     "TriggerType": "EFortWeaponTriggerType::Automatic",
+    "bAllowTargetingDuringReload": true,
     "bReticleCornerOutsideSpreadRadius": true,
     "bModsHidden": true,
     "ReticleCenterImage": {
@@ -61,7 +64,6 @@
         "Weapon"
       ]
     },
-    "Rarity": "EFortRarity::Common",
     "ItemName": {
       "Namespace": "",
       "Key": "9A9D41794DDA947E31035796A1D31BF7",
@@ -77,7 +79,7 @@
     "DataList": [
       {
         "ReloadAbility": {
-          "AssetPathName": "/Script/FortniteGame.FortGameplayAbility_Reload",
+          "AssetPathName": "/Script/SegmentedReloadRuntime.FortGameplayAbility_SegmentedReload",
           "SubPathString": ""
         }
       },
@@ -391,6 +393,9 @@
           "ObjectName": "BulletWhipTrackerAudioData'BulletWhipTrackerData_SMG'",
           "ObjectPath": "/FortMetaSoundWeapon/Items/Metasounds/Whips/BulletWhipTrackerData_SMG.0"
         }
+      },
+      {
+        "Rarity": "EFortRarity::Common"
       }
     ]
   }

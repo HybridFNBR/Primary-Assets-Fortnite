@@ -1,9 +1,12 @@
 {
   "Type": "FortGameFeatureAction_AddToPlaylists",
   "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Outer": "SmartRifle",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'SmartRifle'",
+    "ObjectPath": "/SmartRifle/SmartRifle.1"
+  },
   "Properties": {
     "Playlists": {
       "Entries": [
@@ -35,9 +38,6 @@
                 "TagName": "Playlist.UGC.Core"
               },
               {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
                 "TagName": "Playlist.Experience.PlayOnly"
               },
               {
@@ -53,7 +53,7 @@
               4,
               1,
               1,
-              9,
+              8,
               0,
               1,
               2,
@@ -61,11 +61,40 @@
               4,
               5,
               6,
-              7,
-              8
+              7
             ],
             "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playground, Athena.Playlist.Arena, Plugin.Playlist.Arena, Playlist.UGC.Core, Athena.Playlist.Default, Playlist.Experience.PlayOnly, Plugin.Playlist.BlastBerry, Plugin.Playlist.ForbiddenFruit ) )"
+            "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playground, Athena.Playlist.Arena, Plugin.Playlist.Arena, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Plugin.Playlist.BlastBerry, Plugin.Playlist.ForbiddenFruit ) )"
+          },
+          "bMigratedFromOldData": false
+        },
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "39.40"
+            },
+            "ExclusiveMax": {
+              "VersionName": "40.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playlist.Default ) )"
           },
           "bMigratedFromOldData": false
         }

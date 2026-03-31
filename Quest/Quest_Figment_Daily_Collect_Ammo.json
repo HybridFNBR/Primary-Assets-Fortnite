@@ -1,8 +1,9 @@
 {
   "Type": "AthenaDailyQuestDefinition",
   "Name": "Quest_Figment_Daily_Collect_Ammo",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Package": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Gameplay/Quest_Figment_Daily_Collect_Ammo",
   "Properties": {
     "Group": "FigmentEvergreenDailyQuestGameplay",
     "QuestSubtype": "EFortQuestSubtype::Autofill",
@@ -24,6 +25,15 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
+            "Source": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
             "Item": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
@@ -156,7 +166,6 @@
         "Context": []
       }
     ],
-    "Rarity": "EFortRarity::Common",
     "ItemName": {
       "Namespace": "",
       "Key": "F89C309F4C775846F5AA238BCCA00356",
@@ -176,7 +185,10 @@
           "QuestCategory.Figment.Dailies"
         ]
       },
-      {}
+      {},
+      {
+        "Rarity": "EFortRarity::Common"
+      }
     ]
   }
 }

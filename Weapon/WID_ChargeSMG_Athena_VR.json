@@ -1,8 +1,9 @@
 {
   "Type": "FortWeaponRangedItemDefinition",
   "Name": "WID_ChargeSMG_Athena_VR",
-  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
+  "Package": "/DaisyWeaponGameplay/Items/Weapons/ChargeSMG/WID_ChargeSMG_Athena_VR",
   "Properties": {
     "bShouldUsePerfectAimWhenTargetingMinSpread": false,
     "WeaponActorClass": {
@@ -40,6 +41,7 @@
     "bNoFireOnReleaseBeforeMinChargeTime": true,
     "bReticleCornerOutsideSpreadRadius": true,
     "bCanAutofireWithMinimalCharge": true,
+    "bShouldAutofireChargedShotWhenTargetAcquired": true,
     "ReticleCenterImage": {
       "AssetPathName": "/Game/Athena/HUD/reticles/reticle_dot.reticle_dot",
       "SubPathString": ""
@@ -65,7 +67,6 @@
         "Weapon"
       ]
     },
-    "Rarity": "EFortRarity::Epic",
     "ItemName": {
       "Namespace": "",
       "Key": "3F4BB10E411A112C6D3B79990EAD7167",
@@ -369,6 +370,15 @@
           "Roll": -21.732279
         },
         "Scale": 1.0
+      },
+      {
+        "Rarity": "EFortRarity::Epic"
+      },
+      {
+        "BulletWhipTrackerData": {
+          "ObjectName": "BulletWhipTrackerAudioData'BulletWhipTrackerData_Shotgun'",
+          "ObjectPath": "/FortMetaSoundWeapon/Items/Metasounds/Whips/BulletWhipTrackerData_Shotgun.0"
+        }
       }
     ]
   }

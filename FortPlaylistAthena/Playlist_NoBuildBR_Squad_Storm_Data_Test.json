@@ -1,8 +1,9 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_NoBuildBR_Squad_Storm_Data_Test",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/StormShieldModifier/Playlists/Playlist_NoBuildBR_Squad_Storm_Data_Test",
   "Properties": {
     "InMatchXPRewardScalar": {
       "Curve": {
@@ -16,9 +17,9 @@
     "BotVersionPlaylistName": "Playlist_Bots_NoBuildBR_Squad",
     "bUsePlayerRating": true,
     "bEnableRatingUpdate": true,
-    "bEnableDynamicBotBackfill": true,
     "RatingType": "nobuild",
     "bAllowedInLeto": true,
+    "bEnableDynamicBotBackfill": true,
     "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
     "NumWinningTeamsCN": {
       "Value": 1.0,
@@ -57,10 +58,12 @@
       "SubPathString": ""
     },
     "bUsesAnimationSharing": true,
-    "AnimationSharingSetup": {
-      "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
-      "SubPathString": ""
-    },
+    "AnimationSharingSetups": [
+      {
+        "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
+        "SubPathString": ""
+      }
+    ],
     "bAllowSpectateAPartyMember": true,
     "AISettings": {
       "AssetPathName": "/Game/Athena/AI/AISettings/PlayerBotsFlow_AISettings.PlayerBotsFlow_AISettings",

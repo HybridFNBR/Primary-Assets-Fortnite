@@ -1,8 +1,9 @@
 {
   "Type": "VehicleCosmeticsItemDefinition_Body",
   "Name": "VCID_Body_Squash",
-  "Class": "UScriptClass'VehicleCosmeticsItemDefinition_Body'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'VehicleCosmeticsItemDefinition_Body'",
+  "Package": "/VehicleCosmetics/Mutable/Bodies/Squash/VCID_Body_Squash",
   "Properties": {
     "BodyGroup": {
       "ParameterName": "Body",
@@ -259,6 +260,10 @@
       "AssetPathName": "/VehicleCosmetics/Mutable/Wheels/OEM/VCID_Wheel_OEM.VCID_Wheel_OEM",
       "SubPathString": ""
     },
+    "DefaultSkinMaterial": {
+      "AssetPathName": "/VehicleCosmetics/Bodies/Squash/Materials/MI_Squash_Body_Base.MI_Squash_Body_Base",
+      "SubPathString": ""
+    },
     "AudioData": {
       "AssetPathName": "/VehicleCosmetics/EngineAudio/Veh_Item_EngineAudio_Squash.Veh_Item_EngineAudio_Squash",
       "SubPathString": ""
@@ -285,17 +290,21 @@
           "TagDictionary": [
             {
               "TagName": "Vehicle.Modetype.DM"
+            },
+            {
+              "TagName": "Vehicle.Modetype.Temp"
             }
           ],
           "QueryTokenStream": [
             0,
             1,
             1,
-            1,
-            0
+            2,
+            0,
+            1
           ],
           "UserDescription": "",
-          "AutoDescription": " ANY( Vehicle.Modetype.DM )"
+          "AutoDescription": " ANY( Vehicle.Modetype.DM, Vehicle.Modetype.Temp )"
         },
         "WindowInfo": {
           "WindowDataTableParameterName": "Window",

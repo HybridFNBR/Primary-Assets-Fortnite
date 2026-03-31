@@ -1,9 +1,12 @@
 {
   "Type": "FortGameFeatureAction_AddToPlaylists",
   "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Outer": "Figment_Shotgun_Heavy_Athena",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'Figment_Shotgun_Heavy_Athena'",
+    "ObjectPath": "/Figment_Shotgun_Heavy_Athena/Figment_Shotgun_Heavy_Athena.1"
+  },
   "Properties": {
     "Playlists": {
       "Entries": [
@@ -34,6 +37,44 @@
             "AutoDescription": " ANY( Athena.Playlist.Figment )"
           },
           "bMigratedFromOldData": true
+        },
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "33.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "Future"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Creative"
+              },
+              {
+                "TagName": "Playlist.UGC.Core"
+              },
+              {
+                "TagName": "Playlist.Experience.PlayOnly"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              5,
+              1,
+              1,
+              3,
+              0,
+              1,
+              2
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ALL(  ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly ) )"
+          },
+          "bMigratedFromOldData": false
         }
       ]
     },

@@ -1,8 +1,9 @@
 {
   "Type": "AthenaDailyQuestDefinition",
   "Name": "quest_daily_noncombat_24",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Package": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Non_Combat/quest_daily_noncombat_24",
   "Properties": {
     "Group": "Evergreen_BR_NonCombat",
     "QuestSubtype": "EFortQuestSubtype::Autofill",
@@ -24,6 +25,15 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
+            "Source": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
             "Item": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
@@ -92,7 +102,7 @@
         },
         "Count": 150,
         "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
         "ScriptedAction": {
           "AssetPathName": "",
@@ -131,15 +141,15 @@
     "QuestDefinitionComponents": [
       {
         "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_daily_noncombat_24:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Zero_Out/quest_daily_noncombat_24.2"
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Non_Combat/quest_daily_noncombat_24.2"
       },
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_daily_noncombat_24:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Zero_Out/quest_daily_noncombat_24.1"
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Non_Combat/quest_daily_noncombat_24.1"
       },
       {
         "ObjectName": "FortQuestDefinitionComponent_TrackedData'quest_daily_noncombat_24:FortQuestDefinitionComponent_TrackedData_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Zero_Out/quest_daily_noncombat_24.3"
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Non_Combat/quest_daily_noncombat_24.3"
       }
     ],
     "CompletionPaths": [
@@ -159,7 +169,6 @@
         "Context": []
       }
     ],
-    "Rarity": "EFortRarity::Common",
     "ItemName": {
       "Namespace": "",
       "Key": "7323730C44FC90B4D4324CB3AD5DFC2B",
@@ -179,7 +188,10 @@
           "ChallengeCategory.XP"
         ]
       },
-      {}
+      {},
+      {
+        "Rarity": "EFortRarity::Common"
+      }
     ]
   }
 }

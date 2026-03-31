@@ -1,8 +1,9 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_PiperBootNoBuildOctet",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/BlastBerryPlaylists/BlastBerry/Playlists/Playlist_PiperBootNoBuildOctet",
   "Properties": {
     "InMatchXPRewardScalar": {
       "Curve": {
@@ -88,9 +89,9 @@
     "MaxBracketPriority": 75.0,
     "bUsePlayerRating": true,
     "bEnableRatingUpdate": true,
-    "bEnableDynamicBotBackfill": true,
     "RatingType": "blastberry_nobuild",
     "bAllowedInLeto": true,
+    "bEnableDynamicBotBackfill": true,
     "bShouldErrorOnAdditionalContentFailure": true,
     "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
     "NumWinningTeamsCN": {
@@ -111,7 +112,7 @@
     "RespawnType": "EAthenaRespawnType::InfiniteRespawn",
     "PlaylistMissionGen": {
       "ObjectName": "BlueprintGeneratedClass'MissionGen_PiperBootNoBuildOctet_C'",
-      "ObjectPath": "/BlastBerry/Playlists/MissionGen_PiperBootNoBuildOctet.0"
+      "ObjectPath": "/BlastBerryPlaylists/BlastBerry/Playlists/MissionGen_PiperBootNoBuildOctet.0"
     },
     "UIExtensions": [
       {
@@ -131,8 +132,18 @@
     "bLimitedTimeMode": false,
     "bShowEliminationIndicatorForSquadmates": true,
     "bShowEliminationIndicatorForTeammates": true,
+    "ShouldUseCustomGameChannel": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'BlastBerry_GameData_Octet'",
+          "ObjectPath": "/BlastBerryLoot/DataTables/Octet/BlastBerry_GameData_Octet.0"
+        },
+        "RowName": "BlastBerry.VoiceChat.ShouldUseCustomGameChannel"
+      }
+    },
     "MapManagerClass": {
-      "AssetPathName": "/BlastBerry/Playlists/UIMapManager_PiperBoot.UIMapManager_PiperBoot_C",
+      "AssetPathName": "/BlastBerryPlaylists/BlastBerry/Playlists/UIMapManager_PiperBoot.UIMapManager_PiperBoot_C",
       "SubPathString": ""
     },
     "ServerMaxTickRate": "EFortServerTickRate::Sixty",
@@ -208,7 +219,7 @@
     },
     "ModifierList": [
       {
-        "AssetPathName": "/BlastBerry/Mutators/MaterialDropOnElim_BlastBerry_NoBuild.MaterialDropOnElim_BlastBerry_NoBuild",
+        "AssetPathName": "/BlastBerryPlaylists/Mutators/MaterialDropOnElim_BlastBerry_NoBuild.MaterialDropOnElim_BlastBerry_NoBuild",
         "SubPathString": ""
       },
       {

@@ -1,18 +1,18 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_PlaygroundV2",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/CreativeCore/Playlists/Playlist_PlaygroundV2",
   "Properties": {
     "bRewardsTrackPlacement": false,
-    "RewardPlacementBonusType": "ERewardPlacementBonusType::None",
     "RewardsPlacementThreshold": 1,
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::None",
     "bAllowSinglePartyMatches": true,
     "bRequeueAfterFailedSessionAssignment": false,
     "WinConditionType": "EAthenaWinCondition::LastManStandingIncludingAllies",
     "bShouldSpreadTeams": false,
     "bIgnoreDefaultQuests": true,
-    "RespawnType": "EAthenaRespawnType::InfiniteRespawnExceptStorm",
     "RespawnHeight": {
       "Value": 1.0,
       "Curve": {
@@ -33,6 +33,8 @@
         "RowName": "Playground.MaxRespawnHeight"
       }
     },
+    "bForceRespawnLocationInsideOfVolume": true,
+    "RespawnType": "EAthenaRespawnType::InfiniteRespawnExceptStorm",
     "RespawnLevelStreamDistanceToForceScreenFade": {
       "Value": 1.0,
       "Curve": {
@@ -43,7 +45,6 @@
         "RowName": "Default.MaxSafeTeleportDistance"
       }
     },
-    "bForceRespawnLocationInsideOfVolume": true,
     "bSkipWarmup": true,
     "bSkipAircraft": true,
     "PlaylistMissionGen": {
@@ -151,11 +152,14 @@
     "bEnableCreativeMode": true,
     "bAllowTeamSwitching": true,
     "bShowTeamSelectButton": true,
+    "bPreloadAthenaMapsForMatchmaking": false,
     "bUsesAnimationSharing": true,
-    "AnimationSharingSetup": {
-      "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
-      "SubPathString": ""
-    },
+    "AnimationSharingSetups": [
+      {
+        "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
+        "SubPathString": ""
+      }
+    ],
     "PlaylistStatId": 35,
     "AISettings": {
       "AssetPathName": "/CreativeCore/Athena/Playlists/Creative/Athena_AI_Settings_Creative.Athena_AI_Settings_Creative",

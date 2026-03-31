@@ -1,10 +1,10 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_NoBuildBR_Habanero_Duo",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/BRPlaylists/Athena/Playlists/NoBuildBR/HabaneroZBM/Playlist_NoBuildBR_Habanero_Duo",
   "Properties": {
-    "RewardPlacementBonusType": "ERewardPlacementBonusType::Duo",
     "InMatchXPRewardScalar": {
       "Curve": {
         "CurveTable": {
@@ -14,34 +14,63 @@
         "RowName": "Playlist_DefaultDuo"
       }
     },
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::Duo",
     "FillRateTable": [
       {
         "MinMmr": 750,
         "MaxMmr": 949,
-        "MinFillPct": 0.1,
-        "MaxFillPct": 0.1,
-        "MaxPriority": 0.0
+        "MinFillPct": 0.3,
+        "MaxFillPct": 0.3,
+        "MaxPriority": 50.0
       },
       {
         "MinMmr": 950,
         "MaxMmr": 1049,
-        "MinFillPct": 0.4,
-        "MaxFillPct": 0.4,
-        "MaxPriority": 0.0
+        "MinFillPct": 0.5,
+        "MaxFillPct": 0.5,
+        "MaxPriority": 50.0
       },
       {
         "MinMmr": 1050,
         "MaxMmr": 1214,
-        "MinFillPct": 0.76,
+        "MinFillPct": 0.7,
         "MaxFillPct": 1.0,
-        "MaxPriority": 180.0
+        "MaxPriority": 60.0
       },
       {
         "MinMmr": 1215,
-        "MaxMmr": 2250,
-        "MinFillPct": 0.84,
+        "MaxMmr": 1354,
+        "MinFillPct": 0.7,
         "MaxFillPct": 1.0,
-        "MaxPriority": 280.0
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1355,
+        "MaxMmr": 1519,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1520,
+        "MaxMmr": 1714,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1715,
+        "MaxMmr": 1919,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 75.0
+      },
+      {
+        "MinMmr": 1920,
+        "MaxMmr": 2250,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 90.0
       }
     ],
     "BotFillMMRCutoff": 1049,
@@ -96,32 +125,40 @@
       }
     ],
     "MinBracketSize": 25,
-    "MaxBracketSize": 510,
     "BracketBalanceMergeInterval": "3 seconds",
     "BracketBalanceSplitInterval": "5 seconds",
     "OutlierBracketBalanceMergeInterval": "10 seconds",
     "MinBracketPriority": 30.0,
     "MaxBracketPriority": 60.0,
     "MaxOutlierBracketPriority": 300.0,
-    "MaxOutlierBracketMergeMmrGap": 1010,
     "MmrThresholdForPrioritySession": 1710,
     "bUsePlayerRating": true,
     "bEnableRatingUpdate": true,
     "bRestrictSquadFillToSoloPlayers": true,
     "bIsRankedMode": true,
+    "bUseRankScaling": true,
     "RankLossMax": 24.0,
     "RankLossFloorMod": 0.75,
     "KillerRankShare": 0.25,
-    "bUseRankScaling": true,
     "RankScalingStandardDeviation": 800.0,
     "DamageTakenMax": 300.0,
     "PlacementLossMin": 10.0,
     "PlacementGainMin": 0.192,
-    "SeasonNumber": 13,
+    "SeasonNumber": 17,
+    "RatingType": "ranked-br-combined",
+    "bLimitedPoolMatchmakingEnabled": true,
     "bEnableDynamicBotBackfill": true,
-    "RatingType": "ranked-zb",
-    "bAllowedInLeto": true,
     "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
+    "NumWinningTeamsCN": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "NumWinningTeamsCN"
+      }
+    },
     "InventorySystemConfiguration": {
       "AssetPathName": "/Itemization/BRStyle/ItemizationConfiguration_FNBR.ItemizationConfiguration_FNBR",
       "SubPathString": ""
@@ -161,9 +198,30 @@
       "AssetPathName": "/Game/Athena/AI/AISettings/PlayerBotsFlow_AISettings.PlayerBotsFlow_AISettings",
       "SubPathString": ""
     },
+    "MaxVehiclesCanSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.MaxVehiclesCanSpawnWith"
+      }
+    },
+    "PercentChanceSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
+      }
+    },
     "PlaylistId": 34288,
     "PlaylistName": "Playlist_NoBuildBR_Habanero_Duo",
     "GameType": "EFortGameType::ZeroBuild",
+    "MinPlayers": 10,
     "MaxPlayers": 100,
     "bOverrideMaxPlayers": true,
     "MaxHumanAndBotParticipants": 100,
@@ -171,19 +229,27 @@
     "MaxTeamSize": 2,
     "MaxSocialPartySize": 2,
     "MaxSquadSize": 2,
+    "bAllowSquadFillOption": false,
+    "bShouldFillWhenNoSquadFillOption": true,
     "bEnableBackfillDuringWarmupPhase": false,
     "RichPresenceAssetName": "duos",
     "bAllowKeepPlayingTogether": true,
+    "BuiltInGameFeaturePluginsToLoad": [
+      "BRAccolades",
+      "VendingMachine",
+      "BrPlayerCompanion",
+      "WeaponModernizationFeatures"
+    ],
     "GameplayTagContainer": [
       "Athena.Playlist.DefaultXP",
       "Athena.Plugin.GameMod.Gasket",
       "Athena.Playlist.NoBuildingMaterials",
-      "Athena.Playlist.NoBuildBR.PluginLoot",
       "Athena.Playlist.Habanero",
-      "Athena.Playlist.NoBuildBR.Duo",
-      "Athena.Playlist.Duo",
       "Athena.Playlist.Restrictions.AllowFireModeSelect",
-      "Plugin.Playlist.Arena"
+      "Plugin.Playlist.Arena",
+      "Athena.MapDiscoverability.Disable",
+      "Athena.Playlist.NoBuildBR.Duo",
+      "Athena.Playlist.Duo"
     ],
     "LootLevel": 2,
     "ModifierList": [
@@ -223,16 +289,22 @@
       "SourceString": "Zero Build - Duos",
       "LocalizedString": "Zero Build - Duos"
     },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "191628E248168364D3DFB7959D19D5A9",
+      "SourceString": "Be the last team standing.",
+      "LocalizedString": "Be the last team standing."
+    },
     "LootTierData": {
-      "AssetPathName": "/BRPlaylists/Athena/Playlists/NoBuildBR/AthenaCompositeLTD_NoBuildBR.AthenaCompositeLTD_NoBuildBR",
+      "AssetPathName": "/BRPlaylists/Athena/Playlists/NoBuildBR/Competitive/AthenaCompositeLTD_NoBuildBR_Showdown.AthenaCompositeLTD_NoBuildBR_Showdown",
       "SubPathString": ""
     },
     "LootPackages": {
-      "AssetPathName": "/BRPlaylists/Athena/Playlists/NoBuildBR/AthenaCompositeLP_NoBuildBR.AthenaCompositeLP_NoBuildBR",
+      "AssetPathName": "/BRPlaylists/Athena/Playlists/NoBuildBR/Competitive/AthenaCompositeLP_NoBuildBR_Showdown.AthenaCompositeLP_NoBuildBR_Showdown",
       "SubPathString": ""
     },
     "GameData": {
-      "AssetPathName": "/BRPlaylists/Athena/Playlists/NoBuildBR/HabaneroZBM/DataTables/AthenaCompositeGameData_NoBuildBRDuo_Habanero.AthenaCompositeGameData_NoBuildBRDuo_Habanero",
+      "AssetPathName": "/BRPlaylists/Athena/Playlists/NoBuildBR/Competitive/AthenaCompositeGD_NoBuild_Showdown.AthenaCompositeGD_NoBuild_Showdown",
       "SubPathString": ""
     }
   }

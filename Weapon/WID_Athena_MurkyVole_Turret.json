@@ -1,8 +1,9 @@
 {
   "Type": "FortWeaponRangedItemDefinition",
   "Name": "WID_Athena_MurkyVole_Turret",
-  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
+  "Package": "/MurkyVoleGameplay/Gameplay/Turret/WID_Athena_MurkyVole_Turret",
   "Properties": {
     "bPrimaryFireRequiresAmmo": false,
     "bSecondaryFireRequiresAmmo": false,
@@ -11,10 +12,7 @@
       "SubPathString": ""
     },
     "WeaponStatHandle": {
-      "DataTable": {
-        "ObjectName": "DataTable'AthenaRangedWeapons'",
-        "ObjectPath": "/Game/Athena/Items/Weapons/AthenaRangedWeapons.0"
-      },
+      "DataTable": null,
       "RowName": "Assault_Auto_Athena_R_Ore_T03"
     },
     "AbilitySet": {
@@ -44,7 +42,6 @@
       "Item.Weapon.Ranged.MurkyVole.Turret",
       "Tag:Weapon:wid_athena_murkyvole_turret"
     ],
-    "Rarity": "EFortRarity::Epic",
     "ItemName": {
       "Namespace": "",
       "Key": "9C97684F44775258127120926AC68354",
@@ -298,14 +295,16 @@
           "Cosmetics.OverrideWrapBehavior.DoNotOverride",
           "Cosmetics.Wrap.DoNotApplyOnPickups",
           "Rarity.VeryRare",
-          "Weapon.Ranged",
           "Weapon.Meta.DoNotApplyWraps",
           "Item.SortsRight",
           "Item.Weapon.Ranged.MurkyVole.Turret",
           "Athena.HUD.EquippedItem.HideItemInfoItemCount",
           "Athena.HUD.EquippedItem.HideQuickbarItemCount",
           "phoebe.items.generic.supported",
-          "Phoebe.ItemHasInventorySlotPriority"
+          "Phoebe.ItemHasInventorySlotPriority",
+          "Weapon.Ranged.Turret",
+          "Athena.Item.Utility",
+          "HUD.PreferredSlotType.Utility"
         ]
       },
       {
@@ -330,6 +329,9 @@
           "Item.Trait.SingleStack",
           "Item.Trait.InventorySizeLimited"
         ]
+      },
+      {
+        "Rarity": "EFortRarity::Epic"
       }
     ]
   }

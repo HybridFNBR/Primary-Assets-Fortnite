@@ -1,8 +1,9 @@
 {
   "Type": "VehicleCosmeticsItemDefinition_Body",
   "Name": "VCID_Body_Rebar",
-  "Class": "UScriptClass'VehicleCosmeticsItemDefinition_Body'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'VehicleCosmeticsItemDefinition_Body'",
+  "Package": "/VehicleCosmetics/Mutable/Bodies/Rebar/VCID_Body_Rebar",
   "Properties": {
     "BodyGroup": {
       "ParameterName": "Body",
@@ -259,6 +260,10 @@
       "AssetPathName": "/VehicleCosmetics/Mutable/Wheels/OEM/VCID_Wheel_OEM.VCID_Wheel_OEM",
       "SubPathString": ""
     },
+    "DefaultSkinMaterial": {
+      "AssetPathName": "/VehicleCosmetics/Bodies/Rebar/Materials/MI_Rebar_Body.MI_Rebar_Body",
+      "SubPathString": ""
+    },
     "AudioData": {
       "AssetPathName": "/VehicleCosmetics/EngineAudio/Veh_Item_EngineAudio_Rebar.Veh_Item_EngineAudio_Rebar",
       "SubPathString": ""
@@ -285,17 +290,21 @@
           "TagDictionary": [
             {
               "TagName": "Vehicle.Modetype.DM"
+            },
+            {
+              "TagName": "Vehicle.Modetype.Temp"
             }
           ],
           "QueryTokenStream": [
             0,
             1,
             1,
-            1,
-            0
+            2,
+            0,
+            1
           ],
           "UserDescription": "",
-          "AutoDescription": " ANY( Vehicle.Modetype.DM )"
+          "AutoDescription": " ANY( Vehicle.Modetype.DM, Vehicle.Modetype.Temp )"
         },
         "WindowInfo": {
           "WindowDataTableParameterName": "Window",

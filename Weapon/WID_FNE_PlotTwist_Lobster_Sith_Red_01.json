@@ -1,8 +1,9 @@
 {
   "Type": "FortWeaponMeleeItemDefinition",
   "Name": "WID_FNE_PlotTwist_Lobster_Sith_Red_01",
-  "Class": "UScriptClass'FortWeaponMeleeItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponMeleeItemDefinition'",
+  "Package": "/FNE_Galileo_Lobster/WIDs/WID_FNE_PlotTwist_Lobster_Sith_Red_01",
   "Properties": {
     "WeaponActorClass": {
       "AssetPathName": "/PlotTwist/Items/LightSaber/WeaponActors/B_Athena_Galileo_Lobster_PlotTwist_Sith_Red_01.B_Athena_Galileo_Lobster_PlotTwist_Sith_Red_01_C",
@@ -10,10 +11,10 @@
     },
     "WeaponStatHandle": {
       "DataTable": {
-        "ObjectName": "DataTable'AthenaMeleeWeapons'",
-        "ObjectPath": "/Game/Athena/Items/Weapons/AthenaMeleeWeapons.0"
+        "ObjectName": "DataTable'GalileoMeleeWeapons'",
+        "ObjectPath": "/FNE_Galileo_Lobster/GalileoMeleeWeapons.0"
       },
-      "RowName": "Galileo_Lobster_Athena_R_Ore_T04"
+      "RowName": "Galileo_Lobster_Akita"
     },
     "BaseAlteration": {
       "AssetPathName": "/Game/Items/Alterations/DamageTypeAlterations/BaseAlteration_ImpactDamage.BaseAlteration_ImpactDamage",
@@ -24,7 +25,7 @@
       "SubPathString": ""
     },
     "SecondaryFireAbility": {
-      "AssetPathName": "/Galileo/Items/Lobster/Abilities/Block/GA_Galileo_Lobster_Block.GA_Galileo_Lobster_Block_C",
+      "AssetPathName": "/FNE_Galileo_Lobster/Blueprints/GA_Galileo_Block.GA_Galileo_Block_C",
       "SubPathString": ""
     },
     "EquippedAbilitySet": {
@@ -32,6 +33,9 @@
       "SubPathString": ""
     },
     "SecondaryTriggerType": "EFortWeaponTriggerType::Automatic",
+    "bUsesPhantomReserveAmmo": true,
+    "bUsesCustomAmmoType": true,
+    "bShowAmmoAsPercent": true,
     "bAllowSecondaryFireToInterruptPrimary": true,
     "PlayerGrantedGameplayTags": [
       "Gameplay.Status.DisableSwimSprintCancel",
@@ -50,7 +54,6 @@
         "Weapon"
       ]
     },
-    "Rarity": "EFortRarity::Mythic",
     "ItemName": {
       "Namespace": "",
       "Key": "E6824A3A4483AAF4443757906CF31703",
@@ -793,13 +796,13 @@
       },
       {
         "Icon": {
-          "AssetPathName": "/PlotTwist/Items/LightSaber/Icons/T-T-Icon-BR-Sharp-PlotTwist-Red.T-T-Icon-BR-Sharp-PlotTwist-Red",
+          "AssetPathName": "/Galileo/Items/Lobster/Assets/UI/Icons/T-T-Icon-BR-RealmWeapon.T-T-Icon-BR-RealmWeapon",
           "SubPathString": ""
         }
       },
       {
         "LargeIcon": {
-          "AssetPathName": "/PlotTwist/Items/LightSaber/Icons/T-T-Icon-BR-Sharp-PlotTwist-Red-L.T-T-Icon-BR-Sharp-PlotTwist-Red-L",
+          "AssetPathName": "/Galileo/Items/Lobster/Assets/UI/Icons/T-T-Icon-BR-RealmWeapon-L.T-T-Icon-BR-RealmWeapon-L",
           "SubPathString": ""
         }
       },
@@ -812,10 +815,12 @@
           "Weapon.Meta.DoNotApplyWraps",
           "Rarity.Mythic",
           "Item.Weapon.CanBlock",
-          "Item.Weapon.Galileo.Lobster",
           "Granted.Cooldown.Galileo.Lobster.ActivePower",
           "phoebe.items.melee.galileolobster",
-          "phoebe.weapon.melee"
+          "phoebe.weapon.melee",
+          "Item.Weapon.Galileo.Lobster.Sith.Red",
+          "Granted.Athena.PlotTwist.Force.Reticle",
+          "Granted.Cooldown.BrinePot.Augment"
         ]
       },
       {
@@ -838,6 +843,9 @@
           "Roll": 15.0
         },
         "Scale": 0.8
+      },
+      {
+        "Rarity": "EFortRarity::Mythic"
       }
     ]
   }

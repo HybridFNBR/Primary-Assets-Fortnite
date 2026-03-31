@@ -1,11 +1,12 @@
 {
   "Type": "FortWeaponRangedItemDefinition",
   "Name": "WID_Assault_SunRose_HS_Athena_UC",
-  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
+  "Package": "/SunRoseWeaponsGameplay/Items/Weapons/WarforgedAR/Hitscan/WID_Assault_SunRose_HS_Athena_UC",
   "Properties": {
     "WeaponActorClass": {
-      "AssetPathName": "/SunRoseWeaponsGameplay/Items/Weapons/WarforgedAR/B_Assault_SunRose_AR_Athena.B_Assault_SunRose_AR_Athena_C",
+      "AssetPathName": "/SunRoseWeaponsGameplay/Items/Weapons/WarforgedAR/Hitscan/B_Assault_SunRose_AR_HS_Athena.B_Assault_SunRose_AR_HS_Athena_C",
       "SubPathString": ""
     },
     "WeaponMeshOverride": {
@@ -309,30 +310,30 @@
         "WeaponModSlots": [
           {
             "WeaponMod": {
-              "ObjectName": "FortWeaponModItemDefinition'WMID_Barrel_MuzzleBrake'",
-              "ObjectPath": "/WeaponMods/Items/WeaponMods/Barrel/MuzzleBrake/WMID_Barrel_MuzzleBrake.0"
+              "ObjectName": "FortWeaponModItemDefinitionOptic'WMID_Default_IronSights'",
+              "ObjectPath": "/WeaponMods/Items/WeaponMods/Optics/IronSight/WMID_Default_IronSights.0"
             },
-            "bIsDynamic": true
+            "bIsDynamic": false
           },
           {
             "WeaponMod": {
               "ObjectName": "FortWeaponModItemDefinition'WMID_Underbarrel_VertForegrip'",
               "ObjectPath": "/WeaponMods/Items/WeaponMods/Underbarrel/VerticalForegrip/WMID_Underbarrel_VertForegrip.0"
             },
-            "bIsDynamic": true
+            "bIsDynamic": false
           },
           {
             "WeaponMod": {
               "ObjectName": "FortWeaponModItemDefinitionMagazine'WMID_Default_Magazine'",
               "ObjectPath": "/WeaponMods/Items/WeaponMods/Magazines/DefaultMags/WMID_Default_Magazine.0"
             },
-            "bIsDynamic": true
+            "bIsDynamic": false
           }
         ]
       },
       {
         "ReloadAbility": {
-          "AssetPathName": "/Script/FortniteGame.FortGameplayAbility_Reload",
+          "AssetPathName": "/Script/SegmentedReloadRuntime.FortGameplayAbility_SegmentedReload",
           "SubPathString": ""
         }
       },
@@ -381,6 +382,12 @@
           "Rarity.Uncommon",
           "item.weapon.ranged.assault.SunRose"
         ]
+      },
+      {
+        "BulletWhipTrackerData": {
+          "ObjectName": "BulletWhipTrackerAudioData'BulletWhipTrackerData_Rifle'",
+          "ObjectPath": "/FortMetaSoundWeapon/Items/Metasounds/Whips/BulletWhipTrackerData_Rifle.0"
+        }
       }
     ]
   }

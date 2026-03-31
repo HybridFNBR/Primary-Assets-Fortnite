@@ -1,8 +1,9 @@
 {
   "Type": "FortWeaponRangedItemDefinition",
   "Name": "WID_Assault_PastaRipper_Athena_Boss",
-  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
+  "Package": "/MotherGameplay/Items/Exotics/PastaRipper/WID_Assault_PastaRipper_Athena_Boss",
   "Properties": {
     "WeaponActorClass": {
       "AssetPathName": "/MotherGameplay/Items/Exotics/PastaRipper/B_Assault_PastaRipper.B_Assault_PastaRipper_C",
@@ -67,7 +68,6 @@
         "Weapon"
       ]
     },
-    "Rarity": "EFortRarity::Mythic",
     "ItemName": {
       "Namespace": "",
       "Key": "7F84F9EA4FB90301ED96B2A27DD25C31",
@@ -90,7 +90,7 @@
       },
       {
         "ReloadAbility": {
-          "AssetPathName": "/Script/FortniteGame.FortGameplayAbility_Reload",
+          "AssetPathName": "/Script/SegmentedReloadRuntime.FortGameplayAbility_SegmentedReload",
           "SubPathString": ""
         }
       },
@@ -245,7 +245,7 @@
           }
         },
         "PickupSound": {
-          "AssetPathName": "/MotherGameplay/Sounds/PastaRipper/PastaRipper_Pickup_Cue.PastaRipper_Pickup_Cue",
+          "AssetPathName": "",
           "SubPathString": ""
         },
         "PickupByNearbyPawnSound": {
@@ -253,7 +253,7 @@
           "SubPathString": ""
         },
         "DropSound": {
-          "AssetPathName": "/MotherGameplay/Sounds/PastaRipper/PastaRipper_Drop_Cue.PastaRipper_Drop_Cue",
+          "AssetPathName": "",
           "SubPathString": ""
         },
         "DroppedLoopSound": {
@@ -264,7 +264,12 @@
           "AssetPathName": "",
           "SubPathString": ""
         },
-        "PickupSoundLibraries": [],
+        "PickupSoundLibraries": [
+          {
+            "AssetPathName": "/MotherGameplay/Items/Exotics/PastaRipper/Audio/SL_PastaRipper_PulseRifle_Pickup.SL_PastaRipper_PulseRifle_Pickup",
+            "SubPathString": ""
+          }
+        ],
         "MiniMapViewableDistance": 5000.0,
         "DropBehavior": "EWorldItemDropBehavior::DropAsPickup",
         "RepickupBehaviour": "EWorldItemRepickupBehavior::Default",
@@ -345,6 +350,15 @@
           "Roll": -19.367004
         },
         "Scale": 1.02
+      },
+      {
+        "Rarity": "EFortRarity::Mythic"
+      },
+      {
+        "BulletWhipTrackerData": {
+          "ObjectName": "BulletWhipTrackerAudioData'BulletWhipTrackerData_Rifle'",
+          "ObjectPath": "/FortMetaSoundWeapon/Items/Metasounds/Whips/BulletWhipTrackerData_Rifle.0"
+        }
       }
     ]
   }

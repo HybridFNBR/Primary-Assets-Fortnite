@@ -1,9 +1,12 @@
 {
   "Type": "FortGameFeatureAction_AddToPlaylists",
   "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Outer": "EMPGameplay",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'EMPGameplay'",
+    "ObjectPath": "/EMPGameplay/EMPGameplay.2"
+  },
   "Properties": {
     "Playlists": {
       "Entries": [
@@ -20,9 +23,6 @@
             "TokenStreamVersion": 0,
             "TagDictionary": [
               {
-                "TagName": "Athena.Playlist.ItemsTest"
-              },
-              {
                 "TagName": "Plugin.Playlist.BattleLab"
               },
               {
@@ -30,9 +30,6 @@
               },
               {
                 "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
               },
               {
                 "TagName": "Athena.Plugin"
@@ -47,19 +44,51 @@
               4,
               1,
               1,
-              7,
+              5,
               0,
               1,
               2,
               3,
-              4,
-              5,
-              6
+              4
             ],
             "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Playlist.ItemsTest, Plugin.Playlist.BattleLab, Athena.Creative, Playlist.UGC.Core, Athena.Playlist.Default, Athena.Plugin, Plugin.Playlist.BlastBerry ) )"
+            "AutoDescription": " ANY(  ANY( Plugin.Playlist.BattleLab, Athena.Creative, Playlist.UGC.Core, Athena.Plugin, Plugin.Playlist.BlastBerry ) )"
           },
           "bMigratedFromOldData": true
+        },
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "26.00"
+            },
+            "ExclusiveMax": {
+              "VersionName": "40.00"
+            }
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.ItemsTest"
+              },
+              {
+                "TagName": "Athena.Playlist.Default"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              4,
+              1,
+              1,
+              2,
+              0,
+              1
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY(  ANY( Athena.Playlist.ItemsTest, Athena.Playlist.Default ) )"
+          },
+          "bMigratedFromOldData": false
         }
       ]
     },

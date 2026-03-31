@@ -1,10 +1,10 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_ShowdownTournament_FigmentDuo",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/FigmentPlaylists/Playlists/Competitive/Playlist_ShowdownTournament_FigmentDuo",
   "Properties": {
-    "RewardPlacementBonusType": "ERewardPlacementBonusType::Duo",
     "RewardsPlacementThreshold": 5,
     "InMatchXPRewardScalar": {
       "Curve": {
@@ -21,9 +21,10 @@
         "SubPathString": ""
       }
     ],
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::Duo",
     "bIsTournament": true,
-    "CompetitivePointClamp": 9999,
     "Strategy": "BattleRoyaleStrategy_Showdown",
+    "CompetitivePointClamp": 9999,
     "PriorityRatingExpansion": [
       {
         "Priority": 0,
@@ -78,8 +79,8 @@
         "RowName": "NumWinningTeamsCN"
       }
     },
-    "ForceKickAfterDeathTime": 60.0,
     "ForceKickAfterDeathMode": "EForceKickAfterDeathMode::KickAll",
+    "ForceKickAfterDeathTime": 60.0,
     "InventorySystemConfiguration": {
       "AssetPathName": "/Itemization/BRStyle/ItemizationConfiguration_FNBR.ItemizationConfiguration_FNBR",
       "SubPathString": ""
@@ -126,10 +127,12 @@
       "SubPathString": ""
     },
     "bUsesAnimationSharing": true,
-    "AnimationSharingSetup": {
-      "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
-      "SubPathString": ""
-    },
+    "AnimationSharingSetups": [
+      {
+        "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
+        "SubPathString": ""
+      }
+    ],
     "bAllowSpectateAPartyMember": true,
     "AISettings": {
       "AssetPathName": "/Game/Athena/AI/AISettings/PlayerBotsFlow_AISettings.PlayerBotsFlow_AISettings",

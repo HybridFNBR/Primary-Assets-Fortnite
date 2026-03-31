@@ -1,8 +1,9 @@
 {
   "Type": "FortWeaponRangedItemDefinition",
   "Name": "WID_AgileChug",
-  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
+  "Package": "/AgileChugJugGameplay/Gameplay/WID_AgileChug",
   "Properties": {
     "bUseOnTouch": true,
     "bSecondaryFireRequiresAmmo": false,
@@ -39,6 +40,10 @@
     "bUsesPhantomReserveAmmo": true,
     "bUsesCustomAmmoType": true,
     "bCanFireWhileNotTargetedInVehicle": true,
+    "ReticleImage": {
+      "AssetPathName": "/Game/Athena/HUD/reticles/reticle_dot_new.reticle_dot_new",
+      "SubPathString": ""
+    },
     "AnalyticTags": [
       "Item.Consumable.AgileChugJug"
     ],
@@ -56,7 +61,6 @@
       ]
     },
     "ItemType": "EFortItemType::Consumable",
-    "Rarity": "EFortRarity::Legendary",
     "ItemName": {
       "Namespace": "",
       "Key": "E8E00A3F4FF79F0B2A810B95DC4E42F2",
@@ -303,7 +307,8 @@
           "Phoebe.Items.AgileChugJug",
           "Phoebe.Consumable.Heal.LowHealthThreshold",
           "Phoebe.Consumable.Heal.LowShieldThreshold",
-          "phoebe.weapon.trait.noaccuracy"
+          "phoebe.weapon.trait.noaccuracy",
+          "Athena.HUD.Pickup.IgnoreItemTypeForQuantity"
         ]
       },
       {
@@ -332,6 +337,9 @@
           "ObjectName": "BlueprintGeneratedClass'Action_DropChugJug_C'",
           "ObjectPath": "/AgileChugJugGameplay/Gameplay/Action_DropChugJug.1"
         }
+      },
+      {
+        "Rarity": "EFortRarity::Legendary"
       }
     ]
   }

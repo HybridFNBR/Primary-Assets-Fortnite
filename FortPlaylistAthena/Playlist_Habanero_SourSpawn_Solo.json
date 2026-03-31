@@ -1,10 +1,10 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_Habanero_SourSpawn_Solo",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/BlastBerryPlaylists/BlastBerry/Playlists/Playlist_Habanero_SourSpawn_Solo",
   "Properties": {
-    "RewardPlacementBonusType": "ERewardPlacementBonusType::Solo",
     "InMatchXPRewardScalar": {
       "Curve": {
         "CurveTable": {
@@ -20,32 +20,61 @@
         "SubPathString": ""
       }
     ],
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::Solo",
     "FillRateTable": [
       {
         "MinMmr": 750,
         "MaxMmr": 949,
-        "MinFillPct": 0.2,
-        "MaxFillPct": 0.2,
-        "MaxPriority": 0.0
+        "MinFillPct": 0.3,
+        "MaxFillPct": 0.3,
+        "MaxPriority": 50.0
       },
       {
         "MinMmr": 950,
         "MaxMmr": 1049,
-        "MinFillPct": 0.4,
-        "MaxFillPct": 0.4,
-        "MaxPriority": 0.0
+        "MinFillPct": 0.5,
+        "MaxFillPct": 0.5,
+        "MaxPriority": 50.0
       },
       {
         "MinMmr": 1050,
         "MaxMmr": 1214,
-        "MinFillPct": 0.8,
+        "MinFillPct": 0.7,
         "MaxFillPct": 1.0,
         "MaxPriority": 60.0
       },
       {
         "MinMmr": 1215,
+        "MaxMmr": 1354,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1355,
+        "MaxMmr": 1519,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1520,
+        "MaxMmr": 1714,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1715,
+        "MaxMmr": 1919,
+        "MinFillPct": 0.7,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 75.0
+      },
+      {
+        "MinMmr": 1920,
         "MaxMmr": 2250,
-        "MinFillPct": 0.8,
+        "MinFillPct": 0.7,
         "MaxFillPct": 1.0,
         "MaxPriority": 90.0
       }
@@ -102,24 +131,22 @@
       }
     ],
     "MinBracketSize": 25,
-    "MaxBracketSize": 510,
     "BracketBalanceMergeInterval": "3 seconds",
     "BracketBalanceSplitInterval": "5 seconds",
     "OutlierBracketBalanceMergeInterval": "10 seconds",
     "MinBracketPriority": 30.0,
     "MaxBracketPriority": 60.0,
-    "MaxOutlierBracketPriority": 180.0,
-    "MaxOutlierBracketMergeMmrGap": 800,
+    "MaxOutlierBracketPriority": 300.0,
     "MmrThresholdForPrioritySession": 1710,
     "bUsePlayerRating": true,
     "bEnableRatingUpdate": true,
     "bRestrictSquadFillToSoloPlayers": true,
     "bIsRankedMode": true,
     "bUseReloadRankedFormula": true,
+    "bUseRankScaling": true,
     "RankLossMax": 18.0,
     "RankLossFloorMod": 0.75,
     "KillerRankShare": 0.25,
-    "bUseRankScaling": true,
     "RankScalingStandardDeviation": 800.0,
     "RankKillFarmCutoff": 3,
     "RankKillFarmFloor": 0.05,
@@ -127,11 +154,9 @@
     "DamageTakenMax": 150.0,
     "PlacementLossMin": 10.0,
     "PlacementGainMin": 0.162,
-    "SeasonNumber": 20006,
-    "bEnableDynamicBotBackfill": true,
+    "SeasonNumber": 20008,
     "RatingType": "ranked_blastberry_build",
-    "bAllowedInLeto": true,
-    "bShouldErrorOnAdditionalContentFailure": true,
+    "bEnableDynamicBotBackfill": true,
     "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
     "NumWinningTeamsCN": {
       "Value": 1.0,
@@ -151,7 +176,7 @@
     "RespawnType": "EAthenaRespawnType::InfiniteRespawn",
     "PlaylistMissionGen": {
       "ObjectName": "BlueprintGeneratedClass'MissionGen_Habanero_SourSpawnSolo_C'",
-      "ObjectPath": "/BlastBerry/Playlists/MissionGen_Habanero_SourSpawnSolo.0"
+      "ObjectPath": "/BlastBerryPlaylists/BlastBerry/Playlists/MissionGen_Habanero_SourSpawnSolo.0"
     },
     "UIExtensions": [
       {
@@ -173,7 +198,7 @@
     "bShowEliminationIndicatorForTeammates": true,
     "bEnableCustomProximityChatPriorityList": true,
     "MapManagerClass": {
-      "AssetPathName": "/BlastBerry/Playlists/UIMapManager_SourSpawn.UIMapManager_SourSpawn_C",
+      "AssetPathName": "/BlastBerryPlaylists/BlastBerry/Playlists/UIMapManager_SourSpawn.UIMapManager_SourSpawn_C",
       "SubPathString": ""
     },
     "ServerMaxTickRate": "EFortServerTickRate::Sixty",
@@ -183,7 +208,7 @@
     },
     "bAllowSpectateAPartyMember": true,
     "AISettings": {
-      "AssetPathName": "/BlastBerry/AI/Bots/PlayerBotsFlow_AISettings_BlastBerry.PlayerBotsFlow_AISettings_BlastBerry",
+      "AssetPathName": "/BlastBerryAI/Bots/PlayerBotsFlow_AISettings_BlastBerry.PlayerBotsFlow_AISettings_BlastBerry",
       "SubPathString": ""
     },
     "MaxVehiclesCanSpawnWithTireMod": {
@@ -216,6 +241,8 @@
     "MaxTeamSize": 1,
     "MaxSocialPartySize": 1,
     "MaxSquadSize": 1,
+    "bAllowSquadFillOption": false,
+    "bShouldFillWhenNoSquadFillOption": true,
     "bEnableBackfillDuringWarmupPhase": false,
     "RichPresenceAssetName": "solos",
     "bAllowKeepPlayingTogether": true,
@@ -225,7 +252,8 @@
     },
     "BuiltInGameFeaturePluginsToLoad": [
       "BlastBerry",
-      "Koala"
+      "Koala",
+      "BrPlayerCompanion"
     ],
     "GameplayTagContainer": [
       "Athena.Playlist.DefaultXP",
@@ -238,8 +266,7 @@
       "Product.BlastBerry.Build",
       "Athena.Playlist.SourSpawn",
       "Athena.Playlist.Habanero",
-      "Product.BlastBerry.Habanero",
-      "Athena.Playlist.BlastBerry.Ranked"
+      "Product.BlastBerry.Habanero"
     ],
     "SpawnImmunityTime": {
       "Value": 1.0,
@@ -253,7 +280,7 @@
     },
     "ModifierList": [
       {
-        "AssetPathName": "/BlastBerry/Mutators/MaterialDropOnElim_BlastBerry.MaterialDropOnElim_BlastBerry",
+        "AssetPathName": "/BlastBerryPlaylists/Mutators/MaterialDropOnElim_BlastBerry.MaterialDropOnElim_BlastBerry",
         "SubPathString": ""
       },
       {
@@ -290,16 +317,16 @@
     },
     "UIDescription": {
       "Namespace": "",
-      "Key": "013632CA4EBC5E7372345AB9F131AE30",
-      "SourceString": "Testing mode solo",
-      "LocalizedString": "Testing mode solo"
+      "Key": "7DA7A10842A2A98879470EA616F8B01C",
+      "SourceString": "Ranked reload build solo",
+      "LocalizedString": "Ranked reload build solo"
     },
     "LootTierData": {
-      "AssetPathName": "/BlastBerryLoot/DataTables/BlastBerryComposite_LT.BlastBerryComposite_LT",
+      "AssetPathName": "/BlastBerryLoot/DataTables/BlastBerryComposite_LT_Habanero.BlastBerryComposite_LT_Habanero",
       "SubPathString": ""
     },
     "LootPackages": {
-      "AssetPathName": "/BlastBerryLoot/DataTables/BlastBerryComposite_LP.BlastBerryComposite_LP",
+      "AssetPathName": "/BlastBerryLoot/DataTables/BlastBerryComposite_LP_Habanero.BlastBerryComposite_LP_Habanero",
       "SubPathString": ""
     },
     "GameData": {

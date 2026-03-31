@@ -1,8 +1,9 @@
 {
   "Type": "FortWeaponRangedItemDefinition",
   "Name": "WID_Assault_Paprika_Heavy_Athena_R_Aug",
-  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
+  "Package": "/PaprikaCoreWeapons/Items/Weapons/PaprikaAR_Heavy/WID_Assault_Paprika_Heavy_Athena_R_Aug",
   "Properties": {
     "bForceProjectileTooltip": true,
     "WeaponActorClass": {
@@ -73,7 +74,6 @@
         "Rare"
       ]
     },
-    "Rarity": "EFortRarity::Rare",
     "ItemName": {
       "Namespace": "",
       "Key": "8560AA4049C897CCA701C7A9C209B5B6",
@@ -113,8 +113,8 @@
       {
         "WeaponSoundLibraries": [
           {
-            "ObjectName": "SoundLibrary'PaprikaAR_Lib'",
-            "ObjectPath": "/PaprikaCoreWeapons/Items/Weapons/PaprikaAR_Heavy/Sounds/PaprikaAR_Lib.0"
+            "ObjectName": "SoundLibrary'SL_PaprikaAR_Heavy_Weapon'",
+            "ObjectPath": "/PaprikaCoreWeapons/Items/Weapons/PaprikaAR_Heavy/Sounds/SL_PaprikaAR_Heavy_Weapon.0"
           }
         ],
         "WeaponOwnerSoundLibraries": [],
@@ -292,7 +292,7 @@
           }
         },
         "PickupSound": {
-          "AssetPathName": "/Game/Sounds/Fort_GamePlay_Sounds/Loot/AR_Pickup_Cue.AR_Pickup_Cue",
+          "AssetPathName": "",
           "SubPathString": ""
         },
         "PickupByNearbyPawnSound": {
@@ -300,7 +300,7 @@
           "SubPathString": ""
         },
         "DropSound": {
-          "AssetPathName": "/Game/Sounds/Fort_GamePlay_Sounds/Loot/AR_Drop_Cue.AR_Drop_Cue",
+          "AssetPathName": "",
           "SubPathString": ""
         },
         "DroppedLoopSound": {
@@ -311,7 +311,12 @@
           "AssetPathName": "",
           "SubPathString": ""
         },
-        "PickupSoundLibraries": [],
+        "PickupSoundLibraries": [
+          {
+            "AssetPathName": "/PaprikaCoreWeapons/Items/Weapons/PaprikaAR_Heavy/Sounds/SL_PaprikaAR_Heavy_Pickup.SL_PaprikaAR_Heavy_Pickup",
+            "SubPathString": ""
+          }
+        ],
         "MiniMapViewableDistance": 5000.0,
         "DropBehavior": "EWorldItemDropBehavior::DropAsPickup",
         "RepickupBehaviour": "EWorldItemRepickupBehavior::Default",
@@ -412,6 +417,9 @@
           "ModSetBucket.Assault.Heavy",
           "Item.Weapon.Ranged.Assault.Heavy.Paprika"
         ]
+      },
+      {
+        "Rarity": "EFortRarity::Rare"
       }
     ]
   }

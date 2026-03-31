@@ -1,8 +1,9 @@
 {
   "Type": "FortWeaponMeleeItemDefinition",
   "Name": "WID_FNE_Galileo_Lobster_Realm",
-  "Class": "UScriptClass'FortWeaponMeleeItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponMeleeItemDefinition'",
+  "Package": "/FNE_Galileo_Lobster/WIDs/WID_FNE_Galileo_Lobster_Realm",
   "Properties": {
     "WeaponActorClass": {
       "AssetPathName": "/Galileo/Items/Lobster/Actors/B_Athena_Galileo_Lobster_Realm.B_Athena_Galileo_Lobster_Realm_C",
@@ -10,10 +11,10 @@
     },
     "WeaponStatHandle": {
       "DataTable": {
-        "ObjectName": "DataTable'AthenaMeleeWeapons'",
-        "ObjectPath": "/Game/Athena/Items/Weapons/AthenaMeleeWeapons.0"
+        "ObjectName": "DataTable'GalileoMeleeWeapons'",
+        "ObjectPath": "/FNE_Galileo_Lobster/GalileoMeleeWeapons.0"
       },
-      "RowName": "Galileo_Lobster_Athena_R_Ore_T04"
+      "RowName": "Galileo_Lobster_Akita"
     },
     "BaseAlteration": {
       "AssetPathName": "/Game/Items/Alterations/DamageTypeAlterations/BaseAlteration_ImpactDamage.BaseAlteration_ImpactDamage",
@@ -24,34 +25,22 @@
       "SubPathString": ""
     },
     "SecondaryFireAbility": {
-      "AssetPathName": "/Galileo/Items/Lobster/Abilities/Realm/GA_Galileo_Lobster_BlockWithThrow.GA_Galileo_Lobster_BlockWithThrow_C",
+      "AssetPathName": "/FNE_Galileo_Lobster/Blueprints/GA_Galileo_Block.GA_Galileo_Block_C",
       "SubPathString": ""
     },
-    "EquippedAbilities": [
-      {
-        "AssetPathName": "/Galileo/Items/Lobster/Abilities/Realm/GA_Realm_Throw.GA_Realm_Throw_C",
-        "SubPathString": ""
-      },
-      {
-        "AssetPathName": "/Galileo/Items/Lobster/Abilities/Realm/GA_Realm_Catch.GA_Realm_Catch_C",
-        "SubPathString": ""
-      },
-      {
-        "AssetPathName": "/Galileo/Items/Lobster/Abilities/Realm/GA_Realm_CheckIfTryingToBlock.GA_Realm_CheckIfTryingToBlock_C",
-        "SubPathString": ""
-      }
-    ],
     "EquippedAbilitySet": {
       "AssetPathName": "/Galileo/Items/Lobster/Abilities/AS_Galileo_Lobster_Passive.AS_Galileo_Lobster_Passive",
       "SubPathString": ""
     },
     "SecondaryTriggerType": "EFortWeaponTriggerType::Automatic",
+    "bUsesPhantomReserveAmmo": true,
+    "bUsesCustomAmmoType": true,
+    "bShowAmmoAsPercent": true,
     "bAllowSecondaryFireToInterruptPrimary": true,
     "PlayerGrantedGameplayTags": [
       "Gameplay.Status.DisableSwimSprintCancel",
       "Item.Weapon.Galileo.Lobster.Realm",
       "Granted.Athena.Galileo.Lobster.Equipped",
-      "Granted.Athena.Galileo.Lobster.SuppressActivePower",
       "Granted.Athena.TacticalSprint.PreventHolster"
     ],
     "ActualAnalyticFNames": [
@@ -66,7 +55,6 @@
         "Weapon"
       ]
     },
-    "Rarity": "EFortRarity::Mythic",
     "ItemName": {
       "Namespace": "",
       "Key": "895A21E7416ACB62C68D6B9C66056F10",
@@ -831,7 +819,10 @@
           "HUD.PreferredSlotType.Utility",
           "Item.Weapon.CanBlock",
           "phoebe.items.melee.galileolobster",
-          "phoebe.weapon.melee"
+          "phoebe.weapon.melee",
+          "Item.Weapon.Galileo.Lobster.Sith.Red",
+          "Granted.Athena.PlotTwist.Force.Reticle",
+          "Granted.Cooldown.BrinePot.Augment"
         ]
       },
       {
@@ -854,6 +845,9 @@
           "Roll": 15.0
         },
         "Scale": 0.8
+      },
+      {
+        "Rarity": "EFortRarity::Mythic"
       }
     ]
   }

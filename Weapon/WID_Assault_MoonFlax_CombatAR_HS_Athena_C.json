@@ -1,11 +1,12 @@
 {
   "Type": "FortWeaponRangedItemDefinition",
   "Name": "WID_Assault_MoonFlax_CombatAR_HS_Athena_C",
-  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
+  "Package": "/WeaponsUpdated/Gameplay/CombatAR/Hitscan/WID_Assault_MoonFlax_CombatAR_HS_Athena_C",
   "Properties": {
     "WeaponActorClass": {
-      "AssetPathName": "/WeaponsUpdated/Gameplay/CombatAR/B_Assault_MoonFlax_CombatAR_Athena.B_Assault_MoonFlax_CombatAR_Athena_C",
+      "AssetPathName": "/WeaponsUpdated/Gameplay/CombatAR/Hitscan/B_Assault_MoonFlax_CombatAR_HS_Athena.B_Assault_MoonFlax_CombatAR_HS_Athena_C",
       "SubPathString": ""
     },
     "WeaponMeshOverride": {
@@ -13,10 +14,7 @@
       "SubPathString": ""
     },
     "WeaponStatHandle": {
-      "DataTable": {
-        "ObjectName": "DataTable'AthenaRangedWeapons'",
-        "ObjectPath": "/Game/Athena/Items/Weapons/AthenaRangedWeapons.0"
-      },
+      "DataTable": null,
       "RowName": "Assault_MoonFlax_Combat_Athena_C_Ore_T03"
     },
     "BaseAlteration": {
@@ -58,7 +56,18 @@
       "Item.Weapon.Ranged.Assault.Combat.MoonFlax",
       "Tag:Weapon:wid_assault_moonflax_combatar_hs_athena_c"
     ],
-    "Rarity": "EFortRarity::Common",
+    "CreativeTagsHelper": {
+      "CreativeTags": [
+        "Ammo:Medium",
+        "Assault",
+        "CH7S2",
+        "Common",
+        "Guard",
+        "NewThisSeason",
+        "RecentlyAdded",
+        "Weapon"
+      ]
+    },
     "ItemName": {
       "Namespace": "",
       "Key": "E36B1AA548E5CB7641474CB464402CF0",
@@ -319,13 +328,6 @@
         "WeaponModSlots": [
           {
             "WeaponMod": {
-              "ObjectName": "FortWeaponModItemDefinition'WMID_Underbarrel_AngledForegrip'",
-              "ObjectPath": "/WeaponMods/Items/WeaponMods/Underbarrel/AngledForegrip/WMID_Underbarrel_AngledForegrip.0"
-            },
-            "bIsDynamic": true
-          },
-          {
-            "WeaponMod": {
               "ObjectName": "FortWeaponModItemDefinitionOptic'WMID_Default_IronSights'",
               "ObjectPath": "/WeaponMods/Items/WeaponMods/Optics/IronSight/WMID_Default_IronSights.0"
             },
@@ -337,12 +339,19 @@
               "ObjectPath": "/WeaponMods/Items/WeaponMods/Magazines/DefaultMags/WMID_Default_Magazine.0"
             },
             "bIsDynamic": true
+          },
+          {
+            "WeaponMod": {
+              "ObjectName": "FortWeaponModItemDefinition'WMID_Barrel_MuzzleBrake'",
+              "ObjectPath": "/WeaponMods/Items/WeaponMods/Barrel/MuzzleBrake/WMID_Barrel_MuzzleBrake.0"
+            },
+            "bIsDynamic": true
           }
         ]
       },
       {
         "ReloadAbility": {
-          "AssetPathName": "/Script/FortniteGame.FortGameplayAbility_Reload",
+          "AssetPathName": "/Script/SegmentedReloadRuntime.FortGameplayAbility_SegmentedReload",
           "SubPathString": ""
         }
       },
@@ -382,6 +391,15 @@
           "phoebe.items.assault_rifle",
           "phoebe.weapon.trait.scoped"
         ]
+      },
+      {
+        "Rarity": "EFortRarity::Common"
+      },
+      {
+        "BulletWhipTrackerData": {
+          "ObjectName": "BulletWhipTrackerAudioData'BulletWhipTrackerData_Rifle'",
+          "ObjectPath": "/FortMetaSoundWeapon/Items/Metasounds/Whips/BulletWhipTrackerData_Rifle.0"
+        }
       }
     ]
   }

@@ -1,11 +1,11 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_Creative_Play_V2",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/CreativeCore/Playlists/Creative_PlayOnlyPlaylists/Playlist_Creative_Play_V2",
   "Properties": {
     "bRewardsTrackPlacement": false,
-    "RewardPlacementBonusType": "ERewardPlacementBonusType::QuickSolo",
     "RewardsPlacementThreshold": 1,
     "InMatchXPRewardScalar": {
       "Curve": {
@@ -16,13 +16,13 @@
         "RowName": "Playlist_Creative_ZebraWallet_Squads"
       }
     },
-    "bAllowBackfill": true,
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::QuickSolo",
     "MinBackfillMatchPlayers": 1,
+    "bAllowBackfill": true,
     "WinConditionType": "EAthenaWinCondition::LastManStandingIncludingAllies",
     "bShouldSpreadTeams": false,
     "bIgnoreDefaultQuests": true,
     "MinTimeBeforeRespawnCameraFade": 1.0,
-    "RespawnType": "EAthenaRespawnType::InfiniteRespawnExceptStorm",
     "RespawnHeight": {
       "Value": 1.0,
       "Curve": {
@@ -43,6 +43,7 @@
         "RowName": "Playground.MaxRespawnHeight"
       }
     },
+    "RespawnType": "EAthenaRespawnType::InfiniteRespawnExceptStorm",
     "RespawnLevelStreamDistanceToForceScreenFade": {
       "Value": 1.0,
       "Curve": {
@@ -123,10 +124,12 @@
     "NetActorDiscoveryBudgetInKBytesPerSec": 800,
     "bAllowTeamSwitching": true,
     "bUsesAnimationSharing": true,
-    "AnimationSharingSetup": {
-      "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
-      "SubPathString": ""
-    },
+    "AnimationSharingSetups": [
+      {
+        "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
+        "SubPathString": ""
+      }
+    ],
     "bAllowBroadcasting": true,
     "PlaylistStatId": 35,
     "AISettings": {

@@ -1,49 +1,44 @@
 {
-  "Type": "FortGameFeatureAction_InjectAIBehavior",
-  "Name": "FortGameFeatureAction_InjectAIBehavior_0",
-  "Outer": "NPCDefend",
-  "Class": "UScriptClass'FortGameFeatureAction_InjectAIBehavior'",
+  "Type": "FortGameFeatureAction_AddToPlaylists",
+  "Name": "FortGameFeatureAction_AddToPlaylists_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'NPCDefend'",
+    "ObjectPath": "/NPCDefend/NPCDefend.2"
+  },
   "Properties": {
-    "InjectedBehaviors": [
-      {
-        "SpawnerTagsQuery": {
-          "TokenStreamVersion": 0,
-          "TagDictionary": [
-            {
-              "TagName": "Behavior.Injection.NPC.Defend"
+    "Playlists": {
+      "Entries": [
+        {
+          "VersionRange": {
+            "InclusiveMin": {
+              "VersionName": "36.00"
             },
-            {
-              "TagName": "Behavior.Injection.NPC.Defend.Excluded"
+            "ExclusiveMax": {
+              "VersionName": "Future"
             }
-          ],
-          "QueryTokenStream": [
-            0,
-            1,
-            5,
-            2,
-            1,
-            1,
-            0,
-            3,
-            1,
-            1
-          ],
-          "UserDescription": "",
-          "AutoDescription": " ALL(  ANY( Behavior.Injection.NPC.Defend ),  NONE( Behavior.Injection.NPC.Defend.Excluded ) )"
-        },
-        "InjectedBehaviors": [
-          {
-            "InjectionTags": [
-              "Behavior.Injection.Threatened.HighPriority"
+          },
+          "PlaylistQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Athena.Playlist.Default"
+              }
             ],
-            "InjectedBehavior": {
-              "AssetPathName": "/NPCDefend/Behavior/IB_NPC_Defend.IB_NPC_Defend_C",
-              "SubPathString": ""
-            }
-          }
-        ]
-      }
-    ]
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Athena.Playlist.Default )"
+          },
+          "bMigratedFromOldData": false
+        }
+      ]
+    }
   }
 }

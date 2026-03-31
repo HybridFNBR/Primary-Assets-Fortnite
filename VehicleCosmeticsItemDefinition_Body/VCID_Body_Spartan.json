@@ -1,8 +1,9 @@
 {
   "Type": "VehicleCosmeticsItemDefinition_Body",
   "Name": "VCID_Body_Spartan",
-  "Class": "UScriptClass'VehicleCosmeticsItemDefinition_Body'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'VehicleCosmeticsItemDefinition_Body'",
+  "Package": "/VehicleCosmetics/Mutable/Bodies/Spartan/VCID_Body_Spartan",
   "Properties": {
     "BodyGroup": {
       "ParameterName": "Body",
@@ -260,6 +261,10 @@
       "SubPathString": ""
     },
     "DefaultSkinRowName": "SpartanA",
+    "DefaultSkinMaterial": {
+      "AssetPathName": "/VehicleCosmetics/Bodies/Spartan/Skins/Spartan_A/MI_skin_SpartanA.MI_skin_SpartanA",
+      "SubPathString": ""
+    },
     "AudioData": {
       "AssetPathName": "/VehicleCosmetics/EngineAudio/Veh_Item_EngineAudio_Spartan.Veh_Item_EngineAudio_Spartan",
       "SubPathString": ""
@@ -286,17 +291,21 @@
           "TagDictionary": [
             {
               "TagName": "Vehicle.Modetype.DM"
+            },
+            {
+              "TagName": "Vehicle.Modetype.Temp"
             }
           ],
           "QueryTokenStream": [
             0,
             1,
             1,
-            1,
-            0
+            2,
+            0,
+            1
           ],
           "UserDescription": "",
-          "AutoDescription": " ANY( Vehicle.Modetype.DM )"
+          "AutoDescription": " ANY( Vehicle.Modetype.DM, Vehicle.Modetype.Temp )"
         },
         "WindowInfo": {
           "WindowDataTableParameterName": "Window",

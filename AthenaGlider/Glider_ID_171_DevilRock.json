@@ -1,8 +1,9 @@
 {
   "Type": "AthenaGliderItemDefinition",
   "Name": "Glider_ID_171_DevilRock",
-  "Class": "UScriptClass'AthenaGliderItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'AthenaGliderItemDefinition'",
+  "Package": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Glider_ID_171_DevilRock",
   "Properties": {
     "CameraFramingBoundsCenterOffset": {
       "X": 0.0,
@@ -10,7 +11,7 @@
       "Z": 0.0
     },
     "ParachutePrefabClass": {
-      "AssetPathName": "/BRCosmetics/Athena/Cosmetics/Blueprints/Gliders/LegacyGliderBPs/B_Athena_Glider_Legacy_DevilRock.B_Athena_Glider_Legacy_DevilRock_C",
+      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/B_Athena_Glider_Generic.B_Athena_Glider_Generic_C",
       "SubPathString": ""
     },
     "SkeletalMesh": {
@@ -46,6 +47,128 @@
       "AssetPathName": "/Game/Animation/Game/MainPlayer/Skydive/ParaGlide/HangGlider/HangGliderPlayerAnimSet.HangGliderPlayerAnimSet",
       "SubPathString": ""
     },
+    "TrailEffectDefinitions": [
+      {
+        "NiagaraSystem": {
+          "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_DevilRock/FX/NS_Glider_DevilRock_Idle.NS_Glider_DevilRock_Idle",
+          "SubPathString": ""
+        },
+        "EffectSocket": "None",
+        "Offset": {
+          "Rotation": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        "ActivationMode": "EGliderTrailActivationMode::FullyDeployed",
+        "AttachmentMode": "EGliderTrailAttachmentMode::GliderMesh"
+      },
+      {
+        "NiagaraSystem": {
+          "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_DevilRock/FX/NS_Glider_DevilRock_Trails.NS_Glider_DevilRock_Trails",
+          "SubPathString": ""
+        },
+        "EffectSocket": "None",
+        "Offset": {
+          "Rotation": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        "ActivationMode": "EGliderTrailActivationMode::FullyDeployed",
+        "AttachmentMode": "EGliderTrailAttachmentMode::GliderMesh"
+      },
+      {
+        "NiagaraSystem": {
+          "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_DevilRock/FX/NS_Glider_DevilRock_Deploy.NS_Glider_DevilRock_Deploy",
+          "SubPathString": ""
+        },
+        "EffectSocket": "None",
+        "Offset": {
+          "Rotation": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        "ActivationMode": "EGliderTrailActivationMode::AutoActivate",
+        "AttachmentMode": "EGliderTrailAttachmentMode::GliderMesh"
+      },
+      {
+        "NiagaraSystem": {
+          "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_DevilRock/FX/NS_Glider_DevilRock_Flames_Idle.NS_Glider_DevilRock_Flames_Idle",
+          "SubPathString": ""
+        },
+        "EffectSocket": "None",
+        "Offset": {
+          "Rotation": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0,
+            "W": 1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          }
+        },
+        "ActivationMode": "EGliderTrailActivationMode::FullyDeployed",
+        "AttachmentMode": "EGliderTrailAttachmentMode::GliderMesh"
+      }
+    ],
     "OpenSound": {
       "AssetPathName": "/BRCosmetics/Sounds/Gliders/Devil_Rock/Glider_Devil_Rock_Open_Cue.Glider_Devil_Rock_Open_Cue",
       "SubPathString": ""
@@ -54,19 +177,10 @@
       "AssetPathName": "/BRCosmetics/Sounds/Gliders/Devil_Rock/Glider_Devil_Rock_Close_Cue.Glider_Devil_Rock_Close_Cue",
       "SubPathString": ""
     },
-    "TrailEffect": {
-      "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_DevilRock/FX/P_DevilRock_WingSmoke_L1.P_DevilRock_WingSmoke_L1",
-      "SubPathString": ""
-    },
-    "TrailEffect2": {
-      "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_DevilRock/FX/P_DevilRock_WingSmoke_L2.P_DevilRock_WingSmoke_L2",
-      "SubPathString": ""
-    },
     "ItemPreviewActorClass": {
       "AssetPathName": "/BRCosmetics/Environments/FrontEnd/Blueprints/ItemPreview/Cameras_Glider/GliderItemPreview_ScreenHigh.GliderItemPreview_ScreenHigh_C",
       "SubPathString": ""
     },
-    "Rarity": "EFortRarity::Legendary",
     "ItemName": {
       "Namespace": "",
       "Key": "9F262F294B96E92A10767BA9F00641EB",
@@ -101,9 +215,9 @@
           "Z": 0.0
         },
         "InitialRotation": {
-          "Pitch": 0.0,
-          "Yaw": 120.0,
-          "Roll": 5.0
+          "Pitch": -18.0,
+          "Yaw": 110.0,
+          "Roll": 15.0
         },
         "Scale": 0.6
       },
@@ -137,34 +251,37 @@
       },
       {
         "GeneratedTagsIndexes": [
-          238,
-          546,
-          359,
-          247,
-          122,
-          170,
           244,
-          389,
-          613,
-          615,
-          276,
-          622,
-          724,
-          620,
-          729,
-          752,
-          35,
-          778,
-          1022,
-          91,
-          1158,
-          341,
-          1926,
-          2801,
-          863,
-          2953,
-          3744
+          554,
+          367,
+          253,
+          126,
+          175,
+          250,
+          398,
+          609,
+          611,
+          283,
+          706,
+          726,
+          728,
+          732,
+          753,
+          36,
+          783,
+          852,
+          94,
+          1142,
+          348,
+          1971,
+          2914,
+          2924,
+          3070,
+          3489
         ]
+      },
+      {
+        "Rarity": "EFortRarity::Legendary"
       }
     ]
   }

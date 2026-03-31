@@ -1,10 +1,11 @@
 {
   "Type": "AthenaDailyQuestDefinition",
   "Name": "quest_daily_location_02",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Package": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_02",
   "Properties": {
-    "Group": "Evergreen_BR_NonCombat",
+    "Group": "Evergreen_BR_Location",
     "QuestSubtype": "EFortQuestSubtype::Autofill",
     "bAthenaGrantRarityToken": false,
     "CompletionPathResults": [
@@ -24,6 +25,15 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
+            "Source": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
             "Item": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
@@ -145,15 +155,15 @@
     "QuestDefinitionComponents": [
       {
         "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_daily_location_02:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Non_Combat/quest_daily_location_02.2"
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_02.2"
       },
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_daily_location_02:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Non_Combat/quest_daily_location_02.1"
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_02.1"
       },
       {
         "ObjectName": "FortQuestDefinitionComponent_TrackedData'quest_daily_location_02:FortQuestDefinitionComponent_TrackedData_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Non_Combat/quest_daily_location_02.3"
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_02.3"
       }
     ],
     "CompletionPaths": [
@@ -173,7 +183,6 @@
         "Context": []
       }
     ],
-    "Rarity": "EFortRarity::Common",
     "ItemName": {
       "Namespace": "",
       "Key": "1D749F1B46C7883E6655DEBBD1DF6C09",
@@ -193,7 +202,10 @@
           "ChallengeCategory.XP"
         ]
       },
-      {}
+      {},
+      {
+        "Rarity": "EFortRarity::Common"
+      }
     ]
   }
 }

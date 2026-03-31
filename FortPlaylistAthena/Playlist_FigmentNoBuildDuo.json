@@ -1,10 +1,10 @@
 {
   "Type": "FortPlaylistAthena",
   "Name": "Playlist_FigmentNoBuildDuo",
-  "Class": "UScriptClass'FortPlaylistAthena'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/FigmentPlaylists/Playlists/Playlist_FigmentNoBuildDuo",
   "Properties": {
-    "RewardPlacementBonusType": "ERewardPlacementBonusType::Duo",
     "RewardsPlacementThreshold": 5,
     "InMatchXPRewardScalar": {
       "Curve": {
@@ -21,19 +21,17 @@
         "SubPathString": ""
       }
     ],
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::Duo",
     "bUsePlayerRating": true,
     "bEnableRatingUpdate": true,
-    "bEnableDynamicBotBackfill": true,
     "RatingType": "nobuild",
     "bAllowedInLeto": true,
+    "bEnableDynamicBotBackfill": true,
     "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
     "NumWinningTeamsCN": {
       "Value": 1.0,
       "Curve": {
-        "CurveTable": {
-          "ObjectName": "CurveTable'AthenaGameData'",
-          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
-        },
+        "CurveTable": null,
         "RowName": "NumWinningTeamsCN"
       }
     },
@@ -81,10 +79,12 @@
       "SubPathString": ""
     },
     "bUsesAnimationSharing": true,
-    "AnimationSharingSetup": {
-      "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
-      "SubPathString": ""
-    },
+    "AnimationSharingSetups": [
+      {
+        "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
+        "SubPathString": ""
+      }
+    ],
     "bAllowSpectateAPartyMember": true,
     "AISettings": {
       "AssetPathName": "/Game/Athena/AI/AISettings/PlayerBotsFlow_AISettings.PlayerBotsFlow_AISettings",
@@ -93,20 +93,14 @@
     "MaxVehiclesCanSpawnWithTireMod": {
       "Value": 1.0,
       "Curve": {
-        "CurveTable": {
-          "ObjectName": "CurveTable'AthenaGameData'",
-          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
-        },
+        "CurveTable": null,
         "RowName": "Default.Vehicle.Mod.Tire.MaxVehiclesCanSpawnWith"
       }
     },
     "PercentChanceSpawnWithTireMod": {
       "Value": 1.0,
       "Curve": {
-        "CurveTable": {
-          "ObjectName": "CurveTable'AthenaGameData'",
-          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
-        },
+        "CurveTable": null,
         "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
       }
     },
@@ -157,10 +151,7 @@
     "SpawnImmunityTime": {
       "Value": 1.0,
       "Curve": {
-        "CurveTable": {
-          "ObjectName": "CurveTable'AthenaGameData'",
-          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
-        },
+        "CurveTable": null,
         "RowName": "Default.Van.Redux.SquadSpawnImmunityTime"
       }
     },

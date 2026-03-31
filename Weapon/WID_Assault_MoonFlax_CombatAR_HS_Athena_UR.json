@@ -1,11 +1,12 @@
 {
   "Type": "FortWeaponRangedItemDefinition",
   "Name": "WID_Assault_MoonFlax_CombatAR_HS_Athena_UR",
-  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortWeaponRangedItemDefinition'",
+  "Package": "/WeaponsUpdated/Gameplay/CombatAR/Hitscan/WID_Assault_MoonFlax_CombatAR_HS_Athena_UR",
   "Properties": {
     "WeaponActorClass": {
-      "AssetPathName": "/WeaponsUpdated/Gameplay/CombatAR/B_Assault_MoonFlax_CombatAR_Athena.B_Assault_MoonFlax_CombatAR_Athena_C",
+      "AssetPathName": "/WeaponsUpdated/Gameplay/CombatAR/Hitscan/B_Assault_MoonFlax_CombatAR_HS_Athena_UR.B_Assault_MoonFlax_CombatAR_HS_Athena_UR_C",
       "SubPathString": ""
     },
     "WeaponMeshOverride": {
@@ -58,18 +59,17 @@
       "Item.Weapon.Ranged.Assault.Combat.MoonFlax",
       "Tag:Weapon:wid_assault_moonflax_combatar_hs_athena_ur"
     ],
-    "Rarity": "EFortRarity::Mythic",
     "ItemName": {
       "Namespace": "",
       "Key": "BF4205E047962BE03C88BC80D276B1DC",
-      "SourceString": "The Machinist's Combat Assault Rifle",
-      "LocalizedString": "The Machinist's Combat Assault Rifle"
+      "SourceString": "Squibbly's Combat Assault Rifle",
+      "LocalizedString": "Squibbly's Combat Assault Rifle"
     },
     "ItemDescription": {
       "Namespace": "",
       "Key": "3234DE6C4A7B473711318399B53C752A",
-      "SourceString": "The Machinist's personal Assault Rifle. Meticulously modded to reduce recoil and maximize magazine size.",
-      "LocalizedString": "The Machinist's personal Assault Rifle. Meticulously modded to reduce recoil and maximize magazine size."
+      "SourceString": "Dread Punisher Squibbly's personal Combat Assault Rifle. Viciously crafted to increase its fire rate while continuously firing.",
+      "LocalizedString": "Dread Punisher Squibbly's personal Combat Assault Rifle. Viciously crafted to increase its fire rate while continuously firing."
     },
     "DataList": [
       {
@@ -319,37 +319,30 @@
         "WeaponModSlots": [
           {
             "WeaponMod": {
-              "ObjectName": "FortWeaponModItemDefinitionOptic'WMOID_Optic_RedDot'",
-              "ObjectPath": "/WeaponMods/Items/WeaponMods/Optics/RedDot/WMOID_Optic_RedDot.0"
+              "ObjectName": "FortWeaponModItemDefinitionOptic'WMID_Default_IronSights'",
+              "ObjectPath": "/WeaponMods/Items/WeaponMods/Optics/IronSight/WMID_Default_IronSights.0"
             },
-            "bIsDynamic": false
+            "bIsDynamic": true
           },
           {
             "WeaponMod": {
-              "ObjectName": "FortWeaponModItemDefinitionMagazine'WMID_Magazine_Drum'",
-              "ObjectPath": "/WeaponMods/Items/WeaponMods/Magazines/DrumMag/WMID_Magazine_Drum.0"
+              "ObjectName": "FortWeaponModItemDefinitionMagazine'WMID_Default_Magazine'",
+              "ObjectPath": "/WeaponMods/Items/WeaponMods/Magazines/DefaultMags/WMID_Default_Magazine.0"
             },
-            "bIsDynamic": false
+            "bIsDynamic": true
           },
           {
             "WeaponMod": {
-              "ObjectName": "FortWeaponModItemDefinition'WMID_Barrel_Suppressor'",
-              "ObjectPath": "/WeaponMods/Items/WeaponMods/Barrel/Suppressor/WMID_Barrel_Suppressor.0"
+              "ObjectName": "FortWeaponModItemDefinition'WMID_Barrel_MuzzleBrake'",
+              "ObjectPath": "/WeaponMods/Items/WeaponMods/Barrel/MuzzleBrake/WMID_Barrel_MuzzleBrake.0"
             },
-            "bIsDynamic": false
-          },
-          {
-            "WeaponMod": {
-              "ObjectName": "FortWeaponModItemDefinition'WMID_Underbarrel_VertForegrip'",
-              "ObjectPath": "/WeaponMods/Items/WeaponMods/Underbarrel/VerticalForegrip/WMID_Underbarrel_VertForegrip.0"
-            },
-            "bIsDynamic": false
+            "bIsDynamic": true
           }
         ]
       },
       {
         "ReloadAbility": {
-          "AssetPathName": "/Script/FortniteGame.FortGameplayAbility_Reload",
+          "AssetPathName": "/Script/SegmentedReloadRuntime.FortGameplayAbility_SegmentedReload",
           "SubPathString": ""
         }
       },
@@ -390,6 +383,26 @@
           "phoebe.weapon.trait.scoped",
           "phoebe.weapon.trait.fullauto"
         ]
+      },
+      {
+        "Rarity": "EFortRarity::Mythic"
+      },
+      {
+        "AttributeOverrides": [
+          {
+            "Key": "EFortItemAttribute::FireRate",
+            "Value": {
+              "AttributeValue": "8.8 - 11",
+              "BarProgress": 0.85
+            }
+          }
+        ]
+      },
+      {
+        "BulletWhipTrackerData": {
+          "ObjectName": "BulletWhipTrackerAudioData'BulletWhipTrackerData_Rifle'",
+          "ObjectPath": "/FortMetaSoundWeapon/Items/Metasounds/Whips/BulletWhipTrackerData_Rifle.0"
+        }
       }
     ]
   }

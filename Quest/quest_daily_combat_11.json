@@ -1,10 +1,11 @@
 {
   "Type": "AthenaDailyQuestDefinition",
   "Name": "quest_daily_combat_11",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
+  "Package": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Combat_1/quest_daily_combat_11",
   "Properties": {
-    "Group": "Evergreen_BR_Combat1",
+    "Group": "Evergreen_BR_Combat",
     "QuestSubtype": "EFortQuestSubtype::Autofill",
     "bAthenaGrantRarityToken": false,
     "CompletionPathResults": [
@@ -473,6 +474,151 @@
                 "AutoDescription": ""
               }
             }
+          },
+          {
+            "EliminatedPawn": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Faction.Generic.Hostile"
+                  },
+                  {
+                    "TagName": "Homebase.Class"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Duel.IsBeingChallenged"
+                  },
+                  {
+                    "TagName": "Athena.Gameplay.Status.Converted"
+                  },
+                  {
+                    "TagName": "Quests.Wildlife.IsOpponent"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Tandem"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Specialist"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Wildlife"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Labrador"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  4,
+                  2,
+                  1,
+                  5,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  2,
+                  1,
+                  1,
+                  5,
+                  3,
+                  3,
+                  6,
+                  7,
+                  8,
+                  3,
+                  1,
+                  9
+                ],
+                "UserDescription": "Opponent Tags",
+                "AutoDescription": " ALL(  ANY(  ANY( Athena.Faction.Generic.Hostile, Homebase.Class, Pawn.Athena.NPC.Duel.IsBeingChallenged, Athena.Gameplay.Status.Converted, Quests.Wildlife.IsOpponent ),  ALL(  ANY( AISpawnerData.Type ),  NONE( AISpawnerData.Type.Tandem, AISpawnerData.Type.Specialist, Pawn.Athena.NPC.Wildlife ) ) ),  NONE( Pawn.Athena.NPC.Labrador ) )"
+              }
+            },
+            "Killer": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "EliminationSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Item.Weapon.Ranged.IceGauntlets"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Item.Weapon.Ranged.IceGauntlets )"
+              }
+            },
+            "AllowedTeamAffiliations": [],
+            "ProhibitedTeamAffiliations": [],
+            "AllowedKilledPawnTypes": [],
+            "ProhibitedKilledPawnTypes": [],
+            "bAllowSelfEliminations": false,
+            "bRequirePawnWasEliminatedByConvertedPawn": false,
+            "bUseDistance": false,
+            "bIncrementByDistance": false,
+            "bUseKillStreak": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "KillStreak": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
           }
         ],
         "InlineObjectiveStats": [],
@@ -564,7 +710,6 @@
         "Context": []
       }
     ],
-    "Rarity": "EFortRarity::Common",
     "ItemName": {
       "Namespace": "",
       "Key": "40FECDD7C7CA42CF2FF58491C7CA42CF",
@@ -584,7 +729,10 @@
           "ChallengeCategory.XP"
         ]
       },
-      {}
+      {},
+      {
+        "Rarity": "EFortRarity::Common"
+      }
     ]
   }
 }

@@ -1,8 +1,9 @@
 {
   "Type": "VehicleCosmeticsItemDefinition_Body",
   "Name": "VCID_Body_BB",
-  "Class": "UScriptClass'VehicleCosmeticsItemDefinition_Body'",
   "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'VehicleCosmeticsItemDefinition_Body'",
+  "Package": "/VehicleCosmetics/Mutable/Bodies/BB/VCID_Body_BB",
   "Properties": {
     "BodyGroup": {
       "ParameterName": "Body",
@@ -259,6 +260,10 @@
       "AssetPathName": "/VehicleCosmetics/Mutable/Wheels/OEM/VCID_Wheel_OEM.VCID_Wheel_OEM",
       "SubPathString": ""
     },
+    "DefaultSkinMaterial": {
+      "AssetPathName": "/VehicleCosmetics/Bodies/BB/Materials/MI_BB_Body.MI_BB_Body",
+      "SubPathString": ""
+    },
     "AudioData": {
       "AssetPathName": "/VehicleCosmetics/EngineAudio/Veh_Item_EngineAudio_Battle_Bus.Veh_Item_EngineAudio_Battle_Bus",
       "SubPathString": ""
@@ -287,18 +292,22 @@
           "TokenStreamVersion": 0,
           "TagDictionary": [
             {
-              "TagName": "Vehicle.Modetype.BR"
+              "TagName": "Vehicle.Modetype.DM"
+            },
+            {
+              "TagName": "Vehicle.Modetype.Temp"
             }
           ],
           "QueryTokenStream": [
             0,
             1,
             1,
-            1,
-            0
+            2,
+            0,
+            1
           ],
           "UserDescription": "",
-          "AutoDescription": " ANY( Vehicle.Modetype.BR )"
+          "AutoDescription": " ANY( Vehicle.Modetype.DM, Vehicle.Modetype.Temp )"
         },
         "WindowInfo": {
           "WindowDataTableParameterName": "Window",
