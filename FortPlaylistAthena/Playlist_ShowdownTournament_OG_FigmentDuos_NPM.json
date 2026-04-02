@@ -5,6 +5,7 @@
   "Class": "UScriptClass'FortPlaylistAthena'",
   "Package": "/FigmentPlaylists/Playlists/Competitive/Playlist_ShowdownTournament_OG_FigmentDuos_NPM",
   "Properties": {
+    "RewardsPlacementThreshold": 5,
     "InMatchXPRewardScalar": {
       "Curve": {
         "CurveTable": {
@@ -16,7 +17,7 @@
     },
     "FirstWinRewards": [
       {
-        "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Umbrella_ShingleStole.Umbrella_ShingleStole",
+        "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Umbrella_PeakVoyage.Umbrella_PeakVoyage",
         "SubPathString": ""
       }
     ],
@@ -24,7 +25,6 @@
     "bIsTournament": true,
     "Strategy": "BattleRoyaleStrategy_Showdown",
     "CompetitivePointClamp": 9999,
-    "bLimitedPoolMatchmakingEnabled": true,
     "bAllowInGameMatchMaking": false,
     "WinConditionType": "EAthenaWinCondition::MutatorControlledChinaSupported",
     "NumWinningTeamsCN": {
@@ -44,13 +44,13 @@
       "SubPathString": ""
     },
     "MaximumAspectRatio": 1.78,
+    "VehicleBoundsXYSplineClass": {
+      "ObjectName": "BlueprintGeneratedClass'Athena_FlyingVehicleBoundarySpline_Child_C'",
+      "ObjectPath": "/Game/Athena/DrivableVehicles/Athena_FlyingVehicleBoundarySpline_Child.1"
+    },
     "PlaylistMissionGen": {
       "ObjectName": "BlueprintGeneratedClass'MissionGen_FigmentDuo_C'",
       "ObjectPath": "/FigmentPlaylists/Playlists/MissionGen/MissionGen_FigmentDuo.0"
-    },
-    "LoadingScreenWidget": {
-      "AssetPathName": "/FortniteCoreUI/UI/Sidebar/Tags/BP_SidebarCollectionScreenEditTags_Competitive.BP_SidebarCollectionScreenEditTags_Competitive_C",
-      "SubPathString": ""
     },
     "UIExtensions": [
       {
@@ -69,7 +69,7 @@
     },
     "UIDisplaySubName": {
       "Namespace": "",
-      "Key": "91E7014D41180AF782CD109423CB53D0",
+      "Key": "DF0288F64C522117EBE59DBECBFEAB6E",
       "SourceString": "Duos",
       "LocalizedString": "Duos"
     },
@@ -77,14 +77,20 @@
     "bShowEliminationIndicatorForSquadmates": true,
     "bShowEliminationIndicatorForTeammates": true,
     "MapManagerClass": {
-      "AssetPathName": "/Figment_S07_Map/UI/UIMapManagerFigment_S07.UIMapManagerFigment_S07_C",
+      "AssetPathName": "/Figment_S08_Map/UI/UIMapManagerFigment_S08.UIMapManagerFigment_S08_C",
       "SubPathString": ""
     },
-    "ServerMaxTickRate": "EFortServerTickRate::Sixty",
     "SafeZoneLocationBlacklist": {
       "AssetPathName": "/Game/Athena/Balance/DataTables/AthenaSafeZoneBlacklist.AthenaSafeZoneBlacklist",
       "SubPathString": ""
     },
+    "bUsesAnimationSharing": true,
+    "AnimationSharingSetups": [
+      {
+        "AssetPathName": "/Game/Athena/Deimos/AnimationSharing/NativeSetup.NativeSetup",
+        "SubPathString": ""
+      }
+    ],
     "bAllowSpectateAPartyMember": true,
     "AISettings": {
       "AssetPathName": "/Game/Athena/AI/AISettings/PlayerBotsFlow_AISettings.PlayerBotsFlow_AISettings",
@@ -110,7 +116,7 @@
         "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
       }
     },
-    "PlaylistId": 923407333,
+    "PlaylistId": 2147483647,
     "PlaylistName": "Playlist_ShowdownTournament_OG_FigmentDuos_NPM",
     "GameType": "EFortGameType::Figment",
     "MinPlayers": 100,
@@ -150,13 +156,23 @@
     ],
     "GameplayTagContainer": [
       "Athena.Plugin.GameMod.Gasket",
+      "Athena.Quests.NoBuild.Exclude",
       "Athena.Playlist.DefaultXP",
       "Athena.Playlist.Figment",
-      "Athena.MapDiscoverability.Disable",
       "Product.Figment.Build",
-      "Plugin.Playlist.Exclude.BattleRoyaleGameUI"
+      "Athena.MapDiscoverability.Disable"
     ],
-    "LootLevel": 1,
+    "LootLevel": 2,
+    "SpawnImmunityTime": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Van.Redux.SquadSpawnImmunityTime"
+      }
+    },
     "ModifierList": [
       {
         "AssetPathName": "/Game/Athena/Playlists/DefaultModifiers/MaterialDropOnElim_Default.MaterialDropOnElim_Default",
@@ -167,7 +183,7 @@
         "SubPathString": ""
       },
       {
-        "AssetPathName": "/Game/Athena/AI/Phoebe/GameplayMod_Phoebe_DM_Duo.GameplayMod_Phoebe_DM_Duo",
+        "AssetPathName": "/Game/Athena/AI/Phoebe/GameplayMod_Phoebe_DM_Solo.GameplayMod_Phoebe_DM_Solo",
         "SubPathString": ""
       },
       {
@@ -190,13 +206,13 @@
     "bIsDefaultPlaylist": true,
     "UIDisplayName": {
       "Namespace": "",
-      "Key": "E4E67D454EDC11B408349CB2FFBF686C",
+      "Key": "E012654D4D233B5C97E01997FC1A533F",
       "SourceString": "Duos",
       "LocalizedString": "Duos"
     },
     "UIDescription": {
       "Namespace": "",
-      "Key": "EC0005034DC321FA0F94F8B75FBA09E2",
+      "Key": "AA5FB2CA444128373F3ADDB006949B9D",
       "SourceString": "Pair up with a buddy and take everyone else down.",
       "LocalizedString": "Pair up with a buddy and take everyone else down."
     },
@@ -212,18 +228,6 @@
       "AssetPathName": "/Figment_LootTables/DataTables/Composite_LP_FigmentComp.Composite_LP_FigmentComp",
       "SubPathString": ""
     },
-    "BaseCurveTableOverrides": [
-      {
-        "BaseTable": {
-          "AssetPathName": "/Figment_LootTables/DataTables/FigmentGameData.FigmentGameData",
-          "SubPathString": ""
-        },
-        "OverrideTable": {
-          "AssetPathName": "/Figment_LootTables/DataTables/AthenaCompositeGD_Figment.AthenaCompositeGD_Figment",
-          "SubPathString": ""
-        }
-      }
-    ],
     "GameData": {
       "AssetPathName": "/Figment_LootTables/DataTables/AthenaCompositeGD_FigmentCompetitive.AthenaCompositeGD_FigmentCompetitive",
       "SubPathString": ""

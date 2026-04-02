@@ -1,0 +1,102 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_TabascoKraken_SpawnStandardKraken",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Package": "/JunoTabascoEventKraken/Encounters/EIDs/EID_TabascoKraken_SpawnStandardKraken",
+  "Properties": {
+    "bUseLevel": false,
+    "ScenarioVolumeClass": {
+      "AssetPathName": "/JunoTabascoEventKraken/Encounters/EncounterVolumes/BP_Juno_EncounterVolume_TabascoKraken.BP_Juno_EncounterVolume_TabascoKraken_C",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoTabascoEventKraken/Encounters/ST/ST_TabascoKraken_SpawnKraken.ST_TabascoKraken_SpawnKraken",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Completed"
+      }
+    },
+    "LWMDensityWeight": {
+      "Value": 0.0
+    },
+    "LWMDensityRange": {
+      "Value": 0.0
+    },
+    "Vars": [
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoKraken_Boolean'",
+            "ObjectPath": "/JunoTabascoEventKraken/DataTables/ScenarioVariables/DT_TabascoKraken_Boolean.0"
+          },
+          "RowName": "Standard"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.Boolean"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoKraken_ActorClass'",
+            "ObjectPath": "/JunoTabascoEventKraken/DataTables/ScenarioVariables/DT_TabascoKraken_ActorClass.0"
+          },
+          "RowName": "POI_T5"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.ActorClass"
+        }
+      },
+      {
+        "RowValue": {
+          "DataTable": {
+            "ObjectName": "DataTable'DT_TabascoKraken_EncounterConfigs'",
+            "ObjectPath": "/JunoTabascoEventKraken/DataTables/ScenarioVariables/DT_TabascoKraken_EncounterConfigs.0"
+          },
+          "RowName": "Kraken"
+        },
+        "VarName": {
+          "TagName": "Juno.Encounters.POI.Tabasco.Var.DynamicEncounter.Boss"
+        }
+      }
+    ],
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Tabasco.POI.Objective.Type.KrakenArenaFight.Standard"
+        ]
+      }
+    ]
+  }
+}

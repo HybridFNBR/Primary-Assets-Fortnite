@@ -1,0 +1,110 @@
+{
+  "Type": "FortSchematicItemDefinition",
+  "Name": "SID_Floor_Health_UC_T01",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortSchematicItemDefinition'",
+  "Package": "/SaveTheWorld/Items/Schematics/Traps/Floor/SID_Floor_Health_UC_T01",
+  "Properties": {
+    "CraftingRecipe": {
+      "DataTable": {
+        "ObjectName": "DataTable'CraftingRecipes_New'",
+        "ObjectPath": "/SaveTheWorld/Items/Datatables/CraftingRecipes_New.0"
+      },
+      "RowName": "Trap.Floor.Health.UC.T01"
+    },
+    "CraftingTimeRowName": "Craft_Trap",
+    "LevelToXpHandle": {
+      "CurveTable": {
+        "ObjectName": "CurveTable'XPAccountItemLevels'",
+        "ObjectPath": "/Game/Balance/DataTables/XPAccountItemLevels.0"
+      },
+      "RowName": "Uncommon"
+    },
+    "LevelToSacrificeXpHandle": {
+      "CurveTable": {
+        "ObjectName": "CurveTable'XPAccountItemRewards'",
+        "ObjectPath": "/Game/Balance/DataTables/XPAccountItemRewards.0"
+      },
+      "RowName": "Uncommon"
+    },
+    "SacrificeRecipe": {
+      "DataTable": {
+        "ObjectName": "DataTable'MetaRecipes'",
+        "ObjectPath": "/Game/Items/Datatables/MetaRecipes.0"
+      },
+      "RowName": "Recycle.Trap.UC.T01"
+    },
+    "TransmogSacrificeRow": {
+      "DataTable": {
+        "ObjectName": "DataTable'TransmogSacrificeData'",
+        "ObjectPath": "/Game/Items/Datatables/TransmogSacrificeData.0"
+      },
+      "RowName": "Recycle.Trap.UC.T01"
+    },
+    "ConversionRecipes": [
+      {
+        "DataTable": {
+          "ObjectName": "DataTable'MetaRecipes'",
+          "ObjectPath": "/Game/Items/Datatables/MetaRecipes.0"
+        },
+        "RowName": "Evolve.SID.Floor.Health.UC.T02"
+      }
+    ],
+    "UpgradeRarityRecipeHandle": {
+      "DataTable": {
+        "ObjectName": "DataTable'MetaRecipes'",
+        "ObjectPath": "/Game/Items/Datatables/MetaRecipes.0"
+      },
+      "RowName": "EvolveRarity.SID.Floor.Health.R.T01"
+    },
+    "DataList": [
+      {
+        "MinLevel": 1,
+        "MaxLevel": 10
+      },
+      {
+        "LootLevelCategoryHandle": {
+          "DataTable": {
+            "ObjectName": "DataTable'LootLevelData'",
+            "ObjectPath": "/Game/Items/Datatables/LootLevelData.0"
+          },
+          "ColumnName": "Category",
+          "RowContents": "Crafting"
+        }
+      },
+      {
+        "TooltipClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "StatList": {
+          "AssetPathName": "/SaveTheWorld/Abilities/Traps/FloorCampfire/HealingTrap_Tooltip_Info.HealingTrap_Tooltip_Info",
+          "SubPathString": ""
+        }
+      },
+      {
+        "RatingLookup": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'BaseItemRating'",
+            "ObjectPath": "/Game/Items/Datatables/BaseItemRating.0"
+          },
+          "RowName": "Default_UC_T01"
+        }
+      },
+      {
+        "Tier": "EFortItemTier::No_Tier",
+        "MaxTier": "EFortItemTier::III"
+      },
+      {
+        "Tags": [
+          "trap.floor"
+        ]
+      },
+      {
+        "Traits": [
+          "Item.Trait.InventorySizeLimited"
+        ]
+      }
+    ]
+  }
+}

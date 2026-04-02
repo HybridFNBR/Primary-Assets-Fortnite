@@ -1,0 +1,334 @@
+{
+  "Type": "FortPlaylistAthena",
+  "Name": "Playlist_Figment_Martin_Md",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortPlaylistAthena'",
+  "Package": "/FigmentPlaylists/Playlists/LTM/Playlist_Figment_Martin_Md",
+  "Properties": {
+    "bRewardsTrackPlacement": false,
+    "bRewardForRevivingTeammates": true,
+    "RewardsPlacementThreshold": 1,
+    "InMatchXPRewardScalar": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaPlaylistXpToggle'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaPlaylistXpToggle.0"
+        },
+        "RowName": "Playlist_DefaultSquad"
+      }
+    },
+    "RewardPlacementBonusType": "ERewardPlacementBonusType::TwoTeam",
+    "FillRateTable": [
+      {
+        "MinMmr": 0,
+        "MaxMmr": 400,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 401,
+        "MaxMmr": 600,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 601,
+        "MaxMmr": 800,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 801,
+        "MaxMmr": 1000,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1001,
+        "MaxMmr": 1200,
+        "MinFillPct": 0.8,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 60.0
+      },
+      {
+        "MinMmr": 1201,
+        "MaxMmr": 1400,
+        "MinFillPct": 0.9,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 120.0
+      },
+      {
+        "MinMmr": 1401,
+        "MaxMmr": 2000,
+        "MinFillPct": 0.9,
+        "MaxFillPct": 1.0,
+        "MaxPriority": 120.0
+      }
+    ],
+    "bUsePlayerRating": true,
+    "RatingType": "largeTeam",
+    "bAllowedInLeto": true,
+    "WinConditionType": "EAthenaWinCondition::MutatorControlled",
+    "NumWinningTeamsCN": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "NumWinningTeamsCN"
+      }
+    },
+    "bIsLargeTeamGame": true,
+    "InventorySystemConfiguration": {
+      "AssetPathName": "/Itemization/BRStyle/ItemizationConfiguration_FNBR.ItemizationConfiguration_FNBR",
+      "SubPathString": ""
+    },
+    "RespawnTime": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CompositeCurveTable'Martin_Athena_CompositeGD_Figment'",
+          "ObjectPath": "/Figment_LootTables/DataTables/Martin/Martin_Athena_CompositeGD_Figment.0"
+        },
+        "RowName": "Default.RespawnTime"
+      }
+    },
+    "AirCraftBehavior": "EAirCraftBehavior::OpposingAirCraftForEachTeam",
+    "bUseCustomAircraftPathSelection": true,
+    "AircraftPathMidpointSelectionRadiusMin": 52500.0,
+    "AircraftPathMidpointSelectionRadiusMax": 52500.0,
+    "PlaylistMissionGen": {
+      "ObjectName": "BlueprintGeneratedClass'MissionGen_Figment_Martin_C'",
+      "ObjectPath": "/Figment_Martin/Playlist/MissionGen_Figment_Martin.0"
+    },
+    "LoadingScreenWidget": {
+      "AssetPathName": "/Figment_Martin/UI/LoadingScreens/Widget_Martin_Loading.Widget_Martin_Loading_C",
+      "SubPathString": ""
+    },
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::UpperCenter",
+        "WidgetClass": {
+          "AssetPathName": "/Game/Athena/HUD/LTM/Ashton/HUD_Ashton_GameStatusAlert.HUD_Ashton_GameStatusAlert_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      },
+      {
+        "Slot": "EUIExtensionSlot::AboveQuestsMobileUI",
+        "WidgetClass": {
+          "AssetPathName": "/Figment_Martin/UI/WBP_ToadJam_ObjectiveUI.WBP_ToadJam_ObjectiveUI_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "MissionIcon": {
+      "ObjectName": "Texture2D'T_Icon_Matchmaking_Squad_64'",
+      "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Social/T_Icon_Matchmaking_Squad_64.0"
+    },
+    "UIDisplaySubName": {
+      "Namespace": "",
+      "Key": "A013A6F2460D3E883E903BADEEA20B99",
+      "SourceString": "Squads",
+      "LocalizedString": "Squads"
+    },
+    "bForceLTMLoadingScreenBackground": true,
+    "bDisplayRespawnWidget": true,
+    "bShowEliminationIndicatorForSquadmates": true,
+    "bShowEliminationIndicatorForTeammates": true,
+    "MapManagerClass": {
+      "AssetPathName": "/Figment_S08_Map/UI/UIMapManagerFigment_S08.UIMapManagerFigment_S08_C",
+      "SubPathString": ""
+    },
+    "SafeZoneStartUp": "ESafeZoneStartUp::StartsWithAirCraft",
+    "bDisplayFinalStormPosition": true,
+    "LastSafeZoneIndex": 3,
+    "SafeZoneLocationBlacklist": {
+      "AssetPathName": "/Game/Athena/Balance/DataTables/AthenaSafeZoneBlacklist.AthenaSafeZoneBlacklist",
+      "SubPathString": ""
+    },
+    "SupplyDropInfoList": [
+      {
+        "AssetPathName": "/Figment_Martin/Athena/Items/Data_Figment_Martin_RockSupplyDrop_B.Data_Figment_Martin_RockSupplyDrop_B",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Athena/Items/Data_Figment_Martin_RockSupplyDrop_G.Data_Figment_Martin_RockSupplyDrop_G",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Athena/Items/Data_Figment_Martin_RockSupplyDrop_O.Data_Figment_Martin_RockSupplyDrop_O",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Athena/Items/Data_Figment_Martin_RockSupplyDrop_P.Data_Figment_Martin_RockSupplyDrop_P",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Athena/Items/Data_Figment_Martin_RockSupplyDrop_R.Data_Figment_Martin_RockSupplyDrop_R",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Athena/Items/Data_Figment_Martin_RockSupplyDrop_Y.Data_Figment_Martin_RockSupplyDrop_Y",
+        "SubPathString": ""
+      }
+    ],
+    "AISettings": {
+      "AssetPathName": "/Game/Athena/AI/AISettings/Phoebe_Default_AISettings.Phoebe_Default_AISettings",
+      "SubPathString": ""
+    },
+    "MaxVehiclesCanSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.MaxVehiclesCanSpawnWith"
+      }
+    },
+    "PercentChanceSpawnWithTireMod": {
+      "Value": 1.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'AthenaGameData'",
+          "ObjectPath": "/Game/Athena/Balance/DataTables/AthenaGameData.0"
+        },
+        "RowName": "Default.Vehicle.Mod.Tire.PercentChanceSpawnWith"
+      }
+    },
+    "PlaylistId": 9234972,
+    "PlaylistName": "Playlist_Figment_Martin_Md",
+    "GameType": "EFortGameType::BRLTM",
+    "MinPlayers": 24,
+    "MaxPlayers": 32,
+    "bOverrideMaxPlayers": true,
+    "MaxHumanAndBotParticipants": 100,
+    "MaxTeamCount": 2,
+    "MaxTeamSize": 16,
+    "MaxSquadSize": 4,
+    "bAllowSquadFillOption": false,
+    "bShouldFillWhenNoSquadFillOption": true,
+    "RichPresenceAssetName": "squads",
+    "BuiltInGameFeaturePluginsToLoad": [
+      "BattleRoyaleContent",
+      "BattleRoyaleUI",
+      "VictoryCrownsGameplay",
+      "XpEverywhereUI",
+      "FinalCountdownGameplay",
+      "LocomotionInitiative",
+      "ContextualTraversal",
+      "ClamberingContent",
+      "DoorBashContent",
+      "TacticalSprintGame",
+      "TacticalSprintUI",
+      "VaultingContent",
+      "SlideImpulse",
+      "Sliding",
+      "RollLanding",
+      "BoostedJump",
+      "WallStick",
+      "WallJump",
+      "Figment_Martin_Items"
+    ],
+    "GameplayTagContainer": [
+      "Athena.Quests.NoBuild.Exclude",
+      "Athena.Playlist.DefaultXP",
+      "Athena.Playlist.Figment",
+      "Product.Figment.Build",
+      "Athena.Playlist.33",
+      "Athena.Playlist.Ashton",
+      "Athena.Playlist.IsALargeTeamMode",
+      "Plugin.Playlist.Exclude.BattleRoyaleGameUI"
+    ],
+    "DBNOType": "EDBNOType::Off",
+    "SpawnImmunityTime": {
+      "Value": 2.0,
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CompositeCurveTable'Barkline_Athena_CompositeGD_Figment'",
+          "ObjectPath": "/Figment_LootTables/DataTables/Barkline/Barkline_Athena_CompositeGD_Figment.0"
+        },
+        "RowName": "Default.Van.Redux.SquadSpawnImmunityTime"
+      }
+    },
+    "ModifierList": [
+      {
+        "AssetPathName": "/Figment_Martin/Playlist/Figment_MartinModifierDef.Figment_MartinModifierDef",
+        "SubPathString": ""
+      }
+    ],
+    "ItemsToFullyLoad": [
+      {
+        "AssetPathName": "/Figment_Martin/Athena/Items/Gameplay/BackPacks/CarminePack/AGID_CarminePack.AGID_CarminePack",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Athena/Items/Gameplay/BackPacks/Ashton/Milo/AGID_AshtonPack_Milo.AGID_AshtonPack_Milo",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Gameplay/Martin_Items/Booty/AGID_FigmentMartin_Booty.AGID_FigmentMartin_Booty",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Athena/Items/Gameplay/BackPacks/Ashton/Milo/AGID_JetPack_AshtonPack_Milo.AGID_JetPack_AshtonPack_Milo",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Weapons/Milo/WID_AshtonPack_Milo.WID_AshtonPack_Milo",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Weapons/Milo/WID_AshtonPack_Milo_Launcher.WID_AshtonPack_Milo_Launcher",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Figment_Martin/Gameplay/Martin_Items/Indigo/AGID_FigmentMartin_Indigo.AGID_FigmentMartin_Indigo",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/Game/Athena/Items/Gameplay/BackPacks/Ashton/Chicago/AGID_AshtonPack_Chicago.AGID_AshtonPack_Chicago",
+        "SubPathString": ""
+      }
+    ],
+    "bIsDefaultPlaylist": true,
+    "UIDisplayName": {
+      "Namespace": "",
+      "Key": "B44CBE05488481780336D3B8C9214852",
+      "SourceString": "Endgame",
+      "LocalizedString": "Endgame"
+    },
+    "UIDescription": {
+      "Namespace": "",
+      "Key": "6D6B76AF43CDC4D67959E596155991C3",
+      "SourceString": "Thanos and his Chitauri horde invades the Battle Royale island, in search of the six Infinity Stones. Fighting against them is a team of heroes wielding mythic Avengers items.\r\n\r\nEach time a stone is found, Thanos & his army will grow more powerful. If all six are found, the heroes will no longer be able to respawn, and Thanos can eliminate those who remain to win. \r\n\r\nChitauri will respawn when eliminated until their army is decimated. They must help Thanos find the stones before this happens to achieve victory. ",
+      "LocalizedString": "Thanos and his Chitauri horde invades the Battle Royale island, in search of the six Infinity Stones. Fighting against them is a team of heroes wielding mythic Avengers items.\r\n\r\nEach time a stone is found, Thanos & his army will grow more powerful. If all six are found, the heroes will no longer be able to respawn, and Thanos can eliminate those who remain to win. \r\n\r\nChitauri will respawn when eliminated until their army is decimated. They must help Thanos find the stones before this happens to achieve victory. "
+    },
+    "HUDElementsToHide": [
+      "HUD.CashResource",
+      "Athena.MiniMap.FullScreen.ResourceCount.Gold"
+    ],
+    "LootTierData": {
+      "AssetPathName": "/Figment_LootTables/DataTables/Martin/Martin_Composite_LTD_Figment.Martin_Composite_LTD_Figment",
+      "SubPathString": ""
+    },
+    "LootPackages": {
+      "AssetPathName": "/Figment_LootTables/DataTables/Martin/Martin_Composite_LP_Figment.Martin_Composite_LP_Figment",
+      "SubPathString": ""
+    },
+    "GameData": {
+      "AssetPathName": "/Figment_LootTables/DataTables/Martin/Martin_Athena_CompositeGD_Figment.Martin_Athena_CompositeGD_Figment",
+      "SubPathString": ""
+    },
+    "ServerPerformanceEventFrequency": 300.0
+  }
+}
