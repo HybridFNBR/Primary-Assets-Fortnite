@@ -1,4 +1,4 @@
-**Majority of Primary assets JSON For Fortnite**
+**Majority of Primary assets JSON From Fortnite**
 
 **Probably Useless to most but have no reason to keep private**
 
