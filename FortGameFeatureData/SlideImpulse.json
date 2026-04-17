@@ -1,131 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'SlideImpulse'",
     "ObjectPath": "/SlideImpulse/SlideImpulse.2"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "22.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.BattleLab"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Athena.Playlist.BlastBerry"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              },
-              {
-                "TagName": "Plugin.Playlist.ForbiddenFruit"
-              },
-              {
-                "TagName": "Athena.Playlist.Figment"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              10,
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Creative, Athena.BattleLab, Plugin.Playlist.Arena, Athena.Playlist.Default, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Athena.Playlist.BlastBerry, Plugin.Playlist.BlastBerry, Plugin.Playlist.ForbiddenFruit, Athena.Playlist.Figment ) )"
-          },
-          "bMigratedFromOldData": true
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Fort.DataRegistry",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "/SlideImpulse/DataTables/SlideImpulseGameData.SlideImpulseGameData",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Athena.BattleLab"
-        },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        {
-          "TagName": "Athena.Playlist.Default"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        },
-        {
-          "TagName": "Athena.Playlist.BlastBerry"
-        },
-        {
-          "TagName": "Plugin.Playlist.BlastBerry"
-        },
-        {
-          "TagName": "Plugin.Playlist.ForbiddenFruit"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        9,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Creative, Athena.BattleLab, Plugin.Playlist.Arena, Athena.Playlist.Default, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Athena.Playlist.BlastBerry, Plugin.Playlist.BlastBerry, Plugin.Playlist.ForbiddenFruit ) )"
-    }
+      }
+    ]
   }
 }

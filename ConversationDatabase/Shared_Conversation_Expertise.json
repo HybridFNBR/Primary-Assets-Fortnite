@@ -1,27 +1,30 @@
 {
-  "Type": "Back_C",
-  "Name": "Back_C_0",
+  "Type": "UFortControllerRequirement_TokenThreshold_C",
+  "Name": "UFortControllerRequirement_TokenThreshold_C_2",
   "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "BlueprintGeneratedClass'/Game/Conversation/Back.Back_C'",
+  "Class": "BlueprintGeneratedClass'/Game/Conversation/Services/ExpertSale/Requirements/UFortControllerRequirement_TokenThreshold.UFortControllerRequirement_TokenThreshold_C'",
   "Outer": {
-    "ObjectName": "ConversationDatabase'Shared_Conversation_Expertise'",
-    "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Expertise.18"
+    "ObjectName": "ExpertSale_C'Shared_Conversation_Expertise:ExpertSale_C_14'",
+    "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Expertise.25"
   },
   "Template": {
-    "ObjectName": "Back_C'Default__Back_C'",
-    "ObjectPath": "/Game/Conversation/Back.0"
+    "ObjectName": "UFortControllerRequirement_TokenThreshold_C'Default__UFortControllerRequirement_TokenThreshold_C'",
+    "ObjectPath": "/Game/Conversation/Services/ExpertSale/Requirements/UFortControllerRequirement_TokenThreshold.2"
   },
   "Properties": {
-    "SubNodes": [
-      {
-        "ObjectName": "ConversationChoiceNode'Shared_Conversation_Expertise:ConversationChoiceNode_4'",
-        "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Expertise.15"
+    "ItemTemplateID": "Token:athena_s34_weaponexpertise_exotic_service_token",
+    "RequiredQuantityThresholdConfig": {
+      "Requirement": "EThresholdRequirement::Equal",
+      "Quantity": {
+        "Value": 5.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'ExpertSaleRequirementsData'",
+            "ObjectPath": "/Game/Conversation/Services/ExpertSale/DataTables/ExpertSaleRequirementsData.0"
+          },
+          "RowName": "ExpertSale.Requirement.Tokens"
+        }
       }
-    ],
-    "Compiled_NodeGUID": "8B55B1C4-4A3DB6BD-65F4B894-00C8C108",
-    "ParentNode": {
-      "ObjectName": "Speech_C'Shared_Conversation_Expertise:Speech_C_0'",
-      "ObjectPath": "/NPCLibrary/ConversationsShared/Shared_Conversation_Expertise.39"
     }
   }
 }

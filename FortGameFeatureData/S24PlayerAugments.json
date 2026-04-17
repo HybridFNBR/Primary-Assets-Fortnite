@@ -1,63 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'S24PlayerAugments'",
     "ObjectPath": "/S24PlayerAugments/S24PlayerAugments.2"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "24.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.ItemsTest"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Playlist.ItemsTest ) )"
-          },
-          "bMigratedFromOldData": true
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Phoebe.Augments",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/S24PlayerAugments/DataTables/RadicalPhoebeAugmentsDataTable.RadicalPhoebeAugmentsDataTable",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.ItemsTest"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Playlist.ItemsTest ) )"
-    }
+      }
+    ]
   }
 }

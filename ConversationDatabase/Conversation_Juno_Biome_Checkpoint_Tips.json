@@ -1,30 +1,90 @@
 {
-  "Type": "Continue_C",
-  "Name": "Continue_C_0",
+  "Type": "JunoConversationTaskNode_Speech_C",
+  "Name": "JunoConversationTaskNode_Speech_C_60",
   "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "BlueprintGeneratedClass'/Game/Conversation/Continue.Continue_C'",
+  "Class": "BlueprintGeneratedClass'/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.JunoConversationTaskNode_Speech_C'",
   "Outer": {
     "ObjectName": "ConversationDatabase'Conversation_Juno_Biome_Checkpoint_Tips'",
     "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Biome_Checkpoint_Tips.38"
   },
   "Template": {
-    "ObjectName": "Continue_C'Default__Continue_C'",
-    "ObjectPath": "/Game/Conversation/Continue.1"
+    "ObjectName": "JunoConversationTaskNode_Speech_C'Default__JunoConversationTaskNode_Speech_C'",
+    "ObjectPath": "/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.2"
   },
   "Properties": {
-    "SubNodes": [
+    "DefaultMoodReactionTag": {
+      "TagName": "Juno.Mood.Reactions.Statement.Default"
+    },
+    "bUseInlineConfig": false,
+    "ExternalContextualMessageCollection": {
+      "ObjectName": "JunoContextualMessageConfigCollection'Conversation_Juno_Bank_Directions_South'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/ExternalMsg/Directions/Conversation_Juno_Bank_Directions_South.0"
+    },
+    "SpecializedConfigs": [
       {
-        "ObjectName": "FortConversationRequirement_ControllerRequirement'Conversation_Juno_Biome_Checkpoint_Tips:FortConversationRequirement_ControllerRequirement_1'",
-        "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Biome_Checkpoint_Tips.86"
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Persona"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Persona )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Default"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Line_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Line_Weight.0"
+            },
+            "RowName": "None"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Default'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Default.0"
+          },
+          "RowName": "CHAT_BIOME_DIR_SOUTH"
+        }
       }
     ],
     "OutputConnections": [
-      "E8FD9631-4573D0A2-E2A61F97-6BEB5997"
+      "7528C960-4ADA66F5-0AA99D83-D492F549"
     ],
-    "Compiled_NodeGUID": "7B303EBC-423383CA-3376B4B1-69D67048",
+    "NodeName": "South",
+    "Compiled_NodeGUID": "8FE2E069-443F22A1-58F2DE83-AEA8B4CE",
     "ParentNode": {
-      "ObjectName": "Continue_C'Conversation_Juno_Biome_Checkpoint_Tips:Continue_C_94'",
-      "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Biome_Checkpoint_Tips.32"
+      "ObjectName": "Continue_C'Conversation_Juno_Biome_Checkpoint_Tips:Continue_C_97'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Biome_Checkpoint_Tips.35"
     }
   }
 }

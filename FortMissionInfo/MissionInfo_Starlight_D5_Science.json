@@ -1,22 +1,609 @@
 {
-  "Type": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression",
-  "Name": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_1",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'",
-  "Outer": {
-    "ObjectName": "FortMissionInfo'MissionInfo_Starlight_D5_Science'",
-    "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/MissionInfo_Starlight_D5_Science.7"
-  },
+  "Type": "FortMissionInfo",
+  "Name": "MissionInfo_Starlight_D5_Science",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Package": "/SaveTheWorld/Missions/Primary/Starlight/MissionInfo_Starlight_D5_Science",
   "Properties": {
-    "SpawnGroupProgression": {
-      "ObjectName": "BlueprintGeneratedClass'AA_EDO_SpawnProgression_ScriptedSpawn_HuskSingle_C'",
-      "ObjectPath": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/Spawning/ScriptedSpawn/AA_EDO_SpawnProgression_ScriptedSpawn_HuskSingle.1"
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/Starlight/Mission_Starlight.Mission_Starlight_C",
+      "SubPathString": ""
     },
-    "Options": [
-      {
-        "ObjectName": "BlueprintGeneratedClass'AA_EDO_SpawnProgression_ScriptedSpawn_HuskSingle_C'",
-        "ObjectPath": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/Spawning/ScriptedSpawn/AA_EDO_SpawnProgression_ScriptedSpawn_HuskSingle.1"
+    "MissionTags": [
+      "Stat.Mission.Primary.Starlight.D5Science"
+    ],
+    "MaxMissionPoints": 24,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "1766507C41CBC153C7914FA3219A4273",
+      "SourceString": "Descend into The Lab, and discover the twisted experiments within!",
+      "LocalizedString": "Descend into The Lab, and discover the twisted experiments within!"
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-32.0"
+        }
+      },
+      "Brush_XS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-32.0"
+        }
+      },
+      "Brush_S": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-64.0"
+        }
+      },
+      "Brush_M": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-64.0"
+        }
+      },
+      "Brush_L": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-128.0"
+        }
+      },
+      "Brush_XL": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-DestroyEncampments-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-DestroyEncampments-128.0"
+        }
       }
-    ]
+    },
+    "EndOfMissionMediaSource": {
+      "ObjectName": "FileMediaSource'FMS_mission_success_generic'",
+      "ObjectPath": "/SaveTheWorld/Movies/VictoryMovies/FMS_mission_success_generic.0"
+    },
+    "ObjectiveBlocks": [
+      {
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.TextDisplay"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.MissionComplete"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_DoorAndKey/Gen_DoorAndKey.Gen_DoorAndKey_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.DoorAndKey",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_DoorAndKey/Gen_DoorAndKey.Gen_DoorAndKey_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.DoorAndKey",
+              "Activities.ObjectiveHandle.Num.02"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_DoorAndKey/Gen_DoorAndKey.Gen_DoorAndKey_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.DoorAndKey",
+              "Activities.ObjectiveHandle.Num.03"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_DoorAndKey/Gen_DoorAndKey.Gen_DoorAndKey_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.DoorAndKey",
+              "Activities.ObjectiveHandle.Num.04"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_DoorAndKey/Gen_DoorAndKey.Gen_DoorAndKey_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.DoorAndKey",
+              "Activities.ObjectiveHandle.Num.05"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_DoorAndKey/Gen_DoorAndKey.Gen_DoorAndKey_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.DoorAndKey",
+              "Activities.ObjectiveHandle.Num.06"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_DoorAndKey/Gen_DoorAndKey.Gen_DoorAndKey_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.DoorAndKey",
+              "Activities.ObjectiveHandle.Num.07"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_DoorAndKey/Gen_DoorAndKey.Gen_DoorAndKey_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.DoorAndKey",
+              "Activities.ObjectiveHandle.Num.08"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_ProgressBar/Gen_ProgressBar.Gen_ProgressBar_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.MissionComplete",
+              "Activities.ObjectiveHandle.Generic.ProgressBar"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Timer/Gen_Timer.Gen_Timer_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed",
+              "Activities.ObjectiveHandle.Num.09"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Timer/Gen_Timer.Gen_Timer_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Timed",
+              "Activities.ObjectiveHandle.Num.10"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "bStartPlayingOnLoad": true,
+    "bIsGroupContent": true,
+    "MissionName": {
+      "Namespace": "",
+      "Key": "AE0C967846F558323F90DCAD6508BAC0",
+      "SourceString": "The Lab",
+      "LocalizedString": "The Lab"
+    },
+    "bShouldDisplayMissionName": false,
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/EDO_Set_Starlight_Yard.EDO_Set_Starlight_Yard",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_Starlight_D5_Science:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_2'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/MissionInfo_Starlight_D5_Science.5"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/EDO_Set_Starlight_Patrol.EDO_Set_Starlight_Patrol",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_Starlight_D5_Science:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/MissionInfo_Starlight_D5_Science.3"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn_Miniboss.EDO_Set_ScriptedSpawn_Miniboss",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'MissionInfo_Starlight_D5_Science:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/MissionInfo_Starlight_D5_Science.0"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_Starlight_D5_Science:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/MissionInfo_Starlight_D5_Science.4"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn_Miniboss.EDO_Set_ScriptedSpawn_Miniboss",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'MissionInfo_Starlight_D5_Science:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_5'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/MissionInfo_Starlight_D5_Science.1"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn_Miniboss.EDO_Set_ScriptedSpawn_Miniboss",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'MissionInfo_Starlight_D5_Science:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_7'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/MissionInfo_Starlight_D5_Science.2"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/EDO_Set_Starlight_Patrol_EasySpecial.EDO_Set_Starlight_Patrol_EasySpecial",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_Starlight_D5_Science:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/MissionInfo_Starlight_D5_Science.3"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/EDO_Set_Starlight_Yard_EasySpecial.EDO_Set_Starlight_Yard_EasySpecial",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_Starlight_D5_Science:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_4'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/MissionInfo_Starlight_D5_Science.6"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      }
+    ],
+    "TaggedRewards": [
+      {
+        "Tag": {
+          "TagName": "Starlight.Rewards.Badge.UpperFloors"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/StarlightBadges/Starlight_Badge_UpperFloors_D05.Starlight_Badge_UpperFloors_D05",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Starlight.Rewards.Badge.MiddleFloors"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/StarlightBadges/Starlight_Badge_MiddleFloors_D05.Starlight_Badge_MiddleFloors_D05",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Starlight.Rewards.Badge.LowerFloors"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/StarlightBadges/Starlight_Badge_LowerFloors_D05.Starlight_Badge_LowerFloors_D05",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Starlight.Rewards.Badge.Keymaster"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/StarlightBadges/Starlight_Badge_Keymaster_D05.Starlight_Badge_Keymaster_D05",
+            "SubPathString": ""
+          }
+        ]
+      },
+      {
+        "Tag": {
+          "TagName": "Starlight.Rewards.Badge.DungeonBoss"
+        },
+        "WorldItemDefinitions": [
+          {
+            "AssetPathName": "/SaveTheWorld/Items/Badges/StarlightBadges/Starlight_Badge_DungeonBoss_D05.Starlight_Badge_DungeonBoss_D05",
+            "SubPathString": ""
+          }
+        ]
+      }
+    ],
+    "ConfigParams": {
+      "ConfigParams": [
+        {
+          "Query": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Activities.ConfigData.Base"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              2,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ConfigDataClass": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/Starlight/StarlightConfigData_D5_Science.StarlightConfigData_D5_Science_C",
+            "SubPathString": ""
+          }
+        }
+      ]
+    }
   }
 }

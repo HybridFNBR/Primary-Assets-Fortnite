@@ -1,59 +1,80 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'Figment_Vehicle_ShoppingCart'",
-    "ObjectPath": "/Figment_Vehicle_ShoppingCart/Figment_Vehicle_ShoppingCart.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "Figment_Vehicle_ShoppingCart",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/Figment_Vehicle_ShoppingCart/Figment_Vehicle_ShoppingCart",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "35.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Figment"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Figment )"
-          },
-          "bMigratedFromOldData": true
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'Figment_Vehicle_ShoppingCart:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/Figment_Vehicle_ShoppingCart/Figment_Vehicle_ShoppingCart.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Vehicle",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortVehicleItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Figment"
+      },
+      {
+        "PrimaryAssetType": "VehicleSpawner",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortAthenaVehicleSpawner",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Spawner"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Athena.Playlist.Figment )"
-    }
+      },
+      {
+        "PrimaryAssetType": "ActorSpawnerData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortAthenaActorSpawnerData",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "LWSpawner"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

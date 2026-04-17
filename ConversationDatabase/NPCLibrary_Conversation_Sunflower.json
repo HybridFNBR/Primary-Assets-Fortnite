@@ -1,93 +1,312 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Sunflower",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Sunflower'",
+    "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "17EB5BCC-4E3AA7E2-31A31D8E-22B6B279",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Sunflower:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "893D2DB944D2226399F218B5A3BB411A",
+            "SourceString": "This old farm could use some upgrades. Like a new silo. Or an electric catapult!",
+            "LocalizedString": "This old farm could use some upgrades. Like a new silo. Or an electric catapult!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Sunflower:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5E03AA2F454B3276B2F0FE99C70C5F28",
+            "SourceString": "I've got some big ideas for the farm, sir.",
+            "LocalizedString": "I've got some big ideas for the farm, sir."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Sunflower:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CADEA0434826906491B5E48DAC7DD189",
+            "SourceString": "You get outta here before I call the Champion on ya.",
+            "LocalizedString": "You get outta here before I call the Champion on ya."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Sunflower:Speech_C_4.FortControllerRequirement_HasCID_8'",
+                "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "101A0F8B44292E839EBCB7831282837A",
+            "SourceString": "How do you feel about \"acquiring\" me a plasmacore tractor?",
+            "LocalizedString": "How do you feel about \"acquiring\" me a plasmacore tractor?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Sunflower:Speech_C_4.FortControllerRequirement_HasCID_9'",
+                "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E759B29C4FA345473148CE8F28294350",
+            "SourceString": "You and your Luminaries got any cool prototypes for farm equipment?",
+            "LocalizedString": "You and your Luminaries got any cool prototypes for farm equipment?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Sunflower:Speech_C_4.FortControllerRequirement_HasCID_10'",
+                "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D505EFFE445B70B5BA3F248E75CF46D0",
+            "SourceString": "Uh, Mr. Destroyer sir, this farm isn't available for conquering.",
+            "LocalizedString": "Uh, Mr. Destroyer sir, this farm isn't available for conquering."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Sunflower:Speech_C_4.FortControllerRequirement_HasCID_11'",
+                "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "31105AFE-495564ED-4F59FD9E-3638F5EE",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Sunflower:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.10"
-        }
-      },
-      {
-        "Key": "6C6C8452-450DFA4D-1675E881-2C0C588D",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Sunflower:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.2"
-        }
-      },
-      {
-        "Key": "21FDD63B-44F7B93D-5F36E6B6-30B18537",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Sunflower:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "9F50124C4CB15E4789388782C6879EF0",
+        "SourceString": "Ground's been rumblin', spooking my animals. My poor chickens won't even cross the road.",
+        "LocalizedString": "Ground's been rumblin', spooking my animals. My poor chickens won't even cross the road."
       }
+    },
+    "OutputConnections": [
+      "21FDD63B-44F7B93D-5F36E6B6-30B18537",
+      "6C6C8452-450DFA4D-1675E881-2C0C588D"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Sunflower"
-        },
-        "DestinationList": [
-          "17EB5BCC-4E3AA7E2-31A31D8E-22B6B279"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "17EB5BCC-4E3AA7E2-31A31D8E-22B6B279",
-      "31105AFE-495564ED-4F59FD9E-3638F5EE",
-      "6C6C8452-450DFA4D-1675E881-2C0C588D",
-      "21FDD63B-44F7B93D-5F36E6B6-30B18537"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "31105AFE-495564ED-4F59FD9E-3638F5EE",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Sunflower:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/SunFlower/SunFlower/NPCLibrary_Conversation_Sunflower.1"
+    }
   }
 }

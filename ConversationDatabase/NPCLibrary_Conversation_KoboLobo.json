@@ -1,102 +1,313 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_KoboLobo",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_KoboLobo'",
+    "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "624A676D-4F9D0D77-1934D5A2-D75C4E5E",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_KoboLobo:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.1"
-        }
-      },
-      {
-        "Key": "D36CD8BC-42F4519C-67FC5195-CFFF1568",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_KoboLobo:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.11"
-        }
-      },
-      {
-        "Key": "191CB486-4EF7BC94-A2F381BA-160B2CC4",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_KoboLobo:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.4"
-        }
-      },
-      {
-        "Key": "BF67553C-4E7A94E7-1273D78E-1F4D9D6E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_KoboLobo:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.2"
-        }
-      },
-      {
-        "Key": "A6C30645-40AA979C-9BE9AD83-D5DF22FB",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_KoboLobo:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.KoboLobo"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F6234199414C63F0D24EB68F5953E461",
+            "SourceString": "*sniffs vigorously* Ah, someone new. 'Sup!",
+            "LocalizedString": "*sniffs vigorously* Ah, someone new. 'Sup!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_KoboLobo:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "624A676D-4F9D0D77-1934D5A2-D75C4E5E"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CBB5E54A4887C93138B3F5AE3AB7C766",
+            "SourceString": "Feeling the need to HOWL!",
+            "LocalizedString": "Feeling the need to HOWL!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_KoboLobo:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8A0D37C043A9C0C8C07C88A10676E0FE",
+            "SourceString": "*fist bump* Wanna shoot some hoops?",
+            "LocalizedString": "*fist bump* Wanna shoot some hoops?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_KoboLobo:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "571EE7074A0637C3D1362099AD76ACDD",
+            "SourceString": "I run with a wild pack.",
+            "LocalizedString": "I run with a wild pack."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_KoboLobo:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CA419D364160EE56514107B4670718B5",
+            "SourceString": "*hackles rise* Move along, knight. Nothing to see here.",
+            "LocalizedString": "*hackles rise* Move along, knight. Nothing to see here."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_KoboLobo:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "645CB9E1434BF4261B445DB7329BD2EB",
+            "SourceString": "*squints* Keep those hands away from my luxurious mane...",
+            "LocalizedString": "*squints* Keep those hands away from my luxurious mane..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_KoboLobo:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "775732F9418A62D122C7B087E560178F",
+        "SourceString": "Feeling the need to HOWL!",
+        "LocalizedString": "Feeling the need to HOWL!"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.KoboLobo.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "624A676D-4F9D0D77-1934D5A2-D75C4E5E",
-      "D36CD8BC-42F4519C-67FC5195-CFFF1568",
-      "191CB486-4EF7BC94-A2F381BA-160B2CC4",
+    },
+    "OutputConnections": [
+      "A6C30645-40AA979C-9BE9AD83-D5DF22FB",
       "BF67553C-4E7A94E7-1273D78E-1F4D9D6E",
-      "A6C30645-40AA979C-9BE9AD83-D5DF22FB"
+      "191CB486-4EF7BC94-A2F381BA-160B2CC4"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "D36CD8BC-42F4519C-67FC5195-CFFF1568",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_KoboLobo:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/KoboLobo/NPCLibrary_Conversation_KoboLobo.1"
+    }
   }
 }

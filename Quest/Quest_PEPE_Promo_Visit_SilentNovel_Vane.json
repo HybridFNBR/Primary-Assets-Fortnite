@@ -1,26 +1,182 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_PEPE_Promo_Visit_SilentNovel_Vane'",
-    "ObjectPath": "/SproutTG_PEPE_CYC/Quests/Promotions/Quest_PEPE_Promo_Visit_SilentNovel_Vane.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_PEPE_Promo_Visit_SilentNovel_Vane",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/SproutTG_PEPE_CYC/Quests/Promotions/Quest_PEPE_Promo_Visit_SilentNovel_Vane",
   "Properties": {
-    "InformationSettings": {
-      "bShouldDisplayOverallQuestInformation": true
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "QuestType": "EFortQuestType::TransientQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_BFFJob_Visit1_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "NPC": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Sprout.Job.Events.PEPE"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Sprout.Job.Events.PEPE )"
+              }
+            },
+            "ConversationChoice": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Sprout.Conversation.Choice.RequestNewTask"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Sprout.Conversation.Choice.RequestNewTask )"
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "B147E87C4F3B76110490CD8BEA900C36",
+          "SourceString": "Talk to Homer",
+          "LocalizedString": "Talk to Homer"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Product.Sprout"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Product.Juno, Product.Sprout )"
     },
-    "VisibilitySettings": {
-      "bIsVisibleToPlayers": false,
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false,
-      "bCanShowTimer": false
-    },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false,
-      "bHideQuestProgressNotification": true,
-      "bHideQuestRewardNotification": true
-    }
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_PEPE_Promo_Visit_SilentNovel_Vane:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/SproutTG_PEPE_CYC/Quests/Promotions/Quest_PEPE_Promo_Visit_SilentNovel_Vane.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_GameplayAbilities'Quest_PEPE_Promo_Visit_SilentNovel_Vane:FortQuestDefinitionComponent_GameplayAbilities_0'",
+        "ObjectPath": "/SproutTG_PEPE_CYC/Quests/Promotions/Quest_PEPE_Promo_Visit_SilentNovel_Vane.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_BFFJob_Visit1_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "DataList": [
+      {
+        "Tags": [
+          "Sprout.Job.Task.Visit.Event.PEPE.SilentNovel_Vane"
+        ]
+      }
+    ]
   }
 }

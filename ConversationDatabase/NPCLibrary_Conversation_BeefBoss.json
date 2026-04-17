@@ -1,93 +1,132 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_BeefBoss",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_BeefBoss'",
+    "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "9B71DA60-43616C4F-69117E98-A43BA4C0",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BeefBoss:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0B04889D4BD5844B884B899F4F8EDB1E",
+            "SourceString": "Look who it is....",
+            "LocalizedString": "Look who it is...."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BeefBoss:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "EC001B674588CB836747F1B5467B155F",
+            "SourceString": "I was just flippin' some patties when some sort of... laser-sight showed up on my grill. Terrifying!",
+            "LocalizedString": "I was just flippin' some patties when some sort of... laser-sight showed up on my grill. Terrifying!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasOwnedTag'NPCLibrary_Conversation_BeefBoss:Speech_C_4.FortControllerRequirement_HasOwnedTag_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.HasQuestGameplayTag"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "4A9E7FEB-485202F0-91015F87-361BF79A",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_BeefBoss:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.6"
-        }
-      },
-      {
-        "Key": "E0ED671E-479458E7-533C4C91-8035BF3E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BeefBoss:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.2"
-        }
-      },
-      {
-        "Key": "C41A350A-41649980-A0F65091-0BA8B8DA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BeefBoss:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "F3C44A3E4F7EA04CB16ED280614C4461",
+        "SourceString": "Have a beefy day!",
+        "LocalizedString": "Have a beefy day!"
       }
+    },
+    "OutputConnections": [
+      "C41A350A-41649980-A0F65091-0BA8B8DA",
+      "E0ED671E-479458E7-533C4C91-8035BF3E"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.BeefBoss"
-        },
-        "DestinationList": [
-          "9B71DA60-43616C4F-69117E98-A43BA4C0"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "9B71DA60-43616C4F-69117E98-A43BA4C0",
-      "4A9E7FEB-485202F0-91015F87-361BF79A",
-      "E0ED671E-479458E7-533C4C91-8035BF3E",
-      "C41A350A-41649980-A0F65091-0BA8B8DA"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "4A9E7FEB-485202F0-91015F87-361BF79A",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BeefBoss:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/BeefBoss/BeefBoss/NPCLibrary_Conversation_BeefBoss.1"
+    }
   }
 }

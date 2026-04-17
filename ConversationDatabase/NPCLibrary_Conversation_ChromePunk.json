@@ -1,93 +1,465 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_ChromePunk",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_ChromePunk'",
+    "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "FB0F289C-412A36A8-8C7BA79F-4EC5EFEA",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_ChromePunk:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D7050EF04A0262CF97838B89198BE950",
+            "SourceString": "Hey there, pal. You stuck here too?",
+            "LocalizedString": "Hey there, pal. You stuck here too?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_ChromePunk:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5B683FAD48C87CEE54CF8D85168C278F",
+            "SourceString": "Didn't think I'd ever see you again, bro.",
+            "LocalizedString": "Didn't think I'd ever see you again, bro."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ChromePunk:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "319FE44948AACD788380DBB2AC584992",
+            "SourceString": "Yo, I heard you can spit bars.",
+            "LocalizedString": "Yo, I heard you can spit bars."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ChromePunk:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FA317EA4499EDB785AE3E0B47E024BDD",
+            "SourceString": "Are we...cousins or something?",
+            "LocalizedString": "Are we...cousins or something?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ChromePunk:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A6C1F3F24024C0DE4DFD9EA2C3C7001D",
+            "SourceString": "Your hands match my face.",
+            "LocalizedString": "Your hands match my face."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ChromePunk:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "72A6574A4299E6AD339C459C8CED5746",
+            "SourceString": "I suppose I have you to thank for the new drip.",
+            "LocalizedString": "I suppose I have you to thank for the new drip."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ChromePunk:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C78093B84D4FD560D1EB16A17346D140",
+            "SourceString": "I don't normally like cats but you seem pretty cool.",
+            "LocalizedString": "I don't normally like cats but you seem pretty cool."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ChromePunk:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AC9A40F54983D972FDFF36AE093EF5C7",
+            "SourceString": "One's a bear. One has a pumpkin head. They fight crime.",
+            "LocalizedString": "One's a bear. One has a pumpkin head. They fight crime."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ChromePunk:Speech_C_4.FortControllerRequirement_HasCID_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5D816329456F979DFD24F38FAA39FA88",
+            "SourceString": "Sorry, never saw your show. I heard it's good though.",
+            "LocalizedString": "Sorry, never saw your show. I heard it's good though."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ChromePunk:Speech_C_4.FortControllerRequirement_HasCID_7'",
+                "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "47EBC01A43F4BB2CDF5F54ADFDFDC941",
+            "SourceString": "I'm not the guy you're thinking of but I understand the confusion.",
+            "LocalizedString": "I'm not the guy you're thinking of but I understand the confusion."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ChromePunk:Speech_C_4.FortControllerRequirement_HasCID_8'",
+                "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "6DA464AD-4EF8A5F8-AD9BED97-413D87FB",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_ChromePunk:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.14"
-        }
-      },
-      {
-        "Key": "C7235F0F-46333EDB-3B122BA1-2518AC6E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ChromePunk:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.2"
-        }
-      },
-      {
-        "Key": "C1F51834-4C11F29F-003F5BA1-1E92B9D9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ChromePunk:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "3DDEB048414854F28F232F942C68E10E",
+        "SourceString": "What do you want from me, huh?",
+        "LocalizedString": "What do you want from me, huh?"
       }
+    },
+    "OutputConnections": [
+      "C1F51834-4C11F29F-003F5BA1-1E92B9D9",
+      "C7235F0F-46333EDB-3B122BA1-2518AC6E"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.ChromePunk"
-        },
-        "DestinationList": [
-          "FB0F289C-412A36A8-8C7BA79F-4EC5EFEA"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "FB0F289C-412A36A8-8C7BA79F-4EC5EFEA",
-      "6DA464AD-4EF8A5F8-AD9BED97-413D87FB",
-      "C7235F0F-46333EDB-3B122BA1-2518AC6E",
-      "C1F51834-4C11F29F-003F5BA1-1E92B9D9"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "6DA464AD-4EF8A5F8-AD9BED97-413D87FB",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_ChromePunk:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/ChromePunk/NPCLibrary_Conversation_ChromePunk.1"
+    }
   }
 }

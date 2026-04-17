@@ -1,44 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddCategoryTableToConfig",
-  "Name": "FortGameFeatureAction_AddCategoryTableToConfig_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddCategoryTableToConfig'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'NPCSpecialist_Foundation'",
     "ObjectPath": "/NPCSpecialist_Foundation/NPCSpecialist_Foundation.2"
   },
   "Properties": {
-    "ConfigToCategoryTableDatas": [
+    "SourcesToAdd": [
       {
-        "Key": "/Lager/Lager/Config/LagerConfigData_BR_Main.LagerConfigData_BR_Main",
-        "Value": {
-          "CategoryTableDatas": [
-            {
-              "Name": "Foundation",
-              "CategoryTable": {
-                "AssetPathName": "/NPCSpecialist_Foundation/Lager/LCT_NPCSpecialist_Foundation.LCT_NPCSpecialist_Foundation",
-                "SubPathString": ""
-              },
-              "IsEnabled": {
-                "Value": 1.0,
-                "Curve": {
-                  "CurveTable": null,
-                  "RowName": "None"
-                },
-                "RegistryType": {
-                  "Name": "None"
-                }
-              }
-            }
-          ]
+        "RegistryToAddTo": "PawnTagQueryBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/NPCSpecialist_Foundation/BTInjection/DT_NPCSpecialist_Foundation_PawnTagQueryInjectedBehaviors.DT_NPCSpecialist_Foundation_PawnTagQueryInjectedBehaviors",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
-    ],
-    "StartVersion": {
-      "VersionName": "40.00"
-    },
-    "EndVersion": {
-      "VersionName": "41.00"
-    }
+    ]
   }
 }

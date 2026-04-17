@@ -1,21 +1,144 @@
 {
-  "Type": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression",
-  "Name": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'",
-  "Outer": {
-    "ObjectName": "FortMissionInfo'StarlightInfo_S5'",
-    "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Dungeons/S5/StarlightInfo_S5.1"
-  },
+  "Type": "FortMissionInfo",
+  "Name": "StarlightInfo_S5",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Package": "/SaveTheWorld/Missions/Primary/Starlight/Dungeons/S5/StarlightInfo_S5",
   "Properties": {
-    "SpawnGroupProgression": {
-      "ObjectName": "BlueprintGeneratedClass'AA_EDO_SpawnProgression_ScriptedSpawn_StarlightCryptTaker_C'",
-      "ObjectPath": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/Spawning/ScriptedSpawn/AA_EDO_SpawnProgression_ScriptedSpawn_StarlightCryptTaker.1"
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/Starlight/Dungeons/S5Science/StarlightMission_S5_Science.StarlightMission_S5_Science_C",
+      "SubPathString": ""
     },
-    "Options": [
+    "MissionType": "EFortMissionType::Secondary",
+    "MaxMissionPoints": 24,
+    "ObjectiveBlocks": [
       {
-        "ObjectName": "BlueprintGeneratedClass'AA_EDO_SpawnProgression_ScriptedSpawn_StarlightSciBoss_C'",
-        "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight2021/AI/AA_EDO_SpawnProgression_ScriptedSpawn_StarlightSciBoss.1"
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/Game/Missions/GenericObjectives/GenericObjective_Blank.GenericObjective_Blank_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Locate/Gen_Locate.Gen_Locate_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Locate",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_Text/Gen_Text.Gen_Text_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Num.02",
+              "Activities.ObjectiveHandle.Generic.TextDisplay"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "ActorsAndLocations": [
+        {
+          "ItemIdentifyingTags": [],
+          "TagsToAddToChosenPlacementActor": [
+            "Activities.Placement.LocationUsed"
+          ],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'BossCoil_PlacementQuery'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight2021/Missions/BossCoil_PlacementQuery.0"
+          },
+          "ActorToPlace": {
+            "AssetPathName": "/SaveTheWorld/Missions/Primary/Starlight2021/Coil/B_Starlight_Science_BluGloCoil_Parent.B_Starlight_Science_BluGloCoil_Parent_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 6,
+          "bSpawnActorAutomatically": false,
+          "bShouldReserveLocations": true,
+          "bSnapToGrid": true,
+          "bAdjustPlacementForFloors": false,
+          "bDontCreateSpawnRiftsNearby": false
+        }
+      ]
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn_Miniboss.EDO_Set_ScriptedSpawn_Miniboss",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'StarlightInfo_S5:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Dungeons/S5/StarlightInfo_S5.0"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn",
+          "Encounter.Enable.MiniBoss"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S1/EDO_Set_Starlight_Crypt_Phase1.EDO_Set_Starlight_Crypt_Phase1",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Primary.Standard"
+        ]
       }
     ]
   }

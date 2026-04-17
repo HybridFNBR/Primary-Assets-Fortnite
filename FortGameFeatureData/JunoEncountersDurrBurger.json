@@ -1,59 +1,43 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'JunoEncountersDurrBurger'",
     "ObjectPath": "/JunoEncountersDurrBurger/JunoEncountersDurrBurger.2"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Playlist.Juno"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              2,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL( Playlist.Juno )"
-          },
-          "bMigratedFromOldData": true
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Juno.POIs",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoEncountersDurrBurger/DataTables/DT_JunoDurrBurgerPOIs.DT_JunoDurrBurgerPOIs",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Playlist.Juno"
+      },
+      {
+        "RegistryToAddTo": "Juno.AdditionalPOIs",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoEncountersDurrBurger/DataTables/DT_JunoDurrBurgerAdditionalPOIs.DT_JunoDurrBurgerAdditionalPOIs",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL( Playlist.Juno )"
-    }
+      }
+    ],
+    "bPreloadInEditor": true
   }
 }

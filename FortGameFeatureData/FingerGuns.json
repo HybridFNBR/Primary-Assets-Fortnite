@@ -1,56 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'FingerGuns'",
     "ObjectPath": "/FingerGuns/FingerGuns.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Unset"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.ForbiddenFruit"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              3,
-              0,
-              1,
-              2,
-              3,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Athena.Playlist.ForbiddenFruit, Plugin.Playlist.BlastBerry ),  NONE( ) )"
-          },
-          "bMigratedFromOldData": false
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Phoebe.ItemData",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/FingerGuns/DataTables/DT_Phoebe_ItemData_FingerGuns.DT_Phoebe_ItemData_FingerGuns",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    }
+      }
+    ]
   }
 }

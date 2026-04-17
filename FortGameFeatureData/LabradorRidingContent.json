@@ -1,88 +1,66 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'LabradorRidingContent'",
     "ObjectPath": "/LabradorRidingContent/LabradorRidingContent.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.10"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.ItemsTest"
-              },
-              {
-                "TagName": "Athena.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              5,
-              0,
-              1,
-              2,
-              3,
-              4
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Athena.Playlist.Arena, Athena.Playlist.Test, Plugin.Playlist.Arena )"
-          },
-          "bMigratedFromOldData": false
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Labrador/Pawn/BP_AIPawn_Labrador_Ridable.BP_AIPawn_Labrador_Ridable_C",
+          "SubPathString": ""
         },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.10"
-            },
-            "ExclusiveMax": {
-              "VersionName": "40.20"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.BlastBerry"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.BlastBerry )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    }
+        "ComponentClass": {
+          "AssetPathName": "/LabradorRidingContent/Components/LabradorRiding_RidableComponentInjector.LabradorRiding_RidableComponentInjector_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerPawnAthena",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/LabradorRidingContent/Components/LabradorRiding_PlayerRiderComponent.LabradorRiding_PlayerRiderComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGameStateAthena",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/LabradorRidingContent/Components/BlastberryLabradorRidingLlamaGameStateComponent.BlastberryLabradorRidingLlamaGameStateComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/BattleRoyaleGameUI/Director/BP_BRGameUI_UIDirector.BP_BRGameUI_UIDirector_C",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/LabradorRidingContent/UI/BP_LabradorRiding_UIDirectorComponent.BP_LabradorRiding_UIDirectorComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

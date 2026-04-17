@@ -1,223 +1,46 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "quest_daily_blastberry_31",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/EvergreenQuest/Items/QuestItems/Dailies/Reload/quest_daily_blastberry_31",
+  "Type": "FortQuestDefinitionComponent_TrackedData",
+  "Name": "FortQuestDefinitionComponent_TrackedData_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_TrackedData'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'quest_daily_blastberry_31'",
+    "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/Reload/quest_daily_blastberry_31.0"
+  },
   "Properties": {
-    "Group": "Evergreen_BlastBerry_DailyQuest",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "ObjectivesExtensionData": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "quest_daily_blastberry_31_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
-          {
-            "Source": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Item": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
+        "Key": "quest_daily_blastberry_31_obj0",
+        "Value": {
+          "SubjectToTrackedDataMapping": [
+            {
+              "Key": "Item",
+              "Value": {
+                "TrackedData": [
                   {
-                    "TagName": "Rarity.SuperRare"
-                  },
-                  {
-                    "TagName": "Rarity.Mythic"
-                  },
-                  {
-                    "TagName": "Rarity.Transcendent"
-                  },
-                  {
-                    "TagName": "Rarity.VeryRare"
-                  },
-                  {
-                    "TagName": "Rarity.Rare"
-                  },
-                  {
-                    "TagName": "Pickup.Source.TossedByPlayer"
-                  },
-                  {
-                    "TagName": "Item.VictoryCrown"
+                    "BlockingQuery": {
+                      "TokenStreamVersion": 0,
+                      "TagDictionary": [
+                        {
+                          "TagName": "Pickup.Source.TossedByPlayer"
+                        }
+                      ],
+                      "QueryTokenStream": [
+                        0,
+                        1,
+                        1,
+                        1,
+                        0
+                      ],
+                      "UserDescription": "",
+                      "AutoDescription": " ANY( Pickup.Source.TossedByPlayer )"
+                    }
                   }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  5,
-                  2,
-                  1,
-                  5,
-                  0,
-                  1,
-                  2,
-                  3,
-                  4,
-                  3,
-                  2,
-                  5,
-                  6
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ALL(  ANY( Rarity.SuperRare, Rarity.Mythic, Rarity.Transcendent, Rarity.VeryRare, Rarity.Rare ),  NONE( Pickup.Source.TossedByPlayer, Item.VictoryCrown ) )"
-              }
-            },
-            "bIncrementByItemCount": true,
-            "AcceptedGatherType": "EInventoryGatherType::PreviouslyGathered",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
+                ]
               }
             }
-          }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "CultureInvariantString": null
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 3,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 50,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
+          ]
         }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.BlastBerry"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Product.BlastBerry )"
-    },
-    "Category": {
-      "DataTable": {
-        "ObjectName": "DataTable'QuestCategoryTable'",
-        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
-      },
-      "RowName": "BRDailyChallenges"
-    },
-    "SortPriority": 2,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_daily_blastberry_31:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/Reload/quest_daily_blastberry_31.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_TrackedData'quest_daily_blastberry_31:FortQuestDefinitionComponent_TrackedData_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/Reload/quest_daily_blastberry_31.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_daily_blastberry_31:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/Reload/quest_daily_blastberry_31.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "quest_daily_blastberry_31_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "281A357E4C43CEEB15136D9FFAD6FCB1",
-      "SourceString": "Collect Rare or better items",
-      "LocalizedString": "Collect Rare or better items"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "7CC25A6D4B5E26A7E938D089A84035F5",
-      "SourceString": "Collect Rare or better items",
-      "LocalizedString": "Collect Rare or better items"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.BB.Dailies"
-        ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

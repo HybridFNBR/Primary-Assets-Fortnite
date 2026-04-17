@@ -1,48 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'RA_Rivals'",
     "ObjectPath": "/RA_Rivals/RA_Rivals.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Unset"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              7,
-              1,
-              0,
-              3,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY_EXACT( Athena.Playlist.Default ),  NONE( ) )"
-          },
-          "bMigratedFromOldData": false
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "AnomaliesToLoad",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/RA_Rivals/DataTables/DT_RA_Rivals.DT_RA_Rivals",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    }
+      }
+    ]
   }
 }

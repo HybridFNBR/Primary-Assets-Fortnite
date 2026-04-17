@@ -1,63 +1,62 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_2",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'MiniBread'",
-    "ObjectPath": "/MiniBread/MiniBread.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "MiniBread",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/MiniBread/MiniBread",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "39.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.MiniBread"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.MiniBread ) )"
-          },
-          "bMigratedFromOldData": true
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'MiniBread:FortGameFeatureAction_AddToPlaylists_2'",
+        "ObjectPath": "/MiniBread/MiniBread.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortPlaylistAthena",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlaylistAthena",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Playlists"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.MiniBread"
+      },
+      {
+        "PrimaryAssetType": "FortExposedAssetList",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "UEFNExposedAssets"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Playlist.MiniBread ) )"
-    }
+      }
+    ]
   }
 }

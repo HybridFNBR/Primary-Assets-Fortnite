@@ -1,102 +1,223 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Triggerfish",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Triggerfish'",
+    "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "A8E7663C-454C5450-8EED619D-5E6B167E",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Triggerfish:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.1"
-        }
-      },
-      {
-        "Key": "EB1889F9-47644B96-1498399B-A6CB2E1D",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Triggerfish:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.9"
-        }
-      },
-      {
-        "Key": "D73DB2AB-4C66365B-7F938DA8-7AAADCFD",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Triggerfish:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.4"
-        }
-      },
-      {
-        "Key": "C914C1B3-4B248919-7607A2BE-DE7E9C08",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Triggerfish:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.2"
-        }
-      },
-      {
-        "Key": "C2A5E342-44259787-0A452DB1-8358F8A0",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Triggerfish:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Trigger"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B0404A5E4B1B96E10916049F7BB18643",
+            "SourceString": "Things are quiet. TOO quiet.",
+            "LocalizedString": "Things are quiet. TOO quiet."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Triggerfish:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "A8E7663C-454C5450-8EED619D-5E6B167E"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C624A821492FD763868B05B46E9C325A",
+            "SourceString": "These Bugs've got me going commando mode. Don't blow my cover.",
+            "LocalizedString": "These Bugs've got me going commando mode. Don't blow my cover."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Triggerfish:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "02740E8D454F1B64C3901CBE0231F26D",
+            "SourceString": "What's floppin,' landfish?",
+            "LocalizedString": "What's floppin,' landfish?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Triggerfish:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9E81190648A2B05CD12581B6CE9D08DE",
+            "SourceString": "I don't like these Bugs. They're like crabs, but somehow angrier.",
+            "LocalizedString": "I don't like these Bugs. They're like crabs, but somehow angrier."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Triggerfish:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "2DA4CB5D47A1DED3971BC68B2350CC02",
+        "SourceString": "I don't like these Bugs. They're like crabs, but somehow angrier.",
+        "LocalizedString": "I don't like these Bugs. They're like crabs, but somehow angrier."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season37.NPCRescues.Combat",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "A8E7663C-454C5450-8EED619D-5E6B167E",
-      "EB1889F9-47644B96-1498399B-A6CB2E1D",
-      "D73DB2AB-4C66365B-7F938DA8-7AAADCFD",
+    },
+    "OutputConnections": [
+      "C2A5E342-44259787-0A452DB1-8358F8A0",
       "C914C1B3-4B248919-7607A2BE-DE7E9C08",
-      "C2A5E342-44259787-0A452DB1-8358F8A0"
+      "D73DB2AB-4C66365B-7F938DA8-7AAADCFD"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "EB1889F9-47644B96-1498399B-A6CB2E1D",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Triggerfish:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Triggerfish/Triggerfish/NPCLibrary_Conversation_Triggerfish.1"
+    }
   }
 }

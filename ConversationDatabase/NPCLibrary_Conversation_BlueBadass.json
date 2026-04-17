@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_BlueBadass",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/BlueBadass/NPCLibrary_Conversation_BlueBadass",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_BlueBadass'",
+    "ObjectPath": "/NPCLibrary/NPCs/BlueBadass/NPCLibrary_Conversation_BlueBadass.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "0D76FCB9-45E7D47E-F02E5DA9-09551EFF",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BlueBadass:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/BlueBadass/NPCLibrary_Conversation_BlueBadass.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A9CF4B6848BB9DB0D305208AE79E3BE2",
+            "SourceString": "Resupply inbound.",
+            "LocalizedString": "Resupply inbound."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_BlueBadass:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BlueBadass/NPCLibrary_Conversation_BlueBadass.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "5D917DC2-4E65C557-9A13089A-09ABB89A",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_BlueBadass:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/BlueBadass/NPCLibrary_Conversation_BlueBadass.5"
-        }
-      },
-      {
-        "Key": "FF3D03BC-4968E579-65CCB499-80AB606A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BlueBadass:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/BlueBadass/NPCLibrary_Conversation_BlueBadass.2"
-        }
-      },
-      {
-        "Key": "3EA62460-42AE0D05-FDDD1AA9-6DF3FB7E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BlueBadass:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/BlueBadass/NPCLibrary_Conversation_BlueBadass.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "244E99A2495EB02A421ED59B6E7A7641",
+        "SourceString": "Here to stock up?",
+        "LocalizedString": "Here to stock up?"
       }
+    },
+    "OutputConnections": [
+      "3EA62460-42AE0D05-FDDD1AA9-6DF3FB7E",
+      "FF3D03BC-4968E579-65CCB499-80AB606A"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.BlueBadass"
-        },
-        "DestinationList": [
-          "0D76FCB9-45E7D47E-F02E5DA9-09551EFF"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "0D76FCB9-45E7D47E-F02E5DA9-09551EFF",
-      "5D917DC2-4E65C557-9A13089A-09ABB89A",
-      "FF3D03BC-4968E579-65CCB499-80AB606A",
-      "3EA62460-42AE0D05-FDDD1AA9-6DF3FB7E"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "5D917DC2-4E65C557-9A13089A-09ABB89A",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BlueBadass:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/BlueBadass/NPCLibrary_Conversation_BlueBadass.1"
+    }
   }
 }

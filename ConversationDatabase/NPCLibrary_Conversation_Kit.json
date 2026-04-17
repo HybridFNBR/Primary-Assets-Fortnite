@@ -1,93 +1,423 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Kit",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Kit'",
+    "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "83129F7F-426F0C54-9B3D3189-1600DC76",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Kit:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8B73EEF34CB722A4D920F0A49C0ADA4B",
+            "SourceString": "Today I did parkour in my mech suit and it. Was. AWESOME.",
+            "LocalizedString": "Today I did parkour in my mech suit and it. Was. AWESOME."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Kit:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "09660771465CB313109712A39D83321B",
+            "SourceString": "Did you talk to her? Using 'I feel' statements??",
+            "LocalizedString": "Did you talk to her? Using 'I feel' statements??"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Kit:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9559AC7F40F2BA99618A4691B83B22EE",
+            "SourceString": "Next I'm gonna make an even bigger suit with four arms and six legs and eight heads...",
+            "LocalizedString": "Next I'm gonna make an even bigger suit with four arms and six legs and eight heads..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Kit:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A8E40C2B4308E1467B575CBB58332B4E",
+            "SourceString": "Wow! Did you BUILD those hands, or... No? Aw.",
+            "LocalizedString": "Wow! Did you BUILD those hands, or... No? Aw."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Kit:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7B3C410C43B384BF35488EAFDAF7B3C4",
+            "SourceString": "Oh man, that suit is SO COOL. I wonder if I could build one...",
+            "LocalizedString": "Oh man, that suit is SO COOL. I wonder if I could build one..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Kit:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6A7203404B5A2F15C7B981BF4139C99F",
+            "SourceString": "You're so cool! Dad won't let me set ANYTHING on fire.",
+            "LocalizedString": "You're so cool! Dad won't let me set ANYTHING on fire."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Kit:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BF3646754130C2FBD6BA5A8E0A2BCEA6",
+            "SourceString": "I bet I'll be on TV someday too.",
+            "LocalizedString": "I bet I'll be on TV someday too."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Kit:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3601938A47EB5E046ED807B5838BA142",
+            "SourceString": "(Kit hisses.)",
+            "LocalizedString": "(Kit hisses.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Kit:Speech_C_4.FortControllerRequirement_HasCID_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "56E0B37647219CCB17258AB0653509AA",
+            "SourceString": "I know you're not a real spider.",
+            "LocalizedString": "I know you're not a real spider."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Kit:Speech_C_4.FortControllerRequirement_HasCID_7'",
+                "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "B0383303-46474B02-4BB92CB7-87570DF4",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Kit:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.13"
-        }
-      },
-      {
-        "Key": "9C608526-4CFEA60F-7172E296-9165AE66",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Kit:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.2"
-        }
-      },
-      {
-        "Key": "6A3EAABB-448ABBA5-6D4AF0A5-B48DA550",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Kit:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "A2F08D4E438AC9ABDFFB7BB4479BE22D",
+        "SourceString": "I could build you a mech suit, too. You could be so TALL!",
+        "LocalizedString": "I could build you a mech suit, too. You could be so TALL!"
       }
+    },
+    "OutputConnections": [
+      "6A3EAABB-448ABBA5-6D4AF0A5-B48DA550",
+      "9C608526-4CFEA60F-7172E296-9165AE66"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Kit"
-        },
-        "DestinationList": [
-          "83129F7F-426F0C54-9B3D3189-1600DC76"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "83129F7F-426F0C54-9B3D3189-1600DC76",
-      "B0383303-46474B02-4BB92CB7-87570DF4",
-      "9C608526-4CFEA60F-7172E296-9165AE66",
-      "6A3EAABB-448ABBA5-6D4AF0A5-B48DA550"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "B0383303-46474B02-4BB92CB7-87570DF4",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Kit:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Kit/NPCLibrary_Conversation_Kit.1"
+    }
   }
 }

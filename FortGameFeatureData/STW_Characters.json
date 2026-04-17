@@ -1,15 +1,66 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'STW_Characters'",
-    "ObjectPath": "/STW_Characters/STW_Characters.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "STW_Characters",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/STW_Characters/STW_Characters",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "SaveTheWorldRoot"
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToSubGame'STW_Characters:FortGameFeatureAction_AddToSubGame_0'",
+        "ObjectPath": "/STW_Characters/STW_Characters.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'STW_Characters:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/STW_Characters/STW_Characters.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortFeedbackBank",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortFeedbackBank",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": true,
+        "Directories": [
+          {
+            "Path": "Feedback"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "CustomColorSwatch",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.CustomColorSwatch",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": true,
+        "Directories": [
+          {
+            "Path": "CharacterColorSwatches"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
     ]
   }
 }

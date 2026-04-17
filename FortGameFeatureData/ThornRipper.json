@@ -1,71 +1,67 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'ThornRipper'",
-    "ObjectPath": "/ThornRipper/ThornRipper.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "ThornRipper",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/ThornRipper/ThornRipper",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "38.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Playlist.Test, Athena.Playlist.Default ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/ThornRipper/Levels/ThornRipper_LevelOverlay.ThornRipper_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Test"
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/ThornRipper/UI/RE_ThornRipper.RE_ThornRipper",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/ThornRipper/HUD/ThornRipperHUDWidgetRegistry.ThornRipperHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/ThornRipper/Gameplay/Items/ThornRipper_DeathCauseData.ThornRipper_DeathCauseData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S4",
+        "DisplayName": "Give Thorn Ripper (Mother of Thorns)",
+        "ConsoleCommands": [
+          "cheat givespecificitem /Script/FortniteGame.FortWeaponMeleeItemDefinition'/ThornRipper/Gameplay/WID_QoT_ThornRipper.WID_QoT_ThornRipper' 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ThornRipper:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/ThornRipper/ThornRipper.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist.Default"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Playlist.Test, Athena.Playlist.Default ) )"
-    }
+      }
+    ]
   }
 }

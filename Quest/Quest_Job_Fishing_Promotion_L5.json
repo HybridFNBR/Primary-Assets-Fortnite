@@ -1,26 +1,294 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Job_Fishing_Promotion_L5'",
-    "ObjectPath": "/SproutJobs_Base/Quests/Fisher/Quest_Job_Fishing_Promotion_L5.3"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Job_Fishing_Promotion_L5",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/SproutJobs_Base/Quests/Fisher/Quest_Job_Fishing_Promotion_L5",
   "Properties": {
-    "InformationSettings": {
-      "bShouldDisplayOverallQuestInformation": true
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "QuestType": "EFortQuestType::TransientQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Job_Fishing_Promotion_L5_obj1",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.Sprout.CaughtFish"
+            },
+            "Subjects": [
+              {
+                "Key": "CaughtFish",
+                "Value": {
+                  "TagQuery": {
+                    "TokenStreamVersion": 0,
+                    "TagDictionary": [
+                      {
+                        "TagName": "Sprout.Item.Handheld.Fish"
+                      },
+                      {
+                        "TagName": "Sprout.Rarity.Legendary"
+                      },
+                      {
+                        "TagName": "Sprout.Rarity.Epic"
+                      },
+                      {
+                        "TagName": "Sprout.Rarity.Rare"
+                      }
+                    ],
+                    "QueryTokenStream": [
+                      0,
+                      1,
+                      5,
+                      2,
+                      1,
+                      1,
+                      0,
+                      1,
+                      3,
+                      1,
+                      2,
+                      3
+                    ],
+                    "UserDescription": "",
+                    "AutoDescription": " ALL(  ANY( Sprout.Item.Handheld.Fish ),  ANY( Sprout.Rarity.Legendary, Sprout.Rarity.Epic, Sprout.Rarity.Rare ) )"
+                  }
+                }
+              }
+            ],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "FA824BE341E63851437C7D9E7A525C43",
+          "SourceString": "Catch a Rare (or better) Fish",
+          "LocalizedString": "Catch a Rare (or better) Fish"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 1,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "BackendName": "Quest_Job_Fishing_Promotion_L5_obj2",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "ConversingNPC": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "AISpawnerData.Type.Sprout.Minifig.LGFisherman"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( AISpawnerData.Type.Sprout.Minifig.LGFisherman )"
+              }
+            },
+            "ServiceProviderIDTag": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "57ADBF6749E3D444C3C211A369145414",
+          "SourceString": "The Kraken will be pleased! Talk to Bob",
+          "LocalizedString": "The Kraken will be pleased! Talk to Bob"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 2,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Product.Sprout"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Product.Juno, Product.Sprout )"
     },
-    "VisibilitySettings": {
-      "bIsVisibleToPlayers": false,
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false,
-      "bCanShowTimer": false
-    },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false,
-      "bHideQuestProgressNotification": true,
-      "bHideQuestRewardNotification": true
-    }
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Job_Fishing_Promotion_L5:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Fisher/Quest_Job_Fishing_Promotion_L5.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_GameplayAbilities'Quest_Job_Fishing_Promotion_L5:FortQuestDefinitionComponent_GameplayAbilities_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Fisher/Quest_Job_Fishing_Promotion_L5.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_StagedObjectives'Quest_Job_Fishing_Promotion_L5:FortQuestDefinitionComponent_StagedObjectives_1'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Fisher/Quest_Job_Fishing_Promotion_L5.2"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Job_Fishing_Promotion_L5_obj1"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          },
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Job_Fishing_Promotion_L5_obj2"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ]
   }
 }

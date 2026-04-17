@@ -1,26 +1,178 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_NPC_06'",
-    "ObjectPath": "/SproutJobs_Base/Quests/Citizen/Quest_NPC_06.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_NPC_06",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/SproutJobs_Base/Quests/Citizen/Quest_NPC_06",
   "Properties": {
-    "InformationSettings": {
-      "bShowMaxStageInDescription": false
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "QuestType": "EFortQuestType::TransientQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_NPC_BringFood_obj2",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.Sprout.GiveItem"
+            },
+            "Subjects": [
+              {
+                "Key": "Item",
+                "Value": {
+                  "TagQuery": {
+                    "TokenStreamVersion": 0,
+                    "TagDictionary": [
+                      {
+                        "TagName": "Sprout.Item.HandHeld.Food"
+                      }
+                    ],
+                    "QueryTokenStream": [
+                      0,
+                      1,
+                      1,
+                      1,
+                      0
+                    ],
+                    "UserDescription": "",
+                    "AutoDescription": " ANY( Sprout.Item.HandHeld.Food )"
+                  }
+                }
+              }
+            ],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "DD67957A43CCCE06FD7AE8AA200B9EB8",
+          "SourceString": "Give food to someone",
+          "LocalizedString": "Give food to someone"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Product.Sprout"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Product.Juno, Product.Sprout )"
     },
-    "VisibilitySettings": {
-      "bIsVisibleToPlayers": false,
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false,
-      "bCanShowTimer": false
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_NPC_06:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Citizen/Quest_NPC_06.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_NPC_06:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Citizen/Quest_NPC_06.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_NPC_BringFood_obj2"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "0C87AFE2464375BFC6869497C103A924",
+      "SourceString": "Give food to someone",
+      "LocalizedString": "Give food to someone"
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false,
-      "bHideQuestProgressNotification": true,
-      "bHideQuestRewardNotification": true
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "156ACB9148613E8020A2528687B405DA",
+      "SourceString": "Feeding time!",
+      "LocalizedString": "Feeding time!"
     }
   }
 }

@@ -1,26 +1,250 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Job_ItemDelivery_FurnitureShop'",
-    "ObjectPath": "/SproutJobs_Base/Quests/ItemDelivery/Quest_Job_ItemDelivery_FurnitureShop.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Job_ItemDelivery_FurnitureShop",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/SproutJobs_Base/Quests/ItemDelivery/Quest_Job_ItemDelivery_FurnitureShop",
   "Properties": {
-    "InformationSettings": {
-      "bShowMaxStageInDescription": false
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "QuestType": "EFortQuestType::TransientQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Job_ItemDelivery_Furniture_obj1",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "NPC": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "AISpawnerData.Type.Sprout.Minifig.CupidB"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( AISpawnerData.Type.Sprout.Minifig.CupidB )"
+              }
+            },
+            "ConversationChoice": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Sprout.Event.JobQuest.Choice.DeliverItem"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Sprout.Event.JobQuest.Choice.DeliverItem )"
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          },
+          {
+            "Verb": {
+              "TagName": "CustomVerb.Sprout.GiveItem"
+            },
+            "Subjects": [
+              {
+                "Key": "Item",
+                "Value": {
+                  "TagQuery": {
+                    "TokenStreamVersion": 0,
+                    "TagDictionary": [],
+                    "QueryTokenStream": [],
+                    "UserDescription": "",
+                    "AutoDescription": ""
+                  }
+                }
+              },
+              {
+                "Key": "ItemRecipient",
+                "Value": {
+                  "TagQuery": {
+                    "TokenStreamVersion": 0,
+                    "TagDictionary": [
+                      {
+                        "TagName": "AISpawnerData.Type.Sprout.Minifig.CupidB"
+                      }
+                    ],
+                    "QueryTokenStream": [
+                      0,
+                      1,
+                      1,
+                      1,
+                      0
+                    ],
+                    "UserDescription": "",
+                    "AutoDescription": " ANY( AISpawnerData.Type.Sprout.Minifig.CupidB )"
+                  }
+                }
+              }
+            ],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "787EBB8D48AF855B4FF6F4BCBA5154A9",
+          "SourceString": "Deliver something to Lady Stoneheart",
+          "LocalizedString": "Deliver something to Lady Stoneheart"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Product.Sprout"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Product.Juno, Product.Sprout )"
     },
-    "VisibilitySettings": {
-      "bIsVisibleToPlayers": false,
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false,
-      "bCanShowTimer": false
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Job_ItemDelivery_FurnitureShop:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/ItemDelivery/Quest_Job_ItemDelivery_FurnitureShop.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Job_ItemDelivery_FurnitureShop:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/ItemDelivery/Quest_Job_ItemDelivery_FurnitureShop.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Job_ItemDelivery_Furniture_obj1"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "AE81FEEE4262AAFA6F85CAA16A465A96",
+      "SourceString": "Deliver something to Lady Stoneheart",
+      "LocalizedString": "Deliver something to Lady Stoneheart"
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false,
-      "bHideQuestProgressNotification": true,
-      "bHideQuestRewardNotification": true
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "439CA73B4C7C59703AB0899CFBA2A525",
+      "SourceString": "Heart of stone, endless appetite.",
+      "LocalizedString": "Heart of stone, endless appetite."
     }
   }
 }

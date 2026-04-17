@@ -1,147 +1,543 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_UndergroundRebel",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel",
+  "Type": "Speech_C",
+  "Name": "Speech_C_1",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_UndergroundRebel'",
+    "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "5F382EF7-483773AF-A38C828B-E75090DB",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_UndergroundRebel:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.1"
-        }
-      },
-      {
-        "Key": "68C4A0A9-4462D992-76874399-01F0ECD5",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.21"
-        }
-      },
-      {
-        "Key": "49AF4F25-4CB9CFB1-62A2E5BA-894C12A6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UndergroundRebel:ConversationLinkNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.9"
-        }
-      },
-      {
-        "Key": "9AAD8F85-4832F51E-24021A90-460932EC",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UndergroundRebel:ConversationLinkNode_6'",
-          "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.8"
-        }
-      },
-      {
-        "Key": "EA14F406-4E86A1E1-D01AAF9A-0C14FCFA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UndergroundRebel:ConversationLinkNode_5'",
-          "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.7"
-        }
-      },
-      {
-        "Key": "5E153C9A-46DF4C62-49C20EBC-77B7303C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UndergroundRebel:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.6"
-        }
-      },
-      {
-        "Key": "5E56FD9B-4A653191-7A4271A9-9B3D4788",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UndergroundRebel:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.3"
-        }
-      },
-      {
-        "Key": "71486307-4B40FCB3-B4E59B8C-33473320",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UndergroundRebel:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.5"
-        }
-      },
-      {
-        "Key": "DFDF78ED-47F3E0A0-E09D3B8B-89E6F488",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UndergroundRebel:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.4"
-        }
-      },
-      {
-        "Key": "151D5717-484C86D4-660EEEB7-BDCDFAB6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UndergroundRebel:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.2"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.UndergroundRebel"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "557A1A77433C4F9D2D208AA281E82559",
+            "SourceString": "Name's Jones. You seem familiar. ",
+            "LocalizedString": "Name's Jones. You seem familiar. "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.20"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "5F382EF7-483773AF-A38C828B-E75090DB"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CF5C9416434C2EE5B959DBA068319A10",
+            "SourceString": "Sometimes I hate being right. That Dark Voyager is bad news.",
+            "LocalizedString": "Sometimes I hate being right. That Dark Voyager is bad news."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "016CB1A94E872AC4449DE486A3E93C67",
+            "SourceString": "We need to tread carefully. This Dark Voyager is dangerous.",
+            "LocalizedString": "We need to tread carefully. This Dark Voyager is dangerous."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C78A077F4313BA6FEA86D3BEB966717E",
+            "SourceString": "I can smell it on you. The emptiness of dead realities.",
+            "LocalizedString": "I can smell it on you. The emptiness of dead realities."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.14"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "75E0071B4DBEF2B234A2F7B7A16B1B4B",
+            "SourceString": "Buddy... Stay outta trouble. I can't lose you again.",
+            "LocalizedString": "Buddy... Stay outta trouble. I can't lose you again."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.15"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "65940EB04CA9901F40FBBA9833C438E8",
+            "SourceString": "Careful. Curiosity ate the cat.",
+            "LocalizedString": "Careful. Curiosity ate the cat."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.17"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A19915024E357F2AB5A9EB809E2A2C92",
+            "SourceString": "I could really use your trademark scowl right about now...",
+            "LocalizedString": "I could really use your trademark scowl right about now..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.16"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "049A3B40489BE91CC034C49797D36330",
+            "SourceString": "I got your messages. Whatever you need, I'm there.",
+            "LocalizedString": "I got your messages. Whatever you need, I'm there."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_HasCID_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.19"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CCBF86404B92466885BBFB8DD6135240",
+            "SourceString": "The Visitor I knew was a good man. I hope you're his equal, new guy.",
+            "LocalizedString": "The Visitor I knew was a good man. I hope you're his equal, new guy."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.18"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AA8CB9D444E15AA68D6BAE89DB89CB38",
+            "SourceString": "To think, this place used to feel so relaxing.",
+            "LocalizedString": "To think, this place used to feel so relaxing."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "90034C29460363190A447BA36AE939D0",
+            "SourceString": "Looks like I'll get a chance to face my unfinished business, huh?",
+            "LocalizedString": "Looks like I'll get a chance to face my unfinished business, huh?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_UndergroundRebel:Speech_C_1.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "560EBF814C7F60D5294A1983F5539092",
+        "SourceString": "Name's Jones. You seem familiar. ",
+        "LocalizedString": "Name's Jones. You seem familiar. "
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season39.Weekly.W10.Q01",
-      "Conversation.Entry.Season39.Weekly.W09.Q01.UndergroundRebel",
-      "Conversation.Entry.Season39.Weekly.W05.Q01.UndergroundRebel",
-      "Conversation.Entry.Season39.WF.PerfectGift",
-      "Conversation.Entry.Season39.UndergroundRebel.BRquest.01",
-      "Conversation.Entry.NPCLibrary.Quests",
-      "Conversation.Entry.UndergroundRebel.Dialogue",
-      "Conversation.Entry.RandomServices"
-    ],
-    "InternalNodeIds": [
-      "5F382EF7-483773AF-A38C828B-E75090DB",
-      "68C4A0A9-4462D992-76874399-01F0ECD5",
-      "49AF4F25-4CB9CFB1-62A2E5BA-894C12A6",
-      "9AAD8F85-4832F51E-24021A90-460932EC",
-      "EA14F406-4E86A1E1-D01AAF9A-0C14FCFA",
-      "5E153C9A-46DF4C62-49C20EBC-77B7303C",
-      "5E56FD9B-4A653191-7A4271A9-9B3D4788",
-      "71486307-4B40FCB3-B4E59B8C-33473320",
+    },
+    "OutputConnections": [
+      "151D5717-484C86D4-660EEEB7-BDCDFAB6",
       "DFDF78ED-47F3E0A0-E09D3B8B-89E6F488",
-      "151D5717-484C86D4-660EEEB7-BDCDFAB6"
+      "71486307-4B40FCB3-B4E59B8C-33473320",
+      "5E56FD9B-4A653191-7A4271A9-9B3D4788",
+      "5E153C9A-46DF4C62-49C20EBC-77B7303C",
+      "EA14F406-4E86A1E1-D01AAF9A-0C14FCFA",
+      "9AAD8F85-4832F51E-24021A90-460932EC",
+      "49AF4F25-4CB9CFB1-62A2E5BA-894C12A6"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "68C4A0A9-4462D992-76874399-01F0ECD5",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_UndergroundRebel:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/UndergroundRebel/NPCLibrary_Conversation_UndergroundRebel.1"
+    }
   }
 }

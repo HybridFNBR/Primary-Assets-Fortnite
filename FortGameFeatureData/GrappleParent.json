@@ -1,16 +1,41 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'GrappleParent'",
-    "ObjectPath": "/GrappleParent/GrappleParent.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "GrappleParent",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/GrappleParent/GrappleParent",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "BRRoot",
-      "CreativeRoot"
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'GrappleParent:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/GrappleParent/GrappleParent.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortExposedAssetList",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "UEFNExposedAssets"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
     ]
   }
 }

@@ -1,20 +1,178 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Juno_NPCVillage_Neptune_CollectCompassResource'",
-    "ObjectPath": "/JunoPOI_NPCVillage_Neptune/Quests/Quest_Juno_NPCVillage_Neptune_CollectCompassResource.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Juno_NPCVillage_Neptune_CollectCompassResource",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/JunoPOI_NPCVillage_Neptune/Quests/Quest_Juno_NPCVillage_Neptune_CollectCompassResource",
   "Properties": {
-    "VisibilitySettings": {
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "ExpirationDuration": -1,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Juno_NPCVillage_Neptune_CollectCompassResource_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Source": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Item": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Juno.CraftingResource.Metal.Durasteel"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Juno.CraftingResource.Metal.Durasteel )"
+              }
+            },
+            "bIncrementByItemCount": true,
+            "AcceptedGatherType": "EInventoryGatherType::OldNotPreviouslyGathered",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 5,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 20,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.Juno )"
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false,
-      "bHideQuestProgressNotification": true
-    }
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Juno_NPCVillage_Neptune_CollectCompassResource:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JunoPOI_NPCVillage_Neptune/Quests/Quest_Juno_NPCVillage_Neptune_CollectCompassResource.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_InitialProgress'Quest_Juno_NPCVillage_Neptune_CollectCompassResource:FortQuestDefinitionComponent_InitialProgress_0'",
+        "ObjectPath": "/JunoPOI_NPCVillage_Neptune/Quests/Quest_Juno_NPCVillage_Neptune_CollectCompassResource.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Juno_NPCVillage_Neptune_CollectCompassResource_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "DFECB6A5462EAAD52928D0A715B8EBF4",
+      "SourceString": "Collect 5 Durasteel",
+      "LocalizedString": "Collect 5 Durasteel"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "8421127E4E8E23AAAF71CB8A504D4DE8",
+      "SourceString": "Take the Bus to visit a Rebel or Imperial Camp to collect 5 Durasteel.",
+      "LocalizedString": "Take the Bus to visit a Rebel or Imperial Camp to collect 5 Durasteel."
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.AwesomeSystem.Quest.StepComplete"
+        ]
+      }
+    ]
   }
 }

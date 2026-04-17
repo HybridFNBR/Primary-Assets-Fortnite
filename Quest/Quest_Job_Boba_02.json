@@ -1,26 +1,199 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Job_Boba_02'",
-    "ObjectPath": "/SproutJobs_Base/Quests/Boba/Quest_Job_Boba_02.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Job_Boba_02",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/SproutJobs_Base/Quests/Boba/Quest_Job_Boba_02",
   "Properties": {
-    "InformationSettings": {
-      "bShowMaxStageInDescription": false
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "QuestType": "EFortQuestType::TransientQuest",
+    "bAthenaMustCompleteInSingleMatch": true,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Job_Boba_02_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.Sprout.GiveItem"
+            },
+            "Subjects": [
+              {
+                "Key": "Item",
+                "Value": {
+                  "TagQuery": {
+                    "TokenStreamVersion": 0,
+                    "TagDictionary": [
+                      {
+                        "TagName": "Sprout.Item.HandHeld.Food.IceCream"
+                      },
+                      {
+                        "TagName": "Sprout.Item.HandHeld.Drink.Coffee"
+                      },
+                      {
+                        "TagName": "Sprout.Item.HandHeld.Drink.BobaTea"
+                      },
+                      {
+                        "TagName": "Sprout.Item.HandHeld.Drink.MilkTea"
+                      }
+                    ],
+                    "QueryTokenStream": [
+                      0,
+                      1,
+                      1,
+                      4,
+                      0,
+                      1,
+                      2,
+                      3
+                    ],
+                    "UserDescription": "",
+                    "AutoDescription": " ANY( Sprout.Item.HandHeld.Food.IceCream, Sprout.Item.HandHeld.Drink.Coffee, Sprout.Item.HandHeld.Drink.BobaTea, Sprout.Item.HandHeld.Drink.MilkTea )"
+                  }
+                }
+              }
+            ],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          },
+          null
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "5FFD22114524C0292AF4C7B371D3FB08",
+          "SourceString": "Serve Bobom Milk Tea food or place it on a counter",
+          "LocalizedString": "Serve Bobom Milk Tea food or place it on a counter"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Product.Sprout"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Product.Juno, Product.Sprout )"
     },
-    "VisibilitySettings": {
-      "bIsVisibleToPlayers": false,
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false,
-      "bCanShowTimer": false
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Job_Boba_02:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Boba/Quest_Job_Boba_02.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Job_Boba_02:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Boba/Quest_Job_Boba_02.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Job_Boba_02_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "EE8B1A9848C2AC460B17FB9AAFE6756F",
+      "SourceString": "Serve Bobom Milk Tea food or place it on a counter",
+      "LocalizedString": "Serve Bobom Milk Tea food or place it on a counter"
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false,
-      "bHideQuestProgressNotification": true,
-      "bHideQuestRewardNotification": true
-    }
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "0E67B8DB4B870E5F3C42AD96757E77FA",
+      "SourceString": "We have other stuff beside tea you know...",
+      "LocalizedString": "We have other stuff beside tea you know..."
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Sprout.Job.Retail.FastFood.BobaStore"
+        ]
+      }
+    ]
   }
 }

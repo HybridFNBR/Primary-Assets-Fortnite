@@ -1,23 +1,204 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_JumpsuitQuests_Female_05'",
-    "ObjectPath": "/JumpsuitQuests/Items/QuestItems/Quest_JumpsuitQuests_Female_05.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_JumpsuitQuests_Female_05",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/JumpsuitQuests/Items/QuestItems/Quest_JumpsuitQuests_Female_05",
   "Properties": {
-    "InformationSettings": {
-      "CompletionText": {
-        "Namespace": "",
-        "Key": "31216DA949F895C1E9BF38A78B69DFC7",
-        "SourceString": "Quest Complete!",
-        "LocalizedString": "Quest Complete!"
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "ObjectiveCompletionCount": 1,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
       }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S26_JumpsuitQuests_Female_05_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "PurchaseTags": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.GoldBars.Spent"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Athena.GoldBars.Spent )"
+              }
+            },
+            "bIncrementByAmountSpent": true,
+            "bUseSpentAmount": false,
+            "SpentAmountToCountForProgress": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AllowedMessages": "ECurrencySpentFilterEventBehavior::OnlyGeneral",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "98AE1B264CF8BDBA608C478ED84552A1",
+          "SourceString": "Spend 1250 bars",
+          "LocalizedString": "Spend 1250 bars"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1250,
+        "Stage": 1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        },
+        {
+          "TagName": "Product.BlastBerry"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Product.BR, Product.BlastBerry )"
     },
-    "VisibilitySettings": {
-      "bCanShowTimer": false
-    }
+    "SortPriority": 5,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_JumpsuitQuests_Female_05:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/JumpsuitQuests/Items/QuestItems/Quest_JumpsuitQuests_Female_05.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_JumpsuitQuests_Female_05:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JumpsuitQuests/Items/QuestItems/Quest_JumpsuitQuests_Female_05.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S26_JumpsuitQuests_Female_05_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "B888B7C94293A5E0B381058F66D937D3",
+      "SourceString": "Spend bars",
+      "LocalizedString": "Spend bars"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "4E6B7FB648DB20A8589788A589CD6EB6",
+      "SourceString": "Spend 1250 bars",
+      "LocalizedString": "Spend 1250 bars"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "20CA48F341F27FA7183235BE082CE5CB",
+      "SourceString": "Getaway Rule #5: Have a backup getaway driver, too.",
+      "LocalizedString": "Getaway Rule #5: Have a backup getaway driver, too."
+    },
+    "DataList": [
+      {
+        "QuantityDisplayName": {
+          "Namespace": "",
+          "Key": "424D72F6435617DC18F0E4B5F0754ABD",
+          "SourceString": "Test QS2 Verbs",
+          "LocalizedString": "Test QS2 Verbs"
+        }
+      },
+      {
+        "Tags": [
+          "ChallengeCategory.JumpsuitQuests.Female",
+          "QuestCategory.All.ChallengeStyle.Jumpsuit.Female"
+        ]
+      }
+    ]
   }
 }

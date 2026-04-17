@@ -1,102 +1,313 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_PeelyBone",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_PeelyBone'",
+    "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "FAA5843F-42C06FC0-956BBDB7-57E6A2DD",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_PeelyBone:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.1"
-        }
-      },
-      {
-        "Key": "DCEEECCE-4A8ECCAF-415FEF80-79610C77",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_PeelyBone:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.11"
-        }
-      },
-      {
-        "Key": "3D784363-41A8C19F-0EEBABBC-58D2DBC0",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_PeelyBone:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.4"
-        }
-      },
-      {
-        "Key": "78C19A49-430B0952-0FDB0695-EA2FF566",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_PeelyBone:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.2"
-        }
-      },
-      {
-        "Key": "7EE6A157-48228622-00408C86-4DC62966",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_PeelyBone:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.PeelyBone"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CA7B8FEF4E55D0A467F48CA78ECD24F3",
+            "SourceString": "(Peely Bone waves his bones at you!)",
+            "LocalizedString": "(Peely Bone waves his bones at you!)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_PeelyBone:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "FAA5843F-42C06FC0-956BBDB7-57E6A2DD"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0C4A644F422BE70F3F63CA925DBD014D",
+            "SourceString": "(Peely Bone nods hello. The motion makes his brain slop against his head-ribs.)",
+            "LocalizedString": "(Peely Bone nods hello. The motion makes his brain slop against his head-ribs.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_PeelyBone:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2D1ED9E343F5FED6B39DAD9DF17BF494",
+            "SourceString": "(Urgh... looks like Peely Bone's just finished lunch...)",
+            "LocalizedString": "(Urgh... looks like Peely Bone's just finished lunch...)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_PeelyBone:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BE5CBC354ADF6B0424E25F8050427420",
+            "SourceString": "(Peely Bone grins. Half Peely, half bone, all smiles!",
+            "LocalizedString": "(Peely Bone grins. Half Peely, half bone, all smiles!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_PeelyBone:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "63C6C44E41F376A211EBA1921CBADD2B",
+            "SourceString": "(Peely Bone nods serenely. He has found peace in his incompleteness.)",
+            "LocalizedString": "(Peely Bone nods serenely. He has found peace in his incompleteness.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_PeelyBone:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "583138B14217FB9771211DA8A7A0DFCC",
+            "SourceString": "(Peely Bone looks confused. Where are your organs?)",
+            "LocalizedString": "(Peely Bone looks confused. Where are your organs?)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_PeelyBone:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "5915F0C840215DA277D93D87C2B2A9B9",
+        "SourceString": "(Peely Bone nods hello. The motion makes his brain slops against his head-ribs.)",
+        "LocalizedString": "(Peely Bone nods hello. The motion makes his brain slops against his head-ribs.)"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.PeelyBone.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "FAA5843F-42C06FC0-956BBDB7-57E6A2DD",
-      "DCEEECCE-4A8ECCAF-415FEF80-79610C77",
-      "3D784363-41A8C19F-0EEBABBC-58D2DBC0",
+    },
+    "OutputConnections": [
+      "7EE6A157-48228622-00408C86-4DC62966",
       "78C19A49-430B0952-0FDB0695-EA2FF566",
-      "7EE6A157-48228622-00408C86-4DC62966"
+      "3D784363-41A8C19F-0EEBABBC-58D2DBC0"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "DCEEECCE-4A8ECCAF-415FEF80-79610C77",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_PeelyBone:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/PeelyBone/NPCLibrary_Conversation_PeelyBone.1"
+    }
   }
 }

@@ -1,67 +1,147 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'CreativePermanentQuests'",
-    "ObjectPath": "/CreativePermanentQuests/CreativePermanentQuests.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "CreativePermanentQuests",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/CreativePermanentQuests/CreativePermanentQuests",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "32.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Playlist.UGC"
-              },
-              {
-                "TagName": "Athena.Creative"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Playlist.UGC, Athena.Creative )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Playlist.UGC"
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_QuestProductGroup'CreativePermanentQuests:FortGameFeatureAction_QuestProductGroup_0'",
+        "ObjectPath": "/CreativePermanentQuests/CreativePermanentQuests.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CreativePermanentQuests:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/CreativePermanentQuests/CreativePermanentQuests.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "QuestCategoryData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.QuestCategoryData",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Creative"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items/QuestItems/Categories"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ANY( Playlist.UGC, Athena.Creative )"
-    }
+      },
+      {
+        "PrimaryAssetType": "Quest",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortQuestItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "RepeatableQuest",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaDailyQuestDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "Token",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortTokenType",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items/Tokens"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "ChallengeBundleSchedule",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortChallengeBundleScheduleDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "ChallengeBundle",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortChallengeBundleItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
   }
 }

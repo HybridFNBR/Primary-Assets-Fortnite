@@ -1,60 +1,27 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'FortNPCMusic'",
     "ObjectPath": "/FortNPCMusic/FortNPCMusic.2"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "25.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "Any Athena Playlist",
-            "AutoDescription": " ANY( Athena.Playlist )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "UserDescription": "Any Athena Playlist",
-      "AutoDescription": " ANY( Athena.Playlist )"
-    }
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGameState",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/FortNPCMusic/Audio/NPCMusicManagerComponent.NPCMusicManagerComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

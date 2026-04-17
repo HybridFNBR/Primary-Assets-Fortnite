@@ -1,36 +1,52 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "QuestUI",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Package": "/QuestUI/QuestUI",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'QuestUI'",
+    "ObjectPath": "/QuestUI/QuestUI.0"
+  },
   "Properties": {
-    "UIExtensions": [
+    "ComponentList": [
       {
-        "Slot": "EUIExtensionSlot::FullScreenMapTab",
-        "WidgetClass": {
-          "AssetPathName": "/QuestUI/QuestScreen/WBP_QuestScreen.WBP_QuestScreen_C",
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerControllerZone",
           "SubPathString": ""
         },
-        "RequiredCVar": "",
-        "bUseRequiredCVar": false
-      }
-    ],
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
-      {
-        "ObjectName": "FortUIGameFeatureAction_AddFrontendTab'QuestUI:FortUIGameFeatureAction_AddFrontendTab_0'",
-        "ObjectPath": "/QuestUI/QuestUI.1"
+        "ComponentClass": {
+          "AssetPathName": "/Script/FortniteGame.FortControllerComponent_ClientQuestOrganization",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
       },
       {
-        "ObjectName": "GameFeatureAction_AddComponents'QuestUI:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/QuestUI/QuestUI.3"
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerControllerFrontEnd",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/FortniteGame.FortControllerComponent_ClientQuestOrganization",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
       },
       {
-        "ObjectName": "FortUIGameFeatureAction_AddWidgetAlias'QuestUI:FortUIGameFeatureAction_AddWidgetAlias_0'",
-        "ObjectPath": "/QuestUI/QuestUI.2"
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerControllerGameplay_Custom",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/FortniteGame.FortControllerComponent_ClientQuestOrganization",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
       }
     ]
   }

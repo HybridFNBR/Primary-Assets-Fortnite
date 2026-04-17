@@ -1,111 +1,46 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'HeistBaseGuards'",
-    "ObjectPath": "/HeistBaseGuards/HeistBaseGuards.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "HeistBaseGuards",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/HeistBaseGuards/HeistBaseGuards",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "26.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Plugin.Playlist.BattleLab"
-              },
-              {
-                "TagName": "Athena.Playlist.CreativeRoyale"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Plugin.Playlist.BattleLab, Athena.Playlist.CreativeRoyale ) )"
-          },
-          "bMigratedFromOldData": true
-        },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "26.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "39.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Plugin.Playlist.Arena, Athena.Playlist.Default )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
+    "FactionMapping": {
+      "AssetPathName": "/HeistBaseGuards/HeistBaseGuards_FactionMapping.HeistBaseGuards_FactionMapping",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Plugin.Playlist.Arena"
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'HeistBaseGuards:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/HeistBaseGuards/HeistBaseGuards.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'HeistBaseGuards:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/HeistBaseGuards/HeistBaseGuards.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "AISpawnerData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.BattleLab"
-        },
-        {
-          "TagName": "Athena.Playlist.CreativeRoyale"
-        },
-        {
-          "TagName": "Athena.Playlist.Default"
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "AI"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        4,
-        0,
-        1,
-        2,
-        3
-      ],
-      "AutoDescription": " ANY(  ANY( Plugin.Playlist.Arena, Plugin.Playlist.BattleLab, Athena.Playlist.CreativeRoyale, Athena.Playlist.Default ) )"
-    }
+      }
+    ]
   }
 }

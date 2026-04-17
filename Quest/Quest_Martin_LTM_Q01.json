@@ -1,19 +1,234 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Martin_LTM_Q01'",
-    "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Martin_LTM_26/Quests/Quest_Martin_LTM_Q01.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Martin_LTM_Q01",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/Figment_S08_Quests/Items/QuestItems/Martin_LTM_26/Quests/Quest_Martin_LTM_Q01",
   "Properties": {
-    "VisibilitySettings": {
-      "bOverrideBundleVisibilityData": true,
-      "QuestVisiblityData": {
-        "bIsVisibleWhenClaimed": true,
-        "bIsVisibleWhenCompleted": true
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
       }
-    }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Martin_LTM_Q01_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "bIncrementByDistance": false,
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Homebase.Class"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Homebase.Class )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Item.Power.WiseOtter.Combo.Unibeam"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Item.Power.WiseOtter.Combo.Unibeam )"
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Playlist.Ashton"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Playlist.Ashton )"
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "F81FC3D74B2BB2B2F292CB95303F4010",
+          "SourceString": "Hit players with the Iron Man Combat Kit Unibeam",
+          "LocalizedString": "Hit players with the Iron Man Combat Kit Unibeam"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "49DDB6DB4EEC33D8AFF436AC17443C27",
+          "SourceString": "Hit players with the Iron Man Combat Kit Unibeam",
+          "LocalizedString": "Hit players with the Iron Man Combat Kit Unibeam"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 3,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 50,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Figment.Martin"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.Figment.Martin )"
+    },
+    "SortPriority": 1,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Martin_LTM_Q01:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Martin_LTM_26/Quests/Quest_Martin_LTM_Q01.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Martin_LTM_Q01:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Martin_LTM_26/Quests/Quest_Martin_LTM_Q01.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Martin_LTM_Q01_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "00BB1E79498A461BB5F0B6818BE91250",
+      "SourceString": "Hit players with the Iron Man Combat Kit Unibeam",
+      "LocalizedString": "Hit players with the Iron Man Combat Kit Unibeam"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "A6D8B04949173FC1BC3346AEA719EF9D",
+      "SourceString": "Hit players with the Iron Man Combat Kit Unibeam",
+      "LocalizedString": "Hit players with the Iron Man Combat Kit Unibeam"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.Figment.MartinLTM.Quests"
+        ]
+      },
+      {
+        "Rarity": "EFortRarity::Common"
+      }
+    ]
   }
 }

@@ -1,138 +1,452 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_RoyalAngst",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_RoyalAngst'",
+    "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "17FE59A7-4BBE9861-5A9DD08B-789C1FF2",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RoyalAngst:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.1"
-        }
-      },
-      {
-        "Key": "B299DACF-4D137D8D-4327469B-644CEB58",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_RoyalAngst:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.18"
-        }
-      },
-      {
-        "Key": "3EA9D5A5-4450A65B-019CB9B9-F7B78C3A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoyalAngst:ConversationLinkNode_6'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.8"
-        }
-      },
-      {
-        "Key": "CEEA6EE0-4FCD5867-C3B5D0B9-E44F7D09",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoyalAngst:ConversationLinkNode_5'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.7"
-        }
-      },
-      {
-        "Key": "6BCBA25F-4300EDCA-C4C855BF-559335D6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoyalAngst:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.6"
-        }
-      },
-      {
-        "Key": "7BBE2F24-4DCC2B9D-D622619C-57CEE41E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoyalAngst:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.5"
-        }
-      },
-      {
-        "Key": "FBDEE406-4A0036AD-C4F10297-A7C46675",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoyalAngst:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.4"
-        }
-      },
-      {
-        "Key": "B5C4EA13-48F35CE7-F979B6B9-E93C281D",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoyalAngst:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.2"
-        }
-      },
-      {
-        "Key": "AA79BDC8-4C57B26D-DCD28698-FDA5A47A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoyalAngst:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.RoyalAngst"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "70B264984CE5F7CADB873DB1CB6942D7",
+            "SourceString": "Hey.",
+            "LocalizedString": "Hey."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_RoyalAngst:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.17"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "17FE59A7-4BBE9861-5A9DD08B-789C1FF2"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2C98E7C8400C97F5434E138CBE0A40C7",
+            "SourceString": "Don't waste my time. What do you need?",
+            "LocalizedString": "Don't waste my time. What do you need?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RoyalAngst:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "40B5E4FF4BCCB67EADE2D58A82BD3B41",
+            "SourceString": "The world's got a rhythm. Pay attention to it, and you can get anywhere.",
+            "LocalizedString": "The world's got a rhythm. Pay attention to it, and you can get anywhere."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RoyalAngst:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5B3D0D65476A2E9DAA73A1A62DEA87F3",
+            "SourceString": "I can crack any safe on this Island. Just watch me.",
+            "LocalizedString": "I can crack any safe on this Island. Just watch me."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RoyalAngst:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E00FB1A14FD064F58D0384A467CF3753",
+            "SourceString": "Cassidy Quinn. Always a sight for sore eyes.",
+            "LocalizedString": "Cassidy Quinn. Always a sight for sore eyes."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoyalAngst:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0CAD24A04140B7DBCACF6988DD0EE284",
+            "SourceString": "I like your beats. Your bars are a little... briny.",
+            "LocalizedString": "I like your beats. Your bars are a little... briny."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoyalAngst:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3D212D054D31FDB801051092428C5952",
+            "SourceString": "Your security's a joke, Kane. And not even a funny one.",
+            "LocalizedString": "Your security's a joke, Kane. And not even a funny one."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoyalAngst:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.14"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7742CDDA4A53ED1EC3934D8DE82FFB93",
+            "SourceString": "Your girl Quinn came 'round. You two still runnin' together?",
+            "LocalizedString": "Your girl Quinn came 'round. You two still runnin' together?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoyalAngst:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.15"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6727C67D4D6E66747358E2B6D43D8A58",
+            "SourceString": "Skillet! How're the booms?",
+            "LocalizedString": "Skillet! How're the booms?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoyalAngst:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.16"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "C94D7C5E4468CA4B062EA6A47B366C1D",
+        "SourceString": "Don't waste my time. What do you need?",
+        "LocalizedString": "Don't waste my time. What do you need?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Expertise.Vault",
-      "Conversation.Entry.Season34.Expertise.Vault.Finish",
-      "Conversation.Entry.Season34.Expertise.Vault.Introduction",
-      "Conversation.Entry.RoyalAngst.Dialogue",
-      "Conversation.Entry.Season34.Story.P01.Q05",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "17FE59A7-4BBE9861-5A9DD08B-789C1FF2",
-      "B299DACF-4D137D8D-4327469B-644CEB58",
-      "3EA9D5A5-4450A65B-019CB9B9-F7B78C3A",
-      "CEEA6EE0-4FCD5867-C3B5D0B9-E44F7D09",
-      "6BCBA25F-4300EDCA-C4C855BF-559335D6",
-      "7BBE2F24-4DCC2B9D-D622619C-57CEE41E",
-      "FBDEE406-4A0036AD-C4F10297-A7C46675",
+    },
+    "OutputConnections": [
+      "AA79BDC8-4C57B26D-DCD28698-FDA5A47A",
       "B5C4EA13-48F35CE7-F979B6B9-E93C281D",
-      "AA79BDC8-4C57B26D-DCD28698-FDA5A47A"
+      "FBDEE406-4A0036AD-C4F10297-A7C46675",
+      "7BBE2F24-4DCC2B9D-D622619C-57CEE41E",
+      "6BCBA25F-4300EDCA-C4C855BF-559335D6",
+      "CEEA6EE0-4FCD5867-C3B5D0B9-E44F7D09",
+      "3EA9D5A5-4450A65B-019CB9B9-F7B78C3A"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "B299DACF-4D137D8D-4327469B-644CEB58",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RoyalAngst:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/RoyalAngst/NPCLibrary_Conversation_RoyalAngst.1"
+    }
   }
 }

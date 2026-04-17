@@ -1,93 +1,402 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_TheUnderwriter",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_TheUnderwriter'",
+    "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "CA4EDAE3-4C084674-B440F58C-181CB929",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TheUnderwriter:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "32FA14C44ACAFF93359AED818ADF31EA",
+            "SourceString": "All Sweat Insurance has your back! As long as you're insured.",
+            "LocalizedString": "All Sweat Insurance has your back! As long as you're insured."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_TheUnderwriter:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9424C3FF4BE9E9E0CAA5F2AC238666B4",
+            "SourceString": "I can't find any policies under the name 'Jones.'",
+            "LocalizedString": "I can't find any policies under the name 'Jones.'"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheUnderwriter:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "84E556714532607B1EC86AB6B2AF1ED3",
+            "SourceString": "I believe your sister left quite a debt on your family's account when she... took her vacation.",
+            "LocalizedString": "I believe your sister left quite a debt on your family's account when she... took her vacation."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheUnderwriter:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CAFFF4424F3CA91891D4C88E3D84EEB1",
+            "SourceString": "If you think you can survive this wasteland without insurance? Good luck.",
+            "LocalizedString": "If you think you can survive this wasteland without insurance? Good luck."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheUnderwriter:Speech_C_4.FortControllerRequirement_HasCID_7'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "02B6316640C006ED2D0AC4896964207C",
+            "SourceString": "Thanks for recommending me some enforcers. Good help is so hard to find.",
+            "LocalizedString": "Thanks for recommending me some enforcers. Good help is so hard to find."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheUnderwriter:Speech_C_4.FortControllerRequirement_HasCID_8'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4EC8B12D43C40980D7D0F9A946ADAF10",
+            "SourceString": "Our policies do not cover damage incurred at the Nitrodrome",
+            "LocalizedString": "Our policies do not cover damage incurred at the Nitrodrome"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TheUnderwriter:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9362A51E4141596F758008931718A7BF",
+            "SourceString": "It would be a shame if something happened to you out there.",
+            "LocalizedString": "It would be a shame if something happened to you out there."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TheUnderwriter:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7B7D7FD1410C615F544FCCAA068419DE",
+            "SourceString": "Let's hope your policy is current, friend. I'd hate to see your plans get 'derailed' like other clients.",
+            "LocalizedString": "Let's hope your policy is current, friend. I'd hate to see your plans get 'derailed' like other clients."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TheUnderwriter:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "7785D3F0-44F5598C-B3670E8C-D7F4DC7E",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_TheUnderwriter:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.12"
-        }
-      },
-      {
-        "Key": "4D514E9A-408629AF-F34357BA-0882D348",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TheUnderwriter:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.2"
-        }
-      },
-      {
-        "Key": "D6474F20-4A479BD6-0916D0BE-1EFDF7EA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TheUnderwriter:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "63E5CC5B4CB7478781BEF8BA24EE4745",
+        "SourceString": "Our policies do not cover damage incurred at the Nitrodrome",
+        "LocalizedString": "Our policies do not cover damage incurred at the Nitrodrome"
       }
+    },
+    "OutputConnections": [
+      "D6474F20-4A479BD6-0916D0BE-1EFDF7EA",
+      "4D514E9A-408629AF-F34357BA-0882D348"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.TheUnderwriter"
-        },
-        "DestinationList": [
-          "CA4EDAE3-4C084674-B440F58C-181CB929"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "CA4EDAE3-4C084674-B440F58C-181CB929",
-      "7785D3F0-44F5598C-B3670E8C-D7F4DC7E",
-      "4D514E9A-408629AF-F34357BA-0882D348",
-      "D6474F20-4A479BD6-0916D0BE-1EFDF7EA"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "7785D3F0-44F5598C-B3670E8C-D7F4DC7E",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TheUnderwriter:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/TheUnderwriter/NPCLibrary_Conversation_TheUnderwriter.1"
+    }
   }
 }

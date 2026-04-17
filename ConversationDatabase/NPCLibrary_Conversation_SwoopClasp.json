@@ -1,111 +1,173 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_SwoopClasp",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_SwoopClasp'",
+    "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "A55C88F3-4C5D9692-575E5D9E-CBB51B6A",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SwoopClasp:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.1"
-        }
-      },
-      {
-        "Key": "CC7C995F-417ACB0C-66B91E90-44F07349",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_SwoopClasp:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.9"
-        }
-      },
-      {
-        "Key": "354E6201-4CA3BD60-6E667EAA-2E9B449C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SwoopClasp:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.5"
-        }
-      },
-      {
-        "Key": "5084CA8E-4C24EF51-137B9FA7-68B14AAC",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SwoopClasp:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.4"
-        }
-      },
-      {
-        "Key": "AD236861-4CAC6413-0A199C84-B1368942",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SwoopClasp:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.2"
-        }
-      },
-      {
-        "Key": "0DC08DE7-42BD57D9-205158A8-FD9DFBF6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SwoopClasp:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.SwoopClasp"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9321EFEC42CE896DA4FDF29D976FBF1E",
+            "SourceString": "General Onyx Winter, at your service. As long as you don't make me mad.",
+            "LocalizedString": "General Onyx Winter, at your service. As long as you don't make me mad."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_SwoopClasp:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "A55C88F3-4C5D9692-575E5D9E-CBB51B6A"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DB79AF7246D47F5AA36FFCAD342DE0FE",
+            "SourceString": "This Island is ours.",
+            "LocalizedString": "This Island is ours."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SwoopClasp:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AD3736AD4A57BD716AD6B3B9B62C77F8",
+            "SourceString": "Your field reports arrived covered in Bug detritus again. Heh.",
+            "LocalizedString": "Your field reports arrived covered in Bug detritus again. Heh."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SwoopClasp:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "BE6245B3487F6EDCE639888226E91598",
+        "SourceString": "This Island is ours.",
+        "LocalizedString": "This Island is ours."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.SwoopClasp.Dialogue",
-      "Conversation.Entry.Season37.Story.P01.Q02",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "A55C88F3-4C5D9692-575E5D9E-CBB51B6A",
-      "CC7C995F-417ACB0C-66B91E90-44F07349",
-      "354E6201-4CA3BD60-6E667EAA-2E9B449C",
-      "5084CA8E-4C24EF51-137B9FA7-68B14AAC",
+    },
+    "OutputConnections": [
+      "0DC08DE7-42BD57D9-205158A8-FD9DFBF6",
       "AD236861-4CAC6413-0A199C84-B1368942",
-      "0DC08DE7-42BD57D9-205158A8-FD9DFBF6"
+      "5084CA8E-4C24EF51-137B9FA7-68B14AAC",
+      "354E6201-4CA3BD60-6E667EAA-2E9B449C"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "CC7C995F-417ACB0C-66B91E90-44F07349",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SwoopClasp:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/SwoopClasp/NPCLibrary_Conversation_SwoopClasp.1"
+    }
   }
 }

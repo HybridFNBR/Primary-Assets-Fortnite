@@ -1,20 +1,167 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Juno_NPCVillage_Neptune_InvestigateStorms'",
-    "ObjectPath": "/JunoPOI_NPCVillage_Neptune/Quests/Quest_Juno_NPCVillage_Neptune_InvestigateStorms.1"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Juno_NPCVillage_Neptune_InvestigateStorms",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/JunoPOI_NPCVillage_Neptune/Quests/Quest_Juno_NPCVillage_Neptune_InvestigateStorms",
   "Properties": {
-    "VisibilitySettings": {
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "ExpirationDuration": -1,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Juno_NPCVillage_Neptune_InvestigateStorms_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Location": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Juno.Cave.CaveType.Neptune.T1"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Juno.Cave.CaveType.Neptune.T1 )"
+              }
+            },
+            "bIncrementProgressByEveryMatchingLocationTag": false,
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Juno.Cave.CaveType.Neptune.T1"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Juno.Cave.CaveType.Neptune.T1 )"
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 20,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.Juno )"
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false,
-      "bHideQuestProgressNotification": true
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Juno_NPCVillage_Neptune_InvestigateStorms:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JunoPOI_NPCVillage_Neptune/Quests/Quest_Juno_NPCVillage_Neptune_InvestigateStorms.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Juno_NPCVillage_Neptune_InvestigateStorms_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "DA5DC6124A0C59D582F9E78F256CEA87",
+      "SourceString": "Enter a Storm Cave",
+      "LocalizedString": "Enter a Storm Cave"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "5D245CB5412C0F00A7FF92A1B1EFBDC2",
+      "SourceString": "Find and enter a Storm Cave deep within a Storm. Rumor has it that greater foes and treasure lurk within. ",
+      "LocalizedString": "Find and enter a Storm Cave deep within a Storm. Rumor has it that greater foes and treasure lurk within. "
     }
   }
 }

@@ -1,16 +1,63 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'CubeSurfing'",
-    "ObjectPath": "/CubeSurfing/CubeSurfing.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "CubeSurfing",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/CubeSurfing/CubeSurfing",
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/CubeSurfing/Gameplay/MovementMode/MME_ExtLogic_CubeSurfing.MME_ExtLogic_CubeSurfing_C",
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/CubeSurfing/UI/CubeSurfingReticleExtensionData.CubeSurfingReticleExtensionData",
       "SubPathString": ""
-    }
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/CubeSurfing/HUD/CubeSurfingHUDWidgetRegistry.CubeSurfingHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "CH6S3",
+        "DisplayName": "Give Cube Surfing",
+        "ConsoleCommands": [
+          "cheat giveweapon WID_CherrySmoke_CubeSurfing 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddMovementModeExtension'CubeSurfing:FortGameFeatureAction_AddMovementModeExtension_0'",
+        "ObjectPath": "/CubeSurfing/CubeSurfing.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CubeSurfing:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/CubeSurfing/CubeSurfing.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

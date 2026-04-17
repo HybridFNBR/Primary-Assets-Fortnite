@@ -1,17 +1,82 @@
 {
-  "Type": "FortDifficultyOptionCategoryEncounter_Distance",
-  "Name": "FortDifficultyOptionCategoryEncounter_Distance_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortDifficultyOptionCategoryEncounter_Distance'",
-  "Outer": {
-    "ObjectName": "FortMissionInfo'AmbientLightning'",
-    "ObjectPath": "/SaveTheWorld/Missions/Tertiary/AmbientLighting/AmbientLightning.3"
-  },
+  "Type": "FortMissionInfo",
+  "Name": "AmbientLightning",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Package": "/SaveTheWorld/Missions/Tertiary/AmbientLighting/AmbientLightning",
   "Properties": {
-    "Options": [
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Tertiary/AmbientLighting/Mission_AmbientLightning.Mission_AmbientLightning_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "ObjectiveBlocks": [
       {
-        "ObjectName": "BlueprintGeneratedClass'AA_EDO_Distance_1000_C'",
-        "ObjectPath": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/Spawning/AA_EDO_Distance_1000.1"
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/Game/Missions/GenericObjectives/GenericObjective_Blank.GenericObjective_Blank_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "bStartPlayingOnLoad": true,
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'Rewards_Low'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/Rewards_Low.0"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/EDO_Set_AmbientStorm.EDO_Set_AmbientStorm",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.NonScaling.1Player"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawnRing.EDO_Set_ScriptedSpawnRing",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'AmbientLightning:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Tertiary/AmbientLighting/AmbientLightning.1"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnLimitPawns'AmbientLightning:FortDifficultyOptionCategoryEncounter_SpawnLimitPawns_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Tertiary/AmbientLighting/AmbientLightning.2"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_Distance'AmbientLightning:FortDifficultyOptionCategoryEncounter_Distance_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Tertiary/AmbientLighting/AmbientLightning.0"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
       }
     ]
   }

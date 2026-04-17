@@ -1,16 +1,82 @@
 {
-  "Type": "CustomCharacterBodyPartData",
-  "Name": "CustomCharacterBodyPartData_1",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterBodyPartData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_Athena_Body_M_ChoiceCrave'",
-    "ObjectPath": "/BRCosmetics/Athena/Heroes/Meshes/Bodies/CP_Athena_Body_M_ChoiceCrave.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_Athena_Body_M_ChoiceCrave",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/BRCosmetics/Athena/Heroes/Meshes/Bodies/CP_Athena_Body_M_ChoiceCrave",
   "Properties": {
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Characters/Player/Male/Medium/Bodies/M_MED_ChoiceCrave/Meshes/M_MED_ChoiceCrave_AnimBP.M_MED_ChoiceCrave_AnimBP_C",
+    "BodyTypesPermitted": "EFortCustomBodyType::Medium",
+    "CharacterPartType": "EFortCustomPartType::Body",
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Body"
+      ],
+      "PartTypeIndex": 1
+    },
+    "PartModifierBlueprint": {
+      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/Part_Modifiers/B_Athena_PartModifier_ChoiceCrave.B_Athena_PartModifier_ChoiceCrave_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterBodyPartData'CP_Athena_Body_M_ChoiceCrave:CustomCharacterBodyPartData_1'",
+      "ObjectPath": "/BRCosmetics/Athena/Heroes/Meshes/Bodies/CP_Athena_Body_M_ChoiceCrave.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/BRCosmetics/Characters/Player/Male/Medium/Bodies/M_MED_ChoiceCrave/Meshes/M_MED_ChoiceCrave.M_MED_ChoiceCrave",
+      "SubPathString": ""
+    },
+    "MasterSkeletalMeshes": [
+      {
+        "AssetPathName": "/Game/Characters/Player/Male/Medium/Base/SK_M_MALE_Base_Skeleton.SK_M_MALE_Base_Skeleton",
+        "SubPathString": ""
+      }
+    ],
+    "CosmeticPartDataList": [
+      {
+        "MorphAdjustmentDataAsset": {
+          "AssetPathName": "/BRCosmetics/Characters/Player/Male/Medium/Bodies/M_MED_ChoiceCrave/Morphs/M_MED_ChoiceCrave_Adj.M_MED_ChoiceCrave_Adj",
+          "SubPathString": ""
+        },
+        "MorphMaterialParameters": {
+          "AssetPathName": "/BRCosmetics/Athena/Heroes/Meshes/Morphs/Character_ChoiceCrave_MatDA.Character_ChoiceCrave_MatDA",
+          "SubPathString": ""
+        }
+      },
+      {
+        "EffectParameters": [
+          {
+            "Tag": {
+              "TagName": "CosmeticPart.VFX.Elimination"
+            },
+            "Effect": {
+              "AssetPathName": "/BRCosmetics/Characters/Player/Male/Medium/Bodies/M_MED_ChoiceCrave/FX/NS_Character_ChoiceCrave_Reactivity.NS_Character_ChoiceCrave_Reactivity",
+              "SubPathString": ""
+            },
+            "LocationOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "RotationOffset": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "bIsPersistent": false,
+            "bAutoActivate": true,
+            "AttachmentParams": {
+              "SocketName": "root",
+              "AttachmentTarget": "ECharacterPartAttachmentTargetType::SkeletalMeshForAssociatedPlayerPawnPartType",
+              "AttachmentRules": {
+                "LocationRule": "EAttachmentRule::SnapToTarget",
+                "RotationRule": "EAttachmentRule::SnapToTarget",
+                "ScaleRule": "EAttachmentRule::SnapToTarget",
+                "bWeldSimulatedBodies": false
+              }
+            }
+          }
+        ]
+      }
+    ]
   }
 }

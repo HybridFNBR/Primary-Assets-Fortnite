@@ -1,103 +1,29 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'SpireSharedAssets'",
     "ObjectPath": "/SpireSharedAssets/SpireSharedAssets.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "36.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "37.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
-          },
-          "bMigratedFromOldData": false
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Fort.DataRegistry",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "36.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "39.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.SpecialEvent.SkyMango"
-              },
-              {
-                "TagName": "Athena.Playlist.Mash"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.SpecialEvent.SkyMango, Athena.Playlist.Mash )"
-          },
-          "bMigratedFromOldData": false
+        "CurveTableToAdd": {
+          "AssetPathName": "/SpireSharedAssets/DataTables/SpireSharedAssets_GameData.SpireSharedAssets_GameData",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
-        },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
-    }
+      }
+    ],
+    "bPreloadInEditor": true
   }
 }

@@ -1,93 +1,312 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_TheAutumnQueen",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_TheAutumnQueen'",
+    "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "AD169B51-459A5DEA-841505A9-531131D8",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TheAutumnQueen:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "288F46764AEC57138646DFA52AC01DA0",
+            "SourceString": "Hail and well met, traveller, and welcome to the Autumnwood.",
+            "LocalizedString": "Hail and well met, traveller, and welcome to the Autumnwood."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_TheAutumnQueen:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9BB89BE845D9C6850C2EA7AB5E4D5C61",
+            "SourceString": "My golden knight. Protect the travellers of The Autumnwood, as is your oath.",
+            "LocalizedString": "My golden knight. Protect the travellers of The Autumnwood, as is your oath."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheAutumnQueen:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A67255A64F3A535BEAD95CB11F25B301",
+            "SourceString": "You must move quickly, thief. Time is running short.",
+            "LocalizedString": "You must move quickly, thief. Time is running short."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheAutumnQueen:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "99859EAC4981C20C890639887C5F73BF",
+            "SourceString": "I can see your heart. Your intentions are not pure, but they are noble.",
+            "LocalizedString": "I can see your heart. Your intentions are not pure, but they are noble."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheAutumnQueen:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D6216F634FF313C3D4DD62A5FFA1DD6B",
+            "SourceString": "The future is in your hands. Don't drop it.",
+            "LocalizedString": "The future is in your hands. Don't drop it."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheAutumnQueen:Speech_C_4.FortControllerRequirement_HasCID_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B848584E4C38254A1F63C7AA2B23A45A",
+            "SourceString": "Friend, I think you are very lost or very early.",
+            "LocalizedString": "Friend, I think you are very lost or very early."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheAutumnQueen:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "CF44304E-476AD366-9F3CF0B9-46CBE5B4",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_TheAutumnQueen:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.10"
-        }
-      },
-      {
-        "Key": "7FC71AA4-4292C918-38985FBE-517BA096",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TheAutumnQueen:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.2"
-        }
-      },
-      {
-        "Key": "0A2DBB36-47BA162F-FFF2E3A7-CE5F2F18",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TheAutumnQueen:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "A86510734BD3958E6AC97AAF83A6C61D",
+        "SourceString": "The life force holding this Island together is fading. I do not know what our future holds.",
+        "LocalizedString": "The life force holding this Island together is fading. I do not know what our future holds."
       }
+    },
+    "OutputConnections": [
+      "0A2DBB36-47BA162F-FFF2E3A7-CE5F2F18",
+      "7FC71AA4-4292C918-38985FBE-517BA096"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.AutumnQueen"
-        },
-        "DestinationList": [
-          "AD169B51-459A5DEA-841505A9-531131D8"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "AD169B51-459A5DEA-841505A9-531131D8",
-      "CF44304E-476AD366-9F3CF0B9-46CBE5B4",
-      "7FC71AA4-4292C918-38985FBE-517BA096",
-      "0A2DBB36-47BA162F-FFF2E3A7-CE5F2F18"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "CF44304E-476AD366-9F3CF0B9-46CBE5B4",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TheAutumnQueen:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/TheAutumnQueen/NPCLibrary_Conversation_TheAutumnQueen.1"
+    }
   }
 }

@@ -1,248 +1,39 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "quest_feralcorgi_ranked_repeatable_q01",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/FeralCorgiQuests/Items/QuestItems/Ranked/quest_feralcorgi_ranked_repeatable_q01",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'quest_feralcorgi_ranked_repeatable_q01'",
+    "ObjectPath": "/FeralCorgiQuests/Items/QuestItems/Ranked/quest_feralcorgi_ranked_repeatable_q01.0"
+  },
   "Properties": {
-    "Group": "FeralCorgiRankedQuest",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "quest_feralcorgi_ranked_repeatable_q01_obj1",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Never",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "ResourceDataTableRewards": [
           {
-            "bUseDistance": false,
-            "bAllowSelfInflictedDamage": false,
-            "bRequireCriticalHit": false,
-            "bIncrementByDamageAmount": true,
-            "bUseDamageAmount": false,
-            "bIncrementByUncappedDamage": false,
-            "bUseUncappedDamage": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestXPReward_S33_FeralCorgi'",
+                "ObjectPath": "/FeralCorgiQuests/DataTables/QuestXPReward_S33_FeralCorgi.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+              "RowName": "ChallengeReward_Ranked"
             },
-            "DamageSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamagedActor": {
-              "bCanGainProgressForThisObjective": false,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Homebase.Class"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Homebase.Class )"
-              }
-            },
-            "DamageType": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamageAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "UncappedDamageAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
-            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "CultureInvariantString": null
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 2000,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Feral"
-        },
-        {
-          "TagName": "GameMode.Ranked"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ALL( Product.Feral, GameMode.Ranked )"
-    },
-    "Category": {
-      "DataTable": {
-        "ObjectName": "DataTable'QuestCategoryTable'",
-        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
-      },
-      "RowName": "BRDailyChallenges"
-    },
-    "SortPriority": 1,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_feralcorgi_ranked_repeatable_q01:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/FeralCorgiQuests/Items/QuestItems/Ranked/quest_feralcorgi_ranked_repeatable_q01.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_feralcorgi_ranked_repeatable_q01:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/FeralCorgiQuests/Items/QuestItems/Ranked/quest_feralcorgi_ranked_repeatable_q01.1"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_ProductCompatibilityInjector_GameModeRanked'quest_feralcorgi_ranked_repeatable_q01:FortQuestDefinitionComponent_ProductCompatibilityInjector_GameModeRanked_0'",
-        "ObjectPath": "/FeralCorgiQuests/Items/QuestItems/Ranked/quest_feralcorgi_ranked_repeatable_q01.2"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "quest_feralcorgi_ranked_repeatable_q01_obj1"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "DCF8667440B66A7FFA1AC69A6177A71B",
-      "SourceString": "Damage opponents",
-      "LocalizedString": "Damage opponents"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "72B2DC0C4650290A255E54AD7B733CAB",
-      "SourceString": "Damage opponents",
-      "LocalizedString": "Damage opponents"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.FeralCorgi.Habanero.Repeatable"
         ]
       },
-      {},
       {
-        "Rarity": "EFortRarity::Common"
+        "TokenRewards": [
+          {
+            "TokenDefinition": {
+              "AssetPathName": "/FeralCorgiQuests/Items/Tokens/Athena_FeralCorgi_Ranked_Token.Athena_FeralCorgi_Ranked_Token",
+              "SubPathString": ""
+            },
+            "TokenCount": 1,
+            "bHideFromUI": false
+          }
+        ]
       }
     ]
   }

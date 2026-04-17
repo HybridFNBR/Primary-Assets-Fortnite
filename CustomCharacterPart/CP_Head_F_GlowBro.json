@@ -1,34 +1,52 @@
 {
-  "Type": "CustomCharacterHeadData",
-  "Name": "CustomCharacterHeadData_5",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterHeadData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_Head_F_GlowBro'",
-    "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Female/Medium/Heads/CP_Head_F_GlowBro.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_Head_F_GlowBro",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/BRCosmetics/Characters/CharacterParts/Female/Medium/Heads/CP_Head_F_GlowBro",
   "Properties": {
-    "SkinColorSwatch": {
-      "AssetPathName": "/Game/Characters/CharacterColorSwatches/Skin/F_Med_ASN_Glow_Bro.F_Med_ASN_Glow_Bro",
+    "GenderPermitted": "EFortCustomGender::Female",
+    "BodyTypesPermitted": "EFortCustomBodyType::Medium",
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Head"
+      ],
+      "PartTypeIndex": 0
+    },
+    "PartModifierBlueprint": {
+      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/B_Athena_PartModifier_Generic.B_Athena_PartModifier_Generic_C",
       "SubPathString": ""
     },
-    "HairColorSwatch": {
-      "AssetPathName": "/Game/Characters/CharacterColorSwatches/Hair/HairColor_01.HairColor_01",
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterHeadData'CP_Head_F_GlowBro:CustomCharacterHeadData_5'",
+      "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Female/Medium/Heads/CP_Head_F_GlowBro.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/Game/Characters/Player/Female/Medium/Heads/F_MED_ASN_Starfish_Head_01/Meshes/F_MED_ASN_Starfish_Head_02.F_MED_ASN_Starfish_Head_02",
       "SubPathString": ""
     },
-    "CapMorphTargets": [
-      "Hair_cap"
+    "MaterialOverrides": [
+      {
+        "MaterialOverrideIndex": 1,
+        "OverrideMaterial": {
+          "AssetPathName": "/BRCosmetics/Characters/Player/Female/Medium/Heads/F_MED_ASN_Starfish_Head_01/Skin/F_MED_Glow_Bro/Materials/F_MED_Glow_Bro.F_MED_Glow_Bro",
+          "SubPathString": ""
+        }
+      },
+      {
+        "MaterialOverrideIndex": 0,
+        "OverrideMaterial": {
+          "AssetPathName": "/Game/Characters/Player/Female/Medium/Heads/F_MED_ASN_Starfish_Head_01/Materials/F_MED_ASN_Starfish_Head_01_HairNone.F_MED_ASN_Starfish_Head_01_HairNone",
+          "SubPathString": ""
+        }
+      }
     ],
-    "HelmetMorphTargets": [
-      "Hair_Helmet",
-      "Curls_Helmet"
-    ],
-    "HatMorphTargets": [
-      "Hair_Hat"
-    ],
-    "AnimClass": {
-      "AssetPathName": "/Game/Characters/Player/Female/Medium/Heads/F_MED_ASN_Starfish_Head_01/Meshes/F_MED_ASN_Starfish_Head_01_AnimBP_Child.F_MED_ASN_Starfish_Head_01_AnimBP_Child_C",
+    "MaterialOverrideFlags": 3,
+    "IdleEffectNiagara": {
+      "AssetPathName": "/BRCosmetics/Characters/Player/Female/Medium/Bodies/F_MED_Glow_Bro/FX/NS_Female_GloBro_Eye.NS_Female_GloBro_Eye",
       "SubPathString": ""
-    }
+    },
+    "IdleFXSocketName": "head",
+    "bAutoActivate": true
   }
 }

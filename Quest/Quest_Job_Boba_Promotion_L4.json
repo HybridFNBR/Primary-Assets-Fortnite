@@ -1,26 +1,364 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Job_Boba_Promotion_L4'",
-    "ObjectPath": "/SproutJobs_Base/Quests/Boba/Quest_Job_Boba_Promotion_L4.4"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Job_Boba_Promotion_L4",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/SproutJobs_Base/Quests/Boba/Quest_Job_Boba_Promotion_L4",
   "Properties": {
-    "InformationSettings": {
-      "bShouldDisplayOverallQuestInformation": true
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "QuestType": "EFortQuestType::TransientQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Job_Boba_Promotion_L4_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.Sprout.Cook"
+            },
+            "Subjects": [
+              {
+                "Key": "CookedFood",
+                "Value": {
+                  "TagQuery": {
+                    "TokenStreamVersion": 0,
+                    "TagDictionary": [
+                      {
+                        "TagName": "Sprout.Item.HandHeld.Drink.StrawberryMilk"
+                      },
+                      {
+                        "TagName": "Sprout.Item.HandHeld.Traits.Recipe.Perfect"
+                      }
+                    ],
+                    "QueryTokenStream": [
+                      0,
+                      1,
+                      5,
+                      2,
+                      1,
+                      1,
+                      0,
+                      1,
+                      1,
+                      1
+                    ],
+                    "UserDescription": "",
+                    "AutoDescription": " ALL(  ANY( Sprout.Item.HandHeld.Drink.StrawberryMilk ),  ANY( Sprout.Item.HandHeld.Traits.Recipe.Perfect ) )"
+                  }
+                }
+              }
+            ],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "2A8AD1D443B9BBFE8F3D58BAD901A9F1",
+          "SourceString": "Make a Perfect Strawberry Milk",
+          "LocalizedString": "Make a Perfect Strawberry Milk"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 1,
+          "DisplayMaxStage": 1
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "BackendName": "Quest_Job_Boba_Promotion_L4_obj1",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          null
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "E8A2A5024A3FDB0AB92696BE4941721A",
+          "SourceString": "Give Strawberry Milk to the  suspected Vampie under the bridge",
+          "LocalizedString": "Give Strawberry Milk to the  suspected Vampie under the bridge"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 2,
+          "DisplayMaxStage": 1
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "BackendName": "Quest_Job_Boba_Promotion_L4_obj2",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "ConversingNPC": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "AISpawnerData.Type.Sprout.Minifig.SharpFang"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( AISpawnerData.Type.Sprout.Minifig.SharpFang )"
+              }
+            },
+            "ServiceProviderIDTag": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "F737271A4B597E8AFE408991A7AA5B6D",
+          "SourceString": "Return to Helsie with the news",
+          "LocalizedString": "Return to Helsie with the news"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 3,
+          "DisplayMaxStage": 1
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Product.Sprout"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Product.Juno, Product.Sprout )"
     },
-    "VisibilitySettings": {
-      "bIsVisibleToPlayers": false,
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false,
-      "bCanShowTimer": false
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Job_Boba_Promotion_L4:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Boba/Quest_Job_Boba_Promotion_L4.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_StagedObjectives'Quest_Job_Boba_Promotion_L4:FortQuestDefinitionComponent_StagedObjectives_1'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Boba/Quest_Job_Boba_Promotion_L4.3"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_GameplayAbilities'Quest_Job_Boba_Promotion_L4:FortQuestDefinitionComponent_GameplayAbilities_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Boba/Quest_Job_Boba_Promotion_L4.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Job_Boba_Promotion_L4:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Boba/Quest_Job_Boba_Promotion_L4.2"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Job_Boba_Promotion_L4_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          },
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Job_Boba_Promotion_L4_obj1"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          },
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Job_Boba_Promotion_L4_obj2"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "3CB05C5441B17E8A51D0A88F3FA4645C",
+      "SourceString": "[ PH ] Make a perfect Strawberry Milk and deliver it to Meowskulls ",
+      "LocalizedString": "[ PH ] Make a perfect Strawberry Milk and deliver it to Meowskulls "
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false,
-      "bHideQuestProgressNotification": true,
-      "bHideQuestRewardNotification": true
-    }
+    "DataList": [
+      {
+        "Tags": [
+          "Sprout.Job.Retail.FastFood.BobaStore"
+        ]
+      }
+    ]
   }
 }

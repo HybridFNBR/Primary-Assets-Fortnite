@@ -1,93 +1,381 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_TheScientist",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_TheScientist'",
+    "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "0026EB6F-424FA2D6-1AC55C9C-F7B8CF39",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TheScientist:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4A9D8B8640B44E6B94C7D781BFBAD426",
+            "SourceString": "You lived! I'm... \"Surprised\" is the wrong word...",
+            "LocalizedString": "You lived! I'm... \"Surprised\" is the wrong word..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_TheScientist:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "EC0F7D62411B4819C5678F837E940F70",
+            "SourceString": "Our next threat won't be flying in on an airship.",
+            "LocalizedString": "Our next threat won't be flying in on an airship."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheScientist:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "74FDD23947ECA4AEB41DB08DBCCF293D",
+            "SourceString": "These calculations aren't looking good. ",
+            "LocalizedString": "These calculations aren't looking good. "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheScientist:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 10.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 10.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "853471EB4F1F346CCB56969D7BDCFBD8",
+            "SourceString": "I owe you one for bringing her back.",
+            "LocalizedString": "I owe you one for bringing her back."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheScientist:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9AF884654797868C631987A7297BD5D2",
+            "SourceString": "Aah! Don't sneak up on me like that! ",
+            "LocalizedString": "Aah! Don't sneak up on me like that! "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheScientist:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FBB6D1A046EEF903787E4FA0FCF1BF17",
+            "SourceString": "Please don't ask me to fix the monument again.",
+            "LocalizedString": "Please don't ask me to fix the monument again."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheScientist:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 10.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 10.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "78E9F00746448A7932659EB587A59090",
+            "SourceString": "So you're thinking of settling down? I hear Sleepy's nice.",
+            "LocalizedString": "So you're thinking of settling down? I hear Sleepy's nice."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheScientist:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FA925FFB44F3B09B291F04A6DFA6DBD3",
+            "SourceString": "Don't you have someone to find?",
+            "LocalizedString": "Don't you have someone to find?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheScientist:Speech_C_4.FortControllerRequirement_HasCID_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "327FB1C2-45D1EC23-D985F385-BB3449DD",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_TheScientist:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.12"
-        }
-      },
-      {
-        "Key": "ED0F07E8-495CEFD2-525A5F94-1851E72D",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TheScientist:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.2"
-        }
-      },
-      {
-        "Key": "08015A0C-406FF19E-DE6BFF95-A0F77546",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TheScientist:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "C452A1954A802E78B8CABFA246B68CE7",
+        "SourceString": "What's gone wrong now?",
+        "LocalizedString": "What's gone wrong now?"
       }
+    },
+    "OutputConnections": [
+      "08015A0C-406FF19E-DE6BFF95-A0F77546",
+      "ED0F07E8-495CEFD2-525A5F94-1851E72D"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.TheScientist"
-        },
-        "DestinationList": [
-          "0026EB6F-424FA2D6-1AC55C9C-F7B8CF39"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "0026EB6F-424FA2D6-1AC55C9C-F7B8CF39",
-      "327FB1C2-45D1EC23-D985F385-BB3449DD",
-      "ED0F07E8-495CEFD2-525A5F94-1851E72D",
-      "08015A0C-406FF19E-DE6BFF95-A0F77546"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "327FB1C2-45D1EC23-D985F385-BB3449DD",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TheScientist:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/TheScientist/TheScientist/NPCLibrary_Conversation_TheScientist.1"
+    }
   }
 }

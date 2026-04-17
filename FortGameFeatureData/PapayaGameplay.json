@@ -1,15 +1,53 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'PapayaGameplay'",
     "ObjectPath": "/PapayaGameplay/PapayaGameplay.1"
   },
   "Properties": {
-    "RootGFPsToAddTo": [
-      "BRRoot"
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerController",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/FortniteGame.FortControllerComponent_SocialInspector",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGameStateZone",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/PlayspaceSystem.PlayspaceGameStateComponent_PlayerSpawningManager",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerController",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/PlayspaceSystem.PlayspaceControllerComponent_PlayerSpawning",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      }
     ]
   }
 }

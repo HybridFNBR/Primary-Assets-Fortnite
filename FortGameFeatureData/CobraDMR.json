@@ -1,71 +1,56 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'CobraDMR'",
-    "ObjectPath": "/CobraDMR/CobraDMR.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "CobraDMR",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/CobraDMR/CobraDMR",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "22.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Creative, Plugin.Playlist.BlastBerry ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/CobraDMR/CobraDMR_LevelOverlay.CobraDMR_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S22",
+        "DisplayName": "Give Cobra DMR",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /CobraDMR/DMR/WID_DMR22_Athena_R 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CobraDMR:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/CobraDMR/CobraDMR.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'CobraDMR:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/CobraDMR/CobraDMR.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.BlastBerry"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "DMR"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Creative, Plugin.Playlist.BlastBerry ) )"
-    }
+      }
+    ]
   }
 }

@@ -1,16 +1,94 @@
 {
-  "Type": "FabricGameFeatureAction_OverrideFabricInteractionTool",
-  "Name": "FabricGameFeatureAction_OverrideFabricInteractionTool_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FabricGameFeatureAction_OverrideFabricInteractionTool'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'LimePatchworkTool'",
-    "ObjectPath": "/LimePatchworkTool/LimePatchworkTool.3"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "LimePatchworkTool",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/LimePatchworkTool/LimePatchworkTool",
   "Properties": {
-    "OverriddenPatchworkInteractionTool": {
-      "AssetPathName": "/LimePatchworkTool/AGID_LimePatchworkTool.AGID_LimePatchworkTool",
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/LimePatchworkTool/UI/LimePatchworkTool_ReticleExtensionData.LimePatchworkTool_ReticleExtensionData",
       "SubPathString": ""
-    }
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/Fabric/Gameplay/FabricInteractionTool/HUD/FabricInteractionToolHUDWidgetRegistry.FabricInteractionToolHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "PlaylistItemsToFullyLoad": [
+      {
+        "PlaylistTags": [
+          "Athena.Creative",
+          "Athena.Playground",
+          "Playlist.Lime"
+        ],
+        "ItemIdsToFullyLoad": [
+          {
+            "PrimaryAssetType": {
+              "Name": "Weapon"
+            },
+            "PrimaryAssetName": "WID_LimePatchworkTool"
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'LimePatchworkTool:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/LimePatchworkTool/LimePatchworkTool.2"
+      },
+      {
+        "ObjectName": "FabricGameFeatureAction_OverrideFabricInteractionTool'LimePatchworkTool:FabricGameFeatureAction_OverrideFabricInteractionTool_0'",
+        "ObjectPath": "/LimePatchworkTool/LimePatchworkTool.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'LimePatchworkTool:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/LimePatchworkTool/LimePatchworkTool.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "AthenaGadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/LimePatchworkTool/AGID_LimePatchworkTool.AGID_LimePatchworkTool",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/LimePatchworkTool/WID_LimePatchworkTool.WID_LimePatchworkTool",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

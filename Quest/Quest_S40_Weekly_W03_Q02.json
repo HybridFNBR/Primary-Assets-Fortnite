@@ -1,20 +1,172 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_S40_Weekly_W03_Q02'",
-    "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_03/Quest_S40_Weekly_W03_Q02.3"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_S40_Weekly_W03_Q02",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_03/Quest_S40_Weekly_W03_Q02",
   "Properties": {
-    "InformationSettings": {
-      "CompletionText": {
-        "Namespace": "",
-        "Key": "E58547C649D099C4FF6774AF602A37DE",
-        "SourceString": "I wish I could see what was coming. It'd help.",
-        "LocalizedString": "I wish I could see what was coming. It'd help."
+    "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "bAthenaUpdateObjectiveOncePerMatch": true,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
       }
-    }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S40_Weekly_W03_Q02_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.MaxAmmo"
+            },
+            "Subjects": [],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "07FCA676444308C4AABBF5805A300698",
+          "SourceString": "Reach max ammo of any type in different matches",
+          "LocalizedString": "Reach max ammo of any type in different matches"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 3,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.BR )"
+    },
+    "SortPriority": 2,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S40_Weekly_W03_Q02:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_03/Quest_S40_Weekly_W03_Q02.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S40_Weekly_W03_Q02:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_03/Quest_S40_Weekly_W03_Q02.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_GameplayAbilities'Quest_S40_Weekly_W03_Q02:FortQuestDefinitionComponent_GameplayAbilities_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_03/Quest_S40_Weekly_W03_Q02.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S40_Weekly_W03_Q02_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "630C84E94D71DC3E83CC6586D95F682C",
+      "SourceString": "Reach max ammo of any type in different matches",
+      "LocalizedString": "Reach max ammo of any type in different matches"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "9069E4594D10D3D7D5872E9868FC8872",
+      "SourceString": "Reach max ammo of any type in different matches",
+      "LocalizedString": "Reach max ammo of any type in different matches"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "9369703142D0CB389761CB9D76F6A06A",
+      "SourceString": "I have a feeling we're going to need a lot of ammo.",
+      "LocalizedString": "I have a feeling we're going to need a lot of ammo."
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.BR.S40.Weekly.03.Icon"
+        ]
+      }
+    ]
   }
 }

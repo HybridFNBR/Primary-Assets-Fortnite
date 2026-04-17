@@ -1,44 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddCategoryTableToConfig",
-  "Name": "FortGameFeatureAction_AddCategoryTableToConfig_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddCategoryTableToConfig'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'NPCSpecialist_Assault'",
     "ObjectPath": "/NPCSpecialist_Assault/NPCSpecialist_Assault.2"
   },
   "Properties": {
-    "ConfigToCategoryTableDatas": [
+    "SourcesToAdd": [
       {
-        "Key": "/Lager/Lager/Config/LagerConfigData_BR_Main.LagerConfigData_BR_Main",
-        "Value": {
-          "CategoryTableDatas": [
-            {
-              "Name": "NPCSpecialistAssault",
-              "CategoryTable": {
-                "AssetPathName": "/NPCSpecialist_Assault/Lager/LCT_NPCSpecialist_Assault.LCT_NPCSpecialist_Assault",
-                "SubPathString": ""
-              },
-              "IsEnabled": {
-                "Value": 1.0,
-                "Curve": {
-                  "CurveTable": null,
-                  "RowName": "None"
-                },
-                "RegistryType": {
-                  "Name": "None"
-                }
-              }
-            }
-          ]
+        "RegistryToAddTo": "ItemBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/NPCSpecialist_Assault/BTInjection/DT_NPCSpecialist_Assault_FortItemInjectedBehaviors.DT_NPCSpecialist_Assault_FortItemInjectedBehaviors",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
-    ],
-    "StartVersion": {
-      "VersionName": "40.00"
-    },
-    "EndVersion": {
-      "VersionName": "41.00"
-    }
+    ]
   }
 }

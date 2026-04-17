@@ -1,68 +1,53 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'FortInteriorAudio_BR'",
     "ObjectPath": "/FortInteriorAudio_BR/FortInteriorAudio_BR.2"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "24.30"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "Core BR Playlists",
-            "AutoDescription": " ANY( Athena.Playlist.Default, Plugin.Playlist.Arena )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortInteriorAudioManager",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "UserDescription": "Core BR Playlists",
-      "AutoDescription": " ANY( Athena.Playlist.Default, Plugin.Playlist.Arena )"
-    }
+        "ComponentClass": {
+          "AssetPathName": "/FortInteriorAudio_BR/InteriorAudioComponent_BuildingGrid.InteriorAudioComponent_BuildingGrid_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortInteriorAudioManager",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/FortInteriorAudio_BR/InteriorAudioComponent_Ambient.InteriorAudioComponent_Ambient_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortInteriorAudioManager",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/FortInteriorAudio_BR/InteriorAudioComponent_Roof.InteriorAudioComponent_Roof_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

@@ -1,145 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'VividRazorWeaponGameplay'",
     "ObjectPath": "/VividRazorWeaponGameplay/VividRazorWeaponGameplay.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "34.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.Playground"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Plugin.Playlist.ForbiddenFruit"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              6,
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playground, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Plugin.Playlist.ForbiddenFruit, Plugin.Playlist.BlastBerry ) )"
-          },
-          "bMigratedFromOldData": true
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Registry_WeaponModOverrideData",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/VividRazorWeaponGameplay/DataTables/VividRazor_WeaponModOverrideData.VividRazor_WeaponModOverrideData",
+          "SubPathString": ""
         },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "34.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "38.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Arena"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              3,
-              0,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Playlist.Arena, Plugin.Playlist.Arena, Athena.Playlist.Default ) )"
-          },
-          "bMigratedFromOldData": false
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Athena.Playground"
-        },
-        {
-          "TagName": "Athena.Playlist.Arena"
-        },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Athena.Playlist.Default"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        7,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playground, Athena.Playlist.Arena, Plugin.Playlist.Arena, Playlist.UGC.Core, Athena.Playlist.Default, Playlist.Experience.PlayOnly ) )"
-    }
+      }
+    ]
   }
 }

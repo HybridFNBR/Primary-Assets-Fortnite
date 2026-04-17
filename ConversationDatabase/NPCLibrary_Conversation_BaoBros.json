@@ -1,93 +1,381 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_BaoBros",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_BaoBros'",
+    "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "81DA3277-47E0F035-7C6B3AA6-6F5A1CFD",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BaoBros:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7A846DD24D44025210B9D0B137B54922",
+            "SourceString": "Taco Tuesday is cool and all but what about Dumpling Daturday?",
+            "LocalizedString": "Taco Tuesday is cool and all but what about Dumpling Daturday?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_BaoBros:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "70A9A78B4B050869050F9A90FC39E96B",
+            "SourceString": "Your shift starts in ten minutes. Don't get eliminated.",
+            "LocalizedString": "Your shift starts in ten minutes. Don't get eliminated."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BaoBros:Speech_C_4.FortControllerRequirement_HasCID_7'",
+                "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0EBBC8FD435C2815E40E64AFD453AC38",
+            "SourceString": "You looking for a summer job?",
+            "LocalizedString": "You looking for a summer job?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BaoBros:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8328848943F2206CF65721B9DD3F52D8",
+            "SourceString": "How do you like my bunker?",
+            "LocalizedString": "How do you like my bunker?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BaoBros:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CF3A2B3242ED01339CD8F8AEE020D108",
+            "SourceString": "You need a nice, hot meal?",
+            "LocalizedString": "You need a nice, hot meal?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BaoBros:Speech_C_4.FortControllerRequirement_HasCID_8'",
+                "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "62353CE84DA67086E734C8B7ACA89AA1",
+            "SourceString": "What a very big suit for a very small bear.",
+            "LocalizedString": "What a very big suit for a very small bear."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BaoBros:Speech_C_4.FortControllerRequirement_HasCID_9'",
+                "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AB0592F9474DE8402B1858B51FBA89FF",
+            "SourceString": "They got dumplings where you come from?",
+            "LocalizedString": "They got dumplings where you come from?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BaoBros:Speech_C_4.FortControllerRequirement_HasCID_10'",
+                "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0B79C2F04009F48242767E88CC1F4903",
+            "SourceString": "What exactly does a spider person eat?",
+            "LocalizedString": "What exactly does a spider person eat?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BaoBros:Speech_C_4.FortControllerRequirement_HasCID_11'",
+                "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "32D19471-446DBBDD-EF38D887-3A536178",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_BaoBros:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.12"
-        }
-      },
-      {
-        "Key": "A04FEA28-40835CD5-6FDE3AB4-8956031F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BaoBros:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.2"
-        }
-      },
-      {
-        "Key": "2CFCE8FA-42A86C98-D528C8B6-A3A200B8",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BaoBros:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "4C8895C54BC7C156FD8409BD755431E0",
+        "SourceString": "It's not looking good out there.",
+        "LocalizedString": "It's not looking good out there."
       }
+    },
+    "OutputConnections": [
+      "2CFCE8FA-42A86C98-D528C8B6-A3A200B8",
+      "A04FEA28-40835CD5-6FDE3AB4-8956031F"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.BaoBros"
-        },
-        "DestinationList": [
-          "81DA3277-47E0F035-7C6B3AA6-6F5A1CFD"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "81DA3277-47E0F035-7C6B3AA6-6F5A1CFD",
-      "32D19471-446DBBDD-EF38D887-3A536178",
-      "A04FEA28-40835CD5-6FDE3AB4-8956031F",
-      "2CFCE8FA-42A86C98-D528C8B6-A3A200B8"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "32D19471-446DBBDD-EF38D887-3A536178",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BaoBros:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/BaoBros/BaoBros/NPCLibrary_Conversation_BaoBros.1"
+    }
   }
 }

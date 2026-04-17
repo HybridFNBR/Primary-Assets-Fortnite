@@ -1,127 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'PaprikaCoreWeapons'",
     "ObjectPath": "/PaprikaCoreWeapons/PaprikaCoreWeapons.2"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.Playground"
-              },
-              {
-                "TagName": "Athena.Playlist.Arena"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Athena.Playlist.Arnold.Gameplay"
-              },
-              {
-                "TagName": "Athena.Playlist.Arnold.Lobby"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              10,
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playground, Athena.Playlist.Arena, Plugin.Playlist.Arena, Playlist.UGC.Core, Athena.Playlist.Arnold.Gameplay, Athena.Playlist.Arnold.Lobby, Playlist.Experience.PlayOnly, Plugin.Playlist.BlastBerry, Athena.Playlist.Default ) )"
-          },
-          "bMigratedFromOldData": true
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Registry_WeaponModOverrideData",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/PaprikaCoreWeapons/Items/Weapons/PaprikaMods/Paprika_WeaponModOverrideData.Paprika_WeaponModOverrideData",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Athena.Playground"
-        },
-        {
-          "TagName": "Athena.Playlist.Arena"
-        },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Athena.Playlist.Arnold.Gameplay"
-        },
-        {
-          "TagName": "Athena.Playlist.Arnold.Lobby"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        8,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playground, Athena.Playlist.Arena, Plugin.Playlist.Arena, Playlist.UGC.Core, Athena.Playlist.Arnold.Gameplay, Athena.Playlist.Arnold.Lobby, Playlist.Experience.PlayOnly ) )"
-    }
+      }
+    ]
   }
 }

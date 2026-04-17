@@ -1,52 +1,79 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'HazelnutSpread_RivalsCore'",
     "ObjectPath": "/HazelnutSpread_RivalsCore/HazelnutSpread_RivalsCore.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "41.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Exclude.HazelnutSpread"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              1,
-              0,
-              3,
-              1,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default ),  NONE( Plugin.Playlist.Exclude.HazelnutSpread ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    }
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerController",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/HazelnutSpread_RivalsCoreRuntime.FortControllerComponent_RivalsFaction",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGameState",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/HazelnutSpread_RivalsCore/Gameplay/GameFactionManager.GameFactionManager_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerController",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/HazelnutSpread_RivalsCoreRuntime.HazelnutSpreadLeaderboardManager",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerStateAthena",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/HazelnutSpread_RivalsCoreRuntime.FortPlayerStateComponent_RivalsFaction",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteAI.FortAthenaAIBotController",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/HazelnutSpread_RivalsCoreRuntime.FortControllerComponent_RivalsFaction",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

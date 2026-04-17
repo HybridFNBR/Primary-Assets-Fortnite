@@ -1,306 +1,39 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "SparksQuest_DailyBass_PlayNoteStreak",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyBass/SparksQuest_DailyBass_PlayNoteStreak",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_1",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'SparksQuest_DailyBass_PlayNoteStreak'",
+    "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyBass/SparksQuest_DailyBass_PlayNoteStreak.0"
+  },
   "Properties": {
-    "Group": "SparksDaily_Bass",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "SparksQuest_DailyBass_PlayNoteStreak_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "TokenRewards": [
           {
-            "RequiredSoloScore": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+            "TokenDefinition": {
+              "AssetPathName": "/UniversalDailyQuests/Items/Tokens/Universal_DailyQuest_Token.Universal_DailyQuest_Token",
+              "SubPathString": ""
             },
-            "RequiredSoloStars": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "bRequiredGoldSoloStars": false,
-            "RequiredBandScore": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "RequiredBandStars": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "bRequiredGoldBandStars": false,
-            "RequiredNoteAccuracy": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "RequiredComboType": "EComboType::None",
-            "bUseRequiredComboType": false,
-            "RequiredGameMode": "EPilgrimGameMode::Unknown",
-            "bUseRequiredGameMode": false,
-            "RequiredOverdriveTime": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "RequiredPercentPerfect": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "SongId": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "InstrumentId": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Item.Instrument.TrackType.Bass"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Item.Instrument.TrackType.Bass )"
-              }
-            },
-            "BandInstrumentIds": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "SongShortName": {
-              "SongShortNames": [],
-              "MatchType": "ESongShortNameMatchType::AlwaysMatch"
-            },
-            "SongSIDMatcher": {
-              "SongItemDefs": [],
-              "MatchType": "ESongShortNameMatchType::AlwaysMatch"
-            },
-            "RequiredBandMembers": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequiredDifficulty": "EPilgrimSongDifficulty::None",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "TokenCount": 1,
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "54C5375D4831A79FAD3C8B99689CD9CC",
-          "SourceString": "On Bass, play a 30-note streak, then finish the song",
-          "LocalizedString": "On Bass, play a 30-note streak, then finish the song"
-        },
-        "HudShortDescription": {
-          "Namespace": "",
-          "Key": "1110395741A7611CFAF424A1723A338F",
-          "SourceString": "On Bass, play a 30-note streak, then finish the song",
-          "LocalizedString": "On Bass, play a 30-note streak, then finish the song"
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 2,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 50,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Sparks.BattleStage"
-        },
-        {
-          "TagName": "Product.Sparks.PilgrimQuickplay"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ANY( Product.Sparks.BattleStage, Product.Sparks.PilgrimQuickplay )"
-    },
-    "Category": {
-      "DataTable": {
-        "ObjectName": "DataTable'QuestCategoryTable'",
-        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
-      },
-      "RowName": "DailyQuests"
-    },
-    "SortPriority": 5,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'SparksQuest_DailyBass_PlayNoteStreak:FortQuestDefinitionComponent_Rewards_1'",
-        "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyBass/SparksQuest_DailyBass_PlayNoteStreak.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'SparksQuest_DailyBass_PlayNoteStreak:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyBass/SparksQuest_DailyBass_PlayNoteStreak.1"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_ModularGates'SparksQuest_DailyBass_PlayNoteStreak:FortQuestDefinitionComponent_ModularGates_0'",
-        "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyBass/SparksQuest_DailyBass_PlayNoteStreak.2"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "SparksQuest_DailyBass_PlayNoteStreak_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "CF42056040D925FE32B486835B2542FA",
-      "SourceString": "On Bass, play a 30-note streak, then finish the song",
-      "LocalizedString": "On Bass, play a 30-note streak, then finish the song"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "1F6A1CF34E7C5A880EA499AB32C60F97",
-      "SourceString": "On Bass, play a 30-note streak, then finish the song",
-      "LocalizedString": "On Bass, play a 30-note streak, then finish the song"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.Sparks.Agnostic.Daily"
         ]
       },
-      {},
       {
-        "Rarity": "EFortRarity::Common"
+        "ResourceDataTableRewards": [
+          {
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'SparksEvergreen_DailyQuestRewardsTable'",
+                "ObjectPath": "/SparksPermanentQuests/Items/PersistentRewardTables/SparksEvergreen_DailyQuestRewardsTable.0"
+              },
+              "RowName": "SparksQuestReward_Sparks_DailyQuest_XP"
+            },
+            "bHideFromUI": false
+          }
+        ]
       }
     ]
   }

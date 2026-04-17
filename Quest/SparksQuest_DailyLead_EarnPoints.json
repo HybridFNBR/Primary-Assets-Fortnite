@@ -1,312 +1,39 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "SparksQuest_DailyLead_EarnPoints",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyLead/SparksQuest_DailyLead_EarnPoints",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_1",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'SparksQuest_DailyLead_EarnPoints'",
+    "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyLead/SparksQuest_DailyLead_EarnPoints.0"
+  },
   "Properties": {
-    "Group": "SparksDaily_Lead",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "SparksQuest_DailyLead_EarnPoints_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "TokenRewards": [
           {
-            "RequiredScore": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
+            "TokenDefinition": {
+              "AssetPathName": "/UniversalDailyQuests/Items/Tokens/Universal_DailyQuest_Token.Universal_DailyQuest_Token",
+              "SubPathString": ""
             },
-            "RequiredStars": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequiredCurrentScore": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequiredCurrentStars": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequiredCurrentSustainScore": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequiredDeltaSustainScore": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequiredCurrentChordScore": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequiredDeltaChordScore": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequireSustain": false,
-            "RequireChord": false,
-            "RequireOverdrive": false,
-            "ScoreType": "EPilgrimScoreEventMessageType::SoloScore",
-            "IncrementType": "EPilgrimScoreEventMessageIncrementType::ByScore",
-            "IncrementValue": 0,
-            "SongId": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "InstrumentId": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Item.Instrument.TrackType.Guitar"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Item.Instrument.TrackType.Guitar )"
-              }
-            },
-            "BandInstrumentIds": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "SongShortName": {
-              "SongShortNames": [],
-              "MatchType": "ESongShortNameMatchType::AlwaysMatch"
-            },
-            "SongSIDMatcher": {
-              "SongItemDefs": [],
-              "MatchType": "ESongShortNameMatchType::AlwaysMatch"
-            },
-            "RequiredBandMembers": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequiredDifficulty": "EPilgrimSongDifficulty::None",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "TokenCount": 1,
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "8E79369548D63DF0ADAEA899E87821AF",
-          "SourceString": "Earn points on Lead",
-          "LocalizedString": "Earn points on Lead"
-        },
-        "HudShortDescription": {
-          "Namespace": "",
-          "Key": "A56175FE4984B8AA4F948B8F794E149F",
-          "SourceString": "Earn points on Lead",
-          "LocalizedString": "Earn points on Lead"
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 30000,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 50,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Sparks.BattleStage"
-        },
-        {
-          "TagName": "Product.Sparks.PilgrimQuickplay"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ANY( Product.Sparks.BattleStage, Product.Sparks.PilgrimQuickplay )"
-    },
-    "Category": {
-      "DataTable": {
-        "ObjectName": "DataTable'QuestCategoryTable'",
-        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
-      },
-      "RowName": "DailyQuests"
-    },
-    "SortPriority": 3,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'SparksQuest_DailyLead_EarnPoints:FortQuestDefinitionComponent_Rewards_1'",
-        "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyLead/SparksQuest_DailyLead_EarnPoints.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'SparksQuest_DailyLead_EarnPoints:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyLead/SparksQuest_DailyLead_EarnPoints.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "SparksQuest_DailyLead_EarnPoints_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "81A6A1124618D5F1990340BE9B09280B",
-      "SourceString": "Earn points on Lead",
-      "LocalizedString": "Earn points on Lead"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "39A01DDD4112B0B3DC741AAA4E3B69C3",
-      "SourceString": "Earn points on Lead",
-      "LocalizedString": "Earn points on Lead"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.Sparks.Agnostic.Daily"
         ]
       },
-      {},
       {
-        "Rarity": "EFortRarity::Common"
+        "ResourceDataTableRewards": [
+          {
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'SparksEvergreen_DailyQuestRewardsTable'",
+                "ObjectPath": "/SparksPermanentQuests/Items/PersistentRewardTables/SparksEvergreen_DailyQuestRewardsTable.0"
+              },
+              "RowName": "SparksQuestReward_Sparks_DailyQuest_XP"
+            },
+            "bHideFromUI": false
+          }
+        ]
       }
     ]
   }

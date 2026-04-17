@@ -1,16 +1,40 @@
 {
-  "Type": "FortGameFeatureAction_AddLocalPlayerSubsystem",
-  "Name": "FortGameFeatureAction_AddLocalPlayerSubsystem_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddLocalPlayerSubsystem'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'FMJamInLobby'",
     "ObjectPath": "/FMJamInLobby/FMJamInLobby.2"
   },
   "Properties": {
-    "SubsystemToAdd": {
-      "AssetPathName": "/FMJamInLobby/Subsystems/BP_JamInLobbyOpenGlobalControlsSubsystem.BP_JamInLobbyOpenGlobalControlsSubsystem_C",
-      "SubPathString": ""
-    }
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGameStateFrontEnd",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/FMJamInLobby/Components/BP_FortGameStateComponent_JamInLobbyPlayspaceManager.BP_FortGameStateComponent_JamInLobbyPlayspaceManager_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerControllerFrontEnd",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/FMJamInLobby/Components/BP_JamInLobbyControllerComponent_LoopOptions.BP_JamInLobbyControllerComponent_LoopOptions_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

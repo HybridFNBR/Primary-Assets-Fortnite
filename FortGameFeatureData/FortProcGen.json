@@ -1,59 +1,26 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'FortProcGen'",
-    "ObjectPath": "/FortProcGen/FortProcGen.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "FortProcGen",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/FortProcGen/FortProcGen",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Plugin.Playlist.FortProcGen"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Plugin.Playlist.FortProcGen )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/FortProcGen/Levels/FortProcGen_LevelOverlay.FortProcGen_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Plugin.Playlist.FortProcGen"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Plugin.Playlist.FortProcGen )"
-    }
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddWorldSubsystem'FortProcGen:FortGameFeatureAction_AddWorldSubsystem_0'",
+        "ObjectPath": "/FortProcGen/FortProcGen.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'FortProcGen:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/FortProcGen/FortProcGen.0"
+      }
+    ]
   }
 }

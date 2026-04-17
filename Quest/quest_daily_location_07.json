@@ -1,247 +1,39 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "quest_daily_location_07",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_07",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'quest_daily_location_07'",
+    "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_07.0"
+  },
   "Properties": {
-    "Group": "Evergreen_BR_Location",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "quest_daily_location_07_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "TokenRewards": [
           {
-            "Emote": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
+            "TokenDefinition": {
+              "AssetPathName": "/UniversalDailyQuests/Items/Tokens/Universal_DailyQuest_Token.Universal_DailyQuest_Token",
+              "SubPathString": ""
             },
-            "Target": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Location.POI.Generic"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Athena.Location.POI.Generic )"
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
-          },
-          {
-            "Emote": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Target": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Gameplay.Action.Player.Jam.Jamming"
-                  },
-                  {
-                    "TagName": "Athena.Location.POI.Generic"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  5,
-                  2,
-                  1,
-                  1,
-                  0,
-                  1,
-                  1,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ALL(  ANY( Gameplay.Action.Player.Jam.Jamming ),  ANY( Athena.Location.POI.Generic ) )"
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "TokenCount": 1,
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "CultureInvariantString": null
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 1,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.BR"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "UserDescription": "BR",
-      "AutoDescription": " ALL( Product.BR )"
-    },
-    "Category": {
-      "DataTable": {
-        "ObjectName": "DataTable'QuestCategoryTable'",
-        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
-      },
-      "RowName": "BRDailyChallenges"
-    },
-    "SortPriority": 3,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_daily_location_07:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_07.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_daily_location_07:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Location/quest_daily_location_07.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "quest_daily_location_07_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "B8CA57964666E5D9BDA9AF90782FE149",
-      "SourceString": "Emote or jam in a Named Location",
-      "LocalizedString": "Emote or jam in a Named Location"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "C93CDAFA45BFE5C1E22809BAB5706478",
-      "SourceString": "Emote or jam in a Named Location",
-      "LocalizedString": "Emote or jam in a Named Location"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.BR.Daily",
-          "ChallengeCategory.XP"
         ]
       },
-      {},
       {
-        "Rarity": "EFortRarity::Common"
+        "ResourceDataTableRewards": [
+          {
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestXPReward_Evergreen'",
+                "ObjectPath": "/EvergreenQuest/Items/QuestRewards/QuestXPReward_Evergreen.0"
+              },
+              "RowName": "ChallengeReward_Daily"
+            },
+            "bHideFromUI": false
+          }
+        ]
       }
     ]
   }

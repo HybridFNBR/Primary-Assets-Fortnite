@@ -1,67 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'OrbEtch'",
     "ObjectPath": "/OrbEtch/OrbEtch.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "39.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "40.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
-          },
-          "bMigratedFromOldData": false
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Phoebe.ItemData",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/OrbEtch/DataTables/DT_Phoebe_ItemData_OrbEtch.DT_Phoebe_ItemData_OrbEtch",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default ) )"
-    }
+      }
+    ]
   }
 }

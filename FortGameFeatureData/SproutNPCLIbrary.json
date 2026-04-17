@@ -1,36 +1,64 @@
 {
-  "Type": "FortGameFeatureAction_AddCategoryTableToConfig",
-  "Name": "FortGameFeatureAction_AddCategoryTableToConfig_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddCategoryTableToConfig'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'SproutNPCLIbrary'",
-    "ObjectPath": "/SproutNPCLibrary/SproutNPCLIbrary.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "SproutNPCLIbrary",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/SproutNPCLibrary/SproutNPCLIbrary",
   "Properties": {
-    "ConfigToCategoryTableDatas": [
+    "Actions": [
       {
-        "Key": "/SproutAI/LWM/LagerConfigData_Sprout.LagerConfigData_Sprout",
-        "Value": {
-          "CategoryTableDatas": [
-            {
-              "Name": "Sprout NPC Categories",
-              "CategoryTable": {
-                "AssetPathName": "/SproutNPCLibrary/LWM/Categories/Lager_CategoryTable_Sprout_NPCLibrary.Lager_CategoryTable_Sprout_NPCLibrary",
-                "SubPathString": ""
-              },
-              "IsEnabled": {
-                "Value": 1.0,
-                "Curve": {
-                  "CurveTable": null,
-                  "RowName": "None"
-                },
-                "RegistryType": {
-                  "Name": "None"
-                }
-              }
-            }
-          ]
+        "ObjectName": "FortGameFeatureAction_AddCategoryTableToConfig'SproutNPCLIbrary:FortGameFeatureAction_AddCategoryTableToConfig_0'",
+        "ObjectPath": "/SproutNPCLibrary/SproutNPCLIbrary.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'SproutNPCLIbrary:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/SproutNPCLibrary/SproutNPCLIbrary.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "ConversationDatabase",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/CommonConversationRuntime.ConversationDatabase",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "AISpawnerData"
+          },
+          {
+            "Path": "Convo"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "AISpawnerData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "AISpawnerData"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
       }
     ]

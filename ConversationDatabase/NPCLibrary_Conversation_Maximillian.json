@@ -1,93 +1,465 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Maximillian",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Maximillian'",
+    "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "2F14D2D7-44807BDE-9CB9D9B2-CAD76F0B",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Maximillian:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "33C2A7FC42037EA8C5E55F9EAC16FEDD",
+            "SourceString": "Hello! I'm Maximillian, ace pilot and world traveler. I also cosplay.",
+            "LocalizedString": "Hello! I'm Maximillian, ace pilot and world traveler. I also cosplay."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Maximillian:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "00F82DFA4F29B35889FDA382625C0863",
+            "SourceString": "Hail, fellow traveller! Wait, I think we met at PlaneCon?",
+            "LocalizedString": "Hail, fellow traveller! Wait, I think we met at PlaneCon?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Maximillian:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BB930F8D4A6850DF4CD104B5307604FF",
+            "SourceString": "That suit is very impressive, but can it fly? No? I didn't think so.",
+            "LocalizedString": "That suit is very impressive, but can it fly? No? I didn't think so."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Maximillian:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B0CEABF34048009E76E06DB660340654",
+            "SourceString": "You'll never get away with this!",
+            "LocalizedString": "You'll never get away with this!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Maximillian:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "186A40354FA49015064EFC8AFE89E193",
+            "SourceString": "I admire the Royale Air Force.",
+            "LocalizedString": "I admire the Royale Air Force."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Maximillian:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "EE8231AB45CFD58DC00549B740B779D5",
+            "SourceString": "Please do not \"ollie\" off my propeller. Thanks.",
+            "LocalizedString": "Please do not \"ollie\" off my propeller. Thanks."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Maximillian:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0178FA024CF2301B0B0BBA960B8BC08C",
+            "SourceString": "I could fly you to safety... but you bring your danger with you.",
+            "LocalizedString": "I could fly you to safety... but you bring your danger with you."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Maximillian:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1170C10542EB70104B2D039E4B2FBA84",
+            "SourceString": "Anywhere you need to fly?",
+            "LocalizedString": "Anywhere you need to fly?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Maximillian:Speech_C_4.FortControllerRequirement_HasCID_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A17777C14E6BBE0C7FED539E1746EE37",
+            "SourceString": "I don't think that suit will fit in my plane, small guy.",
+            "LocalizedString": "I don't think that suit will fit in my plane, small guy."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Maximillian:Speech_C_4.FortControllerRequirement_HasCID_7'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2A04765A4BEABB690273DB80FD91ABF3",
+            "SourceString": "I knew someone like you once. Only he wore all black. And talked to himself.",
+            "LocalizedString": "I knew someone like you once. Only he wore all black. And talked to himself."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Maximillian:Speech_C_4.FortControllerRequirement_HasCID_8'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "2509E6E0-4D1D2000-149759A8-09773E13",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Maximillian:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.14"
-        }
-      },
-      {
-        "Key": "26218944-4A0A2CAC-970EE793-5D2FD110",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Maximillian:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.2"
-        }
-      },
-      {
-        "Key": "BB88DD66-4AF9110B-77610A80-757044C9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Maximillian:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "D26959CA42930441F55737949F610D8A",
+        "SourceString": "I own my own plane, you know.",
+        "LocalizedString": "I own my own plane, you know."
       }
+    },
+    "OutputConnections": [
+      "BB88DD66-4AF9110B-77610A80-757044C9",
+      "26218944-4A0A2CAC-970EE793-5D2FD110"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Maximillian"
-        },
-        "DestinationList": [
-          "2F14D2D7-44807BDE-9CB9D9B2-CAD76F0B"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "2F14D2D7-44807BDE-9CB9D9B2-CAD76F0B",
-      "2509E6E0-4D1D2000-149759A8-09773E13",
-      "26218944-4A0A2CAC-970EE793-5D2FD110",
-      "BB88DD66-4AF9110B-77610A80-757044C9"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "2509E6E0-4D1D2000-149759A8-09773E13",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Maximillian:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Maximillian/NPCLibrary_Conversation_Maximillian.1"
+    }
   }
 }

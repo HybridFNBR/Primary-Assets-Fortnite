@@ -1,41 +1,152 @@
 {
-  "Type": "FortQuestDefinitionComponent_Rewards",
-  "Name": "FortQuestDefinitionComponent_Rewards_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_PlaceHome_SimplifiedBackup'",
-    "ObjectPath": "/SproutJobs_Base/Quests/Citizen/Quest_PlaceHome_SimplifiedBackup.1"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_PlaceHome_SimplifiedBackup",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/SproutJobs_Base/Quests/Citizen/Quest_PlaceHome_SimplifiedBackup",
   "Properties": {
-    "ObjectivesExtensionData": [
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "QuestType": "EFortQuestType::TransientQuest",
+    "bAthenaMustCompleteInSingleMatch": true,
+    "CompletionPathResults": [
       {
-        "Key": "Quest_PlaceHome_SimplifiedBackup_obj0",
-        "Value": {
-          "ObjectiveRewardsArray": [
-            {
-              "GA_Rewards": [
-                {
-                  "GameplayAbilityToGrant": {
-                    "AssetPathName": "/SproutJobs_Base/GE/GA_Sprout_InitialQuest_GiveMail.GA_Sprout_InitialQuest_GiveMail_C",
-                    "SubPathString": ""
-                  },
-                  "bHideFromUI": false
-                },
-                {
-                  "GameplayAbilityToGrant": {
-                    "AssetPathName": "/SproutJobs_Base/GE/GA_Sprout_CheckSkipFTUE.GA_Sprout_CheckSkipFTUE_C",
-                    "SubPathString": ""
-                  },
-                  "bHideFromUI": false
-                }
-              ]
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_PlaceHome_SimplifiedBackup_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.Sprout.CheckMail"
+            },
+            "Subjects": [],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
             }
-          ],
-          "bHoldRewardsUntilQuestCompletion": false,
-          "bShowObjectiveRewardsAsQuestRewards": false
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "AEBD81BD43EC0EB7A325EE852C0E9AEA",
+          "SourceString": "Place your home and check your mailbox",
+          "LocalizedString": "Place your home and check your mailbox"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 1,
+          "DisplayMaxStage": 1
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
-    ]
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        },
+        {
+          "TagName": "Product.Sprout"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Product.Juno, Product.Sprout )"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_PlaceHome_SimplifiedBackup:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/SproutJobs_Base/Quests/Citizen/Quest_PlaceHome_SimplifiedBackup.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_PlaceHome_SimplifiedBackup_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "CC87F11C47C47F2217C0D8B936D42649",
+      "SourceString": "Brick Bay Living!",
+      "LocalizedString": "Brick Bay Living!"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "5C73BF114D34B56AA08AE5BD69C9822A",
+      "SourceString": "Home is wherever you rest your... home.",
+      "LocalizedString": "Home is wherever you rest your... home."
+    }
   }
 }

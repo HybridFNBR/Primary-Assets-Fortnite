@@ -1,16 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'ChainsawGameplay'",
     "ObjectPath": "/ChainsawGameplay/ChainsawGameplay.3"
   },
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/ChainsawGameplay/Gameplay/MME/MME_Logic_Chainsaw.MME_Logic_Chainsaw_C",
-      "SubPathString": ""
-    }
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "ItemBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/ChainsawGameplay/BTInjection/ChainsawGameplay_FortItemInjectedBehaviors.ChainsawGameplay_FortItemInjectedBehaviors",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ]
   }
 }

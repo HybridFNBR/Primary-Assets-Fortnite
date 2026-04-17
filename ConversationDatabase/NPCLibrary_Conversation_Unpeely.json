@@ -1,129 +1,529 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Unpeely",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Unpeely'",
+    "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "22C775DD-4F702C54-52A720A1-B539A2A7",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Unpeely:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.1"
-        }
-      },
-      {
-        "Key": "376EFC7D-4B7A231D-F0722988-5A0139D8",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Unpeely:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.19"
-        }
-      },
-      {
-        "Key": "E4CF580A-4B5AD0F0-7780458C-9117EB59",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Unpeely:ConversationLinkNode_5'",
-          "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.7"
-        }
-      },
-      {
-        "Key": "DD7B2EEF-48C6682C-13469499-B17F4E8D",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Unpeely:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.4"
-        }
-      },
-      {
-        "Key": "38C7B0B3-4B7C21CD-E14F73BC-C83F9B2D",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Unpeely:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.6"
-        }
-      },
-      {
-        "Key": "D9BF86FE-407926F6-EB6966B3-B74AE940",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Unpeely:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.5"
-        }
-      },
-      {
-        "Key": "7BE3B765-47B3293A-547BB99B-F21763F9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Unpeely:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.2"
-        }
-      },
-      {
-        "Key": "BF9C4396-4EED2889-366680A7-FD019C4D",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Unpeely:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Unpeely"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E13194094832238B6FB3C0A6851DF841",
+            "SourceString": "(Peely waves excitedly to see you.)",
+            "LocalizedString": "(Peely waves excitedly to see you.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.18"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "22C775DD-4F702C54-52A720A1-B539A2A7"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F9C87B4C4D1A97CAA5F1D6A7075D5DC2",
+            "SourceString": "(Peely smiles shyly and shows you his new acting headshot.)",
+            "LocalizedString": "(Peely smiles shyly and shows you his new acting headshot.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F1305C054719713E093A1EA60D1C88B4",
+            "SourceString": "(Peely gestures to a nearby Peelians poster. He's a movie star!)",
+            "LocalizedString": "(Peely gestures to a nearby Peelians poster. He's a movie star!)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7A9D06DC49FC173E3BA5459B9D630FCA",
+            "SourceString": "(Peely gapes in awe at the wonder around him.)",
+            "LocalizedString": "(Peely gapes in awe at the wonder around him.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F1FB779A4C4CFD32E45C52849923A42D",
+            "SourceString": "(Unpeely shrugs. Movie stardom was fun, but it's over now.)",
+            "LocalizedString": "(Unpeely shrugs. Movie stardom was fun, but it's over now.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "47FBE1AF49CA44632D369FAF8ED95FF7",
+            "SourceString": "(Peely grins and takes a selfie with you. Red carpet buddies!)",
+            "LocalizedString": "(Peely grins and takes a selfie with you. Red carpet buddies!)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9DF967B743D17C98F40110B4C7445EFC",
+            "SourceString": "(Peely scratches his head. He's lost his script again...)",
+            "LocalizedString": "(Peely scratches his head. He's lost his script again...)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.14"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1B9684A649C36BA4DADBA6864FC8740D",
+            "SourceString": "(Peely attempts a sick stunt. It goes badly.)",
+            "LocalizedString": "(Peely attempts a sick stunt. It goes badly.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.15"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B232B8DB4BDD7AE4B6398E8AB1D5A8BE",
+            "SourceString": "(Peely salutes. Yes, director, sir!)",
+            "LocalizedString": "(Peely salutes. Yes, director, sir!)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.16"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FD7A991E47F58FDB4FE3D992672F33DE",
+            "SourceString": "(Peely pulls you into a tight hug. Best friends!)",
+            "LocalizedString": "(Peely pulls you into a tight hug. Best friends!)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.17"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "10FBDF9446A6E4462FCEFB848AE52AAD",
+            "SourceString": "(Peely looks at you with pride in his eyes.)",
+            "LocalizedString": "(Peely looks at you with pride in his eyes.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Unpeely:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "9BC1193B46D14C366D25E484794D7743",
+        "SourceString": "(Unpeely smiles doofily at you.) ",
+        "LocalizedString": "(Unpeely smiles doofily at you.) "
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season39.Weekly.W05.Q01.BananaSummer",
-      "Conversation.Entry.Season39.WF.PerfectGift",
-      "Conversation.Entry.Season39.Banana.BRQuests.01",
-      "Conversation.Entry.RandomServices",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "22C775DD-4F702C54-52A720A1-B539A2A7",
-      "376EFC7D-4B7A231D-F0722988-5A0139D8",
-      "E4CF580A-4B5AD0F0-7780458C-9117EB59",
-      "DD7B2EEF-48C6682C-13469499-B17F4E8D",
-      "38C7B0B3-4B7C21CD-E14F73BC-C83F9B2D",
-      "D9BF86FE-407926F6-EB6966B3-B74AE940",
+    },
+    "OutputConnections": [
+      "BF9C4396-4EED2889-366680A7-FD019C4D",
       "7BE3B765-47B3293A-547BB99B-F21763F9",
-      "BF9C4396-4EED2889-366680A7-FD019C4D"
+      "D9BF86FE-407926F6-EB6966B3-B74AE940",
+      "38C7B0B3-4B7C21CD-E14F73BC-C83F9B2D",
+      "DD7B2EEF-48C6682C-13469499-B17F4E8D",
+      "E4CF580A-4B5AD0F0-7780458C-9117EB59"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "376EFC7D-4B7A231D-F0722988-5A0139D8",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Unpeely:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Unpeely/NPCLibrary_Conversation_Unpeely.1"
+    }
   }
 }

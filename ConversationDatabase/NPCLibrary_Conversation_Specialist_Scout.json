@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Specialist_Scout",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCSpecialists/NPCs/Scout/NPCLibrary_Conversation_Specialist_Scout",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Specialist_Scout'",
+    "ObjectPath": "/NPCSpecialists/NPCs/Scout/NPCLibrary_Conversation_Specialist_Scout.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "A474B12C-4352E185-F51C2D84-06814F7B",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Specialist_Scout:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCSpecialists/NPCs/Scout/NPCLibrary_Conversation_Specialist_Scout.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0C2C756C495823E11700F7817E9A87A5",
+            "SourceString": "I was engineered to be the perfect scout. Hire me if that sounds interesting to you.",
+            "LocalizedString": "I was engineered to be the perfect scout. Hire me if that sounds interesting to you."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Specialist_Scout:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCSpecialists/NPCs/Scout/NPCLibrary_Conversation_Specialist_Scout.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "FB05E785-40CA51AD-319331A5-A4DB1B52",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Specialist_Scout:Speech_C_4'",
-          "ObjectPath": "/NPCSpecialists/NPCs/Scout/NPCLibrary_Conversation_Specialist_Scout.5"
-        }
-      },
-      {
-        "Key": "57D4D085-4B3009C3-3833FC96-86CF90EA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Specialist_Scout:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCSpecialists/NPCs/Scout/NPCLibrary_Conversation_Specialist_Scout.2"
-        }
-      },
-      {
-        "Key": "2C6FED81-43F0A953-306FD5A6-F6182196",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Specialist_Scout:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCSpecialists/NPCs/Scout/NPCLibrary_Conversation_Specialist_Scout.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "F730E2F34FD1F0C3F845518A53E6D367",
+        "SourceString": "I was engineered to be the perfect scout. Hire me if that sounds interesting to you.",
+        "LocalizedString": "I was engineered to be the perfect scout. Hire me if that sounds interesting to you."
       }
+    },
+    "OutputConnections": [
+      "2C6FED81-43F0A953-306FD5A6-F6182196",
+      "57D4D085-4B3009C3-3833FC96-86CF90EA"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Specialist.Scout"
-        },
-        "DestinationList": [
-          "A474B12C-4352E185-F51C2D84-06814F7B"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "A474B12C-4352E185-F51C2D84-06814F7B",
-      "FB05E785-40CA51AD-319331A5-A4DB1B52",
-      "57D4D085-4B3009C3-3833FC96-86CF90EA",
-      "2C6FED81-43F0A953-306FD5A6-F6182196"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "FB05E785-40CA51AD-319331A5-A4DB1B52",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Specialist_Scout:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCSpecialists/NPCs/Scout/NPCLibrary_Conversation_Specialist_Scout.1"
+    }
   }
 }

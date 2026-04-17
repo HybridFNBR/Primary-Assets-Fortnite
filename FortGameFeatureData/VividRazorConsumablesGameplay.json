@@ -1,121 +1,122 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'VividRazorConsumablesGameplay'",
-    "ObjectPath": "/VividRazorConsumablesGameplay/VividRazorConsumablesGameplay.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "VividRazorConsumablesGameplay",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/VividRazorConsumablesGameplay/VividRazorConsumablesGameplay",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "34.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              3,
-              0,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly ) )"
-          },
-          "bMigratedFromOldData": true
-        },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "34.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "37.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/VividRazorConsumablesGameplay/Levels/VividRazorConsumablesGameplay_LevelOverlay.VividRazorConsumablesGameplay_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/VividRazorConsumablesGameplay/HUD/VividRazorConsHUDWidgetRegistry.VividRazorConsHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S2",
+        "DisplayName": "Gold Splash",
+        "ConsoleCommands": [
+          "cheat givespecificitem /Script/FortniteGame.FortWeaponRangedItemDefinition'/VividRazorConsumablesGameplay/Gameplay/WID_Athena_VividBronco.WID_Athena_VividBronco' 3 3"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'VividRazorConsumablesGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/VividRazorConsumablesGameplay/VividRazorConsumablesGameplay.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        5,
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly ) )"
-    }
+      },
+      {
+        "PrimaryAssetType": "Gadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "AthenaGadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Consumable",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

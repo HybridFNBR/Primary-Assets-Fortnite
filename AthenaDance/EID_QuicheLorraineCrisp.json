@@ -1,123 +1,193 @@
 {
-  "Type": "AthenaDanceItemDefinition",
-  "Name": "EID_QuicheLorraineCrisp",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDanceItemDefinition'",
-  "Package": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_QuicheLorraineCrisp",
+  "Type": "FortCosmeticLoadoutTagDrivenVariant",
+  "Name": "FortCosmeticLoadoutTagDrivenVariant_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortCosmeticLoadoutTagDrivenVariant'",
+  "Outer": {
+    "ObjectName": "AthenaDanceItemDefinition'EID_QuicheLorraineCrisp'",
+    "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_QuicheLorraineCrisp.0"
+  },
   "Properties": {
-    "CustomDanceAbility": {
-      "AssetPathName": "/Game/Abilities/Emotes/GAB_Emote_Generic_Transformation.GAB_Emote_Generic_Transformation_C",
-      "SubPathString": ""
-    },
-    "Animation": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/QuicheLorraineCrisp/CMM/Emote_QuicheLorraineCrisp_CMM_M.Emote_QuicheLorraineCrisp_CMM_M",
-      "SubPathString": ""
-    },
-    "AnimationFemaleOverride": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/QuicheLorraineCrisp/CMF/Emote_QuicheLorraineCrisp_CMF_M.Emote_QuicheLorraineCrisp_CMF_M",
-      "SubPathString": ""
-    },
-    "AnimationOverrides": [
+    "Variants": [
       {
-        "BodyType": "EFortCustomBodyType::Large",
-        "Gender": "EFortCustomGender::Male",
-        "EmoteMontage": {
-          "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/QuicheLorraineCrisp/CLM/Emote_QuicheLorraineCrisp_CLM_M.Emote_QuicheLorraineCrisp_CLM_M",
-          "SubPathString": ""
-        }
-      },
-      {
-        "BodyType": "EFortCustomBodyType::Large",
-        "Gender": "EFortCustomGender::Female",
-        "EmoteMontage": {
-          "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/QuicheLorraineCrisp/CLF/Emote_QuicheLorraineCrisp_CLF_M.Emote_QuicheLorraineCrisp_CLF_M",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "EmoteCooldownSecs": 1.0,
-    "ItemVariants": [
-      {
-        "ObjectName": "FortCosmeticLoadoutTagDrivenVariant'EID_QuicheLorraineCrisp:FortCosmeticLoadoutTagDrivenVariant_0'",
-        "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_QuicheLorraineCrisp.1"
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "7AEE9E764944EA99DCC2DAA12C7D85AD",
-      "SourceString": "Slurp the Internet",
-      "LocalizedString": "Slurp the Internet"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "349086EC4BBBCAA673B540AFDCE9D322",
-      "SourceString": "The best way to serve Slurp.",
-      "LocalizedString": "The best way to serve Slurp."
-    },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "E3C2FC7C4BB048DF3A15489919753C88",
-      "SourceString": "Emote",
-      "LocalizedString": "Emote"
-    },
-    "DataList": [
-      {
-        "MeshOverride": {
+        "MontageSwaps": [
+          {
+            "ToSwapFrom": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/QuicheLorraineCrisp/CMM/Emote_QuicheLorraineCrisp_CMM_M.Emote_QuicheLorraineCrisp_CMM_M",
+              "SubPathString": ""
+            },
+            "ToSwapTo": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/QuicheLorraineCrisp/BigHeads/Emote_QuicheLorraineCrisp_CMM_BigHead_M.Emote_QuicheLorraineCrisp_CMM_BigHead_M",
+              "SubPathString": ""
+            }
+          },
+          {
+            "ToSwapFrom": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/QuicheLorraineCrisp/CMF/Emote_QuicheLorraineCrisp_CMF_M.Emote_QuicheLorraineCrisp_CMF_M",
+              "SubPathString": ""
+            },
+            "ToSwapTo": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/QuicheLorraineCrisp/BigHeads/Emote_QuicheLorraineCrisp_CMF_BigHead_M.Emote_QuicheLorraineCrisp_CMF_BigHead_M",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "RequiredMetaTags": [],
+        "ExcludedMetaTags": [],
+        "RequiredConditions": [
+          {
+            "ItemCategory": "ECosmeticMetaTagRequirementCategory::None",
+            "SlotTag": {
+              "TagName": "LoadoutSlot.Character"
+            },
+            "SpecificItem": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "MetaTagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [
+                {
+                  "TagName": "Cosmetics.Emote.CharacterGroup.BigHead"
+                }
+              ],
+              "QueryTokenStream": [
+                0,
+                1,
+                2,
+                1,
+                0
+              ],
+              "UserDescription": "BigHead",
+              "AutoDescription": " ALL( Cosmetics.Emote.CharacterGroup.BigHead )"
+            },
+            "RequiredMetaTags": [],
+            "ExcludedMetaTags": []
+          }
+        ],
+        "ExcludedConditions": [],
+        "VariantParts": [],
+        "VariantMaterials": [],
+        "VariantMaterialParams": [],
+        "InitalParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [],
+        "VariantSounds": [],
+        "VariantFoley": [],
+        "SocketTransforms": [],
+        "VariantActions": [],
+        "VariantMeshes": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": true,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Stage0"
+        },
+        "VariantName": {
+          "CultureInvariantString": null
+        },
+        "PreviewImage": {
           "AssetPathName": "",
           "SubPathString": ""
         },
-        "SkeletalMeshOverride": {
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
           "AssetPathName": "",
           "SubPathString": ""
         },
-        "PivotOffset": {
-          "X": 0.0,
-          "Y": 100.0,
-          "Z": 15.0
+        "VariantGameplayTags": []
+      },
+      {
+        "MontageSwaps": [
+          {
+            "ToSwapFrom": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/QuicheLorraineCrisp/CMF/Emote_QuicheLorraineCrisp_CMF_M.Emote_QuicheLorraineCrisp_CMF_M",
+              "SubPathString": ""
+            },
+            "ToSwapTo": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/QuicheLorraineCrisp/CMF/Emote_QuicheLorraineCrisp_HideJacket_CMF_M.Emote_QuicheLorraineCrisp_HideJacket_CMF_M",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "RequiredMetaTags": [],
+        "ExcludedMetaTags": [],
+        "RequiredConditions": [
+          {
+            "ItemCategory": "ECosmeticMetaTagRequirementCategory::None",
+            "SlotTag": {
+              "TagName": "LoadoutSlot.Character"
+            },
+            "SpecificItem": {
+              "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Characters/Character_QuicheLorraineCrisp.Character_QuicheLorraineCrisp",
+              "SubPathString": ""
+            },
+            "MetaTagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [
+                {
+                  "TagName": "Cosmetics.MetaTags.QuicheLorraineCrisp.Jacket"
+                }
+              ],
+              "QueryTokenStream": [
+                0,
+                1,
+                2,
+                1,
+                0
+              ],
+              "UserDescription": "Jacket",
+              "AutoDescription": " ALL( Cosmetics.MetaTags.QuicheLorraineCrisp.Jacket )"
+            },
+            "RequiredMetaTags": [],
+            "ExcludedMetaTags": []
+          }
+        ],
+        "ExcludedConditions": [],
+        "VariantParts": [],
+        "VariantMaterials": [],
+        "VariantMaterialParams": [],
+        "InitalParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [],
+        "VariantSounds": [],
+        "VariantFoley": [],
+        "SocketTransforms": [],
+        "VariantActions": [],
+        "VariantMeshes": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
         },
-        "InitialRotation": {
-          "Pitch": 0.0,
-          "Yaw": 0.0,
-          "Roll": 0.0
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Stage1"
         },
-        "Scale": 1.0
-      },
-      {
-        "Tags": [
-          "Cosmetics.EmoteType.Dance",
-          "Cosmetics.Source.ItemShop",
-          "Cosmetics.Variant.ForceLoadAllParts",
-          "Emote.BuiltIn.Transform",
-          "Cosmetics.Set.LightRest",
-          "Cosmetics.Filter.Season.39"
-        ]
-      },
-      {
-        "Icon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Emotes/S39/T_Icon_Emotes_QuicheLorraineCrisp.T_Icon_Emotes_QuicheLorraineCrisp",
+        "VariantName": {
+          "CultureInvariantString": null
+        },
+        "PreviewImage": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
-      },
-      {
-        "LargeIcon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Emotes/S39/T_Icon_Emotes_QuicheLorraineCrisp_L.T_Icon_Emotes_QuicheLorraineCrisp_L",
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
-      },
-      {
-        "MinLevel": 1,
-        "MaxLevel": 1
-      },
-      {
-        "Traits": [
-          "Item.Trait.SingleStack"
-        ]
-      },
-      {
-        "Series": {
-          "ObjectName": "FortItemSeriesDefinition'CreatorCollabSeries'",
-          "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Series/CreatorCollabSeries.0"
-        }
+        },
+        "VariantGameplayTags": []
       }
     ]
   }

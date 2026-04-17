@@ -1,15 +1,176 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_SquareClub_S39_Kickstart_BonusGoal_Q01'",
-    "ObjectPath": "/SquareClub_Quests/Items/QuestItems/Quests/Kickstart/Quest_SquareClub_S39_Kickstart_BonusGoal_Q01.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_SquareClub_S39_Kickstart_BonusGoal_Q01",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/SquareClub_Quests/Items/QuestItems/Quests/Kickstart/Quest_SquareClub_S39_Kickstart_BonusGoal_Q01",
   "Properties": {
-    "VisibilitySettings": {
-      "bCanShowTimer": false
-    }
+    "QuestSubtype": "EFortQuestSubtype::PunchCard",
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_SquareClub_S39_Kickstart_BonusGoal_Q01_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.SquareClub.RoundWon"
+            },
+            "Subjects": [],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "SquareClub.Quest.Jewel"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  3,
+                  1,
+                  0
+                ],
+                "UserDescription": "Not showdown",
+                "AutoDescription": " NONE( SquareClub.Quest.Jewel )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "9051204A412CC8BE4274D7B0F2E4B604",
+          "SourceString": "Win rounds",
+          "LocalizedString": "Win rounds"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 125,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.SquareClub"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.SquareClub )"
+    },
+    "SortPriority": 1,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_SquareClub_S39_Kickstart_BonusGoal_Q01:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/SquareClub_Quests/Items/QuestItems/Quests/Kickstart/Quest_SquareClub_S39_Kickstart_BonusGoal_Q01.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_SquareClub_S39_Kickstart_BonusGoal_Q01:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/SquareClub_Quests/Items/QuestItems/Quests/Kickstart/Quest_SquareClub_S39_Kickstart_BonusGoal_Q01.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_SquareClub_S39_Kickstart_BonusGoal_Q01_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "3136FB04450384171A4353BB074626C3",
+      "SourceString": "Win rounds",
+      "LocalizedString": "Win rounds"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "B285DBEE472BD76B99C54BB1E0A1ED9E",
+      "SourceString": "Win rounds",
+      "LocalizedString": "Win rounds"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "6EB93DEA4EF8F4468369B68A0331D0AE",
+      "SourceString": "Make this arena yours.",
+      "LocalizedString": "Make this arena yours."
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.SquareClub.Kickstart.BonusGoals"
+        ]
+      }
+    ]
   }
 }

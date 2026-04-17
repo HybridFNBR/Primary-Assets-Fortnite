@@ -1,129 +1,541 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_ReptilianOcean",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_ReptilianOcean'",
+    "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "54C03258-4B3DEA8F-6D83C981-76D0B5B1",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_ReptilianOcean:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.1"
-        }
-      },
-      {
-        "Key": "2332B0DB-44D2A5DA-854C4788-0912E428",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.19"
-        }
-      },
-      {
-        "Key": "553F7F68-42E950C5-CF57F69A-8D9251B6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ReptilianOcean:ConversationLinkNode_6'",
-          "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.7"
-        }
-      },
-      {
-        "Key": "724D37C1-4F9AC7E7-CC84B699-72A601F4",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ReptilianOcean:ConversationLinkNode_5'",
-          "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.6"
-        }
-      },
-      {
-        "Key": "F9FDBA98-4F22715E-F4F9DC8A-4968E159",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ReptilianOcean:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.5"
-        }
-      },
-      {
-        "Key": "BECA7F3C-46574371-FAE086A8-FAE0C9D6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ReptilianOcean:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.4"
-        }
-      },
-      {
-        "Key": "A562E63A-4531071F-535D6BA2-6363353F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ReptilianOcean:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.2"
-        }
-      },
-      {
-        "Key": "A5822B80-4AC335E6-714DB693-BE4B2848",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ReptilianOcean:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.ReptilianOcean"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F579E426463C4F001C196190CE38076F",
+            "SourceString": "Well-met, mortal. ",
+            "LocalizedString": "Well-met, mortal. "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.18"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "54C03258-4B3DEA8F-6D83C981-76D0B5B1"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CB01CAE64B08D0735103B2BCAED85BC2",
+            "SourceString": "You carry a great potential in you, mortal. I should know, I was much the same...",
+            "LocalizedString": "You carry a great potential in you, mortal. I should know, I was much the same..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.15"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "712E89CB47EC3872948B148DA05EB15E",
+            "SourceString": "Someday you gods, and all the pain you've caused, will merely be a myth.",
+            "LocalizedString": "Someday you gods, and all the pain you've caused, will merely be a myth."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.16"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E5CF42D24D2215E7455770AF4176C40B",
+            "SourceString": "I would love to trust you. But in the end, you're a god, just like them.",
+            "LocalizedString": "I would love to trust you. But in the end, you're a god, just like them."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.14"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "43D858404A9594BED1FF21BD01B2ADB1",
+            "SourceString": "Leave me be, warmonger. I prefer more subtle methods of combat.",
+            "LocalizedString": "Leave me be, warmonger. I prefer more subtle methods of combat."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.17"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "90F27B0F4645A176E4C4419FBA318EF8",
+            "SourceString": "The gods have harmed many. I seek to put a stop to it.",
+            "LocalizedString": "The gods have harmed many. I seek to put a stop to it."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1D7C8ED24839B84A8756129A3EA7A7D0",
+            "SourceString": "I presume you've heard of me. The gods love their little myths.",
+            "LocalizedString": "I presume you've heard of me. The gods love their little myths."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "53F8F6184341F4B68F50C6B2C213EED9",
+            "SourceString": "If you ever feel like, oh, ending the rule of the pantheon? Give me a call.",
+            "LocalizedString": "If you ever feel like, oh, ending the rule of the pantheon? Give me a call."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FB8659BC494239CF7CFAB88D53FDF7C9",
+            "SourceString": "The gods have taken much from me. But they will never take my fury.",
+            "LocalizedString": "The gods have taken much from me. But they will never take my fury."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6A104DA1430ACCA306631888C0F92A25",
+            "SourceString": "If you see Zeus, ask him to return my trinkets. He knows what he stole.",
+            "LocalizedString": "If you see Zeus, ask him to return my trinkets. He knows what he stole."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4DA86E6446F823DBDECC8C8E62F7317F",
+            "SourceString": "Whatever you've heard about me, it's probably a lie.",
+            "LocalizedString": "Whatever you've heard about me, it's probably a lie."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_ReptilianOcean:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "E1B3F1174CA3A3BCAB41A8A772AF8347",
+        "SourceString": "The gods have harmed many. I seek to put a stop to it.",
+        "LocalizedString": "The gods have harmed many. I seek to put a stop to it."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season29.Snapshot.P04.Q07",
-      "Conversation.Entry.Season29.Snapshot.P04.Q03",
-      "Conversation.Entry.Season29.Snapshot.P04.Q01",
-      "Conversation.Entry.ReptilianOcean.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "54C03258-4B3DEA8F-6D83C981-76D0B5B1",
-      "2332B0DB-44D2A5DA-854C4788-0912E428",
-      "553F7F68-42E950C5-CF57F69A-8D9251B6",
-      "724D37C1-4F9AC7E7-CC84B699-72A601F4",
-      "F9FDBA98-4F22715E-F4F9DC8A-4968E159",
-      "BECA7F3C-46574371-FAE086A8-FAE0C9D6",
+    },
+    "OutputConnections": [
+      "A5822B80-4AC335E6-714DB693-BE4B2848",
       "A562E63A-4531071F-535D6BA2-6363353F",
-      "A5822B80-4AC335E6-714DB693-BE4B2848"
+      "BECA7F3C-46574371-FAE086A8-FAE0C9D6",
+      "F9FDBA98-4F22715E-F4F9DC8A-4968E159",
+      "724D37C1-4F9AC7E7-CC84B699-72A601F4",
+      "553F7F68-42E950C5-CF57F69A-8D9251B6"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "2332B0DB-44D2A5DA-854C4788-0912E428",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_ReptilianOcean:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/ReptilianOcean/NPCLibrary_Conversation_ReptilianOcean.1"
+    }
   }
 }

@@ -1,59 +1,61 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'FigmentPlaylists'",
-    "ObjectPath": "/FigmentPlaylists/FigmentPlaylists.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "FigmentPlaylists",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/FigmentPlaylists/FigmentPlaylists",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "39.00"
+    "PlaylistBaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/Game/Athena/Balance/DataTables/CashPayouts.CashPayouts",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
             },
-            "ExclusiveMax": {
-              "VersionName": "Future"
+            "Value": {
+              "AssetPathName": "/Figment_LootTables/DataTables/CashPayouts_Figment.CashPayouts_Figment",
+              "SubPathString": ""
             }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Figment"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Figment )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+          }
+        ]
+      }
+    ],
+    "DefaultGameData": {
+      "AssetPathName": "/Figment_LootTables/DataTables/AthenaCompositeGD_Figment.AthenaCompositeGD_Figment",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Figment"
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'FigmentPlaylists:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/FigmentPlaylists/FigmentPlaylists.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortPlaylistAthena",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlaylistAthena",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Playlists"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Athena.Playlist.Figment )"
-    }
+      }
+    ]
   }
 }

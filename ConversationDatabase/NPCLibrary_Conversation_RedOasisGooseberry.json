@@ -1,93 +1,267 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_RedOasisGooseberry",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_RedOasisGooseberry'",
+    "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "AC6C3891-4E9D533A-18629AAF-7F2EC2F9",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RedOasisGooseberry:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "ABE53DE1451D7072C027D999D7BFDDBE",
+            "SourceString": "You're doing great out there!",
+            "LocalizedString": "You're doing great out there!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_RedOasisGooseberry:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C11D5B5D4D594505079743B436BBD98C",
+            "SourceString": "It's good to see another pro on the field.",
+            "LocalizedString": "It's good to see another pro on the field."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RedOasisGooseberry:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CC43E5FE41D478387AB0448AA0ABEBFA",
+            "SourceString": "Hey, you're me!",
+            "LocalizedString": "Hey, you're me!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RedOasisGooseberry:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "67A97F7D41530C26FAFB6992ADB607C3",
+            "SourceString": "Nice footwork.",
+            "LocalizedString": "Nice footwork."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RedOasisGooseberry:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1DFA03C14420F48E9AF0B9A6F4122A97",
+            "SourceString": "Uh... You look a little green...",
+            "LocalizedString": "Uh... You look a little green..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RedOasisGooseberry:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "19233CC4-44923698-AE13F98C-678239A8",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_RedOasisGooseberry:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.9"
-        }
-      },
-      {
-        "Key": "245AA09D-4D563E70-8B0CDB9B-A6EF6754",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RedOasisGooseberry:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.2"
-        }
-      },
-      {
-        "Key": "628027D5-4F1AB026-643289AC-EC3A17FF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RedOasisGooseberry:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "324F0F8D4CA733F032A19B96A6F114A5",
+        "SourceString": "I hope you're cheering for Fortnite FC! ",
+        "LocalizedString": "I hope you're cheering for Fortnite FC! "
       }
+    },
+    "OutputConnections": [
+      "628027D5-4F1AB026-643289AC-EC3A17FF",
+      "245AA09D-4D563E70-8B0CDB9B-A6EF6754"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.RedOasisGooseberry"
-        },
-        "DestinationList": [
-          "AC6C3891-4E9D533A-18629AAF-7F2EC2F9"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "AC6C3891-4E9D533A-18629AAF-7F2EC2F9",
-      "19233CC4-44923698-AE13F98C-678239A8",
-      "245AA09D-4D563E70-8B0CDB9B-A6EF6754",
-      "628027D5-4F1AB026-643289AC-EC3A17FF"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "19233CC4-44923698-AE13F98C-678239A8",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RedOasisGooseberry:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/RedOasisGooseberry/NPCLibrary_Conversation_RedOasisGooseberry.1"
+    }
   }
 }

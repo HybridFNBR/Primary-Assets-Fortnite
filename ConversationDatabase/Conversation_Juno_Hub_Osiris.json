@@ -1,31 +1,86 @@
 {
-  "Type": "Continue_C",
-  "Name": "Continue_C_0",
+  "Type": "JunoConversationTaskNode_Speech_C",
+  "Name": "JunoConversationTaskNode_Speech_C_2",
   "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "BlueprintGeneratedClass'/Game/Conversation/Continue.Continue_C'",
+  "Class": "BlueprintGeneratedClass'/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.JunoConversationTaskNode_Speech_C'",
   "Outer": {
     "ObjectName": "ConversationDatabase'Conversation_Juno_Hub_Osiris'",
     "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Hub_Osiris.6"
   },
   "Template": {
-    "ObjectName": "Continue_C'Default__Continue_C'",
-    "ObjectPath": "/Game/Conversation/Continue.1"
+    "ObjectName": "JunoConversationTaskNode_Speech_C'Default__JunoConversationTaskNode_Speech_C'",
+    "ObjectPath": "/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.2"
   },
   "Properties": {
-    "SubNodes": [
+    "DefaultMoodReactionTag": {
+      "TagName": "Juno.Mood.Reactions.Statement.Default"
+    },
+    "SpecializedConfigs": [
       {
-        "ObjectName": "FortConversationRequirement_ControllerRequirement'Conversation_Juno_Hub_Osiris:FortConversationRequirement_ControllerRequirement_1'",
-        "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Hub_Osiris.14"
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Persona"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Persona )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Default"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Line_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Line_Weight.0"
+            },
+            "RowName": "None"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_TownbuilderOsiris'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_TownbuilderOsiris.0"
+          },
+          "RowName": "TB_Checkin_Earned_Nickname"
+        }
       }
     ],
     "OutputConnections": [
-      "71862E54-46BE98DB-A602C389-0CED238B",
-      "C40455E5-44AA373D-F392499A-63D7B6B4"
+      "64AAA2F9-446B5DF1-039896A0-577335AF",
+      "7B0A0314-4A338ADB-E55A6CAA-4DB64D98"
     ],
-    "Compiled_NodeGUID": "25CF7E05-4FCEEC06-810506AA-266086B6",
+    "NodeName": "Check in point",
+    "Compiled_NodeGUID": "907B687E-419CD1B2-CE7B6F85-2564E3A5",
     "ParentNode": {
-      "ObjectName": "ConversationEntryPointNode'Conversation_Juno_Hub_Osiris:ConversationEntryPointNode_1'",
-      "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Hub_Osiris.7"
+      "ObjectName": "Continue_C'Conversation_Juno_Hub_Osiris:Continue_C_41'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Hub_Osiris.3"
     }
   }
 }

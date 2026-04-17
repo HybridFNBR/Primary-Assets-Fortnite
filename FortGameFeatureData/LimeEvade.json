@@ -1,27 +1,27 @@
 {
-  "Type": "FortGameFeatureAction_AddValkyrieComponents",
-  "Name": "FortGameFeatureAction_AddValkyrieComponents_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddValkyrieComponents'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'LimeEvade'",
     "ObjectPath": "/LimeEvade/LimeEvade.1"
   },
   "Properties": {
-    "ComponentList": [
+    "SourcesToAdd": [
       {
-        "ActorClass": {
-          "AssetPathName": "/Script/FortniteGame.FortMinigameSettingsBuilding",
+        "RegistryToAddTo": "Fort.DataRegistry",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "",
           "SubPathString": ""
         },
-        "ComponentClass": {
-          "AssetPathName": "/LimeEvade/Components/BP_UserOptionComponent_LimeEvade.BP_UserOptionComponent_LimeEvade_C",
+        "CurveTableToAdd": {
+          "AssetPathName": "/LimeEvade/DataRegistry/CT_LimeEvade.CT_LimeEvade",
           "SubPathString": ""
-        },
-        "bClientComponent": true,
-        "bServerComponent": true,
-        "bAddToNewlySpawnedActorsInEditor": false,
-        "WhenToInjectThisComponent": 3
+        }
       }
     ]
   }

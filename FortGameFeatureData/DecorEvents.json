@@ -1,52 +1,69 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'DecorEvents'",
-    "ObjectPath": "/DecorEvents/DecorEvents.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "DecorEvents",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/DecorEvents/DecorEvents",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "31.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'DecorEvents:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/DecorEvents/DecorEvents.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DecorEvents:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/DecorEvents/DecorEvents.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "AthenaBattleBus",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaBattleBusItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "BBID"
           },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( ) )"
-          },
-          "bMigratedFromOldData": true
+          {
+            "Path": "Athena/Items/Cosmetics/BattleBuses"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL(  ANY( ) )"
-    }
+      },
+      {
+        "PrimaryAssetType": "EventDescription",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortEventItemDefinitionBase",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "DecorEvents"
+          },
+          {
+            "Path": "Athena/Items/Events"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
   }
 }

@@ -1,102 +1,313 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_SlowBurn",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_SlowBurn'",
+    "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "63CE0F45-400B6A2D-548A558B-42490A75",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SlowBurn:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.1"
-        }
-      },
-      {
-        "Key": "D2B5D8FB-44013916-BCE58083-754F1A44",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_SlowBurn:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.11"
-        }
-      },
-      {
-        "Key": "6D0BB29C-475D812F-975BC289-782C78F5",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SlowBurn:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.4"
-        }
-      },
-      {
-        "Key": "C2589DCB-4C6031B9-405B15BE-33E4CC0C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SlowBurn:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.2"
-        }
-      },
-      {
-        "Key": "0CA9770F-4E651E0D-982A51A0-ECF8952A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SlowBurn:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.SlowBurn"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C23B699E4C57FDF8C0B0C08EB0E5F352",
+            "SourceString": "The path ahead is blocked only by the first step.",
+            "LocalizedString": "The path ahead is blocked only by the first step."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_SlowBurn:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "63CE0F45-400B6A2D-548A558B-42490A75"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E918B9874C6956FD1056F3B25D262D2E",
+            "SourceString": "I made you leader for one simple reason. You asked.",
+            "LocalizedString": "I made you leader for one simple reason. You asked."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SlowBurn:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B18980E64FD9740B17AEEE92A456D16D",
+            "SourceString": "Remember, my son, anger is self-destructive.",
+            "LocalizedString": "Remember, my son, anger is self-destructive."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SlowBurn:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E1A8CC3D426FB556947C479E8B4C668B",
+            "SourceString": "We must fall many times before we learn to stand.",
+            "LocalizedString": "We must fall many times before we learn to stand."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SlowBurn:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A967E4DD4F0635ABB81F8B8136803654",
+            "SourceString": "A creative mind must be balanced by discipline.",
+            "LocalizedString": "A creative mind must be balanced by discipline."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SlowBurn:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6E7BCCA24676DFC7AD670D98AC09F939",
+            "SourceString": "You only fail if you give up.",
+            "LocalizedString": "You only fail if you give up."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SlowBurn:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "B81F93EA4ACEA926F5D9C9BC27C85BB1",
+        "SourceString": "Remember why you fight.",
+        "LocalizedString": "Remember why you fight."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Ch5S1.D3.Q8",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "63CE0F45-400B6A2D-548A558B-42490A75",
-      "D2B5D8FB-44013916-BCE58083-754F1A44",
-      "6D0BB29C-475D812F-975BC289-782C78F5",
+    },
+    "OutputConnections": [
+      "0CA9770F-4E651E0D-982A51A0-ECF8952A",
       "C2589DCB-4C6031B9-405B15BE-33E4CC0C",
-      "0CA9770F-4E651E0D-982A51A0-ECF8952A"
+      "6D0BB29C-475D812F-975BC289-782C78F5"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "D2B5D8FB-44013916-BCE58083-754F1A44",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SlowBurn:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/SlowBurn/NPCLibrary_Conversation_SlowBurn.1"
+    }
   }
 }

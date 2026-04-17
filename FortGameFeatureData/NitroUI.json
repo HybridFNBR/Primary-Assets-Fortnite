@@ -1,115 +1,43 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'NitroUI'",
-    "ObjectPath": "/NitroUI/NitroUI.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "NitroUI",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/NitroUI/NitroUI",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "30.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Plugin.Playlist.ForbiddenFruit"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              4,
-              0,
-              1,
-              2,
-              3
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core, Plugin.Playlist.ForbiddenFruit ) )"
-          },
-          "bMigratedFromOldData": true
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::TeammateStatusPortraitOverlay",
+        "WidgetClass": {
+          "AssetPathName": "/NitroUI/Assets/WBP_Nitro_PlayerInfoExtension.WBP_Nitro_PlayerInfoExtension_C",
+          "SubPathString": ""
         },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Figment"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Figment )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      },
+      {
+        "Slot": "EUIExtensionSlot::VehicleFuelGaugeOverlay",
+        "WidgetClass": {
+          "AssetPathName": "/NitroUI/Assets/WBP_Nitro_VehicleFuelGauge.WBP_Nitro_VehicleFuelGauge_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "DynamicUIDirectorClass": {
+      "AssetPathName": "/NitroUI/NitroUIDirector.NitroUIDirector_C",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Plugin.Playlist.ForbiddenFruit"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        4,
-        0,
-        1,
-        2,
-        3
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core, Plugin.Playlist.ForbiddenFruit ) )"
-    }
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'NitroUI:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/NitroUI/NitroUI.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'NitroUI:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/NitroUI/NitroUI.1"
+      }
+    ]
   }
 }

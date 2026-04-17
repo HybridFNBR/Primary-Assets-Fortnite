@@ -1,102 +1,268 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_TechnoAwaken",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_TechnoAwaken'",
+    "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "30553EE4-4EC64D05-F6B76799-FA61E874",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TechnoAwaken:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.1"
-        }
-      },
-      {
-        "Key": "E9759460-42565CAD-D53CB7A7-55B42AFA",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_TechnoAwaken:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.10"
-        }
-      },
-      {
-        "Key": "F76E1A3F-4342E7F0-DE35268A-FA4CCBD1",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TechnoAwaken:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.4"
-        }
-      },
-      {
-        "Key": "7D116D0E-4D157DE7-817D70BB-4B9C9D9B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TechnoAwaken:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.2"
-        }
-      },
-      {
-        "Key": "C65DF7B7-4123FD9A-9AF32BBE-8EFB5ADE",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TechnoAwaken:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.TechnoAwaken"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A2AB5204471B4FB37DDDC2AD8ABAA896",
+            "SourceString": "Hey, you feel that beat? Listen.",
+            "LocalizedString": "Hey, you feel that beat? Listen."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_TechnoAwaken:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "30553EE4-4EC64D05-F6B76799-FA61E874"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9FCC71BB4B583040949788B225FBA502",
+            "SourceString": "The Island's got its own rhythm. Just gotta know how to listen.",
+            "LocalizedString": "The Island's got its own rhythm. Just gotta know how to listen."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TechnoAwaken:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4FF58A2A46B45D83212748908F160A79",
+            "SourceString": "Everything's got a beat. This Island, me, even you.",
+            "LocalizedString": "Everything's got a beat. This Island, me, even you."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TechnoAwaken:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FB53EE684967372B22E3EAA41925948F",
+            "SourceString": "Stayin' safe out there? The beat's goin' wild today.",
+            "LocalizedString": "Stayin' safe out there? The beat's goin' wild today."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TechnoAwaken:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1B7130024F6CB7ED96876DA01414EDEB",
+            "SourceString": "The Society may be falling, but somethin' else will pick up the beat. Trust me.",
+            "LocalizedString": "The Society may be falling, but somethin' else will pick up the beat. Trust me."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TechnoAwaken:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "AC8B343F4D594697712EA1A07F5ECC67",
+        "SourceString": "The Island's got its own rhythm. Just gotta know how to listen.",
+        "LocalizedString": "The Island's got its own rhythm. Just gotta know how to listen."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Ch5S1.D3.Q8",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "30553EE4-4EC64D05-F6B76799-FA61E874",
-      "E9759460-42565CAD-D53CB7A7-55B42AFA",
-      "F76E1A3F-4342E7F0-DE35268A-FA4CCBD1",
+    },
+    "OutputConnections": [
+      "C65DF7B7-4123FD9A-9AF32BBE-8EFB5ADE",
       "7D116D0E-4D157DE7-817D70BB-4B9C9D9B",
-      "C65DF7B7-4123FD9A-9AF32BBE-8EFB5ADE"
+      "F76E1A3F-4342E7F0-DE35268A-FA4CCBD1"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "E9759460-42565CAD-D53CB7A7-55B42AFA",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TechnoAwaken:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/TechnoAwaken/NPCLibrary_Conversation_TechnoAwaken.1"
+    }
   }
 }

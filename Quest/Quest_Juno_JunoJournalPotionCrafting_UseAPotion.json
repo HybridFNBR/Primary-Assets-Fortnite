@@ -1,20 +1,180 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Juno_JunoJournalPotionCrafting_UseAPotion'",
-    "ObjectPath": "/JunoJournalPotionCrafting/Journal/Quests/Quest_Juno_JunoJournalPotionCrafting_UseAPotion.1"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Juno_JunoJournalPotionCrafting_UseAPotion",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/JunoJournalPotionCrafting/Journal/Quests/Quest_Juno_JunoJournalPotionCrafting_UseAPotion",
   "Properties": {
-    "VisibilitySettings": {
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "ExpirationDuration": -1,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Juno_JournalHijinks_UseAPotion_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.Juno.ConsumedItem"
+            },
+            "Subjects": [
+              {
+                "Key": "Item",
+                "Value": {
+                  "TagQuery": {
+                    "TokenStreamVersion": 0,
+                    "TagDictionary": [
+                      {
+                        "TagName": "Juno.Consumable.HealthPotion"
+                      }
+                    ],
+                    "QueryTokenStream": [
+                      0,
+                      1,
+                      2,
+                      1,
+                      0
+                    ],
+                    "UserDescription": "",
+                    "AutoDescription": " ALL( Juno.Consumable.HealthPotion )"
+                  }
+                }
+              }
+            ],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "0362DCB1463455C985FAB0A6C4A69046",
+          "SourceString": "Consume a Potion",
+          "LocalizedString": "Consume a Potion"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "65C55ADD41E1FB3FF5F25995626ACF92",
+          "SourceString": "Consume a Potion",
+          "LocalizedString": "Consume a Potion"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.Juno )"
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false,
-      "bHideQuestProgressNotification": true
-    }
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Juno_JunoJournalPotionCrafting_UseAPotion:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JunoJournalPotionCrafting/Journal/Quests/Quest_Juno_JunoJournalPotionCrafting_UseAPotion.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Juno_JournalHijinks_UseAPotion_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "C4FC289B4AB70610D4B6F99D105180D7",
+      "SourceString": "Consume a Potion",
+      "LocalizedString": "Consume a Potion"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "C9FF308C4732C5B0D927D6BA76F523CA",
+      "SourceString": "Consume a Potion",
+      "LocalizedString": "Consume a Potion"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.AwesomeSystem.Quest.StepComplete"
+        ]
+      }
+    ]
   }
 }

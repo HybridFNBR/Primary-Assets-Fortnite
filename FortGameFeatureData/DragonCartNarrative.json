@@ -1,52 +1,21 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_LoadPluginForMeshNetwork",
+  "Name": "GameFeatureAction_LoadPluginForMeshNetwork_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_LoadPluginForMeshNetwork'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'DragonCartNarrative'",
     "ObjectPath": "/DragonCartNarrative/DragonCartNarrative.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "39.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "41.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.Core"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              1,
-              0,
-              3,
-              1,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default ),  NONE( Athena.Playlist.Core ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    }
+    "PluginsToLoad": [
+      {
+        "GameFeaturePluginName": "SpecialEventGameplay",
+        "RestrictToMapName": "Hera_Terrain",
+        "bPlacePluginIntoTargetState": false,
+        "DesiredPluginState": "EGameFeatureTargetState::Active"
+      }
+    ],
+    "RestrictToMapName": "Hera_Terrain"
   }
 }

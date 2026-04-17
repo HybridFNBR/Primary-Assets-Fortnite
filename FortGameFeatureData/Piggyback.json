@@ -1,16 +1,27 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'Piggyback'",
     "ObjectPath": "/Piggyback/Piggyback.7"
   },
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/Piggyback/Gameplay/MME_PiggybackRider.MME_PiggybackRider_C",
-      "SubPathString": ""
-    }
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerPawn",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Piggyback/Gameplay/BP_PiggybackComponent.BP_PiggybackComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

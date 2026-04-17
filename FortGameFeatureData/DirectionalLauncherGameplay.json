@@ -1,68 +1,49 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_1",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'DirectionalLauncherGameplay'",
-    "ObjectPath": "/DirectionalLauncherGameplay/DirectionalLauncherGameplay.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "DirectionalLauncherGameplay",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/DirectionalLauncherGameplay/DirectionalLauncherGameplay",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "22.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.Playground"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "Creative Playlists",
-            "AutoDescription": " ANY( Athena.Creative, Athena.Playground )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultGameData": {
+      "AssetPathName": "/DirectionalLauncherGameplay/DataTables/DirectionalLauncherGameplayGameData.DirectionalLauncherGameplayGameData",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DirectionalLauncherGameplay:FortGameFeatureAction_AddToPlaylists_1'",
+        "ObjectPath": "/DirectionalLauncherGameplay/DirectionalLauncherGameplay.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'DirectionalLauncherGameplay:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/DirectionalLauncherGameplay/DirectionalLauncherGameplay.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortExposedAssetList",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playground"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "UEFNExposedAssets"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "UserDescription": "Creative Playlists",
-      "AutoDescription": " ANY( Athena.Creative, Athena.Playground )"
-    }
+      }
+    ]
   }
 }

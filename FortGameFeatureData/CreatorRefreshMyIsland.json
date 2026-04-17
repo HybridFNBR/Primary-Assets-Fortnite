@@ -1,60 +1,39 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'CreatorRefreshMyIsland'",
-    "ObjectPath": "/CreatorRefreshMyIsland/CreatorRefreshMyIsland.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "CreatorRefreshMyIsland",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/CreatorRefreshMyIsland/CreatorRefreshMyIsland",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "26.30"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "UGC.EditSupport"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "UGC Edit Support",
-            "AutoDescription": " ANY( UGC.EditSupport )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "UGC.EditSupport"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "UserDescription": "UGC Edit Support",
-      "AutoDescription": " ANY( UGC.EditSupport )"
-    }
+    "UIExtensions": [
+      {
+        "Slot": "EUIExtensionSlot::InventoryScreenTab",
+        "WidgetClass": {
+          "AssetPathName": "/CreatorRefreshMyIsland/UI/WBP_V3_Creative_MyIsland_CreatorRefresh_Prototype.WBP_V3_Creative_MyIsland_CreatorRefresh_Prototype_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      },
+      {
+        "Slot": "EUIExtensionSlot::FullScreenMapTab",
+        "WidgetClass": {
+          "AssetPathName": "/CreatorRefreshMyIsland/UI/WBP_V3_Creative_MyIsland_CreatorRefresh_Prototype.WBP_V3_Creative_MyIsland_CreatorRefresh_Prototype_C",
+          "SubPathString": ""
+        },
+        "RequiredCVar": "",
+        "bUseRequiredCVar": false
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CreatorRefreshMyIsland:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/CreatorRefreshMyIsland/CreatorRefreshMyIsland.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'CreatorRefreshMyIsland:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/CreatorRefreshMyIsland/CreatorRefreshMyIsland.1"
+      }
+    ]
   }
 }

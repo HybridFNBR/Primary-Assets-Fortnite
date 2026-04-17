@@ -1,93 +1,177 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Retro_M",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Retro_M/NPCLibrary_Conversation_Retro_M",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Retro_M'",
+    "ObjectPath": "/NPCLibrary/NPCs/Retro_M/NPCLibrary_Conversation_Retro_M.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "D78B2CC3-48241E27-826F63AF-02CD3A22",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Retro_M:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Retro_M/NPCLibrary_Conversation_Retro_M.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DFA0E632432494C899F5DE85AB3B3A00",
+            "SourceString": "So... this is land. Don't care for it.",
+            "LocalizedString": "So... this is land. Don't care for it."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Retro_M:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Retro_M/NPCLibrary_Conversation_Retro_M.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D6D2A9AE422F1535534BF7854811387F",
+            "SourceString": "You're cleared for approach...",
+            "LocalizedString": "You're cleared for approach..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Retro_M:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Retro_M/NPCLibrary_Conversation_Retro_M.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CCB7556B40525F3F00BD82B7A294FE8B",
+            "SourceString": "Stay clear of my flight path!",
+            "LocalizedString": "Stay clear of my flight path!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Retro_M:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Retro_M/NPCLibrary_Conversation_Retro_M.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "D7C1C8E6-4B657003-C289CD95-5CE86FFC",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Retro_M:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Retro_M/NPCLibrary_Conversation_Retro_M.7"
-        }
-      },
-      {
-        "Key": "B83CE736-457F1E94-7956C498-0E71D33E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Retro_M:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Retro_M/NPCLibrary_Conversation_Retro_M.2"
-        }
-      },
-      {
-        "Key": "8E0D6D44-4982F413-5C4990B7-69332CF3",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Retro_M:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Retro_M/NPCLibrary_Conversation_Retro_M.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "28EC28874B2573EEBEB5A0B060B8913B",
+        "SourceString": "You're cleared for approach...",
+        "LocalizedString": "You're cleared for approach..."
       }
+    },
+    "OutputConnections": [
+      "8E0D6D44-4982F413-5C4990B7-69332CF3",
+      "B83CE736-457F1E94-7956C498-0E71D33E"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Retro_M"
-        },
-        "DestinationList": [
-          "D78B2CC3-48241E27-826F63AF-02CD3A22"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "D78B2CC3-48241E27-826F63AF-02CD3A22",
-      "D7C1C8E6-4B657003-C289CD95-5CE86FFC",
-      "B83CE736-457F1E94-7956C498-0E71D33E",
-      "8E0D6D44-4982F413-5C4990B7-69332CF3"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "D7C1C8E6-4B657003-C289CD95-5CE86FFC",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Retro_M:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Retro_M/NPCLibrary_Conversation_Retro_M.1"
+    }
   }
 }

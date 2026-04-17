@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Specialist_Professor",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCSpecialist_Professor/NPCs/Professor/NPCLibrary_Conversation_Specialist_Professor",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Specialist_Professor'",
+    "ObjectPath": "/NPCSpecialist_Professor/NPCs/Professor/NPCLibrary_Conversation_Specialist_Professor.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "81FBA86A-43B55678-AAB0349F-6AE3A58D",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Specialist_Professor:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCSpecialist_Professor/NPCs/Professor/NPCLibrary_Conversation_Specialist_Professor.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "997B2CAA4FE68A39578D06BC4C7B84AD",
+            "SourceString": "Need a hand? Hire me. I can bring my artisanal, hand-made explosives...",
+            "LocalizedString": "Need a hand? Hire me. I can bring my artisanal, hand-made explosives..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Specialist_Professor:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCSpecialist_Professor/NPCs/Professor/NPCLibrary_Conversation_Specialist_Professor.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "4813F388-425119D8-BA012D99-CDEE560C",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Specialist_Professor:Speech_C_4'",
-          "ObjectPath": "/NPCSpecialist_Professor/NPCs/Professor/NPCLibrary_Conversation_Specialist_Professor.5"
-        }
-      },
-      {
-        "Key": "63006246-437A0F64-703762B5-B88DD778",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Specialist_Professor:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCSpecialist_Professor/NPCs/Professor/NPCLibrary_Conversation_Specialist_Professor.2"
-        }
-      },
-      {
-        "Key": "6CCFAC1E-47A9293D-B197EFB4-A14AB703",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Specialist_Professor:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCSpecialist_Professor/NPCs/Professor/NPCLibrary_Conversation_Specialist_Professor.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "AAA086D14141938C09FF6B9A0A25BDD5",
+        "SourceString": "Need a hand? Hire me. I can bring my artisanal, hand-made explosives...",
+        "LocalizedString": "Need a hand? Hire me. I can bring my artisanal, hand-made explosives..."
       }
+    },
+    "OutputConnections": [
+      "6CCFAC1E-47A9293D-B197EFB4-A14AB703",
+      "63006246-437A0F64-703762B5-B88DD778"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Specialist.Heavy"
-        },
-        "DestinationList": [
-          "81FBA86A-43B55678-AAB0349F-6AE3A58D"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "81FBA86A-43B55678-AAB0349F-6AE3A58D",
-      "4813F388-425119D8-BA012D99-CDEE560C",
-      "63006246-437A0F64-703762B5-B88DD778",
-      "6CCFAC1E-47A9293D-B197EFB4-A14AB703"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "4813F388-425119D8-BA012D99-CDEE560C",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Specialist_Professor:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCSpecialist_Professor/NPCs/Professor/NPCLibrary_Conversation_Specialist_Professor.1"
+    }
   }
 }

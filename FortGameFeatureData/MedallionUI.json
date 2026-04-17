@@ -1,111 +1,53 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'MedallionUI'",
     "ObjectPath": "/MedallionUI/MedallionUI.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Athena.Playlist.ItemsTest"
-              },
-              {
-                "TagName": "Plugin.Playlist.ForbiddenFruit"
-              },
-              {
-                "TagName": "SpecialEvent.SkyMango"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.BlastBerry"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              6,
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              3,
-              1,
-              6
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.ItemsTest, Plugin.Playlist.ForbiddenFruit, SpecialEvent.SkyMango, Athena.Playlist.Default, Plugin.Playlist.Arena ),  NONE( Athena.Playlist.BlastBerry ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Test"
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerControllerAthena",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.Arena"
+        "ComponentClass": {
+          "AssetPathName": "/MedallionUI/Components/BP_Medallion_PickupOverrideComponent.BP_Medallion_PickupOverrideComponent_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist.ItemsTest"
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerController",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist.Default"
+        "ComponentClass": {
+          "AssetPathName": "/Medallions/BP_Medallions_TrackingComponent.BP_Medallions_TrackingComponent_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.ForbiddenFruit"
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/DynamicAthenaHUD/Director/BP_DynamicAthenaHudDirector.BP_DynamicAthenaHudDirector_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist.BlastBerry"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        2,
-        1,
-        5,
-        0,
-        1,
-        2,
-        3,
-        4,
-        3,
-        1,
-        5
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Plugin.Playlist.Arena, Athena.Playlist.ItemsTest, Athena.Playlist.Default, Plugin.Playlist.ForbiddenFruit ),  NONE( Athena.Playlist.BlastBerry ) )"
-    }
+        "ComponentClass": {
+          "AssetPathName": "/MedallionUI/Director/BP_MedallionUI_UIDirectorComp.BP_MedallionUI_UIDirectorComp_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

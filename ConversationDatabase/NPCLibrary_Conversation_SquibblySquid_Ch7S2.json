@@ -1,102 +1,349 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_SquibblySquid_Ch7S2",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_SquibblySquid_Ch7S2'",
+    "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "99804FCC-46560D96-43639BB8-834E179B",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SquibblySquid_Ch7S2:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.1"
-        }
-      },
-      {
-        "Key": "3EBBA5AF-458C6FE1-82FC109C-3A6D8112",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_SquibblySquid_Ch7S2:Speech_C_4'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.12"
-        }
-      },
-      {
-        "Key": "AD05FAB7-4CA08F03-5C478898-53AD53D2",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SquibblySquid_Ch7S2:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.4"
-        }
-      },
-      {
-        "Key": "1D0A79B7-46FC6E5D-ABC84E95-F16A4348",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SquibblySquid_Ch7S2:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.2"
-        }
-      },
-      {
-        "Key": "9C6740BD-4B70A1C9-D062B683-E1A51C52",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SquibblySquid_Ch7S2:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.SquibblySquid"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CC30AE5B415934BA555221B555EF567D",
+            "SourceString": "Ahoy there.",
+            "LocalizedString": "Ahoy there."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_SquibblySquid_Ch7S2:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "99804FCC-46560D96-43639BB8-834E179B"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "EF46977846BA92208450D59D8A737F79",
+            "SourceString": "What's the catch of the day?",
+            "LocalizedString": "What's the catch of the day?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SquibblySquid_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8C9B9A2641EFCFC140E9C386B9F9CDCD",
+            "SourceString": "Got some news on the hook for me?",
+            "LocalizedString": "Got some news on the hook for me?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SquibblySquid_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "023C8D0F45FE3B394CAD099AD7182997",
+            "SourceString": "It's a beautiful day for a salty seafood dinner.",
+            "LocalizedString": "It's a beautiful day for a salty seafood dinner."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SquibblySquid_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "02E43DF849F48F007CDBC6854CDE1B78",
+            "SourceString": "Warm plates and full hearts!",
+            "LocalizedString": "Warm plates and full hearts!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SquibblySquid_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4D8704E04D0A86EBA7204488E4962EA1",
+            "SourceString": "You pretend to be the interloper? You MOCK me?",
+            "LocalizedString": "You pretend to be the interloper? You MOCK me?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SquibblySquid_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B8F366114AB7108225E3A9AF45196005",
+            "SourceString": "You will not change my mind, Princess. He will pay.",
+            "LocalizedString": "You will not change my mind, Princess. He will pay."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SquibblySquid_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "657951D241FE950A9B24D0891705B905",
+        "SourceString": "What's the catch of the day?",
+        "LocalizedString": "What's the catch of the day?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.SquibblySquid.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "99804FCC-46560D96-43639BB8-834E179B",
-      "3EBBA5AF-458C6FE1-82FC109C-3A6D8112",
-      "AD05FAB7-4CA08F03-5C478898-53AD53D2",
+    },
+    "OutputConnections": [
+      "9C6740BD-4B70A1C9-D062B683-E1A51C52",
       "1D0A79B7-46FC6E5D-ABC84E95-F16A4348",
-      "9C6740BD-4B70A1C9-D062B683-E1A51C52"
+      "AD05FAB7-4CA08F03-5C478898-53AD53D2"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "3EBBA5AF-458C6FE1-82FC109C-3A6D8112",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SquibblySquid_Ch7S2:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibraryCH7S2/NPCs/SquibblySquid/NPCLibrary_Conversation_SquibblySquid_Ch7S2.1"
+    }
   }
 }

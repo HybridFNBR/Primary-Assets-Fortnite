@@ -1,102 +1,403 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Cerberus",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Cerberus'",
+    "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "E4A0160B-4296DA0D-2103EF95-F0500617",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Cerberus:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.1"
-        }
-      },
-      {
-        "Key": "438065F3-41A7195B-4AE1B180-F77AC53D",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Cerberus:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.13"
-        }
-      },
-      {
-        "Key": "4CDA7249-4A996E0E-760A6BA2-7DFB47AD",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Cerberus:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.4"
-        }
-      },
-      {
-        "Key": "F2EC1424-42294D7E-4C70949D-2F059139",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Cerberus:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.2"
-        }
-      },
-      {
-        "Key": "719D1BB3-43B07A04-677B319F-9EC6AAD3",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Cerberus:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Cerberus"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5764E5DB4CF8F20FDF77B49DF0BF7306",
+            "SourceString": "HA HA HA, WHAT WEAKLING CALLS UPON THE HOUNDS OF HADES??",
+            "LocalizedString": "HA HA HA, WHAT WEAKLING CALLS UPON THE HOUNDS OF HADES??"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Cerberus:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "E4A0160B-4296DA0D-2103EF95-F0500617"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5564ECDE47F95EBF7FF9468A4B101316",
+            "SourceString": "I AM THE STRONG HEAD OF CERBERUS. WHAT DO YOU WANT, PUP?",
+            "LocalizedString": "I AM THE STRONG HEAD OF CERBERUS. WHAT DO YOU WANT, PUP?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Cerberus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1463FB0045DA14B128F20088B3520D32",
+            "SourceString": "Oh good, my other heads are napping. What do you need, hero?",
+            "LocalizedString": "Oh good, my other heads are napping. What do you need, hero?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Cerberus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "224503CC48E90CFC3180089B2955E4AE",
+            "SourceString": "YOU ARE SMALL AND LOOK TASTY. WHAT DO YOU NEED.",
+            "LocalizedString": "YOU ARE SMALL AND LOOK TASTY. WHAT DO YOU NEED."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Cerberus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "21B69085411D9562CD9D128A1B21C444",
+            "SourceString": "BEHOLD THE UNDERWORLD! READY TO MOVE IN? HA HA HA.",
+            "LocalizedString": "BEHOLD THE UNDERWORLD! READY TO MOVE IN? HA HA HA."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Cerberus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "11E52C224A6A4FC512E33E8AFCE655A0",
+            "SourceString": "My other heads are... loud and mean. But I will help if I can.",
+            "LocalizedString": "My other heads are... loud and mean. But I will help if I can."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Cerberus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4C40D0A440AF7A69F83028B2D619250D",
+            "SourceString": "YOU'D BETTER CLEAR OUT BEFORE SHE ARRIVES, OR I MIGHT BITE YA, HA HA HA.",
+            "LocalizedString": "YOU'D BETTER CLEAR OUT BEFORE SHE ARRIVES, OR I MIGHT BITE YA, HA HA HA."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Cerberus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FBB39E184D553EC48F445492F9B2A57A",
+            "SourceString": "MASTER! BORK BORK BORK!!",
+            "LocalizedString": "MASTER! BORK BORK BORK!!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Cerberus:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "EE1A2E1F4B1B213414FBE4B5F6DCD713",
+        "SourceString": "I AM THE STRONG HEAD OF CERBERUS. WHAT DO YOU WANT, PUP?",
+        "LocalizedString": "I AM THE STRONG HEAD OF CERBERUS. WHAT DO YOU WANT, PUP?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Cerberus.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "E4A0160B-4296DA0D-2103EF95-F0500617",
-      "438065F3-41A7195B-4AE1B180-F77AC53D",
-      "4CDA7249-4A996E0E-760A6BA2-7DFB47AD",
+    },
+    "OutputConnections": [
+      "719D1BB3-43B07A04-677B319F-9EC6AAD3",
       "F2EC1424-42294D7E-4C70949D-2F059139",
-      "719D1BB3-43B07A04-677B319F-9EC6AAD3"
+      "4CDA7249-4A996E0E-760A6BA2-7DFB47AD"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "438065F3-41A7195B-4AE1B180-F77AC53D",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Cerberus:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Cerberus/NPCLibrary_Conversation_Cerberus.1"
+    }
   }
 }

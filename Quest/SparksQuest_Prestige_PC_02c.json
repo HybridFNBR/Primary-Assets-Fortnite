@@ -1,39 +1,200 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'SparksQuest_Prestige_PC_02c'",
-    "ObjectPath": "/SparksPermanentQuests/Items/EvergreenQuestDefinitions/Prestige/Festival/Tough/Punchcards/SparksQuest_Prestige_PC_02c.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "SparksQuest_Prestige_PC_02c",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/SparksPermanentQuests/Items/EvergreenQuestDefinitions/Prestige/Festival/Tough/Punchcards/SparksQuest_Prestige_PC_02c",
   "Properties": {
-    "InformationSettings": {
-      "bShowMaxStageInDescription": false
-    },
-    "VisibilitySettings": {
-      "bOverrideBundleVisibilityData": true,
-      "QuestVisiblityData": {
-        "bIsVisibleWhenClaimed": true,
-        "bIsVisibleWhenCompleted": true
-      },
-      "bCanShowTimer": false
-    },
-    "GoalCardSettings": {
-      "CustomGoalWidgetBackground": {
-        "CustomClaimedStageGoalWidgetBackground": {
-          "AssetPathName": "/FortniteCoreUI/UI/Quests/MaterialInstances/MI_UI_QuestGoalHMXBackground_Gold.MI_UI_QuestGoalHMXBackground_Gold",
+    "QuestSubtype": "EFortQuestSubtype::PunchCard",
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "SparksQuest_Prestige_PC_02c_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementType": "EAcquireIncrementType::Single",
+            "bUseItemCount": false,
+            "ItemAcquired": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Token.Sparks.Permanent.Quest.Prestige.02"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Token.Sparks.Permanent.Quest.Prestige.02 )"
+              }
+            },
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AcquireSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
           "SubPathString": ""
         },
-        "CustomActiveStageGoalWidgetBackground": {
-          "AssetPathName": "/FortniteCoreUI/UI/Quests/MaterialInstances/MI_UI_QuestGoalHMXBackground_Gold.MI_UI_QuestGoalHMXBackground_Gold",
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "8384E6584040EE713A3561834015BA43",
+          "SourceString": "Play 80% or more notes in a song",
+          "LocalizedString": "Play 80% or more notes in a song"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "A5B9B8CE4604DF979A605FBC7F13966D",
+          "SourceString": "Play 80% or more notes in a song",
+          "LocalizedString": "Play 80% or more notes in a song"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 3,
+          "DisplayMaxStage": 3
+        },
+        "Count": 3,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
           "SubPathString": ""
         },
-        "CustomUnclaimedStageGoalWidgetBackground": {
-          "AssetPathName": "/FortniteCoreUI/UI/Quests/MaterialInstances/MI_UI_QuestGoalHMXBackground_Gold.MI_UI_QuestGoalHMXBackground_Gold",
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
           "SubPathString": ""
         }
       }
-    }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Sparks.BattleStage"
+        },
+        {
+          "TagName": "Product.Sparks.PilgrimQuickplay"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Product.Sparks.BattleStage, Product.Sparks.PilgrimQuickplay )"
+    },
+    "SortPriority": 53,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'SparksQuest_Prestige_PC_02c:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/SparksPermanentQuests/Items/EvergreenQuestDefinitions/Prestige/Festival/Tough/Punchcards/SparksQuest_Prestige_PC_02c.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'SparksQuest_Prestige_PC_02c:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/SparksPermanentQuests/Items/EvergreenQuestDefinitions/Prestige/Festival/Tough/Punchcards/SparksQuest_Prestige_PC_02c.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "SparksQuest_Prestige_PC_02c_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "2A26EE6F465B0C82598AB7BE437C512C",
+      "SourceString": "Play 80% or more notes in a song",
+      "LocalizedString": "Play 80% or more notes in a song"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "C28358FE489D13794C6C0F8324ADB02B",
+      "SourceString": "Play 80% or more notes in a song",
+      "LocalizedString": "Play 80% or more notes in a song"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.Sparks.Play.Prestige.Agnostic.Tough"
+        ]
+      }
+    ]
   }
 }

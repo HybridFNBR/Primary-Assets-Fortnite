@@ -1,93 +1,215 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Goldie",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Goldie/NPCLibrary_Conversation_Goldie",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Goldie'",
+    "ObjectPath": "/NPCLibrary/NPCs/Goldie/NPCLibrary_Conversation_Goldie.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "E74694D9-4DBC4601-ACF097A3-BD0EA24F",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Goldie:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Goldie/NPCLibrary_Conversation_Goldie.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "006EE814492EDBB83C55C395877A2BFC",
+            "SourceString": "Renegade Shadow told me you might be in for a heist.",
+            "LocalizedString": "Renegade Shadow told me you might be in for a heist."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Goldie:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Goldie/NPCLibrary_Conversation_Goldie.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "72BD1DBC4FAC176072AFAE9DA0FC1110",
+            "SourceString": "I'm ready to hit the Cold Blooded when you are.",
+            "LocalizedString": "I'm ready to hit the Cold Blooded when you are."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4B9653B441AA8F05F44DC3BB83273FCF",
+            "SourceString": "I keep it a little dangerous and a little glamorous.",
+            "LocalizedString": "I keep it a little dangerous and a little glamorous."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B0BBA01945161ED6DC4DF98402AAE13F",
+            "SourceString": "Do you ever wish you could turn things gold with just a touch?",
+            "LocalizedString": "Do you ever wish you could turn things gold with just a touch?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "82D66B594BFB30805E98CE832E2CBBF6",
+            "SourceString": "Rule number one: don't get caught.",
+            "LocalizedString": "Rule number one: don't get caught."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "E8779536-4BC46233-A76192AD-21523514",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Goldie:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Goldie/NPCLibrary_Conversation_Goldie.5"
-        }
-      },
-      {
-        "Key": "C7422118-4CDF1FD3-BDE7F6AA-093F7EC7",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Goldie:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Goldie/NPCLibrary_Conversation_Goldie.2"
-        }
-      },
-      {
-        "Key": "6467128D-4A7A4C83-97E870B8-84375E6A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Goldie:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Goldie/NPCLibrary_Conversation_Goldie.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "1913A0DC4D8F47E361408A925B2F5E1A",
+        "SourceString": "I'm ready to hit the Cold Blooded when you are.",
+        "LocalizedString": "I'm ready to hit the Cold Blooded when you are."
       }
+    },
+    "OutputConnections": [
+      "6467128D-4A7A4C83-97E870B8-84375E6A",
+      "C7422118-4CDF1FD3-BDE7F6AA-093F7EC7"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Goldie"
-        },
-        "DestinationList": [
-          "E74694D9-4DBC4601-ACF097A3-BD0EA24F"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "E74694D9-4DBC4601-ACF097A3-BD0EA24F",
-      "E8779536-4BC46233-A76192AD-21523514",
-      "C7422118-4CDF1FD3-BDE7F6AA-093F7EC7",
-      "6467128D-4A7A4C83-97E870B8-84375E6A"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "E8779536-4BC46233-A76192AD-21523514",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Goldie:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Goldie/NPCLibrary_Conversation_Goldie.1"
+    }
   }
 }

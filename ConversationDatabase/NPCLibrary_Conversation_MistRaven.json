@@ -1,102 +1,382 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_MistRaven",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_MistRaven'",
+    "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "67C8B376-4FC14571-AA2C39A9-AC2334B0",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_MistRaven:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.1"
-        }
-      },
-      {
-        "Key": "FBEE23AC-43F44C4F-AF2449BF-CABD4341",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_MistRaven:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.13"
-        }
-      },
-      {
-        "Key": "E7EECF5C-4B94535B-77D747A2-3827C3BF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MistRaven:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.4"
-        }
-      },
-      {
-        "Key": "20D8197A-43CB17A4-7085CEAC-E0350807",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MistRaven:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.2"
-        }
-      },
-      {
-        "Key": "B3124801-4D3CA58F-4E860DAB-DABC5F42",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MistRaven:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.MistRaven"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0FB46DFA48C68A962FA119A4BC0062B1",
+            "SourceString": "I'm Morgan Myst, team leader of The Supernovas. How can I help?",
+            "LocalizedString": "I'm Morgan Myst, team leader of The Supernovas. How can I help?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_MistRaven:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "67C8B376-4FC14571-AA2C39A9-AC2334B0"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D0168101498921B92B77C7AF9A1F3D1A",
+            "SourceString": "My Supernova Academy training didn't exactly cover swarms of Bugs.",
+            "LocalizedString": "My Supernova Academy training didn't exactly cover swarms of Bugs."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MistRaven:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "680B39AE497D9E9356EA18BF4BF8EE0E",
+            "SourceString": "We have to protect the Island, before all of this gets worse.",
+            "LocalizedString": "We have to protect the Island, before all of this gets worse."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MistRaven:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FEEE6FD54B0F19D09DA32282430A7A05",
+            "SourceString": "The Supernovas are supporting O.X.R. in protecting the Island.",
+            "LocalizedString": "The Supernovas are supporting O.X.R. in protecting the Island."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MistRaven:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F3A48AF04C7FE9904D1EE0B29D596A39",
+            "SourceString": "Did you... see this coming?",
+            "LocalizedString": "Did you... see this coming?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MistRaven:Speech_C_4.FortControllerRequirement_HasCID_14'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8202B3B844E518C992B754BDBFCC0727",
+            "SourceString": "Time for you to step up and help, instead of trying to be the hero.",
+            "LocalizedString": "Time for you to step up and help, instead of trying to be the hero."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MistRaven:Speech_C_4.FortControllerRequirement_HasCID_15'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1D8797C94355AAC4F194CAA7A0801B03",
+            "SourceString": "We're The Supernovas. It's our job to protect this Island. So let's do it.",
+            "LocalizedString": "We're The Supernovas. It's our job to protect this Island. So let's do it."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MistRaven:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1E4510754A63A92F7ACB7388AD3F64EB",
+            "SourceString": "The Supernovas will make you proud. I promise.",
+            "LocalizedString": "The Supernovas will make you proud. I promise."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MistRaven:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "599254964B154FFA9FD07FA13C1A4338",
+        "SourceString": "My Supernova Academy training didn't exactly cover swarms of Bugs.",
+        "LocalizedString": "My Supernova Academy training didn't exactly cover swarms of Bugs."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.MistRaven.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.MistRaven.Quests"
-    ],
-    "InternalNodeIds": [
-      "67C8B376-4FC14571-AA2C39A9-AC2334B0",
-      "FBEE23AC-43F44C4F-AF2449BF-CABD4341",
-      "E7EECF5C-4B94535B-77D747A2-3827C3BF",
+    },
+    "OutputConnections": [
+      "B3124801-4D3CA58F-4E860DAB-DABC5F42",
       "20D8197A-43CB17A4-7085CEAC-E0350807",
-      "B3124801-4D3CA58F-4E860DAB-DABC5F42"
+      "E7EECF5C-4B94535B-77D747A2-3827C3BF"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "FBEE23AC-43F44C4F-AF2449BF-CABD4341",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_MistRaven:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/MistRaven/NPCLibrary_Conversation_MistRaven.1"
+    }
   }
 }

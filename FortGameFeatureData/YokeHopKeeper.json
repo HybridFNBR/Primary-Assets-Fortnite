@@ -1,21 +1,27 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'YokeHopKeeper'",
     "ObjectPath": "/YokeHopKeeper/YokeHopKeeper.3"
   },
   "Properties": {
-    "MovementModeRuntimeRefList": [
+    "SourcesToAdd": [
       {
-        "AssetPathName": "/YokeHopKeeper/Movement/MME_Logic_YokeHopKeeper_Native.MME_Logic_YokeHopKeeper_Native_C",
-        "SubPathString": ""
-      },
-      {
-        "AssetPathName": "/YokeHopKeeper/Movement/MME_Logic_YokeHopKeeperLaunch.MME_Logic_YokeHopKeeperLaunch_C",
-        "SubPathString": ""
+        "RegistryToAddTo": "PawnTagQueryBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/YokeHopKeeper/AI/InjectedBehaviors/YokeHopKeeperInjectedBehaviorDataTabe.YokeHopKeeperInjectedBehaviorDataTabe",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       }
     ]
   }

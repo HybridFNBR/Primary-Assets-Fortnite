@@ -1,102 +1,268 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_EvokeFind",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_EvokeFind'",
+    "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "08A6677C-4DE440DE-4976A299-C652497C",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_EvokeFind:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.1"
-        }
-      },
-      {
-        "Key": "AF6FBF84-43B5C1D3-C34F6CAB-A85CA769",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_EvokeFind:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.10"
-        }
-      },
-      {
-        "Key": "9FD6F69A-4D9DEB93-50E6F886-CF057A67",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_EvokeFind:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.4"
-        }
-      },
-      {
-        "Key": "AF63A2CF-4611FB20-447846A0-879DBC75",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_EvokeFind:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.2"
-        }
-      },
-      {
-        "Key": "FF06FE06-417173C8-21B1A1B9-EE418463",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_EvokeFind:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.EvokeFind"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "13EE4FB649C1C854E583E9A421694512",
+            "SourceString": "We heard your Island has a little demon problem!",
+            "LocalizedString": "We heard your Island has a little demon problem!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_EvokeFind:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "08A6677C-4DE440DE-4976A299-C652497C"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D4A55F8C40431476F23BB0BCCDF81A2E",
+            "SourceString": "If you're looking for the maknae of HUNTR/X, you got her!",
+            "LocalizedString": "If you're looking for the maknae of HUNTR/X, you got her!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_EvokeFind:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "945F0889453E91B1BFDD44892E2B20A9",
+            "SourceString": "Couch! Couch! Couch! Couch!",
+            "LocalizedString": "Couch! Couch! Couch! Couch!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_EvokeFind:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "527045B04B644DA8930251A1C3F73AAA",
+            "SourceString": "So, what's the plan?",
+            "LocalizedString": "So, what's the plan?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_EvokeFind:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F2A268444F5DBD977D3938BFB68E984E",
+            "SourceString": "Demon? Ohh... You'd better start running.",
+            "LocalizedString": "Demon? Ohh... You'd better start running."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_EvokeFind:Speech_C_4.FortControllerRequirement_HasCID_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "689F754B40A69BBA0D5E27BF5EF0ED65",
+        "SourceString": "If you're looking for the maknae of HUNTR/X, you got her!",
+        "LocalizedString": "If you're looking for the maknae of HUNTR/X, you got her!"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.EvokeFind.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "08A6677C-4DE440DE-4976A299-C652497C",
-      "AF6FBF84-43B5C1D3-C34F6CAB-A85CA769",
-      "9FD6F69A-4D9DEB93-50E6F886-CF057A67",
+    },
+    "OutputConnections": [
+      "FF06FE06-417173C8-21B1A1B9-EE418463",
       "AF63A2CF-4611FB20-447846A0-879DBC75",
-      "FF06FE06-417173C8-21B1A1B9-EE418463"
+      "9FD6F69A-4D9DEB93-50E6F886-CF057A67"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "AF6FBF84-43B5C1D3-C34F6CAB-A85CA769",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_EvokeFind:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/EvokeFind/NPCLibrary_Conversation_EvokeFind.1"
+    }
   }
 }

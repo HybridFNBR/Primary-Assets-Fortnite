@@ -1,21 +1,39 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "PlaytimeRewards",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Package": "/PlaytimeRewards/PlaytimeRewards",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'PlaytimeRewards'",
+    "ObjectPath": "/PlaytimeRewards/PlaytimeRewards.0"
+  },
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
+    "ComponentList": [
       {
-        "ObjectName": "GameFeatureAction_AddComponents'PlaytimeRewards:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/PlaytimeRewards/PlaytimeRewards.2"
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGameState",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/PlaytimeRewards/BP_GameStateComponent_PlaytimeRewards.BP_GameStateComponent_PlaytimeRewards_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
       },
       {
-        "ObjectName": "GameFeatureAction_AddCheats'PlaytimeRewards:GameFeatureAction_AddCheats_0'",
-        "ObjectPath": "/PlaytimeRewards/PlaytimeRewards.1"
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerState",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/PlaytimeRewardsRuntime.FortPlayerStateComponent_PlaytimeRewards",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
       }
     ]
   }

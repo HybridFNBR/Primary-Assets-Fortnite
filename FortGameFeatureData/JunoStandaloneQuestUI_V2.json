@@ -1,68 +1,41 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "FortUIGameFeatureAction_AddStandaloneFrontendTab",
+  "Name": "FortUIGameFeatureAction_AddStandaloneFrontendTab_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'FortUIGameFeatureAction_AddStandaloneFrontendTab'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'JunoStandaloneQuestUI_V2'",
     "ObjectPath": "/JunoStandaloneQuestUI_V2/JunoStandaloneQuestUI_V2.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "33.20"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Playlist.Juno"
-              },
-              {
-                "TagName": "Playlist.Sprout"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Playlist.Juno, Playlist.Sprout )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Playlist.Juno"
+    "TabInfo": {
+      "TabTitle": {
+        "Namespace": "",
+        "Key": "7577247D427003598F66B2A9AB551F14",
+        "SourceString": "Quests",
+        "LocalizedString": "Quests"
+      },
+      "TabNameId": "StandaloneQuestsV2",
+      "MobileTabIcon": {
+        "ImageType": "ESlateBrushImageType::FullColor",
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
         },
-        {
-          "TagName": "Playlist.Sprout"
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T_UI_Icon_UIKit_Quests_SDF'",
+          "ObjectPath": "/FortUILibrary/Textures/Icons/T_UI_Icon_UIKit_Quests_SDF.0"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ANY( Playlist.Juno, Playlist.Sprout )"
-    },
-    "RequiredCVar": "StandaloneFrontend.EnableQuestsV2"
+      },
+      "bOverride_MobileTabIcon": true,
+      "ExternalTabWidget": {
+        "AssetPathName": "/JunoStandaloneQuestUI_V2/Widgets/BP_StandaloneQuestPanel_V2.BP_StandaloneQuestPanel_V2_C",
+        "SubPathString": ""
+      },
+      "UIFeature": "EFortUIFeature::ShowQuests",
+      "EnableWithCVar": "StandaloneFrontend.EnableQuestsV2",
+      "SortOrder": 21,
+      "bRequiresPocketLevel": false
+    }
   }
 }

@@ -1,103 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_1",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'Sprites_AirSprite'",
     "ObjectPath": "/Sprites_AirSprite/Sprites_AirSprite.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "33.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.CreativeRoyale.Edit"
-              },
-              {
-                "TagName": "Athena.Playlist.CreativeRoyale.Play"
-              },
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.Playground"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              6,
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play, Athena.Playlist.Test, Athena.Creative, Athena.Playground, Playlist.UGC.Core ) )"
-          },
-          "bMigratedFromOldData": true
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "FirePetalSpriteShrineConversions",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/Sprites_AirSprite/DataTables/AirSpriteShrineConversionData.AirSpriteShrineConversionData",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.CreativeRoyale.Edit"
-        },
-        {
-          "TagName": "Athena.Playlist.CreativeRoyale.Play"
-        },
-        {
-          "TagName": "Athena.Playlist.Test"
-        },
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Athena.Playground"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        6,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play, Athena.Playlist.Test, Athena.Creative, Athena.Playground, Playlist.UGC.Core ) )"
-    }
+      }
+    ]
   }
 }

@@ -1,93 +1,132 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Cluck",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Cluck/NPCLibrary_Conversation_Cluck",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Cluck'",
+    "ObjectPath": "/NPCLibrary/NPCs/Cluck/NPCLibrary_Conversation_Cluck.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "65754202-4F267B21-55F83082-86ED42A1",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Cluck:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cluck/NPCLibrary_Conversation_Cluck.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A1B599AF48721A06D3287D809E0BE42E",
+            "SourceString": "Cluck-cluck b'kaw?",
+            "LocalizedString": "Cluck-cluck b'kaw?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Cluck:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cluck/NPCLibrary_Conversation_Cluck.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F9B691A54468259C0F368EB50ED50F7B",
+            "SourceString": "Cheep! Cheep!",
+            "LocalizedString": "Cheep! Cheep!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Cluck:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cluck/NPCLibrary_Conversation_Cluck.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "D0E85615-4A6539AD-D9CCCE9D-114825EC",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Cluck:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cluck/NPCLibrary_Conversation_Cluck.6"
-        }
-      },
-      {
-        "Key": "486C9DFA-46F7C10F-97B340BF-00A92C91",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Cluck:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cluck/NPCLibrary_Conversation_Cluck.2"
-        }
-      },
-      {
-        "Key": "3D3B71E6-40F15438-85FB95A7-C9B24537",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Cluck:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cluck/NPCLibrary_Conversation_Cluck.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "DBF478EF4F92D1F63C1CDDA448C29A59",
+        "SourceString": "B'kaw b'kaw!",
+        "LocalizedString": "B'kaw b'kaw!"
       }
+    },
+    "OutputConnections": [
+      "3D3B71E6-40F15438-85FB95A7-C9B24537",
+      "486C9DFA-46F7C10F-97B340BF-00A92C91"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Cluck"
-        },
-        "DestinationList": [
-          "65754202-4F267B21-55F83082-86ED42A1"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "65754202-4F267B21-55F83082-86ED42A1",
-      "D0E85615-4A6539AD-D9CCCE9D-114825EC",
-      "486C9DFA-46F7C10F-97B340BF-00A92C91",
-      "3D3B71E6-40F15438-85FB95A7-C9B24537"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "D0E85615-4A6539AD-D9CCCE9D-114825EC",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Cluck:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Cluck/NPCLibrary_Conversation_Cluck.1"
+    }
   }
 }

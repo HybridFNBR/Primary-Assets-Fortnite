@@ -1,52 +1,16 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_SetPerPlatformCVar",
+  "Name": "GameFeatureAction_SetPerPlatformCVar_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_SetPerPlatformCVar'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'BRPlaylists'",
     "ObjectPath": "/BRPlaylists/BRPlaylists.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist"
-              },
-              {
-                "TagName": "Athena.ExcludePlugin.BRPlaylists"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              2,
-              1,
-              0,
-              3,
-              1,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ALL( Athena.Playlist ),  NONE( Athena.ExcludePlugin.BRPlaylists ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    }
+    "VariableName": "Fort.Rollback.MigrateGameplayActionsToEnhancedInput",
+    "bEnableDefaultValue": true,
+    "DefaultValue": "0",
+    "Priority": "EGfaCvarPriority::PluginLowPriority"
   }
 }

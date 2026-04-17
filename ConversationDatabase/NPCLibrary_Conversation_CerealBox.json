@@ -1,93 +1,285 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_CerealBox",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_CerealBox'",
+    "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "D718EFF9-44759415-761EFCA0-8A6C39F5",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CerealBox:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1503FA8649935A6F4CDDE691D0DF0531",
+            "SourceString": "HIYA FRIEND! MY HOOF SHOOTS CEREAL FOREVER!! ",
+            "LocalizedString": "HIYA FRIEND! MY HOOF SHOOTS CEREAL FOREVER!! "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_CerealBox:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AA24F05D430D5AB1128797AD491293E2",
+            "SourceString": "HIYA!! ANY IDEA HOW TO BREAK CEREAL-BASED CURSES???",
+            "LocalizedString": "HIYA!! ANY IDEA HOW TO BREAK CEREAL-BASED CURSES???"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_CerealBox:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F1333C1143CF03F2A016428F09E43EDC",
+            "SourceString": "THOSE BARS COULD BUY 34.45 BOXES OF UNICORN FLAKES!!!",
+            "LocalizedString": "THOSE BARS COULD BUY 34.45 BOXES OF UNICORN FLAKES!!!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasBars'NPCLibrary_Conversation_CerealBox:Speech_C_4.FortControllerRequirement_HasBars_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.HighTotalBars"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FA446CB3425F7D08ACFA7BB1F072C26F",
+            "SourceString": "OH NO!! THEY GOT YOU TOO?!?",
+            "LocalizedString": "OH NO!! THEY GOT YOU TOO?!?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CerealBox:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.9"
+              }
+            },
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CerealBox:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BFB24EBD41694C59D28C66B4202F87AE",
+            "SourceString": "HAHA, YOU'RE MOCKING ME THEN?? I THINK THAT'S FUN!!",
+            "LocalizedString": "HAHA, YOU'RE MOCKING ME THEN?? I THINK THAT'S FUN!!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CerealBox:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.8"
+              }
+            },
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CerealBox:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "A356F9E0-4BC8E3FC-91B7889A-B7C1B636",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_CerealBox:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.11"
-        }
-      },
-      {
-        "Key": "D1772679-405C6C9F-DC89CA97-BC28A5CC",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CerealBox:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.2"
-        }
-      },
-      {
-        "Key": "53A1F102-430CBECA-3D841DB3-904A92CF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CerealBox:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "4A7B9A9B49A749D5522C80BC9068B1FA",
+        "SourceString": "EVERYBODY GET SOOOOME UNICORN FLAKES!!!",
+        "LocalizedString": "EVERYBODY GET SOOOOME UNICORN FLAKES!!!"
       }
+    },
+    "OutputConnections": [
+      "53A1F102-430CBECA-3D841DB3-904A92CF",
+      "D1772679-405C6C9F-DC89CA97-BC28A5CC"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.CerealBox"
-        },
-        "DestinationList": [
-          "D718EFF9-44759415-761EFCA0-8A6C39F5"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "D718EFF9-44759415-761EFCA0-8A6C39F5",
-      "A356F9E0-4BC8E3FC-91B7889A-B7C1B636",
-      "D1772679-405C6C9F-DC89CA97-BC28A5CC",
-      "53A1F102-430CBECA-3D841DB3-904A92CF"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "A356F9E0-4BC8E3FC-91B7889A-B7C1B636",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CerealBox:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/CerealBox/CerealBox/NPCLibrary_Conversation_CerealBox.1"
+    }
   }
 }

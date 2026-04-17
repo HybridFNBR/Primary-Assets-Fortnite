@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Kitbash",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Kitbash/Kitbash/NPCLibrary_Conversation_Kitbash",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Kitbash'",
+    "ObjectPath": "/NPCLibrary/NPCs/Kitbash/Kitbash/NPCLibrary_Conversation_Kitbash.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "46C35BE7-42763F8D-8A80C9BF-E7920E99",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Kitbash:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Kitbash/Kitbash/NPCLibrary_Conversation_Kitbash.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "570B66794509989F8FBAF582B036AD72",
+            "SourceString": "If friend wants help with explosions, hire Kitbash!",
+            "LocalizedString": "If friend wants help with explosions, hire Kitbash!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Kitbash:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Kitbash/Kitbash/NPCLibrary_Conversation_Kitbash.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "84204C9A-45804A00-8D8B8BB8-706FB7D2",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Kitbash:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Kitbash/Kitbash/NPCLibrary_Conversation_Kitbash.5"
-        }
-      },
-      {
-        "Key": "36876986-4CA8E395-7EEFAC8F-B69DDEB1",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Kitbash:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Kitbash/Kitbash/NPCLibrary_Conversation_Kitbash.2"
-        }
-      },
-      {
-        "Key": "01A8547A-4BB167A1-5AF8D284-84F23C80",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Kitbash:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Kitbash/Kitbash/NPCLibrary_Conversation_Kitbash.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "3CC6621E453C869ADEA1B0971CA050C3",
+        "SourceString": "I am ready to help friend with all sorts of explosives!",
+        "LocalizedString": "I am ready to help friend with all sorts of explosives!"
       }
+    },
+    "OutputConnections": [
+      "01A8547A-4BB167A1-5AF8D284-84F23C80",
+      "36876986-4CA8E395-7EEFAC8F-B69DDEB1"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Kitbash"
-        },
-        "DestinationList": [
-          "46C35BE7-42763F8D-8A80C9BF-E7920E99"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "46C35BE7-42763F8D-8A80C9BF-E7920E99",
-      "84204C9A-45804A00-8D8B8BB8-706FB7D2",
-      "36876986-4CA8E395-7EEFAC8F-B69DDEB1",
-      "01A8547A-4BB167A1-5AF8D284-84F23C80"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "84204C9A-45804A00-8D8B8BB8-706FB7D2",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Kitbash:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Kitbash/Kitbash/NPCLibrary_Conversation_Kitbash.1"
+    }
   }
 }

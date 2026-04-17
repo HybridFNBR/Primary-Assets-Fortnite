@@ -1,25 +1,155 @@
 {
-  "Type": "BP_JunoConversationTaskNode_GrantNPCCampReward_C",
-  "Name": "BP_JunoConversationTaskNode_GrantNPCCampReward_C_0",
+  "Type": "JunoConversationTaskNode_Speech_C",
+  "Name": "JunoConversationTaskNode_Speech_C_9",
   "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "BlueprintGeneratedClass'/JunoNPCLibrary/Convo/BP_JunoConversationTaskNode_GrantNPCCampReward.BP_JunoConversationTaskNode_GrantNPCCampReward_C'",
+  "Class": "BlueprintGeneratedClass'/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.JunoConversationTaskNode_Speech_C'",
   "Outer": {
     "ObjectName": "ConversationDatabase'Conversation_Juno_Shared_Blurb_MVPSetup'",
     "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Shared_Blurb_MVPSetup.45"
   },
   "Template": {
-    "ObjectName": "BP_JunoConversationTaskNode_GrantNPCCampReward_C'Default__BP_JunoConversationTaskNode_GrantNPCCampReward_C'",
-    "ObjectPath": "/JunoNPCLibrary/Convo/BP_JunoConversationTaskNode_GrantNPCCampReward.1"
+    "ObjectName": "JunoConversationTaskNode_Speech_C'Default__JunoConversationTaskNode_Speech_C'",
+    "ObjectPath": "/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.2"
   },
   "Properties": {
-    "OutputConnections": [
-      "3053B5F0-4768F35A-6C53C59E-E0095D62",
-      "D2DEF447-4C75515B-235E06A1-808F8A7A"
+    "DefaultMoodReactionTag": {
+      "TagName": "Juno.Mood.Reactions.Statement.Default"
+    },
+    "bUseInlineConfig": false,
+    "ExternalContextualMessageCollection": {
+      "ObjectName": "JunoContextualMessageConfigCollection'Conversation_Juno_Bank_Quip_Raining'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/ExternalMsg/Blurbs/Conversation_Juno_Bank_Quip_Raining.0"
+    },
+    "SpecializedConfigs": [
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Persona"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Persona )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Default"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Default"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Default'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Default.0"
+          },
+          "RowName": "Quip_Raining"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Persona.Nonverbal"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Persona.Nonverbal )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Default_Nonverbal"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Default_Nonverbal"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Default_NV'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Default_NV.0"
+          },
+          "RowName": "Quip_Raining"
+        }
+      }
     ],
-    "Compiled_NodeGUID": "052CBD73-4AA7CC09-56DD49BD-B8AC4E4F",
+    "SubNodes": [
+      {
+        "ObjectName": "FortConversationRequirement_ControllerRequirement'Conversation_Juno_Shared_Blurb_MVPSetup:FortConversationRequirement_ControllerRequirement_52'",
+        "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Shared_Blurb_MVPSetup.205"
+      },
+      {
+        "ObjectName": "FortConversationRequirement_ControllerRequirement'Conversation_Juno_Shared_Blurb_MVPSetup:FortConversationRequirement_ControllerRequirement_115'",
+        "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Shared_Blurb_MVPSetup.160"
+      }
+    ],
+    "OutputConnections": [
+      "0B85B8C2-41852098-341F16AE-72C8C0CB"
+    ],
+    "NodeName": "Quip_Raining",
+    "Compiled_NodeGUID": "A616E232-48F4A1D1-A04F35AF-180FA063",
     "ParentNode": {
-      "ObjectName": "Continue_C'Conversation_Juno_Shared_Blurb_MVPSetup:Continue_C_2'",
-      "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Shared_Blurb_MVPSetup.14"
+      "ObjectName": "Continue_C'Conversation_Juno_Shared_Blurb_MVPSetup:Continue_C_16'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_Shared_Blurb_MVPSetup.10"
     }
   }
 }

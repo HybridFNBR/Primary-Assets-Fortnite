@@ -1,21 +1,252 @@
 {
-  "Type": "FortGameFeatureAction_AddShuffleItemDefinitions",
-  "Name": "FortGameFeatureAction_AddShuffleItemDefinitions_0",
+  "Type": "GFA_RegisterCosmeticDownloadSettings",
+  "Name": "GFA_RegisterCosmeticDownloadSettings_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddShuffleItemDefinitions'",
+  "Class": "UScriptClass'GFA_RegisterCosmeticDownloadSettings'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'CosmeticCompanions'",
     "ObjectPath": "/CosmeticCompanions/CosmeticCompanions.10"
   },
   "Properties": {
-    "ShuffleItemDefinitions": [
+    "PerTypeSubstitutionSettings": [
       {
-        "AssetPathName": "/CosmeticCompanions/Assets/Items/Mimosa_Random.Mimosa_Random",
-        "SubPathString": ""
-      },
+        "Key": {
+          "TagName": "IADCosmeticType.Mimosa"
+        },
+        "Value": {
+          "AllowInGamePhase": "EAthenaGamePhase::Warmup",
+          "AllowIfHasNeverBeenRendered": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Mimosa.AllowIfNeverRendered"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AlwaysImmediateSwapForRequestSource": [],
+          "AllowGraceTimeSinceSpawning": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Mimosa.GraceTimeSinceSpawn"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "TypeConsideredActiveByDefault": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Mimosa.ConsiderActiveByDefault"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AllowImmediateSwapWhileActiveLocalPlayer": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Mimosa.AllowLocal"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AllowImmediateSwapWhileActiveRemotePlayer": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Mimosa.AllowRemote"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AllowImmediateSwapWhileActiveForMannequin": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Mimosa.AllowMannequin"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AllowInView": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Mimosa.AllowInView"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AllowOutOfView": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Mimosa.AllowOutOfView"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "EnforcedMinimumDistanceInViewMeters": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Mimosa.MinDistInViewMeters"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "EnforcedMinimumDistanceOutOfViewMeters": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Mimosa.MinDistNotInViewMeters"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          }
+        }
+      }
+    ],
+    "LoadoutSlotTagToIADCosmeticTypeTag": [
       {
-        "AssetPathName": "/CosmeticCompanions/Assets/Items/ReactFX/Companion_ReactFX_Random.Companion_ReactFX_Random",
-        "SubPathString": ""
+        "Key": {
+          "TagName": "LoadoutSlot.Mimosa.Main"
+        },
+        "Value": {
+          "Tag": {
+            "TagName": "IADCosmeticType.Mimosa"
+          },
+          "GroupID": {
+            "TagName": "None"
+          },
+          "RequiredCVarName": "Fort.CosmeticDownloads.MimosaIADCosmeticTypeEnabled"
+        }
+      }
+    ],
+    "CosmeticDownloadFeatureFlagsByType": [
+      {
+        "Key": {
+          "TagName": "IADCosmeticType.Mimosa"
+        },
+        "Value": {
+          "DefaultPolicy": "ECosmeticDownloadFeatureFlagPolicy::Enabled",
+          "FeatureStatus": [
+            {
+              "Key": {
+                "TagName": "IADFeatureFlag.LocalPlayerLoadoutLobbyPreDownload"
+              },
+              "Value": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": {
+                    "ObjectName": "CurveTable'DownloadSettings'",
+                    "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+                  },
+                  "RowName": "FeatureFlag.Mimosa.LocalPlayerLoadoutLobbyPreDownload"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              }
+            },
+            {
+              "Key": {
+                "TagName": "IADFeatureFlag.PartyLoadoutLobbyPreDownload"
+              },
+              "Value": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": {
+                    "ObjectName": "CurveTable'DownloadSettings'",
+                    "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+                  },
+                  "RowName": "FeatureFlag.Mimosa.PartyLoadoutLobbyPreDownload"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              }
+            },
+            {
+              "Key": {
+                "TagName": "IADFeatureFlag.PlayerStateBackgroundDownload"
+              },
+              "Value": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": {
+                    "ObjectName": "CurveTable'DownloadSettings'",
+                    "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+                  },
+                  "RowName": "FeatureFlag.Mimosa.PlayerStateBackgroundDownload"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              }
+            },
+            {
+              "Key": {
+                "TagName": "IADFeatureFlag.RelevantPawnLoadoutDownload"
+              },
+              "Value": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": {
+                    "ObjectName": "CurveTable'DownloadSettings'",
+                    "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+                  },
+                  "RowName": "FeatureFlag.Mimosa.RelevantPawnLoadoutDownload"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }

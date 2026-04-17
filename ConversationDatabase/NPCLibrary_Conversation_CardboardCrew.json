@@ -1,102 +1,223 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_CardboardCrew",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_CardboardCrew'",
+    "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "BAD703CE-406474CC-5ACF04A4-06558056",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CardboardCrew:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.1"
-        }
-      },
-      {
-        "Key": "49126C50-47F1CFED-BCAA0BA7-67C3D669",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_CardboardCrew:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.9"
-        }
-      },
-      {
-        "Key": "8EA42D94-43978BD3-BB76B29D-9260F79A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CardboardCrew:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.4"
-        }
-      },
-      {
-        "Key": "394A738F-43865F7B-BECF48A8-D7424BD5",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CardboardCrew:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.2"
-        }
-      },
-      {
-        "Key": "C40DB192-4A003699-DF9727B7-BA3C3656",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CardboardCrew:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.CardboardCrew"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9F8D3DD7412D954C247FBE985F70909B",
+            "SourceString": "Wow, that storm really boxes you in, huh?",
+            "LocalizedString": "Wow, that storm really boxes you in, huh?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_CardboardCrew:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "BAD703CE-406474CC-5ACF04A4-06558056"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "58B011D34A34645A5500D4B2CA854AA9",
+            "SourceString": "You need to think inside the box.",
+            "LocalizedString": "You need to think inside the box."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CardboardCrew:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DCEFA25E42DEC43DA57979A638637EA5",
+            "SourceString": "Time to send them packing.",
+            "LocalizedString": "Time to send them packing."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CardboardCrew:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E8243296438BEEE63306CF91F1AD1159",
+            "SourceString": "What a six-sided standoff.",
+            "LocalizedString": "What a six-sided standoff."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CardboardCrew:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "38697C83404B1EE3143FD0BD39AF2815",
+        "SourceString": "You need to think inside the box.",
+        "LocalizedString": "You need to think inside the box."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Ch5S1.D3.Q8",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "BAD703CE-406474CC-5ACF04A4-06558056",
-      "49126C50-47F1CFED-BCAA0BA7-67C3D669",
-      "8EA42D94-43978BD3-BB76B29D-9260F79A",
+    },
+    "OutputConnections": [
+      "C40DB192-4A003699-DF9727B7-BA3C3656",
       "394A738F-43865F7B-BECF48A8-D7424BD5",
-      "C40DB192-4A003699-DF9727B7-BA3C3656"
+      "8EA42D94-43978BD3-BB76B29D-9260F79A"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "49126C50-47F1CFED-BCAA0BA7-67C3D669",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CardboardCrew:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/CardboardCrew/NPCLibrary_Conversation_CardboardCrew.1"
+    }
   }
 }

@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_LoneWolf",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/LoneWolf/LoneWolf/NPCLibrary_Conversation_LoneWolf",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_LoneWolf'",
+    "ObjectPath": "/NPCLibrary/NPCs/LoneWolf/LoneWolf/NPCLibrary_Conversation_LoneWolf.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "0B13E93B-4533F972-DF5E0791-D8F7F91E",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_LoneWolf:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/LoneWolf/LoneWolf/NPCLibrary_Conversation_LoneWolf.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DA306FBC4D209A5C6C923C92771947C1",
+            "SourceString": "...Who sent you?",
+            "LocalizedString": "...Who sent you?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_LoneWolf:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/LoneWolf/LoneWolf/NPCLibrary_Conversation_LoneWolf.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "42A7D112-4EA96B43-44D56BA7-48F259F5",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_LoneWolf:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/LoneWolf/LoneWolf/NPCLibrary_Conversation_LoneWolf.5"
-        }
-      },
-      {
-        "Key": "42382917-4472170B-CBF887A9-0F37BFB6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LoneWolf:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/LoneWolf/LoneWolf/NPCLibrary_Conversation_LoneWolf.2"
-        }
-      },
-      {
-        "Key": "085A06C5-4C530A7D-6CA6A68D-D2140278",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LoneWolf:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/LoneWolf/LoneWolf/NPCLibrary_Conversation_LoneWolf.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "8D8395F1488E2FE028AF858DA93F8A43",
+        "SourceString": "Glory never wanes. ",
+        "LocalizedString": "Glory never wanes. "
       }
+    },
+    "OutputConnections": [
+      "085A06C5-4C530A7D-6CA6A68D-D2140278",
+      "42382917-4472170B-CBF887A9-0F37BFB6"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.LoneWolf"
-        },
-        "DestinationList": [
-          "0B13E93B-4533F972-DF5E0791-D8F7F91E"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "0B13E93B-4533F972-DF5E0791-D8F7F91E",
-      "42A7D112-4EA96B43-44D56BA7-48F259F5",
-      "42382917-4472170B-CBF887A9-0F37BFB6",
-      "085A06C5-4C530A7D-6CA6A68D-D2140278"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "42A7D112-4EA96B43-44D56BA7-48F259F5",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_LoneWolf:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/LoneWolf/LoneWolf/NPCLibrary_Conversation_LoneWolf.1"
+    }
   }
 }

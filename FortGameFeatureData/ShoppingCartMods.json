@@ -1,22 +1,39 @@
 {
-  "Type": "FortGameFeatureAction_AddVehicleModData",
-  "Name": "FortGameFeatureAction_AddVehicleModData_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddVehicleModData'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'ShoppingCartMods'",
-    "ObjectPath": "/ShoppingCartMods/ShoppingCartMods.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "ShoppingCartMods",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/ShoppingCartMods/ShoppingCartMods",
   "Properties": {
-    "VehicleMods": [
+    "LevelOverlayConfig": {
+      "AssetPathName": "/ShoppingCartMods/Levels/ShoppingCartMods_LevelOverlay.ShoppingCartMods_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PluginCheats": [
       {
-        "VehicleMod": {
-          "AssetPathName": "/CowCatcherMod/Mods/CowCatcher/VehicleModConfig_CowCatcher_ShoppingCart.VehicleModConfig_CowCatcher_ShoppingCart_C",
-          "SubPathString": ""
-        },
-        "TargetVehicleTags": [
-          "Vehicle.ShoppingCart"
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch7S2",
+        "DisplayName": "Spawn Shopping Cart",
+        "ConsoleCommands": [
+          "cheat spawnvehicle ShoppingCartVehicleSK"
         ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch7S2",
+        "DisplayName": "Add Cowcatcher (must be in cart)",
+        "ConsoleCommands": [
+          "cheat applyvehiclemod vehicle.mod.cowcatcher"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddVehicleModData'ShoppingCartMods:FortGameFeatureAction_AddVehicleModData_0'",
+        "ObjectPath": "/ShoppingCartMods/ShoppingCartMods.0"
       }
     ]
   }

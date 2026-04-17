@@ -1,22 +1,177 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_DashBerry_Kickstart_Q09'",
-    "ObjectPath": "/BlastBerryQuests/Items/QuestItems/DashBerry_Kickstart/Quest_DashBerry_Kickstart_Q09.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_DashBerry_Kickstart_Q09",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/BlastBerryQuests/Items/QuestItems/DashBerry_Kickstart/Quest_DashBerry_Kickstart_Q09",
   "Properties": {
-    "VisibilitySettings": {
-      "bOverrideBundleVisibilityData": true,
-      "QuestVisiblityData": {
-        "bIsVisibleWhenClaimed": true,
-        "bIsVisibleWhenCompleted": true
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
       }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_DashBerry_Kickstart_Q09_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "TravelDirection": "EDistanceTravelDirection::Horizontal",
+            "AxisDirections": 0,
+            "AxisBehavior": "EAxisTravelBehavior::RequireAny",
+            "bUsePerAxisSettings": false,
+            "bRequireVehicleInAir": false,
+            "BoostRequirement": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "AllowedTravelModes": [
+              "EDistanceTravelMode::Any"
+            ],
+            "ProhibitedTravelModes": [],
+            "Vehicle": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AllowedVehicleSurfaces": [],
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "418DB535435EE1B93FF6DA9152B47381",
+          "SourceString": "Travel distance after exiting the Battle Bus",
+          "LocalizedString": "Travel distance after exiting the Battle Bus"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 5000,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BlastBerry"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.BlastBerry )"
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false
-    }
+    "SortPriority": 9,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_DashBerry_Kickstart_Q09:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/BlastBerryQuests/Items/QuestItems/DashBerry_Kickstart/Quest_DashBerry_Kickstart_Q09.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_DashBerry_Kickstart_Q09:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/BlastBerryQuests/Items/QuestItems/DashBerry_Kickstart/Quest_DashBerry_Kickstart_Q09.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_DashBerry_Kickstart_Q09_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "5823D35F42722E5224566FAACA48F63B",
+      "SourceString": "Travel distance after exiting the Battle Bus",
+      "LocalizedString": "Travel distance after exiting the Battle Bus"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "FE7CC49E47DE8BFB9DD8F7A19092A925",
+      "SourceString": "Travel distance after exiting the Battle Bus",
+      "LocalizedString": "Travel distance after exiting the Battle Bus"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.BB.Kickstart.Quests"
+        ]
+      },
+      {
+        "Rarity": "EFortRarity::Common"
+      }
+    ]
   }
 }

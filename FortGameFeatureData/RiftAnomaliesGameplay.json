@@ -1,63 +1,19 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistry",
+  "Name": "GameFeatureAction_DataRegistry_2",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistry'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'RiftAnomaliesGameplay'",
     "ObjectPath": "/RiftAnomaliesGameplay/RiftAnomaliesGameplay.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "39.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Exclude.RiftAnomaliesGameplay"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              2,
-              0,
-              1,
-              3,
-              2,
-              2,
-              3
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Test, Athena.Playlist.Default ),  NONE( Plugin.Playlist.Exclude.RiftAnomaliesGameplay, Plugin.Playlist.Arena ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    },
-    "OptionalAdditionalPluginsToActivate": [
-      "RiftAnomaliesUI"
-    ]
+    "RegistriesToAdd": [
+      {
+        "AssetPathName": "/RiftAnomaliesGameplay/DataTables/RiftAnomaliesBaseConfigRegistry.RiftAnomaliesBaseConfigRegistry",
+        "SubPathString": ""
+      }
+    ],
+    "bPreloadInEditor": true
   }
 }

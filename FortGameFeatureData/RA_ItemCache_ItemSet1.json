@@ -1,44 +1,46 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'RA_ItemCache_ItemSet1'",
-    "ObjectPath": "/RA_ItemCache_ItemSet1/RA_ItemCache_ItemSet1.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "RA_ItemCache_ItemSet1",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/RA_ItemCache_ItemSet1/RA_ItemCache_ItemSet1",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Default )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    }
+    "LevelOverlayConfig": {
+      "AssetPathName": "/RA_ItemCache_ItemSet1/Levels/RA_ItemCache_ItemSet1_LevelOverlay.RA_ItemCache_ItemSet1_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultLootTableData": {
+      "LootTierData": {
+        "AssetPathName": "/RA_ItemCache_ItemSet1/DataTables/ItemCache_01_CompositeLootTierData.ItemCache_01_CompositeLootTierData",
+        "SubPathString": ""
+      },
+      "LootPackageData": {
+        "AssetPathName": "/RA_ItemCache_ItemSet1/DataTables/ItemCache_01_CompositeLootPackageData.ItemCache_01_CompositeLootPackageData",
+        "SubPathString": ""
+      }
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch7S2 Rift Anomalies",
+        "DisplayName": "Start Stabilize the Anomaly Set 1 RA",
+        "ConsoleCommands": [
+          "cheat RiftAnomalySetNext ItemCache_ItemSet1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_DeferPreloadingLootData'RA_ItemCache_ItemSet1:FortGameFeatureAction_DeferPreloadingLootData_1'",
+        "ObjectPath": "/RA_ItemCache_ItemSet1/RA_ItemCache_ItemSet1.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'RA_ItemCache_ItemSet1:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/RA_ItemCache_ItemSet1/RA_ItemCache_ItemSet1.0"
+      }
+    ]
   }
 }

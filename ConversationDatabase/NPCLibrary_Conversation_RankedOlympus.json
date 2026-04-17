@@ -1,129 +1,541 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_RankedOlympus",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_RankedOlympus'",
+    "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "44E8EE0F-4101F9F5-40DE4A80-64C672D8",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RankedOlympus:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.1"
-        }
-      },
-      {
-        "Key": "9105B8B7-46ACD171-294817B6-78A32123",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_RankedOlympus:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.19"
-        }
-      },
-      {
-        "Key": "0921C51A-43DBE647-5BFAA394-150BF73F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedOlympus:ConversationLinkNode_5'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.7"
-        }
-      },
-      {
-        "Key": "1165232A-4DA2A728-ACEACAB8-C47CD5FE",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedOlympus:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.6"
-        }
-      },
-      {
-        "Key": "46F4E877-47F0931E-5CF47C81-C9BA5642",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedOlympus:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.4"
-        }
-      },
-      {
-        "Key": "338558B8-45A73EE4-108219AF-A78807C0",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedOlympus:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.5"
-        }
-      },
-      {
-        "Key": "7CF26ED2-438B77DE-A8172083-BC86D2E0",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedOlympus:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.2"
-        }
-      },
-      {
-        "Key": "B973C1EC-4BE9C853-7B0D85A2-388146E4",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedOlympus:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.RankedOlympus"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "66C980C14A3536DC47831BB0FC3FBCA9",
+            "SourceString": "I can feel an ancient power growing on this Island...",
+            "LocalizedString": "I can feel an ancient power growing on this Island..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.18"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "44E8EE0F-4101F9F5-40DE4A80-64C672D8"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B89C3BEF41E6DB276BDBA994BF88C6C6",
+            "SourceString": "Hope! The whispers were true...",
+            "LocalizedString": "Hope! The whispers were true..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.14"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B29176124BFA2953207C2C82A1AF5F0E",
+            "SourceString": "You have wandered from your true path... but destiny is not yet done with you.",
+            "LocalizedString": "You have wandered from your true path... but destiny is not yet done with you."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.15"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2B4BF64F42704DE3EF27F995FC2A5DA0",
+            "SourceString": "Even diamond will shatter when its weaknesses are exploited.",
+            "LocalizedString": "Even diamond will shatter when its weaknesses are exploited."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.16"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9BAF381346852249CEB5AB8717315E75",
+            "SourceString": "I will not give you the answers you seek. Walk the path you have sought, and bear its consequences.",
+            "LocalizedString": "I will not give you the answers you seek. Walk the path you have sought, and bear its consequences."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.17"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7B5AD2C34FE36C8BABE3188D5B67EE7A",
+            "SourceString": "Someone on this Island has been chasing powers they don't understand.",
+            "LocalizedString": "Someone on this Island has been chasing powers they don't understand."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0B670F814DA8C5A11C1EA081B6C14AD8",
+            "SourceString": "The Mosaic is the key to what is coming. It bears a warning.",
+            "LocalizedString": "The Mosaic is the key to what is coming. It bears a warning."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "867469824140B9169B269D9F54CE08B4",
+            "SourceString": "Mundane powers like The Society always believe their influence is eternal, even just before they fall.",
+            "LocalizedString": "Mundane powers like The Society always believe their influence is eternal, even just before they fall."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "84BBEFD44C076C4354B86686BFB82A49",
+            "SourceString": "I am Odyssey. I am merely a traveler, following the path of ancient insight.",
+            "LocalizedString": "I am Odyssey. I am merely a traveler, following the path of ancient insight."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2F8BA0114DAAF7B8362192BB308A3B31",
+            "SourceString": "No destiny is certain... but yours hums with potential.",
+            "LocalizedString": "No destiny is certain... but yours hums with potential."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B68860F84600335AD728DEB076A5B860",
+            "SourceString": "These \"Medallions\" are shards of mysterious power, dug out from long-gone history.",
+            "LocalizedString": "These \"Medallions\" are shards of mysterious power, dug out from long-gone history."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RankedOlympus:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "24CC1BF1455B6520FB30089C6BE02A96",
+        "SourceString": "Someone on this Island has been chasing powers they don't understand.",
+        "LocalizedString": "Someone on this Island has been chasing powers they don't understand."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Ch5S1.D3.Q8",
-      "Conversation.Entry.Season28.RankedOlympus.P3.Q01",
-      "Conversation.Entry.Season28.RankedOlympus.P2.Q01",
-      "Conversation.Entry.Season28.RankedOlympus.P1.Q01",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "44E8EE0F-4101F9F5-40DE4A80-64C672D8",
-      "9105B8B7-46ACD171-294817B6-78A32123",
-      "0921C51A-43DBE647-5BFAA394-150BF73F",
-      "1165232A-4DA2A728-ACEACAB8-C47CD5FE",
-      "46F4E877-47F0931E-5CF47C81-C9BA5642",
-      "338558B8-45A73EE4-108219AF-A78807C0",
+    },
+    "OutputConnections": [
+      "B973C1EC-4BE9C853-7B0D85A2-388146E4",
       "7CF26ED2-438B77DE-A8172083-BC86D2E0",
-      "B973C1EC-4BE9C853-7B0D85A2-388146E4"
+      "338558B8-45A73EE4-108219AF-A78807C0",
+      "46F4E877-47F0931E-5CF47C81-C9BA5642",
+      "1165232A-4DA2A728-ACEACAB8-C47CD5FE",
+      "0921C51A-43DBE647-5BFAA394-150BF73F"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "9105B8B7-46ACD171-294817B6-78A32123",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RankedOlympus:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/RankedOlympus/NPCLibrary_Conversation_RankedOlympus.1"
+    }
   }
 }

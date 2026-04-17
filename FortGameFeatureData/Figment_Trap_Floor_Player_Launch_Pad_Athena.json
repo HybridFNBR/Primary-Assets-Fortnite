@@ -1,59 +1,48 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'Figment_Trap_Floor_Player_Launch_Pad_Athena'",
-    "ObjectPath": "/Figment_Trap_Floor_Player_Launch_Pad_Athena/Figment_Trap_Floor_Player_Launch_Pad_Athena.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "Figment_Trap_Floor_Player_Launch_Pad_Athena",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/Figment_Trap_Floor_Player_Launch_Pad_Athena/Figment_Trap_Floor_Player_Launch_Pad_Athena",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "33.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Figment"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Figment )"
-          },
-          "bMigratedFromOldData": true
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Figment S2",
+        "DisplayName": "Launch Pad",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /Figment_Trap_Floor_Player_Launch_Pad_Athena/Items/Trap/TID_Figment_Floor_Player_Launch_Pad_Athena.TID_Figment_Floor_Player_Launch_Pad_Athena 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'Figment_Trap_Floor_Player_Launch_Pad_Athena:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/Figment_Trap_Floor_Player_Launch_Pad_Athena/Figment_Trap_Floor_Player_Launch_Pad_Athena.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Trap",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortTrapItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Figment"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Athena.Playlist.Figment )"
-    }
+      }
+    ]
   }
 }

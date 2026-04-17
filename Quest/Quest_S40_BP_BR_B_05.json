@@ -1,22 +1,206 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_S40_BP_BR_B_05'",
-    "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/BattlePass/BriskReign/Quest_S40_BP_BR_B_05.3"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_S40_BP_BR_B_05",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/BattlePassS40_Quests/Items/QuestItems/BattlePass/BriskReign/Quest_S40_BP_BR_B_05",
   "Properties": {
-    "VisibilitySettings": {
-      "bOverrideBundleVisibilityData": true,
-      "QuestVisiblityData": {
-        "bIsVisibleWhenCompleted": true
-      },
-      "bCanShowTimer": false
+    "NotificationIconOverride": {
+      "AssetPathName": "/Game/Blueprints/Blutilities/ForArtists/TextureTools/PlaceholderTextureGenerator/Placeholder_Icon_Template.Placeholder_Icon_Template",
+      "SubPathString": ""
     },
-    "LockedQuestSettings": {
-      "DisplayQuantity": "ELockedWidgetDisplayQuantity::ShowNextOnly"
-    }
+    "QuestGiverWidgetIcon": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S40/T_Soldier_BriskReign_GlacierHit.T_Soldier_BriskReign_GlacierHit",
+      "SubPathString": ""
+    },
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S40_BP_BR_B_05_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "NPC": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "ConversationChoice": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Conversation.Choice.S40.BriskReign.Computer.01"
+                  },
+                  {
+                    "TagName": "Conversation.Choice.S40.BriskReign.Computer.02"
+                  },
+                  {
+                    "TagName": "Conversation.Choice.S40.BriskReign.Computer.03"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  3,
+                  0,
+                  1,
+                  2
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Conversation.Choice.S40.BriskReign.Computer.01, Conversation.Choice.S40.BriskReign.Computer.02, Conversation.Choice.S40.BriskReign.Computer.03 )"
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "77DAC86C434974EA4341DB87EF09691A",
+          "SourceString": "Check the monitoring reports at Frigid Fortress",
+          "LocalizedString": "Check the monitoring reports at Frigid Fortress"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 5,
+          "DisplayMaxStage": 7
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.BR )"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S40_BP_BR_B_05:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/BattlePass/BriskReign/Quest_S40_BP_BR_B_05.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S40_BP_BR_B_05:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/BattlePass/BriskReign/Quest_S40_BP_BR_B_05.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_S40_BP_BR_B_05:FortQuestDefinitionComponent_MapMarkers_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/BattlePass/BriskReign/Quest_S40_BP_BR_B_05.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S40_BP_BR_B_05_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "2CCF671E4EEF7B094CCBD688499557B5",
+      "SourceString": "Check the monitoring reports at Frigid Fortress",
+      "LocalizedString": "Check the monitoring reports at Frigid Fortress"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "EF3FBB5E42250E8B3D4D6199B75C1D35",
+      "SourceString": "Check the monitoring reports at Frigid Fortress",
+      "LocalizedString": "Check the monitoring reports at Frigid Fortress"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "31A16A2A42430F4A260D79BEB94F4A90",
+      "SourceString": "Who schemes to use their power against me?",
+      "LocalizedString": "Who schemes to use their power against me?"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.BR.S40.BPQuests.Quests.BriskReign"
+        ]
+      }
+    ]
   }
 }

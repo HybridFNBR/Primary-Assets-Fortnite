@@ -1,102 +1,178 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Maven",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Maven'",
+    "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "065474C2-4AE5D8B8-BD537DBA-0A6D9968",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Maven:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.1"
-        }
-      },
-      {
-        "Key": "471B8D64-4F2B809A-79C9308E-F8BD3FF5",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Maven:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.8"
-        }
-      },
-      {
-        "Key": "EF051B40-4CB98ABD-26C2159F-29B54046",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Maven:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.2"
-        }
-      },
-      {
-        "Key": "B11FB1B7-47786C6D-3F779BBE-F2F948FF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Maven:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.3"
-        }
-      },
-      {
-        "Key": "37D50208-49355DA8-21BC7388-D028F615",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Maven:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.4"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Maven"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CC1DDF1C4EAA0C024D63E69E06F3BDD5",
+            "SourceString": "You're back just in time. That <b>mothership</>... something's not adding up.",
+            "LocalizedString": "You're back just in time. That <b>mothership</>... something's not adding up."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_Maven:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "065474C2-4AE5D8B8-BD537DBA-0A6D9968"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2314ACB244145B3EACFD92B3DFEEF25F",
+            "SourceString": "I've got unsolved questions, you've got field experience. QED, we should work together.",
+            "LocalizedString": "I've got unsolved questions, you've got field experience. QED, we should work together."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Maven:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3DEB18B24390C555B35C8180789B242A",
+            "SourceString": "I could use some of those Bars to fund my <b>research</>.",
+            "LocalizedString": "I could use some of those Bars to fund my <b>research</>."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasBars'NPCLibrary_Conversation_Maven:Speech_C_4.FortControllerRequirement_HasBars_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.HighTotalBars"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "89F62C70408B7FFE1123EFB04474ED07",
+        "SourceString": "Okay I don't have this conversation scheduled but I guess I can pencil you in.",
+        "LocalizedString": "Okay I don't have this conversation scheduled but I guess I can pencil you in."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests",
-      "Conversation.Entry.Season17.Week2"
-    ],
-    "InternalNodeIds": [
-      "065474C2-4AE5D8B8-BD537DBA-0A6D9968",
-      "471B8D64-4F2B809A-79C9308E-F8BD3FF5",
-      "EF051B40-4CB98ABD-26C2159F-29B54046",
+    },
+    "OutputConnections": [
+      "37D50208-49355DA8-21BC7388-D028F615",
       "B11FB1B7-47786C6D-3F779BBE-F2F948FF",
-      "37D50208-49355DA8-21BC7388-D028F615"
+      "EF051B40-4CB98ABD-26C2159F-29B54046"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "471B8D64-4F2B809A-79C9308E-F8BD3FF5",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Maven:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Maven/Maven/NPCLibrary_Conversation_Maven.1"
+    }
   }
 }

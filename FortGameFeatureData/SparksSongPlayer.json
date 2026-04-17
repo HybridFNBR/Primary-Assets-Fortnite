@@ -1,16 +1,50 @@
 {
-  "Type": "FortGameFeatureAction_AddSubsystem",
-  "Name": "FortGameFeatureAction_AddSubsystem_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddSubsystem'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'SparksSongPlayer'",
-    "ObjectPath": "/SparksSongPlayer/SparksSongPlayer.3"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "SparksSongPlayer",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/SparksSongPlayer/SparksSongPlayer",
   "Properties": {
-    "SubsystemToAdd": {
-      "AssetPathName": "/Script/SparksSongPlayerRuntime.SparksSongPlayerSubsystem",
-      "SubPathString": ""
-    }
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'SparksSongPlayer:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/SparksSongPlayer/SparksSongPlayer.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_PrimaryAssetBehaviors'SparksSongPlayer:FortGameFeatureAction_PrimaryAssetBehaviors_0'",
+        "ObjectPath": "/SparksSongPlayer/SparksSongPlayer.2"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddSubsystem'SparksSongPlayer:FortGameFeatureAction_AddSubsystem_0'",
+        "ObjectPath": "/SparksSongPlayer/SparksSongPlayer.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "SparksSongPlayerData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/SparksSongPlayerRuntime.SparksSongPlayerData",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/SparksSongPlayer/SongPlayerData.SongPlayerData",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

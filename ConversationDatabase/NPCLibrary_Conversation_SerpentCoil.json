@@ -1,111 +1,269 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_SerpentCoil",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_SerpentCoil'",
+    "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "DB70432A-4CBAD0B3-240D3994-A4ACBADA",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SerpentCoil:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.1"
-        }
-      },
-      {
-        "Key": "AEEFD98B-428F82B4-00415A9F-2CC4D8E1",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_SerpentCoil:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.11"
-        }
-      },
-      {
-        "Key": "84378C1A-44B6DF4C-8966A1B0-A571F2EC",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SerpentCoil:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.5"
-        }
-      },
-      {
-        "Key": "4ED5E9CD-41AEDF96-B3901E9D-31C5838B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SerpentCoil:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.4"
-        }
-      },
-      {
-        "Key": "B4F35AF5-4D3649C3-6946E180-E5FFB0FC",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SerpentCoil:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.2"
-        }
-      },
-      {
-        "Key": "7AAAB186-4BFCFC68-1710D1AE-4F9479E2",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SerpentCoil:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.SerpentCoil"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "816AECF242BB559A3AA11BB4968489EA",
+            "SourceString": "So you're the one ssssstanding against The Society. Unwise, but brave.",
+            "LocalizedString": "So you're the one ssssstanding against The Society. Unwise, but brave."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_SerpentCoil:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "DB70432A-4CBAD0B3-240D3994-A4ACBADA"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1AF0708A4C4B63890ED670A515917647",
+            "SourceString": "You're playing a dangerousssss game, Hope. You'd better be successful.",
+            "LocalizedString": "You're playing a dangerousssss game, Hope. You'd better be successful."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SerpentCoil:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D46CFDD04EDAD339107FC7A571DF46F7",
+            "SourceString": "I have no interest in joining your Society, so sssssstop asking me.",
+            "LocalizedString": "I have no interest in joining your Society, so sssssstop asking me."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SerpentCoil:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CC0C39D44586DF65EA98C8B0645AEEEC",
+            "SourceString": "I know you're hunting for ancient ssssecrets. But what might they be...?",
+            "LocalizedString": "I know you're hunting for ancient ssssecrets. But what might they be...?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SerpentCoil:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "027C985A4023502CECF272A58994BB96",
+            "SourceString": "I'm not one of you Underground foolsssss, but I can help you out now and again.",
+            "LocalizedString": "I'm not one of you Underground foolsssss, but I can help you out now and again."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SerpentCoil:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "49BC56BD4115A52035BCF2AF1681A25D",
+        "SourceString": "I'm not one of you Underground foolsssss, but I can help you out now and again.",
+        "LocalizedString": "I'm not one of you Underground foolsssss, but I can help you out now and again."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.SerpentCoil.Dialogue",
-      "Conversation.Entry.Ch5S1.D3.Q8",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "DB70432A-4CBAD0B3-240D3994-A4ACBADA",
-      "AEEFD98B-428F82B4-00415A9F-2CC4D8E1",
-      "84378C1A-44B6DF4C-8966A1B0-A571F2EC",
-      "4ED5E9CD-41AEDF96-B3901E9D-31C5838B",
+    },
+    "OutputConnections": [
+      "7AAAB186-4BFCFC68-1710D1AE-4F9479E2",
       "B4F35AF5-4D3649C3-6946E180-E5FFB0FC",
-      "7AAAB186-4BFCFC68-1710D1AE-4F9479E2"
+      "4ED5E9CD-41AEDF96-B3901E9D-31C5838B",
+      "84378C1A-44B6DF4C-8966A1B0-A571F2EC"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "AEEFD98B-428F82B4-00415A9F-2CC4D8E1",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SerpentCoil:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/SerpentCoil/NPCLibrary_Conversation_SerpentCoil.1"
+    }
   }
 }

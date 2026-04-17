@@ -1,71 +1,40 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'PapayaCompanion'",
     "ObjectPath": "/PapayaCompanion/PapayaCompanion.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Papaya"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Papaya )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Core"
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Game/Athena/PlayerPawn_Athena.PlayerPawn_Athena_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist.Default"
+        "ComponentClass": {
+          "AssetPathName": "/PapayaCompanion/Assets/BP_PapayaCompanionComponent.BP_PapayaCompanionComponent_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Creative"
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Game/Athena/PlayerPawn_Athena.PlayerPawn_Athena_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Playlist.UGC.Core"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        4,
-        0,
-        1,
-        2,
-        3
-      ],
-      "AutoDescription": " ANY( Athena.Playlist.Core, Athena.Playlist.Default, Athena.Creative, Playlist.UGC.Core )"
-    }
+        "ComponentClass": {
+          "AssetPathName": "/Script/FortniteGame.FortContextualAnimSceneActorComponent",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

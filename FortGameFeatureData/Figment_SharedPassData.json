@@ -1,23 +1,80 @@
 {
-  "Type": "FortGameFeatureAction_RegisterSeasonPassTitleData",
-  "Name": "FortGameFeatureAction_RegisterSeasonPassTitleData_1",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_RegisterSeasonPassTitleData'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'Figment_SharedPassData'",
-    "ObjectPath": "/Figment_SharedPassData/Figment_SharedPassData.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "Figment_SharedPassData",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/Figment_SharedPassData/Figment_SharedPassData",
   "Properties": {
-    "PassId": "figmentpassdata",
-    "PassName": {
-      "Namespace": "",
-      "Key": "72E039B2420C1AC90917DD8268C8A051",
-      "SourceString": "Fortnite: OG Pass",
-      "LocalizedString": "Fortnite: OG Pass"
-    },
-    "TitleData": {
-      "ObjectName": "DataTable'Figment_SeasonTitles'",
-      "ObjectPath": "/Figment_SharedPassData/DataTables/Figment_SeasonTitles.0"
-    }
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_RegisterSeasonPassTitleData'Figment_SharedPassData:FortGameFeatureAction_RegisterSeasonPassTitleData_1'",
+        "ObjectPath": "/Figment_SharedPassData/Figment_SharedPassData.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "AccountResource",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPersistentResourceItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Currency"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Token",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortTokenType",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Tokens"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Giftbox",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGiftBoxItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Giftbox"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
   }
 }

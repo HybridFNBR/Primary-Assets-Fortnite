@@ -1,16 +1,40 @@
 {
-  "Type": "FortGameFeatureAction_AddSubsystem",
-  "Name": "FortGameFeatureAction_AddSubsystem_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddSubsystem'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'FestivalCompanion'",
     "ObjectPath": "/FestivalCompanion/FestivalCompanion.2"
   },
   "Properties": {
-    "SubsystemToAdd": {
-      "AssetPathName": "/Script/PlayerCompanionRuntime.FortPlayerCompanionSubsystem",
-      "SubPathString": ""
-    }
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Game/Athena/PlayerPawn_Athena.PlayerPawn_Athena_C",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/FestivalCompanion/Components/BP_FestivalCompanionComponent.BP_FestivalCompanionComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Game/Athena/PlayerPawn_Athena.PlayerPawn_Athena_C",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/FortniteGame.FortContextualAnimSceneActorComponent",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

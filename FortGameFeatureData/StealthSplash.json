@@ -1,120 +1,80 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_1",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'StealthSplash'",
-    "ObjectPath": "/StealthSplash/StealthSplash.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "StealthSplash",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/StealthSplash/StealthSplash",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "39.20"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.ItemsTest"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              4,
-              0,
-              1,
-              2,
-              3
-            ],
-            "UserDescription": "Athena Core",
-            "AutoDescription": " ANY( Athena.Playlist.ItemsTest, Athena.Playlist.Default, Athena.Playlist.Test, Plugin.Playlist.Arena )"
-          },
-          "bMigratedFromOldData": false
+    "LevelOverlayConfig": {
+      "AssetPathName": "/StealthSplash/Levels/StealthSplash_LevelOverlay.StealthSplash_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultGameData": {
+      "AssetPathName": "/StealthSplash/DataTables/StealthSplashGameData.StealthSplashGameData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "CH7S1",
+        "DisplayName": "Give StealthSplash",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /StealthSplash/Gameplay/WID_StealthSplash 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'StealthSplash:FortGameFeatureAction_AddToPlaylists_1'",
+        "ObjectPath": "/StealthSplash/StealthSplash.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "39.20"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              3,
-              0,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core )"
-          },
-          "bMigratedFromOldData": false
-        },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "39.20"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.ForbiddenFruit"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.ForbiddenFruit )"
-          },
-          "bMigratedFromOldData": false
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    }
+      },
+      {
+        "PrimaryAssetType": "Consumable",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

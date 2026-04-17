@@ -1,16 +1,66 @@
 {
-  "Type": "CustomCharacterFaceData",
-  "Name": "CustomCharacterFaceData_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterFaceData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_M_MED_ZenCrash_LandFoil_FaceAcc'",
-    "ObjectPath": "/BRCosmetics/Characters/CharacterParts/FaceAccessories/CP_M_MED_ZenCrash_LandFoil_FaceAcc.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_M_MED_ZenCrash_LandFoil_FaceAcc",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/BRCosmetics/Characters/CharacterParts/FaceAccessories/CP_M_MED_ZenCrash_LandFoil_FaceAcc",
   "Properties": {
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Characters/Player/Male/Medium/Bodies/M_MED_ZenCrash_LandFoil/Meshes/Parts/M_MED_ZenCrash_LandFoil_FaceAcc_AnimBP.M_MED_ZenCrash_LandFoil_FaceAcc_AnimBP_C",
+    "CharacterPartType": "EFortCustomPartType::Face",
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Face"
+      ],
+      "PartTypeIndex": 5
+    },
+    "bAttachToSocket": false,
+    "PartModifierBlueprint": {
+      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/B_Athena_PartModifier_Generic_Elimination_FX_Material.B_Athena_PartModifier_Generic_Elimination_FX_Material_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterFaceData'CP_M_MED_ZenCrash_LandFoil_FaceAcc:CustomCharacterFaceData_0'",
+      "ObjectPath": "/BRCosmetics/Characters/CharacterParts/FaceAccessories/CP_M_MED_ZenCrash_LandFoil_FaceAcc.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/BRCosmetics/Characters/Player/Male/Medium/Bodies/M_MED_ZenCrash_LandFoil/Meshes/Parts/M_MED_ZenCrash_LandFoil_FaceAcc.M_MED_ZenCrash_LandFoil_FaceAcc",
+      "SubPathString": ""
+    },
+    "CosmeticPartDataList": [
+      {
+        "EffectParameters": [
+          {
+            "Tag": {
+              "TagName": "CosmeticPart.VFX.Idle"
+            },
+            "Effect": {
+              "AssetPathName": "/BRCosmetics/Characters/Player/Male/Medium/Bodies/M_MED_ZenCrash/FX/NS_Character_ZenCrashLandFoil_Elimination_Hair.NS_Character_ZenCrashLandFoil_Elimination_Hair",
+              "SubPathString": ""
+            },
+            "LocationOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "RotationOffset": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "bIsPersistent": true,
+            "bAutoActivate": true,
+            "AttachmentParams": {
+              "SocketName": "head",
+              "AttachmentTarget": "ECharacterPartAttachmentTargetType::SkeletalMeshForAssociatedPlayerPawnPartType",
+              "AttachmentRules": {
+                "LocationRule": "EAttachmentRule::SnapToTarget",
+                "RotationRule": "EAttachmentRule::SnapToTarget",
+                "ScaleRule": "EAttachmentRule::SnapToTarget",
+                "bWeldSimulatedBodies": false
+              }
+            }
+          }
+        ]
+      }
+    ]
   }
 }

@@ -1,17 +1,229 @@
 {
-  "Type": "FortDifficultyOptionCategoryEncounter_Distance",
-  "Name": "FortDifficultyOptionCategoryEncounter_Distance_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortDifficultyOptionCategoryEncounter_Distance'",
-  "Outer": {
-    "ObjectName": "FortMissionInfo'ShadowOrb'",
-    "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb.9"
-  },
+  "Type": "FortMissionInfo",
+  "Name": "ShadowOrb",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Package": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb",
   "Properties": {
-    "Options": [
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Secondary/MistDisturbance/Mission_ShadowOrb.Mission_ShadowOrb_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MissionTags": [
+      "Stat.Mission.Kill",
+      "Activities.DynamicPlacement.Mission.Secondary",
+      "Stat.Mission.Encounter.Burst",
+      "Stat.Mission.Secondary"
+    ],
+    "MaxMissionPoints": 0,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "9FC3EA2946DB37DFE5D295B90140AACB",
+      "SourceString": "Shadow Orb",
+      "LocalizedString": "Shadow Orb"
+    },
+    "ObjectiveBlocks": [
       {
-        "ObjectName": "BlueprintGeneratedClass'AA_EDO_Distance_1Tile_C'",
-        "ObjectPath": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/Spawning/AA_EDO_Distance_1Tile.1"
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_ClearEncounter/Gen_ClearEncounter.Gen_ClearEncounter_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Kill",
+              "Activities.ObjectiveHandle.Num.01"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          },
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/SaveTheWorld/Missions/GenericObjectives/Gen_ClearEncounter/Gen_ClearEncounter.Gen_ClearEncounter_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.Kill",
+              "Activities.ObjectiveHandle.Num.02"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.DynamicPlacement.Mission.Secondary",
+        "Activities.Placement.LocationUsed",
+        "Activities.DynamicPlacement.Actor.ShadowOrb",
+        "Activities.DynamicPlacement.Proximity.DangerZone"
+      ],
+      "AdditionalWorldFoundations": [
+        {
+          "ItemIdentifyingTags": [
+            "Activities.ObjectiveHandle.Num.01"
+          ],
+          "TagsToAddToChosenPlacementActorOrFoundationActor": [],
+          "PlacementQuery": {
+            "ObjectName": "EnvQuery'ShadowOrbMissionPlacementQuery'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrbMissionPlacementQuery.0"
+          },
+          "BuildingFoundationToPlace": {
+            "AssetPathName": "/SaveTheWorld/WorldTiles/LayoutFoundations/Missions/ShadowOrb/LF_ShadowOrb.LF_ShadowOrb_C",
+            "SubPathString": ""
+          },
+          "NumLocationsToFind": 1,
+          "bAdjustFoundationPlacementForFloors": false
+        }
+      ]
+    },
+    "MinDistanceToOtherMissions": 500.0,
+    "MinDistanceToAllowSpawnPad": 1500.0,
+    "PlacementActorInfo": {
+      "DistanceRangeMin": 100.0,
+      "DistanceRangeMax": 10000.0
+    },
+    "PopupWidgetData": {
+      "AvailableIcon": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.25,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0089FF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-ShadowOrb-32'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Mission/T-Icon-ShadowOrb-32.0"
+        }
+      },
+      "UnavailableIcon": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.0,
+            "G": 0.25,
+            "B": 1.0,
+            "A": 1.0,
+            "Hex": "0089FF"
+          }
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-ShadowOrb-32'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Mission/T-Icon-ShadowOrb-32.0"
+        }
+      }
+    },
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'Rewards_Treasure_Tiered'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/Rewards_Treasure_Tiered.0"
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "54B236AB48FC51E6D1C15BA3D918B73E",
+      "SourceString": "Shadow Orb",
+      "LocalizedString": "Shadow Orb"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn.EDO_Set_ScriptedSpawn",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_PawnNumberCap'ShadowOrb:FortDifficultyOptionCategoryEncounter_PawnNumberCap_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb.2"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'ShadowOrb:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb.5"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_Distance'ShadowOrb:FortDifficultyOptionCategoryEncounter_Distance_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb.0"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn.EDO_Set_ScriptedSpawn",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_PawnNumberCap'ShadowOrb:FortDifficultyOptionCategoryEncounter_PawnNumberCap_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb.3"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'ShadowOrb:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb.6"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_Distance'ShadowOrb:FortDifficultyOptionCategoryEncounter_Distance_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb.1"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn.EDO_Set_ScriptedSpawn",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnLimitPawns'ShadowOrb:FortDifficultyOptionCategoryEncounter_SpawnLimitPawns_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb.8"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'ShadowOrb:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_2'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb.7"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_PawnNumberCap'ShadowOrb:FortDifficultyOptionCategoryEncounter_PawnNumberCap_2'",
+            "ObjectPath": "/SaveTheWorld/Missions/Secondary/MistDisturbance/ShadowOrb.4"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
       }
     ]
   }

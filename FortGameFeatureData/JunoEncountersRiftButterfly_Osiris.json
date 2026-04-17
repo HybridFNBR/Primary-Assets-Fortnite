@@ -1,59 +1,71 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'JunoEncountersRiftButterfly_Osiris'",
     "ObjectPath": "/JunoEncountersRiftButterfly_Osiris/JunoEncountersRiftButterfly_Osiris.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "29.40"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Playlist.Juno"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Playlist.Juno )"
-          },
-          "bMigratedFromOldData": true
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Juno.Adventures.DynamicEncounters",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoEncountersRiftButterfly_Osiris/LWM/Juno_EventTable_DynamicEncounters_Osiris_Butterfly.Juno_EventTable_DynamicEncounters_Osiris_Butterfly",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Playlist.Juno"
+      },
+      {
+        "RegistryToAddTo": "Juno.Adventures.SprinklesFirst15",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoEncountersRiftButterfly_Osiris/LWM/Juno_EventTable_SprinklesFirst15_Osiris_Butterfly.Juno_EventTable_SprinklesFirst15_Osiris_Butterfly",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Playlist.Juno )"
-    }
+      },
+      {
+        "RegistryToAddTo": "Juno.Encounters.Butterfly.LootTables",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoEncountersRiftButterfly_Osiris/DataTables/Juno_VarSelections_Bfly_Loot_Osiris.Juno_VarSelections_Bfly_Loot_Osiris",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "RegistryToAddTo": "Juno.Encounters.Butterfly.LlamaActorClass",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoEncountersRiftButterfly_Osiris/DataTables/Juno_VariableSelections_LlamaActorClass_Osiris.Juno_VariableSelections_LlamaActorClass_Osiris",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "bPreloadInEditor": true
   }
 }

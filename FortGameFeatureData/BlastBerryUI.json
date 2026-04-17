@@ -1,83 +1,27 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'BlastBerryUI'",
     "ObjectPath": "/BlastBerryUI/BlastBerryUI.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.BlastBerry"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              },
-              {
-                "TagName": "Plugin.Playlist.ForbiddenFruit"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              2,
-              0,
-              1,
-              3,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.BlastBerry, Plugin.Playlist.BlastBerry ),  NONE( Plugin.Playlist.ForbiddenFruit ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.BlastBerry"
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerControllerAthena",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.BlastBerry"
+        "ComponentClass": {
+          "AssetPathName": "/BlastBerryUI/Components/BlastBerryUIControllerComp.BlastBerryUIControllerComp_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.ForbiddenFruit"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        2,
-        1,
-        2,
-        0,
-        1,
-        3,
-        1,
-        2
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Playlist.BlastBerry, Plugin.Playlist.BlastBerry ),  NONE( Plugin.Playlist.ForbiddenFruit ) )"
-    }
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

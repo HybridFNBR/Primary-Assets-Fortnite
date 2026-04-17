@@ -1,47 +1,29 @@
 {
-  "Type": "FortGameFeatureAction_AddCategoryTableToConfig",
-  "Name": "FortGameFeatureAction_AddCategoryTableToConfig_1",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_2",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddCategoryTableToConfig'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'TeaCake_SpacePlunge'",
     "ObjectPath": "/TeaCake_SpacePlunge/TeaCake_SpacePlunge.2"
   },
   "Properties": {
-    "ConfigToCategoryTableDatas": [
+    "SourcesToAdd": [
       {
-        "Key": "/Lager/Lager/Config/LagerConfigData_BR_Main.LagerConfigData_BR_Main",
-        "Value": {
-          "CategoryTableDatas": [
-            {
-              "Name": "TeaCake_SpacePlunge_LagerData",
-              "CategoryTable": {
-                "AssetPathName": "/TeaCake_SpacePlunge/LagerData/Lager_CategoryTable_TeaCake_SpacePlunge.Lager_CategoryTable_TeaCake_SpacePlunge",
-                "SubPathString": ""
-              },
-              "IsEnabled": {
-                "Value": 1.0,
-                "Curve": {
-                  "CurveTable": {
-                    "ObjectName": "CurveTable'TeaCake_SpacePlunge_GameData'",
-                    "ObjectPath": "/TeaCake_SpacePlunge/DataTables/TeaCake_SpacePlunge_GameData.0"
-                  },
-                  "RowName": "Default.TeaCake.SpacePlunge.Lager.CategoryEnabled"
-                },
-                "RegistryType": {
-                  "Name": "None"
-                }
-              }
-            }
-          ]
+        "RegistryToAddTo": "PawnTagQueryBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/TeaCake_SpacePlunge/DataTables/IB_PawnInjection_TeaCake_SpacePlunge_Table.IB_PawnInjection_TeaCake_SpacePlunge_Table",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
     ],
-    "StartVersion": {
-      "VersionName": "40.00"
-    },
-    "EndVersion": {
-      "VersionName": "41.00"
-    }
+    "bPreloadInEditor": true
   }
 }

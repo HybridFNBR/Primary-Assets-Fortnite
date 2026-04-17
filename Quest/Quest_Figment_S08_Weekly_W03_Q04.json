@@ -1,18 +1,174 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Figment_S08_Weekly_W03_Q04'",
-    "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W03/Quest_Figment_S08_Weekly_W03_Q04.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Figment_S08_Weekly_W03_Q04",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W03/Quest_Figment_S08_Weekly_W03_Q04",
   "Properties": {
-    "VisibilitySettings": {
-      "bCanShowTimer": false
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Figment_S08_Weekly_W03_Q04_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Target": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Building.Type.Container.SupplyDrop"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Building.Type.Container.SupplyDrop )"
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "494AF4E24B3B3AE56CB88CAD1C84B95B",
+          "SourceString": "Search Supply Drops",
+          "LocalizedString": "Search Supply Drops"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "1D8CD89444B17164FDF1DF9062D74D7F",
+          "SourceString": "Search Supply Drops",
+          "LocalizedString": "Search Supply Drops"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 2,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Figment"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.Figment )"
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false
-    }
+    "SortPriority": 4,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_S08_Weekly_W03_Q04:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W03/Quest_Figment_S08_Weekly_W03_Q04.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_S08_Weekly_W03_Q04:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W03/Quest_Figment_S08_Weekly_W03_Q04.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Figment_S08_Weekly_W03_Q04_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "F8024D414A0DBCB6176593BEC2CCB363",
+      "SourceString": "Search Supply Drops",
+      "LocalizedString": "Search Supply Drops"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "9949D0694DAB1CE747EADBA8DD2DD5E2",
+      "SourceString": "Search Supply Drops",
+      "LocalizedString": "Search Supply Drops"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.Figment.Weekly.03"
+        ]
+      }
+    ]
   }
 }

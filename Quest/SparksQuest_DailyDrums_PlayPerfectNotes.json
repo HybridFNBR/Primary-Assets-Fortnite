@@ -1,253 +1,39 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "SparksQuest_DailyDrums_PlayPerfectNotes",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyDrums/SparksQuest_DailyDrums_PlayPerfectNotes",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_1",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'SparksQuest_DailyDrums_PlayPerfectNotes'",
+    "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyDrums/SparksQuest_DailyDrums_PlayPerfectNotes.0"
+  },
   "Properties": {
-    "Group": "SparksDaily_Drums",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "SparksQuest_DailyDrums_PlayPerfectNotes_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "TokenRewards": [
           {
-            "DidHit": true,
-            "DidPass": false,
-            "DidMiss": false,
-            "IsChord": false,
-            "IsPerfect": true,
-            "RequiredStreak": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
+            "TokenDefinition": {
+              "AssetPathName": "/UniversalDailyQuests/Items/Tokens/Universal_DailyQuest_Token.Universal_DailyQuest_Token",
+              "SubPathString": ""
             },
-            "RequiredMultiplier": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "IncrementType": "EPilgrimNoteEventMessageIncrementType::ByValue",
-            "IncrementValue": 1,
-            "SongId": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "InstrumentId": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Item.Instrument.TrackType.Drums"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Item.Instrument.TrackType.Drums )"
-              }
-            },
-            "BandInstrumentIds": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "SongShortName": {
-              "SongShortNames": [],
-              "MatchType": "ESongShortNameMatchType::AlwaysMatch"
-            },
-            "SongSIDMatcher": {
-              "SongItemDefs": [],
-              "MatchType": "ESongShortNameMatchType::AlwaysMatch"
-            },
-            "RequiredBandMembers": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequiredDifficulty": "EPilgrimSongDifficulty::None",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "TokenCount": 1,
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "E91C63384A78B828AA9BED902E30D103",
-          "SourceString": "Play perfect notes on Drums",
-          "LocalizedString": "Play perfect notes on Drums"
-        },
-        "HudShortDescription": {
-          "Namespace": "",
-          "Key": "EF2AB663419DE15503E52687087F58A6",
-          "SourceString": "Play perfect notes on Drums",
-          "LocalizedString": "Play perfect notes on Drums"
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 200,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 50,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Sparks.BattleStage"
-        },
-        {
-          "TagName": "Product.Sparks.PilgrimQuickplay"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ANY( Product.Sparks.BattleStage, Product.Sparks.PilgrimQuickplay )"
-    },
-    "Category": {
-      "DataTable": {
-        "ObjectName": "DataTable'QuestCategoryTable'",
-        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
-      },
-      "RowName": "DailyQuests"
-    },
-    "SortPriority": 4,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'SparksQuest_DailyDrums_PlayPerfectNotes:FortQuestDefinitionComponent_Rewards_1'",
-        "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyDrums/SparksQuest_DailyDrums_PlayPerfectNotes.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'SparksQuest_DailyDrums_PlayPerfectNotes:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/SparksPermanentQuests/Items/DailyQuestDefinitions/DailyDrums/SparksQuest_DailyDrums_PlayPerfectNotes.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "SparksQuest_DailyDrums_PlayPerfectNotes_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "005A1A514CC581EF69C4BBAB93375C18",
-      "SourceString": "Play perfect notes on Drums",
-      "LocalizedString": "Play perfect notes on Drums"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "DA161B5E43F756F328FE3E89BA353DA4",
-      "SourceString": "Play perfect notes on Drums",
-      "LocalizedString": "Play perfect notes on Drums"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.Sparks.Agnostic.Daily"
         ]
       },
-      {},
       {
-        "Rarity": "EFortRarity::Common"
+        "ResourceDataTableRewards": [
+          {
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'SparksEvergreen_DailyQuestRewardsTable'",
+                "ObjectPath": "/SparksPermanentQuests/Items/PersistentRewardTables/SparksEvergreen_DailyQuestRewardsTable.0"
+              },
+              "RowName": "SparksQuestReward_Sparks_DailyQuest_XP"
+            },
+            "bHideFromUI": false
+          }
+        ]
       }
     ]
   }

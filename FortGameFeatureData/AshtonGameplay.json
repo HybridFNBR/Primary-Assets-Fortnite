@@ -1,16 +1,177 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'AshtonGameplay'",
-    "ObjectPath": "/AshtonGameplay/AshtonGameplay.3"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "AshtonGameplay",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/AshtonGameplay/AshtonGameplay",
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/AshtonGameplay/Gameplay/CaptainAmerica/Shield/FMMEL_TacSprint_Ashton_Shield.FMMEL_TacSprint_Ashton_Shield_C",
+    "LevelOverlayConfig": {
+      "AssetPathName": "/AshtonGameplay/Levels/AshtonGameplay_LevelOverlay.AshtonGameplay_LevelOverlay",
       "SubPathString": ""
-    }
+    },
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/AshtonGameplay/Ashton_ReticleExtensions.Ashton_ReticleExtensions",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/AshtonGameplay/HUD/AshtonGameplayHUDWidgetRegistry.AshtonGameplayHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultLootTableData": {
+      "LootTierData": {
+        "AssetPathName": "/AshtonGameplay/DataTables/AshtonGameplayTierData.AshtonGameplayTierData",
+        "SubPathString": ""
+      },
+      "LootPackageData": {
+        "AssetPathName": "/AshtonGameplay/DataTables/AshtonGameplayLootPackages.AshtonGameplayLootPackages",
+        "SubPathString": ""
+      }
+    },
+    "PlaylistOverrideLootTableData": [
+      {
+        "Key": {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        "Value": {
+          "LootTierData": {
+            "AssetPathName": "/AshtonGameplay/DataTables/Comp/AshtonGameplayTierData_Comp.AshtonGameplayTierData_Comp",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/AshtonGameplay/DataTables/Comp/AshtonGameplayLootPackages_Comp.AshtonGameplayLootPackages_Comp",
+            "SubPathString": ""
+          },
+          "LootGroupData": []
+        }
+      },
+      {
+        "Key": {
+          "TagName": "Plugin.Playlist.BlastBerry"
+        },
+        "Value": {
+          "LootTierData": {
+            "AssetPathName": "/AshtonGameplay/DataTables/OtherModes/AshtonGameplay_LootTierData_LTMEmpty.AshtonGameplay_LootTierData_LTMEmpty",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/AshtonGameplay/DataTables/OtherModes/AshtonGameplay_LootPackages_LTMEmpty.AshtonGameplay_LootPackages_LTMEmpty",
+            "SubPathString": ""
+          },
+          "LootGroupData": []
+        }
+      },
+      {
+        "Key": {
+          "TagName": "Athena.Playlist.Mash"
+        },
+        "Value": {
+          "LootTierData": {
+            "AssetPathName": "/AshtonGameplay/DataTables/OtherModes/AshtonGameplay_LootTierData_LTMEmpty.AshtonGameplay_LootTierData_LTMEmpty",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/AshtonGameplay/DataTables/OtherModes/AshtonGameplay_LootPackages_LTMEmpty.AshtonGameplay_LootPackages_LTMEmpty",
+            "SubPathString": ""
+          },
+          "LootGroupData": []
+        }
+      }
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/AshtonGameplay/Ashton_DeathCauseData.Ashton_DeathCauseData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch5S4",
+        "DisplayName": "Captain America's Shield",
+        "ConsoleCommands": [
+          "cheat GiveSpecificItem /AshtonGameplay/Gameplay/CaptainAmerica/Shield/WID_Ashton_Shield 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'AshtonGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/AshtonGameplay/AshtonGameplay.2"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddMovementModeExtension'AshtonGameplay:FortGameFeatureAction_AddMovementModeExtension_0'",
+        "ObjectPath": "/AshtonGameplay/AshtonGameplay.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddMutators'AshtonGameplay:FortGameFeatureAction_AddMutators_0'",
+        "ObjectPath": "/AshtonGameplay/AshtonGameplay.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "AthenaGadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "Consumable",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
   }
 }

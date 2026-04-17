@@ -1,102 +1,358 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_MadCommander",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_MadCommander'",
+    "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "763DD23F-4B965AAC-AFC66EB1-E40A03A7",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_MadCommander:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.1"
-        }
-      },
-      {
-        "Key": "4453A609-421E44A7-C271EEA7-F9E7A5E3",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_MadCommander:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.12"
-        }
-      },
-      {
-        "Key": "F26D490B-417B006C-BD60828C-B3A1E5C7",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MadCommander:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.4"
-        }
-      },
-      {
-        "Key": "65A8BC52-40585054-2E446F96-73D73781",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MadCommander:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.2"
-        }
-      },
-      {
-        "Key": "1BE07E59-43EECA02-CF6B299C-5978C0A9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MadCommander:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.MadCommander"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "96C591974742B871BF42C7B18D30BF25",
+            "SourceString": "I am Ruckus!! THE LONE RABBLER!!!",
+            "LocalizedString": "I am Ruckus!! THE LONE RABBLER!!!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_MadCommander:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "763DD23F-4B965AAC-AFC66EB1-E40A03A7"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F431EED647349E2211F55B9D158BDEB5",
+            "SourceString": "Who needs leader when Ruckus can be leader AND follower?",
+            "LocalizedString": "Who needs leader when Ruckus can be leader AND follower?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MadCommander:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B2C5B9414F669751B79F3BAFBB92CD0F",
+            "SourceString": "Cause Ruckus! Rouse rabble! BE FREE!!",
+            "LocalizedString": "Cause Ruckus! Rouse rabble! BE FREE!!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MadCommander:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5D3DA5C94490E2D04E5CEBB65D11441E",
+            "SourceString": "Ruckus the Rabbler follows his own path now!",
+            "LocalizedString": "Ruckus the Rabbler follows his own path now!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MadCommander:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C3D8B23D4DE9D50665FC359AFF542CD9",
+            "SourceString": "The Chums disbanded without telling Ruckus...",
+            "LocalizedString": "The Chums disbanded without telling Ruckus..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MadCommander:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5B699E284B66535B261266BD7282E567",
+            "SourceString": "Without the Chums, Ruckus stands alone...",
+            "LocalizedString": "Without the Chums, Ruckus stands alone..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MadCommander:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "73E109AE400486ED06CBAFB623C67057",
+            "SourceString": "Ruckus yearns for his Chums... but he must be alone...",
+            "LocalizedString": "Ruckus yearns for his Chums... but he must be alone..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MadCommander:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "40DD7B7F4AC45D23EC1FD9983D684228",
+        "SourceString": "Who needs leader when Ruckus can be leader AND follower?",
+        "LocalizedString": "Who needs leader when Ruckus can be leader AND follower?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.MadCommander.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "763DD23F-4B965AAC-AFC66EB1-E40A03A7",
-      "4453A609-421E44A7-C271EEA7-F9E7A5E3",
-      "F26D490B-417B006C-BD60828C-B3A1E5C7",
+    },
+    "OutputConnections": [
+      "1BE07E59-43EECA02-CF6B299C-5978C0A9",
       "65A8BC52-40585054-2E446F96-73D73781",
-      "1BE07E59-43EECA02-CF6B299C-5978C0A9"
+      "F26D490B-417B006C-BD60828C-B3A1E5C7"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "4453A609-421E44A7-C271EEA7-F9E7A5E3",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_MadCommander:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/MadCommander/NPCLibrary_Conversation_MadCommander.1"
+    }
   }
 }

@@ -1,25 +1,473 @@
 {
-  "Type": "BlueprintGeneratedClass",
-  "Name": "MissionGen_BuildtheRadarGrid_C",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'BlueprintGeneratedClass'",
+  "Type": "MissionGen_BuildtheRadarGrid_C",
+  "Name": "Default__MissionGen_BuildtheRadarGrid_C",
+  "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/SaveTheWorld/World/MissionGens/MissionGen_BuildtheRadarGrid.MissionGen_BuildtheRadarGrid_C'",
   "Package": "/SaveTheWorld/World/MissionGens/MissionGen_BuildtheRadarGrid",
-  "Super": {
-    "ObjectName": "BlueprintGeneratedClass'_MissionGen_PARENT_C'",
-    "ObjectPath": "/SaveTheWorld/World/MissionGens/_MissionGen_PARENT.1"
+  "Template": {
+    "ObjectName": "_MissionGen_PARENT_C'Default___MissionGen_PARENT_C'",
+    "ObjectPath": "/SaveTheWorld/World/MissionGens/_MissionGen_PARENT.0"
   },
-  "ClassFlags": "CLASS_CompiledFromBlueprint",
-  "ClassWithin": {
-    "ObjectName": "Class'Object'",
-    "ObjectPath": "/Script/CoreUObject"
-  },
-  "ClassConfigName": "Engine",
-  "bCooked": true,
-  "ClassDefaultObject": {
-    "ObjectName": "MissionGen_BuildtheRadarGrid_C'Default__MissionGen_BuildtheRadarGrid_C'",
-    "ObjectPath": "/SaveTheWorld/World/MissionGens/MissionGen_BuildtheRadarGrid.1"
-  },
-  "EditorTags": {
-    "BlueprintType": "BPTYPE_Normal"
+  "Properties": {
+    "MissionName": {
+      "Namespace": "",
+      "Key": "E7F722914819374C553EE2B60593E88C",
+      "SourceString": "Build the Radar Grid",
+      "LocalizedString": "Build the Radar Grid"
+    },
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "8146FA6043DC0BCF88AA3C8A85DC70CD",
+      "SourceString": "Build and activate Radar Towers",
+      "LocalizedString": "Build and activate Radar Towers"
+    },
+    "MissionIcon": {
+      "ResourceObject": {
+        "ObjectName": "Texture2D'Icon-Mission-RadarTower-128'",
+        "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-RadarTower-128.0"
+      }
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ImageSize": {
+          "X": 16.0,
+          "Y": 16.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-RadarTower-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-RadarTower-32.0"
+        }
+      },
+      "Brush_XS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-RadarTower-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-RadarTower-32.0"
+        }
+      },
+      "Brush_S": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-RadarTower-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-RadarTower-32.0"
+        }
+      },
+      "Brush_M": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-RadarTower-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-RadarTower-64.0"
+        }
+      },
+      "Brush_L": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-RadarTower-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-RadarTower-128.0"
+        }
+      },
+      "Brush_XL": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Icon-Mission-RadarTower-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/Icon-Mission-RadarTower-128.0"
+        }
+      }
+    },
+    "LoadingScreenConfig": {
+      "TitleDescription": {
+        "Namespace": "",
+        "Key": "FF1F78874E83D28DC2F6E28C0A89BB5B",
+        "SourceString": "Your mission is to:",
+        "LocalizedString": "Your mission is to:"
+      },
+      "Title": {
+        "Namespace": "",
+        "Key": "183FE48A4F32346653A340B26C7F5211",
+        "SourceString": "Build the Radar Grid",
+        "LocalizedString": "Build the Radar Grid"
+      },
+      "Headings": {
+        "HeadingImage": {
+          "ObjectName": "Texture2D'FORT_Load_Missions_PH1-256'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/LoadingScreens/Icons/FORT_Load_Missions_PH1-256.0"
+        },
+        "Heading": {
+          "Namespace": "",
+          "Key": "C268F1A2429D89400CD7D599620623FF",
+          "SourceString": "Investigate towers",
+          "LocalizedString": "Investigate towers"
+        },
+        "HeadingDescription": {
+          "Namespace": "",
+          "Key": "477D1D4043BE8488593498A94348CF97",
+          "SourceString": "Radio tower locations are marked on your map",
+          "LocalizedString": "Radio tower locations are marked on your map"
+        }
+      },
+      "Headings[1]": {
+        "HeadingImage": {
+          "ObjectName": "Texture2D'FORT_Load_Missions_PH2-256'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/LoadingScreens/Icons/FORT_Load_Missions_PH2-256.0"
+        },
+        "Heading": {
+          "Namespace": "",
+          "Key": "A9B5BAE24A73BBDD2EFFE4B85B44F300",
+          "SourceString": "Build radar tower",
+          "LocalizedString": "Build radar tower"
+        },
+        "HeadingDescription": {
+          "Namespace": "",
+          "Key": "E8C85EB34D26D7C95F0B7D8FF6CCB3B6",
+          "SourceString": "Follow existing layout",
+          "LocalizedString": "Follow existing layout"
+        }
+      },
+      "Headings[2]": {
+        "HeadingImage": {
+          "ObjectName": "Texture2D'FORT_Load_Missions_PH3-256'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/LoadingScreens/Icons/FORT_Load_Missions_PH3-256.0"
+        },
+        "Heading": {
+          "Namespace": "",
+          "Key": "076B74E5413D20B67705D6A41AE2DCA2",
+          "SourceString": "Activate!",
+          "LocalizedString": "Activate!"
+        },
+        "HeadingDescription": {
+          "Namespace": "",
+          "Key": "2286413D46CA98CD860964967C0027C7",
+          "SourceString": "Activate three radar dishes",
+          "LocalizedString": "Activate three radar dishes"
+        }
+      }
+    },
+    "PrimaryMissionInfo": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/BuildTheRadarGrid/BuildRadarGrid.BuildRadarGrid",
+      "SubPathString": ""
+    },
+    "MissionGenerationChance[1]": 3.0,
+    "SecondaryMissionList": [
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/Encampments/CampClear/CampClear.CampClear",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.625,
+        "MinAlwaysGenerated": 0,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/Encampments/CampClear/CampClear_Medium.CampClear_Medium",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.625,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/Encampments/CampClear/CampClear_Large.CampClear_Large",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.625,
+        "MinAlwaysGenerated": 0,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/WhackaTroll/Mission/WhackaTroll.WhackaTroll",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.625,
+        "MinAlwaysGenerated": 0,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/CloseRift/Mission/CloseRift_MissionInfo.CloseRift_MissionInfo",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Primary/BuildTheRadarGrid/BuildRadarTowerInfos/BuildRadarTower_Large_001.BuildRadarTower_Large_001",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Primary/BuildTheRadarGrid/BuildRadarTowerInfos/BuildRadarTower_Large_002.BuildRadarTower_Large_002",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Primary/BuildTheRadarGrid/BuildRadarTowerInfos/BuildRadarTower_Medium_001.BuildRadarTower_Medium_001",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Primary/BuildTheRadarGrid/BuildRadarTowerInfos/BuildRadarTower_Small_001.BuildRadarTower_Small_001",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Primary/BuildTheRadarGrid/BuildRadarTowerInfos/BuildRadarTower_Small_002.BuildRadarTower_Small_002",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      }
+    ],
+    "TertiaryMissionList": [
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Tertiary/Patrol/Mission/MissionInfo_Patrol_ShortTimer.MissionInfo_Patrol_ShortTimer",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/BluGloPylon/BluGloPylon_Speed.BluGloPylon_Speed",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/BluGloPylon/BluGloPylon_Health.BluGloPylon_Health",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/BluGloPylon/BluGloPylon_Building.BluGloPylon_Building",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/BluGloPylon/BluGloPylon_Shield.BluGloPylon_Shield",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/BluGloPylon/BluGloPylon_Stamina.BluGloPylon_Stamina",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/BluGlo/BluGlo_Nodes.BluGlo_Nodes",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      }
+    ],
+    "SurvivorMissionList": [
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/SurvivorRescue/SurvivorRescueCar.SurvivorRescueCar",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 1.0,
+        "MinAlwaysGenerated": 0,
+        "bIsPrototype": true
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/SurvivorWanderers/SurvivorWanderers.SurvivorWanderers",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.0,
+        "MinAlwaysGenerated": 1,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/SurvivorWanderEncounter/SurvivorWanderEncounterNature.SurvivorWanderEncounterNature",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 1.0,
+        "MinAlwaysGenerated": 0,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/SurvivorWanderEncounter/SurvivorWanderEncounterNature.SurvivorWanderEncounterNature",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 1.0,
+        "MinAlwaysGenerated": 0,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/SurvivorWanderers/SurvivorWanderersRoofs.SurvivorWanderersRoofs",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 1.0,
+        "MinAlwaysGenerated": 0,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/SurvivorRescue/SurvivorRescueRV.SurvivorRescueRV",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 1.0,
+        "MinAlwaysGenerated": 0,
+        "bIsPrototype": false
+      },
+      {
+        "MissionInfo": {
+          "AssetPathName": "/SaveTheWorld/Missions/Secondary/SurvivorLostItem/SurvivorLostItem.SurvivorLostItem",
+          "SubPathString": ""
+        },
+        "ScenarioSpawningVolumeClass": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "Weight": 0.66,
+        "MinAlwaysGenerated": 0,
+        "bIsPrototype": false
+      }
+    ],
+    "Enabled": {
+      "Curve": {
+        "CurveTable": {
+          "ObjectName": "CurveTable'MissionGenEnabled'",
+          "ObjectPath": "/SaveTheWorld/World/MissionGens/MissionGenEnabled.0"
+        },
+        "RowName": "BuildTheRadarGrid"
+      }
+    }
   }
 }

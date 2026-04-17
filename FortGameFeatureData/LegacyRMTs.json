@@ -1,107 +1,83 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'LegacyRMTs'",
-    "ObjectPath": "/LegacyRMTs/LegacyRMTs.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "LegacyRMTs",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/LegacyRMTs/LegacyRMTs",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "9.10"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Sparks.Playlist"
-              },
-              {
-                "TagName": "Athena.Playlist"
-              },
-              {
-                "TagName": "Playlist.Juno"
-              },
-              {
-                "TagName": "Playlist.Sprout"
-              },
-              {
-                "TagName": "Playlist.UGC"
-              },
-              {
-                "TagName": "Playlist.DelMar"
-              },
-              {
-                "TagName": "Athena.Creative"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              7,
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Sparks.Playlist, Athena.Playlist, Playlist.Juno, Playlist.Sprout, Playlist.UGC, Playlist.DelMar, Athena.Creative )"
-          },
-          "bMigratedFromOldData": true
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'LegacyRMTs:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/LegacyRMTs/LegacyRMTs.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Quest",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortQuestItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Sparks.Playlist"
+      },
+      {
+        "PrimaryAssetType": "ChallengeBundle",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortChallengeBundleItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist"
-        },
-        {
-          "TagName": "Playlist.Juno"
-        },
-        {
-          "TagName": "Playlist.Sprout"
-        },
-        {
-          "TagName": "Playlist.UGC"
-        },
-        {
-          "TagName": "Playlist.DelMar"
-        },
-        {
-          "TagName": "Athena.Creative"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        7,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "AutoDescription": " ANY( Sparks.Playlist, Athena.Playlist, Playlist.Juno, Playlist.Sprout, Playlist.UGC, Playlist.DelMar, Athena.Creative )"
-    }
+      },
+      {
+        "PrimaryAssetType": "ChallengeBundleSchedule",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortChallengeBundleScheduleDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
   }
 }

@@ -1,23 +1,210 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_WeeklyCreative_V1_FS_Category_TY_Q11'",
-    "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/WeeklyCreative/Category/Cat_05_Tycoon/Quest_WeeklyCreative_V1_FS_Category_TY_Q11.3"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_WeeklyCreative_V1_FS_Category_TY_Q11",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/CreativePermanentQuests/Items/QuestItems/WeeklyCreative/Category/Cat_05_Tycoon/Quest_WeeklyCreative_V1_FS_Category_TY_Q11",
   "Properties": {
-    "VisibilitySettings": {
-      "bOverrideBundleVisibilityData": true,
-      "QuestVisiblityData": {
-        "bIsVisibleWhenCompleted": true
-      },
-      "bCanShowTimer": false
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_WeeklyCreative_V1_FS_Category_TY_Q11_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementType": "EAcquireIncrementType::TotalMatchingItemCounts",
+            "bUseItemCount": false,
+            "ItemAcquired": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Resource.XP"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Resource.XP )"
+              }
+            },
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AcquireSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "QuestCategory"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  3,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " NONE( QuestCategory )"
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "27770C894377C54302AF5B986438C6F3",
+          "SourceString": "Earn XP in Tycoon Creator-made Islands",
+          "LocalizedString": "Earn XP in Tycoon Creator-made Islands"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 11,
+          "DisplayMaxStage": 22
+        },
+        "Count": 60000,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 33,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.FNE"
+        },
+        {
+          "TagName": "LinkEntry.Category.Tycoon"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ALL( Product.FNE, LinkEntry.Category.Tycoon )"
     },
-    "DiscoveryRowSettings": {
-      "DiscoveryOverrideLinkID": "reference_surface_category_tycoon",
-      "DiscoveryOverrideLinkTreatmentType": "EDiscoveryLinkTreatmentType::Category"
-    }
+    "SortPriority": 11,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_WeeklyCreative_V1_FS_Category_TY_Q11:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/WeeklyCreative/Category/Cat_05_Tycoon/Quest_WeeklyCreative_V1_FS_Category_TY_Q11.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_WeeklyCreative_V1_FS_Category_TY_Q11:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/WeeklyCreative/Category/Cat_05_Tycoon/Quest_WeeklyCreative_V1_FS_Category_TY_Q11.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_ProductCompatibilityInjector_IslandMetadata'Quest_WeeklyCreative_V1_FS_Category_TY_Q11:FortQuestDefinitionComponent_ProductCompatibilityInjector_IslandMetadata_0'",
+        "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/WeeklyCreative/Category/Cat_05_Tycoon/Quest_WeeklyCreative_V1_FS_Category_TY_Q11.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_WeeklyCreative_V1_FS_Category_TY_Q11_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "2271A40344A60E219337CDA8AB2F9725",
+      "SourceString": "Earn XP in Tycoon Creator-made Islands",
+      "LocalizedString": "Earn XP in Tycoon Creator-made Islands"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "3939206B4BF5B32C83573F8C02371953",
+      "SourceString": "Earn XP in Tycoon Creator-made Islands",
+      "LocalizedString": "Earn XP in Tycoon Creator-made Islands"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.FNE.WeeklyCreative.Category.05"
+        ]
+      }
+    ]
   }
 }

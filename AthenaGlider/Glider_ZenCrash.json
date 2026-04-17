@@ -1,345 +1,269 @@
 {
-  "Type": "AthenaGliderItemDefinition",
-  "Name": "Glider_ZenCrash",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaGliderItemDefinition'",
-  "Package": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Glider_ZenCrash",
+  "Type": "FortCosmeticParticleVariant",
+  "Name": "FortCosmeticParticleVariant_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortCosmeticParticleVariant'",
+  "Outer": {
+    "ObjectName": "AthenaGliderItemDefinition'Glider_ZenCrash'",
+    "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Glider_ZenCrash.0"
+  },
   "Properties": {
-    "CameraFramingBoundsCenterOffset": {
-      "X": -30.0,
-      "Y": 4.453189,
-      "Z": -20.0
-    },
-    "ParachutePrefabClass": {
-      "AssetPathName": "/BRCosmetics/Athena/Cosmetics/Blueprints/Gliders/B_Athena_Glider_ZenCrash.B_Athena_Glider_ZenCrash_C",
-      "SubPathString": ""
-    },
-    "SkeletalMesh": {
-      "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Street_Racer_White/Mesh/SK_Glider_StreetRacerWhite.SK_Glider_StreetRacerWhite",
-      "SubPathString": ""
-    },
-    "GliderMeshTransform": {
-      "Rotation": {
-        "X": 0.0,
-        "Y": -0.0,
-        "Z": 0.70710677,
-        "W": 0.70710677,
-        "IsNormalized": true,
-        "Size": 0.99999994,
-        "SizeSquared": 0.99999994
-      },
-      "Translation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Scale3D": {
-        "X": 1.0,
-        "Y": 1.0,
-        "Z": 1.0
-      }
-    },
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Blueprints/StreetRacer_Glider_AnimBP.StreetRacer_Glider_AnimBP_C",
-      "SubPathString": ""
-    },
-    "PlayerAnimSet": {
-      "AssetPathName": "/Game/Animation/Game/MainPlayer/Skydive/ParaGlide/HangGlider/HangGliderPlayerAnimSet.HangGliderPlayerAnimSet",
-      "SubPathString": ""
-    },
-    "TrailEffectDefinitions": [
+    "ParticleOptions": [
       {
-        "NiagaraSystem": {
-          "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/FX/NS_Glider_ZenCrash_Trail.NS_Glider_ZenCrash_Trail",
-          "SubPathString": ""
-        },
-        "EffectSocket": "None",
-        "Offset": {
-          "Rotation": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0,
-            "W": 1.0,
-            "IsNormalized": true,
-            "Size": 1.0,
-            "SizeSquared": 1.0
-          },
-          "Translation": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          },
-          "Scale3D": {
-            "X": 1.0,
-            "Y": 1.0,
-            "Z": 1.0
-          }
-        },
-        "ActivationMode": "EGliderTrailActivationMode::FullyDeployed",
-        "AttachmentMode": "EGliderTrailAttachmentMode::GliderMesh"
-      },
-      {
-        "NiagaraSystem": {
-          "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/FX/NS_Glider_ZenCrash_MufflerBurst.NS_Glider_ZenCrash_MufflerBurst",
-          "SubPathString": ""
-        },
-        "EffectSocket": "None",
-        "Offset": {
-          "Rotation": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0,
-            "W": 1.0,
-            "IsNormalized": true,
-            "Size": 1.0,
-            "SizeSquared": 1.0
-          },
-          "Translation": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          },
-          "Scale3D": {
-            "X": 1.0,
-            "Y": 1.0,
-            "Z": 1.0
-          }
-        },
-        "ActivationMode": "EGliderTrailActivationMode::FullyDeployed",
-        "AttachmentMode": "EGliderTrailAttachmentMode::GliderMesh"
-      }
-    ],
-    "OpenSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/Glider_StreetRacerBikerBlack_Open_Cue.Glider_StreetRacerBikerBlack_Open_Cue",
-      "SubPathString": ""
-    },
-    "CloseSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/Glider_StreetRacerBikerBlack_Close_Cue.Glider_StreetRacerBikerBlack_Close_Cue",
-      "SubPathString": ""
-    },
-    "ThrustSoundParams": [
-      {
-        "Key": "ELayeredAudioTriggerDirection::Forwards",
-        "Value": {
-          "InterpType": "ELayeredAudioInterpolationType::Linear",
-          "Curve": null,
-          "AttackSpeed": 3.0,
-          "ReleaseSpeed": 2.0,
-          "Oneshots": [
-            {
-              "SoundRef": {
-                "AssetPathName": "/BRCosmetics/Sounds/Gliders/LoneWolfMale/SC_GliderThrustStart_LoneWolfMale.SC_GliderThrustStart_LoneWolfMale",
-                "SubPathString": ""
-              },
-              "GateValue": 0.5,
-              "Direction": "ELayeredAudioTriggerDir::Forward",
-              "FadeWhenOutsideGate": true,
-              "MinTimeSinceTrigger": 0.1,
-              "InterruptFadeTime": 0.5
-            }
-          ]
-        }
-      },
-      {
-        "Key": "ELayeredAudioTriggerDirection::Sideways",
-        "Value": {
-          "InterpType": "ELayeredAudioInterpolationType::Linear",
-          "Curve": null,
-          "AttackSpeed": 3.0,
-          "ReleaseSpeed": 2.0,
-          "Oneshots": [
-            {
-              "SoundRef": {
-                "AssetPathName": "/BRCosmetics/Sounds/Gliders/LoneWolfMale/SC_GliderThrustStartSmall_LoneWolfMale.SC_GliderThrustStartSmall_LoneWolfMale",
-                "SubPathString": ""
-              },
-              "GateValue": 0.5,
-              "Direction": "ELayeredAudioTriggerDir::Forward",
-              "FadeWhenOutsideGate": true,
-              "MinTimeSinceTrigger": 0.1,
-              "InterruptFadeTime": 0.5
-            }
-          ]
-        }
-      },
-      {
-        "Key": "ELayeredAudioTriggerDirection::Backwards",
-        "Value": {
-          "InterpType": "ELayeredAudioInterpolationType::Linear",
-          "Curve": null,
-          "AttackSpeed": 3.0,
-          "ReleaseSpeed": 2.0,
-          "Oneshots": [
-            {
-              "SoundRef": {
-                "AssetPathName": "/BRCosmetics/Sounds/Gliders/LoneWolfMale/SC_GliderThrustStartSmall_LoneWolfMale.SC_GliderThrustStartSmall_LoneWolfMale",
-                "SubPathString": ""
-              },
-              "GateValue": 0.5,
-              "Direction": "ELayeredAudioTriggerDir::Forward",
-              "FadeWhenOutsideGate": true,
-              "MinTimeSinceTrigger": 0.1,
-              "InterruptFadeTime": 0.5
-            }
-          ]
-        }
-      }
-    ],
-    "ItemVariants": [
-      {
-        "ObjectName": "FortCosmeticParticleVariant'Glider_ZenCrash:FortCosmeticParticleVariant_0'",
-        "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Glider_ZenCrash.1"
-      }
-    ],
-    "ItemVariantPreviews": [
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
-        },
-        "PreviewTime": 3.0,
-        "VariantOptions": [
+        "VariantMaterials": [
           {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Street_Racer_White/Materials/MI_Glider_Street_Racer_White.MI_Glider_Street_Racer_White",
+              "SubPathString": ""
             },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle2"
-            }
-          },
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle3"
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 1,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/Materials/MI_Glider_ZenCrash.MI_Glider_ZenCrash",
+              "SubPathString": ""
             }
           }
         ],
-        "AdditionalItems": []
-      }
-    ],
-    "ItemPreviewActorClass": {
-      "AssetPathName": "/Game/Environments/FrontEnd/Blueprints/ItemPreview/Cameras_Glider/GliderItemPreview_ZenCrash.GliderItemPreview_ZenCrash_C",
-      "SubPathString": ""
-    },
-    "VariantShotGridIds": [
-      181707,
-      181708,
-      184514
-    ],
-    "ShotGridIds": [
-      181707,
-      181707,
-      181708,
-      184514
-    ],
-    "BaseShotGridId": 181707,
-    "ItemName": {
-      "Namespace": "",
-      "Key": "E8AA19B3406B8EE38050DD8F257B942F",
-      "SourceString": "Stuntcopter",
-      "LocalizedString": "Stuntcopter"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "AFA7A7CF4109462626932EBFF4C2AC10",
-      "SourceString": "Always on location.",
-      "LocalizedString": "Always on location."
-    },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "F6696CF34A757AA818C004912AAFEC0F",
-      "SourceString": "Glider",
-      "LocalizedString": "Glider"
-    },
-    "DataList": [
-      {
-        "MeshOverride": {
-          "AssetPathName": "",
-          "SubPathString": ""
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/FX/NS_Glider_ZenCrash_Trail.NS_Glider_ZenCrash_Trail",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 0.0,
+                "ParamName": "Variant"
+              }
+            ],
+            "TextureParams": []
+          },
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/FX/NS_Glider_ZenCrash_MufflerBurst.NS_Glider_ZenCrash_MufflerBurst",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 0.0,
+                "ParamName": "Variant"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
         },
-        "SkeletalMeshOverride": {
-          "AssetPathName": "",
-          "SubPathString": ""
+        "bStartUnlocked": false,
+        "bIsDefault": true,
+        "bHideIfNotOwned": true,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle1"
         },
-        "PivotOffset": {
-          "X": -1.6,
-          "Y": -95.0,
-          "Z": 45.0
+        "VariantName": {
+          "Namespace": "",
+          "Key": "BA0706A947201588E3AE62BEA5BD0AE0",
+          "SourceString": "Stuntcopter",
+          "LocalizedString": "Stuntcopter"
         },
-        "InitialRotation": {
-          "Pitch": 10.0,
-          "Yaw": -45.0,
-          "Roll": -14.0
-        },
-        "Scale": 1.0
-      },
-      {
-        "MinLevel": 1,
-        "MaxLevel": 1
-      },
-      {
-        "Icon": {
+        "PreviewImage": {
           "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S39/T_Icon_Glider_ZenCrash.T_Icon_Glider_ZenCrash",
           "SubPathString": ""
-        }
-      },
-      {
-        "LargeIcon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S39/T_Icon_Glider_ZenCrash_L.T_Icon_Glider_ZenCrash_L",
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
+        },
+        "VariantGameplayTags": []
       },
       {
-        "Traits": [
-          "Item.Trait.SingleStack"
-        ]
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Street_Racer_White/Materials/MI_Glider_Street_Racer_White.MI_Glider_Street_Racer_White",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 1,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/Skins/Orb/Materials/MI_Glider_ZenCrash_Orb.MI_Glider_ZenCrash_Orb",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/FX/NS_Glider_ZenCrash_Trail.NS_Glider_ZenCrash_Trail",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 1.0,
+                "ParamName": "Variant"
+              }
+            ],
+            "TextureParams": []
+          },
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/FX/NS_Glider_ZenCrash_MufflerBurst.NS_Glider_ZenCrash_MufflerBurst",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 1.0,
+                "ParamName": "Variant"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": false,
+        "bIsDefault": false,
+        "bHideIfNotOwned": true,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle2"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "49040A8449EF97DBC5FA97A489130EC7",
+          "SourceString": "Faceoff Stuntcopter",
+          "LocalizedString": "Faceoff Stuntcopter"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S39/T_Icon_Glider_ZenCrash_Orb.T_Icon_Glider_ZenCrash_Orb",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
       },
       {
-        "Tags": [
-          "Cosmetics.LimitedTimeReward",
-          "Cosmetics.Filter.Season.39",
-          "Cosmetics.Set.BreakFall",
-          "Cosmetics.Source.Season39.BattlePass.Paid",
-          "Cosmetics.Source.Season39.BattlePass.Free"
-        ]
-      },
-      {
-        "Rarity": "EFortRarity::Epic"
-      },
-      {
-        "GeneratedTagsIndexes": [
-          244,
-          550,
-          553,
-          367,
-          253,
-          167,
-          255,
-          171,
-          613,
-          649,
-          668,
-          745,
-          184,
-          56,
-          116,
-          1029,
-          1157,
-          325,
-          2035,
-          2395,
-          2505,
-          437,
-          5035
-        ]
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Street_Racer_White/Materials/MI_Glider_Street_Racer_White.MI_Glider_Street_Racer_White",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 1,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/Skins/LandFoil/Materials/MI_Glider_ZenCrash_LandFoil.MI_Glider_ZenCrash_LandFoil",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/FX/NS_Glider_ZenCrash_Trail.NS_Glider_ZenCrash_Trail",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 2.0,
+                "ParamName": "Variant"
+              }
+            ],
+            "TextureParams": []
+          },
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_ZenCrash/FX/NS_Glider_ZenCrash_MufflerBurst.NS_Glider_ZenCrash_MufflerBurst",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 2.0,
+                "ParamName": "Variant"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": false,
+        "bIsDefault": false,
+        "bHideIfNotOwned": true,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle3"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "62F4069E44D136401F6411A7FEEB3975",
+          "SourceString": "Soaring Jade Stuntcopter",
+          "LocalizedString": "Soaring Jade Stuntcopter"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S39/T_Icon_Glider_ZenCrash_LandFoil.T_Icon_Glider_ZenCrash_LandFoil",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
       }
-    ]
+    ],
+    "VariantChannelName": {
+      "Namespace": "",
+      "Key": "0CA55E5F4D7020A40D90709700EFB081",
+      "SourceString": "Style",
+      "LocalizedString": "Style"
+    },
+    "VariantChannelTag": {
+      "TagName": "Cosmetics.Variant.Channel.Particle"
+    }
   }
 }

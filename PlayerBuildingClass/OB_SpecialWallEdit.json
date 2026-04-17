@@ -1,21 +1,50 @@
 {
-  "Type": "BaseBuildingStaticMeshComponent",
-  "Name": "StaticMeshComponent0",
-  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'BaseBuildingStaticMeshComponent'",
+  "Type": "StaticMeshComponent",
+  "Name": "highlight_GEN_VARIABLE",
+  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'StaticMeshComponent'",
   "Outer": {
-    "ObjectName": "OB_SpecialWallEdit_C'Default__OB_SpecialWallEdit_C'",
-    "ObjectPath": "/SaveTheWorld/Missions/Primary/OB_FarmsteadFort/Props/OB_SpecialWallEdit.20"
+    "ObjectName": "BlueprintGeneratedClass'OB_SpecialWallEdit_C'",
+    "ObjectPath": "/SaveTheWorld/Missions/Primary/OB_FarmsteadFort/Props/OB_SpecialWallEdit.1"
   },
   "Properties": {
     "StaticMesh": {
       "ObjectName": "StaticMesh'PBW_M2_Solid'",
       "ObjectPath": "/Game/Packages/PBW/Metal/L2/PBW_M2_Solid.1"
     },
-    "CanCharacterStepUpOn": "ECanBeCharacterBase::ECB_Yes",
+    "OverrideMaterials": [
+      {
+        "ObjectName": "Material'M_LedgeHighlight'",
+        "ObjectPath": "/SaveTheWorld/Missions/Primary/OB_FarmsteadFort/ArtAssets/Materials/M_LedgeHighlight.0"
+      }
+    ],
     "BodyInstance": {
-      "bAutoWeld": false
+      "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+      "CollisionEnabled": "ECollisionEnabled::NoCollision",
+      "CollisionProfileName": "NoCollision",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "Visibility",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Camera",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          }
+        ]
+      },
+      "MassInKgOverride": 420.04022
     },
-    "bCanEverAffectNavigation": true
+    "RelativeLocation": {
+      "X": 3.0592084E-05,
+      "Y": -2.7193754,
+      "Z": 0.0
+    },
+    "RelativeScale3D": {
+      "X": 1.01,
+      "Y": 1.01,
+      "Z": 1.01
+    }
   }
 }

@@ -1,75 +1,64 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'DelMarGFSMetaData'",
-    "ObjectPath": "/DelMarGFSMetaData/DelMarGFSMetaData.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "DelMarGFSMetaData",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/DelMarGFSMetaData/DelMarGFSMetaData",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "29.01"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playground"
-              },
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              3,
-              0,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playground, Athena.Creative, Playlist.UGC.Core )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playground"
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'DelMarGFSMetaData:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/DelMarGFSMetaData/DelMarGFSMetaData.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'DelMarGFSMetaData:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/DelMarGFSMetaData/DelMarGFSMetaData.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "ValkyrieGameFeatureSetDefinition",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/VkRuntime.ValkyrieGameFeatureSetDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/DelMarGFSMetaData/DelMarGFSDefinition.DelMarGFSDefinition",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        3,
-        0,
-        1,
-        2
-      ],
-      "AutoDescription": " ANY( Athena.Playground, Athena.Creative, Playlist.UGC.Core )"
-    }
+      },
+      {
+        "PrimaryAssetType": "ValkyrieTemplateCategorization",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/VkRuntime.ValkyrieTemplateCategorization",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/DelMarGFSMetaData/TemplateCategorization"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
   }
 }

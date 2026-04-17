@@ -1,92 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'PoliteDinner'",
     "ObjectPath": "/PoliteDinner/PoliteDinner.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.40"
-            },
-            "ExclusiveMax": {
-              "VersionName": "38.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Mash"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Mash ) )"
-          },
-          "bMigratedFromOldData": false
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Phoebe.ItemData",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/PoliteDinner/DataTables/DT_Phoebe_ItemData_PoliteDinner.DT_Phoebe_ItemData_PoliteDinner",
+          "SubPathString": ""
         },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "39.40"
-            },
-            "ExclusiveMax": {
-              "VersionName": "39.50"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Plugin.Playlist.ForbiddenFruit"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              5,
-              0,
-              1,
-              2,
-              3,
-              4
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Plugin.Playlist.Arena, Athena.Playlist.Default, Athena.Playlist.Test, Plugin.Playlist.ForbiddenFruit, Plugin.Playlist.BlastBerry ) )"
-          },
-          "bMigratedFromOldData": false
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    }
+      }
+    ]
   }
 }

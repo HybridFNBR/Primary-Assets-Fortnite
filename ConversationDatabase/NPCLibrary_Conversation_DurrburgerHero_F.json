@@ -1,93 +1,177 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_DurrburgerHero_F",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/DurrburgerHero_F/NPCLibrary_Conversation_DurrburgerHero_F",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_DurrburgerHero_F'",
+    "ObjectPath": "/NPCLibrary/NPCs/DurrburgerHero_F/NPCLibrary_Conversation_DurrburgerHero_F.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "A3C11925-4E3D66EC-4A338BA2-8915B163",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_DurrburgerHero_F:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/DurrburgerHero_F/NPCLibrary_Conversation_DurrburgerHero_F.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "38C9A70046B15B2B5E99DF9C89004A72",
+            "SourceString": "Where in the Durrr am I?",
+            "LocalizedString": "Where in the Durrr am I?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_DurrburgerHero_F:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/DurrburgerHero_F/NPCLibrary_Conversation_DurrburgerHero_F.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A6183131481FFD8F6BCBC1B1934AB5D3",
+            "SourceString": "How're you? I'm medium well.",
+            "LocalizedString": "How're you? I'm medium well."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_DurrburgerHero_F:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/DurrburgerHero_F/NPCLibrary_Conversation_DurrburgerHero_F.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0E40BE314E1CC5129F2A518FC56DE9D2",
+            "SourceString": "Please - not again! I have a family!",
+            "LocalizedString": "Please - not again! I have a family!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_DurrburgerHero_F:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/DurrburgerHero_F/NPCLibrary_Conversation_DurrburgerHero_F.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "531BAB99-433E9D56-155C1D9B-9C47CA9C",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_DurrburgerHero_F:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/DurrburgerHero_F/NPCLibrary_Conversation_DurrburgerHero_F.7"
-        }
-      },
-      {
-        "Key": "9D5BCD05-46EAF34B-7263E289-49A81A5A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DurrburgerHero_F:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/DurrburgerHero_F/NPCLibrary_Conversation_DurrburgerHero_F.2"
-        }
-      },
-      {
-        "Key": "914A7C4C-40E44F4F-0F6AF6B1-F4AA5177",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DurrburgerHero_F:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/DurrburgerHero_F/NPCLibrary_Conversation_DurrburgerHero_F.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "9BD674B241A429B00D1F0EA5F7405E78",
+        "SourceString": "How're you?",
+        "LocalizedString": "How're you?"
       }
+    },
+    "OutputConnections": [
+      "914A7C4C-40E44F4F-0F6AF6B1-F4AA5177",
+      "9D5BCD05-46EAF34B-7263E289-49A81A5A"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.DurrburgerHeroF"
-        },
-        "DestinationList": [
-          "A3C11925-4E3D66EC-4A338BA2-8915B163"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "A3C11925-4E3D66EC-4A338BA2-8915B163",
-      "531BAB99-433E9D56-155C1D9B-9C47CA9C",
-      "9D5BCD05-46EAF34B-7263E289-49A81A5A",
-      "914A7C4C-40E44F4F-0F6AF6B1-F4AA5177"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "531BAB99-433E9D56-155C1D9B-9C47CA9C",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_DurrburgerHero_F:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/DurrburgerHero_F/NPCLibrary_Conversation_DurrburgerHero_F.1"
+    }
   }
 }

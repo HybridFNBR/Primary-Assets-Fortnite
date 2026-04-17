@@ -1,21 +1,72 @@
 {
-  "Type": "CustomCharacterBackpackData",
-  "Name": "CustomCharacterBackpackData_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterBackpackData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_Backpack_WavySignalBanjo'",
-    "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_WavySignalBanjo.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_Backpack_WavySignalBanjo",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_WavySignalBanjo",
   "Properties": {
-    "AttachSocketName": "Backpack_BR",
-    "AttachmentOverrideData": {
-      "ObjectName": "CustomAccessoryAttachmentData'MaleSource'",
-      "ObjectPath": "/Game/Characters/Player/Common/BackpackScaleSettings/MaleSource.0"
+    "GenderPermitted": "EFortCustomGender::Both",
+    "CharacterPartType": "EFortCustomPartType::Backpack",
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Backpack"
+      ],
+      "PartTypeIndex": 3
     },
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_WavySignalBanjo/Meshes/M_MED_WavySignalBanjo_Pack_AnimBP.M_MED_WavySignalBanjo_Pack_AnimBP_C",
+    "PartModifierBlueprint": {
+      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/B_Athena_PartModifier_Generic_Elimination_FX.B_Athena_PartModifier_Generic_Elimination_FX_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterBackpackData'CP_Backpack_WavySignalBanjo:CustomCharacterBackpackData_0'",
+      "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_WavySignalBanjo.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_WavySignalBanjo/Meshes/M_MED_WavySignalBanjo_Pack.M_MED_WavySignalBanjo_Pack",
+      "SubPathString": ""
+    },
+    "SoundLibraries": [
+      {
+        "ObjectName": "SoundLibrary'SL_BackBling_WavySignalBanjo'",
+        "ObjectPath": "/BRCosmetics/Sounds/Backblings/WavySignalBanjo/SL_BackBling_WavySignalBanjo.0"
+      }
+    ],
+    "CosmeticPartDataList": [
+      {
+        "EffectParameters": [
+          {
+            "Tag": {
+              "TagName": "CosmeticPart.VFX.Elimination"
+            },
+            "Effect": {
+              "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_WavySignalBanjo/FX/NS_Backpack_WavySignalBanjo_Reactive.NS_Backpack_WavySignalBanjo_Reactive",
+              "SubPathString": ""
+            },
+            "LocationOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "RotationOffset": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "bIsPersistent": false,
+            "bAutoActivate": true,
+            "AttachmentParams": {
+              "SocketName": "pack",
+              "AttachmentTarget": "ECharacterPartAttachmentTargetType::SkeletalMeshForAssociatedPlayerPawnPartType",
+              "AttachmentRules": {
+                "LocationRule": "EAttachmentRule::SnapToTarget",
+                "RotationRule": "EAttachmentRule::SnapToTarget",
+                "ScaleRule": "EAttachmentRule::SnapToTarget",
+                "bWeldSimulatedBodies": false
+              }
+            }
+          }
+        ]
+      }
+    ]
   }
 }

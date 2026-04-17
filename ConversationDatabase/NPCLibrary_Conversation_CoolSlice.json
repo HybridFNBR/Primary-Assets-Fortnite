@@ -1,111 +1,224 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_CoolSlice",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_CoolSlice'",
+    "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "AC2B6A98-4148DF15-99BD65B8-4CC3E913",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CoolSlice:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.1"
-        }
-      },
-      {
-        "Key": "8DCF7AE5-449FEC19-1AC68692-5DDCA583",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_CoolSlice:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.10"
-        }
-      },
-      {
-        "Key": "D39D1430-47B8BA1D-62E00094-620CADD2",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CoolSlice:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.5"
-        }
-      },
-      {
-        "Key": "0E8C23CE-4669B9AC-7F664DA3-37FD0AE7",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CoolSlice:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.4"
-        }
-      },
-      {
-        "Key": "56DC6F22-47885FCA-18D55885-A25BDE7C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CoolSlice:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.2"
-        }
-      },
-      {
-        "Key": "0E121610-4780765D-D886C79E-47E8EB07",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CoolSlice:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.CoolSlice"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A913A7F04503C920314A71BA7AB9E755",
+            "SourceString": "Hi-diddly-hey, neighborino!",
+            "LocalizedString": "Hi-diddly-hey, neighborino!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_CoolSlice:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "AC2B6A98-4148DF15-99BD65B8-4CC3E913"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CEE1D655482A94F6A0E8A4B9DE168393",
+            "SourceString": "What can I ding-dong-diddly-do for you?",
+            "LocalizedString": "What can I ding-dong-diddly-do for you?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CoolSlice:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "895760B54D42302CD5038B9F9338EC14",
+            "SourceString": "Can't you give me one ding-dang moment of peace!",
+            "LocalizedString": "Can't you give me one ding-dang moment of peace!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CoolSlice:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B9EA0F344A55EEBCCE3921A411D8976B",
+            "SourceString": "Tell Homer enough with the ding-dong-diddly sky donuts!",
+            "LocalizedString": "Tell Homer enough with the ding-dong-diddly sky donuts!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CoolSlice:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "E5BDDFC746FD0C11A2317E90AA197F33",
+        "SourceString": "What can I ding-dong-diddly-do for you?",
+        "LocalizedString": "What can I ding-dong-diddly-do for you?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season38.Story.P02.Q05.02",
-      "Conversation.Entry.Season38.Story.P02.Q02.02",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "AC2B6A98-4148DF15-99BD65B8-4CC3E913",
-      "8DCF7AE5-449FEC19-1AC68692-5DDCA583",
-      "D39D1430-47B8BA1D-62E00094-620CADD2",
-      "0E8C23CE-4669B9AC-7F664DA3-37FD0AE7",
+    },
+    "OutputConnections": [
+      "0E121610-4780765D-D886C79E-47E8EB07",
       "56DC6F22-47885FCA-18D55885-A25BDE7C",
-      "0E121610-4780765D-D886C79E-47E8EB07"
+      "0E8C23CE-4669B9AC-7F664DA3-37FD0AE7",
+      "D39D1430-47B8BA1D-62E00094-620CADD2"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "8DCF7AE5-449FEC19-1AC68692-5DDCA583",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CoolSlice:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/CoolSlice/NPCLibrary_Conversation_CoolSlice.1"
+    }
   }
 }

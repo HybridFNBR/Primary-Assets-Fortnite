@@ -1,239 +1,27 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_Figment_Daily_Elim_ShotgunSniper",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Gameplay/Quest_Figment_Daily_Elim_ShotgunSniper",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_Figment_Daily_Elim_ShotgunSniper'",
+    "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Gameplay/Quest_Figment_Daily_Elim_ShotgunSniper.0"
+  },
   "Properties": {
-    "Group": "FigmentEvergreenDailyQuestGameplay",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_Figment_Daily_Elim_ShotgunSniper_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "DataTableEntryRewards": [
           {
-            "EliminatedPawn": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Homebase.Class"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Homebase.Class )"
-              }
-            },
-            "Killer": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "EliminationSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Item.Weapon.Ranged.Shotgun"
-                  },
-                  {
-                    "TagName": "Item.Weapon.Ranged.Sniper"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Item.Weapon.Ranged.Shotgun, Item.Weapon.Ranged.Sniper )"
-              }
-            },
-            "AllowedTeamAffiliations": [],
-            "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
-            "bIncrementByDistance": false,
-            "bUseKillStreak": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestRewards_Evergreen_Figment'",
+                "ObjectPath": "/FigmentQuests/DataTables/QuestRewards_Evergreen_Figment.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+              "RowName": "FigmentDailyQuestRewards"
             },
-            "KillStreak": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "94A27DD242AC15307EA40FB42EB18D89",
-          "SourceString": "Eliminate a player with a shotgun or sniper rifle",
-          "LocalizedString": "Eliminate a player with a shotgun or sniper rifle"
-        },
-        "HudShortDescription": {
-          "Namespace": "",
-          "Key": "84DDFD084279EF64A8D0C49C941C7338",
-          "SourceString": "Eliminate a player with a shotgun or sniper rifle",
-          "LocalizedString": "Eliminate a player with a shotgun or sniper rifle"
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 1,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 50,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Figment"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Product.Figment )"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Daily_Elim_ShotgunSniper:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Gameplay/Quest_Figment_Daily_Elim_ShotgunSniper.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Daily_Elim_ShotgunSniper:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Gameplay/Quest_Figment_Daily_Elim_ShotgunSniper.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_Figment_Daily_Elim_ShotgunSniper_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "9B1A8CC242AC5950CDB41389AE81C7B4",
-      "SourceString": "Eliminate a player with a shotgun or sniper rifle",
-      "LocalizedString": "Eliminate a player with a shotgun or sniper rifle"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "707ED5A54896472DA117B2BA3DCF15E8",
-      "SourceString": "Eliminate a player with a shotgun or sniper rifle",
-      "LocalizedString": "Eliminate a player with a shotgun or sniper rifle"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.Figment.Dailies"
         ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

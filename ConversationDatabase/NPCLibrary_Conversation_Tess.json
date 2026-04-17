@@ -1,93 +1,177 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Tess",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Tess/Tess/NPCLibrary_Conversation_Tess",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Tess'",
+    "ObjectPath": "/NPCLibrary/NPCs/Tess/Tess/NPCLibrary_Conversation_Tess.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "35EEFE32-4522E16A-927BA2B8-A96FA2E7",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Tess:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Tess/Tess/NPCLibrary_Conversation_Tess.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E1C7FCA044CE3906432EE08A791E9ADB",
+            "SourceString": "Haven't seen that many bars in one place since-- \r\nWell, that's a story for another time.",
+            "LocalizedString": "Haven't seen that many bars in one place since-- \r\nWell, that's a story for another time."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasBars'NPCLibrary_Conversation_Tess:Speech_C_4.FortControllerRequirement_HasBars_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Tess/Tess/NPCLibrary_Conversation_Tess.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.HighTotalBars"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9CE3CF81475B8BF87A4BC3AAB4EC182C",
+            "SourceString": "Thought I told you to never show your face around me again, Krab. <b>You're either brave, or stupid.</>",
+            "LocalizedString": "Thought I told you to never show your face around me again, Krab. <b>You're either brave, or stupid.</>"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Tess:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Tess/Tess/NPCLibrary_Conversation_Tess.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "14AC3E7B454B4EBE051F55B03E9A11B4",
+            "SourceString": "Oh good. Another wannabe champ. Let's see how you do out there.",
+            "LocalizedString": "Oh good. Another wannabe champ. Let's see how you do out there."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Tess:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Tess/Tess/NPCLibrary_Conversation_Tess.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "2799B2FC-4F155C67-1BDDCA86-DFBCBC29",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Tess:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Tess/Tess/NPCLibrary_Conversation_Tess.7"
-        }
-      },
-      {
-        "Key": "78B307DF-48E71E64-088904A0-D471081E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Tess:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Tess/Tess/NPCLibrary_Conversation_Tess.2"
-        }
-      },
-      {
-        "Key": "07206746-4F75CF66-5CC6998A-3EE371BA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Tess:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Tess/Tess/NPCLibrary_Conversation_Tess.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "92B565E34BFC2ECB57104F883F5566AA",
+        "SourceString": "Ready to break some hearts?",
+        "LocalizedString": "Ready to break some hearts?"
       }
+    },
+    "OutputConnections": [
+      "07206746-4F75CF66-5CC6998A-3EE371BA",
+      "78B307DF-48E71E64-088904A0-D471081E"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Tess"
-        },
-        "DestinationList": [
-          "35EEFE32-4522E16A-927BA2B8-A96FA2E7"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "35EEFE32-4522E16A-927BA2B8-A96FA2E7",
-      "2799B2FC-4F155C67-1BDDCA86-DFBCBC29",
-      "78B307DF-48E71E64-088904A0-D471081E",
-      "07206746-4F75CF66-5CC6998A-3EE371BA"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "2799B2FC-4F155C67-1BDDCA86-DFBCBC29",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Tess:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Tess/Tess/NPCLibrary_Conversation_Tess.1"
+    }
   }
 }

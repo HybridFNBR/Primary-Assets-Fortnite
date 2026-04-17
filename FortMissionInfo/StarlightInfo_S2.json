@@ -1,21 +1,77 @@
 {
-  "Type": "FortDifficultyOptionCategoryEncounter_ModifierTags",
-  "Name": "FortDifficultyOptionCategoryEncounter_ModifierTags_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortDifficultyOptionCategoryEncounter_ModifierTags'",
-  "Outer": {
-    "ObjectName": "FortMissionInfo'StarlightInfo_S2'",
-    "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Dungeons/S2/StarlightInfo_S2.2"
-  },
+  "Type": "FortMissionInfo",
+  "Name": "StarlightInfo_S2",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Package": "/SaveTheWorld/Missions/Primary/Starlight/Dungeons/S2/StarlightInfo_S2",
   "Properties": {
-    "Options": [
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/Starlight/Dungeons/S2/StarlightMission_S2.StarlightMission_S2_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MaxMissionPoints": 24,
+    "ObjectiveBlocks": [
       {
-        "ObjectName": "BlueprintGeneratedClass'EDO_Elemental_Fire_C'",
-        "ObjectPath": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/Modifiers/EDO_Elemental_Fire.0"
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/Game/Missions/GenericObjectives/GenericObjective_Blank.GenericObjective_Blank_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn_Miniboss.EDO_Set_ScriptedSpawn_Miniboss",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'StarlightInfo_S2:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Dungeons/S2/StarlightInfo_S2.1"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_ModifierTags'StarlightInfo_S2:FortDifficultyOptionCategoryEncounter_ModifierTags_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Dungeons/S2/StarlightInfo_S2.0"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": true,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn",
+          "GameplayModifier.Enemy.Elemental.Fire"
+        ]
       },
       {
-        "ObjectName": "BlueprintGeneratedClass'AA_EDO_Enable_MiniBoss_C'",
-        "ObjectPath": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/Modifiers/AA_EDO_Enable_MiniBoss.1"
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S2/EDO_Set_Starlight_Inferno_BossMinions.EDO_Set_Starlight_Inferno_BossMinions",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": true,
+        "EncounterTypeTags": [
+          "Encounter.Disable.MiniBoss",
+          "Encounter.Type.PvE.Primary.Standard"
+        ]
       }
     ]
   }

@@ -1,0 +1,108 @@
+{
+  "Type": "FortMovementOverrideDataSet",
+  "Name": "MovementOverrideDataSets",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortMovementOverrideDataSet'",
+  "Package": "/Game/Athena/Balance/Movement/MovementOverrides/MovementOverrideDataSets",
+  "Properties": {
+    "AvailableMovementSets": [
+      {
+        "Key": {
+          "TagName": "Movement.Overrides.Ch4"
+        },
+        "Value": {
+          "ObjectName": "FortMovementOverrideData'Ch4MovementOverrides'",
+          "ObjectPath": "/Game/Athena/Balance/Movement/MovementOverrides/Ch4/Ch4MovementOverrides.0"
+        }
+      },
+      {
+        "Key": {
+          "TagName": "Movement.Overrides.Ch5"
+        },
+        "Value": {
+          "ObjectName": "FortMovementOverrideData'Ch5MovementOverrides'",
+          "ObjectPath": "/Game/Athena/Balance/Movement/MovementOverrides/Ch5/Ch5MovementOverrides.0"
+        }
+      },
+      {
+        "Key": {
+          "TagName": "Movement.Overrides.FeralCh6S1"
+        },
+        "Value": {
+          "ObjectName": "FortMovementOverrideData'Feral_Ch6S1_MovementOverrides'",
+          "ObjectPath": "/Game/Athena/Balance/Movement/MovementOverrides/Feral/Ch6S1/Feral_Ch6S1_MovementOverrides.0"
+        }
+      }
+    ],
+    "PlaylistTagsToMovementSetTags": [
+      {
+        "PlaylistQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Athena.Playlist.Default"
+            },
+            {
+              "TagName": "Athena.Playlist.ItemsTest"
+            },
+            {
+              "TagName": "Plugin.Playlist.Arena"
+            },
+            {
+              "TagName": "Athena.Playlist.Deliver"
+            },
+            {
+              "TagName": "Athena.Playlist.Rufus"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            5,
+            2,
+            1,
+            4,
+            0,
+            1,
+            2,
+            3,
+            3,
+            1,
+            4
+          ],
+          "UserDescription": "Fortnite BR",
+          "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Plugin.Playlist.Arena, Athena.Playlist.Deliver ),  NONE( Athena.Playlist.Rufus ) )"
+        },
+        "MovementSetTag": {
+          "TagName": "Movement.Overrides.Ch5"
+        },
+        "bPlaylistSupportsMultipleGames": false
+      },
+      {
+        "PlaylistQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Athena.Creative"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            4,
+            1,
+            1,
+            1,
+            0
+          ],
+          "UserDescription": "Creative",
+          "AutoDescription": " ANY(  ANY( Athena.Creative ) )"
+        },
+        "MovementSetTag": {
+          "TagName": "Movement.Overrides.Ch4"
+        },
+        "bPlaylistSupportsMultipleGames": true
+      }
+    ]
+  }
+}

@@ -1,93 +1,465 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_IslandNomad",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_IslandNomad'",
+    "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "000945A5-455D40C1-1408A6AD-A03BF3BD",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_IslandNomad:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8FCAAA254F9F3BE790EBC894019A5008",
+            "SourceString": "I followed some klombo tracks here, but they disappear...",
+            "LocalizedString": "I followed some klombo tracks here, but they disappear..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_IslandNomad:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F5BE2A1141FFCA6324D5428B59DD929C",
+            "SourceString": "Whatever experiments you're doing, run them faster. We're in trouble.",
+            "LocalizedString": "Whatever experiments you're doing, run them faster. We're in trouble."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_IslandNomad:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "68997C56433FB91B061F6B9411A6FEBE",
+            "SourceString": "Have you come to help the Island?",
+            "LocalizedString": "Have you come to help the Island?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_IslandNomad:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CCBF96A1418B43B674FB47A3EE41B75B",
+            "SourceString": "You look familiar... Are you here to help?",
+            "LocalizedString": "You look familiar... Are you here to help?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_IslandNomad:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0975AB244BA5FD4DBA935A9DC20586B2",
+            "SourceString": "We need a noble warrior, now more than ever.",
+            "LocalizedString": "We need a noble warrior, now more than ever."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_IslandNomad:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "56DABF794DDA48DB371796BF63511963",
+            "SourceString": "Did the Reality Tree do this to you?",
+            "LocalizedString": "Did the Reality Tree do this to you?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_IslandNomad:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "820DD64E44FBFF1B287121AD7525A824",
+            "SourceString": "The Peace Syndicate has the resources to look into what's happening here.",
+            "LocalizedString": "The Peace Syndicate has the resources to look into what's happening here."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_IslandNomad:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "64EAADA94E61D33E4131F0926367972A",
+            "SourceString": "Have you seen any klombo on your travels?",
+            "LocalizedString": "Have you seen any klombo on your travels?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_IslandNomad:Speech_C_4.FortControllerRequirement_HasCID_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7B026B784E770890DF4DF3B1F263914C",
+            "SourceString": "Your dark energy is not welcome here.",
+            "LocalizedString": "Your dark energy is not welcome here."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_IslandNomad:Speech_C_4.FortControllerRequirement_HasCID_7'",
+                "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8B55909D4AD168519A571B83CE81872D",
+            "SourceString": "The klombo disappeared in the same strange flash of light that brought them here.",
+            "LocalizedString": "The klombo disappeared in the same strange flash of light that brought them here."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_IslandNomad:Speech_C_4.FortControllerRequirement_HasCID_10'",
+                "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "09B9A425-4D6153FD-82B0329A-8EF327F0",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_IslandNomad:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.14"
-        }
-      },
-      {
-        "Key": "70F3D78A-48DA5272-0D1798B3-C8A7402C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_IslandNomad:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.2"
-        }
-      },
-      {
-        "Key": "65F9365B-46465F72-FEF4E1A1-20C167DF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_IslandNomad:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "A0BB9F0C4CFB6FFB7AD762B255078A6E",
+        "SourceString": "Something's not right.",
+        "LocalizedString": "Something's not right."
       }
+    },
+    "OutputConnections": [
+      "65F9365B-46465F72-FEF4E1A1-20C167DF",
+      "70F3D78A-48DA5272-0D1798B3-C8A7402C"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.IslandNomad"
-        },
-        "DestinationList": [
-          "000945A5-455D40C1-1408A6AD-A03BF3BD"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "000945A5-455D40C1-1408A6AD-A03BF3BD",
-      "09B9A425-4D6153FD-82B0329A-8EF327F0",
-      "70F3D78A-48DA5272-0D1798B3-C8A7402C",
-      "65F9365B-46465F72-FEF4E1A1-20C167DF"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "09B9A425-4D6153FD-82B0329A-8EF327F0",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_IslandNomad:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/IslandNomad/IslandNomad/NPCLibrary_Conversation_IslandNomad.1"
+    }
   }
 }

@@ -1,148 +1,98 @@
 {
-  "Type": "AthenaDanceItemDefinition",
-  "Name": "EID_JoyGrid",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDanceItemDefinition'",
-  "Package": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_JoyGrid",
+  "Type": "FortCosmeticLoadoutTagDrivenVariant",
+  "Name": "FortCosmeticLoadoutTagDrivenVariant_1",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortCosmeticLoadoutTagDrivenVariant'",
+  "Outer": {
+    "ObjectName": "AthenaDanceItemDefinition'EID_JoyGrid'",
+    "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_JoyGrid.0"
+  },
   "Properties": {
-    "FrontEndAnimation": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/JoyGrid/Emote_JoyGrid_CMM_FE_M.Emote_JoyGrid_CMM_FE_M",
-      "SubPathString": ""
-    },
-    "FrontEndAnimationFemaleOverride": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/JoyGrid/Emote_JoyGrid_CMF_FE_M.Emote_JoyGrid_CMF_FE_M",
-      "SubPathString": ""
-    },
-    "FrontEndAnimationOverrides": [
+    "Variants": [
       {
-        "BodyType": "EFortCustomBodyType::Large",
-        "Gender": "EFortCustomGender::Male",
-        "EmoteMontage": {
-          "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/JoyGrid/Emote_JoyGrid_CLM_FE_M.Emote_JoyGrid_CLM_FE_M",
-          "SubPathString": ""
-        }
-      },
-      {
-        "BodyType": "EFortCustomBodyType::Large",
-        "Gender": "EFortCustomGender::Female",
-        "EmoteMontage": {
-          "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/JoyGrid/Emote_JoyGrid_CLF_FE_M.Emote_JoyGrid_CLF_FE_M",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "bMovingEmote": true,
-    "WalkForwardSpeed": 375.359,
-    "bMoveForwardOnly": true,
-    "Animation": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/JoyGrid/Emote_JoyGrid_CMM_M.Emote_JoyGrid_CMM_M",
-      "SubPathString": ""
-    },
-    "AnimationFemaleOverride": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/JoyGrid/Emote_JoyGrid_CMF_M.Emote_JoyGrid_CMF_M",
-      "SubPathString": ""
-    },
-    "AnimationOverrides": [
-      {
-        "BodyType": "EFortCustomBodyType::Large",
-        "Gender": "EFortCustomGender::Male",
-        "EmoteMontage": {
-          "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/JoyGrid/Emote_JoyGrid_CLM_M.Emote_JoyGrid_CLM_M",
-          "SubPathString": ""
-        }
-      },
-      {
-        "BodyType": "EFortCustomBodyType::Large",
-        "Gender": "EFortCustomGender::Female",
-        "EmoteMontage": {
-          "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/JoyGrid/Emote_JoyGrid_CLF_M.Emote_JoyGrid_CLF_M",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "PreviewLoops": 3,
-    "EmoteCooldownSecs": 1.0,
-    "EmoteWheelExclusiveTags": [
-      "Cosmetics.Set.TrickDeck"
-    ],
-    "ItemVariants": [
-      {
-        "ObjectName": "FortCosmeticLoadoutTagDrivenVariant'EID_JoyGrid:FortCosmeticLoadoutTagDrivenVariant_1'",
-        "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_JoyGrid.1"
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "C46FDFBB4D9F3D123DF3FF8B8B6E38FA",
-      "SourceString": "Heely Out",
-      "LocalizedString": "Heely Out"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "610054684534CDF32E49B1BAB5988C41",
-      "SourceString": "Ready to roll.",
-      "LocalizedString": "Ready to roll."
-    },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "967D077D46B5499A5DF517AA1FC93BB9",
-      "SourceString": "Emote",
-      "LocalizedString": "Emote"
-    },
-    "DataList": [
-      {
-        "MeshOverride": {
+        "MontageSwaps": [
+          {
+            "ToSwapFrom": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/JoyGrid/Emote_JoyGrid_CMM_M.Emote_JoyGrid_CMM_M",
+              "SubPathString": ""
+            },
+            "ToSwapTo": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/JoyGrid/Emote_JoyGrid_CMM_NoWheel_M.Emote_JoyGrid_CMM_NoWheel_M",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "RequiredMetaTags": [],
+        "ExcludedMetaTags": [],
+        "RequiredConditions": [
+          {
+            "ItemCategory": "ECosmeticMetaTagRequirementCategory::None",
+            "SlotTag": {
+              "TagName": "LoadoutSlot.FullLoadout"
+            },
+            "SpecificItem": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "MetaTagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [
+                {
+                  "TagName": "Cosmetics.MetaTags.Style.OptionA"
+                }
+              ],
+              "QueryTokenStream": [
+                0,
+                1,
+                1,
+                1,
+                0
+              ],
+              "UserDescription": "No Wheels",
+              "AutoDescription": " ANY( Cosmetics.MetaTags.Style.OptionA )"
+            },
+            "RequiredMetaTags": [],
+            "ExcludedMetaTags": []
+          }
+        ],
+        "ExcludedConditions": [],
+        "VariantParts": [],
+        "VariantMaterials": [],
+        "VariantMaterialParams": [],
+        "InitalParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [],
+        "VariantSounds": [],
+        "VariantFoley": [],
+        "SocketTransforms": [],
+        "VariantActions": [],
+        "VariantMeshes": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": true,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Stage1"
+        },
+        "VariantName": {
+          "CultureInvariantString": null
+        },
+        "PreviewImage": {
           "AssetPathName": "",
           "SubPathString": ""
         },
-        "SkeletalMeshOverride": {
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
           "AssetPathName": "",
           "SubPathString": ""
         },
-        "PivotOffset": {
-          "X": 20.0,
-          "Y": 80.0,
-          "Z": 0.0
-        },
-        "InitialRotation": {
-          "Pitch": 0.0,
-          "Yaw": 0.0,
-          "Roll": 0.0
-        },
-        "Scale": 1.0
-      },
-      {
-        "Tags": [
-          "Cosmetics.EmoteType.Dance",
-          "Cosmetics.Source.ItemShop",
-          "Cosmetics.UserFacingFlags.Emote.Traversal",
-          "Cosmetics.Filter.Season.40",
-          "Cosmetics.Variant.ForceLoadAllParts",
-          "Cosmetics.UserFacingFlags.BuiltInEmote",
-          "Cosmetics.Set.TrickDeck"
-        ]
-      },
-      {
-        "Icon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Emotes/S40/T_Icon_Emotes_JoyGrid.T_Icon_Emotes_JoyGrid",
-          "SubPathString": ""
-        }
-      },
-      {
-        "LargeIcon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Emotes/S40/T_Icon_Emotes_JoyGrid_L.T_Icon_Emotes_JoyGrid_L",
-          "SubPathString": ""
-        }
-      },
-      {
-        "MinLevel": 1,
-        "MaxLevel": 1
-      },
-      {
-        "Traits": [
-          "Item.Trait.SingleStack",
-          "Item.Trait.Transient"
-        ]
+        "VariantGameplayTags": []
       }
     ]
   }

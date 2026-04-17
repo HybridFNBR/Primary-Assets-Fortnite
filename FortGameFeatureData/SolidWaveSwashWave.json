@@ -1,25 +1,101 @@
 {
-  "Type": "FortGameFeatureAction_AddUnableToPerformActionText",
-  "Name": "FortGameFeatureAction_AddUnableToPerformActionText_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddUnableToPerformActionText'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'SolidWaveSwashWave'",
-    "ObjectPath": "/SolidWaveSwashWave/SolidWaveSwashWave.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "SolidWaveSwashWave",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/SolidWaveSwashWave/SolidWaveSwashWave",
   "Properties": {
-    "TagsToUnableToPerformMessageTable": [
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlaylistItemsToFullyLoad": [
       {
-        "FailureTags": [
-          "SolidWave.SwashWave.DisguiseFailReason.AlreadyWearingThisDisguise"
+        "PlaylistTags": [
+          "Athena.Creative",
+          "Athena.Playground"
         ],
-        "Message": {
-          "Namespace": "",
-          "Key": "184DD1554E2B446D81C559AC4F83CC39",
-          "SourceString": "Already wearing this disguise",
-          "LocalizedString": "Already wearing this disguise"
+        "ItemIdsToFullyLoad": [
+          {
+            "PrimaryAssetType": {
+              "Name": "Weapon"
+            },
+            "PrimaryAssetName": "WID_SolidWave_SwashWave_DriftSoul"
+          },
+          {
+            "PrimaryAssetType": {
+              "Name": "Weapon"
+            },
+            "PrimaryAssetName": "WID_SolidWave_SwashWave_StakeClub_A"
+          },
+          {
+            "PrimaryAssetType": {
+              "Name": "Weapon"
+            },
+            "PrimaryAssetName": "WID_SolidWave_SwashWave_StakeClub_B"
+          },
+          {
+            "PrimaryAssetType": {
+              "Name": "Weapon"
+            },
+            "PrimaryAssetName": "WID_SolidWave_SwashWave_StakeClub_C"
+          },
+          {
+            "PrimaryAssetType": {
+              "Name": "Weapon"
+            },
+            "PrimaryAssetName": "WID_SolidWave_SwashWave_StakePurse"
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddUnableToPerformActionText'SolidWaveSwashWave:FortGameFeatureAction_AddUnableToPerformActionText_0'",
+        "ObjectPath": "/SolidWaveSwashWave/SolidWaveSwashWave.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
         },
-        "MatchType": "EGameplayContainerMatchType::Any"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "FortExposedAssetList",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "UEFNExposedAssets"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
       }
     ]
   }

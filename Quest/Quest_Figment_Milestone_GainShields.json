@@ -1,230 +1,27 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_Figment_Milestone_GainShields",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/FigmentQuests/Items/QuestItems/Milestones/RollingQuests/Challenge/Quest_Figment_Milestone_GainShields",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_Figment_Milestone_GainShields'",
+    "ObjectPath": "/FigmentQuests/Items/QuestItems/Milestones/RollingQuests/Challenge/Quest_Figment_Milestone_GainShields.0"
+  },
   "Properties": {
-    "Group": "Figment_Milestone_Exploration",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_Figment_Milestone_GainShields_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "DataTableEntryRewards": [
           {
-            "IncrementBy": "EFortShieldGainIncrementType::ShieldGainAmount",
-            "bRequireFullShields": false,
-            "bRequireShieldGainedFromTeammate": false,
-            "bRequireAuthorIsTheShieldGainSource": false,
-            "bUseShieldAmountGained": false,
-            "bUseOverFullShields": false,
-            "bUseShieldGainedPercent": false,
-            "bUseTotalShieldsGained": false,
-            "ShieldGainSource": {
-              "bCanGainProgressForThisObjective": false,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "ShieldGainType": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "AmountOfShieldsGained": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestRewards_Evergreen_Figment'",
+                "ObjectPath": "/FigmentQuests/DataTables/QuestRewards_Evergreen_Figment.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+              "RowName": "FigmentMilestoneQuestRewards_Challenge"
             },
-            "ShieldsGainedOverFullAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "ShieldsPercentGained": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "TotalShieldGain": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "ED4710524640956ECF9DF1AA74661D24",
-          "SourceString": "Gain shields",
-          "LocalizedString": "Gain shields"
-        },
-        "HudShortDescription": {
-          "Namespace": "",
-          "Key": "D32C83AD4FEBAA360EC605A56662C3FA",
-          "SourceString": "Gain shields",
-          "LocalizedString": "Gain shields"
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 300,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 16,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Figment"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Product.Figment )"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_MilestoneQuest'Quest_Figment_Milestone_GainShields:FortQuestDefinitionComponent_MilestoneQuest_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/Milestones/RollingQuests/Challenge/Quest_Figment_Milestone_GainShields.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Milestone_GainShields:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/Milestones/RollingQuests/Challenge/Quest_Figment_Milestone_GainShields.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Milestone_GainShields:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/Milestones/RollingQuests/Challenge/Quest_Figment_Milestone_GainShields.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_Figment_Milestone_GainShields_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "9CE770CE4D394721693059B750325F83",
-      "SourceString": "Gain shields",
-      "LocalizedString": "Gain shields"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "948A5F3C4D26C5CF82DDEB8B032C9FB5",
-      "SourceString": "Gain shields",
-      "LocalizedString": "Gain shields"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.Figment.Milestones.Repeatable"
         ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

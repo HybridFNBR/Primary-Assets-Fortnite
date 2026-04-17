@@ -1,111 +1,404 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_RoundThumb",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_RoundThumb'",
+    "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "028C28B1-4F057633-FFD78686-863BE576",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RoundThumb:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.1"
-        }
-      },
-      {
-        "Key": "7E6A2D31-4C1373EB-551D1388-07E171E3",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_RoundThumb:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.14"
-        }
-      },
-      {
-        "Key": "9AEFBC9B-4FD4E231-B4A7448D-6270B45D",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoundThumb:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.5"
-        }
-      },
-      {
-        "Key": "8DD910FF-4FF39C2C-B28CA699-9EED1A02",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoundThumb:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.4"
-        }
-      },
-      {
-        "Key": "AE7F02F1-4C48EF04-164E2DB5-AE32EA03",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoundThumb:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.2"
-        }
-      },
-      {
-        "Key": "428B88C9-42A98392-505D528C-E52D53C8",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoundThumb:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.RoundThumb"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B53E6C6441C640B9DEDCCCAD4197614B",
+            "SourceString": "I am Magneto, mightiest of all mutants!",
+            "LocalizedString": "I am Magneto, mightiest of all mutants!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_RoundThumb:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "028C28B1-4F057633-FFD78686-863BE576"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "70B5054D4422EED98F1E98876D89DF3A",
+            "SourceString": "There is no place to hide.",
+            "LocalizedString": "There is no place to hide."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RoundThumb:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6CA0722445BE281687650C91458FA132",
+            "SourceString": "Now is the time for change.",
+            "LocalizedString": "Now is the time for change."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RoundThumb:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7C2A3A0048FECA7FD39D17A9057CEEEF",
+            "SourceString": "I am power!",
+            "LocalizedString": "I am power!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RoundThumb:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9DB7EFE04936316FDBECBABCA5DF1DA2",
+            "SourceString": "We must put those who mean the most to us first.",
+            "LocalizedString": "We must put those who mean the most to us first."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoundThumb:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4930369342D6AA24B5B750AB583A5889",
+            "SourceString": "I find scars are more vivid reminders than memories.",
+            "LocalizedString": "I find scars are more vivid reminders than memories."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoundThumb:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5371C3AD493D18E06345B1B85BE596C3",
+            "SourceString": "Perhaps now is the time for heroes.",
+            "LocalizedString": "Perhaps now is the time for heroes."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoundThumb:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8FEA36CC41F9F218D78704BDB30A0794",
+            "SourceString": "I only ask, Wanda, for your acceptance.",
+            "LocalizedString": "I only ask, Wanda, for your acceptance."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoundThumb:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "E4059DF44A8C3F07BF956CABFB27583B",
+        "SourceString": "There is no place to hide.",
+        "LocalizedString": "There is no place to hide."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season30.Story.P06.Q03.MX",
-      "Conversation.Entry.RoundThumb.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "028C28B1-4F057633-FFD78686-863BE576",
-      "7E6A2D31-4C1373EB-551D1388-07E171E3",
-      "9AEFBC9B-4FD4E231-B4A7448D-6270B45D",
-      "8DD910FF-4FF39C2C-B28CA699-9EED1A02",
+    },
+    "OutputConnections": [
+      "428B88C9-42A98392-505D528C-E52D53C8",
       "AE7F02F1-4C48EF04-164E2DB5-AE32EA03",
-      "428B88C9-42A98392-505D528C-E52D53C8"
+      "8DD910FF-4FF39C2C-B28CA699-9EED1A02",
+      "9AEFBC9B-4FD4E231-B4A7448D-6270B45D"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "7E6A2D31-4C1373EB-551D1388-07E171E3",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RoundThumb:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/RoundThumb/NPCLibrary_Conversation_RoundThumb.1"
+    }
   }
 }

@@ -1,16 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'NitroGameplay'",
     "ObjectPath": "/NitroGameplay/NitroGameplay.4"
   },
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/NitroGameplay/Gameplay/MovementMode_NitroPlayerState.MovementMode_NitroPlayerState_C",
-      "SubPathString": ""
-    }
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Fort.DataRegistry",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "/NitroGameplay/DataTables/NitroGameplayGameData.NitroGameplayGameData",
+          "SubPathString": ""
+        }
+      }
+    ]
   }
 }

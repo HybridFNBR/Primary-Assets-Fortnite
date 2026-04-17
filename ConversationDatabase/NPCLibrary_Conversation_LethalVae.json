@@ -1,93 +1,312 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_LethalVae",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_LethalVae'",
+    "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "63C226DA-4397E400-A875C6B0-63CB0E36",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_LethalVae:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E103ADEB48E3CC6B9932ADA3A7A0D563",
+            "SourceString": "Shh. I'm monster hunting.",
+            "LocalizedString": "Shh. I'm monster hunting."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_LethalVae:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8F4A7C794B7D6D6A7D2B67B85863A5D3",
+            "SourceString": "Brave of you to talk to me in the open. You really think you're untouchable, don't you?",
+            "LocalizedString": "Brave of you to talk to me in the open. You really think you're untouchable, don't you?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LethalVae:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9B8A7F7646E843B342163AB3A0CFCAAB",
+            "SourceString": "I hear you've taken on a protégé. I hope you learn as much teaching her as I learned teaching you.",
+            "LocalizedString": "I hear you've taken on a protégé. I hope you learn as much teaching her as I learned teaching you."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LethalVae:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4E887C8E463A36EB54FADA8C05804825",
+            "SourceString": "You'll learn a lot from Victoria Saint, but you'll have to give up everything to become a true hunter.",
+            "LocalizedString": "You'll learn a lot from Victoria Saint, but you'll have to give up everything to become a true hunter."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LethalVae:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "ACB894C243A5B6372B5550AD2EB6C0A8",
+            "SourceString": "Your friend Joni will have to choose, someday, between her friends and the true hunt. Don't hold her back.",
+            "LocalizedString": "Your friend Joni will have to choose, someday, between her friends and the true hunt. Don't hold her back."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LethalVae:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "29BBC2BF4295DB326D56DDAAE902A482",
+            "SourceString": "Did you get what you needed from Kado Thorne? Am I clear to make my move without getting in your way?",
+            "LocalizedString": "Did you get what you needed from Kado Thorne? Am I clear to make my move without getting in your way?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LethalVae:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "BCA1571C-450ACCE1-CA7DB886-10C3B376",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_LethalVae:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.10"
-        }
-      },
-      {
-        "Key": "174B8A0A-48C85F4F-7F76D7AB-5629743B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LethalVae:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.2"
-        }
-      },
-      {
-        "Key": "1BDDD2CA-4BB77380-D8B62A87-E08D3C00",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LethalVae:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "569974484EF7585DD02F70A5B08ADB6A",
+        "SourceString": "Kado Thorne isn't getting away from me this time.",
+        "LocalizedString": "Kado Thorne isn't getting away from me this time."
       }
+    },
+    "OutputConnections": [
+      "1BDDD2CA-4BB77380-D8B62A87-E08D3C00",
+      "174B8A0A-48C85F4F-7F76D7AB-5629743B"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.LethalVae"
-        },
-        "DestinationList": [
-          "63C226DA-4397E400-A875C6B0-63CB0E36"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "63C226DA-4397E400-A875C6B0-63CB0E36",
-      "BCA1571C-450ACCE1-CA7DB886-10C3B376",
-      "174B8A0A-48C85F4F-7F76D7AB-5629743B",
-      "1BDDD2CA-4BB77380-D8B62A87-E08D3C00"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "BCA1571C-450ACCE1-CA7DB886-10C3B376",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_LethalVae:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/LethalVae/NPCLibrary_Conversation_LethalVae.1"
+    }
   }
 }

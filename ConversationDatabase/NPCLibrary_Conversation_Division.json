@@ -1,93 +1,222 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Division",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Division'",
+    "ObjectPath": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "BD4004CB-4FD3519F-06F353AE-A8A5B682",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Division:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D241CF824373C17416B3CD96E3E5B04E",
+            "SourceString": "Good to have you back. There's a situation ongoing.",
+            "LocalizedString": "Good to have you back. There's a situation ongoing."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_Division:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D06F84124705759760C5BE9D28C66167",
+            "SourceString": "If you're looking for a mercenary... I may know someone.",
+            "LocalizedString": "If you're looking for a mercenary... I may know someone."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Division:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "197CCB4E4FAA5089495179874D3F2FD5",
+            "SourceString": "I'll take those Bars if you don't want 'em.",
+            "LocalizedString": "I'll take those Bars if you don't want 'em."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasBars'NPCLibrary_Conversation_Division:Speech_C_4.FortControllerRequirement_HasBars_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.HighTotalBars"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BC7ED18140AEAD15C3C8F1A02BF749D4",
+            "SourceString": "I thought we said we'd only meet in private from now on.",
+            "LocalizedString": "I thought we said we'd only meet in private from now on."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Division:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "240CF8E8-4DC2D2C2-5E194994-128C78C5",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Division:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division.8"
-        }
-      },
-      {
-        "Key": "5B21C469-4F001252-19CA56AA-80C8A068",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Division:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division.2"
-        }
-      },
-      {
-        "Key": "08B4BED2-488AED3A-E00852AA-BA29B41C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Division:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "0D778F1C430D10EBE5DC4884F9619A63",
+        "SourceString": "You need some work done?",
+        "LocalizedString": "You need some work done?"
       }
+    },
+    "OutputConnections": [
+      "08B4BED2-488AED3A-E00852AA-BA29B41C",
+      "5B21C469-4F001252-19CA56AA-80C8A068"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Division"
-        },
-        "DestinationList": [
-          "BD4004CB-4FD3519F-06F353AE-A8A5B682"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "BD4004CB-4FD3519F-06F353AE-A8A5B682",
-      "240CF8E8-4DC2D2C2-5E194994-128C78C5",
-      "5B21C469-4F001252-19CA56AA-80C8A068",
-      "08B4BED2-488AED3A-E00852AA-BA29B41C"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "240CF8E8-4DC2D2C2-5E194994-128C78C5",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Division:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Division/Division/NPCLibrary_Conversation_Division.1"
+    }
   }
 }

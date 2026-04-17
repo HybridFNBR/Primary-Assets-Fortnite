@@ -1,48 +1,18 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddProcessors",
+  "Name": "GameFeatureAction_AddProcessors_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddProcessors'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'FMDanceSpotlight'",
     "ObjectPath": "/FMDanceSpotlight/FMDanceSpotlight.2"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.20"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "DanceSpotlight.Enable"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( DanceSpotlight.Enable )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    },
-    "OptionalAdditionalPluginsToActivate": [
-      "SpotlightCamera"
-    ],
-    "RequiredCVar": "DanceSpotlight.Enable"
+    "ProcessorList": [
+      {
+        "AssetPathName": "/Script/SparksPermanentQuestsRuntime.SparksVerbProcessor_DanceSpotlight",
+        "SubPathString": ""
+      }
+    ]
   }
 }

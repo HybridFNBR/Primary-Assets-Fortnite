@@ -1,93 +1,132 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_RankedScythe",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/RankedScythe/NPCLibrary_Conversation_RankedScythe",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_RankedScythe'",
+    "ObjectPath": "/NPCLibrary/NPCs/RankedScythe/NPCLibrary_Conversation_RankedScythe.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "D7995271-47BBA36A-5763F8AF-A8D29495",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RankedScythe:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedScythe/NPCLibrary_Conversation_RankedScythe.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "35E49C56402345ABFCE0ABA48CF8B29F",
+            "SourceString": "First ever conversation.",
+            "LocalizedString": "First ever conversation."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_RankedScythe:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedScythe/NPCLibrary_Conversation_RankedScythe.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "48C4473C45261B058F45B981397A50FD",
+            "SourceString": "Outfit reaction.",
+            "LocalizedString": "Outfit reaction."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RankedScythe:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedScythe/NPCLibrary_Conversation_RankedScythe.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "E2948386-490E4488-BF1761A9-453C72B6",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_RankedScythe:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedScythe/NPCLibrary_Conversation_RankedScythe.6"
-        }
-      },
-      {
-        "Key": "2FE3C614-48EB462C-5BFA1893-51195DEE",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedScythe:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedScythe/NPCLibrary_Conversation_RankedScythe.2"
-        }
-      },
-      {
-        "Key": "44673C01-447857B9-8EF35C91-62733969",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedScythe:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedScythe/NPCLibrary_Conversation_RankedScythe.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "A058E2414246E08EEBFE61A66AE79ABE",
+        "SourceString": "Default conversation.",
+        "LocalizedString": "Default conversation."
       }
+    },
+    "OutputConnections": [
+      "44673C01-447857B9-8EF35C91-62733969",
+      "2FE3C614-48EB462C-5BFA1893-51195DEE"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.RankedScythe"
-        },
-        "DestinationList": [
-          "D7995271-47BBA36A-5763F8AF-A8D29495"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "D7995271-47BBA36A-5763F8AF-A8D29495",
-      "E2948386-490E4488-BF1761A9-453C72B6",
-      "2FE3C614-48EB462C-5BFA1893-51195DEE",
-      "44673C01-447857B9-8EF35C91-62733969"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "E2948386-490E4488-BF1761A9-453C72B6",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RankedScythe:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/RankedScythe/NPCLibrary_Conversation_RankedScythe.1"
+    }
   }
 }

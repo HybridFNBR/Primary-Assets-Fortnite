@@ -1,93 +1,40 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'YokeHopUnkindUI'",
     "ObjectPath": "/YokeHopUnkindUI/YokeHopUnkindUI.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "38.11"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.ItemsTest"
-              },
-              {
-                "TagName": "Athena.Playlist.Habanero"
-              },
-              {
-                "TagName": "Product.BlastBerry.Habanero"
-              },
-              {
-                "TagName": "Plugin.Playlist.Exclude.YokeHopUnkind"
-              },
-              {
-                "TagName": "Athena.Playlist.BlastBerry.Tournament"
-              },
-              {
-                "TagName": "Athena.Playlist.BlastBerry.Ranked"
-              },
-              {
-                "TagName": "Athena.Playlist.PiperBoot"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              2,
-              5,
-              2,
-              1,
-              2,
-              0,
-              1,
-              3,
-              7,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              5,
-              2,
-              1,
-              1,
-              9,
-              3,
-              1,
-              6
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.BlastBerry ),  NONE( Plugin.Playlist.Arena, Athena.Playlist.ItemsTest, Athena.Playlist.Habanero, Product.BlastBerry.Habanero, Plugin.Playlist.Exclude.YokeHopUnkind, Athena.Playlist.BlastBerry.Tournament, Athena.Playlist.BlastBerry.Ranked ) ),  ALL(  ANY( Athena.Playlist.PiperBoot ),  NONE( Plugin.Playlist.Exclude.YokeHopUnkind ) ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    }
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGameStateAthena",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/YokeHopUnkindUI/Components/BP_YokeHopUnkindUI_Comp.BP_YokeHopUnkindUI_Comp_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerControllerAthena",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/YokeHopUnkindUI/Components/BP_YokeHopUnkindUI_StormLine_Comp.BP_YokeHopUnkindUI_StormLine_Comp_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

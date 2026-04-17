@@ -1,91 +1,52 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'MusterConsumables'",
-    "ObjectPath": "/MusterConsumables/MusterConsumables.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "MusterConsumables",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/MusterConsumables/MusterConsumables",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "23.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.ItemsTest"
-              },
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.ForbiddenFruit"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              5,
-              0,
-              1,
-              2,
-              3,
-              4
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.ItemsTest, Athena.Creative, Plugin.Playlist.BlastBerry, Athena.Playlist.Default, Athena.Playlist.ForbiddenFruit ) )"
-          },
-          "bMigratedFromOldData": true
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "S23",
+        "DisplayName": "Give Energy Drink",
+        "ConsoleCommands": [
+          "Cheat GiveConsumable WID_Athena_EnergyDrink 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'MusterConsumables:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/MusterConsumables/MusterConsumables.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'MusterConsumables:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/MusterConsumables/MusterConsumables.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Consumable",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.ItemsTest"
-        },
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Plugin.Playlist.BlastBerry"
-        },
-        {
-          "TagName": "Athena.Playlist.Default"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        4,
-        0,
-        1,
-        2,
-        3
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Playlist.ItemsTest, Athena.Creative, Plugin.Playlist.BlastBerry, Athena.Playlist.Default ) )"
-    }
+      }
+    ]
   }
 }

@@ -1,71 +1,90 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'ThermiteGameplay'",
-    "ObjectPath": "/ThermiteGameplay/ThermiteGameplay.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "ThermiteGameplay",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/ThermiteGameplay/ThermiteGameplay",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "34.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Creative, Playlist.UGC.Core ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/ThermiteGameplay/Levels/ThermiteGameplay_LevelOverlay.ThermiteGameplay_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/ThermiteGameplay/HUD/ThermiteGameplay_HUDWidgetRegistry.ThermiteGameplay_HUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/ThermiteGameplay/Thermite_DeathCauseData.Thermite_DeathCauseData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S2",
+        "DisplayName": "Thermite w/ Gameplay",
+        "ConsoleCommands": [
+          "cheat giveweapon WID_Thermite_Throwable 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ThermiteGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/ThermiteGameplay/ThermiteGameplay.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Playlist.UGC.Core"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Proto"
+          },
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Creative, Playlist.UGC.Core ) )"
-    }
+      },
+      {
+        "PrimaryAssetType": "Ammo",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortAmmoItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Proto"
+          },
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

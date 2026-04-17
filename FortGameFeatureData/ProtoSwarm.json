@@ -1,50 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddAnimationSharingSetup",
-  "Name": "FortGameFeatureAction_AddAnimationSharingSetup_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddAnimationSharingSetup'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'ProtoSwarm'",
     "ObjectPath": "/ProtoSwarm/ProtoSwarm.4"
   },
   "Properties": {
-    "AnimationSharingSetups": [
+    "SourcesToAdd": [
       {
-        "AssetPathName": "/ProtoSwarm/Assets/AnimSharing/AnimSharing_TidalCrane_Swarm_Setup.AnimSharing_TidalCrane_Swarm_Setup",
-        "SubPathString": ""
-      }
-    ],
-    "bAsyncLoadAnimationSharingSetups": true,
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
+        "RegistryToAddTo": "Fort.DataRegistry",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
+        "CurveTableToAdd": {
+          "AssetPathName": "/ProtoSwarm/DataTables/TidalCrane_Swarm_GameData.TidalCrane_Swarm_GameData",
+          "SubPathString": ""
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        5,
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "AutoDescription": " ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core )"
-    }
+      }
+    ]
   }
 }

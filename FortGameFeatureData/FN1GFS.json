@@ -1,15 +1,59 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'FN1GFS'",
-    "ObjectPath": "/FN1GFS/FN1GFS.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "FN1GFS",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/FN1GFS/FN1GFS",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "CreativeRoot"
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'FN1GFS:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/FN1GFS/FN1GFS.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortExposedAssetList",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "UEFNExposedAssets"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "ValkyrieBlutilityCookList",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/VkRuntime.ValkyrieBlutilityCookList",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/FN1GFS/UEFNExposedAssets/BlutilityCookLists"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
     ]
   }
 }

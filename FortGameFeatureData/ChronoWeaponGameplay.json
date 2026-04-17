@@ -1,113 +1,136 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'ChronoWeaponGameplay'",
-    "ObjectPath": "/ChronoWeaponGameplay/ChronoWeaponGameplay.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "ChronoWeaponGameplay",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/ChronoWeaponGameplay/ChronoWeaponGameplay",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "26.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              },
-              {
-                "TagName": "Plugin.Playlist.ForbiddenFruit"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              4,
-              0,
-              1,
-              2,
-              3
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Creative, Playlist.UGC.Core, Plugin.Playlist.BlastBerry, Plugin.Playlist.ForbiddenFruit ) )"
-          },
-          "bMigratedFromOldData": true
-        },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "41.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Playlist.Default ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/ChronoWeaponGameplay/ChronoWeaponGameplay_LevelOverlay.ChronoWeaponGameplay_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/ChronoWeaponGameplay/ChronoWeaponReticles.ChronoWeaponReticles",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/ChronoWeaponGameplay/HUD/ChronoWeaponHUDWidgetRegistry.ChronoWeaponHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultGameData": {
+      "AssetPathName": "/ChronoWeaponGameplay/DataTables/ChronoWeaponGameplayGameData.ChronoWeaponGameplayGameData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch4s3",
+        "DisplayName": "Chrono Pistol",
+        "ConsoleCommands": [
+          "cheat giveweapon WID_Pistol_Chrono_Athena_R 1 1 "
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch4s3",
+        "DisplayName": "Toggle Thermal DMR",
+        "ConsoleCommands": [
+          "cheat giveweapon WID_DMR_Chrono_ToggleThermal_Athena_R 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch4s3",
+        "DisplayName": "Pan Gun",
+        "ConsoleCommands": [
+          "cheat giveweapon WID_Assault_Chrono_Pan_Rifle_Athena_R 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch4s3",
+        "DisplayName": "Explosive Repeater",
+        "ConsoleCommands": [
+          "Cheat giveweapon WID_Sniper_ExplosiveRepeater_Athena_R 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch4s3",
+        "DisplayName": "Mythic Explosive Repeater",
+        "ConsoleCommands": [
+          "Cheat giveweapon WID_Sniper_ExplosiveRepeater_Athena_UR 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch4s3",
+        "DisplayName": "Mythic Pan Rifle",
+        "ConsoleCommands": [
+          "cheat giveweapon WID_Assault_Chrono_Pan_Rifle_Athena_UR 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch4s3",
+        "DisplayName": "Mythic Drum Shotgun",
+        "ConsoleCommands": [
+          "cheat giveweapon WID_Shotgun_AutoDrum_Athena_UR_Ore_T03 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ChronoWeaponGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/ChronoWeaponGameplay/ChronoWeaponGameplay.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Plugin.Playlist.BlastBerry"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        3,
-        0,
-        1,
-        2
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Creative, Playlist.UGC.Core, Plugin.Playlist.BlastBerry ) )"
-    }
+      },
+      {
+        "PrimaryAssetType": "AthenaGadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

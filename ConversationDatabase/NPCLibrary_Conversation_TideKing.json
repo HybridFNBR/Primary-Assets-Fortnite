@@ -1,111 +1,449 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_TideKing",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_TideKing'",
+    "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "DDC2CBF6-4F3CF7E2-DB0EFDAA-F21F0B7D",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TideKing:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.1"
-        }
-      },
-      {
-        "Key": "AABDEF0B-4FD6A48C-86299094-9DA9A1E3",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_TideKing:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.15"
-        }
-      },
-      {
-        "Key": "C17B0F15-46753ADD-F37F6E93-8F1CB170",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TideKing:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.4"
-        }
-      },
-      {
-        "Key": "25DA8EDE-4DA558D6-4F8620BE-8A8AAC0A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TideKing:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.5"
-        }
-      },
-      {
-        "Key": "1AB7BD96-4F30E289-1B1190B5-BC3B3F85",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TideKing:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.2"
-        }
-      },
-      {
-        "Key": "4F679064-49D0897D-C2DDC89B-16047F6C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TideKing:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.TideKing"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4D59F7524B02551AA61903B1FAC4BAAD",
+            "SourceString": "Wassup mortal? Looks like you're ready to party!",
+            "LocalizedString": "Wassup mortal? Looks like you're ready to party!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_TideKing:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.14"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "DDC2CBF6-4F3CF7E2-DB0EFDAA-F21F0B7D"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2429A9E946250882C4F486955D9F3801",
+            "SourceString": "Whoa. You glow like sunken treasure. What ARE you?",
+            "LocalizedString": "Whoa. You glow like sunken treasure. What ARE you?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TideKing:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "088528BB447853E01713D3BFCBB644D6",
+            "SourceString": "Zeus, hey! Listen, bro, could you tone down the lightning a bit? You're scaring the fish.",
+            "LocalizedString": "Zeus, hey! Listen, bro, could you tone down the lightning a bit? You're scaring the fish."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TideKing:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8DDFE4CC4884C6C9CD7769BF674D4EB6",
+            "SourceString": "The best hound in the world! Ready to go for a swim, Cerber-buddy?",
+            "LocalizedString": "The best hound in the world! Ready to go for a swim, Cerber-buddy?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TideKing:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5FE13A7843DB41E82F5541A299E4F48D",
+            "SourceString": "Artemis, hey! Catch anything good lately? This place has some awesome fishing spots.",
+            "LocalizedString": "Artemis, hey! Catch anything good lately? This place has some awesome fishing spots."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TideKing:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FE30FFB6455CDF3D8E93629553C048E9",
+            "SourceString": "Hey, uh, Medusa. I'm glad you got the invite...",
+            "LocalizedString": "Hey, uh, Medusa. I'm glad you got the invite..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TideKing:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B536DDDF46FEFA00E6143FBB501C677C",
+            "SourceString": "Mortal! Lookin' beachy-keen.",
+            "LocalizedString": "Mortal! Lookin' beachy-keen."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TideKing:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6FB6CFC649E37D10534D5C9F799D2E5F",
+            "SourceString": "Hey, I ever tell you about the dolphin surfing championship?",
+            "LocalizedString": "Hey, I ever tell you about the dolphin surfing championship?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TideKing:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D50B5BE74112EF0AEE9C02BC23A7D396",
+            "SourceString": "If you see Zeus, could you tell him to tone it down?",
+            "LocalizedString": "If you see Zeus, could you tell him to tone it down?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TideKing:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "F798D823410BE97DDCAFA2A40807695B",
+        "SourceString": "Mortal! Lookin' beachy-keen.",
+        "LocalizedString": "Mortal! Lookin' beachy-keen."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season29.Snapshot.P02.Q04",
-      "Conversation.Entry.TideKing.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "DDC2CBF6-4F3CF7E2-DB0EFDAA-F21F0B7D",
-      "AABDEF0B-4FD6A48C-86299094-9DA9A1E3",
-      "C17B0F15-46753ADD-F37F6E93-8F1CB170",
-      "25DA8EDE-4DA558D6-4F8620BE-8A8AAC0A",
+    },
+    "OutputConnections": [
+      "4F679064-49D0897D-C2DDC89B-16047F6C",
       "1AB7BD96-4F30E289-1B1190B5-BC3B3F85",
-      "4F679064-49D0897D-C2DDC89B-16047F6C"
+      "25DA8EDE-4DA558D6-4F8620BE-8A8AAC0A",
+      "C17B0F15-46753ADD-F37F6E93-8F1CB170"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "AABDEF0B-4FD6A48C-86299094-9DA9A1E3",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TideKing:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/TideKing/NPCLibrary_Conversation_TideKing.1"
+    }
   }
 }

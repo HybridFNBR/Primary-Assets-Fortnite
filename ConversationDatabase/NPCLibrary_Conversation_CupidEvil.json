@@ -1,102 +1,268 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_CupidEvil",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_CupidEvil'",
+    "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "FF03E783-400E16F0-3C70A4B6-0BE52064",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CupidEvil:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.1"
-        }
-      },
-      {
-        "Key": "F5116498-429B817B-43714D9F-837093E7",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_CupidEvil:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.10"
-        }
-      },
-      {
-        "Key": "B91C7E5E-40388721-D3AE68B0-BD9B8391",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CupidEvil:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.4"
-        }
-      },
-      {
-        "Key": "FC24C561-45FB4B7F-6C8DB88E-0603C755",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CupidEvil:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.2"
-        }
-      },
-      {
-        "Key": "1A1CA75D-4BB29CF0-30AD678A-4AE1BAE5",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CupidEvil:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.CupidEvil"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6A19B31F4F9BF567DEDA69B29E0FCC07",
+            "SourceString": "DO NOT DARE TO CHALLENGE ME. YOU WILL LOSE.",
+            "LocalizedString": "DO NOT DARE TO CHALLENGE ME. YOU WILL LOSE."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_CupidEvil:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "FF03E783-400E16F0-3C70A4B6-0BE52064"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D2849A534AB8EA37C2377CAC882A2A6B",
+            "SourceString": "I AM YOUR SPOOKY FUTURE. BOW BEFORE ME!",
+            "LocalizedString": "I AM YOUR SPOOKY FUTURE. BOW BEFORE ME!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CupidEvil:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "565167234004A1EC91C9A49D742C8BE2",
+            "SourceString": "I HAVE ALLOWED THE FLAME TO CONSUME MY HEART... AND IT HAS MADE ME POWERFUL.",
+            "LocalizedString": "I HAVE ALLOWED THE FLAME TO CONSUME MY HEART... AND IT HAS MADE ME POWERFUL."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CupidEvil:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CA7C89CD4C97F98BD94AD4A78DCF51D1",
+            "SourceString": "YOUR SPOOKY MISCHIEF IS NO MATCH FOR THE LIGHT OF MY BURNING HEART.",
+            "LocalizedString": "YOUR SPOOKY MISCHIEF IS NO MATCH FOR THE LIGHT OF MY BURNING HEART."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CupidEvil:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0EDC8895454B127D34B56ABDEBBC38EE",
+            "SourceString": "MY LIEGE... Oh, um, sorry. My liege, what would you ask of me?",
+            "LocalizedString": "MY LIEGE... Oh, um, sorry. My liege, what would you ask of me?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CupidEvil:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "50EADC874B50ADCCA86E0FB1BA8341F8",
+        "SourceString": "SPOOKY SHADOWS HAUNT THIS ISLAND. I WILL SCATTER THEM WITH MY FLAME.",
+        "LocalizedString": "SPOOKY SHADOWS HAUNT THIS ISLAND. I WILL SCATTER THEM WITH MY FLAME."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season26.Snapshot.P03.Q07",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "FF03E783-400E16F0-3C70A4B6-0BE52064",
-      "F5116498-429B817B-43714D9F-837093E7",
-      "B91C7E5E-40388721-D3AE68B0-BD9B8391",
+    },
+    "OutputConnections": [
+      "1A1CA75D-4BB29CF0-30AD678A-4AE1BAE5",
       "FC24C561-45FB4B7F-6C8DB88E-0603C755",
-      "1A1CA75D-4BB29CF0-30AD678A-4AE1BAE5"
+      "B91C7E5E-40388721-D3AE68B0-BD9B8391"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "F5116498-429B817B-43714D9F-837093E7",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CupidEvil:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/CupidEvil/NPCLibrary_Conversation_CupidEvil.1"
+    }
   }
 }

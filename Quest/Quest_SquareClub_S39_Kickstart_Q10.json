@@ -1,15 +1,175 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_SquareClub_S39_Kickstart_Q10'",
-    "ObjectPath": "/SquareClub_Quests/Items/QuestItems/Quests/Kickstart/Quest_SquareClub_S39_Kickstart_Q10.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_SquareClub_S39_Kickstart_Q10",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/SquareClub_Quests/Items/QuestItems/Quests/Kickstart/Quest_SquareClub_S39_Kickstart_Q10",
   "Properties": {
-    "VisibilitySettings": {
-      "bCanShowTimer": false
-    }
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_SquareClub_S39_Kickstart_Q10_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.SquareClub.MatchVictory"
+            },
+            "Subjects": [],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "SquareClub.Quest.Jewel"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  3,
+                  1,
+                  0
+                ],
+                "UserDescription": "Not showdown",
+                "AutoDescription": " NONE( SquareClub.Quest.Jewel )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "B4DDB4474914514ED99A71B0C0FCD570",
+          "SourceString": "Win a match",
+          "LocalizedString": "Win a match"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.SquareClub"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.SquareClub )"
+    },
+    "SortPriority": 9,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_SquareClub_S39_Kickstart_Q10:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/SquareClub_Quests/Items/QuestItems/Quests/Kickstart/Quest_SquareClub_S39_Kickstart_Q10.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_SquareClub_S39_Kickstart_Q10:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/SquareClub_Quests/Items/QuestItems/Quests/Kickstart/Quest_SquareClub_S39_Kickstart_Q10.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_SquareClub_S39_Kickstart_Q10_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "8054B5D1458A02FFC089A5ADAA44D305",
+      "SourceString": "Win a match",
+      "LocalizedString": "Win a match"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "1DDB80E44D34F6040E012095E16197C0",
+      "SourceString": "Win a match",
+      "LocalizedString": "Win a match"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "D720B1DC4435D919FBB7D79BC9871A78",
+      "SourceString": "Get to the end, by any means necessary.",
+      "LocalizedString": "Get to the end, by any means necessary."
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.SquareClub.Kickstart.Quests"
+        ]
+      }
+    ]
   }
 }

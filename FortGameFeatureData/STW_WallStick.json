@@ -1,16 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'STW_WallStick'",
     "ObjectPath": "/STW_WallStick/STW_WallStick.2"
   },
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/WallStick/MovementMode/MME_Logic_WallStick.MME_Logic_WallStick_C",
-      "SubPathString": ""
-    }
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Fort.DataRegistry",
+        "AssetPriority": 1,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "/WallStick/DataTables/WallStickGameData.WallStickGameData",
+          "SubPathString": ""
+        }
+      }
+    ]
   }
 }

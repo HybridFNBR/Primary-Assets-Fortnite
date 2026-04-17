@@ -1,79 +1,63 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'ThermalLanceGameplay'",
-    "ObjectPath": "/ThermalLanceGameplay/ThermalLanceGameplay.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "ThermalLanceGameplay",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/ThermalLanceGameplay/ThermalLanceGameplay",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "34.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              3,
-              0,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/ThermalLanceGameplay/Levels/ThermalLanceGameplay_LevelOverlay.ThermalLanceGameplay_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/ThermalLanceGameplay/UI/UI_ThermalLance_Reticle.UI_ThermalLance_Reticle",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/ThermalLanceGameplay/Items/ThermalLance_DeathCauseData.ThermalLance_DeathCauseData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S2",
+        "DisplayName": "Laser Cutter",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /ThermalLanceGameplay/Items/WID_ThermalLance 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ThermalLanceGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/ThermalLanceGameplay/ThermalLanceGameplay.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        3,
-        0,
-        1,
-        2
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core ) )"
-    }
+      }
+    ]
   }
 }

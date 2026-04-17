@@ -1,25 +1,27 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "FortPlaylistTravelUI",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Package": "/FortPlaylistTravelUI/FortPlaylistTravelUI",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'FortPlaylistTravelUI'",
+    "ObjectPath": "/FortPlaylistTravelUI/FortPlaylistTravelUI.0"
+  },
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
+    "SourcesToAdd": [
       {
-        "ObjectName": "GameFeatureAction_AddComponents'FortPlaylistTravelUI:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/FortPlaylistTravelUI/FortPlaylistTravelUI.1"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistry'FortPlaylistTravelUI:GameFeatureAction_DataRegistry_0'",
-        "ObjectPath": "/FortPlaylistTravelUI/FortPlaylistTravelUI.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'FortPlaylistTravelUI:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/FortPlaylistTravelUI/FortPlaylistTravelUI.3"
+        "RegistryToAddTo": "Playlist.PlaylistTravel.UIData",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": false,
+        "DataTableToAdd": {
+          "AssetPathName": "/FortPlaylistTravelUI/DataTables/DT_FortPlaylistTravelUIDataTable.DT_FortPlaylistTravelUIDataTable",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       }
     ]
   }

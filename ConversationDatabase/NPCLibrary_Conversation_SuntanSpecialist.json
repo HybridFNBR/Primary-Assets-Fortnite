@@ -1,102 +1,88 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_SuntanSpecialist",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/SuntanSpecialist/NPCLibrary_Conversation_SuntanSpecialist",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_SuntanSpecialist'",
+    "ObjectPath": "/NPCLibrary/NPCs/SuntanSpecialist/NPCLibrary_Conversation_SuntanSpecialist.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "2880E4FA-4685E43A-E420898E-17A6022B",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SuntanSpecialist:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/SuntanSpecialist/NPCLibrary_Conversation_SuntanSpecialist.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BEB6B6D64DD11A7BDAACCABD335C7161",
+            "SourceString": "Don't worry. I'll tell you when free-swim starts.",
+            "LocalizedString": "Don't worry. I'll tell you when free-swim starts."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_SuntanSpecialist:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SuntanSpecialist/NPCLibrary_Conversation_SuntanSpecialist.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "93B6E800-487655E3-6A5A748B-393CB3B8",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_SuntanSpecialist:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/SuntanSpecialist/NPCLibrary_Conversation_SuntanSpecialist.6"
-        }
-      },
-      {
-        "Key": "B0F62DAD-4CA99E5E-8DE8AF94-5065C34D",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SuntanSpecialist:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/SuntanSpecialist/NPCLibrary_Conversation_SuntanSpecialist.2"
-        }
-      },
-      {
-        "Key": "088D66DC-4F01AC4E-AAAF47BB-3800F407",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SuntanSpecialist:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/SuntanSpecialist/NPCLibrary_Conversation_SuntanSpecialist.3"
-        }
-      },
-      {
-        "Key": "5DC7150E-4BD305DB-91AEBF80-77E28FED",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SuntanSpecialist:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/SuntanSpecialist/NPCLibrary_Conversation_SuntanSpecialist.4"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "CBAAB7FD4C4B48D721E035B3EE0F7F92",
+        "SourceString": "Is it hot out? Or is it just <b>me?</>",
+        "LocalizedString": "Is it hot out? Or is it just <b>me?</>"
       }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.SuntanSpecialist"
-        },
-        "DestinationList": [
-          "2880E4FA-4685E43A-E420898E-17A6022B"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests",
-      "Conversation.Entry.Season16.TheSpire.Joneses"
-    ],
-    "InternalNodeIds": [
-      "2880E4FA-4685E43A-E420898E-17A6022B",
-      "93B6E800-487655E3-6A5A748B-393CB3B8",
-      "B0F62DAD-4CA99E5E-8DE8AF94-5065C34D",
+    },
+    "OutputConnections": [
+      "5DC7150E-4BD305DB-91AEBF80-77E28FED",
       "088D66DC-4F01AC4E-AAAF47BB-3800F407",
-      "5DC7150E-4BD305DB-91AEBF80-77E28FED"
+      "B0F62DAD-4CA99E5E-8DE8AF94-5065C34D"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "93B6E800-487655E3-6A5A748B-393CB3B8",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SuntanSpecialist:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/SuntanSpecialist/NPCLibrary_Conversation_SuntanSpecialist.1"
+    }
   }
 }

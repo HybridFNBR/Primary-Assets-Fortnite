@@ -1,15 +1,55 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'LimePizza'",
-    "ObjectPath": "/LimePizza/LimePizza.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "LimePizza",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/LimePizza/LimePizza",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "CreativeRoot"
+    "PlaylistItemsToFullyLoad": [
+      {
+        "PlaylistTags": [
+          "Athena.Creative",
+          "Athena.Playground",
+          "Playlist.Lime"
+        ],
+        "ItemIdsToFullyLoad": [
+          {
+            "PrimaryAssetType": {
+              "Name": "Consumable"
+            },
+            "PrimaryAssetName": "WID_Lime_PizzaSlice"
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'LimePizza:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/LimePizza/LimePizza.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Consumable",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
     ]
   }
 }

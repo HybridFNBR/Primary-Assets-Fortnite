@@ -1,25 +1,42 @@
 {
-  "Type": "FortClientSettingRecordPartitionInitializer",
-  "Name": "FortClientSettingRecordPartitionInitializer_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortClientSettingRecordPartitionInitializer'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureAction_AddClientSettingRecordPartition'SparksSettings:FortGameFeatureAction_AddClientSettingRecordPartition_0'",
-    "ObjectPath": "/SparksSettings/SparksSettings.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "SparksSettings",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/SparksSettings/SparksSettings",
   "Properties": {
-    "UniquePartitionName": "SparksPartition",
-    "SettingRegistryExtensionClass": {
-      "AssetPathName": "/Script/SparksSettingsUI.FortSettingRegistryExtension_Sparks",
-      "SubPathString": ""
+    "SettingsTagQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Settings.Pilgrim"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Settings.Pilgrim )"
     },
-    "ClientSettingRecordPartitionClass": {
-      "AssetPathName": "/Script/SparksSettingsRuntime.SparksClientSettingRecordPartition",
-      "SubPathString": ""
-    },
-    "MarkupClass": {
-      "AssetPathName": "/SparksSettings/BP_SparksSettingsMarkup.BP_SparksSettingsMarkup_C",
-      "SubPathString": ""
-    }
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'SparksSettings:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/SparksSettings/SparksSettings.3"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddClientSettingRecordPartition'SparksSettings:FortGameFeatureAction_AddClientSettingRecordPartition_0'",
+        "ObjectPath": "/SparksSettings/SparksSettings.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_MountLocalizationOnRegister'SparksSettings:FortGameFeatureAction_MountLocalizationOnRegister_0'",
+        "ObjectPath": "/SparksSettings/SparksSettings.4"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToFrontEnd'SparksSettings:FortGameFeatureAction_AddToFrontEnd_0'",
+        "ObjectPath": "/SparksSettings/SparksSettings.2"
+      }
+    ]
   }
 }

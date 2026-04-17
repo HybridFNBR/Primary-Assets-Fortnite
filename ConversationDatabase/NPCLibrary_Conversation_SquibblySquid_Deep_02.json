@@ -1,102 +1,304 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_SquibblySquid_Deep_02",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_SquibblySquid_Deep_02'",
+    "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "EC8210CF-487F3286-0C045184-4A21512D",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SquibblySquid_Deep_02:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.1"
-        }
-      },
-      {
-        "Key": "78C88924-4409842E-9AC48D82-A8CC4D77",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_SquibblySquid_Deep_02:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.11"
-        }
-      },
-      {
-        "Key": "EEEB2C5C-4049DF70-D31B42BA-7517372D",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SquibblySquid_Deep_02:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.4"
-        }
-      },
-      {
-        "Key": "5D4529FD-4B4BCF4D-0025B5B4-7F13ED51",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SquibblySquid_Deep_02:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.2"
-        }
-      },
-      {
-        "Key": "915CCDF4-48BF6F2F-9EBDE09E-FA416026",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SquibblySquid_Deep_02:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.SquibblySquidDeep.02"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E4E32327438DB30A94C2BDB6FB92ED46",
+            "SourceString": "If you're looking for feedback, I have THOUGHTS.",
+            "LocalizedString": "If you're looking for feedback, I have THOUGHTS."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_SquibblySquid_Deep_02:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "EC8210CF-487F3286-0C045184-4A21512D"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "48C120CF494434995CAB23A8D0E386E9",
+            "SourceString": "Hmm... inviting bite... 'turpid' aftertaste? No...",
+            "LocalizedString": "Hmm... inviting bite... 'turpid' aftertaste? No..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SquibblySquid_Deep_02:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1336700A41D996BB504D55AD99F66313",
+            "SourceString": "How can I balance your flavor profile today?",
+            "LocalizedString": "How can I balance your flavor profile today?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SquibblySquid_Deep_02:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9A9E22174955CE1D12E1A0A7BB0A749B",
+            "SourceString": "So many opinions, and so many ways to say them!",
+            "LocalizedString": "So many opinions, and so many ways to say them!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SquibblySquid_Deep_02:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "65E39C5F4A4A01469C139998E540460C",
+            "SourceString": "Warm plates and full hearts!",
+            "LocalizedString": "Warm plates and full hearts!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SquibblySquid_Deep_02:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AD643BAF410418EC879B669BC55C91FF",
+            "SourceString": "I thought I sensed a foul taste in my mouth. ",
+            "LocalizedString": "I thought I sensed a foul taste in my mouth. "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SquibblySquid_Deep_02:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "BB37AEDC461B32AA3C1EAA8C890863E4",
+        "SourceString": "So many opinions, and so many ways to say them!",
+        "LocalizedString": "So many opinions, and so many ways to say them!"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.RandomServices",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "EC8210CF-487F3286-0C045184-4A21512D",
-      "78C88924-4409842E-9AC48D82-A8CC4D77",
-      "EEEB2C5C-4049DF70-D31B42BA-7517372D",
+    },
+    "OutputConnections": [
+      "915CCDF4-48BF6F2F-9EBDE09E-FA416026",
       "5D4529FD-4B4BCF4D-0025B5B4-7F13ED51",
-      "915CCDF4-48BF6F2F-9EBDE09E-FA416026"
+      "EEEB2C5C-4049DF70-D31B42BA-7517372D"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "78C88924-4409842E-9AC48D82-A8CC4D77",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SquibblySquid_Deep_02:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/SquibblySquid_Deep/SquibblySquid_Deep_02/NPCLibrary_Conversation_SquibblySquid_Deep_02.1"
+    }
   }
 }

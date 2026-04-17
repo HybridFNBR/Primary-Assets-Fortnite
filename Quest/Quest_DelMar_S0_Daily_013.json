@@ -1,221 +1,48 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_DelMar_S0_Daily_013",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_013",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_DelMar_S0_Daily_013'",
+    "ObjectPath": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_013.0"
+  },
   "Properties": {
-    "Group": "DelMar_Daily_01",
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_DelMar_S0_Daily_013_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "ResourceDataTableRewards": [
           {
-            "LevelDescriptionId": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestReward_DelMar_S0_XP'",
+                "ObjectPath": "/DelMarQuests/Rewards/QuestReward_DelMar_S0_XP.0"
+              },
+              "RowName": "Daily_Quest_1000"
             },
-            "GameModeId": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "DelMar.Mode.Challenge"
-                  },
-                  {
-                    "TagName": "DelMar.Mode.Competitive"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( DelMar.Mode.Challenge, DelMar.Mode.Competitive )"
-              }
-            },
-            "VehicleTags": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "DelMar.TravelMode.Driving"
-                  },
-                  {
-                    "TagName": "DelMar.TravelMode.Flying"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( DelMar.TravelMode.Driving, DelMar.TravelMode.Flying )"
-              }
-            },
-            "RequiredPlaylistTypeInfo": "EDelMarPlaylistTypeInfo::Any",
-            "RequiredCosmetics": [],
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "DA50D6A64F00AC671E721FAE4C420351",
-          "SourceString": "Drive or fly total distance",
-          "LocalizedString": "Drive or fly total distance"
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 85000,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 50,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.FNE.DelMar"
-        },
-        {
-          "TagName": "Product.DelMar"
-        },
-        {
-          "TagName": "Product.DelMar.Habanero"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        2,
-        1,
-        2,
-        0,
-        1,
-        1,
-        1,
-        2
-      ],
-      "AutoDescription": " ANY(  ANY( Product.FNE.DelMar, Product.DelMar ),  ANY( Product.DelMar.Habanero ) )"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_DelMar_S0_Daily_013:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_013.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_DelMar_S0_Daily_013:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_013.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_DelMar_S0_Daily_013_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "D6590ED744021F94CC0B27AF927409A4",
-      "SourceString": "Drive or fly total distance",
-      "LocalizedString": "Drive or fly total distance"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "670881604A6F44E691358D9759B36992",
-      "SourceString": "Drive or fly total distance",
-      "LocalizedString": "Drive or fly total distance"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.DelMar.Daily",
-          "ChallengeCategory.XP"
         ]
       },
-      {}
+      {
+        "TokenRewards": [
+          {
+            "TokenDefinition": {
+              "AssetPathName": "/DelMarQuests/Daily/Token_DelMar_DailyQuest.Token_DelMar_DailyQuest",
+              "SubPathString": ""
+            },
+            "TokenCount": 1,
+            "bHideFromUI": false
+          },
+          {
+            "TokenDefinition": {
+              "AssetPathName": "/UniversalDailyQuests/Items/Tokens/Universal_DailyQuest_Token.Universal_DailyQuest_Token",
+              "SubPathString": ""
+            },
+            "TokenCount": 1,
+            "bHideFromUI": false
+          }
+        ]
+      }
     ]
   }
 }

@@ -1,28 +1,21 @@
 {
-  "Type": "AudioMutator",
-  "Name": "AudioMutator_1",
+  "Type": "StatefulAudioMutator",
+  "Name": "StatefulAudioMutator_1",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AudioMutator'",
+  "Class": "UScriptClass'StatefulAudioMutator'",
   "Outer": {
     "ObjectName": "GameFeatureAction_AddAudioMutators'STW_Sounds:GameFeatureAction_AddAudioMutators_0'",
-    "ObjectPath": "/STW_Sounds/STW_Sounds.3"
+    "ObjectPath": "/STW_Sounds/STW_Sounds.4"
   },
   "Properties": {
-    "Selectors": [
-      {
-        "SoundClass": {
-          "ObjectName": "SoundClass'Master'",
-          "ObjectPath": "/Game/Sounds/FortSoundClassesAndModes/Master.0"
-        },
-        "bExactClass": false
-      }
-    ],
+    "Selector": {},
     "Actions": [
       {
-        "SoundClassMapping": {
-          "ObjectName": "SoundClassGraphMapping'DA_SoundClassGraphMapping_GameToSTW'",
-          "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/DA_SoundClassGraphMapping_GameToSTW.0"
-        }
+        "Modulator": {
+          "ObjectName": "SoundControlBus'CB_STW_Main'",
+          "ObjectPath": "/STW_Sounds/Assets/CB_STW_Main.0"
+        },
+        "Destination": "EModulationDestination::Volume"
       }
     ]
   }

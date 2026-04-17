@@ -1,93 +1,258 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_SwampFish",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_SwampFish'",
+    "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "8B260F92-4EF89A00-2F0B0C99-EE474CC4",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SwampFish:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3784034A4ECDF35BADD3D4B0C7CFEAA8",
+            "SourceString": "The bog... welcome... you...",
+            "LocalizedString": "The bog... welcome... you..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_SwampFish:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8BCAAB014859D1C3B265B7BF1177D3EF",
+            "SourceString": "Bog....?",
+            "LocalizedString": "Bog....?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SwampFish:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E622A5DB47C31FF7689A2396BD8BC5C4",
+            "SourceString": "Warm... bog...",
+            "LocalizedString": "Warm... bog..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SwampFish:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B258201D4C779E70691D15B1B73CDC88",
+            "SourceString": "Bog... stick...",
+            "LocalizedString": "Bog... stick..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SwampFish:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5AEA98194D34C8FBF52FD1B64E897C2A",
+            "SourceString": "No bog... so empty...",
+            "LocalizedString": "No bog... so empty..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SwampFish:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "BADA03DD-48823DAD-F29384A5-2A2DF2A0",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_SwampFish:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.9"
-        }
-      },
-      {
-        "Key": "52AA2131-430066EA-8FA60CBC-F1F750C9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SwampFish:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.2"
-        }
-      },
-      {
-        "Key": "4C67178A-4790D35B-7DFC7B9A-9986BCFF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SwampFish:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "9A3F88834141B7ED824527B0C2CD9998",
+        "SourceString": "bog.... bog.... bog.... bog...?",
+        "LocalizedString": "bog.... bog.... bog.... bog...?"
       }
+    },
+    "OutputConnections": [
+      "4C67178A-4790D35B-7DFC7B9A-9986BCFF",
+      "52AA2131-430066EA-8FA60CBC-F1F750C9"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.SwampFish"
-        },
-        "DestinationList": [
-          "8B260F92-4EF89A00-2F0B0C99-EE474CC4"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "8B260F92-4EF89A00-2F0B0C99-EE474CC4",
-      "BADA03DD-48823DAD-F29384A5-2A2DF2A0",
-      "52AA2131-430066EA-8FA60CBC-F1F750C9",
-      "4C67178A-4790D35B-7DFC7B9A-9986BCFF"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "BADA03DD-48823DAD-F29384A5-2A2DF2A0",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SwampFish:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/SwampFish/NPCLibrary_Conversation_SwampFish.1"
+    }
   }
 }

@@ -1,18 +1,39 @@
 {
-  "Type": "FortGameFeatureAction_AddMutators",
-  "Name": "FortGameFeatureAction_AddMutators_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMutators'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'MilitiaExpire'",
     "ObjectPath": "/MilitiaExpire/MilitiaExpire.3"
   },
   "Properties": {
-    "MutatorsToAdd": [
+    "SourcesToAdd": [
       {
-        "Target": "EMutatorAddTarget::FortGameStateAthena",
-        "Mutator": {
-          "AssetPathName": "/MilitiaExpire/Gameplay/BP_MilitiaExpireMutator.BP_MilitiaExpireMutator_C",
+        "RegistryToAddTo": "Phoebe.Augments",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/MilitiaExpire/DataTables/PhoebeMilitiaExpireAugmentsDataTable.PhoebeMilitiaExpireAugmentsDataTable",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "RegistryToAddTo": "PawnTagQueryBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/MilitiaExpire/AI/MilitiaExpire_InjectedBehaviors.MilitiaExpire_InjectedBehaviors",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
           "SubPathString": ""
         }
       }

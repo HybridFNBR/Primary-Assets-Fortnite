@@ -1,59 +1,74 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'Figment_Ch01_DataTables'",
-    "ObjectPath": "/Figment_Ch01_DataTables/Figment_Ch01_DataTables.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "Figment_Ch01_DataTables",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/Figment_Ch01_DataTables/Figment_Ch01_DataTables",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "33.00"
+    "PlaylistBaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/Game/Items/Datatables/AthenaProjectiles.AthenaProjectiles",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
             },
-            "ExclusiveMax": {
-              "VersionName": "Future"
+            "Value": {
+              "AssetPathName": "/Figment_Ch01_DataTables/DataTables/AthenaProjectileComposite_Figment.AthenaProjectileComposite_Figment",
+              "SubPathString": ""
             }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Figment"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Figment )"
-          },
-          "bMigratedFromOldData": true
+          }
+        ]
+      },
+      {
+        "BaseTable": {
+          "AssetPathName": "/Game/Athena/Balance/DataTables/AthenaResourceRates.AthenaResourceRates",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
+            },
+            "Value": {
+              "AssetPathName": "/Figment_Ch01_DataTables/DataTables/AthenaResourceRates_Figment.AthenaResourceRates_Figment",
+              "SubPathString": ""
+            }
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'Figment_Ch01_DataTables:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/Figment_Ch01_DataTables/Figment_Ch01_DataTables.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Figment"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Athena.Playlist.Figment )"
-    }
+      }
+    ]
   }
 }

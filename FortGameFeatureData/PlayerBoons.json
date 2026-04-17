@@ -1,111 +1,45 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'PlayerBoons'",
-    "ObjectPath": "/PlayerBoons/PlayerBoons.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "PlayerBoons",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/PlayerBoons/PlayerBoons",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "33.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              7,
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playlist.Arena, Athena.Playlist.Default, Athena.Playlist.Test, Playlist.Experience.PlayOnly, Playlist.UGC.Core, Plugin.Playlist.Arena ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/PlayerBoons/Levels/PlayerBoons_LevelOverlay.PlayerBoons_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'PlayerBoons:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/PlayerBoons/PlayerBoons.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "PlayerAugment",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerAugmentItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist.Arena"
-        },
-        {
-          "TagName": "Athena.Playlist.Default"
-        },
-        {
-          "TagName": "Athena.Playlist.Test"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Plugin.Playlist.Arena"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        7,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Creative, Athena.Playlist.Arena, Athena.Playlist.Default, Athena.Playlist.Test, Playlist.Experience.PlayOnly, Playlist.UGC.Core, Plugin.Playlist.Arena ) )"
-    }
+      }
+    ]
   }
 }

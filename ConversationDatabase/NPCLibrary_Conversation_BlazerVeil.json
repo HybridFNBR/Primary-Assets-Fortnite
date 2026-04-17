@@ -1,111 +1,314 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_BlazerVeil",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_BlazerVeil'",
+    "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "522AB74F-4ED5A3B5-E4A7D5A4-BBF5FDE2",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BlazerVeil:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.1"
-        }
-      },
-      {
-        "Key": "AAABEFA0-4E0EFAA4-16406D81-CA09D9DE",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_BlazerVeil:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.12"
-        }
-      },
-      {
-        "Key": "E89787A8-40067111-F302C19D-46378714",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BlazerVeil:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.5"
-        }
-      },
-      {
-        "Key": "FF4070B9-44B34BD1-2F55FA92-9F3B9AFA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BlazerVeil:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.4"
-        }
-      },
-      {
-        "Key": "0632E60F-4BB87A47-7B5D3DA4-ADE8AFF8",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BlazerVeil:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.2"
-        }
-      },
-      {
-        "Key": "6A1A8B87-4822D4D7-14367B97-1317F4D6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BlazerVeil:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.BlazerVeil"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2FE1A1DE4640A134AEA574B6194538AD",
+            "SourceString": "The best things in life are free... if you know how to take them.",
+            "LocalizedString": "The best things in life are free... if you know how to take them."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_BlazerVeil:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "522AB74F-4ED5A3B5-E4A7D5A4-BBF5FDE2"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "729472584E256632E2C2BCB6EF2925E0",
+            "SourceString": "Don't make me regret trusting you, after how things fell apart last time.",
+            "LocalizedString": "Don't make me regret trusting you, after how things fell apart last time."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BlazerVeil:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6AAA35CC4000B06FF6E26790FB674F58",
+            "SourceString": "What exactly is it that we're stealing for you?",
+            "LocalizedString": "What exactly is it that we're stealing for you?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BlazerVeil:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3C6703C5483825CA015B5F8F0C9DD391",
+            "SourceString": "After this job, let's upgrade that car of yours. How do you feel about a trunk turret?",
+            "LocalizedString": "After this job, let's upgrade that car of yours. How do you feel about a trunk turret?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BlazerVeil:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C6E4E9E64D2C0191FE4DF98C2ACFCC15",
+            "SourceString": "How are those little Coral Buddies doing?",
+            "LocalizedString": "How are those little Coral Buddies doing?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BlazerVeil:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DF5D9FAE47D744AFD568A48EF4B48125",
+            "SourceString": "We should collaborate on a design sometime. I love your instincts for the... explosively dramatic.",
+            "LocalizedString": "We should collaborate on a design sometime. I love your instincts for the... explosively dramatic."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BlazerVeil:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "78E19B474BDEABA235A4A694FF1D5B38",
+        "SourceString": "Do you need something designed, engineered, or stolen?",
+        "LocalizedString": "Do you need something designed, engineered, or stolen?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season26.Snapshot.P02.Q11",
-      "Conversation.Entry.Season26.Snapshot.P01.Q07",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "522AB74F-4ED5A3B5-E4A7D5A4-BBF5FDE2",
-      "AAABEFA0-4E0EFAA4-16406D81-CA09D9DE",
-      "E89787A8-40067111-F302C19D-46378714",
-      "FF4070B9-44B34BD1-2F55FA92-9F3B9AFA",
+    },
+    "OutputConnections": [
+      "6A1A8B87-4822D4D7-14367B97-1317F4D6",
       "0632E60F-4BB87A47-7B5D3DA4-ADE8AFF8",
-      "6A1A8B87-4822D4D7-14367B97-1317F4D6"
+      "FF4070B9-44B34BD1-2F55FA92-9F3B9AFA",
+      "E89787A8-40067111-F302C19D-46378714"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "AAABEFA0-4E0EFAA4-16406D81-CA09D9DE",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BlazerVeil:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/BlazerVeil/NPCLibrary_Conversation_BlazerVeil.1"
+    }
   }
 }

@@ -1,119 +1,98 @@
 {
-  "Type": "AthenaDanceItemDefinition",
-  "Name": "EID_ArcticIceTalus",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDanceItemDefinition'",
-  "Package": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_ArcticIceTalus",
+  "Type": "FortCosmeticLoadoutTagDrivenVariant",
+  "Name": "FortCosmeticLoadoutTagDrivenVariant_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortCosmeticLoadoutTagDrivenVariant'",
+  "Outer": {
+    "ObjectName": "AthenaDanceItemDefinition'EID_ArcticIceTalus'",
+    "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_ArcticIceTalus.0"
+  },
   "Properties": {
-    "MotageSelectionGroups": [
+    "Variants": [
       {
-        "MontageSectionName": "Default",
-        "EvaluationMode": "EMontageSelectionPredicateType::CharacterParts",
-        "VariantMetaTagRequired": {
-          "TagName": "None"
-        },
-        "bRequireCharacterPart": false,
-        "PartRequirements": [
+        "MontageSwaps": [
           {
-            "PartType": "EFortCustomPartType::Head",
-            "Part": {
-              "AssetPathName": "/BRCosmetics/Characters/CharacterParts/Male/Medium/Heads/CP_Athena_Head_M_ArcticIceTalus.CP_Athena_Head_M_ArcticIceTalus",
+            "ToSwapFrom": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/ArcticIceTalus/Emote_ArcticIceTalus_CMM_M.Emote_ArcticIceTalus_CMM_M",
+              "SubPathString": ""
+            },
+            "ToSwapTo": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/ArcticIceTalus/Emote_ArcticIceTalus_CMM_M_Alt.Emote_ArcticIceTalus_CMM_M_Alt",
               "SubPathString": ""
             }
           }
         ],
-        "SwapRequirements": []
-      },
-      {
-        "MontageSectionName": "Return",
-        "EvaluationMode": "EMontageSelectionPredicateType::CharacterParts",
-        "VariantMetaTagRequired": {
-          "TagName": "None"
-        },
-        "bRequireCharacterPart": false,
-        "PartRequirements": [
+        "RequiredMetaTags": [],
+        "ExcludedMetaTags": [],
+        "RequiredConditions": [
           {
-            "PartType": "EFortCustomPartType::Head",
-            "Part": {
-              "AssetPathName": "/BRCosmetics/Characters/CharacterParts/Male/Medium/Heads/CP_Athena_Head_M_ArcticIceTalus_Style.CP_Athena_Head_M_ArcticIceTalus_Style",
+            "ItemCategory": "ECosmeticMetaTagRequirementCategory::None",
+            "SlotTag": {
+              "TagName": "LoadoutSlot.Backpack"
+            },
+            "SpecificItem": {
+              "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Backpacks/Backpack_ArcticIceTalus.Backpack_ArcticIceTalus",
               "SubPathString": ""
-            }
+            },
+            "MetaTagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [
+                {
+                  "TagName": "Cosmetics.MetaTags.ArcticIce.Cape"
+                }
+              ],
+              "QueryTokenStream": [
+                0,
+                1,
+                2,
+                1,
+                0
+              ],
+              "UserDescription": "",
+              "AutoDescription": " ALL( Cosmetics.MetaTags.ArcticIce.Cape )"
+            },
+            "RequiredMetaTags": [],
+            "ExcludedMetaTags": []
           }
         ],
-        "SwapRequirements": []
-      }
-    ],
-    "Animation": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/ArcticIceTalus/Emote_ArcticIceTalus_CMM_M.Emote_ArcticIceTalus_CMM_M",
-      "SubPathString": ""
-    },
-    "EmoteCooldownSecs": 1.0,
-    "RequiredEmoteParent": {
-      "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Characters/Character_ArcticIceTalus.Character_ArcticIceTalus",
-      "SubPathString": ""
-    },
-    "ItemVariants": [
-      {
-        "ObjectName": "FortCosmeticLoadoutTagDrivenVariant'EID_ArcticIceTalus:FortCosmeticLoadoutTagDrivenVariant_0'",
-        "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_ArcticIceTalus.1"
-      }
-    ],
-    "ShotGridIds": [
-      65097
-    ],
-    "BaseShotGridId": 65097,
-    "ItemName": {
-      "Namespace": "",
-      "Key": "B695BAD141BF671273C74CAC1587C8B3",
-      "SourceString": "Piccolo's Charging Up",
-      "LocalizedString": "Piccolo's Charging Up"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "0F4E36B94DC888B8309AE8B545BC7C09",
-      "SourceString": "Amplify your ki.",
-      "LocalizedString": "Amplify your ki."
-    },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "E298652D4D1FEF032444C2B403CFD396",
-      "SourceString": "Emote",
-      "LocalizedString": "Emote"
-    },
-    "DataList": [
-      {
-        "MinLevel": 1,
-        "MaxLevel": 1
-      },
-      {
-        "Tags": [
-          "Cosmetics.EmoteType.Dance",
-          "Cosmetics.Source.ItemShop",
-          "Cosmetics.Set.WordRemark",
-          "Cosmetics.Filter.Season.23",
-          "Cosmetics.UserFacingFlags.BuiltInEmote"
-        ]
-      },
-      {
-        "Icon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Emotes/S23/T-Icon-Emotes-ArcticIceTalus.T-Icon-Emotes-ArcticIceTalus",
+        "ExcludedConditions": [],
+        "VariantParts": [],
+        "VariantMaterials": [],
+        "VariantMaterialParams": [],
+        "InitalParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [],
+        "VariantSounds": [],
+        "VariantFoley": [],
+        "SocketTransforms": [],
+        "VariantActions": [],
+        "VariantMeshes": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": true,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Stage1"
+        },
+        "VariantName": {
+          "CultureInvariantString": null
+        },
+        "PreviewImage": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
-      },
-      {
-        "LargeIcon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Emotes/S23/T-Icon-Emotes-ArcticIceTalus-L.T-Icon-Emotes-ArcticIceTalus-L",
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
-      },
-      {
-        "Traits": [
-          "Item.Trait.Transient",
-          "Item.Trait.SingleStack"
-        ]
-      },
-      {
-        "Rarity": "EFortRarity::Legendary"
+        },
+        "VariantGameplayTags": []
       }
     ]
   }

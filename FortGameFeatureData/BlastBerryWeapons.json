@@ -1,46 +1,70 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'BlastBerryWeapons'",
-    "ObjectPath": "/BlastBerryWeapons/BlastBerryWeapons.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "BlastBerryWeapons",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/BlastBerryWeapons/BlastBerryWeapons",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "38.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Unset"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Plugin.Playlist.BlastBerry ) )"
-          },
-          "bMigratedFromOldData": false
+    "LevelOverlayConfig": {
+      "AssetPathName": "/BlastBerryWeapons/Levels/BlastBerryWeapons_LevelOverlay.BlastBerryWeapons_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlayerAbilitySet": {
+      "AssetPathName": "/BlastBerryWeapons/AS_MorphiteWeapons.AS_MorphiteWeapons",
+      "SubPathString": ""
+    },
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BlastBerryWeapons:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/BlastBerryWeapons/BlastBerryWeapons.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    }
+      },
+      {
+        "PrimaryAssetType": "MultiItem",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWorldMultiItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

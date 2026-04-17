@@ -1,103 +1,40 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'GiantPawnCore'",
     "ObjectPath": "/GiantPawnCore/GiantPawnCore.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "33.20"
-            },
-            "ExclusiveMax": {
-              "VersionName": "37.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.ItemsTest"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Plugin.Playlist.BattleLab"
-              },
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              6,
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Plugin.Playlist.Arena, Plugin.Playlist.BattleLab, Athena.Creative, Playlist.UGC.Core ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGameStateAthena",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist.ItemsTest"
+        "ComponentClass": {
+          "AssetPathName": "/GiantPawnCore/Gameplay/Destruction/B_GiantPawnDestructionManagerGameStateComponent.B_GiantPawnDestructionManagerGameStateComponent_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.Arena"
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGameStateAthena",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Plugin.Playlist.BattleLab"
+        "ComponentClass": {
+          "AssetPathName": "/GiantPawnCore/Gameplay/Movement/BP_GameStateComp_GiantPawnBlockers.BP_GameStateComp_GiantPawnBlockers_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        6,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Athena.Playlist.ItemsTest, Plugin.Playlist.Arena, Plugin.Playlist.BattleLab, Athena.Creative, Playlist.UGC.Core ) )"
-    }
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

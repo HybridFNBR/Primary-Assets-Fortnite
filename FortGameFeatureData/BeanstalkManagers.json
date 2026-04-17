@@ -1,17 +1,61 @@
 {
-  "Type": "FortGameFeatureAction_AddGameplayModifiers",
-  "Name": "FortGameFeatureAction_AddGameplayModifiers_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddGameplayModifiers'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'BeanstalkManagers'",
-    "ObjectPath": "/BeanstalkManagers/BeanstalkManagers.7"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "BeanstalkManagers",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/BeanstalkManagers/BeanstalkManagers",
   "Properties": {
-    "GameplayModifiers": [
+    "Actions": [
       {
-        "AssetPathName": "/BeanstalkManagers/Modifiers/GM_Bean.GM_Bean",
-        "SubPathString": ""
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'BeanstalkManagers:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/BeanstalkManagers/BeanstalkManagers.2"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_SetAccountItemDefinitionOverrideManager'BeanstalkManagers:FortGameFeatureAction_SetAccountItemDefinitionOverrideManager_0'",
+        "ObjectPath": "/BeanstalkManagers/BeanstalkManagers.6"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddGameplayModifiers'BeanstalkManagers:FortGameFeatureAction_AddGameplayModifiers_0'",
+        "ObjectPath": "/BeanstalkManagers/BeanstalkManagers.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToFrontEnd'BeanstalkManagers:FortGameFeatureAction_AddToFrontEnd_0'",
+        "ObjectPath": "/BeanstalkManagers/BeanstalkManagers.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_RegisterDefaultHeroTypeFactory'BeanstalkManagers:FortGameFeatureAction_RegisterDefaultHeroTypeFactory_0'",
+        "ObjectPath": "/BeanstalkManagers/BeanstalkManagers.5"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_ExtendCosmetics'BeanstalkManagers:FortGameFeatureAction_ExtendCosmetics_0'",
+        "ObjectPath": "/BeanstalkManagers/BeanstalkManagers.3"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_RegisterDefaultFrontendPawnPreviewSettings'BeanstalkManagers:FortGameFeatureAction_RegisterDefaultFrontendPawnPreviewSettings_0'",
+        "ObjectPath": "/BeanstalkManagers/BeanstalkManagers.4"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/BeanstalkManagers/Modifiers/Weapons"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
       }
     ]
   }

@@ -1,120 +1,225 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_FrostGalore",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_FrostGalore'",
+    "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "0D6B13CD-43BAB587-DF3C7FA7-B27D38B9",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_FrostGalore:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.1"
-        }
-      },
-      {
-        "Key": "CF510E91-4852201F-5CC0BD8D-65F144B0",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_FrostGalore:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.13"
-        }
-      },
-      {
-        "Key": "E38DF5CD-413DF7F6-EE0C6884-60F2A7E8",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_FrostGalore:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.6"
-        }
-      },
-      {
-        "Key": "B0A29249-4787AF74-8B9D7FBA-F8E7D571",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_FrostGalore:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.5"
-        }
-      },
-      {
-        "Key": "569EDC99-43F7C811-B0539A94-09BF594B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_FrostGalore:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.4"
-        }
-      },
-      {
-        "Key": "964B5A92-40992AFC-00181F8D-8ABFEBB1",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_FrostGalore:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.2"
-        }
-      },
-      {
-        "Key": "CBB71ACE-4C015931-A04CDAA5-706A30CB",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_FrostGalore:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.FrostGalore"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C799EC8B4EA1E4CA475ADD90A2BDBB3F",
+            "SourceString": "Sorry about my dad... and my brother... and Springfield.",
+            "LocalizedString": "Sorry about my dad... and my brother... and Springfield."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_FrostGalore:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "0D6B13CD-43BAB587-DF3C7FA7-B27D38B9"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BCD6524D4E0CE8704C08AE81E0CA3F39",
+            "SourceString": "Hi!",
+            "LocalizedString": "Hi!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_FrostGalore:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8360DA114BC1F45B96D9C19FCD57D962",
+            "SourceString": "Do you think other kids have to save the world from their dad as often as we do?",
+            "LocalizedString": "Do you think other kids have to save the world from their dad as often as we do?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_FrostGalore:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3709C5084BDD6C519F21818193724F8F",
+            "SourceString": "Dad, you know I love you, but please don't embarrass us in front of the other realities.",
+            "LocalizedString": "Dad, you know I love you, but please don't embarrass us in front of the other realities."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_FrostGalore:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "59802E434CE0946933FB77A13657AFA0",
+        "SourceString": "Hi!",
+        "LocalizedString": "Hi!"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season38.LAF.NPC.POI",
-      "Conversation.Entry.Season38.Story.P03.Q07.02",
-      "Conversation.Entry.Season38.Story.P03.Q03",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "0D6B13CD-43BAB587-DF3C7FA7-B27D38B9",
-      "CF510E91-4852201F-5CC0BD8D-65F144B0",
-      "E38DF5CD-413DF7F6-EE0C6884-60F2A7E8",
-      "B0A29249-4787AF74-8B9D7FBA-F8E7D571",
-      "569EDC99-43F7C811-B0539A94-09BF594B",
+    },
+    "OutputConnections": [
+      "CBB71ACE-4C015931-A04CDAA5-706A30CB",
       "964B5A92-40992AFC-00181F8D-8ABFEBB1",
-      "CBB71ACE-4C015931-A04CDAA5-706A30CB"
+      "569EDC99-43F7C811-B0539A94-09BF594B",
+      "B0A29249-4787AF74-8B9D7FBA-F8E7D571",
+      "E38DF5CD-413DF7F6-EE0C6884-60F2A7E8"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "CF510E91-4852201F-5CC0BD8D-65F144B0",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_FrostGalore:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/FrostGalore/NPCLibrary_Conversation_FrostGalore.1"
+    }
   }
 }

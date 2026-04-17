@@ -1,26 +1,177 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'quest_victorycrown_hidden'",
-    "ObjectPath": "/BattlePassPermanentQuests/Items/QuestItems/VictoryCrown/quest_victorycrown_hidden.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "quest_victorycrown_hidden",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/BattlePassPermanentQuests/Items/QuestItems/VictoryCrown/quest_victorycrown_hidden",
   "Properties": {
-    "InformationSettings": {
-      "CompletionText": {
-        "Namespace": "",
-        "Key": "1B989759483DBE62FAFDDCA0BD7B06DA",
-        "SourceString": "Win a Crowned Victory Royale. Crowning Achievement Emote Unlocked!",
-        "LocalizedString": "Win a Crowned Victory Royale. Crowning Achievement Emote Unlocked!"
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
       }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "quest_victorycrown_hidden_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.RoyalRoyale"
+            },
+            "Subjects": [],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "8C47ACC8446AB7DE74F651AFA2C2E609",
+          "SourceString": "Win a Crowned Victory Royale. Crowning Achievement Emote Unlocked!",
+          "LocalizedString": "Win a Crowned Victory Royale. Crowning Achievement Emote Unlocked!"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "7F32C6E947A1DB8FA8C123A10840F9FB",
+          "SourceString": "Win a Crowned Victory Royale. Crowning Achievement Emote Unlocked!",
+          "LocalizedString": "Win a Crowned Victory Royale. Crowning Achievement Emote Unlocked!"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 1.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        },
+        {
+          "TagName": "Product.BlastBerry"
+        },
+        {
+          "TagName": "Product.ForbiddenFruit"
+        },
+        {
+          "TagName": "Product.Figment"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        4,
+        0,
+        1,
+        2,
+        3
+      ],
+      "AutoDescription": " ANY( Product.BR, Product.BlastBerry, Product.ForbiddenFruit, Product.Figment )"
     },
-    "VisibilitySettings": {
-      "bIncludedInCategories": false
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_victorycrown_hidden:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/BattlePassPermanentQuests/Items/QuestItems/VictoryCrown/quest_victorycrown_hidden.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_victorycrown_hidden:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/BattlePassPermanentQuests/Items/QuestItems/VictoryCrown/quest_victorycrown_hidden.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "quest_victorycrown_hidden_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "EB6BF0474015E42E2E0B7D9B1747C1B0",
+      "SourceString": "Crowning Achievement",
+      "LocalizedString": "Crowning Achievement"
     },
-    "ToastSettings": {
-      "bHideQuestProgressNotification": true
-    }
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "F02D7C1949E8D3C8C0AFB1B0FE1B9243",
+      "SourceString": "Win a Crowned Victory Royale. Crowning Achievement Emote Unlocked!",
+      "LocalizedString": "Win a Crowned Victory Royale. Crowning Achievement Emote Unlocked!"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "245C49FB44399FF17281A0AE94160116",
+      "SourceString": "Win a Crowned Victory Royale. Crowning Achievement Emote Unlocked!",
+      "LocalizedString": "Win a Crowned Victory Royale. Crowning Achievement Emote Unlocked!"
+    },
+    "DataList": [
+      {
+        "Rarity": "EFortRarity::Epic"
+      }
+    ]
   }
 }

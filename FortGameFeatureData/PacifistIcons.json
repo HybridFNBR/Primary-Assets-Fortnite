@@ -1,91 +1,29 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'PacifistIcons'",
     "ObjectPath": "/PacifistIcons/PacifistIcons.2"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.30"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.UGC.Play"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Playlist.UGC.Create"
-              },
-              {
-                "TagName": "Sparks.Playlist"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              5,
-              0,
-              1,
-              2,
-              3,
-              4
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Creative, Playlist.UGC.Play, Playlist.UGC.Core, Playlist.UGC.Create, Sparks.Playlist )"
-          },
-          "bMigratedFromOldData": true
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Fort.DataRegistry",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "/PacifistIcons/DataTables/PacifistIconsGameData.PacifistIconsGameData",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Playlist.UGC.Play"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Playlist.UGC.Create"
-        },
-        {
-          "TagName": "Sparks.Playlist"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        5,
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "AutoDescription": " ANY( Athena.Creative, Playlist.UGC.Play, Playlist.UGC.Core, Playlist.UGC.Create, Sparks.Playlist )"
-    }
+      }
+    ],
+    "bPreloadInEditor": true
   }
 }

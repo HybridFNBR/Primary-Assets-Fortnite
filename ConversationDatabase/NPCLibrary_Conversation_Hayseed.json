@@ -1,93 +1,222 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Hayseed",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Hayseed'",
+    "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "92A78073-44D0793B-F7135EB3-C10C5F19",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Hayseed:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B64696CA4D9D36DEE1F85383E0F522F7",
+            "SourceString": "Hey there Hoss, it's been a spell! Good to see ya.",
+            "LocalizedString": "Hey there Hoss, it's been a spell! Good to see ya."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_Hayseed:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3536DD8F42D5B3E1B9213FAD71DC9D91",
+            "SourceString": "Howdy! I love meetin' a new friendly face.",
+            "LocalizedString": "Howdy! I love meetin' a new friendly face."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Hayseed:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9DC26F884F1682B6F04728ADAC1B57C6",
+            "SourceString": "<b>Whoo-ee!</> Y'all have got a lotta Bars to spend at the farmer's market!",
+            "LocalizedString": "<b>Whoo-ee!</> Y'all have got a lotta Bars to spend at the farmer's market!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasBars'NPCLibrary_Conversation_Hayseed:Speech_C_4.FortControllerRequirement_HasBars_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.HighTotalBars"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1011164C40533138B6372A93CCEA282B",
+            "SourceString": "You know you're not supposed to be outside!",
+            "LocalizedString": "You know you're not supposed to be outside!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Hayseed:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "A27A114D-46A97807-AED78D82-CB19F3BC",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Hayseed:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.8"
-        }
-      },
-      {
-        "Key": "6AD6274C-42E3AC74-C1895480-F88D26DF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Hayseed:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.2"
-        }
-      },
-      {
-        "Key": "4F887F14-436097E3-49D1FAB5-BC8F5028",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Hayseed:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "1E52906B4B09F0C8FC376E8906A7B2B0",
+        "SourceString": "You seen my cousin Steel anywhere? I been lookin' for him.",
+        "LocalizedString": "You seen my cousin Steel anywhere? I been lookin' for him."
       }
+    },
+    "OutputConnections": [
+      "4F887F14-436097E3-49D1FAB5-BC8F5028",
+      "6AD6274C-42E3AC74-C1895480-F88D26DF"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Hayseed"
-        },
-        "DestinationList": [
-          "92A78073-44D0793B-F7135EB3-C10C5F19"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "92A78073-44D0793B-F7135EB3-C10C5F19",
-      "A27A114D-46A97807-AED78D82-CB19F3BC",
-      "6AD6274C-42E3AC74-C1895480-F88D26DF",
-      "4F887F14-436097E3-49D1FAB5-BC8F5028"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "A27A114D-46A97807-AED78D82-CB19F3BC",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Hayseed:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Hayseed/Hayseed/NPCLibrary_Conversation_Hayseed.1"
+    }
   }
 }

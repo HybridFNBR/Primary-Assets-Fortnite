@@ -1,196 +1,27 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_Figment_Daily_Search_LuckyLanding",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS03/Quest_Figment_Daily_Search_LuckyLanding",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_Figment_Daily_Search_LuckyLanding'",
+    "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS03/Quest_Figment_Daily_Search_LuckyLanding.0"
+  },
   "Properties": {
-    "Group": "FigmentEvergreenDailyQuestLocation",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_Figment_Daily_Search_LuckyLanding_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "DataTableEntryRewards": [
           {
-            "Target": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Building.Type.Container.TreasureChest"
-                  },
-                  {
-                    "TagName": "Building.Type.Container.AmmoBox"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Building.Type.Container.TreasureChest, Building.Type.Container.AmmoBox )"
-              }
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestRewards_Evergreen_Figment'",
+                "ObjectPath": "/FigmentQuests/DataTables/QuestRewards_Evergreen_Figment.0"
+              },
+              "RowName": "FigmentDailyQuestRewards"
             },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Location.POI.LuckyLanding"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Athena.Location.POI.LuckyLanding )"
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "7A597FC545AB91CDEF3EBDAB7E0BCD80",
-          "SourceString": "Search chests or ammo boxes at Lucky Landing",
-          "LocalizedString": "Search chests or ammo boxes at Lucky Landing"
-        },
-        "HudShortDescription": {
-          "Namespace": "",
-          "Key": "092D18184BFDBD101824E3BC0D540FDB",
-          "SourceString": "Search chests or ammo boxes at Lucky Landing",
-          "LocalizedString": "Search chests or ammo boxes at Lucky Landing"
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 3,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Figment"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Product.Figment )"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Daily_Search_LuckyLanding:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS03/Quest_Figment_Daily_Search_LuckyLanding.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_Figment_Daily_Search_LuckyLanding:FortQuestDefinitionComponent_MapMarkers_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS03/Quest_Figment_Daily_Search_LuckyLanding.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Daily_Search_LuckyLanding:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS03/Quest_Figment_Daily_Search_LuckyLanding.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_Figment_Daily_Search_LuckyLanding_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "D371A954452EBDACCC9AC5A5B4C0B080",
-      "SourceString": "Search chests or ammo boxes at Lucky Landing",
-      "LocalizedString": "Search chests or ammo boxes at Lucky Landing"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "42590ECA4AEA9E65B31247908AB84E8E",
-      "SourceString": "Search chests or ammo boxes at Lucky Landing",
-      "LocalizedString": "Search chests or ammo boxes at Lucky Landing"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.Figment.Dailies"
         ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

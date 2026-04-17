@@ -1,93 +1,132 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Krampus",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Krampus/NPCLibrary_Conversation_Krampus",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Krampus'",
+    "ObjectPath": "/NPCLibrary/NPCs/Krampus/NPCLibrary_Conversation_Krampus.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "7E26FD65-4EEC1D61-79763880-BC95EFA6",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Krampus:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Krampus/NPCLibrary_Conversation_Krampus.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "42CE6F4B4C9E0715369EE69E65166F03",
+            "SourceString": "First ever conversation.",
+            "LocalizedString": "First ever conversation."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Krampus:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Krampus/NPCLibrary_Conversation_Krampus.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A9D7DFA948D3A6ABE401B09F431AB022",
+            "SourceString": "Outfit reaction.",
+            "LocalizedString": "Outfit reaction."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Krampus:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Krampus/NPCLibrary_Conversation_Krampus.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "FDDAA9CF-45F49113-F090B1B3-F41F1758",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Krampus:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Krampus/NPCLibrary_Conversation_Krampus.6"
-        }
-      },
-      {
-        "Key": "6B19BEE4-4C77CE54-3F1C868C-D7EF1DF6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Krampus:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Krampus/NPCLibrary_Conversation_Krampus.2"
-        }
-      },
-      {
-        "Key": "C836F606-48FE2EDB-FE4CB683-343A4379",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Krampus:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Krampus/NPCLibrary_Conversation_Krampus.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "45369C194AF4265DDCF636A2C5D37FE0",
+        "SourceString": "Default conversation.",
+        "LocalizedString": "Default conversation."
       }
+    },
+    "OutputConnections": [
+      "C836F606-48FE2EDB-FE4CB683-343A4379",
+      "6B19BEE4-4C77CE54-3F1C868C-D7EF1DF6"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Krampus"
-        },
-        "DestinationList": [
-          "7E26FD65-4EEC1D61-79763880-BC95EFA6"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "7E26FD65-4EEC1D61-79763880-BC95EFA6",
-      "FDDAA9CF-45F49113-F090B1B3-F41F1758",
-      "6B19BEE4-4C77CE54-3F1C868C-D7EF1DF6",
-      "C836F606-48FE2EDB-FE4CB683-343A4379"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "FDDAA9CF-45F49113-F090B1B3-F41F1758",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Krampus:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Krampus/NPCLibrary_Conversation_Krampus.1"
+    }
   }
 }

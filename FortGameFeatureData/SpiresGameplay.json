@@ -1,36 +1,26 @@
 {
-  "Type": "FortGameFeatureAction_AddCategoryTableToConfig",
-  "Name": "FortGameFeatureAction_AddCategoryTableToConfig_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddCategoryTableToConfig'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'SpiresGameplay'",
     "ObjectPath": "/SpiresGameplay/SpiresGameplay.2"
   },
   "Properties": {
-    "ConfigToCategoryTableDatas": [
+    "SourcesToAdd": [
       {
-        "Key": "/Lager/Lager/Config/LagerConfigData_CH6S3.LagerConfigData_CH6S3",
-        "Value": {
-          "CategoryTableDatas": [
-            {
-              "Name": "Spire",
-              "CategoryTable": {
-                "AssetPathName": "/SpiresGameplay/Lager/CategoryTable_CH6S3_Spire.CategoryTable_CH6S3_Spire",
-                "SubPathString": ""
-              },
-              "IsEnabled": {
-                "Value": 1.0,
-                "Curve": {
-                  "CurveTable": null,
-                  "RowName": "None"
-                },
-                "RegistryType": {
-                  "Name": "None"
-                }
-              }
-            }
-          ]
+        "RegistryToAddTo": "CherrySmokeWorldReactions",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/SpiresGameplay/DataTables/SpiresHeroRankingReactions.SpiresHeroRankingReactions",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
     ]

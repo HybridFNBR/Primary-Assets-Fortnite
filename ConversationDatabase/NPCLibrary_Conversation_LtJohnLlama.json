@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_LtJohnLlama",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/LtJohnLlama/NPCLibrary_Conversation_LtJohnLlama",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_LtJohnLlama'",
+    "ObjectPath": "/NPCLibrary/NPCs/LtJohnLlama/NPCLibrary_Conversation_LtJohnLlama.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "8092AC58-4AA39568-5BF18ABF-270F43E7",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_LtJohnLlama:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/LtJohnLlama/NPCLibrary_Conversation_LtJohnLlama.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "391F25C74FB31FE8AC51E998D57A7243",
+            "SourceString": "I'm between tours with a bunch of explosives in my pack. You hiring?",
+            "LocalizedString": "I'm between tours with a bunch of explosives in my pack. You hiring?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_LtJohnLlama:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/LtJohnLlama/NPCLibrary_Conversation_LtJohnLlama.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "75B98A7D-478E028F-2F784FA3-690437DD",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_LtJohnLlama:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/LtJohnLlama/NPCLibrary_Conversation_LtJohnLlama.5"
-        }
-      },
-      {
-        "Key": "95532069-49CF45C6-ED01D2BC-1434E746",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LtJohnLlama:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/LtJohnLlama/NPCLibrary_Conversation_LtJohnLlama.2"
-        }
-      },
-      {
-        "Key": "DA3BB8B4-4DAD0A95-0A09C28B-37B24AA4",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LtJohnLlama:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/LtJohnLlama/NPCLibrary_Conversation_LtJohnLlama.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "5F0FE146422F6D510AF79C9511706A4D",
+        "SourceString": "You need some explosions? Because I can bring the explosions.",
+        "LocalizedString": "You need some explosions? Because I can bring the explosions."
       }
+    },
+    "OutputConnections": [
+      "DA3BB8B4-4DAD0A95-0A09C28B-37B24AA4",
+      "95532069-49CF45C6-ED01D2BC-1434E746"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.LtJohnLlama"
-        },
-        "DestinationList": [
-          "8092AC58-4AA39568-5BF18ABF-270F43E7"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "8092AC58-4AA39568-5BF18ABF-270F43E7",
-      "75B98A7D-478E028F-2F784FA3-690437DD",
-      "95532069-49CF45C6-ED01D2BC-1434E746",
-      "DA3BB8B4-4DAD0A95-0A09C28B-37B24AA4"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "75B98A7D-478E028F-2F784FA3-690437DD",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_LtJohnLlama:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/LtJohnLlama/NPCLibrary_Conversation_LtJohnLlama.1"
+    }
   }
 }

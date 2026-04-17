@@ -1,15 +1,38 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'PaprikaCore'",
-    "ObjectPath": "/PaprikaCore/PaprikaCore.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "PaprikaCore",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/PaprikaCore/PaprikaCore",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "BRRoot"
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'PaprikaCore:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/PaprikaCore/PaprikaCore.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortPlaylistAthena",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlaylistAthena",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Playlists"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
     ]
   }
 }

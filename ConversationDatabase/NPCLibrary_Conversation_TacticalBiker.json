@@ -1,102 +1,268 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_TacticalBiker",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_TacticalBiker'",
+    "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "1378F58F-4D519930-2F65D7B4-82F9E566",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TacticalBiker:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.1"
-        }
-      },
-      {
-        "Key": "972707AE-4E6139A7-8BBF32A0-CE05AEEF",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_TacticalBiker:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.10"
-        }
-      },
-      {
-        "Key": "57F4B6B9-4EA9C4BF-C573C9A6-F574A761",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TacticalBiker:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.4"
-        }
-      },
-      {
-        "Key": "568A839C-4658D1BD-AF6B00BF-37E2A463",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TacticalBiker:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.2"
-        }
-      },
-      {
-        "Key": "F1BE43CC-4CDFDE27-D55C5488-6BFB63C6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TacticalBiker:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.TacticalBiker"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C47577324F0704702FDA5398534DD8B2",
+            "SourceString": "If you think you're going too fast, you're already behind.",
+            "LocalizedString": "If you think you're going too fast, you're already behind."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_TacticalBiker:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "1378F58F-4D519930-2F65D7B4-82F9E566"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FAF6CB9E45DEA5804DF7D5A8A77BADC8",
+            "SourceString": "Another racer? Let's see what you've got.",
+            "LocalizedString": "Another racer? Let's see what you've got."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TacticalBiker:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "782673B741470E05F0A178B1A2DAB420",
+            "SourceString": "It's good to see you, Burnout.",
+            "LocalizedString": "It's good to see you, Burnout."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TacticalBiker:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "957294534BB4B4A11DBD47B7FD4A0BBE",
+            "SourceString": "Ready for a rematch, Redline?",
+            "LocalizedString": "Ready for a rematch, Redline?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TacticalBiker:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "25AAB7C04A517B611F3186B4400FBCFC",
+            "SourceString": "You know, you're the only one I've ever lost a race to.",
+            "LocalizedString": "You know, you're the only one I've ever lost a race to."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TacticalBiker:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "55E6BF344957DD80E8847AAB1F8180FB",
+        "SourceString": "Better hurry. I won't be here long.",
+        "LocalizedString": "Better hurry. I won't be here long."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.TacticalBiker.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "1378F58F-4D519930-2F65D7B4-82F9E566",
-      "972707AE-4E6139A7-8BBF32A0-CE05AEEF",
-      "57F4B6B9-4EA9C4BF-C573C9A6-F574A761",
+    },
+    "OutputConnections": [
+      "F1BE43CC-4CDFDE27-D55C5488-6BFB63C6",
       "568A839C-4658D1BD-AF6B00BF-37E2A463",
-      "F1BE43CC-4CDFDE27-D55C5488-6BFB63C6"
+      "57F4B6B9-4EA9C4BF-C573C9A6-F574A761"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "972707AE-4E6139A7-8BBF32A0-CE05AEEF",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TacticalBiker:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/TacticalBiker/NPCLibrary_Conversation_TacticalBiker.1"
+    }
   }
 }

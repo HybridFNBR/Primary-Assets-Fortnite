@@ -1,54 +1,114 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'TeaCakeLoot'",
-    "ObjectPath": "/TeaCakeLoot/TeaCakeLoot.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "TeaCakeLoot",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/TeaCakeLoot/TeaCakeLoot",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
+    "LevelOverlayConfig": {
+      "AssetPathName": "/TeaCakeLoot/Levels/TeaCakeLoot_LevelOverlay.TeaCakeLoot_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultLootTableData": {
+      "LootTierData": {
+        "AssetPathName": "/TeaCakeLoot/DataTables/TeaCakeLootTierData_Client.TeaCakeLootTierData_Client",
+        "SubPathString": ""
+      },
+      "LootPackageData": {
+        "AssetPathName": "/TeaCakeLoot/DataTables/TeaCakeLootPackages_Client.TeaCakeLootPackages_Client",
+        "SubPathString": ""
+      }
+    },
+    "PlaylistOverrideLootTableData": [
+      {
+        "Key": {
+          "TagName": "Athena.Playlist.NoBuildBR.PluginLoot"
+        },
+        "Value": {
+          "LootTierData": {
+            "AssetPathName": "/TeaCakeLoot/DataTables/NoBuildBR/TeaCakeLoot_Composite_LTD_NoBuildBR.TeaCakeLoot_Composite_LTD_NoBuildBR",
+            "SubPathString": ""
           },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.LemonPenguin"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              3,
-              0,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena, Athena.Playlist.LemonPenguin ) )"
+          "LootPackageData": {
+            "AssetPathName": "/TeaCakeLoot/DataTables/NoBuildBR/TeaCakeLoot_Composite_LP_NoBuildBR.TeaCakeLoot_Composite_LP_NoBuildBR",
+            "SubPathString": ""
           },
-          "bMigratedFromOldData": false
+          "LootGroupData": []
         }
-      ]
-    }
+      },
+      {
+        "Key": {
+          "TagName": "Plugin.Playlist.Arena"
+        },
+        "Value": {
+          "LootTierData": {
+            "AssetPathName": "/TeaCakeLoot/DataTables/Comp/TeaCakeLoot_Composite_LT_Comp.TeaCakeLoot_Composite_LT_Comp",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/TeaCakeLoot/DataTables/Comp/TeaCakeLoot_Composite_LP_Comp.TeaCakeLoot_Composite_LP_Comp",
+            "SubPathString": ""
+          },
+          "LootGroupData": []
+        }
+      },
+      {
+        "Key": {
+          "TagName": "Athena.Playlist.NoBuildBR.Comp"
+        },
+        "Value": {
+          "LootTierData": {
+            "AssetPathName": "/TeaCakeLoot/DataTables/NoBuildComp/TeaCakeLoot_Composite_LTD_NoBuildBR_Comp.TeaCakeLoot_Composite_LTD_NoBuildBR_Comp",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/TeaCakeLoot/DataTables/NoBuildComp/TeaCakeLoot_Composite_LP_NoBuildBR_Comp.TeaCakeLoot_Composite_LP_NoBuildBR_Comp",
+            "SubPathString": ""
+          },
+          "LootGroupData": []
+        }
+      },
+      {
+        "Key": {
+          "TagName": "Plugin.Playlist.NoBuildLoot.Ashenpike"
+        },
+        "Value": {
+          "LootTierData": {
+            "AssetPathName": "/TeaCakeLoot/DataTables/AshenPike/NoBuild/AshenPike_ZB_Composite_LTD.AshenPike_ZB_Composite_LTD",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/TeaCakeLoot/DataTables/AshenPike/NoBuild/AshenPike_ZB_Composite_LP.AshenPike_ZB_Composite_LP",
+            "SubPathString": ""
+          },
+          "LootGroupData": []
+        }
+      },
+      {
+        "Key": {
+          "TagName": "Plugin.Playlist.BuildLoot.AshenPike"
+        },
+        "Value": {
+          "LootTierData": {
+            "AssetPathName": "/TeaCakeLoot/DataTables/AshenPike/Build/AshenPike_Composite_LTD.AshenPike_Composite_LTD",
+            "SubPathString": ""
+          },
+          "LootPackageData": {
+            "AssetPathName": "/TeaCakeLoot/DataTables/AshenPike/Build/AshenPike_Composite_LP.AshenPike_Composite_LP",
+            "SubPathString": ""
+          },
+          "LootGroupData": []
+        }
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'TeaCakeLoot:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/TeaCakeLoot/TeaCakeLoot.0"
+      }
+    ]
   }
 }

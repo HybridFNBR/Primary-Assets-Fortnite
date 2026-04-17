@@ -1,20 +1,203 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_RMT_LacedCrimp_01'",
-    "ObjectPath": "/RMT_LacedCrimp/QuestItems/Quest_RMT_LacedCrimp_01.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_RMT_LacedCrimp_01",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/RMT_LacedCrimp/QuestItems/Quest_RMT_LacedCrimp_01",
   "Properties": {
-    "InformationSettings": {
-      "CompletionText": {
-        "Namespace": "",
-        "Key": "AE8395DA48F8DB6B713FF19A663E1EC3",
-        "SourceString": "Quest Complete!",
-        "LocalizedString": "Quest Complete!"
+    "QuestSubtype": "EFortQuestSubtype::Milestone",
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
       }
-    }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_RMT_LacedCrimp_01_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementType": "EAcquireIncrementType::Single",
+            "bUseItemCount": false,
+            "ItemAcquired": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Quests.Token.Ecosystem.DailyPunchcard"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Quests.Token.Ecosystem.DailyPunchcard )"
+              }
+            },
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AcquireSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "328907544CC51885F7F74F8FFF6FEFBD",
+          "SourceString": "Complete Global Daily Bonus Goals",
+          "LocalizedString": "Complete Global Daily Bonus Goals"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 1,
+          "DisplayMaxStage": 5
+        },
+        "Count": 3,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product )"
+    },
+    "SortPriority": 1,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_RMT_LacedCrimp_01:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/RMT_LacedCrimp/QuestItems/Quest_RMT_LacedCrimp_01.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_RMT_LacedCrimp_01:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/RMT_LacedCrimp/QuestItems/Quest_RMT_LacedCrimp_01.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_RMT_LacedCrimp_01_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "E06D4E1E44216403750FBEA0D971A55C",
+      "SourceString": "Complete Global Daily Bonus Goals",
+      "LocalizedString": "Complete Global Daily Bonus Goals"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "40FA3DBC4F6FB007821E4782BAFA19D1",
+      "SourceString": "Complete Global Daily Bonus Goals",
+      "LocalizedString": "Complete Global Daily Bonus Goals"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "BA22F88E4CF6EE6D2279109985160BC2",
+      "SourceString": "I've always been the consummate matchmaker on this Island.",
+      "LocalizedString": "I've always been the consummate matchmaker on this Island."
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.All.ChallengeStyle.LacedCrimp"
+        ]
+      },
+      {
+        "Rarity": "EFortRarity::Rare"
+      }
+    ]
   }
 }

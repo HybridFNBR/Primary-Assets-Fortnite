@@ -1,93 +1,177 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_TacoF",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/TacoF/NPCLibrary_Conversation_TacoF",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_TacoF'",
+    "ObjectPath": "/NPCLibrary/NPCs/TacoF/NPCLibrary_Conversation_TacoF.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "1B6F5728-4EA52E02-46661DAC-12C2FD11",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TacoF:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/TacoF/NPCLibrary_Conversation_TacoF.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8B368C02490BEEF6EF5458948B8D00EC",
+            "SourceString": "Guac on up and say hello!",
+            "LocalizedString": "Guac on up and say hello!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_TacoF:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TacoF/NPCLibrary_Conversation_TacoF.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DD28C5B543E09FC156D9C9B7BD232CE1",
+            "SourceString": "Keep it quick, I'm about to dip.",
+            "LocalizedString": "Keep it quick, I'm about to dip."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TacoF:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TacoF/NPCLibrary_Conversation_TacoF.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9ACB9DE74B03EB1305B70388D337E8EE",
+            "SourceString": "Move it along, breakfast boy.",
+            "LocalizedString": "Move it along, breakfast boy."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TacoF:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TacoF/NPCLibrary_Conversation_TacoF.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "3D769923-4003343D-8F7C858F-BB4A8338",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_TacoF:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/TacoF/NPCLibrary_Conversation_TacoF.7"
-        }
-      },
-      {
-        "Key": "AF09C00B-43761F15-5D35C0A9-F929EF5F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TacoF:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/TacoF/NPCLibrary_Conversation_TacoF.2"
-        }
-      },
-      {
-        "Key": "9B581BE4-4D7180B8-99EC3E84-467A553A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TacoF:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/TacoF/NPCLibrary_Conversation_TacoF.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "3C9395F04DDC5878311B6EB52D2D4653",
+        "SourceString": "Keep it quick, I'm about to dip.",
+        "LocalizedString": "Keep it quick, I'm about to dip."
       }
+    },
+    "OutputConnections": [
+      "9B581BE4-4D7180B8-99EC3E84-467A553A",
+      "AF09C00B-43761F15-5D35C0A9-F929EF5F"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.TacoF"
-        },
-        "DestinationList": [
-          "1B6F5728-4EA52E02-46661DAC-12C2FD11"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "1B6F5728-4EA52E02-46661DAC-12C2FD11",
-      "3D769923-4003343D-8F7C858F-BB4A8338",
-      "AF09C00B-43761F15-5D35C0A9-F929EF5F",
-      "9B581BE4-4D7180B8-99EC3E84-467A553A"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "3D769923-4003343D-8F7C858F-BB4A8338",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TacoF:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/TacoF/NPCLibrary_Conversation_TacoF.1"
+    }
   }
 }

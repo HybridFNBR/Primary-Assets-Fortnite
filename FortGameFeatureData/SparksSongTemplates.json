@@ -1,75 +1,85 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'SparksSongTemplates'",
-    "ObjectPath": "/SparksSongTemplates/SparksSongTemplates.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "SparksSongTemplates",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/SparksSongTemplates/SparksSongTemplates",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Sparks.Playlist"
-              },
-              {
-                "TagName": "Sparks.Playlist.Pilgrim.Quickplay"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              1,
-              0,
-              1,
-              1,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Sparks.Playlist ),  ANY( Sparks.Playlist.Pilgrim.Quickplay ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Sparks.Playlist"
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'SparksSongTemplates:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/SparksSongTemplates/SparksSongTemplates.0"
+      },
+      null,
+      {
+        "ObjectName": "FortGameFeatureAction_LoadPrimaryDataAssets'SparksSongTemplates:FortGameFeatureAction_LoadPrimaryDataAssets_0'",
+        "ObjectPath": "/SparksSongTemplates/SparksSongTemplates.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "SparksSong",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/SparksCoreCosmeticsRuntime.SparksSongItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Sparks.Playlist.Pilgrim.Quickplay"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 13103,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        2,
-        1,
-        1,
-        0,
-        1,
-        1,
-        1
-      ],
-      "AutoDescription": " ALL(  ANY( Sparks.Playlist ),  ANY( Sparks.Playlist.Pilgrim.Quickplay ) )"
-    }
+      },
+      {
+        "PrimaryAssetType": "SparksPickableSongPart",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/SparksCoreCosmeticsRuntime.SparksPickableSongPart",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 13103,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "SparksJamEmote",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/SparksCoreCosmeticsRuntime.SparksJamEmoteItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 13103,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
   }
 }

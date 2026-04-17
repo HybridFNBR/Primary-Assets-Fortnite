@@ -1,102 +1,268 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_AgentPeely",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_AgentPeely'",
+    "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "CC227CDE-40731401-14EA578D-1820ECA5",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_AgentPeely:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.1"
-        }
-      },
-      {
-        "Key": "AA0974D7-4F8D8E6E-9E788085-ADAA6ED2",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_AgentPeely:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.10"
-        }
-      },
-      {
-        "Key": "0647015A-4A1FEF34-E9E56E99-CE7BE619",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_AgentPeely:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.4"
-        }
-      },
-      {
-        "Key": "77D9A525-4FE192A6-2883768A-9B7D4DD6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_AgentPeely:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.2"
-        }
-      },
-      {
-        "Key": "61CD63AB-4CB8C97C-0662A484-8C17F2B3",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_AgentPeely:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.AgentPeely"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "28EC82884F5A210FD403C6AA28E71C05",
+            "SourceString": "(Agent Peely is making a gadget with a banana and a calculator wristwatch.)",
+            "LocalizedString": "(Agent Peely is making a gadget with a banana and a calculator wristwatch.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_AgentPeely:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "CC227CDE-40731401-14EA578D-1820ECA5"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "EFDA3C3A4AE97A635E8C038AC5592EE3",
+            "SourceString": "(Agent Peely gives you a knowing secret agent nod.)",
+            "LocalizedString": "(Agent Peely gives you a knowing secret agent nod.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_AgentPeely:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4A6B27FD4A2C2A2F9A1AAD9B116FEB97",
+            "SourceString": "(Agent Peely doesn't register you as suspicious at all.)",
+            "LocalizedString": "(Agent Peely doesn't register you as suspicious at all.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_AgentPeely:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D13702854B6DB32FF6430F8A9E33ADD2",
+            "SourceString": "(Agent Peely vows to avenge your freezing.)",
+            "LocalizedString": "(Agent Peely vows to avenge your freezing.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_AgentPeely:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "63724429452BDDA67A27348567C75083",
+            "SourceString": "(Agent Peely admires your personal style.)",
+            "LocalizedString": "(Agent Peely admires your personal style.)"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_AgentPeely:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "977C50854124667F4D4FAFAF2AC4EECD",
+        "SourceString": "(Agent Peely pats you down for weapons and wires.)",
+        "LocalizedString": "(Agent Peely pats you down for weapons and wires.)"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season26.Snapshot.P01.Q012.a",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "CC227CDE-40731401-14EA578D-1820ECA5",
-      "AA0974D7-4F8D8E6E-9E788085-ADAA6ED2",
-      "0647015A-4A1FEF34-E9E56E99-CE7BE619",
+    },
+    "OutputConnections": [
+      "61CD63AB-4CB8C97C-0662A484-8C17F2B3",
       "77D9A525-4FE192A6-2883768A-9B7D4DD6",
-      "61CD63AB-4CB8C97C-0662A484-8C17F2B3"
+      "0647015A-4A1FEF34-E9E56E99-CE7BE619"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "AA0974D7-4F8D8E6E-9E788085-ADAA6ED2",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_AgentPeely:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/AgentPeely/NPCLibrary_Conversation_AgentPeely.1"
+    }
   }
 }

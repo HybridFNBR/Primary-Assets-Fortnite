@@ -1,93 +1,177 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Cole",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Cole/Cole/NPCLibrary_Conversation_Cole",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Cole'",
+    "ObjectPath": "/NPCLibrary/NPCs/Cole/Cole/NPCLibrary_Conversation_Cole.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "C290B35D-4FB34B51-E2F6A4B5-7CF6A77A",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Cole:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cole/Cole/NPCLibrary_Conversation_Cole.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7D2900EE4A17E2E7F9AC3F9E90A20ADD",
+            "SourceString": "Couldn't stay away from these rocks either, huh? So beautiful.",
+            "LocalizedString": "Couldn't stay away from these rocks either, huh? So beautiful."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_Cole:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cole/Cole/NPCLibrary_Conversation_Cole.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CEE731A44297EFB4314D17827CD33F37",
+            "SourceString": "Lemme guess - You want to get in on the rocks too, huh? Don't blame ya!",
+            "LocalizedString": "Lemme guess - You want to get in on the rocks too, huh? Don't blame ya!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Cole:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cole/Cole/NPCLibrary_Conversation_Cole.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E0733D7A4336D31C921EB295D475F3E0",
+            "SourceString": "I heard you sleep in a lamp. Is that true..?",
+            "LocalizedString": "I heard you sleep in a lamp. Is that true..?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Cole:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Cole/Cole/NPCLibrary_Conversation_Cole.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "40008C10-4D0E6B1A-E99FD48C-16D1BCA3",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Cole:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cole/Cole/NPCLibrary_Conversation_Cole.7"
-        }
-      },
-      {
-        "Key": "CD2A111F-47B4E4DD-170C3C8A-89B7ABF6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Cole:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cole/Cole/NPCLibrary_Conversation_Cole.2"
-        }
-      },
-      {
-        "Key": "88FE0D8E-452BD8C3-5C3E4980-9144691F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Cole:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Cole/Cole/NPCLibrary_Conversation_Cole.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "5AF6D346418F5BFA4D06FFB1CB663FA2",
+        "SourceString": "Oh man, do you like rocks too?",
+        "LocalizedString": "Oh man, do you like rocks too?"
       }
+    },
+    "OutputConnections": [
+      "88FE0D8E-452BD8C3-5C3E4980-9144691F",
+      "CD2A111F-47B4E4DD-170C3C8A-89B7ABF6"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Cole"
-        },
-        "DestinationList": [
-          "C290B35D-4FB34B51-E2F6A4B5-7CF6A77A"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "C290B35D-4FB34B51-E2F6A4B5-7CF6A77A",
-      "40008C10-4D0E6B1A-E99FD48C-16D1BCA3",
-      "CD2A111F-47B4E4DD-170C3C8A-89B7ABF6",
-      "88FE0D8E-452BD8C3-5C3E4980-9144691F"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "40008C10-4D0E6B1A-E99FD48C-16D1BCA3",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Cole:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Cole/Cole/NPCLibrary_Conversation_Cole.1"
+    }
   }
 }

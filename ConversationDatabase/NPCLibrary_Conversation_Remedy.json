@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Remedy",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Remedy/NPCLibrary_Conversation_Remedy",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Remedy'",
+    "ObjectPath": "/NPCLibrary/NPCs/Remedy/NPCLibrary_Conversation_Remedy.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "94BC5FB8-4DF6ECD9-8733FC90-059DCB6F",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Remedy:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Remedy/NPCLibrary_Conversation_Remedy.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "32A5712943E6B9A9D6DED6B08471EB97",
+            "SourceString": "I'm ready for hire, if you need patchin' up on the run.",
+            "LocalizedString": "I'm ready for hire, if you need patchin' up on the run."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Remedy:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Remedy/NPCLibrary_Conversation_Remedy.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "6B2B2623-4FCFC283-FDFB149D-C97AAD3C",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Remedy:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Remedy/NPCLibrary_Conversation_Remedy.5"
-        }
-      },
-      {
-        "Key": "3ADDB9C8-43E1085B-4D48109A-3680EAA1",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Remedy:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Remedy/NPCLibrary_Conversation_Remedy.2"
-        }
-      },
-      {
-        "Key": "18B7078C-4AD07ACA-560DBCAE-2169BAB0",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Remedy:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Remedy/NPCLibrary_Conversation_Remedy.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "CA1C172D4BEEF20D54A6E3BA044562DE",
+        "SourceString": "I'm for hire. I've got my chug splashes ready, and I can even patch myself up!",
+        "LocalizedString": "I'm for hire. I've got my chug splashes ready, and I can even patch myself up!"
       }
+    },
+    "OutputConnections": [
+      "18B7078C-4AD07ACA-560DBCAE-2169BAB0",
+      "3ADDB9C8-43E1085B-4D48109A-3680EAA1"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Remedy"
-        },
-        "DestinationList": [
-          "94BC5FB8-4DF6ECD9-8733FC90-059DCB6F"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "94BC5FB8-4DF6ECD9-8733FC90-059DCB6F",
-      "6B2B2623-4FCFC283-FDFB149D-C97AAD3C",
-      "3ADDB9C8-43E1085B-4D48109A-3680EAA1",
-      "18B7078C-4AD07ACA-560DBCAE-2169BAB0"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "6B2B2623-4FCFC283-FDFB149D-C97AAD3C",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Remedy:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Remedy/NPCLibrary_Conversation_Remedy.1"
+    }
   }
 }

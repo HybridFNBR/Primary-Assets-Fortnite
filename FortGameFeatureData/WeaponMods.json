@@ -1,162 +1,56 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'WeaponMods'",
     "ObjectPath": "/WeaponMods/WeaponMods.3"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playground"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Arnold.Gameplay"
-              },
-              {
-                "TagName": "Athena.Playlist.Arnold.Lobby"
-              },
-              {
-                "TagName": "Athena.Playlist.ItemsTest"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.NoBuildBR"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              },
-              {
-                "TagName": "Plugin.Playlist.ForbiddenFruit"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              13,
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11,
-              12
-            ],
-            "UserDescription": "Playlists",
-            "AutoDescription": " ALL(  ANY( Athena.Creative, Athena.Playlist.Arena, Athena.Playground, Plugin.Playlist.Arena, Athena.Playlist.Arnold.Gameplay, Athena.Playlist.Arnold.Lobby, Athena.Playlist.ItemsTest, Athena.Playlist.Default, Athena.Playlist.NoBuildBR, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Plugin.Playlist.BlastBerry, Plugin.Playlist.ForbiddenFruit ) )"
-          },
-          "bMigratedFromOldData": true
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Registry_WeaponModOverrideData",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/WeaponMods/DataTables/WeaponModOverrideData.WeaponModOverrideData",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
+      },
+      {
+        "RegistryToAddTo": "Phoebe.WeaponModData",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/WeaponMods/DataTables/AIWeaponModData.AIWeaponModData",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist.Arena"
-        },
-        {
-          "TagName": "Athena.Playground"
-        },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        {
-          "TagName": "Athena.Playlist.Arnold.Gameplay"
-        },
-        {
-          "TagName": "Athena.Playlist.Arnold.Lobby"
-        },
-        {
-          "TagName": "Athena.Playlist.ItemsTest"
-        },
-        {
-          "TagName": "Athena.Playlist.Default"
-        },
-        {
-          "TagName": "Athena.Playlist.NoBuildBR"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        },
-        {
-          "TagName": "Athena.Playlist.Sunflower"
-        },
-        {
-          "TagName": "Athena.Playlist.PunchBerry"
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        2,
-        1,
-        11,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        3,
-        2,
-        11,
-        12
-      ],
-      "UserDescription": "Playlists (Excluding Reload)",
-      "AutoDescription": " ALL(  ANY( Athena.Creative, Athena.Playlist.Arena, Athena.Playground, Plugin.Playlist.Arena, Athena.Playlist.Arnold.Gameplay, Athena.Playlist.Arnold.Lobby, Athena.Playlist.ItemsTest, Athena.Playlist.Default, Athena.Playlist.NoBuildBR, Playlist.UGC.Core, Playlist.Experience.PlayOnly ),  NONE( Athena.Playlist.Sunflower, Athena.Playlist.PunchBerry ) )"
-    }
+      },
+      {
+        "RegistryToAddTo": "Registry_WeaponModBucketData",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/WeaponMods/DataTables/ModSetBucketsBaseTable.ModSetBucketsBaseTable",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ]
   }
 }

@@ -1,63 +1,63 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'GuineaPig'",
-    "ObjectPath": "/GuineaPig/GuineaPig.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "GuineaPig",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/GuineaPig/GuineaPig",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "29.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "38.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/GuineaPig/Items/Crossbow/UI/GuineaPigWeaponReticleExtensionData.GuineaPigWeaponReticleExtensionData",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/GuineaPig/GuineaPig_DeathCauseData.GuineaPig_DeathCauseData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch5S2",
+        "DisplayName": "Give Wookie Bowcaster",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /GuineaPig/Items/Crossbow/WID_GuineaPig_Crossbow_Charge_v1 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'GuineaPig:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/GuineaPig/GuineaPig.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'GuineaPig:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/GuineaPig/GuineaPig.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default ) )"
-    }
+      }
+    ]
   }
 }

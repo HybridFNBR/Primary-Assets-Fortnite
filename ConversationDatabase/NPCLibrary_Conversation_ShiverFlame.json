@@ -1,129 +1,316 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_ShiverFlame",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_ShiverFlame'",
+    "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "209F4D9C-43F8B842-8BB1EF8E-E3514390",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_ShiverFlame:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.1"
-        }
-      },
-      {
-        "Key": "F3702562-432DFDFB-3EB31799-BFE26363",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_ShiverFlame:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.14"
-        }
-      },
-      {
-        "Key": "1037FF38-407FDA96-3CBE02A3-3856CF7C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ShiverFlame:ConversationLinkNode_5'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.7"
-        }
-      },
-      {
-        "Key": "0D991002-459CD72A-83B7888F-86230FF9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ShiverFlame:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.6"
-        }
-      },
-      {
-        "Key": "FCF81D17-4E5766A9-F7C2BD94-9B49597F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ShiverFlame:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.5"
-        }
-      },
-      {
-        "Key": "45A25698-49B271D0-7B9D29A9-22058663",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ShiverFlame:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.4"
-        }
-      },
-      {
-        "Key": "E7E465FE-4693B72F-9136A695-38363369",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ShiverFlame:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.2"
-        }
-      },
-      {
-        "Key": "0BC2161B-446E4BD9-F3964EB4-0D174C1B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ShiverFlame:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.ShiverFlame"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B4B1C0FF4A36EA8294E9379F893CA88A",
+            "SourceString": "This isn't the wasteland I remember...",
+            "LocalizedString": "This isn't the wasteland I remember..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_ShiverFlame:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "209F4D9C-43F8B842-8BB1EF8E-E3514390"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "796517DC43CF001DFF298CAA2D975AEE",
+            "SourceString": "What do you make of all this \"Doom\" stuff?",
+            "LocalizedString": "What do you make of all this \"Doom\" stuff?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ShiverFlame:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D7CDA84F46C9ECC3F3D3A4BAE9E1C6BE",
+            "SourceString": "Hope! I heard you're, um, the subject of a prophecy?",
+            "LocalizedString": "Hope! I heard you're, um, the subject of a prophecy?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_ShiverFlame:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "02BC574C4F2DEBDBA1A4039AAE8366F9",
+            "SourceString": "It's a brite one today.",
+            "LocalizedString": "It's a brite one today."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_ShiverFlame:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F86ABDB141522088E7C579AFFC980A02",
+            "SourceString": "Hey there, Wastelander!",
+            "LocalizedString": "Hey there, Wastelander!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_ShiverFlame:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0660A25F41D0660E2937A2B0CA1505E8",
+            "SourceString": "Brite Raider, at your service.",
+            "LocalizedString": "Brite Raider, at your service."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_ShiverFlame:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "1D95D1AC4BF0480A5D293BA0A8F60CF0",
+        "SourceString": "It's a brite one today.",
+        "LocalizedString": "It's a brite one today."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season31.Story.P04.Q03",
-      "Conversation.Entry.Season30.Story.P06.Q01.SF",
-      "Conversation.Entry.Season30.Story.P02.01.ShiverFlame",
-      "Conversation.Entry.ShiverFlame.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "209F4D9C-43F8B842-8BB1EF8E-E3514390",
-      "F3702562-432DFDFB-3EB31799-BFE26363",
-      "1037FF38-407FDA96-3CBE02A3-3856CF7C",
-      "0D991002-459CD72A-83B7888F-86230FF9",
-      "FCF81D17-4E5766A9-F7C2BD94-9B49597F",
-      "45A25698-49B271D0-7B9D29A9-22058663",
+    },
+    "OutputConnections": [
+      "0BC2161B-446E4BD9-F3964EB4-0D174C1B",
       "E7E465FE-4693B72F-9136A695-38363369",
-      "0BC2161B-446E4BD9-F3964EB4-0D174C1B"
+      "45A25698-49B271D0-7B9D29A9-22058663",
+      "FCF81D17-4E5766A9-F7C2BD94-9B49597F",
+      "0D991002-459CD72A-83B7888F-86230FF9",
+      "1037FF38-407FDA96-3CBE02A3-3856CF7C"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "F3702562-432DFDFB-3EB31799-BFE26363",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_ShiverFlame:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/ShiverFlame/NPCLibrary_Conversation_ShiverFlame.1"
+    }
   }
 }

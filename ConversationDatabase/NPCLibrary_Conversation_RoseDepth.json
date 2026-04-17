@@ -1,111 +1,308 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_RoseDepth",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_RoseDepth'",
+    "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "DD28C892-430590C8-43F87AA0-4086F1D7",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RoseDepth:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.1"
-        }
-      },
-      {
-        "Key": "22F9DF55-43E53BEC-76DEA092-356C9F2C",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_RoseDepth:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.12"
-        }
-      },
-      {
-        "Key": "875F3B4D-4D864359-7234288B-C5688B2C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoseDepth:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.5"
-        }
-      },
-      {
-        "Key": "7F1FDA50-4CCB8BC8-47B625B2-BF30E9FF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoseDepth:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.4"
-        }
-      },
-      {
-        "Key": "2285BDB2-46564A03-8440A88E-2141F423",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoseDepth:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.2"
-        }
-      },
-      {
-        "Key": "5C359572-42B8FF64-5873C88A-03F22C6B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RoseDepth:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.RoseDepth"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A8B92F0D477E1F9AB4D92EB5879E3CED",
+            "SourceString": "I am The Night Rose. What do you want?",
+            "LocalizedString": "I am The Night Rose. What do you want?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_RoseDepth:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "DD28C892-430590C8-43F87AA0-4086F1D7"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4313497949817C768BF53E9EE24824F7",
+            "SourceString": "Why are you wasting time speaking to me instead of fighting The Swarm?",
+            "LocalizedString": "Why are you wasting time speaking to me instead of fighting The Swarm?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RoseDepth:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AA2BB450415BF873797E60BF96687415",
+            "SourceString": "There is a plan. And you are not privy to it.",
+            "LocalizedString": "There is a plan. And you are not privy to it."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RoseDepth:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "15FE17074F23524D4FA845A0D8397EA8",
+            "SourceString": "We will defeat the creature that rules the Spirit Realm... but not easily.",
+            "LocalizedString": "We will defeat the creature that rules the Spirit Realm... but not easily."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_RoseDepth:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "34210D86412694CB132D5C977E877633",
+            "SourceString": "I hope this plan of yours works. Otherwise... this Island is doomed.",
+            "LocalizedString": "I hope this plan of yours works. Otherwise... this Island is doomed."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoseDepth:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A503F78942214F5E71188AA90406CC24",
+            "SourceString": "You'll have to use everything I taught you, now. Make me proud.",
+            "LocalizedString": "You'll have to use everything I taught you, now. Make me proud."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RoseDepth:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "E3D545D34F8E1D2F3A0D0BA2B855CB14",
+        "SourceString": "Why are you wasting time speaking to me instead of fighting The Swarm?",
+        "LocalizedString": "Why are you wasting time speaking to me instead of fighting The Swarm?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season37.Story.P03.Q01.A",
-      "Conversation.Entry.RoseDepth.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "DD28C892-430590C8-43F87AA0-4086F1D7",
-      "22F9DF55-43E53BEC-76DEA092-356C9F2C",
-      "875F3B4D-4D864359-7234288B-C5688B2C",
-      "7F1FDA50-4CCB8BC8-47B625B2-BF30E9FF",
+    },
+    "OutputConnections": [
+      "5C359572-42B8FF64-5873C88A-03F22C6B",
       "2285BDB2-46564A03-8440A88E-2141F423",
-      "5C359572-42B8FF64-5873C88A-03F22C6B"
+      "7F1FDA50-4CCB8BC8-47B625B2-BF30E9FF",
+      "875F3B4D-4D864359-7234288B-C5688B2C"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "22F9DF55-43E53BEC-76DEA092-356C9F2C",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RoseDepth:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/RoseDepth/NPCLibrary_Conversation_RoseDepth.1"
+    }
   }
 }

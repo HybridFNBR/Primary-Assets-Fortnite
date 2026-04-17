@@ -1,93 +1,171 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_TomatoHead",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_TomatoHead'",
+    "ObjectPath": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "0A78A25D-4F99A3E0-D1B778A7-F3F3DEA4",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TomatoHead:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2D31FB5545B155E6224CE18740353C6F",
+            "SourceString": "The Foodie Battalion is here to serve!",
+            "LocalizedString": "The Foodie Battalion is here to serve!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_TomatoHead:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CBBE0D7D413C4B7DA41309BF2E0EC51E",
+            "SourceString": "Generale! I didn't take you for a pizza kind of guy.",
+            "LocalizedString": "Generale! I didn't take you for a pizza kind of guy."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TomatoHead:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "552EE85C468304A06CE0149B37ECDE09",
+            "SourceString": "I told you, we don't deliver to the Sanctum Sanctorum. ",
+            "LocalizedString": "I told you, we don't deliver to the Sanctum Sanctorum. "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TomatoHead:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "539A2A4B-4B4C6E4C-EB9037A5-31577732",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_TomatoHead:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead.7"
-        }
-      },
-      {
-        "Key": "60E5A9AF-4D9CD726-5BF75784-EE8C999B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TomatoHead:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead.2"
-        }
-      },
-      {
-        "Key": "78501F32-424D9326-2193B78B-8951D11E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TomatoHead:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "D6514D974D4B7CE95C01B49BB7E199F3",
+        "SourceString": "It's looking saucy out there.",
+        "LocalizedString": "It's looking saucy out there."
       }
+    },
+    "OutputConnections": [
+      "78501F32-424D9326-2193B78B-8951D11E",
+      "60E5A9AF-4D9CD726-5BF75784-EE8C999B"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.TomatoHead"
-        },
-        "DestinationList": [
-          "0A78A25D-4F99A3E0-D1B778A7-F3F3DEA4"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "0A78A25D-4F99A3E0-D1B778A7-F3F3DEA4",
-      "539A2A4B-4B4C6E4C-EB9037A5-31577732",
-      "60E5A9AF-4D9CD726-5BF75784-EE8C999B",
-      "78501F32-424D9326-2193B78B-8951D11E"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "539A2A4B-4B4C6E4C-EB9037A5-31577732",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TomatoHead:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/TomatoHead/TomatoHead/NPCLibrary_Conversation_TomatoHead.1"
+    }
   }
 }

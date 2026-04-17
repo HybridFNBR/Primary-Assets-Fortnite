@@ -1,10 +1,53 @@
 {
-  "Type": "FortGameFeatureAction_AddToCampaignInZone",
-  "Name": "FortGameFeatureAction_AddToCampaignInZone_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToCampaignInZone'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'STW_PlayerCompanions'",
     "ObjectPath": "/STW_PlayerCompanions/STW_PlayerCompanions.1"
+  },
+  "Properties": {
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerPawn",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/STW_PlayerCompanions/Classes/BP_STW_PlayerCompanionComponent.BP_STW_PlayerCompanionComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Game/Abilities/Player/Pawns/PlayerPawn_Generic.PlayerPawn_Generic_C",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/FortniteGame.FortContextualAnimSceneActorComponent",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortOutpostBuilding",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/STW_PlayerCompanions/Classes/BP_STW_OutpostCompanionVolume.BP_STW_OutpostCompanionVolume_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

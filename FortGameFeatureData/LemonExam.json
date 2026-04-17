@@ -1,29 +1,41 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'LemonExam'",
     "ObjectPath": "/LemonExam/LemonExam.2"
   },
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/LemonExam/Gameplay/Sprint/MME_LemonExam_CustomSprint.MME_LemonExam_CustomSprint_C",
-      "SubPathString": ""
-    },
-    "MovementModeRuntimeRefList": [
+    "SourcesToAdd": [
       {
-        "AssetPathName": "/LemonExam/Gameplay/Movement/FMM_GuidedMotion_LemonExam_AirSlamHoldBeforeFalling.FMM_GuidedMotion_LemonExam_AirSlamHoldBeforeFalling_C",
-        "SubPathString": ""
+        "RegistryToAddTo": "ItemBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/LemonExam/BTInjection/LemonExam_FortItemInjectedBehaviors.LemonExam_FortItemInjectedBehaviors",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       },
       {
-        "AssetPathName": "/LemonExam/Gameplay/Movement/FMM_GuidedMotion_LemonExam_AirSlamFalling.FMM_GuidedMotion_LemonExam_AirSlamFalling_C",
-        "SubPathString": ""
-      },
-      {
-        "AssetPathName": "/LemonExam/Gameplay/Movement/FMM_GuidedMotion_LemonExam_HeavyMidAirHold.FMM_GuidedMotion_LemonExam_HeavyMidAirHold_C",
-        "SubPathString": ""
+        "RegistryToAddTo": "Phoebe.ItemData",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/LemonExam/BTInjection/DT_Phoebe_ItemData_LemonExam.DT_Phoebe_ItemData_LemonExam",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       }
     ]
   }

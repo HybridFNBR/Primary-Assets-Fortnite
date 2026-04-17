@@ -1,29 +1,27 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_3",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'MotoWrestleGameplay'",
     "ObjectPath": "/MotoWrestleGameplay/MotoWrestleGameplay.2"
   },
   "Properties": {
-    "MovementModeRuntimeRefList": [
+    "SourcesToAdd": [
       {
-        "AssetPathName": "/MotoWrestleGameplay/Gameplay/Abilities/Slide/MME/FMM_GuidedMotion_MotoWrestle_AirToGroundDash.FMM_GuidedMotion_MotoWrestle_AirToGroundDash_C",
-        "SubPathString": ""
-      },
-      {
-        "AssetPathName": "/MotoWrestleGameplay/Gameplay/Abilities/Slide/MME/FMM_GuidedMotion_MotoWrestle_Dash.FMM_GuidedMotion_MotoWrestle_Dash_C",
-        "SubPathString": ""
-      },
-      {
-        "AssetPathName": "/MotoWrestleGameplay/Gameplay/Abilities/Slide/MME/FMM_GuidedMotion_MotoWrestle_DashToActor.FMM_GuidedMotion_MotoWrestle_DashToActor_C",
-        "SubPathString": ""
-      },
-      {
-        "AssetPathName": "/MotoWrestleGameplay/Gameplay/Abilities/WaterWalking/MME_MotoWrestle_WaterWalking.MME_MotoWrestle_WaterWalking_C",
-        "SubPathString": ""
+        "RegistryToAddTo": "ItemBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/MotoWrestleGameplay/BTInjection/MotoWrestle_FortItemInjectedBehaviors.MotoWrestle_FortItemInjectedBehaviors",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       }
     ]
   }

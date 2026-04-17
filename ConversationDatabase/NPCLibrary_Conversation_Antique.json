@@ -1,93 +1,177 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Antique",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Antique'",
+    "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "A3898D8B-4F04C274-257981A8-8B219CB2",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Antique:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2903E5A74EF6CB808301E496B30A620E",
+            "SourceString": "You're here just in time. I've got an axe to grind. 56 axes, to be precise.",
+            "LocalizedString": "You're here just in time. I've got an axe to grind. 56 axes, to be precise."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_Antique:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "97EC0C3D409AC49A1414FF976C477B35",
+            "SourceString": "Name's Guggimon. I dress sharp, and I keep my axes sharp too.",
+            "LocalizedString": "Name's Guggimon. I dress sharp, and I keep my axes sharp too."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Antique:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D9801006481A43BCF37FC7BFE419DB73",
+            "SourceString": "Whoa! Lotta Bars! Wanna buy an axe?",
+            "LocalizedString": "Whoa! Lotta Bars! Wanna buy an axe?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasBars'NPCLibrary_Conversation_Antique:Speech_C_4.FortControllerRequirement_HasBars_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.HighTotalBars"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "2D443703-46443AF2-A1C1D0AA-F72BF42B",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Antique:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.7"
-        }
-      },
-      {
-        "Key": "C100FA19-4CD47FB8-ECF2659F-3D0BC96F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Antique:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.2"
-        }
-      },
-      {
-        "Key": "1FFEA394-46E29D3D-34C72887-9729E1F1",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Antique:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "632DCD9E471965C62202178F0B58986A",
+        "SourceString": "You wanna burn something? I feel like burning something.",
+        "LocalizedString": "You wanna burn something? I feel like burning something."
       }
+    },
+    "OutputConnections": [
+      "1FFEA394-46E29D3D-34C72887-9729E1F1",
+      "C100FA19-4CD47FB8-ECF2659F-3D0BC96F"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Antique"
-        },
-        "DestinationList": [
-          "A3898D8B-4F04C274-257981A8-8B219CB2"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "A3898D8B-4F04C274-257981A8-8B219CB2",
-      "2D443703-46443AF2-A1C1D0AA-F72BF42B",
-      "C100FA19-4CD47FB8-ECF2659F-3D0BC96F",
-      "1FFEA394-46E29D3D-34C72887-9729E1F1"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "2D443703-46443AF2-A1C1D0AA-F72BF42B",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Antique:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Antique/Antique/NPCLibrary_Conversation_Antique.1"
+    }
   }
 }

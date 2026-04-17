@@ -1,93 +1,312 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_VictoriaSaint",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_VictoriaSaint'",
+    "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "E11BC74D-462A9347-573428A5-96E1D192",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_VictoriaSaint:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "821CE726475672E66981E68C640D314F",
+            "SourceString": "Do you know a \"Helsie\"? I got a very glittery letter from her, asking to meet here.",
+            "LocalizedString": "Do you know a \"Helsie\"? I got a very glittery letter from her, asking to meet here."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_VictoriaSaint:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7E7D4E1F4A610910ACBB8191AF2F844B",
+            "SourceString": "I never saw myself as a teacher... But I'm improving upon your lessons.",
+            "LocalizedString": "I never saw myself as a teacher... But I'm improving upon your lessons."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VictoriaSaint:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "925F1E8840A4AE839E33B5ABCCB84CBB",
+            "SourceString": "It's far too easy to lose yourself in the hunt. Let your friends ground you.",
+            "LocalizedString": "It's far too easy to lose yourself in the hunt. Let your friends ground you."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VictoriaSaint:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E97B7C3B4EFC8028F2821D8774C22C0C",
+            "SourceString": "Have you met Shimmerdusk yet? Don't worry, you will. Soon.",
+            "LocalizedString": "Have you met Shimmerdusk yet? Don't worry, you will. Soon."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VictoriaSaint:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DF58B3CD4234C00D8301468197E1C52C",
+            "SourceString": "Mark my words: I'll be there when you sing your final note.",
+            "LocalizedString": "Mark my words: I'll be there when you sing your final note."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VictoriaSaint:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "12058B274F0E0D848310C192CDE8CB05",
+            "SourceString": "No... You can't be... Vivica? What happened?!",
+            "LocalizedString": "No... You can't be... Vivica? What happened?!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VictoriaSaint:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "B59E469E-4D46C1DC-E9385594-C83191AD",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_VictoriaSaint:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.10"
-        }
-      },
-      {
-        "Key": "B74F4758-4B292D43-8A83D98F-049B135B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_VictoriaSaint:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.2"
-        }
-      },
-      {
-        "Key": "40A9F505-47A3A178-62021F8E-400E13F7",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_VictoriaSaint:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "503DAF8F47B207C971DB57853C8F6850",
+        "SourceString": "Tell Daraku I'm coming for her. And I'm bringing friends.",
+        "LocalizedString": "Tell Daraku I'm coming for her. And I'm bringing friends."
       }
+    },
+    "OutputConnections": [
+      "40A9F505-47A3A178-62021F8E-400E13F7",
+      "B74F4758-4B292D43-8A83D98F-049B135B"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.VictoriaSaint"
-        },
-        "DestinationList": [
-          "E11BC74D-462A9347-573428A5-96E1D192"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "E11BC74D-462A9347-573428A5-96E1D192",
-      "B59E469E-4D46C1DC-E9385594-C83191AD",
-      "B74F4758-4B292D43-8A83D98F-049B135B",
-      "40A9F505-47A3A178-62021F8E-400E13F7"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "B59E469E-4D46C1DC-E9385594-C83191AD",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_VictoriaSaint:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/VictoriaSaint/NPCLibrary_Conversation_VictoriaSaint.1"
+    }
   }
 }

@@ -1,133 +1,116 @@
 {
-  "Type": "AthenaDanceItemDefinition",
-  "Name": "EID_Citadel",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDanceItemDefinition'",
-  "Package": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_Citadel",
+  "Type": "FortCosmeticLoadoutTagDrivenVariant",
+  "Name": "FortCosmeticLoadoutTagDrivenVariant_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortCosmeticLoadoutTagDrivenVariant'",
+  "Outer": {
+    "ObjectName": "AthenaDanceItemDefinition'EID_Citadel'",
+    "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_Citadel.0"
+  },
   "Properties": {
-    "MotageSelectionGroups": [
+    "Variants": [
       {
-        "MontageSectionName": "Equip",
-        "EvaluationMode": "EMontageSelectionPredicateType::CharacterParts",
-        "VariantMetaTagRequired": {
-          "TagName": "None"
-        },
-        "bRequireCharacterPart": false,
-        "PartRequirements": [
+        "MontageSwaps": [
           {
-            "PartType": "EFortCustomPartType::Body",
-            "Part": {
-              "AssetPathName": "/BRCosmetics/Athena/Heroes/Meshes/Bodies/CP_Athena_Body_M_Citadel.CP_Athena_Body_M_Citadel",
+            "ToSwapFrom": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/Citadel/Emote_Citadel_CMM_M.Emote_Citadel_CMM_M",
+              "SubPathString": ""
+            },
+            "ToSwapTo": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/Citadel/Emote_Citadel_CMM_M_NoHelmet.Emote_Citadel_CMM_M_NoHelmet",
+              "SubPathString": ""
+            }
+          },
+          {
+            "ToSwapFrom": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/Citadel/Emote_Citadel_CMM_M_FE.Emote_Citadel_CMM_M_FE",
+              "SubPathString": ""
+            },
+            "ToSwapTo": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/Citadel/Emote_Citadel_CMM_M_NoHelmet_FE.Emote_Citadel_CMM_M_NoHelmet_FE",
               "SubPathString": ""
             }
           }
         ],
-        "SwapRequirements": []
-      },
-      {
-        "MontageSectionName": "UnEquip",
-        "EvaluationMode": "EMontageSelectionPredicateType::CharacterParts",
-        "VariantMetaTagRequired": {
-          "TagName": "None"
-        },
-        "bRequireCharacterPart": false,
-        "PartRequirements": [
+        "RequiredMetaTags": [],
+        "ExcludedMetaTags": [],
+        "RequiredConditions": [
           {
-            "PartType": "EFortCustomPartType::Body",
-            "Part": {
-              "AssetPathName": "/BRCosmetics/Athena/Heroes/Meshes/Bodies/CP_Athena_Body_M_Citadel_Armor.CP_Athena_Body_M_Citadel_Armor",
+            "ItemCategory": "ECosmeticMetaTagRequirementCategory::None",
+            "SlotTag": {
+              "TagName": "LoadoutSlot.Character"
+            },
+            "SpecificItem": {
+              "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Characters/Character_Citadel.Character_Citadel",
               "SubPathString": ""
-            }
+            },
+            "MetaTagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [
+                {
+                  "TagName": "Cosmetics.MetaTags.Citadel.NoHelm"
+                },
+                {
+                  "TagName": "Cosmetics.MetaTags.Citadel.Helm"
+                }
+              ],
+              "QueryTokenStream": [
+                0,
+                1,
+                5,
+                2,
+                2,
+                1,
+                0,
+                3,
+                1,
+                1
+              ],
+              "UserDescription": "",
+              "AutoDescription": " ALL(  ALL( Cosmetics.MetaTags.Citadel.NoHelm ),  NONE( Cosmetics.MetaTags.Citadel.Helm ) )"
+            },
+            "RequiredMetaTags": [],
+            "ExcludedMetaTags": []
           }
         ],
-        "SwapRequirements": []
-      }
-    ],
-    "FrontEndAnimation": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/Citadel/Emote_Citadel_CMM_M_FE.Emote_Citadel_CMM_M_FE",
-      "SubPathString": ""
-    },
-    "Animation": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/Citadel/Emote_Citadel_CMM_M.Emote_Citadel_CMM_M",
-      "SubPathString": ""
-    },
-    "EmoteCooldownSecs": 1.0,
-    "AccessData": [
-      {
-        "AccessTag": {
-          "TagName": "None"
+        "ExcludedConditions": [],
+        "VariantParts": [],
+        "VariantMaterials": [],
+        "VariantMaterialParams": [],
+        "InitalParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [],
+        "VariantSounds": [],
+        "VariantFoley": [],
+        "SocketTransforms": [],
+        "VariantActions": [],
+        "VariantMeshes": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
         },
-        "AccessToken": {
-          "ObjectName": "FortItemAccessTokenType'IATID_037_Emote_Citadel'",
-          "ObjectPath": "/BRCosmetics/Athena/Items/ItemAccessTokens/IATID_037_Emote_Citadel.0"
-        }
-      }
-    ],
-    "RequiredEmoteParent": {
-      "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Characters/Character_Citadel.Character_Citadel",
-      "SubPathString": ""
-    },
-    "ItemVariants": [
-      {
-        "ObjectName": "FortCosmeticLoadoutTagDrivenVariant'EID_Citadel:FortCosmeticLoadoutTagDrivenVariant_0'",
-        "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_Citadel.1"
-      }
-    ],
-    "ShotGridIds": [
-      62578
-    ],
-    "BaseShotGridId": 62578,
-    "ItemName": {
-      "Namespace": "",
-      "Key": "BA6037ED4B7BFE8106842B85A1F5D514",
-      "SourceString": "Call to Arms",
-      "LocalizedString": "Call to Arms"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "D7ADC6244987759A0F0A1598ACC99890",
-      "SourceString": "One must protect themselves.",
-      "LocalizedString": "One must protect themselves."
-    },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "A5289D664057E12C585569BC2FCE5E8E",
-      "SourceString": "Emote",
-      "LocalizedString": "Emote"
-    },
-    "DataList": [
-      {
-        "MinLevel": 1,
-        "MaxLevel": 1
-      },
-      {
-        "Traits": [
-          "Item.Trait.SingleStack",
-          "Item.Trait.Transient"
-        ]
-      },
-      {
-        "Tags": [
-          "Cosmetics.EmoteType.Dance",
-          "Cosmetics.Filter.Season.23",
-          "Cosmetics.Set.PowerLight",
-          "Cosmetics.UserFacingFlags.BuiltInEmote"
-        ]
-      },
-      {
-        "Icon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Emotes/S23/T-Icon-Emotes-E-Citadel.T-Icon-Emotes-E-Citadel",
+        "bStartUnlocked": true,
+        "bIsDefault": true,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Stage1"
+        },
+        "VariantName": {
+          "CultureInvariantString": null
+        },
+        "PreviewImage": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
-      },
-      {
-        "LargeIcon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Emotes/S23/T-Icon-Emotes-E-Citadel-L.T-Icon-Emotes-E-Citadel-L",
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
-      },
-      {
-        "Rarity": "EFortRarity::Legendary"
+        },
+        "VariantGameplayTags": []
       }
     ]
   }

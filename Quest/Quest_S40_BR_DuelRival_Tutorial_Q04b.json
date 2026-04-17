@@ -1,22 +1,186 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_S40_BR_DuelRival_Tutorial_Q04b'",
-    "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/DuelRival/Tutorial/Quest_S40_BR_DuelRival_Tutorial_Q04b.3"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_S40_BR_DuelRival_Tutorial_Q04b",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/BattlePassS40_Quests/Items/QuestItems/DuelRival/Tutorial/Quest_S40_BR_DuelRival_Tutorial_Q04b",
   "Properties": {
-    "InformationSettings": {
-      "bHideStageDescription": true
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S40_BR_DuelRival_Tutorial_Q04b_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "PurchaseTags": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Conversation.Entry.VendingMachine.HazelnutSpread"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Conversation.Entry.VendingMachine.HazelnutSpread )"
+              }
+            },
+            "bIncrementByAmountSpent": false,
+            "bUseSpentAmount": false,
+            "SpentAmountToCountForProgress": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AllowedMessages": "ECurrencySpentFilterEventBehavior::OnlySpecific",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 100,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.BR )"
     },
-    "VisibilitySettings": {
-      "bOverrideBundleVisibilityData": true,
-      "QuestVisiblityData": {
-        "bIsVisibleWhenCompleted": true
+    "SortPriority": 5,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S40_BR_DuelRival_Tutorial_Q04b:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/DuelRival/Tutorial/Quest_S40_BR_DuelRival_Tutorial_Q04b.0"
       },
-      "bCanShowTimer": false
-    }
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_S40_BR_DuelRival_Tutorial_Q04b:FortQuestDefinitionComponent_MapMarkers_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/DuelRival/Tutorial/Quest_S40_BR_DuelRival_Tutorial_Q04b.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S40_BR_DuelRival_Tutorial_Q04b:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/DuelRival/Tutorial/Quest_S40_BR_DuelRival_Tutorial_Q04b.2"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S40_BR_DuelRival_Tutorial_Q04b_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "1FC1ECE049FF364995D092AB5D2955DC",
+      "SourceString": "Stage 2 of 2: Use Rival Credits at a Rivalry Vending Station to buy weapons or services",
+      "LocalizedString": "Stage 2 of 2: Use Rival Credits at a Rivalry Vending Station to buy weapons or services"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "3349AD894A65AA4EDC05049687E441B4",
+      "SourceString": "Stage 2 of 2: Use Rival Credits at a Rivalry Vending Station to buy weapons or services",
+      "LocalizedString": "Stage 2 of 2: Use Rival Credits at a Rivalry Vending Station to buy weapons or services"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.BR.S40.DuelRival.Tutorial",
+          "ChallengeCategory.XP"
+        ]
+      }
+    ]
   }
 }

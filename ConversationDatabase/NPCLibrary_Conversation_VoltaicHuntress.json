@@ -1,102 +1,358 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_VoltaicHuntress",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_VoltaicHuntress'",
+    "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "3B507E7B-4E8534D7-73B5E0AA-5071375A",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_VoltaicHuntress:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.1"
-        }
-      },
-      {
-        "Key": "0EC52F50-4FC35555-94AE2682-CD382D6C",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_VoltaicHuntress:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.12"
-        }
-      },
-      {
-        "Key": "7C7E8E23-40251C6B-43173AB5-E21F65B1",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_VoltaicHuntress:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.4"
-        }
-      },
-      {
-        "Key": "E18693F1-4DB5269B-4E1D1986-D55641C5",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_VoltaicHuntress:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.2"
-        }
-      },
-      {
-        "Key": "2AB6B897-44A655DA-28A04C82-D6211455",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_VoltaicHuntress:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.VoltaicHuntress"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "88B12CC742BC87908CF57A963D2F9D58",
+            "SourceString": "My name is Saeko. I hunt the dead.",
+            "LocalizedString": "My name is Saeko. I hunt the dead."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_VoltaicHuntress:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "3B507E7B-4E8534D7-73B5E0AA-5071375A"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3E66302541D1BF355BC0368EF4286F13",
+            "SourceString": "Be calm, restless spirit. Be at rest.",
+            "LocalizedString": "Be calm, restless spirit. Be at rest."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VoltaicHuntress:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BA6103054133031E334E31BE8EDD0DF5",
+            "SourceString": "Shhh. Can you hear the spirits murmuring?",
+            "LocalizedString": "Shhh. Can you hear the spirits murmuring?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_VoltaicHuntress:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CCB42BC7492AB30F3121FB90EAEDE6C1",
+            "SourceString": "The Underworld is causing chaos for the Island's spirits.",
+            "LocalizedString": "The Underworld is causing chaos for the Island's spirits."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_VoltaicHuntress:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "75A6CDE4402B046FD2C251A01D37AF85",
+            "SourceString": "I heard the boatman Charon retired. Another headache for me.",
+            "LocalizedString": "I heard the boatman Charon retired. Another headache for me."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_VoltaicHuntress:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2E7072B84C26A7DDA0B32480B656DA64",
+            "SourceString": "The spirits are restless. I have about a dozen theories as to why.",
+            "LocalizedString": "The spirits are restless. I have about a dozen theories as to why."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_VoltaicHuntress:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C7919AAA4D0E51E6CC7DA6B5A3B3895E",
+            "SourceString": "Hades needs to spend less time in battle, and more time running his realm.",
+            "LocalizedString": "Hades needs to spend less time in battle, and more time running his realm."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_VoltaicHuntress:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "308B351D41E978BBDF8C0CB5263F95F0",
+        "SourceString": "Shhh. Can you hear the spirits murmuring?",
+        "LocalizedString": "Shhh. Can you hear the spirits murmuring?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.VoltaicHuntress.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "3B507E7B-4E8534D7-73B5E0AA-5071375A",
-      "0EC52F50-4FC35555-94AE2682-CD382D6C",
-      "7C7E8E23-40251C6B-43173AB5-E21F65B1",
+    },
+    "OutputConnections": [
+      "2AB6B897-44A655DA-28A04C82-D6211455",
       "E18693F1-4DB5269B-4E1D1986-D55641C5",
-      "2AB6B897-44A655DA-28A04C82-D6211455"
+      "7C7E8E23-40251C6B-43173AB5-E21F65B1"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "0EC52F50-4FC35555-94AE2682-CD382D6C",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_VoltaicHuntress:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/VoltaicHuntress/NPCLibrary_Conversation_VoltaicHuntress.1"
+    }
   }
 }

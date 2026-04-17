@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Garrison",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Garrison/NPCLibrary_Conversation_Garrison",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Garrison'",
+    "ObjectPath": "/NPCLibrary/NPCs/Garrison/NPCLibrary_Conversation_Garrison.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "88B0EA1D-409698A9-7E9F028B-19060E00",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Garrison:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Garrison/NPCLibrary_Conversation_Garrison.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "55BE4C1147D048C15B3874ABA927AC65",
+            "SourceString": "I'm ready to ship out, if you need backup who's got a backpack.",
+            "LocalizedString": "I'm ready to ship out, if you need backup who's got a backpack."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Garrison:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Garrison/NPCLibrary_Conversation_Garrison.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "36FBF3EE-4B3FD878-54D02C9E-3A42959E",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Garrison:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Garrison/NPCLibrary_Conversation_Garrison.5"
-        }
-      },
-      {
-        "Key": "32FDEB74-4E4DC2F7-BC73DF80-313A4379",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Garrison:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Garrison/NPCLibrary_Conversation_Garrison.2"
-        }
-      },
-      {
-        "Key": "CC46F85E-47EFBC9D-95B30180-B3CA4DDA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Garrison:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Garrison/NPCLibrary_Conversation_Garrison.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "AA837EDD4D1721FD607F4DB1EE092F4E",
+        "SourceString": "I can requisition you supplies on an ongoing basis, if you hire me.",
+        "LocalizedString": "I can requisition you supplies on an ongoing basis, if you hire me."
       }
+    },
+    "OutputConnections": [
+      "CC46F85E-47EFBC9D-95B30180-B3CA4DDA",
+      "32FDEB74-4E4DC2F7-BC73DF80-313A4379"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Garrison"
-        },
-        "DestinationList": [
-          "88B0EA1D-409698A9-7E9F028B-19060E00"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "88B0EA1D-409698A9-7E9F028B-19060E00",
-      "36FBF3EE-4B3FD878-54D02C9E-3A42959E",
-      "32FDEB74-4E4DC2F7-BC73DF80-313A4379",
-      "CC46F85E-47EFBC9D-95B30180-B3CA4DDA"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "36FBF3EE-4B3FD878-54D02C9E-3A42959E",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Garrison:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Garrison/NPCLibrary_Conversation_Garrison.1"
+    }
   }
 }

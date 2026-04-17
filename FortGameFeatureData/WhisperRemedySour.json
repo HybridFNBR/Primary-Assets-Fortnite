@@ -1,87 +1,59 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'WhisperRemedySour'",
-    "ObjectPath": "/WhisperRemedySour/WhisperRemedySour.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "WhisperRemedySour",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/WhisperRemedySour/WhisperRemedySour",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "36.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "37.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              4,
-              0,
-              1,
-              2,
-              3
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Plugin.Playlist.Arena, Athena.Playlist.Arena, Athena.Playlist.Test, Athena.Playlist.Default ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/WhisperRemedySour/Levels/WhisperRemedySour_LevelOverlay.WhisperRemedySour_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Plugin.Playlist.Arena"
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/WhisperRemedySour/WhisperRemedySour_DeathCauseData.WhisperRemedySour_DeathCauseData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch6S3",
+        "DisplayName": "Give WhisperRemedy Sour",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /WhisperRemedySour/Gameplay/WID_WhisperRemedy_Sour 3 3"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'WhisperRemedySour:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/WhisperRemedySour/WhisperRemedySour.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist.Arena"
-        },
-        {
-          "TagName": "Athena.Playlist.Test"
-        },
-        {
-          "TagName": "Athena.Playlist.Default"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        4,
-        0,
-        1,
-        2,
-        3
-      ],
-      "AutoDescription": " ANY(  ANY( Plugin.Playlist.Arena, Athena.Playlist.Arena, Athena.Playlist.Test, Athena.Playlist.Default ) )"
-    }
+      }
+    ]
   }
 }

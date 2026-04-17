@@ -1,15 +1,56 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'LimePhoneTool'",
-    "ObjectPath": "/LimePhoneTool/LimePhoneTool.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "LimePhoneTool",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/LimePhoneTool/LimePhoneTool",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "CreativeRoot"
+    "PlaylistItemsToFullyLoad": [
+      {
+        "PlaylistTags": [
+          "Athena.Creative",
+          "Athena.Playground",
+          "Playlist.Lime"
+        ],
+        "ItemIdsToFullyLoad": [
+          {
+            "PrimaryAssetType": {
+              "Name": "Weapon"
+            },
+            "PrimaryAssetName": "WID_Lime_CreativeTool"
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'LimePhoneTool:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/LimePhoneTool/LimePhoneTool.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/LimePhoneTool/WID_Lime_CreativeTool.WID_Lime_CreativeTool",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
     ]
   }
 }

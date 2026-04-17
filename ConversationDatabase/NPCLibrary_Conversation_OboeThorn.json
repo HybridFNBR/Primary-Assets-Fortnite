@@ -1,111 +1,305 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_OboeThorn",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_OboeThorn'",
+    "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "A2001350-40A23747-8A75C296-9B6DA5A8",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_OboeThorn:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.1"
-        }
-      },
-      {
-        "Key": "7EBA26F7-4A93F85A-DA8711B6-9AEA5683",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_OboeThorn:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.12"
-        }
-      },
-      {
-        "Key": "D361696B-4058DBD1-CBF03795-12D9B02C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_OboeThorn:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.5"
-        }
-      },
-      {
-        "Key": "4C7424D5-4FA01726-D441D7B6-4D33DED9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_OboeThorn:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.4"
-        }
-      },
-      {
-        "Key": "6CAC13D2-455F8149-01952582-EF299589",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_OboeThorn:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.2"
-        }
-      },
-      {
-        "Key": "85D1529D-4DA31E8A-A222DCBE-76ADBBD2",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_OboeThorn:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.OboeThorn"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F1D1B35E49F0C6611D3B32AA536B3218",
+            "SourceString": "We've got ourselves a demon-destroyin' mystery.",
+            "LocalizedString": "We've got ourselves a demon-destroyin' mystery."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_OboeThorn:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "A2001350-40A23747-8A75C296-9B6DA5A8"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B0BA39B34FA83676279F05AF0C840789",
+            "SourceString": "Don't worry about the Dark Presence. We're on the case!",
+            "LocalizedString": "Don't worry about the Dark Presence. We're on the case!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_OboeThorn:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "858D964D4498FDABD176449EB071687B",
+            "SourceString": "If anyone can get to the bottom of this demonic invasion, it's us.",
+            "LocalizedString": "If anyone can get to the bottom of this demonic invasion, it's us."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_OboeThorn:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "93AE9143418F305A93778C96D09156B6",
+            "SourceString": "Let's split up, gang!",
+            "LocalizedString": "Let's split up, gang!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_OboeThorn:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "573DBBF44CC515E776E822BBDFF46C6F",
+            "SourceString": "Did you find your missing boots?",
+            "LocalizedString": "Did you find your missing boots?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_OboeThorn:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A46570E84BDD31148284119E3AEB7346",
+            "SourceString": "I thought we agreed to split up?",
+            "LocalizedString": "I thought we agreed to split up?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_OboeThorn:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "12ED9DBE45D6AE179464238EA7F03883",
+        "SourceString": "Let's split up, gang!",
+        "LocalizedString": "Let's split up, gang!"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season37.VoiceFork.OboeThorn.Deliver",
-      "Conversation.Entry.Season37.VoiceFork.OboeThorn",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "A2001350-40A23747-8A75C296-9B6DA5A8",
-      "7EBA26F7-4A93F85A-DA8711B6-9AEA5683",
-      "D361696B-4058DBD1-CBF03795-12D9B02C",
-      "4C7424D5-4FA01726-D441D7B6-4D33DED9",
+    },
+    "OutputConnections": [
+      "85D1529D-4DA31E8A-A222DCBE-76ADBBD2",
       "6CAC13D2-455F8149-01952582-EF299589",
-      "85D1529D-4DA31E8A-A222DCBE-76ADBBD2"
+      "4C7424D5-4FA01726-D441D7B6-4D33DED9",
+      "D361696B-4058DBD1-CBF03795-12D9B02C"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "7EBA26F7-4A93F85A-DA8711B6-9AEA5683",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_OboeThorn:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/OboeThorn/NPCLibrary_Conversation_OboeThorn.1"
+    }
   }
 }

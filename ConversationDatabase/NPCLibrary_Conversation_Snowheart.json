@@ -1,102 +1,223 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Snowheart",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Snowheart'",
+    "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "2465E3BE-43C84B74-D02D99A8-323E99C9",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Snowheart:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.1"
-        }
-      },
-      {
-        "Key": "E76DAC85-435115D6-1BE2DCA0-845DA26C",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Snowheart:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.9"
-        }
-      },
-      {
-        "Key": "17520739-460CF04D-A1401893-56BA01CF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Snowheart:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.4"
-        }
-      },
-      {
-        "Key": "81491AAA-4B93A478-15B6D69A-AF5F5112",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Snowheart:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.2"
-        }
-      },
-      {
-        "Key": "88DEAE1C-4FB15F77-7B0976B0-657816A2",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Snowheart:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Snowheart"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "74FB5158417BABBAA2080881B8581BB8",
+            "SourceString": "Nothing shall deter me.",
+            "LocalizedString": "Nothing shall deter me."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Snowheart:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "2465E3BE-43C84B74-D02D99A8-323E99C9"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F04645794CC001C3977FB58C5E4E14A3",
+            "SourceString": "When the storm comes, find safety.",
+            "LocalizedString": "When the storm comes, find safety."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Snowheart:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F16452A04B1C4CC8C0BBA49C9FBD5D60",
+            "SourceString": "Ice can burn, if you are not careful.",
+            "LocalizedString": "Ice can burn, if you are not careful."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Snowheart:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DC3C61F54E71C8BC05AEE693D3860594",
+            "SourceString": "The road I travel is my own.",
+            "LocalizedString": "The road I travel is my own."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Snowheart:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "7EF3507E499FFB6A747C40A5DE179067",
+        "SourceString": "When the storm comes, find safety.",
+        "LocalizedString": "When the storm comes, find safety."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Ch5S1.D3.Q8",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "2465E3BE-43C84B74-D02D99A8-323E99C9",
-      "E76DAC85-435115D6-1BE2DCA0-845DA26C",
-      "17520739-460CF04D-A1401893-56BA01CF",
+    },
+    "OutputConnections": [
+      "88DEAE1C-4FB15F77-7B0976B0-657816A2",
       "81491AAA-4B93A478-15B6D69A-AF5F5112",
-      "88DEAE1C-4FB15F77-7B0976B0-657816A2"
+      "17520739-460CF04D-A1401893-56BA01CF"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "E76DAC85-435115D6-1BE2DCA0-845DA26C",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Snowheart:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Snowheart/NPCLibrary_Conversation_Snowheart.1"
+    }
   }
 }

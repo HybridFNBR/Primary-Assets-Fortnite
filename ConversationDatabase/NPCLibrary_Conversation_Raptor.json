@@ -1,93 +1,132 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Raptor",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Raptor'",
+    "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "50D49A2C-419E9472-04E48F83-AB0F779C",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Raptor:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "18E556774CC5B627236483808F1846F9",
+            "SourceString": "Ah, welcome back to the fight, chap! I say, <b>it's been a minute,</> has it not?",
+            "LocalizedString": "Ah, welcome back to the fight, chap! I say, <b>it's been a minute,</> has it not?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_Raptor:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "899C713C46A385A0081ECC8256F3E4C1",
+            "SourceString": "Greetings! Name's Raptor, master of the skies!",
+            "LocalizedString": "Greetings! Name's Raptor, master of the skies!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Raptor:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "E9E0C5EB-4C860A0D-652379AE-C0764E36",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Raptor:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.6"
-        }
-      },
-      {
-        "Key": "54F8B432-4DE9F7E2-8E8FBB92-B484A0DA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Raptor:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.2"
-        }
-      },
-      {
-        "Key": "4A3BE87F-4E465F1F-D92DC6A5-F986F45D",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Raptor:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "4C93DC38407A513919FC31A8DEDF677E",
+        "SourceString": "Bring on that horizon, and full speed ahead!",
+        "LocalizedString": "Bring on that horizon, and full speed ahead!"
       }
+    },
+    "OutputConnections": [
+      "4A3BE87F-4E465F1F-D92DC6A5-F986F45D",
+      "54F8B432-4DE9F7E2-8E8FBB92-B484A0DA"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Raptor"
-        },
-        "DestinationList": [
-          "50D49A2C-419E9472-04E48F83-AB0F779C"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "50D49A2C-419E9472-04E48F83-AB0F779C",
-      "E9E0C5EB-4C860A0D-652379AE-C0764E36",
-      "54F8B432-4DE9F7E2-8E8FBB92-B484A0DA",
-      "4A3BE87F-4E465F1F-D92DC6A5-F986F45D"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "E9E0C5EB-4C860A0D-652379AE-C0764E36",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Raptor:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Raptor/Raptor/NPCLibrary_Conversation_Raptor.1"
+    }
   }
 }

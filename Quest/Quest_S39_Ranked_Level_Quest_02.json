@@ -1,21 +1,247 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_S39_Ranked_Level_Quest_02'",
-    "ObjectPath": "/Habanero_Quests/Items/QuestItems/LevelUp/Quest_S39_Ranked_Level_Quest_02.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_S39_Ranked_Level_Quest_02",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/Habanero_Quests/Items/QuestItems/LevelUp/Quest_S39_Ranked_Level_Quest_02",
   "Properties": {
-    "InformationSettings": {
-      "CompletionText": {
-        "Namespace": "",
-        "Key": "796EB6F942E83690CBA968803FFF84BE",
-        "SourceString": "Ranked Quest Completed!",
-        "LocalizedString": "Ranked Quest Completed!"
+    "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S39_Ranked_Level_Quest_02_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": true,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "EliminatedPawn": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Pawn.Athena.Player"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NonParticipant"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  2,
+                  1,
+                  0,
+                  3,
+                  1,
+                  1
+                ],
+                "UserDescription": "Player Tags - Exclude Non-Participants",
+                "AutoDescription": " ALL(  ALL( Pawn.Athena.Player ),  NONE( Pawn.Athena.NonParticipant ) )"
+              }
+            },
+            "Killer": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Pawn.Athena.Player"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Specialist"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  2,
+                  1,
+                  0,
+                  3,
+                  1,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ALL( Pawn.Athena.Player ),  NONE( AISpawnerData.Type.Specialist ) )"
+              }
+            },
+            "EliminationSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AllowedTeamAffiliations": [],
+            "ProhibitedTeamAffiliations": [
+              "EFortTeamAffiliation::Friendly"
+            ],
+            "AllowedKilledPawnTypes": [],
+            "ProhibitedKilledPawnTypes": [],
+            "bAllowSelfEliminations": false,
+            "bRequirePawnWasEliminatedByConvertedPawn": false,
+            "bUseDistance": false,
+            "bIncrementByDistance": false,
+            "bUseKillStreak": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "KillStreak": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "19BA2A0C4FEF640F115E608885CF36E4",
+          "SourceString": "Eliminate players in Ranked Reload",
+          "LocalizedString": "Eliminate players in Ranked Reload"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 150,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BlastBerry.Habanero"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.BlastBerry.Habanero )"
+    },
+    "SortPriority": 2,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S39_Ranked_Level_Quest_02:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/Habanero_Quests/Items/QuestItems/LevelUp/Quest_S39_Ranked_Level_Quest_02.0"
       },
-      "bHideStageDescription": true
-    }
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S39_Ranked_Level_Quest_02:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/Habanero_Quests/Items/QuestItems/LevelUp/Quest_S39_Ranked_Level_Quest_02.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S39_Ranked_Level_Quest_02_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "FF600939445D744891537381367D6230",
+      "SourceString": "Eliminate players in Ranked Reload",
+      "LocalizedString": "Eliminate players in Ranked Reload"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "352784914394DCD9A376E896341AE6B4",
+      "SourceString": "Eliminate players in Ranked Reload",
+      "LocalizedString": "Eliminate players in Ranked Reload"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.BB.Habanero.LevelUp.Quest"
+        ]
+      }
+    ]
   }
 }

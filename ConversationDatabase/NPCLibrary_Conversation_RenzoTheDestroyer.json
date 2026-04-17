@@ -1,102 +1,313 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_RenzoTheDestroyer",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_RenzoTheDestroyer'",
+    "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "48A95CCB-4136975E-4B65EF9C-C9F91787",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RenzoTheDestroyer:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.1"
-        }
-      },
-      {
-        "Key": "ACE8CAFE-4463A35F-1C8416A5-58A04FF7",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_RenzoTheDestroyer:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.11"
-        }
-      },
-      {
-        "Key": "89C16CF2-4F06A46B-B2D55482-A65A0BE1",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RenzoTheDestroyer:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.4"
-        }
-      },
-      {
-        "Key": "2F102F16-4B9FB0CE-801F939D-F5FB2486",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RenzoTheDestroyer:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.2"
-        }
-      },
-      {
-        "Key": "25371BCD-48B7E130-CD80048C-DB0D1CEB",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RenzoTheDestroyer:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.RenzoTheDestroyer"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "826147B34C7337EA1B4394A1045CAAFA",
+            "SourceString": "You're looking VERY rococo baroque.",
+            "LocalizedString": "You're looking VERY rococo baroque."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_RenzoTheDestroyer:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "48A95CCB-4136975E-4B65EF9C-C9F91787"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A2E10CD3486D8DEAA3902B9FD13EB9F2",
+            "SourceString": "Nice... Hat?",
+            "LocalizedString": "Nice... Hat?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RenzoTheDestroyer:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F3A12829408A36D793921EBBE0F29C0C",
+            "SourceString": "Ooh, did you crash the Skull-a-tron into Gila again?",
+            "LocalizedString": "Ooh, did you crash the Skull-a-tron into Gila again?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RenzoTheDestroyer:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8FE70A2A47E0833C9789F7A8B842BDE8",
+            "SourceString": "Somebody's been working out.",
+            "LocalizedString": "Somebody's been working out."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RenzoTheDestroyer:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3CE801224053B38587F5CD83292F70CE",
+            "SourceString": "Destruction can be peaceful. All of my grenades play ocean sounds.",
+            "LocalizedString": "Destruction can be peaceful. All of my grenades play ocean sounds."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RenzoTheDestroyer:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6531B7334CDB926C2D7678A678578510",
+            "SourceString": "You're kind of a bit \"much,\" aren't you?",
+            "LocalizedString": "You're kind of a bit \"much,\" aren't you?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RenzoTheDestroyer:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "2A30A9AE4D4F60108CB4768091BB2629",
+        "SourceString": "Congratulations, you have my attention.",
+        "LocalizedString": "Congratulations, you have my attention."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season24.Narrative.P04.Q02.Renzo",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "48A95CCB-4136975E-4B65EF9C-C9F91787",
-      "ACE8CAFE-4463A35F-1C8416A5-58A04FF7",
-      "89C16CF2-4F06A46B-B2D55482-A65A0BE1",
+    },
+    "OutputConnections": [
+      "25371BCD-48B7E130-CD80048C-DB0D1CEB",
       "2F102F16-4B9FB0CE-801F939D-F5FB2486",
-      "25371BCD-48B7E130-CD80048C-DB0D1CEB"
+      "89C16CF2-4F06A46B-B2D55482-A65A0BE1"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "ACE8CAFE-4463A35F-1C8416A5-58A04FF7",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RenzoTheDestroyer:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/RenzoTheDestroyer/NPCLibrary_Conversation_RenzoTheDestroyer.1"
+    }
   }
 }

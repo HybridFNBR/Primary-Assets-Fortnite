@@ -1,25 +1,191 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_S39_ForbiddenFruit_Margarine_Bonus_Q01'",
-    "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Margarine/Bonus/Quest_S39_ForbiddenFruit_Margarine_Bonus_Q01.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_S39_ForbiddenFruit_Margarine_Bonus_Q01",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Margarine/Bonus/Quest_S39_ForbiddenFruit_Margarine_Bonus_Q01",
   "Properties": {
-    "VisibilitySettings": {
-      "QuestVisiblityData": {
-        "bIsVisibleWhenClaimed": true,
-        "bIsVisibleWhenCompleted": true
-      },
-      "bCanShowTimer": false
-    },
-    "MapSettings": {
-      "CustomMapWidget": {
-        "AssetPathName": "/QuestCategories/Items/QuestRewards/QuestRewards_S39_Margarine/WBP_QuestRewards_Panel_S39_Margarine.WBP_QuestRewards_Panel_S39_Margarine_C",
-        "SubPathString": ""
+    "QuestSubtype": "EFortQuestSubtype::PunchCard",
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
       }
-    }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S39_ForbiddenFruit_Margarine_Bonus_Q01_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "QuestTags": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "QuestCategory.ForbiddenFruit.Margarine.Subheader.01"
+                  },
+                  {
+                    "TagName": "QuestCategory.ForbiddenFruit.Margarine.Subheader.02"
+                  },
+                  {
+                    "TagName": "QuestCategory.ForbiddenFruit.Margarine.Subheader.03"
+                  },
+                  {
+                    "TagName": "QuestCategory.ForbiddenFruit.Margarine.Subheader.04"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  4,
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( QuestCategory.ForbiddenFruit.Margarine.Subheader.01, QuestCategory.ForbiddenFruit.Margarine.Subheader.02, QuestCategory.ForbiddenFruit.Margarine.Subheader.03, QuestCategory.ForbiddenFruit.Margarine.Subheader.04 )"
+              }
+            },
+            "QuestType": "EFortQuestType::All",
+            "QuestSubtype": "EFortQuestSubtype::None",
+            "QuestState": "EFortQuestState::Completed",
+            "bUseQuestDefinitionsFilter": false,
+            "QuestDefinitions": {
+              "AdvancedQuestFilters": []
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "0E3351504662C7A6E3CBD2ACCFF1332A",
+          "SourceString": "Complete Bleach Quests in Blitz Royale",
+          "LocalizedString": "Complete Bleach Quests in Blitz Royale"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 12,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.ForbiddenFruit"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.ForbiddenFruit )"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S39_ForbiddenFruit_Margarine_Bonus_Q01:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Margarine/Bonus/Quest_S39_ForbiddenFruit_Margarine_Bonus_Q01.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S39_ForbiddenFruit_Margarine_Bonus_Q01:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Margarine/Bonus/Quest_S39_ForbiddenFruit_Margarine_Bonus_Q01.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S39_ForbiddenFruit_Margarine_Bonus_Q01_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "AE45EC9D4E40569E4F6005B15EE2DA5F",
+      "SourceString": "Complete Bleach Quests in Blitz Royale",
+      "LocalizedString": "Complete Bleach Quests in Blitz Royale"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "383C49D94EBB80F9254B28A8BB898074",
+      "SourceString": "Complete Bleach Quests in Blitz Royale",
+      "LocalizedString": "Complete Bleach Quests in Blitz Royale"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.ForbiddenFruit.Margarine.Bonus"
+        ]
+      }
+    ]
   }
 }

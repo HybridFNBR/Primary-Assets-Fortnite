@@ -1,15 +1,98 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'KeepScoreGameplay'",
-    "ObjectPath": "/KeepScoreGameplay/KeepScoreGameplay.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "KeepScoreGameplay",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/KeepScoreGameplay/KeepScoreGameplay",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "BRRoot"
+    "LevelOverlayConfig": {
+      "AssetPathName": "/KeepScoreGameplay/LevelOverlay/KeepScoreGameplay_LevelOverlay.KeepScoreGameplay_LevelOverlay",
+      "SubPathString": ""
+    },
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/KeepScoreGameplay/Items/TiredPanda/UI/RE_TiredPanda_ReticleExtension.RE_TiredPanda_ReticleExtension",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/KeepScoreGameplay/Items/TiredPanda/HUD/TiredPandaHUDWidgetRegistry.TiredPandaHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/KeepScoreGameplay/KeepScore_DeathCauseData.KeepScore_DeathCauseData",
+      "SubPathString": ""
+    },
+    "ContextualTutorials": [
+      {
+        "AssetPathName": "/KeepScoreGameplay/Items/TiredPanda/Tutorials/ContextualTutorial_TiredPandaSwiming.ContextualTutorial_TiredPandaSwiming",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/KeepScoreGameplay/Items/TiredPanda/Tutorials/ContextualTutorial_TiredPandaPickedUp.ContextualTutorial_TiredPandaPickedUp",
+        "SubPathString": ""
+      }
+    ],
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "ch5s2",
+        "DisplayName": "Avatar: Waterbending",
+        "ConsoleCommands": [
+          "cheat giveweapon wid_tiredpanda_Lightweight 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'KeepScoreGameplay:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/KeepScoreGameplay/KeepScoreGameplay.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Ammo",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortAmmoItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
     ]
   }
 }

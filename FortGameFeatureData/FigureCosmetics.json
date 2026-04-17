@@ -1,17 +1,142 @@
 {
-  "Type": "FortGameFeatureAction_PrimaryAssetBehaviors",
-  "Name": "FortGameFeatureAction_PrimaryAssetBehaviors_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_PrimaryAssetBehaviors'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'FigureCosmetics'",
-    "ObjectPath": "/FigureCosmetics/FigureCosmetics.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "FigureCosmetics",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/FigureCosmetics/FigureCosmetics",
   "Properties": {
-    "AdditionalPrimaryAssetTypesToLoad": [
-      "AssembledMeshSchema",
-      "JunoDanceOverride",
-      "JunoCharacterOverride"
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_PrimaryAssetBehaviors'FigureCosmetics:FortGameFeatureAction_PrimaryAssetBehaviors_0'",
+        "ObjectPath": "/FigureCosmetics/FigureCosmetics.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_SetAccountItemDefinitionOverrideManager'FigureCosmetics:FortGameFeatureAction_SetAccountItemDefinitionOverrideManager_0'",
+        "ObjectPath": "/FigureCosmetics/FigureCosmetics.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "AssembledMeshSchema",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/AssembledMeshSystem.AssembledMeshSchema",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/FigureCosmetics/AMS"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "JunoDanceOverride",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FigureCharacterNativeRuntime.JunoAthenaDanceItemOverrideDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/FigureCosmetics/Items/Emotes"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "JunoCharacterOverride",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FigureCharacterNativeRuntime.JunoAthenaCharacterItemOverrideDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/FigureCosmetics/Items/Characters"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "JunoMap",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/Engine.World",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 15,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "AssembleMeshSchema_DevAlwaysProdNeverCook",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/AssembledMeshSystem.AssembledMeshSchema",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::DevelopmentAlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "Hero",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortHeroType",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "ItemOverrides"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
     ]
   }
 }

@@ -1,33 +1,72 @@
 {
-  "Type": "CustomCharacterBackpackData",
-  "Name": "CustomCharacterBackpackData_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterBackpackData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_Backpack_WavySignalBeef'",
-    "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_WavySignalBeef.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_Backpack_WavySignalBeef",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_WavySignalBeef",
   "Properties": {
-    "AttachSocketName": "Backpack_BR",
-    "AttachOffset": {
-      "X": 0.0,
-      "Y": 3.0,
-      "Z": 0.0
+    "GenderPermitted": "EFortCustomGender::Both",
+    "CharacterPartType": "EFortCustomPartType::Backpack",
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Backpack"
+      ],
+      "PartTypeIndex": 3
     },
-    "AttachTransform": {
-      "Translation": {
-        "X": 0.0,
-        "Y": 3.0,
-        "Z": 0.0
-      }
-    },
-    "AttachmentOverrideData": {
-      "ObjectName": "CustomAccessoryAttachmentData'MaleSource'",
-      "ObjectPath": "/Game/Characters/Player/Common/BackpackScaleSettings/MaleSource.0"
-    },
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_WavySignalBeef/Meshes/M_MED_WavySignalBeef_Pack_AnimBP.M_MED_WavySignalBeef_Pack_AnimBP_C",
+    "PartModifierBlueprint": {
+      "AssetPathName": "/BRCosmetics/Athena/Cosmetics/Blueprints/Part_Modifiers/B_Athena_PartModifier_Backpack_WavySignalBeef.B_Athena_PartModifier_Backpack_WavySignalBeef_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterBackpackData'CP_Backpack_WavySignalBeef:CustomCharacterBackpackData_0'",
+      "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_WavySignalBeef.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_WavySignalBeef/Meshes/M_MED_WavySignalBeef_Pack.M_MED_WavySignalBeef_Pack",
+      "SubPathString": ""
+    },
+    "SoundLibraries": [
+      {
+        "ObjectName": "SoundLibrary'SL_BackBling_WavySignalBeef'",
+        "ObjectPath": "/BRCosmetics/Sounds/Backblings/WavySignalBeef/SL_BackBling_WavySignalBeef.0"
+      }
+    ],
+    "CosmeticPartDataList": [
+      {
+        "EffectParameters": [
+          {
+            "Tag": {
+              "TagName": "CosmeticPart.VFX.Elimination"
+            },
+            "Effect": {
+              "AssetPathName": "",
+              "SubPathString": ""
+            },
+            "LocationOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "RotationOffset": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "bIsPersistent": true,
+            "bAutoActivate": true,
+            "AttachmentParams": {
+              "SocketName": "pack",
+              "AttachmentTarget": "ECharacterPartAttachmentTargetType::SkeletalMeshForAssociatedPlayerPawnPartType",
+              "AttachmentRules": {
+                "LocationRule": "EAttachmentRule::SnapToTarget",
+                "RotationRule": "EAttachmentRule::SnapToTarget",
+                "ScaleRule": "EAttachmentRule::SnapToTarget",
+                "bWeldSimulatedBodies": false
+              }
+            }
+          }
+        ]
+      }
+    ]
   }
 }

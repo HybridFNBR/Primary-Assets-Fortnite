@@ -1,87 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'PhoebeCore'",
     "ObjectPath": "/PhoebeCore/PhoebeCore.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "38.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.CreativeRoyale.Edit"
-              },
-              {
-                "TagName": "Athena.Playlist.CreativeRoyale.Play"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Figment"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              5,
-              0,
-              1,
-              2,
-              3,
-              4
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Default, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play, Plugin.Playlist.Arena, Athena.Playlist.Figment )"
-          },
-          "bMigratedFromOldData": false
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "PawnTagQueryBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/PhoebeCore/InjectedBehaviors/PhoebeTagQueryBehaviorsTable.PhoebeTagQueryBehaviorsTable",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
-        },
-        {
-          "TagName": "Athena.Playlist.CreativeRoyale.Edit"
-        },
-        {
-          "TagName": "Athena.Playlist.CreativeRoyale.Play"
-        },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        4,
-        0,
-        1,
-        2,
-        3
-      ],
-      "AutoDescription": " ANY( Athena.Playlist.Default, Athena.Playlist.CreativeRoyale.Edit, Athena.Playlist.CreativeRoyale.Play, Plugin.Playlist.Arena )"
-    }
+      }
+    ]
   }
 }

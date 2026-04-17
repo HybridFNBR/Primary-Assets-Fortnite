@@ -1,39 +1,25 @@
 {
-  "Type": "FortGameFeatureAction_AddMutators",
-  "Name": "FortGameFeatureAction_AddMutators_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMutators'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'NewtonContent'",
     "ObjectPath": "/NewtonContent/NewtonContent.2"
   },
   "Properties": {
-    "MutatorsToAdd": [
+    "SourcesToAdd": [
       {
-        "Target": "EMutatorAddTarget::FortGameModeAthena",
-        "Mutator": {
-          "AssetPathName": "/NewtonContent/Gameplay/OverrideNewtonPawn_Mutator.OverrideNewtonPawn_Mutator_C",
+        "RegistryToAddTo": "TestPlayer.Config",
+        "AssetPriority": 3,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/NewtonContent/AI/TestPlayer/TestPlayerNewton_Cosmetics.TestPlayerNewton_Cosmetics",
           "SubPathString": ""
-        }
-      },
-      {
-        "Target": "EMutatorAddTarget::FortGameStateAthena",
-        "Mutator": {
-          "AssetPathName": "/NewtonContent/Gameplay/OverrideMovementsNewtonPawn_Mutator.OverrideMovementsNewtonPawn_Mutator_C",
-          "SubPathString": ""
-        }
-      },
-      {
-        "Target": "EMutatorAddTarget::FortMinigame",
-        "Mutator": {
-          "AssetPathName": "/NewtonContent/Gameplay/OverrideMovementsNewtonPawn_Mutator.OverrideMovementsNewtonPawn_Mutator_C",
-          "SubPathString": ""
-        }
-      },
-      {
-        "Target": "EMutatorAddTarget::FortMinigame",
-        "Mutator": {
-          "AssetPathName": "/NewtonContent/Gameplay/OverrideNewtonCVars_Mutator.OverrideNewtonCVars_Mutator_C",
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
           "SubPathString": ""
         }
       }

@@ -1,167 +1,40 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'MarksmanVisorGameplay'",
     "ObjectPath": "/MarksmanVisorGameplay/MarksmanVisorGameplay.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "36.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "37.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
-          },
-          "bMigratedFromOldData": false
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPawn",
+          "SubPathString": ""
         },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "36.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Plugin.Playlist.ForbiddenFruit"
-              },
-              {
-                "TagName": "Plugin.Playlist.BlastBerry"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              5,
-              0,
-              1,
-              2,
-              3,
-              4
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Plugin.Playlist.ForbiddenFruit, Plugin.Playlist.BlastBerry ) )"
-          },
-          "bMigratedFromOldData": true
+        "ComponentClass": {
+          "AssetPathName": "/MarksmanVisorGameplay/Gameplay/B_MarksmanVisorVisualizer_FortPawnComponent.B_MarksmanVisorVisualizer_FortPawnComponent_C",
+          "SubPathString": ""
         },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "39.40"
-            },
-            "ExclusiveMax": {
-              "VersionName": "40.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 1
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortGameStateAthena",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Creative"
+        "ComponentClass": {
+          "AssetPathName": "/MarksmanVisorGameplay/Gameplay/B_MarksmanVisor_GameStateComponent.B_MarksmanVisor_GameStateComponent_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        {
-          "TagName": "Plugin.Playlist.ForbiddenFruit"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        6,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Playlist.Default, Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly, Plugin.Playlist.Arena, Plugin.Playlist.ForbiddenFruit ) )"
-    }
+        "bClientComponent": true,
+        "bServerComponent": true,
+        "AdditionFlags": 1
+      }
+    ]
   }
 }

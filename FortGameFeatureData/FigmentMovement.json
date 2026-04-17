@@ -1,59 +1,254 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'FigmentMovement'",
-    "ObjectPath": "/FigmentMovement/FigmentMovement.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "FigmentMovement",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/FigmentMovement/FigmentMovement",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "33.00"
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "PlaylistBaseCurveTableOverrides": [
+      {
+        "BaseTable": {
+          "AssetPathName": "/SlideImpulse/DataTables/SlideImpulseGameData.SlideImpulseGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
             },
-            "ExclusiveMax": {
-              "VersionName": "Future"
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/Composite_Figment_SlideImpulse.Composite_Figment_SlideImpulse",
+              "SubPathString": ""
             }
           },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Figment"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Figment )"
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.NoBuildingMaterials"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/NoBuild/Composite_NoBuild_Figment_SlideImpulse.Composite_NoBuild_Figment_SlideImpulse",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      {
+        "BaseTable": {
+          "AssetPathName": "/TacticalSprintGame/DataTables/TacticalSprintGameData.TacticalSprintGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/Composite_Figment_TacticalSprint.Composite_Figment_TacticalSprint",
+              "SubPathString": ""
+            }
           },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Figment"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Athena.Playlist.Figment )"
-    }
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.NoBuildingMaterials"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/NoBuild/Composite_NoBuild_Figment_TacticalSprint.Composite_NoBuild_Figment_TacticalSprint",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      {
+        "BaseTable": {
+          "AssetPathName": "/VaultingContent/DataTables/VaultingContentCurveData.VaultingContentCurveData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/Composite_Figment_VaultingContent.Composite_Figment_VaultingContent",
+              "SubPathString": ""
+            }
+          },
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.NoBuildingMaterials"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/NoBuild/Composite_NoBuild_Figment_VaultingContent.Composite_NoBuild_Figment_VaultingContent",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      {
+        "BaseTable": {
+          "AssetPathName": "/ClamberingContent/DataTables/ClamberingContentCurveData.ClamberingContentCurveData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/Composite_Figment_Clambering.Composite_Figment_Clambering",
+              "SubPathString": ""
+            }
+          },
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.NoBuildingMaterials"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/NoBuild/Composite_NoBuild_Figment_Clambering.Composite_NoBuild_Figment_Clambering",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      {
+        "BaseTable": {
+          "AssetPathName": "/DoorBashContent/DataTables/DoorBashContentGameData.DoorBashContentGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/Composite_Figment_DoorBash.Composite_Figment_DoorBash",
+              "SubPathString": ""
+            }
+          },
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.NoBuildingMaterials"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/NoBuild/Composite_NoBuild_Figment_DoorBash.Composite_NoBuild_Figment_DoorBash",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      {
+        "BaseTable": {
+          "AssetPathName": "/BoostedJump/DataTables/BoostedJumpGameData.BoostedJumpGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/Composite_Figment_BoostedJump.Composite_Figment_BoostedJump",
+              "SubPathString": ""
+            }
+          },
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.NoBuildingMaterials"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/NoBuild/Composite_NoBuild_Figment_BoostedJump.Composite_NoBuild_Figment_BoostedJump",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      {
+        "BaseTable": {
+          "AssetPathName": "/RollLanding/DataTables/RollLandingGameData.RollLandingGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/Composite_Figment_RollLanding.Composite_Figment_RollLanding",
+              "SubPathString": ""
+            }
+          },
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.NoBuildingMaterials"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/NoBuild/Composite_NoBuild_Figment_RollLanding.Composite_NoBuild_Figment_RollLanding",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      {
+        "BaseTable": {
+          "AssetPathName": "/WallJump/DataTables/WallJumpGameData.WallJumpGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/Composite_Figment_WallJump.Composite_Figment_WallJump",
+              "SubPathString": ""
+            }
+          },
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.NoBuildingMaterials"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/NoBuild/Composite_NoBuild_Figment_WallJump.Composite_NoBuild_Figment_WallJump",
+              "SubPathString": ""
+            }
+          }
+        ]
+      },
+      {
+        "BaseTable": {
+          "AssetPathName": "/WallStick/DataTables/WallStickGameData.WallStickGameData",
+          "SubPathString": ""
+        },
+        "PlaylistToOverrideTableMap": [
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.Figment"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/Composite_Figment_WallStick.Composite_Figment_WallStick",
+              "SubPathString": ""
+            }
+          },
+          {
+            "Key": {
+              "TagName": "Athena.Playlist.NoBuildingMaterials"
+            },
+            "Value": {
+              "AssetPathName": "/FigmentMovement/DataTables/NoBuild/Composite_NoBuild_Figment_WallStick.Composite_NoBuild_Figment_WallStick",
+              "SubPathString": ""
+            }
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'FigmentMovement:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/FigmentMovement/FigmentMovement.0"
+      }
+    ]
   }
 }

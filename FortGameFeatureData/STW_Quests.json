@@ -1,15 +1,66 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'STW_Quests'",
-    "ObjectPath": "/STW_Quests/STW_Quests.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "STW_Quests",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/STW_Quests/STW_Quests",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "SaveTheWorldRoot"
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToSubGame'STW_Quests:FortGameFeatureAction_AddToSubGame_0'",
+        "ObjectPath": "/STW_Quests/STW_Quests.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'STW_Quests:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/STW_Quests/STW_Quests.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortQuestItemDefinition",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortQuestItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "FortMission",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortMission",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": true,
+        "Directories": [
+          {
+            "Path": "/Events/Summer2019/14DaysOfSummer"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
     ]
   }
 }

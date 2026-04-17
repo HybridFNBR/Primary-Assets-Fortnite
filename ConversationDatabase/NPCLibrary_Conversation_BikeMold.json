@@ -1,120 +1,495 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_BikeMold",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_BikeMold'",
+    "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "500DF392-442316AF-74453AA0-F64804FB",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BikeMold:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.1"
-        }
-      },
-      {
-        "Key": "F282EF04-4351447A-DE4B76B4-0BA12802",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_BikeMold:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.17"
-        }
-      },
-      {
-        "Key": "78D0D240-46BBFB5A-756760BA-B6CFF756",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BikeMold:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.6"
-        }
-      },
-      {
-        "Key": "CD9277FD-48AEA7CA-67494381-2483470A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BikeMold:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.5"
-        }
-      },
-      {
-        "Key": "022DF818-46A740F2-AC9FF3A5-8C9B0030",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BikeMold:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.4"
-        }
-      },
-      {
-        "Key": "66541CD5-4BD07E52-DD2B5284-9C4C6630",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BikeMold:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.2"
-        }
-      },
-      {
-        "Key": "38D9165C-4C477675-A42353AE-36EBA905",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BikeMold:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.BikeMold"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "127DC867470F1647630506B77E4B6450",
+            "SourceString": "I am Iron Man. Obviously.",
+            "LocalizedString": "I am Iron Man. Obviously."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_BikeMold:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.16"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "500DF392-442316AF-74453AA0-F64804FB"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "089D62FA4D6964FD8546AAA077281F41",
+            "SourceString": "Rhodey! What did you do to your suit?",
+            "LocalizedString": "Rhodey! What did you do to your suit?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BikeMold:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "914C82BD46B8274A35DF82A8C29B3BAB",
+            "SourceString": "Nice shield. Really adds to the whole ensemble.",
+            "LocalizedString": "Nice shield. Really adds to the whole ensemble."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BikeMold:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "575D99374EF45472F6217EBBAAA40BCF",
+            "SourceString": "The secret to being a hero? Your brain's your best weapon.",
+            "LocalizedString": "The secret to being a hero? Your brain's your best weapon."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BikeMold:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "533A1EF74DFDC8C43124139FEC381CB7",
+            "SourceString": "I've already told you, Shuri, I can upgrade my own suit.",
+            "LocalizedString": "I've already told you, Shuri, I can upgrade my own suit."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BikeMold:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CC18C519478B88E540B3AB9B7ACF4E78",
+            "SourceString": "I don't care how many walls there are, I can break through anything.",
+            "LocalizedString": "I don't care how many walls there are, I can break through anything."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BikeMold:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.14"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "89D4AF134FDC0B785DC2E1AFE47F6D61",
+            "SourceString": "So your skeleton is wrapped in... nanamantium? What's that like?",
+            "LocalizedString": "So your skeleton is wrapped in... nanamantium? What's that like?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BikeMold:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.15"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "424D6EA04CB623A286EFD6B6CE417B0B",
+            "SourceString": "Is it a job for Iron Man?",
+            "LocalizedString": "Is it a job for Iron Man?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_BikeMold:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AA2E614C48F55094D7ABF7BE7D928A00",
+            "SourceString": "Find any of my tech? Helpful, right?",
+            "LocalizedString": "Find any of my tech? Helpful, right?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_BikeMold:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "238D8DC44C0B4FCA00786EAE52478B37",
+            "SourceString": "What, you've never seen an Iron Man before?",
+            "LocalizedString": "What, you've never seen an Iron Man before?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_BikeMold:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "2B7770134540C37A54C309B91245D381",
+        "SourceString": "Is it a job for Iron Man?",
+        "LocalizedString": "Is it a job for Iron Man?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season31.Found.GreenTown.Q02b",
-      "Conversation.Entry.BikeMold.Dialogue",
-      "Conversation.Entry.Season31.Story.P05.Q01",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "500DF392-442316AF-74453AA0-F64804FB",
-      "F282EF04-4351447A-DE4B76B4-0BA12802",
-      "78D0D240-46BBFB5A-756760BA-B6CFF756",
-      "CD9277FD-48AEA7CA-67494381-2483470A",
-      "022DF818-46A740F2-AC9FF3A5-8C9B0030",
+    },
+    "OutputConnections": [
+      "38D9165C-4C477675-A42353AE-36EBA905",
       "66541CD5-4BD07E52-DD2B5284-9C4C6630",
-      "38D9165C-4C477675-A42353AE-36EBA905"
+      "022DF818-46A740F2-AC9FF3A5-8C9B0030",
+      "CD9277FD-48AEA7CA-67494381-2483470A",
+      "78D0D240-46BBFB5A-756760BA-B6CFF756"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "F282EF04-4351447A-DE4B76B4-0BA12802",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BikeMold:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/BikeMold/NPCLibrary_Conversation_BikeMold.1"
+    }
   }
 }

@@ -1,111 +1,224 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_TennisLeash",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_TennisLeash'",
+    "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "93DC8F7F-42A15BA2-BB91C9BD-F9551522",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TennisLeash:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.1"
-        }
-      },
-      {
-        "Key": "A4F84395-48928CAE-F33FADBC-0CE29396",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_TennisLeash:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.10"
-        }
-      },
-      {
-        "Key": "809F4128-4A9D9D10-9940C981-230B897F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TennisLeash:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.5"
-        }
-      },
-      {
-        "Key": "938593FD-47245A0A-7714AB95-F2612C3B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TennisLeash:ConversationLinkNode_14'",
-          "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.4"
-        }
-      },
-      {
-        "Key": "38980E65-4D4438B7-C7EDF189-9C20346C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TennisLeash:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.2"
-        }
-      },
-      {
-        "Key": "2BC98AD7-46C9FD61-15A9C483-11136A7F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TennisLeash:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.TennisLeash"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "13883D944D9C924C178E72B9ADC3EAE7",
+            "SourceString": "Shaq-y holidays!",
+            "LocalizedString": "Shaq-y holidays!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_TennisLeash:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "93DC8F7F-42A15BA2-BB91C9BD-F9551522"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7FD231E544F22DEF617D05BF4C47FDDC",
+            "SourceString": "Get in the Winterfest spirit.",
+            "LocalizedString": "Get in the Winterfest spirit."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TennisLeash:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4E4D04874C163198F8494AAA697F1FBD",
+            "SourceString": "Shaq the halls.",
+            "LocalizedString": "Shaq the halls."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_TennisLeash:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A741004E44DE433238DDAFA5C232355D",
+            "SourceString": "Shaq the halls, little bush man.",
+            "LocalizedString": "Shaq the halls, little bush man."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TennisLeash:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "6A71D2434615713FAAA4938FE45C3A3F",
+        "SourceString": "Get in the Winterfest spirit.",
+        "LocalizedString": "Get in the Winterfest spirit."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.TennisLeash.Dialogue",
-      "Conversation.Entry.Season33.WF.Quest.02.part.04",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "93DC8F7F-42A15BA2-BB91C9BD-F9551522",
-      "A4F84395-48928CAE-F33FADBC-0CE29396",
-      "809F4128-4A9D9D10-9940C981-230B897F",
-      "938593FD-47245A0A-7714AB95-F2612C3B",
+    },
+    "OutputConnections": [
+      "2BC98AD7-46C9FD61-15A9C483-11136A7F",
       "38980E65-4D4438B7-C7EDF189-9C20346C",
-      "2BC98AD7-46C9FD61-15A9C483-11136A7F"
+      "938593FD-47245A0A-7714AB95-F2612C3B",
+      "809F4128-4A9D9D10-9940C981-230B897F"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "A4F84395-48928CAE-F33FADBC-0CE29396",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TennisLeash:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/TennisLeash/NPCLibrary_Conversation_TennisLeash.1"
+    }
   }
 }

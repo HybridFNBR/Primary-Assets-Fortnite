@@ -1,52 +1,77 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'CleanSweepChart'",
-    "ObjectPath": "/CleanSweepChart/CleanSweepChart.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "CleanSweepChart",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/CleanSweepChart/CleanSweepChart",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/CleanSweepChart/HUD/CleanSweepHUDWidgetRegistry.CleanSweepHUDWidgetRegistry",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL(  ANY( ) )"
-    }
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch5S1",
+        "DisplayName": "Give MGS Cardboard Box",
+        "ConsoleCommands": [
+          "Cheat GiveAthenaGadget AGID_CleanSweepChart 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CleanSweepChart:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/CleanSweepChart/CleanSweepChart.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'CleanSweepChart:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/CleanSweepChart/CleanSweepChart.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "AthenaGadget",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay/Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Consumable",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay/Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

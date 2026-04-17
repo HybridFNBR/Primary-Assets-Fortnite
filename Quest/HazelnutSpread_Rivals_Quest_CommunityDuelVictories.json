@@ -1,27 +1,159 @@
 {
-  "Type": "FortQuestDefinitionComponent_Conditionals",
-  "Name": "FortQuestDefinitionComponent_Conditionals_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_Conditionals'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'HazelnutSpread_Rivals_Quest_CommunityDuelVictories'",
-    "ObjectPath": "/HazelnutSpread_Rivals/Gameplay/MeshNetwork/CommunityEventQuests/HazelnutSpread_Rivals_Quest_CommunityDuelVictories.3"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "HazelnutSpread_Rivals_Quest_CommunityDuelVictories",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/HazelnutSpread_Rivals/Gameplay/MeshNetwork/CommunityEventQuests/HazelnutSpread_Rivals_Quest_CommunityDuelVictories",
   "Properties": {
-    "ObjectivesExtensionData": [
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "QuestType": "EFortQuestType::AthenaLooseQuest",
+    "CompletionPathResults": [
       {
-        "Key": "HazelnutSpread_Rivals_Quest_CommunityDuelVictories_obj0",
-        "Value": {
-          "Conditionals": [
-            {
-              "EventID": {
-                "TagName": "MeshNetworkedEvent.FactionDuelVictory"
-              },
-              "MapName": "Hera_Terrain",
-              "Attributes": []
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "HazelnutSpread_Rivals_Quest_CommunityDuelVictories_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "MeshNetworkedEvent.FactionDuelVictory"
+            },
+            "Subjects": [],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
             }
-          ]
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.BR )"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Conditionals'HazelnutSpread_Rivals_Quest_CommunityDuelVictories:FortQuestDefinitionComponent_Conditionals_0'",
+        "ObjectPath": "/HazelnutSpread_Rivals/Gameplay/MeshNetwork/CommunityEventQuests/HazelnutSpread_Rivals_Quest_CommunityDuelVictories.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'HazelnutSpread_Rivals_Quest_CommunityDuelVictories:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/HazelnutSpread_Rivals/Gameplay/MeshNetwork/CommunityEventQuests/HazelnutSpread_Rivals_Quest_CommunityDuelVictories.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_UrgentQuest'HazelnutSpread_Rivals_Quest_CommunityDuelVictories:FortQuestDefinitionComponent_UrgentQuest_0'",
+        "ObjectPath": "/HazelnutSpread_Rivals/Gameplay/MeshNetwork/CommunityEventQuests/HazelnutSpread_Rivals_Quest_CommunityDuelVictories.2"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "HazelnutSpread_Rivals_Quest_CommunityDuelVictories_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "41AC28AC43BC71B27379DD8D27997F3B",
+      "SourceString": "Your faction's progress for how many Duels they have won.",
+      "LocalizedString": "Your faction's progress for how many Duels they have won."
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "3337F39648B6F30C36D5C2B2E0815072",
+      "SourceString": "Your faction's progress for how many Duels they have won.",
+      "LocalizedString": "Your faction's progress for how many Duels they have won."
+    },
+    "DataList": [
+      {
+        "Traits": [
+          "Item.Trait.Transient"
+        ]
       }
     ]
   }

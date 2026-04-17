@@ -1,29 +1,27 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_1",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'RiftGauntletsGameplay'",
     "ObjectPath": "/RiftGauntletsGameplay/RiftGauntletsGameplay.3"
   },
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/RiftGauntletsGameplay/Gameplay/Dash/MovementMode/FMM_GuidedMotion_RiftGauntlets_Dash.FMM_GuidedMotion_RiftGauntlets_Dash_C",
-      "SubPathString": ""
-    },
-    "MovementModeRuntimeRefList": [
+    "SourcesToAdd": [
       {
-        "AssetPathName": "/RiftGauntletsGameplay/Gameplay/Dash/Ascend/MovementMode/FMM_GuidedMotion_RiftGauntlets_Ascend.FMM_GuidedMotion_RiftGauntlets_Ascend_C",
-        "SubPathString": ""
-      },
-      {
-        "AssetPathName": "/RiftGauntletsGameplay/Gameplay/Dash/MovementMode/FMM_GuidedMotion_RiftGauntlets_Dash_Hover.FMM_GuidedMotion_RiftGauntlets_Dash_Hover_C",
-        "SubPathString": ""
-      },
-      {
-        "AssetPathName": "/RiftGauntletsGameplay/Gameplay/Dash/MovementMode/FMM_GuidedMotion_RiftGauntlets_Dash_MoveToActor.FMM_GuidedMotion_RiftGauntlets_Dash_MoveToActor_C",
-        "SubPathString": ""
+        "RegistryToAddTo": "ItemBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/RiftGauntletsGameplay/BTInjection/RiftGauntlets_FortItemInjectedBehaviors.RiftGauntlets_FortItemInjectedBehaviors",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       }
     ]
   }

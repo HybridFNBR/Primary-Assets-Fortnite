@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_ShotStopper",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/ShotStopper/ShotStopper/NPCLibrary_Conversation_ShotStopper",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_ShotStopper'",
+    "ObjectPath": "/NPCLibrary/NPCs/ShotStopper/ShotStopper/NPCLibrary_Conversation_ShotStopper.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "E5AE2667-4075D3BC-51EA20BB-55ECAA46",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_ShotStopper:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShotStopper/ShotStopper/NPCLibrary_Conversation_ShotStopper.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F201858B424C4644FF40EDA44854C3AD",
+            "SourceString": "Well there's an interesting loadout.",
+            "LocalizedString": "Well there's an interesting loadout."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_ShotStopper:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/ShotStopper/ShotStopper/NPCLibrary_Conversation_ShotStopper.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "EFD1F42E-4B28280C-6394C8A1-32CAC74A",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_ShotStopper:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShotStopper/ShotStopper/NPCLibrary_Conversation_ShotStopper.5"
-        }
-      },
-      {
-        "Key": "910B08EC-49F5BD3C-C482B9A0-EA674B6B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ShotStopper:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShotStopper/ShotStopper/NPCLibrary_Conversation_ShotStopper.2"
-        }
-      },
-      {
-        "Key": "C984FA95-497B4F1C-27A154A2-B401C54A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_ShotStopper:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/ShotStopper/ShotStopper/NPCLibrary_Conversation_ShotStopper.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "6F6312CD4BD7921F27FBB1B12CA08F78",
+        "SourceString": "I'm not sure you're good enough for my advice yet.",
+        "LocalizedString": "I'm not sure you're good enough for my advice yet."
       }
+    },
+    "OutputConnections": [
+      "C984FA95-497B4F1C-27A154A2-B401C54A",
+      "910B08EC-49F5BD3C-C482B9A0-EA674B6B"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.ShotStopper"
-        },
-        "DestinationList": [
-          "E5AE2667-4075D3BC-51EA20BB-55ECAA46"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "E5AE2667-4075D3BC-51EA20BB-55ECAA46",
-      "EFD1F42E-4B28280C-6394C8A1-32CAC74A",
-      "910B08EC-49F5BD3C-C482B9A0-EA674B6B",
-      "C984FA95-497B4F1C-27A154A2-B401C54A"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "EFD1F42E-4B28280C-6394C8A1-32CAC74A",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_ShotStopper:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/ShotStopper/ShotStopper/NPCLibrary_Conversation_ShotStopper.1"
+    }
   }
 }

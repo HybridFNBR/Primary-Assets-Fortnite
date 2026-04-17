@@ -1,0 +1,161 @@
+{
+  "Type": "FortAudioAnalysisSettings",
+  "Name": "AudioAnalysisSettings",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortAudioAnalysisSettings'",
+  "Package": "/Game/Sounds/AudioAnalysis/AudioAnalysisSettings",
+  "Properties": {
+    "AnalysisSubmix": {
+      "ObjectName": "SoundSubmix'Fortnite_AudioAnalysis_Music'",
+      "ObjectPath": "/Game/Sounds/SubMixes/Fortnite_AudioAnalysis_Music.0"
+    },
+    "AnalysisData": {
+      "SpectrumData": {
+        "BandSettings": [
+          {
+            "BandFrequency": 250.0,
+            "AttackTimeMsec": 80,
+            "ReleaseTimeMsec": 150,
+            "QFactor": 100.0
+          },
+          {
+            "BandFrequency": 800.0,
+            "AttackTimeMsec": 80,
+            "ReleaseTimeMsec": 150,
+            "QFactor": 10.0
+          },
+          {
+            "BandFrequency": 1500.0,
+            "AttackTimeMsec": 80,
+            "ReleaseTimeMsec": 150,
+            "QFactor": 30.0
+          },
+          {
+            "BandFrequency": 4000.0,
+            "AttackTimeMsec": 50,
+            "ReleaseTimeMsec": 100,
+            "QFactor": 100.0
+          }
+        ],
+        "UpdateRate": 45.0,
+        "DecibelNoiseFloor": -60.0
+      },
+      "ScalarParameters": [
+        {
+          "Name": "AverageAmplitude",
+          "MaterialPC": {
+            "ObjectName": "MaterialParameterCollection'Creative_Jukebox_MPC'",
+            "ObjectPath": "/Game/Creative/Devices/Jukebox/Creative_Jukebox_MPC.0"
+          },
+          "NiagaraPC": {
+            "ObjectName": "NiagaraParameterCollection'Papaya_Jukebox_NPC'",
+            "ObjectPath": "/Game/Athena/Sounds/Events/Papaya/FX/Papaya_Jukebox_NPC.0"
+          },
+          "History": {
+            "bEnabled": false,
+            "NameSuffix": "History",
+            "FrameCount": 4,
+            "TimeBetweenFrames": 0.25,
+            "GeneratedParamNames": []
+          },
+          "bDebug": false
+        },
+        {
+          "Name": "EventAudio_Amplitude",
+          "MaterialPC": {
+            "ObjectName": "MaterialParameterCollection'FortniteMaterialParameters'",
+            "ObjectPath": "/Game/Packages/Fortress_SharedMaterials/GlobalMaterialParameters/FortniteMaterialParameters.0"
+          },
+          "NiagaraPC": null,
+          "History": {
+            "bEnabled": false,
+            "NameSuffix": "History",
+            "FrameCount": 4,
+            "TimeBetweenFrames": 0.25,
+            "GeneratedParamNames": []
+          },
+          "bDebug": false
+        },
+        {
+          "Name": "Amplitude_Music",
+          "MaterialPC": {
+            "ObjectName": "MaterialParameterCollection'MPC_Audio_Reactive_Parameters'",
+            "ObjectPath": "/Game/Athena/Events/AudioAnalysis/MPC_Audio_Reactive_Parameters.0"
+          },
+          "NiagaraPC": null,
+          "History": {
+            "bEnabled": true,
+            "NameSuffix": "History",
+            "FrameCount": 3,
+            "TimeBetweenFrames": 0.1,
+            "GeneratedParamNames": []
+          },
+          "bDebug": true
+        }
+      ],
+      "VectorParameters": [
+        {
+          "VectorCount": 1,
+          "GeneratedParamNames": [],
+          "Name": "Percussion",
+          "MaterialPC": {
+            "ObjectName": "MaterialParameterCollection'Creative_Jukebox_MPC'",
+            "ObjectPath": "/Game/Creative/Devices/Jukebox/Creative_Jukebox_MPC.0"
+          },
+          "NiagaraPC": {
+            "ObjectName": "NiagaraParameterCollection'Papaya_Jukebox_NPC'",
+            "ObjectPath": "/Game/Athena/Sounds/Events/Papaya/FX/Papaya_Jukebox_NPC.0"
+          },
+          "History": {
+            "bEnabled": false,
+            "NameSuffix": "History",
+            "FrameCount": 4,
+            "TimeBetweenFrames": 0.25,
+            "GeneratedParamNames": []
+          },
+          "bDebug": false
+        },
+        {
+          "VectorCount": 1,
+          "GeneratedParamNames": [],
+          "Name": "EventAudio_Spectrum",
+          "MaterialPC": {
+            "ObjectName": "MaterialParameterCollection'FortniteMaterialParameters'",
+            "ObjectPath": "/Game/Packages/Fortress_SharedMaterials/GlobalMaterialParameters/FortniteMaterialParameters.0"
+          },
+          "NiagaraPC": null,
+          "History": {
+            "bEnabled": false,
+            "NameSuffix": "History",
+            "FrameCount": 4,
+            "TimeBetweenFrames": 0.25,
+            "GeneratedParamNames": []
+          },
+          "bDebug": false
+        },
+        {
+          "VectorCount": 1,
+          "GeneratedParamNames": [],
+          "Name": "Spectrum_Music",
+          "MaterialPC": {
+            "ObjectName": "MaterialParameterCollection'MPC_Audio_Reactive_Parameters'",
+            "ObjectPath": "/Game/Athena/Events/AudioAnalysis/MPC_Audio_Reactive_Parameters.0"
+          },
+          "NiagaraPC": null,
+          "History": {
+            "bEnabled": true,
+            "NameSuffix": "History",
+            "FrameCount": 3,
+            "TimeBetweenFrames": 0.1,
+            "GeneratedParamNames": []
+          },
+          "bDebug": true
+        }
+      ]
+    },
+    "DebugWidgetClass": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'WB_AudioAnalysis_UI_C'",
+      "ObjectPath": "/Game/Sounds/AudioAnalysis/DebugHUD/WB_AudioAnalysis_UI.8"
+    }
+  }
+}

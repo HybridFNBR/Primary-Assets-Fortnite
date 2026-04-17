@@ -1,120 +1,405 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_QueenTruth",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_QueenTruth'",
+    "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "8A44A027-4E075BAD-3D7E22A8-7A36F012",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_QueenTruth:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.1"
-        }
-      },
-      {
-        "Key": "EA67F9A3-41A58D94-2C2DD3B3-63B1D868",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_QueenTruth:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.17"
-        }
-      },
-      {
-        "Key": "9D3DCB04-498184F7-E0FD6883-B34FE29B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_QueenTruth:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.6"
-        }
-      },
-      {
-        "Key": "B05EBC02-466BA42C-42681684-134E9FA9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_QueenTruth:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.5"
-        }
-      },
-      {
-        "Key": "D48322AB-44091C07-7476A4A7-6503AD3E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_QueenTruth:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.4"
-        }
-      },
-      {
-        "Key": "40EB6BF7-40CE1519-406A6BB8-C62AF29F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_QueenTruth:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.2"
-        }
-      },
-      {
-        "Key": "94A53E3B-4B2EFC71-E718AB87-43BF81D2",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_QueenTruth:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.QueenTruth"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FAA6240C483BE668A65AB7A8086D48DD",
+            "SourceString": "You're lucky, my bus just takes me to school.",
+            "LocalizedString": "You're lucky, my bus just takes me to school."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_QueenTruth:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.15"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "8A44A027-4E075BAD-3D7E22A8-7A36F012"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1F96C552467DE5E5CB9C9AB9AB3A1F47",
+            "SourceString": "Don't have a cow, man.",
+            "LocalizedString": "Don't have a cow, man."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_QueenTruth:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F0D2D4614E1CCC66B31DE3926B3E50D2",
+            "SourceString": "You didn't see me, I was never here.",
+            "LocalizedString": "You didn't see me, I was never here."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_QueenTruth:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7DE500604B9ACEFF4FBA6FAEEFE91C1B",
+            "SourceString": "Way to destroy the town, Homer.",
+            "LocalizedString": "Way to destroy the town, Homer."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_QueenTruth:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0677B36F4D9DE7B85465F2BE2DE8F84D",
+            "SourceString": "I can't believe I'm saying this, but I think dad really needs our help this time.",
+            "LocalizedString": "I can't believe I'm saying this, but I think dad really needs our help this time."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_QueenTruth:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CB7048AB4FC2FAC5F2609B9F556E45A3",
+            "SourceString": "How can someone as lazy as Homer cause this much trouble?",
+            "LocalizedString": "How can someone as lazy as Homer cause this much trouble?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_QueenTruth:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "64B8031D47FFA0F7DCB333B5001B912C",
+            "SourceString": "How many of you are there?",
+            "LocalizedString": "How many of you are there?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_QueenTruth:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9D0D2301464266EAB00FD093BBE44786",
+            "SourceString": "I guess... do... have a cow, man?",
+            "LocalizedString": "I guess... do... have a cow, man?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_QueenTruth:Speech_C_4.FortControllerRequirement_HasCID_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "726CB8E1400AEA7C169E6DA6D84F9AAC",
+        "SourceString": "You didn't see me, I was never here.",
+        "LocalizedString": "You didn't see me, I was never here."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season38.LAF.NPC.Combat",
-      "Conversation.Entry.Season38.Story.P03.Q07.01",
-      "Conversation.Entry.Season38.Story.P03.Q05",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "8A44A027-4E075BAD-3D7E22A8-7A36F012",
-      "EA67F9A3-41A58D94-2C2DD3B3-63B1D868",
-      "9D3DCB04-498184F7-E0FD6883-B34FE29B",
-      "B05EBC02-466BA42C-42681684-134E9FA9",
-      "D48322AB-44091C07-7476A4A7-6503AD3E",
+    },
+    "OutputConnections": [
+      "94A53E3B-4B2EFC71-E718AB87-43BF81D2",
       "40EB6BF7-40CE1519-406A6BB8-C62AF29F",
-      "94A53E3B-4B2EFC71-E718AB87-43BF81D2"
+      "D48322AB-44091C07-7476A4A7-6503AD3E",
+      "B05EBC02-466BA42C-42681684-134E9FA9",
+      "9D3DCB04-498184F7-E0FD6883-B34FE29B"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "EA67F9A3-41A58D94-2C2DD3B3-63B1D868",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_QueenTruth:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/QueenTruth/NPCLibrary_Conversation_QueenTruth.1"
+    }
   }
 }

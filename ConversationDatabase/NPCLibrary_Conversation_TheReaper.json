@@ -1,93 +1,222 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_TheReaper",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_TheReaper'",
+    "ObjectPath": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "EF15ABD5-4A661C50-5B743AB2-D7BB706C",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TheReaper:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C2534B9A45CB547901068597D5A01E24",
+            "SourceString": "Judging by the state of your wallet, I'd say work has been <b>going well.</>Nicely done.",
+            "LocalizedString": "Judging by the state of your wallet, I'd say work has been <b>going well.</>Nicely done."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasBars'NPCLibrary_Conversation_TheReaper:Speech_C_4.FortControllerRequirement_HasBars_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.HighTotalBars"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E34843C84819EA38D98375BDD2B20521",
+            "SourceString": "Took some time off I see? <b>I respect that.</>",
+            "LocalizedString": "Took some time off I see? <b>I respect that.</>"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_TheReaper:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "66DC92674CC4D5E65C74AAA5755FAF20",
+            "SourceString": "Too easy.",
+            "LocalizedString": "Too easy."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_TheReaper:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6255A6E949A227BADBE8C8997EA9FD3B",
+            "SourceString": "You better not be muscling in on my turf.",
+            "LocalizedString": "You better not be muscling in on my turf."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_TheReaper:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "47CE23A1-46056766-2DA640B1-AF7D9BCC",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_TheReaper:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper.8"
-        }
-      },
-      {
-        "Key": "98A09BF8-46D2F946-9EFA38B0-4ED77F97",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TheReaper:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper.2"
-        }
-      },
-      {
-        "Key": "1C003098-4B487F99-2857BABB-480E1A7E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_TheReaper:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "EE0B866747D90C821434DE931DE8D12B",
+        "SourceString": "You're <Hot>lucky</> I'm off-duty.",
+        "LocalizedString": "You're <Hot>lucky</> I'm off-duty."
       }
+    },
+    "OutputConnections": [
+      "1C003098-4B487F99-2857BABB-480E1A7E",
+      "98A09BF8-46D2F946-9EFA38B0-4ED77F97"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.TheReaper"
-        },
-        "DestinationList": [
-          "EF15ABD5-4A661C50-5B743AB2-D7BB706C"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "EF15ABD5-4A661C50-5B743AB2-D7BB706C",
-      "47CE23A1-46056766-2DA640B1-AF7D9BCC",
-      "98A09BF8-46D2F946-9EFA38B0-4ED77F97",
-      "1C003098-4B487F99-2857BABB-480E1A7E"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "47CE23A1-46056766-2DA640B1-AF7D9BCC",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_TheReaper:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/TheReaper/TheReaper/NPCLibrary_Conversation_TheReaper.1"
+    }
   }
 }

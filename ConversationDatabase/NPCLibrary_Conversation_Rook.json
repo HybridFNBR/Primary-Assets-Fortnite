@@ -1,102 +1,178 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Rook",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Rook'",
+    "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "3ADA39C5-4DEFC7C6-BAC014BD-1DCAA0A5",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Rook:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.1"
-        }
-      },
-      {
-        "Key": "D6F3163A-45FAA07D-728E5196-3E3EB5D7",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Rook:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.8"
-        }
-      },
-      {
-        "Key": "BC969B4D-484A95C8-06DC25B0-AD495EDA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Rook:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.2"
-        }
-      },
-      {
-        "Key": "7F3645AC-445B7474-01D08ABB-9230A1F2",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Rook:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.3"
-        }
-      },
-      {
-        "Key": "E24BE7AF-4F35086D-76398885-3AA8C5C9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Rook:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.4"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Rook"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1586421348D53FF8100CDC8A2CB12A70",
+            "SourceString": "You've been off the grid. Got a special assignment undercover with the aliens?",
+            "LocalizedString": "You've been off the grid. Got a special assignment undercover with the aliens?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_Rook:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "3ADA39C5-4DEFC7C6-BAC014BD-1DCAA0A5"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9EC773474C9042C38D9D068EC78BF2E1",
+            "SourceString": "I could use assistance on my mission. What do you know about these flying saucers?",
+            "LocalizedString": "I could use assistance on my mission. What do you know about these flying saucers?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Rook:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6ABFC1FC4F02EF8F4D0C4BB13AE7A37D",
+            "SourceString": "Those Bars... are they from...? Never mind. I don't want to know.",
+            "LocalizedString": "Those Bars... are they from...? Never mind. I don't want to know."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasBars'NPCLibrary_Conversation_Rook:Speech_C_4.FortControllerRequirement_HasBars_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.HighTotalBars"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "CFD2E2944303D5C20E438C92E75FB772",
+        "SourceString": "You need a tactical edge, you came to the right place.",
+        "LocalizedString": "You need a tactical edge, you came to the right place."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests",
-      "Conversation.Entry.Season17.Week2"
-    ],
-    "InternalNodeIds": [
-      "3ADA39C5-4DEFC7C6-BAC014BD-1DCAA0A5",
-      "D6F3163A-45FAA07D-728E5196-3E3EB5D7",
-      "BC969B4D-484A95C8-06DC25B0-AD495EDA",
+    },
+    "OutputConnections": [
+      "E24BE7AF-4F35086D-76398885-3AA8C5C9",
       "7F3645AC-445B7474-01D08ABB-9230A1F2",
-      "E24BE7AF-4F35086D-76398885-3AA8C5C9"
+      "BC969B4D-484A95C8-06DC25B0-AD495EDA"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "D6F3163A-45FAA07D-728E5196-3E3EB5D7",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Rook:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Rook/Rook/NPCLibrary_Conversation_Rook.1"
+    }
   }
 }

@@ -1,21 +1,52 @@
 {
-  "Type": "CustomCharacterBackpackData",
-  "Name": "CustomCharacterBackpackData_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterBackpackData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_Backpack_PartyJelly'",
-    "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_PartyJelly.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_Backpack_PartyJelly",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_PartyJelly",
   "Properties": {
-    "AttachSocketName": "Backpack_BR",
-    "AttachmentOverrideData": {
-      "ObjectName": "CustomAccessoryAttachmentData'FemaleSource'",
-      "ObjectPath": "/Game/Characters/Player/Common/BackpackScaleSettings/FemaleSource.0"
+    "GenderPermitted": "EFortCustomGender::Both",
+    "CharacterPartType": "EFortCustomPartType::Backpack",
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Backpack"
+      ],
+      "PartTypeIndex": 3
     },
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_F_MED_Angler/Meshes/F_MED_Angler_Pack_AnimBP.F_MED_Angler_Pack_AnimBP_C",
+    "PartModifierBlueprint": {
+      "AssetPathName": "/BRCosmetics/Athena/Cosmetics/Blueprints/Part_Modifiers/B_Athena_PartModifier_Backpack_Angler_Female.B_Athena_PartModifier_Backpack_Angler_Female_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterBackpackData'CP_Backpack_PartyJelly:CustomCharacterBackpackData_0'",
+      "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_PartyJelly.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_F_MED_PartyJelly/Meshes/F_MED_PartyJelly_Pack.F_MED_PartyJelly_Pack",
+      "SubPathString": ""
+    },
+    "MaterialOverrides": [
+      {
+        "MaterialOverrideIndex": 0,
+        "OverrideMaterial": {
+          "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_F_MED_PartyJelly/Materials/F_MED_PartyJelly_Backpack_body.F_MED_PartyJelly_Backpack_body",
+          "SubPathString": ""
+        }
+      },
+      {
+        "MaterialOverrideIndex": 1,
+        "OverrideMaterial": {
+          "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_F_MED_PartyJelly/Materials/F_MED_PartyJelly_Backpack_bubble.F_MED_PartyJelly_Backpack_bubble",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "MaterialOverrideFlags": 3,
+    "IdleEffectNiagara": {
+      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_F_MED_Angler/FX/NS_Backpack_Angler_Female.NS_Backpack_Angler_Female",
+      "SubPathString": ""
+    },
+    "IdleFXSocketName": "pack",
+    "bAutoActivate": true
   }
 }

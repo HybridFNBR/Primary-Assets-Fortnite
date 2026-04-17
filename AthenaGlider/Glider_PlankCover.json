@@ -1,506 +1,760 @@
 {
-  "Type": "AthenaGliderItemDefinition",
-  "Name": "Glider_PlankCover",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaGliderItemDefinition'",
-  "Package": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Glider_PlankCover",
+  "Type": "FortCosmeticParticleVariant",
+  "Name": "FortCosmeticParticleVariant_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortCosmeticParticleVariant'",
+  "Outer": {
+    "ObjectName": "AthenaGliderItemDefinition'Glider_PlankCover'",
+    "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Glider_PlankCover.0"
+  },
   "Properties": {
-    "CameraFramingBoundsCenterOffset": {
-      "X": 50.0,
-      "Y": -30.0,
-      "Z": -55.0
-    },
-    "ParachutePrefabClass": {
-      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/B_Athena_Glider_Generic.B_Athena_Glider_Generic_C",
-      "SubPathString": ""
-    },
-    "SkeletalMesh": {
-      "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Meshes/GelatoCourage_Glider.GelatoCourage_Glider",
-      "SubPathString": ""
-    },
-    "GliderMeshTransform": {
-      "Rotation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0,
-        "W": 1.0,
-        "IsNormalized": true,
-        "Size": 1.0,
-        "SizeSquared": 1.0
-      },
-      "Translation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Scale3D": {
-        "X": 1.0,
-        "Y": 1.0,
-        "Z": 1.0
-      }
-    },
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Skydive/ParaGlide/GelatoCourage/GelatoCourage_Glider_AnimBP.GelatoCourage_Glider_AnimBP_C",
-      "SubPathString": ""
-    },
-    "PlayerAnimSet": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Skydive/ParaGlide/GelatoCourage/PLAYER/GelatoCouragePlayerAnimSet.GelatoCouragePlayerAnimSet",
-      "SubPathString": ""
-    },
-    "TrailEffectDefinitions": [
+    "ParticleOptions": [
       {
-        "NiagaraSystem": {
-          "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
-          "SubPathString": ""
-        },
-        "EffectSocket": "None",
-        "Offset": {
-          "Rotation": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0,
-            "W": 1.0,
-            "IsNormalized": true,
-            "Size": 1.0,
-            "SizeSquared": 1.0
-          },
-          "Translation": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          },
-          "Scale3D": {
-            "X": 1.0,
-            "Y": 1.0,
-            "Z": 1.0
-          }
-        },
-        "ActivationMode": "EGliderTrailActivationMode::FullyDeployed",
-        "AttachmentMode": "EGliderTrailAttachmentMode::GliderMesh"
-      }
-    ],
-    "OpenSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/GelatoCourage/SC_GliderOpen_GelatoCourage.SC_GliderOpen_GelatoCourage",
-      "SubPathString": ""
-    },
-    "OpenFrontEndSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/GelatoCourage/SC_GliderOpen_GelatoCourage.SC_GliderOpen_GelatoCourage",
-      "SubPathString": ""
-    },
-    "CloseSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/GelatoCourage/SC_GliderClose_GelatoCourage.SC_GliderClose_GelatoCourage",
-      "SubPathString": ""
-    },
-    "ThrustLoopSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/GelatoCourage/GliderThrustLoop_GelatoCourage_Cue.GliderThrustLoop_GelatoCourage_Cue",
-      "SubPathString": ""
-    },
-    "ThrustSoundParams": [
-      {
-        "Key": "ELayeredAudioTriggerDirection::Forwards",
-        "Value": {
-          "InterpType": "ELayeredAudioInterpolationType::Linear",
-          "Curve": null,
-          "AttackSpeed": 3.0,
-          "ReleaseSpeed": 2.0,
-          "Oneshots": [
-            {
-              "SoundRef": {
-                "AssetPathName": "/BRCosmetics/Sounds/Gliders/GelatoCourage/GliderThrustFwd_GelatoCourage_Cue.GliderThrustFwd_GelatoCourage_Cue",
-                "SubPathString": ""
-              },
-              "GateValue": 0.5,
-              "Direction": "ELayeredAudioTriggerDir::Forward",
-              "FadeWhenOutsideGate": true,
-              "MinTimeSinceTrigger": 0.1,
-              "InterruptFadeTime": 0.5
-            }
-          ]
-        }
-      },
-      {
-        "Key": "ELayeredAudioTriggerDirection::Sideways",
-        "Value": {
-          "InterpType": "ELayeredAudioInterpolationType::Linear",
-          "Curve": null,
-          "AttackSpeed": 3.0,
-          "ReleaseSpeed": 2.0,
-          "Oneshots": [
-            {
-              "SoundRef": {
-                "AssetPathName": "/BRCosmetics/Sounds/Gliders/GelatoCourage/SC_GliderThrustSide_GelatoCourage.SC_GliderThrustSide_GelatoCourage",
-                "SubPathString": ""
-              },
-              "GateValue": 0.5,
-              "Direction": "ELayeredAudioTriggerDir::Forward",
-              "FadeWhenOutsideGate": true,
-              "MinTimeSinceTrigger": 0.1,
-              "InterruptFadeTime": 0.5
-            }
-          ]
-        }
-      },
-      {
-        "Key": "ELayeredAudioTriggerDirection::Backwards",
-        "Value": {
-          "InterpType": "ELayeredAudioInterpolationType::Linear",
-          "Curve": null,
-          "AttackSpeed": 3.0,
-          "ReleaseSpeed": 2.0,
-          "Oneshots": [
-            {
-              "SoundRef": {
-                "AssetPathName": "/BRCosmetics/Sounds/Gliders/GelatoCourage/SC_GliderThrustSide_GelatoCourage.SC_GliderThrustSide_GelatoCourage",
-                "SubPathString": ""
-              },
-              "GateValue": 0.5,
-              "Direction": "ELayeredAudioTriggerDir::Forward",
-              "FadeWhenOutsideGate": true,
-              "MinTimeSinceTrigger": 0.1,
-              "InterruptFadeTime": 0.5
-            }
-          ]
-        }
-      }
-    ],
-    "ItemVariants": [
-      {
-        "ObjectName": "FortCosmeticParticleVariant'Glider_PlankCover:FortCosmeticParticleVariant_0'",
-        "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Glider_PlankCover.1"
-      }
-    ],
-    "ItemVariantPreviews": [
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
-        },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
+        "VariantMaterials": [
           {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
             },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle2"
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Materials/MI_Glider_PlankCover.MI_Glider_PlankCover",
+              "SubPathString": ""
             }
           }
         ],
-        "AdditionalItems": []
-      },
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
-        },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
           {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
             },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle3"
-            }
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 1.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
           }
         ],
-        "AdditionalItems": []
-      },
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
         },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle4"
-            }
-          }
-        ],
-        "AdditionalItems": []
-      },
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
+        "bStartUnlocked": true,
+        "bIsDefault": true,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle1"
         },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle5"
-            }
-          }
-        ],
-        "AdditionalItems": []
-      },
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
+        "VariantName": {
+          "Namespace": "",
+          "Key": "108B6CDB4219E60F7297CA9B5A38C98E",
+          "SourceString": "Circuit Flier",
+          "LocalizedString": "Circuit Flier"
         },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle6"
-            }
-          }
-        ],
-        "AdditionalItems": []
-      },
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
-        },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle7"
-            }
-          }
-        ],
-        "AdditionalItems": []
-      },
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
-        },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle8"
-            }
-          }
-        ],
-        "AdditionalItems": []
-      },
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
-        },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle9"
-            }
-          }
-        ],
-        "AdditionalItems": []
-      },
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
-        },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle10"
-            }
-          }
-        ],
-        "AdditionalItems": []
-      },
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
-        },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle11"
-            }
-          }
-        ],
-        "AdditionalItems": []
-      }
-    ],
-    "VariantShotGridIds": [
-      172661,
-      172607,
-      172612,
-      172580,
-      172585,
-      172576,
-      172589,
-      172616,
-      172603,
-      172598,
-      172594
-    ],
-    "ShotGridIds": [
-      172661,
-      172661,
-      172607,
-      172612,
-      172580,
-      172585,
-      172576,
-      172589,
-      172616,
-      172603,
-      172598,
-      172594
-    ],
-    "BaseShotGridId": 172661,
-    "ItemName": {
-      "Namespace": "",
-      "Key": "75E100CA432659A75956879DBF2EE8AC",
-      "SourceString": "Circuit Flier",
-      "LocalizedString": "Circuit Flier"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "0E00DFD44BE80CDBA2E18AAA85D7AA08",
-      "SourceString": "Enjoy that clean air.",
-      "LocalizedString": "Enjoy that clean air."
-    },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "F6696CF34A757AA818C004912AAFEC0F",
-      "SourceString": "Glider",
-      "LocalizedString": "Glider"
-    },
-    "DataList": [
-      {
-        "MeshOverride": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "SkeletalMeshOverride": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "PivotOffset": {
-          "X": 0.0,
-          "Y": 20.0,
-          "Z": 0.0
-        },
-        "InitialRotation": {
-          "Pitch": 4.0,
-          "Yaw": -60.0,
-          "Roll": -14.0
-        },
-        "Scale": 0.8
-      },
-      {
-        "MinLevel": 1,
-        "MaxLevel": 1
-      },
-      {
-        "Icon": {
+        "PreviewImage": {
           "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover.T_Icon_Glider_PlankCover",
           "SubPathString": ""
-        }
-      },
-      {
-        "LargeIcon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_L.T_Icon_Glider_PlankCover_L",
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
+        },
+        "VariantGameplayTags": []
       },
       {
-        "Tags": [
-          "Cosmetics.Set.BronzeLoud",
-          "Cosmetics.Source.ItemShop",
-          "Cosmetics.UserFacingFlags.HasVariants",
-          "Cosmetics.Filter.Season.38"
-        ]
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Skins/Aid/Materials/MI_Glider_PlankCover_Aid.MI_Glider_PlankCover_Aid",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 2.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle2"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "675A40C241DDA2C72B9145ACB84DEB47",
+          "SourceString": "Aston Martin F1® Team",
+          "LocalizedString": "Aston Martin F1® Team"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_Aid.T_Icon_Glider_PlankCover_Aid",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
       },
       {
-        "Traits": [
-          "Item.Trait.SingleStack"
-        ]
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Skins/Bid/Materials/MI_Glider_PlankCover_Bid.MI_Glider_PlankCover_Bid",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 3.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle3"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "ADC24DDE44F6BEA8BE3EB5AF95332DD9",
+          "SourceString": "Mercedes-AMG F1 Team",
+          "LocalizedString": "Mercedes-AMG F1 Team"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_Bid.T_Icon_Glider_PlankCover_Bid",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
       },
       {
-        "GeneratedTagsIndexes": [
-          244,
-          550,
-          553,
-          237,
-          562,
-          167,
-          269,
-          250,
-          610,
-          613,
-          252,
-          988,
-          1023,
-          92,
-          1185,
-          359,
-          1311,
-          1651,
-          2119,
-          259,
-          2436,
-          2491,
-          392,
-          2615,
-          2678,
-          5017
-        ]
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Skins/Cut/Materials/MI_Glider_PlankCover_Cut.MI_Glider_PlankCover_Cut",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 4.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle4"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "57E9AEB04EC9214967C259913876E851",
+          "SourceString": "KICK Sauber F1® Team",
+          "LocalizedString": "KICK Sauber F1® Team"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_Cut.T_Icon_Glider_PlankCover_Cut",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
       },
       {
-        "Rarity": "EFortRarity::Rare"
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Skins/Itch/Materials/MI_Glider_PlankCover_Itch.MI_Glider_PlankCover_Itch",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 5.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle5"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "083DD4A0402211006D880B9423B38885",
+          "SourceString": "Williams Racing",
+          "LocalizedString": "Williams Racing"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_Itch.T_Icon_Glider_PlankCover_Itch",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
+      },
+      {
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Skins/Jay/Materials/MI_Glider_PlankCover_Jay.MI_Glider_PlankCover_Jay",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 6.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle6"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "84C08190433B7A6285B6DCA923F1B1E9",
+          "SourceString": "Haas F1® Team",
+          "LocalizedString": "Haas F1® Team"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_Jay.T_Icon_Glider_PlankCover_Jay",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
+      },
+      {
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Skins/Job/Materials/MI_Glider_PlankCover_Job.MI_Glider_PlankCover_Job",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 7.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle7"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "C63875404DF66D14D56D599C31BFAA2B",
+          "SourceString": "Alpine F1® Team",
+          "LocalizedString": "Alpine F1® Team"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_Job.T_Icon_Glider_PlankCover_Job",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
+      },
+      {
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Skins/Pan/Materials/MI_Glider_PlankCover_Pan.MI_Glider_PlankCover_Pan",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 8.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle8"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "1FC411D14967605D83527ABEF77D9D8B",
+          "SourceString": "Red Bull Racing",
+          "LocalizedString": "Red Bull Racing"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_Pan.T_Icon_Glider_PlankCover_Pan",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
+      },
+      {
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Skins/Set/Materials/MI_Glider_PlankCover_Set.MI_Glider_PlankCover_Set",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 9.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle9"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "A98AFEFE426ACCC255DB1893C61E21A9",
+          "SourceString": "Scuderia Ferrari",
+          "LocalizedString": "Scuderia Ferrari"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_Set.T_Icon_Glider_PlankCover_Set",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
+      },
+      {
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Skins/Top/Materials/MI_Glider_PlankCover_Top.MI_Glider_PlankCover_Top",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 10.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle10"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "2B5B868B4AD777DB40C02D8381764DC3",
+          "SourceString": "McLaren F1 Team",
+          "LocalizedString": "McLaren F1 Team"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_Top_L.T_Icon_Glider_PlankCover_Top_L",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
+      },
+      {
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/Materials/MI_Glider_GelatoCourage.MI_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_PlankCover/Skins/War/Materials/MI_Glider_PlankCover_War_01.MI_Glider_PlankCover_War_01",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_GelatoCourage/FX/NS_Glider_GelatoCourage.NS_Glider_GelatoCourage",
+              "SubPathString": ""
+            },
+            "ColorParams": [],
+            "VectorParams": [],
+            "FloatParams": [
+              {
+                "Value": 11.0,
+                "ParamName": "VariantPicker"
+              }
+            ],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle11"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "4F1C87AB4D60C8C318CE429D55DEC6EC",
+          "SourceString": "Racing Bulls F1 Team",
+          "LocalizedString": "Racing Bulls F1 Team"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S38/T_Icon_Glider_PlankCover_War.T_Icon_Glider_PlankCover_War",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
       }
-    ]
+    ],
+    "VariantChannelName": {
+      "Namespace": "",
+      "Key": "2ED850294FA7916040EDF9A6C6E84D84",
+      "SourceString": "Style",
+      "LocalizedString": "Style"
+    },
+    "VariantChannelTag": {
+      "TagName": "Cosmetics.Variant.Channel.Particle"
+    }
   }
 }

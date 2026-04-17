@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Longshot",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Longshot/NPCLibrary_Conversation_Longshot",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Longshot'",
+    "ObjectPath": "/NPCLibrary/NPCs/Longshot/NPCLibrary_Conversation_Longshot.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "49E95BDE-44A5F9D9-160CD395-5AA9D217",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Longshot:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Longshot/NPCLibrary_Conversation_Longshot.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7487AFE249E02B7CB3DEC0BC175FE112",
+            "SourceString": "I'm available for hire as a skilled hunter, marksman, and bird watcher.",
+            "LocalizedString": "I'm available for hire as a skilled hunter, marksman, and bird watcher."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Longshot:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Longshot/NPCLibrary_Conversation_Longshot.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "4DEA1E48-47AA9DFF-15878292-8443A492",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Longshot:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Longshot/NPCLibrary_Conversation_Longshot.5"
-        }
-      },
-      {
-        "Key": "A3021155-4E6269E4-7C2C1D99-0AD33EFE",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Longshot:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Longshot/NPCLibrary_Conversation_Longshot.2"
-        }
-      },
-      {
-        "Key": "EC48827F-438FB9C6-8D67EF99-B953B033",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Longshot:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Longshot/NPCLibrary_Conversation_Longshot.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "E973C6DB46C9E6B4C201AA87B475C98D",
+        "SourceString": "If you hire me, I can scan the area for enemies, loot, rare birds... I'll keep that last one to myself.",
+        "LocalizedString": "If you hire me, I can scan the area for enemies, loot, rare birds... I'll keep that last one to myself."
       }
+    },
+    "OutputConnections": [
+      "EC48827F-438FB9C6-8D67EF99-B953B033",
+      "A3021155-4E6269E4-7C2C1D99-0AD33EFE"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Longshot"
-        },
-        "DestinationList": [
-          "49E95BDE-44A5F9D9-160CD395-5AA9D217"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "49E95BDE-44A5F9D9-160CD395-5AA9D217",
-      "4DEA1E48-47AA9DFF-15878292-8443A492",
-      "A3021155-4E6269E4-7C2C1D99-0AD33EFE",
-      "EC48827F-438FB9C6-8D67EF99-B953B033"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "4DEA1E48-47AA9DFF-15878292-8443A492",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Longshot:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Longshot/NPCLibrary_Conversation_Longshot.1"
+    }
   }
 }

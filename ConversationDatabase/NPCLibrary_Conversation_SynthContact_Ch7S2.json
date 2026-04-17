@@ -1,111 +1,395 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_SynthContact_Ch7S2",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_SynthContact_Ch7S2'",
+    "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "A3C14F18-41961F79-63ABE7A4-1C3F9B0D",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SynthContact_Ch7S2:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.1"
-        }
-      },
-      {
-        "Key": "2073FB0B-45B4F5C9-62F05491-5CDD1C14",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_SynthContact_Ch7S2:Speech_C_4'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.14"
-        }
-      },
-      {
-        "Key": "2526B362-49FB3B79-9B68448B-C21ADB7C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SynthContact_Ch7S2:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.5"
-        }
-      },
-      {
-        "Key": "14972329-4AFC85DC-09F52D8E-E1613A11",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SynthContact_Ch7S2:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.4"
-        }
-      },
-      {
-        "Key": "95F042BE-474107E0-A31628A8-56BB4737",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SynthContact_Ch7S2:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.2"
-        }
-      },
-      {
-        "Key": "91F3FAD3-4435D3CA-A62BEF81-4445FFBD",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SynthContact_Ch7S2:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.SynthContact"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "424FF91A49950FB1979F908BE3D24E4D",
+            "SourceString": "More Shards on the map. More pieces in play...",
+            "LocalizedString": "More Shards on the map. More pieces in play..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_SynthContact_Ch7S2:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "A3C14F18-41961F79-63ABE7A4-1C3F9B0D"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FF40573A45C3CE83A9598992B76E120D",
+            "SourceString": "Do you mind? I'm reconnoitering. ",
+            "LocalizedString": "Do you mind? I'm reconnoitering. "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SynthContact_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "95F7E9FD4B83325B517785A12AB9DBB2",
+            "SourceString": "Does the Foundation need something?",
+            "LocalizedString": "Does the Foundation need something?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SynthContact_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "05C7E0CB4A0C91894FDCC9848FA38E1D",
+            "SourceString": "Ah, it's you. That's good, I suppose.",
+            "LocalizedString": "Ah, it's you. That's good, I suppose."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SynthContact_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "99CDD1B941135478BC1A46952875B519",
+            "SourceString": "Distracted again?",
+            "LocalizedString": "Distracted again?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SynthContact_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3043B9A84BA584E76C075392991D20C3",
+            "SourceString": "Don't interfere with my patrol.",
+            "LocalizedString": "Don't interfere with my patrol."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SynthContact_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "38B0140E4A6950BADE992EA902BE46C9",
+            "SourceString": "*sigh* Please no more quips. I've had a long day.",
+            "LocalizedString": "*sigh* Please no more quips. I've had a long day."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SynthContact_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "12D485984FA503D2F7E7D99BC47B9303",
+            "SourceString": "Like looking in a funhouse mirror... ",
+            "LocalizedString": "Like looking in a funhouse mirror... "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SynthContact_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "6301B51343AF086F19626186A8DDEB54",
+        "SourceString": "Do you mind? I'm reconnoitering. ",
+        "LocalizedString": "Do you mind? I'm reconnoitering. "
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.RandomServices",
-      "Conversation.Entry.SynthContact.Dialogue.S40",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "A3C14F18-41961F79-63ABE7A4-1C3F9B0D",
-      "2073FB0B-45B4F5C9-62F05491-5CDD1C14",
-      "2526B362-49FB3B79-9B68448B-C21ADB7C",
-      "14972329-4AFC85DC-09F52D8E-E1613A11",
+    },
+    "OutputConnections": [
+      "91F3FAD3-4435D3CA-A62BEF81-4445FFBD",
       "95F042BE-474107E0-A31628A8-56BB4737",
-      "91F3FAD3-4435D3CA-A62BEF81-4445FFBD"
+      "14972329-4AFC85DC-09F52D8E-E1613A11",
+      "2526B362-49FB3B79-9B68448B-C21ADB7C"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "2073FB0B-45B4F5C9-62F05491-5CDD1C14",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SynthContact_Ch7S2:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibraryCH7S2/NPCs/SynthContact/NPCLibrary_Conversation_SynthContact_Ch7S2.1"
+    }
   }
 }

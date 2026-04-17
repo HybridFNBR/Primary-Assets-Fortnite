@@ -1,217 +1,27 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "quest_S33_dailycreative_DiscoverXP_01",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/CreativePermanentQuests/Items/QuestItems/DailyCreative/EarnXP/quest_S33_dailycreative_DiscoverXP_01",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'quest_S33_dailycreative_DiscoverXP_01'",
+    "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/DailyCreative/EarnXP/quest_S33_dailycreative_DiscoverXP_01.0"
+  },
   "Properties": {
-    "Group": "DailyCreativeQuest",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "quest_S33_dailycreative_DiscoverXP_01_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "DataTableEntryRewards": [
           {
-            "IncrementType": "EAcquireIncrementType::TotalMatchingItemCounts",
-            "bUseItemCount": false,
-            "ItemAcquired": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Resource.XP"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Resource.XP )"
-              }
-            },
-            "ItemCount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'DailyCreative_S33_Rewards'",
+                "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/DailyCreative/DailyCreative_S33_Rewards.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
+              "RowName": "DailyCreativeQuests"
             },
-            "AcquireSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "QuestCategory.BR.DailyCreative"
-                  },
-                  {
-                    "TagName": "QuestCategory.UniversalDailies"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  3,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " NONE( QuestCategory.BR.DailyCreative, QuestCategory.UniversalDailies )"
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "E5DF7120451EA18EAB649298A3DCA110",
-          "SourceString": "Earn XP in Creator-made Islands",
-          "LocalizedString": "Earn XP in Creator-made Islands"
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 30000,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 1.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.FNE"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL( Product.FNE )"
-    },
-    "Category": {
-      "DataTable": {
-        "ObjectName": "DataTable'QuestCategoryTable'",
-        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
-      },
-      "RowName": "BRDailyChallenges"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_S33_dailycreative_DiscoverXP_01:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/DailyCreative/EarnXP/quest_S33_dailycreative_DiscoverXP_01.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_S33_dailycreative_DiscoverXP_01:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/DailyCreative/EarnXP/quest_S33_dailycreative_DiscoverXP_01.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "quest_S33_dailycreative_DiscoverXP_01_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "893414D04F3F653690533B835CB6F322",
-      "SourceString": "Earn XP in Creator-made Islands",
-      "LocalizedString": "Earn XP in Creator-made Islands"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "EEE60C7646327407410FE19FE7DECFA8",
-      "SourceString": "Earn XP in Creator-made Islands",
-      "LocalizedString": "Earn XP in Creator-made Islands"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.FNE.DailyCreative"
         ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

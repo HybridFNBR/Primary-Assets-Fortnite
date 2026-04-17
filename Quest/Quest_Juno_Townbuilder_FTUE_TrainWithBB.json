@@ -1,20 +1,207 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Juno_Townbuilder_FTUE_TrainWithBB'",
-    "ObjectPath": "/JunoPOI_FTUE_Village/Quests/Quest_Juno_Townbuilder_FTUE_TrainWithBB.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Juno_Townbuilder_FTUE_TrainWithBB",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/JunoPOI_FTUE_Village/Quests/Quest_Juno_Townbuilder_FTUE_TrainWithBB",
   "Properties": {
-    "VisibilitySettings": {
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false
+    "QuestSubtype": "EFortQuestSubtype::UrgentQuest",
+    "ExpirationDuration": -1,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Juno_Townbuilder_FTUE_TrainWithBB_obj2",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementBy": "EFortCraftObjectiveIncrementType::Single",
+            "bUseItemCount": false,
+            "ItemCrafted": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Juno.Item.Jewelry.TrinketBasic_T1"
+                  },
+                  {
+                    "TagName": "Juno.Item.Jewelry.TrinketBasic_T2"
+                  },
+                  {
+                    "TagName": "Juno.Item.Jewelry.TrinketBasic_T3"
+                  },
+                  {
+                    "TagName": "Juno.Item.Jewelry.TrinketBasic_T4"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  4,
+                  0,
+                  1,
+                  2,
+                  3
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Juno.Item.Jewelry.TrinketBasic_T1, Juno.Item.Jewelry.TrinketBasic_T2, Juno.Item.Jewelry.TrinketBasic_T3, Juno.Item.Jewelry.TrinketBasic_T4 )"
+              }
+            },
+            "CraftedFormula": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "CraftedIngredients": [],
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "CultureInvariantString": null
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Juno"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.Juno )"
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false,
-      "bHideQuestProgressNotification": true
-    }
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_PersistenceFramework'Quest_Juno_Townbuilder_FTUE_TrainWithBB:FortQuestDefinitionComponent_PersistenceFramework_0'",
+        "ObjectPath": "/JunoPOI_FTUE_Village/Quests/Quest_Juno_Townbuilder_FTUE_TrainWithBB.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Juno_Townbuilder_FTUE_TrainWithBB:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JunoPOI_FTUE_Village/Quests/Quest_Juno_Townbuilder_FTUE_TrainWithBB.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Juno_Townbuilder_FTUE_TrainWithBB_obj2"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "ItemName": {
+      "Namespace": "",
+      "Key": "DFE6F1BD47542E4E2FF1A7AC343597F5",
+      "SourceString": "Prepare for Exploration",
+      "LocalizedString": "Prepare for Exploration"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "45E7B9F84ED0F46713FB51BAEA487D48",
+      "SourceString": "Craft a Health Charm at the Crafting Bench. Then equip it from your inventory.",
+      "LocalizedString": "Craft a Health Charm at the Crafting Bench. Then equip it from your inventory."
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "DFE6F1BD47542E4E2FF1A7AC343597F5",
+      "SourceString": "Prepare for Exploration",
+      "LocalizedString": "Prepare for Exploration"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.AwesomeSystem.Quest.StepComplete"
+        ]
+      }
+    ]
   }
 }

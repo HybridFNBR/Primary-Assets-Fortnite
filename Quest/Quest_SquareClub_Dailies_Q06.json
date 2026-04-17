@@ -1,230 +1,42 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_SquareClub_Dailies_Q06",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/SquareClub_Quests/Items/QuestItems/Quests/Dailies/Quest_SquareClub_Dailies_Q06",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_SquareClub_Dailies_Q06'",
+    "ObjectPath": "/SquareClub_Quests/Items/QuestItems/Quests/Dailies/Quest_SquareClub_Dailies_Q06.0"
+  },
   "Properties": {
-    "Group": "SquareClubDailyQuest",
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_SquareClub_Dailies_Q06_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "DataTableEntryRewards": [
           {
-            "bUseDistance": false,
-            "bAllowSelfInflictedDamage": false,
-            "bRequireCriticalHit": false,
-            "bIncrementByDamageAmount": true,
-            "bUseDamageAmount": false,
-            "bIncrementByUncappedDamage": false,
-            "bUseUncappedDamage": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_SquareClub_Quest_Rewards'",
+                "ObjectPath": "/SquareClub_Quests/DataTables/DT_SquareClub_Quest_Rewards.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+              "RowName": "DailyToken"
             },
-            "DamageSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamagedActor": {
-              "bCanGainProgressForThisObjective": false,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Building.Type.All"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Building.Type.All )"
-              }
-            },
-            "DamageType": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamageAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "UncappedDamageAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
-            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": true
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "B08139E44D692BD836D89097BA7B3EF0",
-          "SourceString": "Damage structures",
-          "LocalizedString": "Damage structures"
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 500,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.SquareClub"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL( Product.SquareClub )"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_SquareClub_Dailies_Q06:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/SquareClub_Quests/Items/QuestItems/Quests/Dailies/Quest_SquareClub_Dailies_Q06.1"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_SquareClub_Dailies_Q06:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/SquareClub_Quests/Items/QuestItems/Quests/Dailies/Quest_SquareClub_Dailies_Q06.2"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_SquareClub_Dailies_Q06_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "18E2D3D942623D9A288CE9AE78DCB96A",
-      "SourceString": "Damage structures",
-      "LocalizedString": "Damage structures"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "26DC2C594A9DB8CCA05D0D8B67EA6206",
-      "SourceString": "Damage structures",
-      "LocalizedString": "Damage structures"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.SquareClub.Dailies"
         ]
       },
-      {}
+      {
+        "ResourceDataTableRewards": [
+          {
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'DT_SquareClub_Quest_Resource_Rewards'",
+                "ObjectPath": "/SquareClub_Quests/DataTables/DT_SquareClub_Quest_Resource_Rewards.0"
+              },
+              "RowName": "Daily_Quest_Reward"
+            },
+            "bHideFromUI": false
+          }
+        ]
+      }
     ]
   }
 }

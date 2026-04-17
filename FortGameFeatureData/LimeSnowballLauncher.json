@@ -1,15 +1,55 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'LimeSnowballLauncher'",
-    "ObjectPath": "/LimeSnowballLauncher/LimeSnowballLauncher.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "LimeSnowballLauncher",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/LimeSnowballLauncher/LimeSnowballLauncher",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "CreativeRoot"
+    "PlaylistItemsToFullyLoad": [
+      {
+        "PlaylistTags": [
+          "Athena.Creative",
+          "Athena.Playground",
+          "Playlist.Lime"
+        ],
+        "ItemIdsToFullyLoad": [
+          {
+            "PrimaryAssetType": {
+              "Name": "Weapon"
+            },
+            "PrimaryAssetName": "WID_Launcher_Snowball_Lime"
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'LimeSnowballLauncher:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/LimeSnowballLauncher/LimeSnowballLauncher.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
     ]
   }
 }

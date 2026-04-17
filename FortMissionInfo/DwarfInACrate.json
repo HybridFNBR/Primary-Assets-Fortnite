@@ -1,17 +1,67 @@
 {
-  "Type": "FortDifficultyOptionCategoryEncounter_PawnNumberCap",
-  "Name": "FortDifficultyOptionCategoryEncounter_PawnNumberCap_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortDifficultyOptionCategoryEncounter_PawnNumberCap'",
-  "Outer": {
-    "ObjectName": "FortMissionInfo'DwarfInACrate'",
-    "ObjectPath": "/SaveTheWorld/Missions/Tertiary/DwarfInACrate/DwarfInACrate.2"
-  },
+  "Type": "FortMissionInfo",
+  "Name": "DwarfInACrate",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Package": "/SaveTheWorld/Missions/Tertiary/DwarfInACrate/DwarfInACrate",
   "Properties": {
-    "Options": [
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Tertiary/DwarfInACrate/Mission_DwarfInACrate.Mission_DwarfInACrate_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "ObjectiveBlocks": [
       {
-        "ObjectName": "BlueprintGeneratedClass'AA_EDO_PawnNumberCap_ScriptedSpawn_1_C'",
-        "ObjectPath": "/Game/AIDirector/Encounters/DifficultyOptions/Pacing/ScriptedSpawn/AA_EDO_PawnNumberCap_ScriptedSpawn_1.1"
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/Game/Missions/GenericObjectives/GenericObjective_Blank.GenericObjective_Blank_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Optional",
+            "ObjectiveHandle": [],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "MinDistanceToOtherMissions": 100.0,
+    "PlacementActorInfo": {
+      "DistanceRangeMin": 100.0
+    },
+    "bStartPlayingOnLoad": true,
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn.EDO_Set_ScriptedSpawn",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_PawnNumberCap'DwarfInACrate:FortDifficultyOptionCategoryEncounter_PawnNumberCap_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Tertiary/DwarfInACrate/DwarfInACrate.0"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'DwarfInACrate:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Tertiary/DwarfInACrate/DwarfInACrate.1"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
       }
     ]
   }

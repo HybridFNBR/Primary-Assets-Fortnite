@@ -1,16 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'TidalCraneExotics'",
     "ObjectPath": "/TidalCraneExotics/TidalCraneExotics.2"
   },
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/TidalCraneExotics/Gameplay/ShockwaveLauncher/MME_ShockGrenade_Hangtime.MME_ShockGrenade_Hangtime_C",
-      "SubPathString": ""
-    }
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "ItemBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/TidalCraneExotics/AI/BTInjection/TidalCraneExotics_ItemInjectedBehaviors.TidalCraneExotics_ItemInjectedBehaviors",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ]
   }
 }

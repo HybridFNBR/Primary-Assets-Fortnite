@@ -1,240 +1,50 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_S40_FF_EV_Damage_Q01",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Evolving/Group_2_Quests/Quest_S40_FF_EV_Damage_Q01",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_S40_FF_EV_Damage_Q01'",
+    "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Evolving/Group_2_Quests/Quest_S40_FF_EV_Damage_Q01.0"
+  },
   "Properties": {
-    "Group": "Evergreen_FF_Evolving_Combat",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_S40_FF_EV_Damage_Q01_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "TokenRewards": [
           {
-            "bUseDistance": false,
-            "bAllowSelfInflictedDamage": false,
-            "bRequireCriticalHit": false,
-            "bIncrementByDamageAmount": true,
-            "bUseDamageAmount": false,
-            "bIncrementByUncappedDamage": false,
-            "bUseUncappedDamage": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+            "TokenDefinition": {
+              "AssetPathName": "/ForbiddenFruitQuests/Items/Tokens/Athena_ForbiddenFruit_Evolving_Token.Athena_ForbiddenFruit_Evolving_Token",
+              "SubPathString": ""
             },
-            "DamageSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamagedActor": {
-              "bCanGainProgressForThisObjective": false,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Homebase.Class"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Homebase.Class )"
-              }
-            },
-            "DamageType": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamageAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "UncappedDamageAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
-            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "TokenCount": 1,
+            "bHideFromUI": true
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "CultureInvariantString": null
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 1,
-          "DisplayMaxStage": 3
-        },
-        "Count": 250,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 50,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.ForbiddenFruit.NoBuild"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL( Product.ForbiddenFruit.NoBuild )"
-    },
-    "Category": {
-      "DataTable": {
-        "ObjectName": "DataTable'QuestCategoryTable'",
-        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
-      },
-      "RowName": "BRDailyChallenges"
-    },
-    "SortPriority": 2,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S40_FF_EV_Damage_Q01:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Evolving/Group_2_Quests/Quest_S40_FF_EV_Damage_Q01.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S40_FF_EV_Damage_Q01:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Evolving/Group_2_Quests/Quest_S40_FF_EV_Damage_Q01.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_S40_FF_EV_Damage_Q01_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "F7EDB90E4B2FADBCA12AC98C574ECA0D",
-      "SourceString": "<img id=\"BlitzEvergreenTier1\"/> Damage players",
-      "LocalizedString": "<img id=\"BlitzEvergreenTier1\"/> Damage players"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "0B95D78941747D681D02F588F07AC318",
-      "SourceString": "<img id=\"BlitzEvergreenTier1\"/> Damage players",
-      "LocalizedString": "<img id=\"BlitzEvergreenTier1\"/> Damage players"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.ForbiddenFruit.Evolving"
         ]
       },
-      {},
       {
-        "Rarity": "EFortRarity::Common"
+        "ResourceDataTableRewards": [
+          {
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestXPReward_ForbiddenFruit_Evolving'",
+                "ObjectPath": "/ForbiddenFruitQuests/DataTables/QuestXPReward_ForbiddenFruit_Evolving.0"
+              },
+              "RowName": "ChallengeReward_Tier_01"
+            },
+            "bHideFromUI": false
+          }
+        ]
+      },
+      {
+        "QuestRewards": [
+          {
+            "QuestDefinition": {
+              "AssetPathName": "/ForbiddenFruitQuests/Items/QuestItems/Quests/Evolving/Group_2_Quests/Quest_S40_FF_EV_Damage_Q02.Quest_S40_FF_EV_Damage_Q02",
+              "SubPathString": ""
+            },
+            "bHideFromUI": false
+          }
+        ]
       }
     ]
   }

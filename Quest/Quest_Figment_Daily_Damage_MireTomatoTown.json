@@ -1,256 +1,27 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_Figment_Daily_Damage_MireTomatoTown",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_Damage_MireTomatoTown",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_Figment_Daily_Damage_MireTomatoTown'",
+    "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_Damage_MireTomatoTown.0"
+  },
   "Properties": {
-    "Group": "FigmentEvergreenDailyQuestLocation",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_Figment_Daily_Damage_MireTomatoTown_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "DataTableEntryRewards": [
           {
-            "bUseDistance": false,
-            "bAllowSelfInflictedDamage": false,
-            "bRequireCriticalHit": false,
-            "bIncrementByDamageAmount": true,
-            "bUseDamageAmount": false,
-            "bIncrementByUncappedDamage": false,
-            "bUseUncappedDamage": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestRewards_Evergreen_Figment'",
+                "ObjectPath": "/FigmentQuests/DataTables/QuestRewards_Evergreen_Figment.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+              "RowName": "FigmentDailyQuestRewards"
             },
-            "DamageSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamagedActor": {
-              "bCanGainProgressForThisObjective": false,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Homebase.Class"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Homebase.Class )"
-              }
-            },
-            "DamageType": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamageAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "UncappedDamageAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
-            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Location.POI.MoistyMire"
-                  },
-                  {
-                    "TagName": "Athena.Location.POI.TomatoTown"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Athena.Location.POI.MoistyMire, Athena.Location.POI.TomatoTown )"
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "4C1B83094E4F2056EE3A6DAF61569157",
-          "SourceString": "Damage players at Moisty Mire or Tomato Town",
-          "LocalizedString": "Damage players at Moisty Mire or Tomato Town"
-        },
-        "HudShortDescription": {
-          "Namespace": "",
-          "Key": "C85982D94807EFA61800A0A7937F8D80",
-          "SourceString": "Damage players at Moisty Mire or Tomato Town",
-          "LocalizedString": "Damage players at Moisty Mire or Tomato Town"
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 50,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Figment"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Product.Figment )"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Daily_Damage_MireTomatoTown:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_Damage_MireTomatoTown.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_Figment_Daily_Damage_MireTomatoTown:FortQuestDefinitionComponent_MapMarkers_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_Damage_MireTomatoTown.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Daily_Damage_MireTomatoTown:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_Damage_MireTomatoTown.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_Figment_Daily_Damage_MireTomatoTown_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "E168FEBA4B56F5A9BF977F94CD29E140",
-      "SourceString": "Damage players at Moisty Mire or Tomato Town",
-      "LocalizedString": "Damage players at Moisty Mire or Tomato Town"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "DEE55EF04A7194F84BE74DAD4696FF93",
-      "SourceString": "Damage players at Moisty Mire or Tomato Town",
-      "LocalizedString": "Damage players at Moisty Mire or Tomato Town"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.Figment.Dailies"
         ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

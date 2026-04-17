@@ -1,17 +1,79 @@
 {
-  "Type": "FortDifficultyOptionCategoryEncounter_PawnNumberCap",
-  "Name": "FortDifficultyOptionCategoryEncounter_PawnNumberCap_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortDifficultyOptionCategoryEncounter_PawnNumberCap'",
-  "Outer": {
-    "ObjectName": "FortMissionInfo'Winter_2017_Tertiary'",
-    "ObjectPath": "/SaveTheWorld/Missions/Tertiary/Winter2017/Winter_2017_Tertiary.2"
-  },
+  "Type": "FortMissionInfo",
+  "Name": "Winter_2017_Tertiary",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Package": "/SaveTheWorld/Missions/Tertiary/Winter2017/Winter_2017_Tertiary",
   "Properties": {
-    "Options": [
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Tertiary/Winter2017/Mission_Winter_2017_Tertiary.Mission_Winter_2017_Tertiary_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "CA7467B848654AC231712BBA9435EF96",
+      "SourceString": "Explore the zone until you've revealed the entire map.",
+      "LocalizedString": "Explore the zone until you've revealed the entire map."
+    },
+    "ObjectiveBlocks": [
       {
-        "ObjectName": "BlueprintGeneratedClass'AA_EDO_PawnNumberCap_ScriptedSpawn_1_C'",
-        "ObjectPath": "/Game/AIDirector/Encounters/DifficultyOptions/Pacing/ScriptedSpawn/AA_EDO_PawnNumberCap_ScriptedSpawn_1.1"
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/Game/Missions/GenericObjectives/GenericObjective_Blank.GenericObjective_Blank_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "bStartPlayingOnLoad": true,
+    "WeightedRewards": {
+      "ObjectName": "FortMissionWeightedRewards'Rewards_Low'",
+      "ObjectPath": "/SaveTheWorld/Missions/Rewards/Rewards_Low.0"
+    },
+    "MissionName": {
+      "Namespace": "",
+      "Key": "DDEFE18D43B8ECC757E699BE298750DA",
+      "SourceString": "Reveal the Map",
+      "LocalizedString": "Reveal the Map"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/ScriptedSpawn/EDO_Set_ScriptedSpawn.EDO_Set_ScriptedSpawn",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnGroupProgression'Winter_2017_Tertiary:FortDifficultyOptionCategoryEncounter_SpawnGroupProgression_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Tertiary/Winter2017/Winter_2017_Tertiary.1"
+          },
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_PawnNumberCap'Winter_2017_Tertiary:FortDifficultyOptionCategoryEncounter_PawnNumberCap_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Tertiary/Winter2017/Winter_2017_Tertiary.0"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.ScriptedSpawn"
+        ]
       }
     ]
   }

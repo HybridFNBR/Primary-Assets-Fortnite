@@ -1,83 +1,40 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'MatchObjectivesUI'",
-    "ObjectPath": "/MatchObjectivesUI/MatchObjectivesUI.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "MatchObjectivesUI",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/MatchObjectivesUI/MatchObjectivesUI",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.Deliver"
-              },
-              {
-                "TagName": "Athena.Playlists.ToadJam"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              1,
-              0,
-              3,
-              2,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default ),  NONE( Athena.Playlist.Deliver, Athena.Playlists.ToadJam ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "DynamicUIDirectorClass": {
+      "AssetPathName": "/MatchObjectivesUI/MatchObjectivesUIDirector.MatchObjectivesUIDirector_C",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
-        },
-        {
-          "TagName": "Athena.Playlist.Deliver"
-        },
-        {
-          "TagName": "Athena.Playlists.ToadJam"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        2,
-        1,
-        1,
-        0,
-        3,
-        2,
-        1,
-        2
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default ),  NONE( Athena.Playlist.Deliver, Athena.Playlists.ToadJam ) )"
-    }
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/MatchObjectivesUI/MatchObjectivesHudWidgetRegistry.MatchObjectivesHudWidgetRegistry",
+      "SubPathString": ""
+    },
+    "MobileHUDPresetExtensionContainers": [
+      {
+        "AssetPathName": "/MatchObjectivesUI/MatchObjectivesPresetExtensionContainer.MatchObjectivesPresetExtensionContainer",
+        "SubPathString": ""
+      },
+      {
+        "AssetPathName": "/MatchObjectivesUI/MatchObjectivesDevPresetExtensionContainer.MatchObjectivesDevPresetExtensionContainer",
+        "SubPathString": ""
+      }
+    ],
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'MatchObjectivesUI:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/MatchObjectivesUI/MatchObjectivesUI.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'MatchObjectivesUI:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/MatchObjectivesUI/MatchObjectivesUI.1"
+      }
+    ]
   }
 }

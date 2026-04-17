@@ -1,15 +1,67 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'LimeKymera'",
-    "ObjectPath": "/LimeKymera/LimeKymera.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "LimeKymera",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/LimeKymera/LimeKymera",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "CreativeRoot"
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/LimeKymera/DataAsset/LimeKymeraReticleExtensionData.LimeKymeraReticleExtensionData",
+      "SubPathString": ""
+    },
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/MotherGameplay/HUD/MotherHUDWidgetRegistry.MotherHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "MobileHUDPresetExtensionContainer": {
+      "AssetPathName": "/MotherGameplay/HUD/MotherPresetExtensionContainer.MotherPresetExtensionContainer",
+      "SubPathString": ""
+    },
+    "PlaylistItemsToFullyLoad": [
+      {
+        "PlaylistTags": [
+          "Athena.Creative",
+          "Athena.Playground",
+          "Playlist.Lime"
+        ],
+        "ItemIdsToFullyLoad": [
+          {
+            "PrimaryAssetType": {
+              "Name": "Weapon"
+            },
+            "PrimaryAssetName": "WID_Lime_Kymera"
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'LimeKymera:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/LimeKymera/LimeKymera.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
     ]
   }
 }

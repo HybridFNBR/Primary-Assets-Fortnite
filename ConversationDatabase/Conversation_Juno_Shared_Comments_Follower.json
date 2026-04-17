@@ -1,30 +1,155 @@
 {
-  "Type": "Continue_C",
-  "Name": "Continue_C_0",
+  "Type": "JunoConversationTaskNode_Speech_C",
+  "Name": "JunoConversationTaskNode_Speech_C_9",
   "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "BlueprintGeneratedClass'/Game/Conversation/Continue.Continue_C'",
+  "Class": "BlueprintGeneratedClass'/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.JunoConversationTaskNode_Speech_C'",
   "Outer": {
     "ObjectName": "ConversationDatabase'Conversation_Juno_Shared_Comments_Follower'",
     "ObjectPath": "/JunoNPCLibrary/Convo/Shared_Comments/Conversation_Juno_Shared_Comments_Follower.13"
   },
   "Template": {
-    "ObjectName": "Continue_C'Default__Continue_C'",
-    "ObjectPath": "/Game/Conversation/Continue.1"
+    "ObjectName": "JunoConversationTaskNode_Speech_C'Default__JunoConversationTaskNode_Speech_C'",
+    "ObjectPath": "/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.2"
   },
   "Properties": {
+    "DefaultMoodReactionTag": {
+      "TagName": "Juno.Mood.Reactions.Statement.Default"
+    },
+    "bUseInlineConfig": false,
+    "ExternalContextualMessageCollection": {
+      "ObjectName": "JunoContextualMessageConfigCollection'Conversation_Juno_Bank_Quip_Raining'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/ExternalMsg/Blurbs/Conversation_Juno_Bank_Quip_Raining.0"
+    },
+    "SpecializedConfigs": [
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Persona"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Persona )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Default"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Default"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Default'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Default.0"
+          },
+          "RowName": "Quip_Raining"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Persona.Nonverbal"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Persona.Nonverbal )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Default_Nonverbal"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Default_Nonverbal"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Default_NV'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Default_NV.0"
+          },
+          "RowName": "Quip_Raining"
+        }
+      }
+    ],
     "SubNodes": [
       {
-        "ObjectName": "FortConversationRequirement_ControllerRequirement'Conversation_Juno_Shared_Comments_Follower:FortConversationRequirement_ControllerRequirement_2'",
-        "ObjectPath": "/JunoNPCLibrary/Convo/Shared_Comments/Conversation_Juno_Shared_Comments_Follower.79"
+        "ObjectName": "FortConversationRequirement_ControllerRequirement'Conversation_Juno_Shared_Comments_Follower:FortConversationRequirement_ControllerRequirement_108'",
+        "ObjectPath": "/JunoNPCLibrary/Convo/Shared_Comments/Conversation_Juno_Shared_Comments_Follower.64"
+      },
+      {
+        "ObjectName": "FortConversationRequirement_ControllerRequirement'Conversation_Juno_Shared_Comments_Follower:FortConversationRequirement_ControllerRequirement_109'",
+        "ObjectPath": "/JunoNPCLibrary/Convo/Shared_Comments/Conversation_Juno_Shared_Comments_Follower.65"
       }
     ],
     "OutputConnections": [
-      "0CEF1481-47317232-50BB589E-1FD7B4E5"
+      "8DA863E7-470BE381-106492A3-C5BBC6F2"
     ],
-    "Compiled_NodeGUID": "147E1066-4B2C2AE3-45B3A1AC-4ACC315C",
+    "NodeName": "Quip_Raining",
+    "Compiled_NodeGUID": "AA940A64-4D31C4CC-3A74B39A-6D67663B",
     "ParentNode": {
-      "ObjectName": "Continue_C'Conversation_Juno_Shared_Comments_Follower:Continue_C_6'",
-      "ObjectPath": "/JunoNPCLibrary/Convo/Shared_Comments/Conversation_Juno_Shared_Comments_Follower.11"
+      "ObjectName": "Continue_C'Conversation_Juno_Shared_Comments_Follower:Continue_C_16'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/Shared_Comments/Conversation_Juno_Shared_Comments_Follower.2"
     }
   }
 }

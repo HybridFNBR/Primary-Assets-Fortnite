@@ -1,17 +1,55 @@
 {
-  "Type": "FortGameFeatureAction_AddInjectionSupportingBehavior",
-  "Name": "FortGameFeatureAction_AddInjectionSupportingBehavior_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddInjectionSupportingBehavior'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'SproutAI'",
     "ObjectPath": "/SproutAI/SproutAI.3"
   },
   "Properties": {
-    "InjectionSupportingBehaviors": [
+    "SourcesToAdd": [
       {
-        "AssetPathName": "/SproutAI/AI/BehaviorTrees/BT_Sprout_Minifig.BT_Sprout_Minifig",
-        "SubPathString": ""
+        "RegistryToAddTo": "ItemBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/SproutAI/AI/BehaviorTrees/Injection/SproutMinifig_ItemInjectedBehaviorsDataTable.SproutMinifig_ItemInjectedBehaviorsDataTable",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "RegistryToAddTo": "ItemDefinitionLootData",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/SproutAI/AI/Datatables/SproutNPCLootOnSpawnDataTable.SproutNPCLootOnSpawnDataTable",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "RegistryToAddTo": "SproutContexualEvents_NonLLM_NPC",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/SproutAI/ContextualDatatables/DT_Sprout_NonLLM_NPC_Social_Contextual.DT_Sprout_NonLLM_NPC_Social_Contextual",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       }
     ]
   }

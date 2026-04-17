@@ -1,17 +1,186 @@
 {
-  "Type": "FortGameFeatureAction_AddShuffleItemDefinitions",
-  "Name": "FortGameFeatureAction_AddShuffleItemDefinitions_0",
+  "Type": "GFA_RegisterCosmeticDownloadSettings",
+  "Name": "GFA_RegisterCosmeticDownloadSettings_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddShuffleItemDefinitions'",
+  "Class": "UScriptClass'GFA_RegisterCosmeticDownloadSettings'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'CosmeticShoes'",
     "ObjectPath": "/CosmeticShoes/CosmeticShoes.9"
   },
   "Properties": {
-    "ShuffleItemDefinitions": [
+    "PerTypeSubstitutionSettings": [
       {
-        "AssetPathName": "/CosmeticShoes/Assets/Items/Cosmetics/Shoes_Random.Shoes_Random",
-        "SubPathString": ""
+        "Key": {
+          "TagName": "IADCosmeticType.Shoes"
+        },
+        "Value": {
+          "AllowInGamePhase": "EAthenaGamePhase::Warmup",
+          "AllowIfHasNeverBeenRendered": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Shoes.AllowIfNeverRendered"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AlwaysImmediateSwapForRequestSource": [
+            {
+              "TagName": "IADRequestSource.Loadout"
+            }
+          ],
+          "AllowGraceTimeSinceSpawning": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Shoes.GraceTimeSinceSpawn"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "TypeConsideredActiveByDefault": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Shoes.ConsiderActiveByDefault"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AllowImmediateSwapWhileActiveLocalPlayer": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Shoes.AllowLocal"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AllowImmediateSwapWhileActiveRemotePlayer": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Shoes.AllowRemote"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AllowImmediateSwapWhileActiveForMannequin": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Shoes.AllowMannequin"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AllowInView": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Shoes.AllowInView"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "AllowOutOfView": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Shoes.AllowOutOfView"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "EnforcedMinimumDistanceInViewMeters": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Shoes.MinDistInViewMeters"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "EnforcedMinimumDistanceOutOfViewMeters": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'DownloadSettings'",
+                "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+              },
+              "RowName": "ImmediateSwap.Shoes.MinDistNotInViewMeters"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          }
+        }
+      }
+    ],
+    "LoadoutSlotTagToIADCosmeticTypeTag": [
+      {
+        "Key": {
+          "TagName": "LoadoutSlot.ExtraPart"
+        },
+        "Value": {
+          "Tag": {
+            "TagName": "IADCosmeticType.Shoes"
+          },
+          "GroupID": {
+            "TagName": "None"
+          },
+          "RequiredCVarName": "Fort.CosmeticDownloads.ShoesIADCosmeticTypeEnabled"
+        }
+      }
+    ],
+    "CharacterPartTypeToIADCosmeticTypeTag": [
+      {
+        "Key": "EFortCustomPartType::ExtraPart",
+        "Value": {
+          "Tag": {
+            "TagName": "IADCosmeticType.Shoes"
+          },
+          "GroupID": {
+            "TagName": "None"
+          },
+          "RequiredCVarName": "Fort.CosmeticDownloads.ShoesIADCosmeticTypeEnabled"
+        }
       }
     ]
   }

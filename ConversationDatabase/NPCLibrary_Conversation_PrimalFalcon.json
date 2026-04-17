@@ -1,93 +1,312 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_PrimalFalcon",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_PrimalFalcon'",
+    "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "D9F8DB79-4900AD1C-3D4099A3-6AF619A4",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_PrimalFalcon:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4776A4CD41F7B4A3601AA7BCC2246322",
+            "SourceString": "You're lucky you're not a god. I might have hurt you.",
+            "LocalizedString": "You're lucky you're not a god. I might have hurt you."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_PrimalFalcon:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "665A4CAD413A74E0AD7FE983ED25E1EA",
+            "SourceString": "You, above all, should understand why I hunt.",
+            "LocalizedString": "You, above all, should understand why I hunt."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_PrimalFalcon:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C47D6D864F99A20C84BF03A46C774461",
+            "SourceString": "When this is over, I'll wield your power as a trophy.",
+            "LocalizedString": "When this is over, I'll wield your power as a trophy."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_PrimalFalcon:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6E0ECDC4423488294A4E3CB5D4F68D59",
+            "SourceString": "I wonder, have your chains ever held you?",
+            "LocalizedString": "I wonder, have your chains ever held you?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_PrimalFalcon:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "93ED690340E736C23D09A0A0BE65E972",
+            "SourceString": "Hearts were meant to be broken. I am simply the hammer.",
+            "LocalizedString": "Hearts were meant to be broken. I am simply the hammer."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_PrimalFalcon:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "63A7CD344BC007CE3FA573A847D66DDE",
+            "SourceString": "The sea's tempests don't hold a candle to me.",
+            "LocalizedString": "The sea's tempests don't hold a candle to me."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_PrimalFalcon:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "CD360BD5-43CFDE23-BEB724A0-7562A69A",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_PrimalFalcon:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.10"
-        }
-      },
-      {
-        "Key": "EF6A8B42-4E65F122-2BE0CBB7-08AA1EED",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_PrimalFalcon:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.2"
-        }
-      },
-      {
-        "Key": "964F18EB-4BE5FDF4-51CA4B83-C4A51E2A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_PrimalFalcon:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "D382BAEF41D44EE4A592818FB9BF7748",
+        "SourceString": "You shouldn't fear the gods. They should fear you.",
+        "LocalizedString": "You shouldn't fear the gods. They should fear you."
       }
+    },
+    "OutputConnections": [
+      "964F18EB-4BE5FDF4-51CA4B83-C4A51E2A",
+      "EF6A8B42-4E65F122-2BE0CBB7-08AA1EED"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.PrimalFalcon"
-        },
-        "DestinationList": [
-          "D9F8DB79-4900AD1C-3D4099A3-6AF619A4"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "D9F8DB79-4900AD1C-3D4099A3-6AF619A4",
-      "CD360BD5-43CFDE23-BEB724A0-7562A69A",
-      "EF6A8B42-4E65F122-2BE0CBB7-08AA1EED",
-      "964F18EB-4BE5FDF4-51CA4B83-C4A51E2A"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "CD360BD5-43CFDE23-BEB724A0-7562A69A",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_PrimalFalcon:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/PrimalFalcon/NPCLibrary_Conversation_PrimalFalcon.1"
+    }
   }
 }

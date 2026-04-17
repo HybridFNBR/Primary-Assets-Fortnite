@@ -1,34 +1,29 @@
 {
-  "Type": "FortGameFeatureAction_AddBetaPermissions",
-  "Name": "FortGameFeatureAction_AddBetaPermissions_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddBetaPermissions'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'FN1GFSMetaData'",
     "ObjectPath": "/FN1GFSMetaData/FN1GFSMetaData.3"
   },
   "Properties": {
-    "CreativeBetaPermissions": [
+    "SourcesToAdd": [
       {
-        "bUseCustomPrimaryAssetId": false,
-        "PrimaryAssetId": {
-          "PrimaryAssetType": {
-            "Name": "CreativePlot"
-          },
-          "PrimaryAssetName": "FN1FlatGridPlotDefinition"
+        "RegistryToAddTo": "Creative.IslandTemplates",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/FN1GFSMetaData/DT_FN1IslandTemplateDefinitions.DT_FN1IslandTemplateDefinitions",
+          "SubPathString": ""
         },
-        "PermissionTagContainer": [],
-        "EntitlementTagContainer": [
-          "VKCreateUGCEpicDeveloper"
-        ],
-        "CustomPrimaryAssetId": {
-          "Type": "None",
-          "Name": "None"
-        },
-        "bDisabledInVKPlaylists": false,
-        "bDisabledInCreativePlaylists": false,
-        "bEnabled": true
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       }
-    ]
+    ],
+    "bPreloadInEditor": true
   }
 }

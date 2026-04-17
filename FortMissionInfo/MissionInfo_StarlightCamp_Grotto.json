@@ -1,21 +1,458 @@
 {
-  "Type": "FortDifficultyOptionCategoryEncounter_ModifierTags",
-  "Name": "FortDifficultyOptionCategoryEncounter_ModifierTags_2",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortDifficultyOptionCategoryEncounter_ModifierTags'",
-  "Outer": {
-    "ObjectName": "FortMissionInfo'MissionInfo_StarlightCamp_Grotto'",
-    "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto.3"
-  },
+  "Type": "FortMissionInfo",
+  "Name": "MissionInfo_StarlightCamp_Grotto",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortMissionInfo'",
+  "Package": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto",
   "Properties": {
-    "Options": [
+    "MissionRef": {
+      "AssetPathName": "/SaveTheWorld/Missions/Primary/Starlight/Camp/Mission_StarlightCamp.Mission_StarlightCamp_C",
+      "SubPathString": ""
+    },
+    "MissionType": "EFortMissionType::Secondary",
+    "MissionTags": [
+      "Stat.Mission.Starlight.Encounter"
+    ],
+    "MaxMissionPoints": 24,
+    "MissionDescription": {
+      "Namespace": "",
+      "Key": "29861C794C16CF0E0EF1BF8ABE230E82",
+      "SourceString": "(temp) Encounter Description (MissionInfo)",
+      "LocalizedString": "(temp) Encounter Description (MissionInfo)"
+    },
+    "MissionIcons": {
+      "Brush_XXS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-MaydayMission-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-MaydayMission-32.0"
+        }
+      },
+      "Brush_XS": {
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-MaydayMission-32'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-MaydayMission-32.0"
+        }
+      },
+      "Brush_S": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-MaydayMission-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-MaydayMission-64.0"
+        }
+      },
+      "Brush_M": {
+        "ImageSize": {
+          "X": 64.0,
+          "Y": 64.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-MaydayMission-64'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-MaydayMission-64.0"
+        }
+      },
+      "Brush_L": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-MaydayMission-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-MaydayMission-128.0"
+        }
+      },
+      "Brush_XL": {
+        "ImageSize": {
+          "X": 128.0,
+          "Y": 128.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-MaydayMission-128'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Textures/Icons/Mission/T-Icon-MaydayMission-128.0"
+        }
+      }
+    },
+    "EndOfMissionMediaSource": {
+      "ObjectName": "FileMediaSource'FMS_mission_success_generic'",
+      "ObjectPath": "/SaveTheWorld/Movies/VictoryMovies/FMS_mission_success_generic.0"
+    },
+    "ObjectiveBlocks": [
       {
-        "ObjectName": "BlueprintGeneratedClass'AA_EDO_NoTags_C'",
-        "ObjectPath": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/Modifiers/AA_EDO_NoTags.1"
+        "ObjectiveEntries": [
+          {
+            "ObjectiveRef": {
+              "AssetPathName": "/Game/Missions/GenericObjectives/GenericObjective_Blank.GenericObjective_Blank_C",
+              "SubPathString": ""
+            },
+            "ObjectiveRewardBadge": null,
+            "MissionRequirement": "EFortObjectiveRequirement::Required",
+            "ObjectiveHandle": [
+              "Activities.ObjectiveHandle.Generic.MissionComplete"
+            ],
+            "ObjectiveStartedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveSuccceededConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            },
+            "ObjectiveFailedConversations": {
+              "PlayType": "EFortObjectiveConversationPlayType::PlayOnce",
+              "Conversations": []
+            }
+          }
+        ]
+      }
+    ],
+    "ExpectedCompletionTime": 0.0,
+    "MissionPlacementInfo": {
+      "TagsToAddToChosenPlacementActors": [
+        "Activities.Placement.LocationUsed"
+      ]
+    },
+    "bStartPlayingOnLoad": true,
+    "bIsGroupContent": true,
+    "MissionName": {
+      "Namespace": "",
+      "Key": "D12A7AAD40842E4A7B159FA4CC15DE1B",
+      "SourceString": "(temp) Encounter Name (MissionInfo)",
+      "LocalizedString": "(temp) Encounter Name (MissionInfo)"
+    },
+    "EncounterProfiles": [
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_01.EDO_Set_Starlight_GardenCamp_01",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": true,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
       },
       {
-        "ObjectName": "BlueprintGeneratedClass'EDO_Elemental_Ice_C'",
-        "ObjectPath": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/Modifiers/EDO_Elemental_Ice.0"
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_02.EDO_Set_Starlight_GardenCamp_02",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": true,
+        "EncounterTypeTags": [
+          "GameplayModifier.Enemy.Elemental.Ice",
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_03.EDO_Set_Starlight_GardenCamp_03",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": true,
+        "EncounterTypeTags": [
+          "GameplayModifier.Enemy.Elemental.Ice",
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_04.EDO_Set_Starlight_GardenCamp_04",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [],
+        "bShouldReselectOptionsPerInstance": true,
+        "EncounterTypeTags": [
+          "GameplayModifier.Enemy.Elemental.Ice",
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_01.EDO_Set_Starlight_GardenCamp_01",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnPointsMultiplier'MissionInfo_StarlightCamp_Crypts:FortDifficultyOptionCategoryEncounter_SpawnPointsMultiplier_0'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Crypts.0"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_02.EDO_Set_Starlight_GardenCamp_02",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnPointsMultiplier'MissionInfo_StarlightCamp_Crypts:FortDifficultyOptionCategoryEncounter_SpawnPointsMultiplier_1'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Crypts.1"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "GameplayModifier.Enemy.Elemental.Ice",
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_03.EDO_Set_Starlight_GardenCamp_03",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnPointsMultiplier'MissionInfo_StarlightCamp_Crypts:FortDifficultyOptionCategoryEncounter_SpawnPointsMultiplier_2'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Crypts.2"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "GameplayModifier.Enemy.Elemental.Ice",
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      },
+      {
+        "EncounterOptions": {
+          "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_04.EDO_Set_Starlight_GardenCamp_04",
+          "SubPathString": ""
+        },
+        "OverrideCategories": [
+          {
+            "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnPointsMultiplier'MissionInfo_StarlightCamp_Crypts:FortDifficultyOptionCategoryEncounter_SpawnPointsMultiplier_2'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Crypts.2"
+          }
+        ],
+        "bShouldReselectOptionsPerInstance": false,
+        "EncounterTypeTags": [
+          "GameplayModifier.Enemy.Elemental.Ice",
+          "Encounter.Type.PvE.Secondary.Standard"
+        ]
+      }
+    ],
+    "EncounterSequences": [
+      {
+        "TransitionSettings": {
+          "bShouldMaintainEncounterState": true
+        },
+        "EncounterSequence": [
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_Destructible_1.EDO_Set_Starlight_GardenCamp_Destructible_1",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          },
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/EDO_Set_Starlight_CampBurst.EDO_Set_Starlight_CampBurst",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [
+              {
+                "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_StarlightCamp_Grotto:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_0'",
+                "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto.2"
+              }
+            ],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          },
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_Destructible_1.EDO_Set_Starlight_GardenCamp_Destructible_1",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [
+              {
+                "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnTiming'MissionInfo_StarlightCamp_Grotto:FortDifficultyOptionCategoryEncounter_SpawnTiming_0'",
+                "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto.1"
+              }
+            ],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          }
+        ],
+        "SequenceTags": []
+      },
+      {
+        "TransitionSettings": {
+          "bShouldMaintainEncounterState": true
+        },
+        "EncounterSequence": [
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_Destructible_2.EDO_Set_Starlight_GardenCamp_Destructible_2",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "GameplayModifier.Enemy.Elemental.Ice",
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          },
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/EDO_Set_Starlight_CampBurst.EDO_Set_Starlight_CampBurst",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [
+              {
+                "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_StarlightCamp_Grotto:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_0'",
+                "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto.2"
+              }
+            ],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          },
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_Destructible_2.EDO_Set_Starlight_GardenCamp_Destructible_2",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [
+              {
+                "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnTiming'MissionInfo_StarlightCamp_Grotto:FortDifficultyOptionCategoryEncounter_SpawnTiming_0'",
+                "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto.1"
+              },
+              {
+                "ObjectName": "FortDifficultyOptionCategoryEncounter_ModifierTags'MissionInfo_StarlightCamp_Grotto:FortDifficultyOptionCategoryEncounter_ModifierTags_2'",
+                "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto.0"
+              }
+            ],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "GameplayModifier.Enemy.Elemental.Ice",
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          }
+        ],
+        "SequenceTags": []
+      },
+      {
+        "TransitionSettings": {
+          "bShouldMaintainEncounterState": true
+        },
+        "EncounterSequence": [
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_Destructible_3.EDO_Set_Starlight_GardenCamp_Destructible_3",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "GameplayModifier.Enemy.Elemental.Ice",
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          },
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/EDO_Set_Starlight_CampBurst.EDO_Set_Starlight_CampBurst",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [
+              {
+                "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_StarlightCamp_Grotto:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_0'",
+                "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto.2"
+              }
+            ],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "GameplayModifier.Enemy.Elemental.Ice",
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          },
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_Destructible_3.EDO_Set_Starlight_GardenCamp_Destructible_3",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [
+              {
+                "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnTiming'MissionInfo_StarlightCamp_Grotto:FortDifficultyOptionCategoryEncounter_SpawnTiming_0'",
+                "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto.1"
+              }
+            ],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "GameplayModifier.Enemy.Elemental.Ice",
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          }
+        ],
+        "SequenceTags": []
+      },
+      {
+        "TransitionSettings": {
+          "bShouldMaintainEncounterState": true
+        },
+        "EncounterSequence": [
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_Destructible_4.EDO_Set_Starlight_GardenCamp_Destructible_4",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "GameplayModifier.Enemy.Elemental.Ice",
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          },
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/EDO_Set_Starlight_CampBurst.EDO_Set_Starlight_CampBurst",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [
+              {
+                "ObjectName": "FortDifficultyOptionCategoryEncounter_UtilitiesLocked'MissionInfo_StarlightCamp_Grotto:FortDifficultyOptionCategoryEncounter_UtilitiesLocked_0'",
+                "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto.2"
+              }
+            ],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "GameplayModifier.Enemy.Elemental.Ice",
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          },
+          {
+            "EncounterOptions": {
+              "AssetPathName": "/SaveTheWorld/AIDirector/Encounters/DifficultyOptions/OptionSets/PvE/StarlightSets/S3/EDO_Set_Starlight_GardenCamp_Destructible_4.EDO_Set_Starlight_GardenCamp_Destructible_4",
+              "SubPathString": ""
+            },
+            "OverrideCategories": [
+              {
+                "ObjectName": "FortDifficultyOptionCategoryEncounter_SpawnTiming'MissionInfo_StarlightCamp_Grotto:FortDifficultyOptionCategoryEncounter_SpawnTiming_0'",
+                "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Camp/MissionInfo_StarlightCamp_Grotto.1"
+              }
+            ],
+            "bShouldReselectOptionsPerInstance": false,
+            "EncounterTypeTags": [
+              "GameplayModifier.Enemy.Elemental.Ice",
+              "Encounter.Type.PvE.Secondary.Standard"
+            ]
+          }
+        ],
+        "SequenceTags": []
       }
     ]
   }

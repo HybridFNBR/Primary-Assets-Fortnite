@@ -1,0 +1,95 @@
+{
+  "Type": "FortSmartBuildingItemDefinition",
+  "Name": "BuildingItemData_SmartProtectedRamp",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortSmartBuildingItemDefinition'",
+  "Package": "/Game/Items/Weapons/BuildingTools/BuildingItemData_SmartProtectedRamp",
+  "Properties": {
+    "SmartBuildMode": "ESmartBuildMode::ProtectedRamp",
+    "TurboBuildInterval": 0.15,
+    "BuildSelections": [
+      {
+        "MinViewPitch": {
+          "Value": -180.0,
+          "Curve": {
+            "CurveTable": null,
+            "RowName": "None"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "BuildingActors": [
+          {
+            "BuildingMetaData": {
+              "AssetPathName": "/Game/Building/EditModePatterns/Stair/EMP_Stair_StairW.EMP_Stair_StairW",
+              "SubPathString": ""
+            },
+            "RotationIterations": 0,
+            "SelectOnlyIfPlayerLocationInCell": "ESmartBuildPlayerLocationInCell::Anywhere",
+            "BuildDistanceOffset": 0.0,
+            "bTryToConnectToPieceUnderPlayerFeet": true,
+            "bCanBeTurboBuilt": true
+          },
+          {
+            "BuildingMetaData": {
+              "AssetPathName": "/Game/Building/EditModePatterns/Floor/EMP_Floor_Floor.EMP_Floor_Floor",
+              "SubPathString": ""
+            },
+            "RotationIterations": 0,
+            "SelectOnlyIfPlayerLocationInCell": "ESmartBuildPlayerLocationInCell::Anywhere",
+            "BuildDistanceOffset": 0.0,
+            "bTryToConnectToPieceUnderPlayerFeet": true,
+            "bCanBeTurboBuilt": true
+          },
+          {
+            "BuildingMetaData": {
+              "AssetPathName": "/Game/Building/EditModePatterns/Wall/EMP_Wall_Solid.EMP_Wall_Solid",
+              "SubPathString": ""
+            },
+            "RotationIterations": 0,
+            "SelectOnlyIfPlayerLocationInCell": "ESmartBuildPlayerLocationInCell::Anywhere",
+            "BuildDistanceOffset": 512.0,
+            "bTryToConnectToPieceUnderPlayerFeet": true,
+            "bCanBeTurboBuilt": true
+          }
+        ]
+      }
+    ],
+    "WeaponActorClass": {
+      "AssetPathName": "/Game/Weapons/FORT_BuildingTools/Blueprints/DefaultBuildingTool.DefaultBuildingTool_C",
+      "SubPathString": ""
+    },
+    "bCanFireWhileNotTargetedInVehicle": true,
+    "ActualAnalyticFNames": [
+      "Tag:Weapon:buildingitemdata_smartprotectedramp"
+    ],
+    "DataList": [
+      {
+        "Traits": [
+          "Item.Trait.HideItemToast"
+        ]
+      },
+      {
+        "InactiveIcon": {
+          "AssetPathName": "/Game/UI/Foundation/Textures/Icons/HUD/T_BuildMode_Prefab_Floor_Inactive_128.T_BuildMode_Prefab_Floor_Inactive_128",
+          "SubPathString": ""
+        }
+      },
+      {
+        "PreferredQuickbarSlot": 2
+      },
+      {
+        "Icon": {
+          "AssetPathName": "/Game/UI/Foundation/Textures/Icons/HUD/T_SmartBuildMode_Ramp_128.T_SmartBuildMode_Ramp_128",
+          "SubPathString": ""
+        }
+      },
+      {
+        "Tags": [
+          "phoebe.items.BuildingTool"
+        ]
+      }
+    ]
+  }
+}

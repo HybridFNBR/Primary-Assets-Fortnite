@@ -1,47 +1,29 @@
 {
-  "Type": "FortGameFeatureAction_AddCategoryTableToConfig",
-  "Name": "FortGameFeatureAction_AddCategoryTableToConfig_1",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddCategoryTableToConfig'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'TeaCake_PaV_04'",
     "ObjectPath": "/TeaCake_PaV_04/TeaCake_PaV_04.2"
   },
   "Properties": {
-    "ConfigToCategoryTableDatas": [
+    "SourcesToAdd": [
       {
-        "Key": "/Lager/Lager/Config/LagerConfigData_BR_Main.LagerConfigData_BR_Main",
-        "Value": {
-          "CategoryTableDatas": [
-            {
-              "Name": "TeaCake_PaV_04_LagerData",
-              "CategoryTable": {
-                "AssetPathName": "/TeaCake_PaV_04/LagerData/Lager_CategoryTable_TeaCake_PaV_04.Lager_CategoryTable_TeaCake_PaV_04",
-                "SubPathString": ""
-              },
-              "IsEnabled": {
-                "Value": 1.0,
-                "Curve": {
-                  "CurveTable": {
-                    "ObjectName": "CurveTable'TeaCake_PaV_04_GameData'",
-                    "ObjectPath": "/TeaCake_PaV_04/DataTables/TeaCake_PaV_04_GameData.0"
-                  },
-                  "RowName": "Default.TeaCake.PaV.04.Lager.CategoryEnabled"
-                },
-                "RegistryType": {
-                  "Name": "None"
-                }
-              }
-            }
-          ]
+        "RegistryToAddTo": "PawnTagQueryBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/TeaCake_PaV_04/DataTables/IB_PawnInjection_TeaCake_PaV_04_Table.IB_PawnInjection_TeaCake_PaV_04_Table",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
     ],
-    "StartVersion": {
-      "VersionName": "40.00"
-    },
-    "EndVersion": {
-      "VersionName": "41.00"
-    }
+    "bPreloadInEditor": true
   }
 }

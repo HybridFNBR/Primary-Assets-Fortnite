@@ -1,63 +1,42 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'BRMapCh6'",
-    "ObjectPath": "/BRMapCh6/BRMapCh6.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "BRMapCh6",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/BRMapCh6/BRMapCh6",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "33.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.MovementGym"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Athena.Playlist.MovementGym ) )"
-          },
-          "bMigratedFromOldData": true
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'BRMapCh6:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/BRMapCh6/BRMapCh6.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BRMapCh6:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/BRMapCh6/BRMapCh6.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortPlaylistAthena",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlaylistAthena",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Playlists"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.MovementGym"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY(  ANY( Athena.Playlist.MovementGym ) )"
-    }
+      }
+    ]
   }
 }

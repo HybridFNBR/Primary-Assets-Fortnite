@@ -1,21 +1,66 @@
 {
-  "Type": "CustomCharacterBackpackData",
-  "Name": "CustomCharacterBackpackData_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterBackpackData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_Backpack_VoidSpray'",
-    "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_VoidSpray.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_Backpack_VoidSpray",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_VoidSpray",
   "Properties": {
-    "AttachSocketName": "Backpack_BR",
-    "AttachmentOverrideData": {
-      "ObjectName": "CustomAccessoryAttachmentData'MaleSource'",
-      "ObjectPath": "/Game/Characters/Player/Common/BackpackScaleSettings/MaleSource.0"
+    "GenderPermitted": "EFortCustomGender::Both",
+    "CharacterPartType": "EFortCustomPartType::Backpack",
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Backpack"
+      ],
+      "PartTypeIndex": 3
     },
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_F_MED_VoidSpray/Meshes/F_MED_VoidSpray_Pack_AnimBP.F_MED_VoidSpray_Pack_AnimBP_C",
+    "PartModifierBlueprint": {
+      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/Part_Modifiers/B_Athena_PartModifier_Backpack_VoidSpray_Elimination.B_Athena_PartModifier_Backpack_VoidSpray_Elimination_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterBackpackData'CP_Backpack_VoidSpray:CustomCharacterBackpackData_0'",
+      "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_VoidSpray.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_F_MED_VoidSpray/Meshes/F_MED_VoidSpray_Pack.F_MED_VoidSpray_Pack",
+      "SubPathString": ""
+    },
+    "CosmeticPartDataList": [
+      {
+        "EffectParameters": [
+          {
+            "Tag": {
+              "TagName": "CosmeticPart.VFX.Elimination"
+            },
+            "Effect": {
+              "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_F_MED_VoidSpray/FX/NS_Backpack_VoidSpray_Score.NS_Backpack_VoidSpray_Score",
+              "SubPathString": ""
+            },
+            "LocationOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "RotationOffset": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "bIsPersistent": false,
+            "bAutoActivate": true,
+            "AttachmentParams": {
+              "SocketName": "pack",
+              "AttachmentTarget": "ECharacterPartAttachmentTargetType::SkeletalMeshForAssociatedPlayerPawnPartType",
+              "AttachmentRules": {
+                "LocationRule": "EAttachmentRule::SnapToTarget",
+                "RotationRule": "EAttachmentRule::SnapToTarget",
+                "ScaleRule": "EAttachmentRule::SnapToTarget",
+                "bWeldSimulatedBodies": false
+              }
+            }
+          }
+        ]
+      }
+    ]
   }
 }

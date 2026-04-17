@@ -1,102 +1,88 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_SlurpJonesy",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_SlurpJonesy'",
+    "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "FB4B68A9-468B3121-F50579BC-9A4E189B",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SlurpJonesy:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BA8B165F49D334275DAE309D8C10E603",
+            "SourceString": "The Slurp foresaw your coming.",
+            "LocalizedString": "The Slurp foresaw your coming."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_SlurpJonesy:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "47D8FFF5-4B73AB4D-E3E4CBA8-7342F87F",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_SlurpJonesy:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.6"
-        }
-      },
-      {
-        "Key": "C3F57AE7-40A478F0-3F58199F-1DE431EB",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SlurpJonesy:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.2"
-        }
-      },
-      {
-        "Key": "4BC12AA3-4D39F8DD-F1FF679A-2B415153",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SlurpJonesy:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.3"
-        }
-      },
-      {
-        "Key": "1EABD7DB-4F4620E5-5B26F7BC-8FC78A4F",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SlurpJonesy:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.4"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "337E1F3B4429E12250C3C2919773713A",
+        "SourceString": "The Slurp knows... ",
+        "LocalizedString": "The Slurp knows... "
       }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.SlurpJonesy"
-        },
-        "DestinationList": [
-          "FB4B68A9-468B3121-F50579BC-9A4E189B"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests",
-      "Conversation.Entry.Season16.TheSpire.Joneses"
-    ],
-    "InternalNodeIds": [
-      "FB4B68A9-468B3121-F50579BC-9A4E189B",
-      "47D8FFF5-4B73AB4D-E3E4CBA8-7342F87F",
-      "C3F57AE7-40A478F0-3F58199F-1DE431EB",
+    },
+    "OutputConnections": [
+      "1EABD7DB-4F4620E5-5B26F7BC-8FC78A4F",
       "4BC12AA3-4D39F8DD-F1FF679A-2B415153",
-      "1EABD7DB-4F4620E5-5B26F7BC-8FC78A4F"
+      "C3F57AE7-40A478F0-3F58199F-1DE431EB"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "47D8FFF5-4B73AB4D-E3E4CBA8-7342F87F",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SlurpJonesy:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/SlurpJonesy/NPCLibrary_Conversation_SlurpJonesy.1"
+    }
   }
 }

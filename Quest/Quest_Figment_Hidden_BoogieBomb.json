@@ -1,36 +1,167 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Figment_Hidden_BoogieBomb'",
-    "ObjectPath": "/FigmentQuests/Items/QuestItems/HiddenQuests/Quest_Figment_Hidden_BoogieBomb.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Figment_Hidden_BoogieBomb",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/FigmentQuests/Items/QuestItems/HiddenQuests/Quest_Figment_Hidden_BoogieBomb",
   "Properties": {
-    "InformationSettings": {
-      "CompletionText": {
-        "Namespace": "",
-        "Key": "6003AC294A8EA74E8A4A92A5375388D8",
-        "SourceString": "You REALLY love dancing, huh?",
-        "LocalizedString": "You REALLY love dancing, huh?"
+    "NotificationIconOverride": {
+      "AssetPathName": "/FortniteCoreUI/Items/QuestItems/Categories/Art/MI_UI_QB_Misc.MI_UI_QB_Misc",
+      "SubPathString": ""
+    },
+    "QuestType": "EFortQuestType::AthenaLooseQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
       }
-    },
-    "VisibilitySettings": {
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false,
-      "bCanShowTimer": false
-    },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false
-    },
-    "LockedQuestSettings": {
-      "OverrideData": {
-        "DisplayIcon": {
-          "AssetPathName": "/FortniteCoreUI/Items/QuestItems/Categories/Art/MI_UI_QB_Misc.MI_UI_QB_Misc",
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Figment_Hidden_BoogieBomb_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.Hit.DanceGrenade"
+            },
+            "Subjects": [],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "930ADEB844F19700A4B5F399F714C82E",
+          "SourceString": "(Hidden) Hit players with Boogie Bombs",
+          "LocalizedString": "(Hidden) Hit players with Boogie Bombs"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "D237DD4A4D4782586E5AC0A66B7BB854",
+          "SourceString": "(Hidden) Hit players with Boogie Bombs",
+          "LocalizedString": "(Hidden) Hit players with Boogie Bombs"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 30,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 31,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
           "SubPathString": ""
         }
       }
-    }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Figment"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.Figment )"
+    },
+    "SortPriority": 1,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Hidden_BoogieBomb:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/HiddenQuests/Quest_Figment_Hidden_BoogieBomb.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Hidden_BoogieBomb:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/HiddenQuests/Quest_Figment_Hidden_BoogieBomb.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Figment_Hidden_BoogieBomb_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "B66E165D421838B9F6511A959349FF2A",
+      "SourceString": "(Hidden) Hit players with Boogie Bombs",
+      "LocalizedString": "(Hidden) Hit players with Boogie Bombs"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "6AAC51494673F1EC1C379E9E3239286D",
+      "SourceString": "(Hidden) Hit players with Boogie Bombs",
+      "LocalizedString": "(Hidden) Hit players with Boogie Bombs"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.Figment.Hidden"
+        ]
+      }
+    ]
   }
 }

@@ -1,17 +1,86 @@
 {
-  "Type": "ArrowComponent",
-  "Name": "Arrow_GEN_VARIABLE",
+  "Type": "StaticMeshComponent",
+  "Name": "Ring_GEN_VARIABLE",
   "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ArrowComponent'",
+  "Class": "UScriptClass'StaticMeshComponent'",
   "Outer": {
     "ObjectName": "BlueprintGeneratedClass'DelMar_SpeedRing_BP_C'",
     "ObjectPath": "/DelMarGame/Blueprints/StatusEffects/SpeedRing/DelMar_SpeedRing_BP.2"
   },
   "Properties": {
+    "StaticMesh": {
+      "ObjectName": "StaticMesh'S_Athena_SkyDiveRing'",
+      "ObjectPath": "/Game/Athena/Items/QuestInteractables/SkydiveRings/FX/S_Athena_SkyDiveRing.1"
+    },
+    "OverrideMaterials": [
+      {
+        "ObjectName": "Material'StallWallGreen_MAT'",
+        "ObjectPath": "/DelMarGame/Track/Prototype/Materials/StallWallGreen_MAT.0"
+      }
+    ],
+    "bGenerateOverlapEvents": false,
+    "CanCharacterStepUpOn": "ECanBeCharacterBase::ECB_No",
+    "BodyInstance": {
+      "CollisionProfileName": "Custom",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "WorldStatic",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "WorldDynamic",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Pawn",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "Visibility",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Camera",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "PhysicsBody",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Vehicle",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "Destructible",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponWorldMulti",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "FCC_Object_NoGhost",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "FCC_Object_Water",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          }
+        ]
+      }
+    },
+    "RelativeRotation": {
+      "Pitch": 90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+    },
     "RelativeScale3D": {
-      "X": 10.0,
-      "Y": 20.0,
-      "Z": 20.0
-    }
+      "X": 141.0965,
+      "Y": 141.0965,
+      "Z": 117.0965
+    },
+    "Mobility": "EComponentMobility::Static"
   }
 }

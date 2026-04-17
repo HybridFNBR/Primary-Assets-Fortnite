@@ -1,190 +1,69 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "FNEDodgyBean",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Package": "/FNEDodgyBean/FNEDodgyBean",
+  "Type": "GameFeatureAction_RegisterModifier",
+  "Name": "GameFeatureAction_RegisterModifier_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'GameFeatureAction_RegisterModifier'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'FNEDodgyBean'",
+    "ObjectPath": "/FNEDodgyBean/FNEDodgyBean.0"
+  },
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "FactionMapping": {
-      "AssetPathName": "/FNEDodgyBean/CreatureType/DodgyBean_FactionMapping.DodgyBean_FactionMapping",
-      "SubPathString": ""
-    },
-    "PawnGoalSelectionTable": [
+    "ModifiersInfo": [
       {
-        "RequiredGameplayTags": [
-          "NPC.GoalSelection.Wildlife.Basic"
-        ],
-        "PawnGoalSelectionCriteria": {
-          "IncludeEnemiesWithTags": [],
-          "ExcludeEnemiesWithTags": [],
-          "GoalSelectionCriteria": [
-            {
-              "GoalSelectionQuery": {
-                "AssetPathName": "/Irwin/AI/GoalSelection/Pawn/EQS_GoalSelection_Pawn_Wildlife_Basic.EQS_GoalSelection_Pawn_Wildlife_Basic",
-                "SubPathString": ""
-              }
-            }
-          ]
-        }
-      },
-      {
-        "RequiredGameplayTags": [
-          "NPC.GoalSelection.Wildlife.Tamed"
-        ],
-        "PawnGoalSelectionCriteria": {
-          "IncludeEnemiesWithTags": [],
-          "ExcludeEnemiesWithTags": [],
-          "GoalSelectionCriteria": [
-            {
-              "GoalSelectionQuery": {
-                "AssetPathName": "/Irwin/AI/GoalSelection/Pawn/EQS_GoalSelection_Pawn_Wildlife_Terrestrial_Tamed.EQS_GoalSelection_Pawn_Wildlife_Terrestrial_Tamed",
-                "SubPathString": ""
-              }
-            }
-          ]
-        }
-      },
-      {
-        "RequiredGameplayTags": [
-          "NPC.GoalSelection.Wildlife.Terrestrial.Aggressive"
-        ],
-        "PawnGoalSelectionCriteria": {
-          "IncludeEnemiesWithTags": [],
-          "ExcludeEnemiesWithTags": [],
-          "GoalSelectionCriteria": [
-            {
-              "GoalSelectionQuery": {
-                "AssetPathName": "/Irwin/AI/GoalSelection/Pawn/EQS_GoalSelection_Pawn_Wildlife_Terrestrial_Aggressive.EQS_GoalSelection_Pawn_Wildlife_Terrestrial_Aggressive",
-                "SubPathString": ""
-              }
-            }
-          ]
-        }
-      },
-      {
-        "RequiredGameplayTags": [
-          "NPC.GoalSelection.Wildlife.Terrestrial"
-        ],
-        "PawnGoalSelectionCriteria": {
-          "IncludeEnemiesWithTags": [],
-          "ExcludeEnemiesWithTags": [],
-          "GoalSelectionCriteria": [
-            {
-              "GoalSelectionQuery": {
-                "AssetPathName": "/Irwin/AI/GoalSelection/Pawn/EQS_GoalSelection_Pawn_Wildlife_Terrestrial.EQS_GoalSelection_Pawn_Wildlife_Terrestrial",
-                "SubPathString": ""
-              }
-            }
-          ]
-        }
-      }
-    ],
-    "PlaylistItemsToFullyLoad": [
-      {
-        "PlaylistTags": [
-          "Athena.Creative",
-          "Athena.Playground"
-        ],
-        "ItemIdsToFullyLoad": []
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_RegisterModifier'FNEDodgyBean:GameFeatureAction_RegisterModifier_0'",
-        "ObjectPath": "/FNEDodgyBean/FNEDodgyBean.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'FNEDodgyBean:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/FNEDodgyBean/FNEDodgyBean.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "FortExposedAssetList",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
+        "Modifiers": [
           {
-            "Path": "UEFNExposedAssets"
+            "AssetPathName": "/FNEDodgyBean/CharacterModifier/CharacterModifier_DodgyBeanBehavior.CharacterModifier_DodgyBeanBehavior_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Team.CharacterModifier_Team_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Health.CharacterModifier_Health_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Taming.CharacterModifier_Taming_C",
+            "SubPathString": ""
           }
         ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "AISpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
+        "CharacterType": {
+          "AssetPathName": "/FNEDodgyBean/CreatureType/BP_DodgyBean_CharacterType.BP_DodgyBean_CharacterType_C",
           "SubPathString": ""
         },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "AISpawnerData"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 20,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
+        "bAddToDefaultModifiers": true,
+        "bExcludeFromAdditionalModifiers": false
       },
       {
-        "PrimaryAssetType": "FortAIPawnCustomizationDefinition",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAIPawnCustomizationDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
+        "Modifiers": [
           {
-            "Path": "AIPawnCustomization"
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_PatrolPath.CharacterModifier_PatrolPath_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Movement.CharacterModifier_Movement_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_UI.CharacterModifier_UI_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Perception.CharacterModifier_Perception_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/FNEDodgyBean/CharacterModifier/CharacterModifier_DodgyBeanVerseBehavior.CharacterModifier_DodgyBeanVerseBehavior_C",
+            "SubPathString": ""
           }
         ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "Playset",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlaysetItemDefinition",
+        "CharacterType": {
+          "AssetPathName": "/FNEDodgyBean/CreatureType/BP_DodgyBean_CharacterType.BP_DodgyBean_CharacterType_C",
           "SubPathString": ""
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "SetupAssets"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
+        "bAddToDefaultModifiers": false,
+        "bExcludeFromAdditionalModifiers": false
       }
     ]
   }

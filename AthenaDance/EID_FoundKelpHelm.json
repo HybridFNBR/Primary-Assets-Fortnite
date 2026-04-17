@@ -1,129 +1,98 @@
 {
-  "Type": "AthenaDanceItemDefinition",
-  "Name": "EID_FoundKelpHelm",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDanceItemDefinition'",
-  "Package": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_FoundKelpHelm",
+  "Type": "FortCosmeticLoadoutTagDrivenVariant",
+  "Name": "FortCosmeticLoadoutTagDrivenVariant_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortCosmeticLoadoutTagDrivenVariant'",
+  "Outer": {
+    "ObjectName": "AthenaDanceItemDefinition'EID_FoundKelpHelm'",
+    "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_FoundKelpHelm.0"
+  },
   "Properties": {
-    "MotageSelectionGroups": [
+    "Variants": [
       {
-        "MontageSectionName": "Reverse",
-        "EvaluationMode": "EMontageSelectionPredicateType::CharacterParts",
-        "VariantMetaTagRequired": {
-          "TagName": "None"
-        },
-        "bRequireCharacterPart": false,
-        "PartRequirements": [
+        "MontageSwaps": [
           {
-            "PartType": "EFortCustomPartType::Head",
-            "Part": {
-              "AssetPathName": "/BRCosmetics/Characters/CharacterParts/Male/Medium/Heads/CP_Athena_Head_M_FoundKelp_Bolt.CP_Athena_Head_M_FoundKelp_Bolt",
+            "ToSwapFrom": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/FoundKelpHelm/Emote_FoundKelpHelm_CMM_M.Emote_FoundKelpHelm_CMM_M",
+              "SubPathString": ""
+            },
+            "ToSwapTo": {
+              "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/FoundKelpHelm/Cast/Emote_FoundKelpHelm_Cast_CMM_M.Emote_FoundKelpHelm_Cast_CMM_M",
               "SubPathString": ""
             }
           }
         ],
-        "SwapRequirements": [
+        "RequiredMetaTags": [],
+        "ExcludedMetaTags": [],
+        "RequiredConditions": [
           {
-            "VariantSelections": [],
-            "Item": {
-              "ObjectName": "AthenaCharacterItemDefinition'Character_FoundKelp_Bolt'",
-              "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Characters/Character_FoundKelp_Bolt.0"
-            }
-          }
-        ]
-      },
-      {
-        "MontageSectionName": "Transform",
-        "EvaluationMode": "EMontageSelectionPredicateType::CharacterParts",
-        "VariantMetaTagRequired": {
-          "TagName": "Cosmetics.Variant.Meta.ArmyFlour.Glow"
-        },
-        "bRequireCharacterPart": false,
-        "PartRequirements": [
-          {
-            "PartType": "EFortCustomPartType::Head",
-            "Part": {
-              "AssetPathName": "/Game/Characters/CharacterParts/Male/Medium/Heads/CP_Athena_Head_M_EmptyHead.CP_Athena_Head_M_EmptyHead",
+            "ItemCategory": "ECosmeticMetaTagRequirementCategory::None",
+            "SlotTag": {
+              "TagName": "LoadoutSlot.Character"
+            },
+            "SpecificItem": {
+              "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Characters/Character_FoundKelp_Bolt.Character_FoundKelp_Bolt",
               "SubPathString": ""
-            }
+            },
+            "MetaTagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [
+                {
+                  "TagName": "Cosmetics.Metatags.FoundKelp_Cast"
+                }
+              ],
+              "QueryTokenStream": [
+                0,
+                1,
+                2,
+                1,
+                0
+              ],
+              "UserDescription": "cast ",
+              "AutoDescription": " ALL( Cosmetics.Metatags.FoundKelp_Cast )"
+            },
+            "RequiredMetaTags": [],
+            "ExcludedMetaTags": []
           }
         ],
-        "SwapRequirements": []
-      }
-    ],
-    "CustomDanceAbility": {
-      "AssetPathName": "/Game/Abilities/Emotes/GAB_Emote_Generic_Transformation.GAB_Emote_Generic_Transformation_C",
-      "SubPathString": ""
-    },
-    "Animation": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Emotes/FoundKelpHelm/Emote_FoundKelpHelm_CMM_M.Emote_FoundKelpHelm_CMM_M",
-      "SubPathString": ""
-    },
-    "EmoteCooldownSecs": 1.0,
-    "RequiredEmoteParent": {
-      "AssetPathName": "/BRCosmetics/Athena/Items/Cosmetics/Characters/Character_FoundKelp_Bolt.Character_FoundKelp_Bolt",
-      "SubPathString": ""
-    },
-    "ItemVariants": [
-      {
-        "ObjectName": "FortCosmeticLoadoutTagDrivenVariant'EID_FoundKelpHelm:FortCosmeticLoadoutTagDrivenVariant_0'",
-        "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Dances/EID_FoundKelpHelm.1"
-      }
-    ],
-    "ShotGridIds": [
-      54767
-    ],
-    "BaseShotGridId": 54767,
-    "ItemName": {
-      "Namespace": "",
-      "Key": "1E85B80F4FEAA66C43D481BBA27FF715",
-      "SourceString": "Helmet On/Off",
-      "LocalizedString": "Helmet On/Off"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "41FA41224F240ABE24D46F84C20C2103",
-      "SourceString": "Suit up at your leisure. ",
-      "LocalizedString": "Suit up at your leisure. "
-    },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "E7DADD0D49827A13998DF78B32344182",
-      "SourceString": "Built-In Emote",
-      "LocalizedString": "Built-In Emote"
-    },
-    "DataList": [
-      {
-        "MinLevel": 1,
-        "MaxLevel": 1
-      },
-      {
-        "Traits": [
-          "Item.Trait.SingleStack",
-          "Item.Trait.Transient"
-        ]
-      },
-      {
-        "Tags": [
-          "Cosmetics.EmoteType.Dance",
-          "Cosmetics.Source.ItemShop",
-          "Cosmetics.UserFacingFlags.BuiltInEmote",
-          "Cosmetics.Variant.ForceLoadAllParts",
-          "Cosmetics.Filter.Season.40",
-          "Cosmetics.Set.JusticeWall"
-        ]
-      },
-      {
-        "Icon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Emotes/S40/T_Icon_Emotes_FoundKelpHelm.T_Icon_Emotes_FoundKelpHelm",
+        "ExcludedConditions": [],
+        "VariantParts": [],
+        "VariantMaterials": [],
+        "VariantMaterialParams": [],
+        "InitalParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [],
+        "VariantSounds": [],
+        "VariantFoley": [],
+        "SocketTransforms": [],
+        "VariantActions": [],
+        "VariantMeshes": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": true,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Stage1"
+        },
+        "VariantName": {
+          "CultureInvariantString": null
+        },
+        "PreviewImage": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
-      },
-      {
-        "LargeIcon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Emotes/S40/T_Icon_Emotes_FoundKelpHelm_L.T_Icon_Emotes_FoundKelpHelm_L",
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
+        },
+        "VariantGameplayTags": []
       }
     ]
   }

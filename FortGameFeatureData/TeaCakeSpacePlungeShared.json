@@ -1,44 +1,29 @@
 {
-  "Type": "FortGameFeatureAction_AddCategoryTableToConfig",
-  "Name": "FortGameFeatureAction_AddCategoryTableToConfig_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddCategoryTableToConfig'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'TeaCakeSpacePlungeShared'",
     "ObjectPath": "/TeaCakeSpacePlungeShared/TeaCakeSpacePlungeShared.2"
   },
   "Properties": {
-    "ConfigToCategoryTableDatas": [
+    "SourcesToAdd": [
       {
-        "Key": "/Lager/Lager/Config/LagerConfigData_BR_Main.LagerConfigData_BR_Main",
-        "Value": {
-          "CategoryTableDatas": [
-            {
-              "Name": "BossDrones",
-              "CategoryTable": {
-                "AssetPathName": "/TeaCakeSpacePlungeShared/Lager/CategoryTable_TeaCake_SpacePlunge_Drone.CategoryTable_TeaCake_SpacePlunge_Drone",
-                "SubPathString": ""
-              },
-              "IsEnabled": {
-                "Value": 1.0,
-                "Curve": {
-                  "CurveTable": null,
-                  "RowName": "None"
-                },
-                "RegistryType": {
-                  "Name": "None"
-                }
-              }
-            }
-          ]
+        "RegistryToAddTo": "Phoebe.AimData",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/TeaCakeSpacePlungeShared/DataTables/SpacePlunge_Drone_AimData.SpacePlunge_Drone_AimData",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
     ],
-    "StartVersion": {
-      "VersionName": "40.00"
-    },
-    "EndVersion": {
-      "VersionName": "41.00"
-    }
+    "bPreloadInEditor": true
   }
 }

@@ -1,315 +1,332 @@
 {
-  "Type": "AthenaGliderItemDefinition",
-  "Name": "Glider_ID_388_Wayfare",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaGliderItemDefinition'",
-  "Package": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Glider_ID_388_Wayfare",
+  "Type": "FortCosmeticParticleVariant",
+  "Name": "FortCosmeticParticleVariant_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortCosmeticParticleVariant'",
+  "Outer": {
+    "ObjectName": "AthenaGliderItemDefinition'Glider_ID_388_Wayfare'",
+    "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Glider_ID_388_Wayfare.0"
+  },
   "Properties": {
-    "CameraFramingBoundsCenterOffset": {
-      "X": 40.0,
-      "Y": -20.0,
-      "Z": 15.0
-    },
-    "ParachutePrefabClass": {
-      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/B_Athena_Glider_Generic.B_Athena_Glider_Generic_C",
-      "SubPathString": ""
-    },
-    "SkeletalMesh": {
-      "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/Meshes/Wayfare_Male_Glider.Wayfare_Male_Glider",
-      "SubPathString": ""
-    },
-    "GliderMeshTransform": {
-      "Rotation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0,
-        "W": 1.0,
-        "IsNormalized": true,
-        "Size": 1.0,
-        "SizeSquared": 1.0
-      },
-      "Translation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Scale3D": {
-        "X": 1.0,
-        "Y": 1.0,
-        "Z": 1.0
-      }
-    },
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Blueprints/WayfareMale_SurfStyle_Glider_AnimBP.WayfareMale_SurfStyle_Glider_AnimBP_C",
-      "SubPathString": ""
-    },
-    "CameraClass": {
-      "AssetPathName": "/Game/Blueprints/Camera/Athena/Athena_PlayerCameraModeSkydiveSurf.Athena_PlayerCameraModeSkydiveSurf_C",
-      "SubPathString": ""
-    },
-    "PlayerAnimSet": {
-      "AssetPathName": "/BRCosmetics/Animation/Game/MainPlayer/Skydive/ParaGlide/WayfareMale/WayfareMale_SurfStylePlayerAnimSet.WayfareMale_SurfStylePlayerAnimSet",
-      "SubPathString": ""
-    },
-    "AttachSocket": "attach",
-    "TrailEffectDefinitions": [
+    "ParticleOptions": [
       {
-        "NiagaraSystem": {
-          "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/FX/NS_Glider_Wayfare_Male.NS_Glider_Wayfare_Male",
-          "SubPathString": ""
+        "VariantMaterials": [],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
         },
-        "EffectSocket": "None",
-        "Offset": {
-          "Rotation": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0,
-            "W": 1.0,
-            "IsNormalized": true,
-            "Size": 1.0,
-            "SizeSquared": 1.0
-          },
-          "Translation": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          },
-          "Scale3D": {
-            "X": 1.0,
-            "Y": 1.0,
-            "Z": 1.0
-          }
+        "bStartUnlocked": true,
+        "bIsDefault": true,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle1"
         },
-        "ActivationMode": "EGliderTrailActivationMode::FullyDeployed",
-        "AttachmentMode": "EGliderTrailAttachmentMode::GliderMesh"
-      }
-    ],
-    "OpenSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/WayfareMale/SC_GliderOpen_WayfareMale.SC_GliderOpen_WayfareMale",
-      "SubPathString": ""
-    },
-    "CloseSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/WayfareMale/SC_GliderClose_WayfareMale.SC_GliderClose_WayfareMale",
-      "SubPathString": ""
-    },
-    "ThrustLoopSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/WayfareMale/SC_GliderThrustLoop_WayfareMale.SC_GliderThrustLoop_WayfareMale",
-      "SubPathString": ""
-    },
-    "ThrustSoundParams": [
-      {
-        "Key": "ELayeredAudioTriggerDirection::Forwards",
-        "Value": {
-          "InterpType": "ELayeredAudioInterpolationType::Linear",
-          "Curve": null,
-          "AttackSpeed": 3.0,
-          "ReleaseSpeed": 2.0,
-          "Oneshots": [
-            {
-              "SoundRef": {
-                "AssetPathName": "/BRCosmetics/Sounds/Gliders/WayfareMale/SC_GliderBoost_OneShot.SC_GliderBoost_OneShot",
-                "SubPathString": ""
-              },
-              "GateValue": 0.5,
-              "Direction": "ELayeredAudioTriggerDir::Forward",
-              "FadeWhenOutsideGate": true,
-              "MinTimeSinceTrigger": 0.1,
-              "InterruptFadeTime": 0.5
-            }
-          ]
-        }
-      },
-      {
-        "Key": "ELayeredAudioTriggerDirection::Sideways",
-        "Value": {
-          "InterpType": "ELayeredAudioInterpolationType::Linear",
-          "Curve": null,
-          "AttackSpeed": 3.0,
-          "ReleaseSpeed": 2.0,
-          "Oneshots": [
-            {
-              "SoundRef": {
-                "AssetPathName": "/BRCosmetics/Sounds/Gliders/WayfareMale/SC_GliderBoost_OneShot.SC_GliderBoost_OneShot",
-                "SubPathString": ""
-              },
-              "GateValue": 0.5,
-              "Direction": "ELayeredAudioTriggerDir::Forward",
-              "FadeWhenOutsideGate": true,
-              "MinTimeSinceTrigger": 0.1,
-              "InterruptFadeTime": 0.5
-            }
-          ]
-        }
-      }
-    ],
-    "ItemVariants": [
-      {
-        "ObjectName": "FortCosmeticParticleVariant'Glider_ID_388_Wayfare:FortCosmeticParticleVariant_0'",
-        "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Glider_ID_388_Wayfare.1"
-      }
-    ],
-    "ItemVariantPreviews": [
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
+        "VariantName": {
+          "Namespace": "",
+          "Key": "2547FBD345EC8986BAAD97B6D262415D",
+          "SourceString": "Zavala Shader",
+          "LocalizedString": "Zavala Shader"
         },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle2"
-            }
-          }
-        ],
-        "AdditionalItems": []
-      },
-      {
-        "UnlockCondition": {
-          "CultureInvariantString": null
-        },
-        "PreviewTime": 5.0,
-        "VariantOptions": [
-          {
-            "OwnedVariantTags": [],
-            "ItemVariantIsUsedFor": null,
-            "CustomData": "",
-            "VariantChannelTag": {
-              "TagName": "Cosmetics.Variant.Channel.Particle"
-            },
-            "ActiveVariantTag": {
-              "TagName": "Cosmetics.Variant.Property.Particle3"
-            }
-          }
-        ],
-        "AdditionalItems": []
-      }
-    ],
-    "VariantShotGridIds": [
-      59231,
-      59230
-    ],
-    "ShotGridIds": [
-      57717,
-      59231,
-      59230
-    ],
-    "BaseShotGridId": 57717,
-    "ItemName": {
-      "Namespace": "",
-      "Key": "933DB5EA469051E5C9CECF9B998AD29B",
-      "SourceString": "Sparrow",
-      "LocalizedString": "Sparrow"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "1712AC4E4CFF53DBB56165A266A5DEE8",
-      "SourceString": "Guardian vehicle used for rapid transportation across land.",
-      "LocalizedString": "Guardian vehicle used for rapid transportation across land."
-    },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "F6696CF34A757AA818C004912AAFEC0F",
-      "SourceString": "Glider",
-      "LocalizedString": "Glider"
-    },
-    "DataList": [
-      {
-        "Series": {
-          "ObjectName": "FortItemSeriesDefinition'PlatformSeries'",
-          "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Series/PlatformSeries.0"
-        }
-      },
-      {
-        "MeshOverride": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "SkeletalMeshOverride": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "PivotOffset": {
-          "X": 0.0,
-          "Y": 50.0,
-          "Z": 0.0
-        },
-        "InitialRotation": {
-          "Pitch": 10.0,
-          "Yaw": -55.0,
-          "Roll": -10.0
-        },
-        "Scale": 0.8
-      },
-      {
-        "MinLevel": 1,
-        "MaxLevel": 1
-      },
-      {
-        "Icon": {
+        "PreviewImage": {
           "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/T-Icon_Glider-WayfareMGlider.T-Icon_Glider-WayfareMGlider",
           "SubPathString": ""
-        }
-      },
-      {
-        "LargeIcon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/T-Icon_Glider-WayfareMGlider-L.T-Icon_Glider-WayfareMGlider-L",
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
           "SubPathString": ""
-        }
+        },
+        "VariantGameplayTags": []
       },
       {
-        "Tags": [
-          "Cosmetics.Source.ItemShop",
-          "Cosmetics.Filter.Season.21",
-          "Cosmetics.Set.WildLinen",
-          "Cosmetics.UserFacingFlags.HasVariants"
-        ]
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/Materials/Glider_Wayfare_Male.Glider_Wayfare_Male",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/Skins/Materials/MI_Glider_Wayfare_Female.MI_Glider_Wayfare_Female",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/FX/NS_Glider_Wayfare_Male.NS_Glider_Wayfare_Male",
+              "SubPathString": ""
+            },
+            "ColorParams": [
+              {
+                "Value": {
+                  "R": 0.24,
+                  "G": 0.05,
+                  "B": 0.35,
+                  "A": 1.0,
+                  "Hex": "863FA0"
+                },
+                "ParamName": "M_Background_Color"
+              }
+            ],
+            "VectorParams": [],
+            "FloatParams": [],
+            "TextureParams": []
+          },
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/FX/NS_Glider_Wayfare_Male.NS_Glider_Wayfare_Male",
+              "SubPathString": ""
+            },
+            "ColorParams": [
+              {
+                "Value": {
+                  "R": 5.000002,
+                  "G": 0.0,
+                  "B": 15.0,
+                  "A": 1.0,
+                  "Hex": "FF00FF"
+                },
+                "ParamName": "M_Lines_Color"
+              }
+            ],
+            "VectorParams": [],
+            "FloatParams": [],
+            "TextureParams": []
+          },
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/FX/NS_Glider_Wayfare_Male.NS_Glider_Wayfare_Male",
+              "SubPathString": ""
+            },
+            "ColorParams": [
+              {
+                "Value": {
+                  "R": 0.517848,
+                  "G": 0.0,
+                  "B": 1.0,
+                  "A": 1.0,
+                  "Hex": "BF00FF"
+                },
+                "ParamName": "Variant_Color"
+              }
+            ],
+            "VectorParams": [],
+            "FloatParams": [],
+            "TextureParams": []
+          },
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/FX/NS_Glider_Wayfare_Male.NS_Glider_Wayfare_Male",
+              "SubPathString": ""
+            },
+            "ColorParams": [
+              {
+                "Value": {
+                  "R": 0.04,
+                  "G": 0.0,
+                  "B": 0.05,
+                  "A": 1.0,
+                  "Hex": "38003F"
+                },
+                "ParamName": "ColorA"
+              }
+            ],
+            "VectorParams": [],
+            "FloatParams": [],
+            "TextureParams": []
+          },
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/FX/NS_Glider_Wayfare_Male.NS_Glider_Wayfare_Male",
+              "SubPathString": ""
+            },
+            "ColorParams": [
+              {
+                "Value": {
+                  "R": 0.5,
+                  "G": 0.0,
+                  "B": 0.8,
+                  "A": 1.0,
+                  "Hex": "BC00E8"
+                },
+                "ParamName": "ColorB"
+              }
+            ],
+            "VectorParams": [],
+            "FloatParams": [],
+            "TextureParams": []
+          },
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/FX/NS_Glider_Wayfare_Male.NS_Glider_Wayfare_Male",
+              "SubPathString": ""
+            },
+            "ColorParams": [
+              {
+                "Value": {
+                  "R": 0.42,
+                  "G": 0.0,
+                  "B": 1.0,
+                  "A": 0.0,
+                  "Hex": "AE00FF"
+                },
+                "ParamName": "HDR_Tint"
+              }
+            ],
+            "VectorParams": [],
+            "FloatParams": [],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle2"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "7E69C097420A0BB2B75BD88201E4936B",
+          "SourceString": "Ikora Shader",
+          "LocalizedString": "Ikora Shader"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/T-Icon_Glider-WayfareFGlider.T-Icon_Glider-WayfareFGlider",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
       },
       {
-        "Traits": [
-          "Item.Trait.SingleStack"
-        ]
-      },
-      {
-        "GeneratedTagsIndexes": [
-          244,
-          550,
-          553,
-          237,
-          367,
-          253,
-          254,
-          167,
-          580,
-          171,
-          613,
-          252,
-          713,
-          184,
-          1185,
-          359,
-          1419,
-          1651,
-          259,
-          2403,
-          2436,
-          2491,
-          392,
-          2658,
-          390,
-          3119,
-          3308,
-          437
-        ]
-      },
-      {
-        "Rarity": "EFortRarity::Epic"
+        "VariantMaterials": [
+          {
+            "MaterialToSwap": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/Materials/Glider_Wayfare_Male.Glider_Wayfare_Male",
+              "SubPathString": ""
+            },
+            "ComponentToOverride": "None",
+            "CascadeMaterialName": "None",
+            "MaterialOverrideIndex": 0,
+            "OverrideMaterial": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/Skins/Materials/MI_Glider_Wayfare_Mask_Female.MI_Glider_Wayfare_Mask_Female",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/FX/NS_Glider_Wayfare_Male.NS_Glider_Wayfare_Male",
+              "SubPathString": ""
+            },
+            "ColorParams": [
+              {
+                "Value": {
+                  "R": 0.05,
+                  "G": 0.225,
+                  "B": 0.35,
+                  "A": 1.0,
+                  "Hex": "3F82A0"
+                },
+                "ParamName": "M_Background_Color"
+              }
+            ],
+            "VectorParams": [],
+            "FloatParams": [],
+            "TextureParams": []
+          },
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_GliderChute/Glider_Wayfare_Male/FX/NS_Glider_Wayfare_Male.NS_Glider_Wayfare_Male",
+              "SubPathString": ""
+            },
+            "ColorParams": [
+              {
+                "Value": {
+                  "R": 0.0,
+                  "G": 8.749999,
+                  "B": 15.0,
+                  "A": 1.0,
+                  "Hex": "00FFFF"
+                },
+                "ParamName": "M_Lines_Color"
+              }
+            ],
+            "VectorParams": [],
+            "FloatParams": [],
+            "TextureParams": []
+          }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
+        },
+        "bStartUnlocked": true,
+        "bIsDefault": false,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle3"
+        },
+        "VariantName": {
+          "Namespace": "",
+          "Key": "7F3AE24C49698C0B347DB5857BE7BA1F",
+          "SourceString": "Exo Stranger Shader",
+          "LocalizedString": "Exo Stranger Shader"
+        },
+        "PreviewImage": {
+          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/T-Icon_Glider-WayfareMaskGlider.T-Icon_Glider-WayfareMaskGlider",
+          "SubPathString": ""
+        },
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "VariantGameplayTags": []
       }
-    ]
+    ],
+    "VariantChannelName": {
+      "Namespace": "",
+      "Key": "E1F1658F4B373E50DFD2FC8A55C6F768",
+      "SourceString": "Style",
+      "LocalizedString": "Style"
+    },
+    "VariantChannelTag": {
+      "TagName": "Cosmetics.Variant.Channel.Particle"
+    }
   }
 }

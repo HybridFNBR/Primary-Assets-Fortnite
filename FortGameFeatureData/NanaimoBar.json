@@ -1,143 +1,70 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'NanaimoBar'",
-    "ObjectPath": "/NanaimoBar/NanaimoBar.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "NanaimoBar",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/NanaimoBar/NanaimoBar",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              3,
-              0,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Creative, Playlist.Experience.PlayOnly, Playlist.UGC.Core ) )"
-          },
-          "bMigratedFromOldData": true
-        },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "38.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Plugin.Playlist.Arena ) )"
-          },
-          "bMigratedFromOldData": false
-        },
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Athena.Playlist.ItemsTest"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              3,
-              0,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.Default, Athena.Playlist.Test, Athena.Playlist.ItemsTest ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/NanaimoBar/Levels/NanaimoBar_LevelOverlay.NanaimoBar_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Default"
+    "WeaponReticleExtensions": {
+      "AssetPathName": "/NanaimoBar/UI/RE_NanaimoBar_ReticleExtenstionData.RE_NanaimoBar_ReticleExtenstionData",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/NanaimoBar/NanaimoBar_DeathCauseData.NanaimoBar_DeathCauseData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "CH6S4 Weapons",
+        "DisplayName": "Bug Gauntlet",
+        "ConsoleCommands": [
+          "cheat givespecificitem /Script/FortniteGame.FortWeaponRangedItemDefinition'/NanaimoBar/Gameplay/WID_NanaimoBar.WID_NanaimoBar' 1 1",
+          "cheat givespecificitem /Script/FortniteGame.FortWeaponRangedItemDefinition'/NanaimoBar/Gameplay/WID_NanaimoBar_VR.WID_NanaimoBar_VR' 1 1",
+          "cheat givespecificitem /Script/FortniteGame.FortWeaponRangedItemDefinition'/NanaimoBar/Gameplay/WID_NanaimoBar_SR.WID_NanaimoBar_SR' 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'NanaimoBar:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/NanaimoBar/NanaimoBar.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/NanaimoBar/Gameplay/WID_NanaimoBar.WID_NanaimoBar",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL(  ANY( Athena.Playlist.Default ) )"
-    }
+      }
+    ]
   }
 }

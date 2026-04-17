@@ -1,16 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'BouncyBug'",
     "ObjectPath": "/BouncyBug/BouncyBug.3"
   },
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/BouncyBug/Gameplay/MME_Logic_Bouncing_BouncyBug.MME_Logic_Bouncing_BouncyBug_C",
-      "SubPathString": ""
-    }
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Fort.DataRegistry",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "/BouncyBug/DataTables/BouncyBugGameData.BouncyBugGameData",
+          "SubPathString": ""
+        }
+      }
+    ]
   }
 }

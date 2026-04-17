@@ -1,120 +1,315 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_FishThicc",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_FishThicc'",
+    "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "AE81A08F-4C098A90-C1CF148B-34E26007",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_FishThicc:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.1"
-        }
-      },
-      {
-        "Key": "E7A1468E-4334C03D-7B313A9A-78641360",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_FishThicc:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.13"
-        }
-      },
-      {
-        "Key": "E11322F1-426347C6-C185C587-5A364530",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_FishThicc:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.6"
-        }
-      },
-      {
-        "Key": "5C90C9F7-47D0B0FD-45B3CC96-712E1832",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_FishThicc:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.5"
-        }
-      },
-      {
-        "Key": "E9629ADE-4DFA1F54-91C97B93-8D23F648",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_FishThicc:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.4"
-        }
-      },
-      {
-        "Key": "FC971CCF-454901BF-05C55AB1-FFCB38C9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_FishThicc:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.2"
-        }
-      },
-      {
-        "Key": "540CADC2-42AC6BDA-5F2284B3-2EE61E92",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_FishThicc:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.FishThicc"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D3B721EE40140CBA05D3DDBAA2C42DF9",
+            "SourceString": "You want my advice, brah? Get ripped so you don't get ripped-off. ",
+            "LocalizedString": "You want my advice, brah? Get ripped so you don't get ripped-off. "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_FishThicc:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "AE81A08F-4C098A90-C1CF148B-34E26007"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8607A7104254E751467A68AD88CFF09C",
+            "SourceString": "Just tell me what to hit, boss.",
+            "LocalizedString": "Just tell me what to hit, boss."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_FishThicc:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "857D4D674178D10E3C875093E35CA19C",
+            "SourceString": "It ain't easy stayin' this big.",
+            "LocalizedString": "It ain't easy stayin' this big."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_FishThicc:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "14128FF543052FD101F17CBA79D2F5C0",
+            "SourceString": "Stay. Away. From. The. Goldfish. Got it, brah?",
+            "LocalizedString": "Stay. Away. From. The. Goldfish. Got it, brah?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_FishThicc:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "ECCF16144FC50D6DF5B7978F628719F6",
+            "SourceString": "Do you bench with your teeth or something?",
+            "LocalizedString": "Do you bench with your teeth or something?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_FishThicc:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9EB09BFD444ABF7D9B9316A2FD156D6A",
+            "SourceString": "Serious question: can you put protein powder on a pizza?",
+            "LocalizedString": "Serious question: can you put protein powder on a pizza?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_FishThicc:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "D1684CA8424B62FD8CFFA2B50FE10D12",
+        "SourceString": "Moolah or muscle, I'm here for all kinds of gains. ",
+        "LocalizedString": "Moolah or muscle, I'm here for all kinds of gains. "
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season26.Snapshot.P04.Q03",
-      "Conversation.Entry.Season26.Snapshot.P03.Q14",
-      "Conversation.Entry.Season26.Snapshot.P03.Q03",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "AE81A08F-4C098A90-C1CF148B-34E26007",
-      "E7A1468E-4334C03D-7B313A9A-78641360",
-      "E11322F1-426347C6-C185C587-5A364530",
-      "5C90C9F7-47D0B0FD-45B3CC96-712E1832",
-      "E9629ADE-4DFA1F54-91C97B93-8D23F648",
+    },
+    "OutputConnections": [
+      "540CADC2-42AC6BDA-5F2284B3-2EE61E92",
       "FC971CCF-454901BF-05C55AB1-FFCB38C9",
-      "540CADC2-42AC6BDA-5F2284B3-2EE61E92"
+      "E9629ADE-4DFA1F54-91C97B93-8D23F648",
+      "5C90C9F7-47D0B0FD-45B3CC96-712E1832",
+      "E11322F1-426347C6-C185C587-5A364530"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "E7A1468E-4334C03D-7B313A9A-78641360",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_FishThicc:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/FishThicc/NPCLibrary_Conversation_FishThicc.1"
+    }
   }
 }

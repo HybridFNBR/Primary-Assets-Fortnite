@@ -1,204 +1,73 @@
 {
-  "Type": "AthenaGliderItemDefinition",
-  "Name": "Umbrella_PeakVoyage",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaGliderItemDefinition'",
-  "Package": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Umbrella_PeakVoyage",
+  "Type": "FortCosmeticParticleVariant",
+  "Name": "FortCosmeticParticleVariant_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortCosmeticParticleVariant'",
+  "Outer": {
+    "ObjectName": "AthenaGliderItemDefinition'Umbrella_PeakVoyage'",
+    "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Umbrella_PeakVoyage.0"
+  },
   "Properties": {
-    "GliderType": "EFortGliderType::Umbrella",
-    "CameraFramingBoundsCenterOffset": {
-      "X": -120.0,
-      "Y": -10.0,
-      "Z": 10.0
-    },
-    "ParachutePrefabClass": {
-      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/B_Athena_Glider_Generic.B_Athena_Glider_Generic_C",
-      "SubPathString": ""
-    },
-    "SkeletalMesh": {
-      "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_Umbrella/Umbrella_LiftAxis/Meshes/LiftAxis_Umbrella.LiftAxis_Umbrella",
-      "SubPathString": ""
-    },
-    "GliderMeshTransform": {
-      "Rotation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0,
-        "W": 1.0,
-        "IsNormalized": true,
-        "Size": 1.0,
-        "SizeSquared": 1.0
-      },
-      "Translation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "Scale3D": {
-        "X": 1.0,
-        "Y": 1.0,
-        "Z": 1.0
-      }
-    },
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_Umbrella/VinderTech_Umbrella_AnimBP.VinderTech_Umbrella_AnimBP_C",
-      "SubPathString": ""
-    },
-    "PlayerAnimSet": {
-      "AssetPathName": "/Game/Animation/Game/MainPlayer/Skydive/ParaGlide/Umbrella/UmbrellaPlayerAnimSet.UmbrellaPlayerAnimSet",
-      "SubPathString": ""
-    },
-    "TrailEffectDefinitions": [
+    "ParticleOptions": [
       {
-        "NiagaraSystem": {
-          "AssetPathName": "/Game/Effects/Niagara/Systems/CosmeticTemplates/Glider/NS_Umbrella_Deploy_Default.NS_Umbrella_Deploy_Default",
-          "SubPathString": ""
-        },
-        "EffectSocket": "None",
-        "Offset": {
-          "Rotation": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0,
-            "W": 1.0,
-            "IsNormalized": true,
-            "Size": 1.0,
-            "SizeSquared": 1.0
-          },
-          "Translation": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          },
-          "Scale3D": {
-            "X": 1.0,
-            "Y": 1.0,
-            "Z": 1.0
+        "VariantMaterials": [],
+        "VariantMaterialParams": [],
+        "InitialParticleSystemData": [],
+        "VariantParticles": [],
+        "VariantParticleParams": [
+          {
+            "ParticleSystemToAlter": {
+              "AssetPathName": "/Game/Effects/Niagara/Systems/CosmeticTemplates/Glider/NS_Umbrella_Deploy_Default.NS_Umbrella_Deploy_Default",
+              "SubPathString": ""
+            },
+            "ColorParams": [
+              {
+                "Value": {
+                  "R": 1.2,
+                  "G": 0.277752,
+                  "B": 0.0,
+                  "A": 1.0,
+                  "Hex": "FF9000"
+                },
+                "ParamName": "UmbrellaColor"
+              }
+            ],
+            "VectorParams": [],
+            "FloatParams": [],
+            "TextureParams": []
           }
+        ],
+        "VariantSounds": [],
+        "CosmeticProperties": [],
+        "MetaTags": {
+          "MetaTagsToApply": [],
+          "MetaTagsToRemove": []
         },
-        "ActivationMode": "EGliderTrailActivationMode::AutoActivate",
-        "AttachmentMode": "EGliderTrailAttachmentMode::GliderMesh"
-      }
-    ],
-    "OpenSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/SoloMarkII/MSS_Glider_SoloMarkII_Open.MSS_Glider_SoloMarkII_Open",
-      "SubPathString": ""
-    },
-    "OpenFrontEndSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/SoloMarkII/MSS_Glider_SoloMarkII_Open.MSS_Glider_SoloMarkII_Open",
-      "SubPathString": ""
-    },
-    "CloseSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/SoloMarkII/MSS_Glider_SoloMarkII_Close.MSS_Glider_SoloMarkII_Close",
-      "SubPathString": ""
-    },
-    "ThrustLoopSound": {
-      "AssetPathName": "/BRCosmetics/Sounds/Gliders/SoloMarkII/MSS_Glider_SoloMarkII_Thrust.MSS_Glider_SoloMarkII_Thrust",
-      "SubPathString": ""
-    },
-    "MaterialOverrides": [
-      {
-        "ComponentName": "None",
-        "MaterialOverrideIndex": 0,
-        "OverrideMaterial": {
-          "AssetPathName": "/BRCosmetics/Gadgets/Assets/VinderTech_Umbrella/Umbrella_PeakVoyage/Materials/MI_Glider_PeakVoyage.MI_Glider_PeakVoyage",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ItemVariants": [
-      {
-        "ObjectName": "FortCosmeticParticleVariant'Umbrella_PeakVoyage:FortCosmeticParticleVariant_0'",
-        "ObjectPath": "/BRCosmetics/Athena/Items/Cosmetics/Gliders/Umbrella_PeakVoyage.1"
-      }
-    ],
-    "VariantShotGridIds": [
-      188651
-    ],
-    "ShotGridIds": [
-      188651,
-      188651
-    ],
-    "ItemSearchTags": [
-      {
-        "Namespace": "",
-        "Key": "08BA6847432A03D6970E2C8291E9FCF8",
-        "SourceString": "Umbrella",
-        "LocalizedString": "Umbrella"
-      }
-    ],
-    "BaseShotGridId": 188651,
-    "ItemName": {
-      "Namespace": "",
-      "Key": "D07BCE6F47764FD0D6F79CABF2FD88CC",
-      "SourceString": "Burning 'Brella",
-      "LocalizedString": "Burning 'Brella"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "9AA10F16459D0106B0DABEAB241FA29F",
-      "SourceString": "Burn bright on your way to victory.",
-      "LocalizedString": "Burn bright on your way to victory."
-    },
-    "ItemShortDescription": {
-      "Namespace": "",
-      "Key": "5110886B4B82702C760EDCBF12AFD624",
-      "SourceString": "Glider",
-      "LocalizedString": "Glider"
-    },
-    "DataList": [
-      {
-        "MeshOverride": {
+        "bStartUnlocked": true,
+        "bIsDefault": true,
+        "bHideIfNotOwned": false,
+        "CustomizationVariantTag": {
+          "TagName": "Cosmetics.Variant.Property.Particle0"
+        },
+        "VariantName": {
+          "CultureInvariantString": null
+        },
+        "PreviewImage": {
           "AssetPathName": "",
           "SubPathString": ""
         },
-        "SkeletalMeshOverride": {
+        "UnlockRequirements": {
+          "CultureInvariantString": null
+        },
+        "UnlockingItemDef": {
           "AssetPathName": "",
           "SubPathString": ""
         },
-        "PivotOffset": {
-          "X": 0.0,
-          "Y": 0.0,
-          "Z": 0.0
-        },
-        "InitialRotation": {
-          "Pitch": 15.0,
-          "Yaw": 45.0,
-          "Roll": 0.0
-        },
-        "Scale": 1.05
-      },
-      {
-        "MinLevel": 1,
-        "MaxLevel": 1
-      },
-      {
-        "Icon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S40/T_Icon_Glider_PeakVoyage.T_Icon_Glider_PeakVoyage",
-          "SubPathString": ""
-        }
-      },
-      {
-        "LargeIcon": {
-          "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Skydiving/S40/T_Icon_Glider_PeakVoyage_L.T_Icon_Glider_PeakVoyage_L",
-          "SubPathString": ""
-        }
-      },
-      {
-        "Traits": [
-          "Item.Trait.SingleStack"
-        ]
-      },
-      {
-        "Tags": [
-          "Cosmetics.Source.QuestReward",
-          "Cosmetics.Filter.Season.40",
-          "Cosmetics.Source.Season40.FirstWin"
-        ]
-      },
-      {
-        "Rarity": "EFortRarity::Common"
+        "VariantGameplayTags": []
       }
-    ]
+    ],
+    "VariantChannelTag": {
+      "TagName": "Cosmetics.Variant.Channel.Particle"
+    }
   }
 }

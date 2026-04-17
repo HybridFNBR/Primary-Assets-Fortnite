@@ -1,120 +1,288 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Bushranger",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Bushranger'",
+    "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "65E07EF8-4AE24E19-84060AA2-7621CD66",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Bushranger:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.1"
-        }
-      },
-      {
-        "Key": "D1D5368B-4B0DA52A-63CE95B2-CFC30E50",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Bushranger:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.14"
-        }
-      },
-      {
-        "Key": "0C26E72B-432E3C10-6B582784-DD4E0A58",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Bushranger:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.6"
-        }
-      },
-      {
-        "Key": "214644A1-40F8060C-B675B8B5-9B737069",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Bushranger:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.5"
-        }
-      },
-      {
-        "Key": "F080EB5C-4A53B0DF-33602A88-5F34E19C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Bushranger:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.2"
-        }
-      },
-      {
-        "Key": "D77EFC88-4948D52B-8A96A395-B733B158",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Bushranger:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.3"
-        }
-      },
-      {
-        "Key": "6697AC71-4738AEEF-B2870494-74015360",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Bushranger:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.4"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Bushranger"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AED17EF14C97F2038E692080668517B3",
+            "SourceString": "Bushybushy forest guardian!",
+            "LocalizedString": "Bushybushy forest guardian!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Bushranger:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "65E07EF8-4AE24E19-84060AA2-7621CD66"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1E4796014FD3E873442BBBA2B69147FD",
+            "SourceString": "Nightday weird here. Bushy can help!",
+            "LocalizedString": "Nightday weird here. Bushy can help!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.NPC"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasOwnedTag'NPCLibrary_Conversation_Bushranger:Speech_C_4.FortControllerRequirement_HasOwnedTag_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.11"
+              }
+            },
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Bushranger:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0DCD173547E735336B2A08912D6B81FA",
+            "SourceString": "Dayforest has sunshine! Thank the spritefriends!",
+            "LocalizedString": "Dayforest has sunshine! Thank the spritefriends!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.NPC"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasOwnedTag'NPCLibrary_Conversation_Bushranger:Speech_C_4.FortControllerRequirement_HasOwnedTag_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.12"
+              }
+            },
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Bushranger:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "EA5646064E1A8EF8961112BB3A9A1D42",
+            "SourceString": "Bushy protect forest for newfriend Jade!",
+            "LocalizedString": "Bushy protect forest for newfriend Jade!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Bushranger:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "965647B045E9F67B9BF8F7B4E453B571",
+            "SourceString": "Bushy won't let demons mess with forest!",
+            "LocalizedString": "Bushy won't let demons mess with forest!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Bushranger:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "34EE375C4581A7E0CA4F82ACB40DA481",
+        "SourceString": "Nightday weird here. Bushy can help!",
+        "LocalizedString": "Nightday weird here. Bushy can help!"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Bushranger.Dialogue",
-      "Conversation.Entry.Season22.Narrative.Q12",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests",
-      "Conversation.Entry.Season17.Week1"
-    ],
-    "InternalNodeIds": [
-      "65E07EF8-4AE24E19-84060AA2-7621CD66",
-      "D1D5368B-4B0DA52A-63CE95B2-CFC30E50",
-      "0C26E72B-432E3C10-6B582784-DD4E0A58",
-      "214644A1-40F8060C-B675B8B5-9B737069",
-      "F080EB5C-4A53B0DF-33602A88-5F34E19C",
+    },
+    "OutputConnections": [
+      "6697AC71-4738AEEF-B2870494-74015360",
       "D77EFC88-4948D52B-8A96A395-B733B158",
-      "6697AC71-4738AEEF-B2870494-74015360"
+      "F080EB5C-4A53B0DF-33602A88-5F34E19C",
+      "214644A1-40F8060C-B675B8B5-9B737069",
+      "0C26E72B-432E3C10-6B582784-DD4E0A58"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "D1D5368B-4B0DA52A-63CE95B2-CFC30E50",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Bushranger:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Bushranger/Bushranger/NPCLibrary_Conversation_Bushranger.1"
+    }
   }
 }

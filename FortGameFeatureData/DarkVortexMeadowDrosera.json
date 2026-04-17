@@ -1,170 +1,185 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "DarkVortexMeadowDrosera",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Package": "/DarkVortexMeadowDrosera/DarkVortexMeadowDrosera",
+  "Type": "GameFeatureAction_RegisterModifier",
+  "Name": "GameFeatureAction_RegisterModifier_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'GameFeatureAction_RegisterModifier'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'DarkVortexMeadowDrosera'",
+    "ObjectPath": "/DarkVortexMeadowDrosera/DarkVortexMeadowDrosera.0"
+  },
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "FortDeathCauseData": {
-      "AssetPathName": "/DarkVortexMeadowDrosera/MeadowDrosera_DeathCause.MeadowDrosera_DeathCause",
-      "SubPathString": ""
-    },
-    "FactionMapping": {
-      "AssetPathName": "/DarkVortexMeadowDrosera/DarkVortex_MeadowHeliconia_FactionMapping.DarkVortex_MeadowHeliconia_FactionMapping",
-      "SubPathString": ""
-    },
-    "PawnGoalSelectionTable": [
+    "ModifiersInfo": [
       {
-        "RequiredGameplayTags": [
-          "NPC.GoalSelection.MeadowDrosera"
-        ],
-        "PawnGoalSelectionCriteria": {
-          "IncludeEnemiesWithTags": [],
-          "ExcludeEnemiesWithTags": [],
-          "GoalSelectionCriteria": [
-            {
-              "GoalSelectionQuery": {
-                "AssetPathName": "/DarkVortexMeadowDrosera/GoalSelection/EQS_GoalSelection_MeadowDrosera.EQS_GoalSelection_MeadowDrosera",
-                "SubPathString": ""
-              }
-            }
-          ]
-        }
-      }
-    ],
-    "Actions": [
-      {
-        "ObjectName": "GameFeatureAction_AddSoundLibraryCollection'DarkVortexMeadowDrosera:GameFeatureAction_AddSoundLibraryCollection_0'",
-        "ObjectPath": "/DarkVortexMeadowDrosera/DarkVortexMeadowDrosera.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'DarkVortexMeadowDrosera:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/DarkVortexMeadowDrosera/DarkVortexMeadowDrosera.1"
-      },
-      {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'DarkVortexMeadowDrosera:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/DarkVortexMeadowDrosera/DarkVortexMeadowDrosera.4"
-      },
-      {
-        "ObjectName": "GameFeatureAction_ConfigureAudioClusters'DarkVortexMeadowDrosera:GameFeatureAction_ConfigureAudioClusters_0'",
-        "ObjectPath": "/DarkVortexMeadowDrosera/DarkVortexMeadowDrosera.3"
-      },
-      {
-        "ObjectName": "GameFeatureAction_RegisterModifier'DarkVortexMeadowDrosera:GameFeatureAction_RegisterModifier_0'",
-        "ObjectPath": "/DarkVortexMeadowDrosera/DarkVortexMeadowDrosera.5"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "FortAIPawnCustomizationDefinition",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAIPawnCustomizationDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
+        "Modifiers": [
           {
-            "Path": "AIPawnCustomizations"
+            "AssetPathName": "/DarkVortexMeadowDrosera/CharacterModifiers/CharacterModifier_MeadowDroseraBehavior.CharacterModifier_MeadowDroseraBehavior_C",
+            "SubPathString": ""
           },
           {
-            "Path": "CharacterDefinition"
+            "AssetPathName": "/DarkVortexMeadowDrosera/CharacterModifiers/CharacterModifier_MeadowDroseraGameplay.CharacterModifier_MeadowDroseraGameplay_C",
+            "SubPathString": ""
           }
         ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "AISpawnerData",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
+        "CharacterType": {
+          "AssetPathName": "/DarkVortexMeadowDrosera/CharacterType/BP_MeadowDrosera_CharacterType.BP_MeadowDrosera_CharacterType_C",
           "SubPathString": ""
         },
-        "bHasBlueprintClasses": true,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "AISpawnerData"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 20,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
+        "bAddToDefaultModifiers": true,
+        "bExcludeFromAdditionalModifiers": false
       },
       {
-        "PrimaryAssetType": "FortExposedAssetList",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
+        "Modifiers": [
           {
-            "Path": "UEFNExposedAssets"
+            "AssetPathName": "/DarkVortexMeadowDrosera/CharacterModifiers/CharacterModifier_MeadowDroseraVerseBehavior.CharacterModifier_MeadowDroseraVerseBehavior_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Health.CharacterModifier_Health_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Perception.CharacterModifier_Perception_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Team.CharacterModifier_Team_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_UI.CharacterModifier_UI_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Movement.CharacterModifier_Movement_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_PatrolPath.CharacterModifier_PatrolPath_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_CosmeticSpawn.CharacterModifier_CosmeticSpawn_C",
+            "SubPathString": ""
           }
         ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 20,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
+        "CharacterType": {
+          "AssetPathName": "/DarkVortexMeadowDrosera/CharacterType/BP_MeadowDrosera_CharacterType.BP_MeadowDrosera_CharacterType_C",
+          "SubPathString": ""
+        },
+        "bAddToDefaultModifiers": false,
+        "bExcludeFromAdditionalModifiers": false
       },
       {
-        "PrimaryAssetType": "CustomCharacterPart",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.CustomCharacterPart",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
+        "Modifiers": [
           {
-            "Path": "AIPawnCustomizations"
+            "AssetPathName": "/DarkVortexMeadowDrosera/CharacterModifiers/CharacterModifier_MeadowDroseraBehavior.CharacterModifier_MeadowDroseraBehavior_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/DarkVortexMeadowDrosera/CharacterModifiers/CharacterModifier_MeadowDroseraGameplay.CharacterModifier_MeadowDroseraGameplay_C",
+            "SubPathString": ""
           }
         ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
+        "CharacterType": {
+          "AssetPathName": "/DarkVortexMeadowDrosera/CharacterType/BP_MeadowDrosera_CharacterType_Random_Default.BP_MeadowDrosera_CharacterType_Random_Default_C",
+          "SubPathString": ""
+        },
+        "bAddToDefaultModifiers": true,
+        "bExcludeFromAdditionalModifiers": false
       },
       {
-        "PrimaryAssetType": "Playset",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortPlaysetItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
+        "Modifiers": [
           {
-            "Path": "SetupAssets"
+            "AssetPathName": "/DarkVortexMeadowDrosera/CharacterModifiers/CharacterModifier_MeadowDroseraVerseBehavior.CharacterModifier_MeadowDroseraVerseBehavior_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Health.CharacterModifier_Health_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Perception.CharacterModifier_Perception_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Team.CharacterModifier_Team_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_UI.CharacterModifier_UI_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Movement.CharacterModifier_Movement_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_PatrolPath.CharacterModifier_PatrolPath_C",
+            "SubPathString": ""
           }
         ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
-        }
+        "CharacterType": {
+          "AssetPathName": "/DarkVortexMeadowDrosera/CharacterType/BP_MeadowDrosera_CharacterType_Random_Default.BP_MeadowDrosera_CharacterType_Random_Default_C",
+          "SubPathString": ""
+        },
+        "bAddToDefaultModifiers": false,
+        "bExcludeFromAdditionalModifiers": false
+      },
+      {
+        "Modifiers": [
+          {
+            "AssetPathName": "/DarkVortexMeadowDrosera/CharacterModifiers/CharacterModifier_MeadowDroseraBehavior.CharacterModifier_MeadowDroseraBehavior_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/DarkVortexMeadowDrosera/CharacterModifiers/CharacterModifier_MeadowDroseraGameplay.CharacterModifier_MeadowDroseraGameplay_C",
+            "SubPathString": ""
+          }
+        ],
+        "CharacterType": {
+          "AssetPathName": "/DarkVortexMeadowDrosera/CharacterType/BP_MeadowDrosera_CharacterType_Random_Prisoner.BP_MeadowDrosera_CharacterType_Random_Prisoner_C",
+          "SubPathString": ""
+        },
+        "bAddToDefaultModifiers": true,
+        "bExcludeFromAdditionalModifiers": false
+      },
+      {
+        "Modifiers": [
+          {
+            "AssetPathName": "/DarkVortexMeadowDrosera/CharacterModifiers/CharacterModifier_MeadowDroseraVerseBehavior.CharacterModifier_MeadowDroseraVerseBehavior_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Health.CharacterModifier_Health_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Perception.CharacterModifier_Perception_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Team.CharacterModifier_Team_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_UI.CharacterModifier_UI_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_Movement.CharacterModifier_Movement_C",
+            "SubPathString": ""
+          },
+          {
+            "AssetPathName": "/CRD_AISpawner/SpawnDefinitions/Modifiers/CharacterModifier_PatrolPath.CharacterModifier_PatrolPath_C",
+            "SubPathString": ""
+          }
+        ],
+        "CharacterType": {
+          "AssetPathName": "/DarkVortexMeadowDrosera/CharacterType/BP_MeadowDrosera_CharacterType_Random_Prisoner.BP_MeadowDrosera_CharacterType_Random_Prisoner_C",
+          "SubPathString": ""
+        },
+        "bAddToDefaultModifiers": false,
+        "bExcludeFromAdditionalModifiers": false
       }
     ]
   }

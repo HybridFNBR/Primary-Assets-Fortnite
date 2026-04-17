@@ -1,83 +1,68 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'Figment_Shotgun_Standard_Athena'",
-    "ObjectPath": "/Figment_Shotgun_Standard_Athena/Figment_Shotgun_Standard_Athena.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "Figment_Shotgun_Standard_Athena",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/Figment_Shotgun_Standard_Athena/Figment_Shotgun_Standard_Athena",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "33.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Figment"
-              },
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              4,
-              0,
-              1,
-              2,
-              3
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Figment, Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly )"
-          },
-          "bMigratedFromOldData": true
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Figment S3",
+        "DisplayName": "Pump Shotgun R",
+        "ConsoleCommands": [
+          "Cheat giveweapon WID_Figment_Shotgun_Standard_Athena_R 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Figment S6",
+        "DisplayName": "Pump Shotgun VR",
+        "ConsoleCommands": [
+          "cheat givespecificitem /Figment_Shotgun_Standard_Athena/Gameplay/WID_Figment_Shotgun_Standard_Athena_VR.WID_Figment_Shotgun_Standard_Athena_VR 1 1"
+        ]
+      },
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Figment S6",
+        "DisplayName": "Pump Shotgun SR",
+        "ConsoleCommands": [
+          "cheat givespecificitem /Figment_Shotgun_Standard_Athena/Gameplay/WID_Figment_Shotgun_Standard_Athena_SR.WID_Figment_Shotgun_Standard_Athena_SR 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'Figment_Shotgun_Standard_Athena:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/Figment_Shotgun_Standard_Athena/Figment_Shotgun_Standard_Athena.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'Figment_Shotgun_Standard_Athena:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/Figment_Shotgun_Standard_Athena/Figment_Shotgun_Standard_Athena.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Figment"
-        },
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        4,
-        0,
-        1,
-        2,
-        3
-      ],
-      "AutoDescription": " ANY( Athena.Playlist.Figment, Athena.Creative, Playlist.UGC.Core, Playlist.Experience.PlayOnly )"
-    }
+      }
+    ]
   }
 }

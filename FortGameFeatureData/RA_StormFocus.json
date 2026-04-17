@@ -1,16 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddSafeZoneShapeProviderRegistry",
-  "Name": "FortGameFeatureAction_AddSafeZoneShapeProviderRegistry_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddSafeZoneShapeProviderRegistry'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'RA_StormFocus'",
     "ObjectPath": "/RA_StormFocus/RA_StormFocus.2"
   },
   "Properties": {
-    "SafeZoneShapeProviderRegistry": {
-      "AssetPathName": "/RA_StormFocus/Gameplay/StormFocus_SZDR.StormFocus_SZDR",
-      "SubPathString": ""
-    }
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "AnomaliesToLoad",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/RA_StormFocus/DataTables/RiftAnomalies_StormFocus_Data.RiftAnomalies_StormFocus_Data",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ]
   }
 }

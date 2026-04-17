@@ -1,21 +1,45 @@
 {
-  "Type": "CustomCharacterBackpackData",
-  "Name": "CustomCharacterBackpackData_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterBackpackData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_Backpack_Witch_Dark'",
-    "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_Witch_Dark.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_Backpack_Witch_Dark",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_Witch_Dark",
   "Properties": {
-    "AttachSocketName": "Backpack_BR",
-    "AttachmentOverrideData": {
-      "ObjectName": "CustomAccessoryAttachmentData'FemaleSource'",
-      "ObjectPath": "/Game/Characters/Player/Common/BackpackScaleSettings/FemaleSource.0"
+    "GenderPermitted": "EFortCustomGender::Both",
+    "CharacterPartType": "EFortCustomPartType::Backpack",
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Backpack"
+      ],
+      "PartTypeIndex": 3
     },
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/F_MED_Witch_Backpack/Meshes/F_MED_Witch_Backpack_AnimBP.F_MED_Witch_Backpack_AnimBP_C",
+    "PartModifierBlueprint": {
+      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/B_Athena_PartModifier_Generic.B_Athena_PartModifier_Generic_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterBackpackData'CP_Backpack_Witch_Dark:CustomCharacterBackpackData_0'",
+      "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_Witch_Dark.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/F_MED_Witch_Backpack/Meshes/F_MED_Witch_Backpack.F_MED_Witch_Backpack",
+      "SubPathString": ""
+    },
+    "MaterialOverrides": [
+      {
+        "MaterialOverrideIndex": 0,
+        "OverrideMaterial": {
+          "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/F_MED_Witch_Backpack/Skins/Dark/Materials/F_MED_Witch_Dark_Backpack.F_MED_Witch_Dark_Backpack",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "MaterialOverrideFlags": 1,
+    "IdleEffectNiagara": {
+      "AssetPathName": "/BRCosmetics/Effects/Fort_Effects/Effects/Characters/Athena_Parts/Wizard-Witch_Dark/NS_WitchDark_Feather.NS_WitchDark_Feather",
+      "SubPathString": ""
+    },
+    "IdleFXSocketName": "root",
+    "bAutoActivate": true
   }
 }

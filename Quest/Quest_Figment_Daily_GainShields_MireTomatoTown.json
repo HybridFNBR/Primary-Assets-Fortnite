@@ -1,244 +1,27 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_Figment_Daily_GainShields_MireTomatoTown",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_GainShields_MireTomatoTown",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_Figment_Daily_GainShields_MireTomatoTown'",
+    "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_GainShields_MireTomatoTown.0"
+  },
   "Properties": {
-    "Group": "FigmentEvergreenDailyQuestLocation",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_Figment_Daily_GainShields_MireTomatoTown_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "DataTableEntryRewards": [
           {
-            "IncrementBy": "EFortShieldGainIncrementType::ShieldGainAmount",
-            "bRequireFullShields": false,
-            "bRequireShieldGainedFromTeammate": false,
-            "bRequireAuthorIsTheShieldGainSource": false,
-            "bUseShieldAmountGained": false,
-            "bUseOverFullShields": false,
-            "bUseShieldGainedPercent": false,
-            "bUseTotalShieldsGained": false,
-            "ShieldGainSource": {
-              "bCanGainProgressForThisObjective": false,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "ShieldGainType": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "AmountOfShieldsGained": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestRewards_Evergreen_Figment'",
+                "ObjectPath": "/FigmentQuests/DataTables/QuestRewards_Evergreen_Figment.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+              "RowName": "FigmentDailyQuestRewards"
             },
-            "ShieldsGainedOverFullAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "ShieldsPercentGained": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "TotalShieldGain": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Location.POI.MoistyMire"
-                  },
-                  {
-                    "TagName": "Athena.Location.POI.TomatoTown"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Athena.Location.POI.MoistyMire, Athena.Location.POI.TomatoTown )"
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "8C86B11E453441A4638C4797D65BD3A2",
-          "SourceString": "Gain shields at Moisty Mire or Tomato Town",
-          "LocalizedString": "Gain shields at Moisty Mire or Tomato Town"
-        },
-        "HudShortDescription": {
-          "Namespace": "",
-          "Key": "A8D0E57F45A9F9820E9FDFBAA1B4BDAD",
-          "SourceString": "Gain shields at Moisty Mire or Tomato Town",
-          "LocalizedString": "Gain shields at Moisty Mire or Tomato Town"
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 50,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 50,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Figment"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Product.Figment )"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Daily_GainShields_MireTomatoTown:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_GainShields_MireTomatoTown.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_Figment_Daily_GainShields_MireTomatoTown:FortQuestDefinitionComponent_MapMarkers_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_GainShields_MireTomatoTown.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Daily_GainShields_MireTomatoTown:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/Quest_Figment_Daily_GainShields_MireTomatoTown.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_Figment_Daily_GainShields_MireTomatoTown_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "744D77CB40F5C2303235D3AC63E7C76D",
-      "SourceString": "Gain shields at Moisty Mire or Tomato Town",
-      "LocalizedString": "Gain shields at Moisty Mire or Tomato Town"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "5448E37A42C20581F9832F97277C8335",
-      "SourceString": "Gain shields at Moisty Mire or Tomato Town",
-      "LocalizedString": "Gain shields at Moisty Mire or Tomato Town"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.Figment.Dailies"
         ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

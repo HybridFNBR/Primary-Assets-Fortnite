@@ -1,102 +1,223 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_PinkBear",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_PinkBear'",
+    "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "80F720D1-4ED128A5-311CE188-C6259428",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_PinkBear:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.1"
-        }
-      },
-      {
-        "Key": "FE47056D-4F15B082-143EB0AC-3DF3EE99",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_PinkBear:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.9"
-        }
-      },
-      {
-        "Key": "A363481D-49187DC6-66B2B69A-5303989C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_PinkBear:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.4"
-        }
-      },
-      {
-        "Key": "598A5759-4AFD15A7-ECED4280-01C8AF09",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_PinkBear:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.2"
-        }
-      },
-      {
-        "Key": "659B03C0-42F06D7A-2DFDD9BB-59955519",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_PinkBear:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.PinkBear"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "50FCBBB147F5B7B233BB7590E93F3085",
+            "SourceString": "Stay strong against the Swarm!",
+            "LocalizedString": "Stay strong against the Swarm!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_PinkBear:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "80F720D1-4ED128A5-311CE188-C6259428"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F3AB25CB4D87947429D020A9A90A4570",
+            "SourceString": "This fight isn't over yet!",
+            "LocalizedString": "This fight isn't over yet!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_PinkBear:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BE03A5434721F6A96392FE971C8ABFF0",
+            "SourceString": "In times like these, we all have to be Team Leaders.",
+            "LocalizedString": "In times like these, we all have to be Team Leaders."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_PinkBear:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9E5B7EB04EDCF7024E81969058928F58",
+            "SourceString": "Fuzzy. Fierce. Flawless.",
+            "LocalizedString": "Fuzzy. Fierce. Flawless."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_PinkBear:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "B761719F4BCAA71FD76AE9ABED1D03A9",
+        "SourceString": "Fuzzy. Fierce. Flawless.",
+        "LocalizedString": "Fuzzy. Fierce. Flawless."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season37.NPCRescues.Combat",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "80F720D1-4ED128A5-311CE188-C6259428",
-      "FE47056D-4F15B082-143EB0AC-3DF3EE99",
-      "A363481D-49187DC6-66B2B69A-5303989C",
+    },
+    "OutputConnections": [
+      "659B03C0-42F06D7A-2DFDD9BB-59955519",
       "598A5759-4AFD15A7-ECED4280-01C8AF09",
-      "659B03C0-42F06D7A-2DFDD9BB-59955519"
+      "A363481D-49187DC6-66B2B69A-5303989C"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "FE47056D-4F15B082-143EB0AC-3DF3EE99",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_PinkBear:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/PinkBear/NPCLibrary_Conversation_PinkBear.1"
+    }
   }
 }

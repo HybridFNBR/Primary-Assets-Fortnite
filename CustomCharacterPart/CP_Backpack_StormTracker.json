@@ -1,21 +1,35 @@
 {
-  "Type": "CustomCharacterBackpackData",
-  "Name": "CustomCharacterBackpackData_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterBackpackData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_Backpack_StormTracker'",
-    "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_StormTracker.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_Backpack_StormTracker",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_StormTracker",
   "Properties": {
-    "AttachSocketName": "Backpack_BR",
-    "AttachmentOverrideData": {
-      "ObjectName": "CustomAccessoryAttachmentData'MaleSource'",
-      "ObjectPath": "/Game/Characters/Player/Common/BackpackScaleSettings/MaleSource.0"
+    "GenderPermitted": "EFortCustomGender::Both",
+    "CharacterPartType": "EFortCustomPartType::Backpack",
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Backpack"
+      ],
+      "PartTypeIndex": 3
     },
-    "AnimClass": {
-      "AssetPathName": "/Game/Accessories/FORT_Backpacks/M_MED_StormTracker_Backpack/Meshes/Storm_Tracker_AnimBlueprint.Storm_Tracker_AnimBlueprint_C",
+    "PartModifierBlueprint": {
+      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/B_Athena_PartModifier_Generic.B_Athena_PartModifier_Generic_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterBackpackData'CP_Backpack_StormTracker:CustomCharacterBackpackData_0'",
+      "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_StormTracker.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/Game/Accessories/FORT_Backpacks/M_MED_StormTracker_Backpack/Meshes/Storm_Tracker.Storm_Tracker",
+      "SubPathString": ""
+    },
+    "IdleEffect": {
+      "AssetPathName": "/Game/Accessories/FORT_Backpacks/M_MED_StormTracker_Backpack/FX/P_StormTracker_Backpack.P_StormTracker_Backpack",
+      "SubPathString": ""
+    },
+    "IdleFXSocketName": "backpack_root",
+    "bAutoActivate": true
   }
 }

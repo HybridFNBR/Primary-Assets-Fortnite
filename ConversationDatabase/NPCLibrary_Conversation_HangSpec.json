@@ -1,102 +1,262 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_HangSpec",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_HangSpec'",
+    "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "BEE47F8F-4C6CF1E7-65722595-4879B4C8",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_HangSpec:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.1"
-        }
-      },
-      {
-        "Key": "32C2A5D5-4C0E2168-9ED90BAC-3C4C72D6",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_HangSpec:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.10"
-        }
-      },
-      {
-        "Key": "41E4811B-41C02E13-1C7DA98B-CE5B3471",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_HangSpec:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.4"
-        }
-      },
-      {
-        "Key": "348A0367-40223B1C-656161B3-F77C7A22",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_HangSpec:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.2"
-        }
-      },
-      {
-        "Key": "4473109D-43D3C812-D95C8FB3-7612427C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_HangSpec:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.HangSpec"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7559B40A43E3EF492903219ED08B1267",
+            "SourceString": "Hi! I'm Yoo-mi. It's nice to meet you!",
+            "LocalizedString": "Hi! I'm Yoo-mi. It's nice to meet you!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_HangSpec:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "BEE47F8F-4C6CF1E7-65722595-4879B4C8"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "65E586D34B9315B25BB0FDB84D1055A6",
+            "SourceString": "It's an honor to serve O.X.R.",
+            "LocalizedString": "It's an honor to serve O.X.R."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_HangSpec:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C6510EF2499FF099F795719333D6D246",
+            "SourceString": "Up for some karaoke after this?",
+            "LocalizedString": "Up for some karaoke after this?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_HangSpec:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "3B6EDE3840D69B9E70290B922EC1D318",
+            "SourceString": "Your backstage passes for my next tour? Um, totally in the mail. Yeah.",
+            "LocalizedString": "Your backstage passes for my next tour? Um, totally in the mail. Yeah."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_HangSpec:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "033F75504EBD433A5AD79390A46EF1D3",
+            "SourceString": "I won't let you down, General.",
+            "LocalizedString": "I won't let you down, General."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_HangSpec:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "B4D6407146C583794B581BA753BC84AB",
+        "SourceString": "It's an honor to serve O.X.R.",
+        "LocalizedString": "It's an honor to serve O.X.R."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.HangSpec.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "BEE47F8F-4C6CF1E7-65722595-4879B4C8",
-      "32C2A5D5-4C0E2168-9ED90BAC-3C4C72D6",
-      "41E4811B-41C02E13-1C7DA98B-CE5B3471",
+    },
+    "OutputConnections": [
+      "4473109D-43D3C812-D95C8FB3-7612427C",
       "348A0367-40223B1C-656161B3-F77C7A22",
-      "4473109D-43D3C812-D95C8FB3-7612427C"
+      "41E4811B-41C02E13-1C7DA98B-CE5B3471"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "32C2A5D5-4C0E2168-9ED90BAC-3C4C72D6",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_HangSpec:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/HangSpec/NPCLibrary_Conversation_HangSpec.1"
+    }
   }
 }

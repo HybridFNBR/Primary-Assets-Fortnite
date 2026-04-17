@@ -1,38 +1,57 @@
 {
-  "Type": "FortGameFeatureAction_AddCategoryTableToConfig",
-  "Name": "FortGameFeatureAction_AddCategoryTableToConfig_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddCategoryTableToConfig'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'JunoEncountersLootLlama_Osiris'",
     "ObjectPath": "/JunoEncountersLootLlama_Osiris/JunoEncountersLootLlama_Osiris.2"
   },
   "Properties": {
-    "ConfigToCategoryTableDatas": [
+    "SourcesToAdd": [
       {
-        "Key": "/JunoAI/LWM/Juno/LagerConfigData_Juno.LagerConfigData_Juno",
-        "Value": {
-          "CategoryTableDatas": [
-            {
-              "Name": "Osiris Loot Llama Categories",
-              "CategoryTable": {
-                "AssetPathName": "/JunoEncountersLootLlama_Osiris/LWM/Lager_CategoryTable_Juno_Osiris_LootLlama.Lager_CategoryTable_Juno_Osiris_LootLlama",
-                "SubPathString": ""
-              },
-              "IsEnabled": {
-                "Value": 1.0,
-                "Curve": {
-                  "CurveTable": null,
-                  "RowName": "None"
-                },
-                "RegistryType": {
-                  "Name": "None"
-                }
-              }
-            }
-          ]
+        "RegistryToAddTo": "Juno.Adventures.DynamicEncounters",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoEncountersLootLlama_Osiris/LWM/Juno_EventTable_DynamicEncounters_Osiris_LootLlama.Juno_EventTable_DynamicEncounters_Osiris_LootLlama",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "RegistryToAddTo": "Juno.Adventures.SprinklesFirst15",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoEncountersLootLlama_Osiris/LWM/Juno_EventTable_SprinklesFirst15_Osiris_LootLlama.Juno_EventTable_SprinklesFirst15_Osiris_LootLlama",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      },
+      {
+        "RegistryToAddTo": "Juno.Encounters.LootLlama.LootTables",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoEncountersLootLlama_Osiris/DataTables/Juno_VariableSelections_String_LootLlama_LootTable_Osiris.Juno_VariableSelections_String_LootLlama_LootTable_Osiris",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
-    ]
+    ],
+    "bPreloadInEditor": true
   }
 }

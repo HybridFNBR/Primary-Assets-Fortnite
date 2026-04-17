@@ -1,93 +1,222 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_StageSlayer",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_StageSlayer'",
+    "ObjectPath": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "583A8CBC-4D81DF6E-C789A1AA-F38E1F4A",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_StageSlayer:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F8EB689F45E517309AA7B8BE2C126EA9",
+            "SourceString": "Dude! I was wondering when you'd <b>back for your next encore!</> Righteous.",
+            "LocalizedString": "Dude! I was wondering when you'd <b>back for your next encore!</> Righteous."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_StageSlayer:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "63C60819464F11AD81162988FA619D56",
+            "SourceString": "Hey, a new act! What's up?! *air guitars furiously*",
+            "LocalizedString": "Hey, a new act! What's up?! *air guitars furiously*"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_StageSlayer:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4F7301C24FB086AE77126AB483270DCC",
+            "SourceString": "Dude. My man! <b>My. MAN.</>",
+            "LocalizedString": "Dude. My man! <b>My. MAN.</>"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_StageSlayer:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "06595E27426E0CDD2FF5C2A2652541C5",
+            "SourceString": "Respect. ",
+            "LocalizedString": "Respect. "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_StageSlayer:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "736FB5A7-4303E530-BEE780AC-25256FAD",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_StageSlayer:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer.8"
-        }
-      },
-      {
-        "Key": "EA204F68-42FD6757-585461A3-833334BE",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_StageSlayer:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer.2"
-        }
-      },
-      {
-        "Key": "6B85B97A-4536A5CD-80BFBB82-C3B9F2FE",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_StageSlayer:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "E21702074FF2C167BAB676B60C1C2700",
+        "SourceString": "You say something?",
+        "LocalizedString": "You say something?"
       }
+    },
+    "OutputConnections": [
+      "6B85B97A-4536A5CD-80BFBB82-C3B9F2FE",
+      "EA204F68-42FD6757-585461A3-833334BE"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.StageSlayer"
-        },
-        "DestinationList": [
-          "583A8CBC-4D81DF6E-C789A1AA-F38E1F4A"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "583A8CBC-4D81DF6E-C789A1AA-F38E1F4A",
-      "736FB5A7-4303E530-BEE780AC-25256FAD",
-      "EA204F68-42FD6757-585461A3-833334BE",
-      "6B85B97A-4536A5CD-80BFBB82-C3B9F2FE"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "736FB5A7-4303E530-BEE780AC-25256FAD",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_StageSlayer:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/StageSlayer/NPCLibrary_Conversation_StageSlayer.1"
+    }
   }
 }

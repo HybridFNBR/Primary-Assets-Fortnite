@@ -1,41 +1,29 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "SW_HeroTransformations",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Package": "/SW_HeroTransformations/SW_HeroTransformations",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'SW_HeroTransformations'",
+    "ObjectPath": "/SW_HeroTransformations/SW_HeroTransformations.0"
+  },
   "Properties": {
-    "GameplayCueNotifyPaths": [
-      "GameplayCues"
-    ],
-    "Actions": [
+    "SourcesToAdd": [
       {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'SW_HeroTransformations:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/SW_HeroTransformations/SW_HeroTransformations.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "AthenaGadget",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaGadgetItemDefinition",
+        "RegistryToAddTo": "FNE.HeroTransformations",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/SW_HeroTransformations/DataTables/Akita_HeroTransformations_DataTable.Akita_HeroTransformations_DataTable",
           "SubPathString": ""
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "Gameplay"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
-    ]
+    ],
+    "bPreloadInEditor": true
   }
 }

@@ -1,52 +1,77 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'CleanSweepDiagram'",
-    "ObjectPath": "/CleanSweepDiagram/CleanSweepDiagram.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "CleanSweepDiagram",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/CleanSweepDiagram/CleanSweepDiagram",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/CleanSweepDiagram/CleanSweepDiagram_LevelOverlay.CleanSweepDiagram_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL(  ANY( ) )"
-    }
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/CleanSweepDiagram/HUD/CleanSweepDiagram_HUDWidgetRegistry.CleanSweepDiagram_HUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultLootTableData": {
+      "LootTierData": {
+        "AssetPathName": "/CleanSweepDiagram/DataTables/CleanSweepLootTierData.CleanSweepLootTierData",
+        "SubPathString": ""
+      },
+      "LootPackageData": {
+        "AssetPathName": "/CleanSweepDiagram/DataTables/CleanSweepLootPackages.CleanSweepLootPackages",
+        "SubPathString": ""
+      }
+    },
+    "DefaultGameData": {
+      "AssetPathName": "/CleanSweepDiagram/DataTables/CleanSweepDiagramGameData.CleanSweepDiagramGameData",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch5S1",
+        "DisplayName": "Stealth Camouflage",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /CleanSweepDiagram/Gameplay/WID_CleanSweepDiagram 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CleanSweepDiagram:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/CleanSweepDiagram/CleanSweepDiagram.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'CleanSweepDiagram:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/CleanSweepDiagram/CleanSweepDiagram.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Consumable",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

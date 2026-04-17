@@ -1,21 +1,89 @@
 {
-  "Type": "ConversationChoiceNode",
-  "Name": "ConversationChoiceNode_13",
+  "Type": "Speech_C",
+  "Name": "Speech_C_3",
   "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationChoiceNode'",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
   "Outer": {
     "ObjectName": "ConversationDatabase'Resolve_WarEffort_Conversation_FundingStation'",
     "ObjectPath": "/ResolveWarEffort/Services/Conversations/Resolve_WarEffort_Conversation_FundingStation.6"
   },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "DefaultChoiceDisplayText": {
-      "Namespace": "",
-      "Key": "2DDF990146AAB133697FF2998658FEF4",
-      "SourceString": "This Turret will pack a <hot>punch</> against vehicles - the perfect counter for the IO's tanks.",
-      "LocalizedString": "This Turret will pack a <hot>punch</> against vehicles - the perfect counter for the IO's tanks."
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
     },
-    "ChoiceTags": [
-      "Conversation.Choice.SetFocusUsingCurrentIndex"
-    ]
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "bUsePerNPC_ContextualMessageLookup": true,
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "696BEE69479219B5378A04ADA7499FA6",
+            "SourceString": "Hi there user! We need YOU! What choice'll it be?",
+            "LocalizedString": "Hi there user! We need YOU! What choice'll it be?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.NPC"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_NPCHasServiceProviderTag'Resolve_WarEffort_Conversation_FundingStation:Speech_C_3.FortControllerRequirement_NPCHasServiceProviderTag_0'",
+                "ObjectPath": "/ResolveWarEffort/Services/Conversations/Resolve_WarEffort_Conversation_FundingStation.14"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "A274CA0F4FB2A566D8F72F989214214E",
+        "SourceString": "Go on user... you know you want to! Its a worthy cause! ",
+        "LocalizedString": "Go on user... you know you want to! Its a worthy cause! "
+      }
+    },
+    "OutputConnections": [
+      "52C97F11-46B3E288-8FFE3D98-6BF3F49A",
+      "E05A40EC-41E0358D-AA8E1985-C4E0AFCB",
+      "DF2215D9-48CCB0DF-5F4268BC-8B64E5F2",
+      "8302DE3A-443B7A7E-9FB0338F-20ED0E51",
+      "1725C762-4BE41997-0A21A196-F9547661",
+      "10DBD760-49DECC7C-29FD2DA5-B86DA816"
+    ],
+    "NodeName": "",
+    "Compiled_NodeGUID": "EFF33F47-41A5C3C5-46226A97-81F96B93",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'Resolve_WarEffort_Conversation_FundingStation:ConversationEntryPointNode_7'",
+      "ObjectPath": "/ResolveWarEffort/Services/Conversations/Resolve_WarEffort_Conversation_FundingStation.7"
+    }
   }
 }

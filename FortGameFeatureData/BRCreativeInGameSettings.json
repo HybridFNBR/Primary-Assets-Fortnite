@@ -1,56 +1,17 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'BRCreativeInGameSettings'",
-    "ObjectPath": "/BRCreativeInGameSettings/BRCreativeInGameSettings.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "BRCreativeInGameSettings",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/BRCreativeInGameSettings/BRCreativeInGameSettings",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "31.30"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "Any Athena Playlist",
-            "AutoDescription": " ANY( Athena.Creative, Playlist.UGC.Core )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
+    "SettingsTagQuery": {
       "TagDictionary": [
         {
-          "TagName": "Athena.Creative"
+          "TagName": "Input.Context.Riding"
         },
         {
-          "TagName": "Playlist.UGC.Core"
+          "TagName": "Input.Context.ControllingRiding"
         }
       ],
       "QueryTokenStream": [
@@ -61,8 +22,17 @@
         0,
         1
       ],
-      "UserDescription": "Any Athena Playlist",
-      "AutoDescription": " ANY( Athena.Creative, Playlist.UGC.Core )"
-    }
+      "AutoDescription": " ANY( Input.Context.Riding, Input.Context.ControllingRiding )"
+    },
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BRCreativeInGameSettings:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/BRCreativeInGameSettings/BRCreativeInGameSettings.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'BRCreativeInGameSettings:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/BRCreativeInGameSettings/BRCreativeInGameSettings.1"
+      }
+    ]
   }
 }

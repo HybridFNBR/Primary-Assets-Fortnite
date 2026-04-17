@@ -1,52 +1,38 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'BlastBerryPlaylists'",
-    "ObjectPath": "/BlastBerryPlaylists/BlastBerryPlaylists.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "BlastBerryPlaylists",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/BlastBerryPlaylists/BlastBerryPlaylists",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.BlastBerry"
-              },
-              {
-                "TagName": "Athena.ExcludePlugin.BlastBerryPlaylists"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              2,
-              1,
-              0,
-              3,
-              1,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ALL( Athena.Playlist.BlastBerry ),  NONE( Athena.ExcludePlugin.BlastBerryPlaylists ) )"
-          },
-          "bMigratedFromOldData": false
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BlastBerryPlaylists:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/BlastBerryPlaylists/BlastBerryPlaylists.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortPlaylistAthena",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlaylistAthena",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "BlastBerry/Playlists"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    }
+      }
+    ]
   }
 }

@@ -1,225 +1,48 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_DelMar_S0_Daily_036",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_036",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_DelMar_S0_Daily_036'",
+    "ObjectPath": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_036.0"
+  },
   "Properties": {
-    "Group": "DelMar_Daily_03",
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_DelMar_S0_Daily_036_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "ResourceDataTableRewards": [
           {
-            "RequiredFinishTime": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestReward_DelMar_S0_XP'",
+                "ObjectPath": "/DelMarQuests/Rewards/QuestReward_DelMar_S0_XP.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+              "RowName": "Daily_Quest_1000"
             },
-            "RequiredFinalPlacement": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "RequiredJellyHazardInfo": "EDelMarJellyHazardProcessorInfo::WithoutJellyHazardHit",
-            "RequiredDemolishedInfo": "EDelMarDemolishedProcessorInfo::None",
-            "LevelDescriptionId": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "GameModeId": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "DelMar.Mode.Competitive"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  2,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ALL( DelMar.Mode.Competitive )"
-              }
-            },
-            "VehicleTags": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "RequiredPlaylistTypeInfo": "EDelMarPlaylistTypeInfo::Any",
-            "RequiredCosmetics": [],
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "04A84EA144D43B87B33B80B4F4727678",
-          "SourceString": "Finish races without hitting a Hazard",
-          "LocalizedString": "Finish races without hitting a Hazard"
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 4,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 50,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.FNE.DelMar"
-        },
-        {
-          "TagName": "Product.DelMar"
-        },
-        {
-          "TagName": "Product.DelMar.Habanero"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        2,
-        1,
-        2,
-        0,
-        1,
-        1,
-        1,
-        2
-      ],
-      "AutoDescription": " ANY(  ANY( Product.FNE.DelMar, Product.DelMar ),  ANY( Product.DelMar.Habanero ) )"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_DelMar_S0_Daily_036:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_036.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_DelMar_S0_Daily_036:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_036.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_DelMar_S0_Daily_036_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "92D203EA469710145FE058B3677A357B",
-      "SourceString": "Finish races without hitting a Hazard",
-      "LocalizedString": "Finish races without hitting a Hazard"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "B5A487624EFCC6D934ABDD93CAE650E8",
-      "SourceString": "Finish races without hitting a Hazard",
-      "LocalizedString": "Finish races without hitting a Hazard"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.DelMar.Daily",
-          "ChallengeCategory.XP"
         ]
       },
-      {}
+      {
+        "TokenRewards": [
+          {
+            "TokenDefinition": {
+              "AssetPathName": "/DelMarQuests/Daily/Token_DelMar_DailyQuest.Token_DelMar_DailyQuest",
+              "SubPathString": ""
+            },
+            "TokenCount": 1,
+            "bHideFromUI": false
+          },
+          {
+            "TokenDefinition": {
+              "AssetPathName": "/UniversalDailyQuests/Items/Tokens/Universal_DailyQuest_Token.Universal_DailyQuest_Token",
+              "SubPathString": ""
+            },
+            "TokenCount": 1,
+            "bHideFromUI": false
+          }
+        ]
+      }
     ]
   }
 }

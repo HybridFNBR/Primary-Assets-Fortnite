@@ -1,60 +1,45 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'CreativeCompanion'",
-    "ObjectPath": "/CreativeCompanion/CreativeCompanion.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "CreativeCompanion",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/CreativeCompanion/CreativeCompanion",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "37.30"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.Playground"
-              },
-              {
-                "TagName": "Athena.Playlist.CreativeRoyale"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              5,
-              0,
-              1,
-              2,
-              3,
-              4
-            ],
-            "UserDescription": "Creative, Playground, VKPlay, or Creative Royale",
-            "AutoDescription": " ANY( Athena.Creative, Athena.Playground, Athena.Playlist.CreativeRoyale, Playlist.Experience.PlayOnly, Playlist.UGC.Core )"
-          },
-          "bMigratedFromOldData": false
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddValkyrieComponents'CreativeCompanion:FortGameFeatureAction_AddValkyrieComponents_0'",
+        "ObjectPath": "/CreativeCompanion/CreativeCompanion.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'CreativeCompanion:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/CreativeCompanion/CreativeCompanion.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "FortExposedAssetList",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/CreativeCompanion/UEFNExposedAssets"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
-      ]
-    }
+      }
+    ]
   }
 }

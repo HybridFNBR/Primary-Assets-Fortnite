@@ -1,50 +1,42 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'BetterFishing'",
-    "ObjectPath": "/BetterFishing/BetterFishing.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "BetterFishing",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/BetterFishing/BetterFishing",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "41.00"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              4,
-              1,
-              1,
-              2,
-              0,
-              1
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY(  ANY( Plugin.Playlist.Arena, Athena.Playlist.Default ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    }
+    "LevelOverlayConfig": {
+      "AssetPathName": "/BetterFishing/Levels/BetterFishing_LevelOverlay.BetterFishing_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "DefaultLootTableData": {
+      "LootTierData": {
+        "AssetPathName": "/BetterFishing/DataTables/BetterFishing_CompositeLTD.BetterFishing_CompositeLTD",
+        "SubPathString": ""
+      },
+      "LootPackageData": {
+        "AssetPathName": "/BetterFishing/DataTables/BetterFishing_CompositeLP.BetterFishing_CompositeLP",
+        "SubPathString": ""
+      }
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch7S2",
+        "DisplayName": "Grant Pro Fishing Rod",
+        "ConsoleCommands": [
+          "cheat givespecificitem /Script/FortniteGame.FortWeaponRangedItemDefinition'/Game/Athena/Items/Consumables/FloppingRabbit/WID_Athena_FloppingRabbit_HighTier.WID_Athena_FloppingRabbit_HighTier' 1 1"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'BetterFishing:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/BetterFishing/BetterFishing.0"
+      }
+    ]
   }
 }

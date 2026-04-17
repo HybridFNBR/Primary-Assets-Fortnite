@@ -1,111 +1,314 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_HenchmanTough",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_HenchmanTough'",
+    "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "78F3F547-43BB26BA-A4A54B8A-C44CCCE7",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_HenchmanTough:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.1"
-        }
-      },
-      {
-        "Key": "12B791A7-48E51336-F781D797-35ED6DDD",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_HenchmanTough:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.12"
-        }
-      },
-      {
-        "Key": "3C10EA5C-4800855D-EEC3B08F-E4376AFC",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_HenchmanTough:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.5"
-        }
-      },
-      {
-        "Key": "A86BA1BC-41DD11A6-7A917E86-804BBAC6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_HenchmanTough:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.4"
-        }
-      },
-      {
-        "Key": "CF65A0D8-4C376113-1E8FB4AB-F5D8E6EB",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_HenchmanTough:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.2"
-        }
-      },
-      {
-        "Key": "03CE5DA4-4B5BC8E6-6EDE59BA-FA877AFE",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_HenchmanTough:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.HenchmanTough"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E26DB4F54C8CDC1096C950BE2E0B6E5B",
+            "SourceString": "You look surprised to see me.",
+            "LocalizedString": "You look surprised to see me."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_HenchmanTough:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "78F3F547-43BB26BA-A4A54B8A-C44CCCE7"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7EF0907049F5D4A162CA83A307971B3B",
+            "SourceString": "You look like you need somethin'.",
+            "LocalizedString": "You look like you need somethin'."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_HenchmanTough:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "98F5BA3E4B6A93B72E2A299EDB24321F",
+            "SourceString": "You got a message from the Boss?",
+            "LocalizedString": "You got a message from the Boss?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_HenchmanTough:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7C068EED481D4AA8D827C2A2FEFEC736",
+            "SourceString": "Where Midas goes, I follow.",
+            "LocalizedString": "Where Midas goes, I follow."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_HenchmanTough:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D757FA4F46AD71081CD553BD9B0C1BB1",
+            "SourceString": "Boss. Good to have ya back.",
+            "LocalizedString": "Boss. Good to have ya back."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_HenchmanTough:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2FE761A0453D2DD67E3931A648057C00",
+            "SourceString": "Good to see ya, Big Cat.",
+            "LocalizedString": "Good to see ya, Big Cat."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_HenchmanTough:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "520974C747AD14C57457FCA26C5B3650",
+        "SourceString": "You look like you need somethin'.",
+        "LocalizedString": "You look like you need somethin'."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.DeluxeServices",
-      "Conversation.Entry.HenchmanTough.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "78F3F547-43BB26BA-A4A54B8A-C44CCCE7",
-      "12B791A7-48E51336-F781D797-35ED6DDD",
-      "3C10EA5C-4800855D-EEC3B08F-E4376AFC",
-      "A86BA1BC-41DD11A6-7A917E86-804BBAC6",
+    },
+    "OutputConnections": [
+      "03CE5DA4-4B5BC8E6-6EDE59BA-FA877AFE",
       "CF65A0D8-4C376113-1E8FB4AB-F5D8E6EB",
-      "03CE5DA4-4B5BC8E6-6EDE59BA-FA877AFE"
+      "A86BA1BC-41DD11A6-7A917E86-804BBAC6",
+      "3C10EA5C-4800855D-EEC3B08F-E4376AFC"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "12B791A7-48E51336-F781D797-35ED6DDD",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_HenchmanTough:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/HenchmanTough/NPCLibrary_Conversation_HenchmanTough.1"
+    }
   }
 }

@@ -1,83 +1,40 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'DynamicBacchusHUDCreativeComponents'",
     "ObjectPath": "/DynamicBacchusHUDCreativeComponents/DynamicBacchusHUDCreativeComponents.2"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "31.10"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.HUD.Disable"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              2,
-              0,
-              1,
-              3,
-              1,
-              2
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL(  ANY( Playlist.UGC.Core, Athena.Creative ),  NONE( Athena.HUD.Disable ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Playlist.UGC.Core"
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/DynamicBacchusHUD.DynamicBacchusHUDDirector",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Creative"
+        "ComponentClass": {
+          "AssetPathName": "/DynamicBacchusHUDCreativeComponents/Components/BP_DynamicBacchusHUDDirectorComponent_PlayerInfoOverride.BP_DynamicBacchusHUDDirectorComponent_PlayerInfoOverride_C",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.HUD.Disable"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        2,
-        1,
-        2,
-        0,
-        1,
-        3,
-        1,
-        2
-      ],
-      "AutoDescription": " ALL(  ANY( Playlist.UGC.Core, Athena.Creative ),  NONE( Athena.HUD.Disable ) )"
-    }
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 1
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/DynamicBacchusHUD.DynamicBacchusHUDDirector",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/DynamicBacchusHUDCreativeComponents/Components/BP_DynamicBacchusHUDDirectorComponent_QuickbarOverride.BP_DynamicBacchusHUDDirectorComponent_QuickbarOverride_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 1
+      }
+    ]
   }
 }

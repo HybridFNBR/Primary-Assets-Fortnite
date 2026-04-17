@@ -1,18 +1,25 @@
 {
-  "Type": "FortGameFeatureAction_AddMutators",
-  "Name": "FortGameFeatureAction_AddMutators_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMutators'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'BigHeadMode'",
     "ObjectPath": "/BigHeadMode/BigHeadMode.4"
   },
   "Properties": {
-    "MutatorsToAdd": [
+    "SourcesToAdd": [
       {
-        "Target": "EMutatorAddTarget::FortGameStateAthena",
-        "Mutator": {
-          "AssetPathName": "/BigHeadMode/Gameplay/Mutator_BigHeadMode.Mutator_BigHeadMode_C",
+        "RegistryToAddTo": "AnomaliesToLoad",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/BigHeadMode/DataTables/RiftAnomalies_BigHeadMode_Data.RiftAnomalies_BigHeadMode_Data",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
           "SubPathString": ""
         }
       }

@@ -1,111 +1,350 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2'",
+    "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "A0EEF22C-4F690E47-5194EFAE-E5410A2A",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.1"
-        }
-      },
-      {
-        "Key": "5EBB1F12-46129E37-20E2B683-6DA4D344",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:Speech_C_4'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.13"
-        }
-      },
-      {
-        "Key": "6C2FC259-45702238-5A48DFA5-A02A8FBB",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.5"
-        }
-      },
-      {
-        "Key": "84BD5647-4692DC27-391140B0-B8340DBC",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.4"
-        }
-      },
-      {
-        "Key": "BF5AE48D-42B5C3D5-54C757BA-E322B1A2",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.2"
-        }
-      },
-      {
-        "Key": "A2063A7E-4BAAAF0D-FCF243B1-D4E224AF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.CozyMechanicHen"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "24373D8B460A13D8203715A2F133C381",
+            "SourceString": "I'm Jules. I'm an emissary of the Elites. And your Island is in trouble.",
+            "LocalizedString": "I'm Jules. I'm an emissary of the Elites. And your Island is in trouble."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "A0EEF22C-4F690E47-5194EFAE-E5410A2A"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "64063820465D67EA0F332AA4583A8AB8",
+            "SourceString": "I miss my laboratory...",
+            "LocalizedString": "I miss my laboratory..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C275FB324F102692085F30A26423C6A8",
+            "SourceString": "I'm not sure how to get home. But I'm going to try.",
+            "LocalizedString": "I'm not sure how to get home. But I'm going to try."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "00703114402A835B1A73798EB4209FF4",
+            "SourceString": "...Hmm? Sorry, I was thinking about something else.",
+            "LocalizedString": "...Hmm? Sorry, I was thinking about something else."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "ECEC259E44F876557A96EDB8601E86E9",
+            "SourceString": "Girl... Come on. Let it go. ",
+            "LocalizedString": "Girl... Come on. Let it go. "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F693C8EA427A3D96F25456BB78B49E69",
+            "SourceString": "Aren't you supposed to be off-grid?",
+            "LocalizedString": "Aren't you supposed to be off-grid?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E7A9CF844CD73F072935E587B05396E2",
+            "SourceString": "I hear you. I'm still thinking it over.",
+            "LocalizedString": "I hear you. I'm still thinking it over."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "84A6381340729B187010D5AF5C58A560",
+        "SourceString": "I miss my laboratory...",
+        "LocalizedString": "I miss my laboratory..."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.CozyMechanicHen.Dialogue",
-      "Conversation.Entry.RandomServices",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "A0EEF22C-4F690E47-5194EFAE-E5410A2A",
-      "5EBB1F12-46129E37-20E2B683-6DA4D344",
-      "6C2FC259-45702238-5A48DFA5-A02A8FBB",
-      "84BD5647-4692DC27-391140B0-B8340DBC",
+    },
+    "OutputConnections": [
+      "A2063A7E-4BAAAF0D-FCF243B1-D4E224AF",
       "BF5AE48D-42B5C3D5-54C757BA-E322B1A2",
-      "A2063A7E-4BAAAF0D-FCF243B1-D4E224AF"
+      "84BD5647-4692DC27-391140B0-B8340DBC",
+      "6C2FC259-45702238-5A48DFA5-A02A8FBB"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "5EBB1F12-46129E37-20E2B683-6DA4D344",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibraryCH7S2/NPCs/CozyMechanic_Hen/NPCLibrary_Conversation_CozyMechanic_Hen_Ch7S2.1"
+    }
   }
 }

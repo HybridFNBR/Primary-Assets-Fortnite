@@ -1,21 +1,44 @@
 {
-  "Type": "BaseBuildingStaticMeshComponent",
-  "Name": "StaticMeshComponent0",
-  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'BaseBuildingStaticMeshComponent'",
+  "Type": "StaticMeshComponent",
+  "Name": "VolumeVisual_GEN_VARIABLE",
+  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'StaticMeshComponent'",
   "Outer": {
-    "ObjectName": "DelMarActiveTrackVolume_BP_C'Default__DelMarActiveTrackVolume_BP_C'",
-    "ObjectPath": "/CRD_DelMarActiveTrackVolume/DelMarActiveTrackVolume_BP.3"
-  },
-  "Template": {
-    "ObjectName": "BaseBuildingStaticMeshComponent'Default__DelMarTrack_ActiveTrigger_Box_C:StaticMeshComponent0'",
-    "ObjectPath": "/DelMarTrack/Blueprints/DelMarTrack_ActiveTrigger_Box.0"
+    "ObjectName": "BlueprintGeneratedClass'DelMarActiveTrackVolume_BP_C'",
+    "ObjectPath": "/CRD_DelMarActiveTrackVolume/DelMarActiveTrackVolume_BP.1"
   },
   "Properties": {
+    "StaticMesh": {
+      "ObjectName": "StaticMesh'Cube'",
+      "ObjectPath": "/Engine/BasicShapes/Cube.1"
+    },
+    "OverrideMaterials": [
+      {
+        "ObjectName": "MaterialInstanceConstant'MI_CP_ActiveTrack_Bounds_Placed_01'",
+        "ObjectPath": "/CRD_DelMarActiveTrackVolume/SetupAssets/Materials/MI_CP_ActiveTrack_Bounds_Placed_01.0"
+      }
+    ],
+    "BodyInstance": {
+      "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+      "CollisionEnabled": "ECollisionEnabled::NoCollision",
+      "CollisionProfileName": "NoCollision",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "Visibility",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Camera",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          }
+        ]
+      }
+    },
     "RelativeScale3D": {
-      "X": 1.0,
-      "Y": 1.0,
-      "Z": 1.0
+      "X": 20.0,
+      "Y": 20.0,
+      "Z": 20.0
     }
   }
 }

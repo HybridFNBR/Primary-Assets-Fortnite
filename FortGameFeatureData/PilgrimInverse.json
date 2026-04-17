@@ -1,64 +1,92 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'PilgrimInverse'",
     "ObjectPath": "/PilgrimInverse/PilgrimInverse.1"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "40.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Sparks.Playlist.Pilgrim.Quickplay"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              1,
-              1,
-              1,
-              0
-            ],
-            "UserDescription": "Main Stage",
-            "AutoDescription": " ALL(  ANY( Sparks.Playlist.Pilgrim.Quickplay ) )"
-          },
-          "bMigratedFromOldData": false
-        }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Sparks.Playlist.Pilgrim.Quickplay"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL(  ANY( Sparks.Playlist.Pilgrim.Quickplay ) )"
-    },
-    "RequiredCVar": "PilgrimQuickplay.EnablePilgrimInverse"
+    "ComponentList": [
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/PilgrimQuickplayRuntime.PilgrimQuickplayPlayspace",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/PilgrimInverse/Components/BP_PilgrimInverseManager_PlayspaceComponent.BP_PilgrimInverseManager_PlayspaceComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/PilgrimQuickplayRuntime.PilgrimQuickplayPlayspace",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/PilgrimInverse/Components/BP_PilgrimInverseUIManager_PlayspaceComponent.BP_PilgrimInverseUIManager_PlayspaceComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/DynamicBacchusHUD.DynamicBacchusHUDDirector",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/PilgrimInverse/Components/BP_PilgrimInverseTouchUIDirectorComponent.BP_PilgrimInverseTouchUIDirectorComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerController",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/PilgrimInverse/Components/BP_PilgrimInverse_PlayerControllerComponent.BP_PilgrimInverse_PlayerControllerComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/Script/FortniteGame.FortPlayerControllerAthena",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/PilgrimInverse/Components/BP_PilgrimInverse_FTUEComponent.BP_PilgrimInverse_FTUEComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      },
+      {
+        "ActorClass": {
+          "AssetPathName": "/PilgrimCore/Actors/BP_PilgrimWarmupCollection.BP_PilgrimWarmupCollection_C",
+          "SubPathString": ""
+        },
+        "ComponentClass": {
+          "AssetPathName": "/PilgrimInverse/Components/BP_PilgrimInverseShaderWarmupComponent.BP_PilgrimInverseShaderWarmupComponent_C",
+          "SubPathString": ""
+        },
+        "bClientComponent": true,
+        "bServerComponent": false,
+        "AdditionFlags": 0
+      }
+    ]
   }
 }

@@ -1,15 +1,204 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Figment_Milestone_Bonus_AnyType_Q04'",
-    "ObjectPath": "/FigmentQuests/Items/QuestItems/Milestones/BonusGoals/Any/Quest_Figment_Milestone_Bonus_AnyType_Q04.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Figment_Milestone_Bonus_AnyType_Q04",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/FigmentQuests/Items/QuestItems/Milestones/BonusGoals/Any/Quest_Figment_Milestone_Bonus_AnyType_Q04",
   "Properties": {
-    "VisibilitySettings": {
-      "bCanShowInPostMatch": false
-    }
+    "QuestSubtype": "EFortQuestSubtype::Milestone",
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Figment_Milestone_Bonus_AnyType_Q04_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementType": "EAcquireIncrementType::Single",
+            "bUseItemCount": false,
+            "ItemAcquired": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Quests.Figment.Token.MilestoneRepeatable.Challenge"
+                  },
+                  {
+                    "TagName": "Athena.Quests.Figment.Token.MilestoneRepeatable.Combat"
+                  },
+                  {
+                    "TagName": "Athena.Quests.Figment.Token.MilestoneRepeatable.Exploration"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  3,
+                  0,
+                  1,
+                  2
+                ],
+                "UserDescription": "Repeatable Milestone Tokens (any type)",
+                "AutoDescription": " ANY( Athena.Quests.Figment.Token.MilestoneRepeatable.Challenge, Athena.Quests.Figment.Token.MilestoneRepeatable.Combat, Athena.Quests.Figment.Token.MilestoneRepeatable.Exploration )"
+              }
+            },
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AcquireSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "53A6D59D4DFC79DBB49112BF3C89F754",
+          "SourceString": "Complete 20 Milestone quests",
+          "LocalizedString": "Complete 20 Milestone quests"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "D18C1BD14604EF2A536B1DAB61312296",
+          "SourceString": "Complete 20 Milestone quests",
+          "LocalizedString": "Complete 20 Milestone quests"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 20,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Figment"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.Figment )"
+    },
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Milestone_Bonus_AnyType_Q04:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/Milestones/BonusGoals/Any/Quest_Figment_Milestone_Bonus_AnyType_Q04.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Milestone_Bonus_AnyType_Q04:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/Milestones/BonusGoals/Any/Quest_Figment_Milestone_Bonus_AnyType_Q04.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Figment_Milestone_Bonus_AnyType_Q04_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "610945834D543A05AAEDE2BC185EF4DD",
+      "SourceString": "Complete 20 Milestone quests",
+      "LocalizedString": "Complete 20 Milestone quests"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "9F80DDDE4DFA41A5EC250491860F75C7",
+      "SourceString": "Complete 20 Milestone quests",
+      "LocalizedString": "Complete 20 Milestone quests"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.Figment.Milestones",
+          "ChallengeCategory.XP"
+        ]
+      }
+    ]
   }
 }

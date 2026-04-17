@@ -1,111 +1,359 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_SteedShimmer",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_SteedShimmer'",
+    "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "EC3BECF9-4AA1B890-F2CEE3B7-7BF49C04",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SteedShimmer:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.1"
-        }
-      },
-      {
-        "Key": "CF2C0BCC-4597A269-475E5CB1-7F1B78AF",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_SteedShimmer:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.13"
-        }
-      },
-      {
-        "Key": "388A9801-406B2011-228ADC98-8B19F91C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SteedShimmer:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.5"
-        }
-      },
-      {
-        "Key": "D1171444-4658CA52-BBBF9684-A2D4ED5E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SteedShimmer:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.4"
-        }
-      },
-      {
-        "Key": "02B45E56-487C7913-9E5E65A3-181F4A08",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SteedShimmer:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.2"
-        }
-      },
-      {
-        "Key": "B17B9AC9-46C8454B-2ACB7C88-032B7B3B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_SteedShimmer:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.SteedShimmer"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A26108724875A2CB06CB3591F6411585",
+            "SourceString": "It's D-A-S-H-A. I want the news to spell it right this time.",
+            "LocalizedString": "It's D-A-S-H-A. I want the news to spell it right this time."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_SteedShimmer:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "EC3BECF9-4AA1B890-F2CEE3B7-7BF49C04"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "75ACEDDE4C29186B06D520871C7D6BE9",
+            "SourceString": "You sure you wanna mess with this?",
+            "LocalizedString": "You sure you wanna mess with this?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SteedShimmer:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A16A4BC3478812C1DC39488C3E921070",
+            "SourceString": "I'd abide by the laws if the laws were any fun.",
+            "LocalizedString": "I'd abide by the laws if the laws were any fun."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SteedShimmer:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DFD75A524668C88AE2DD4985A68635BC",
+            "SourceString": "Unlike these other NPCs, *I* have free will.",
+            "LocalizedString": "Unlike these other NPCs, *I* have free will."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_SteedShimmer:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "53093E0D499D858B9F47A9B2E756D793",
+            "SourceString": "So that's what freezer burn looks like. Gross.",
+            "LocalizedString": "So that's what freezer burn looks like. Gross."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SteedShimmer:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "465C11FD4BDED3ECC177009E68BA170C",
+            "SourceString": "The Ice King sends his regards!",
+            "LocalizedString": "The Ice King sends his regards!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SteedShimmer:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7F2E6A0A4D488FF1D1744295146DC35E",
+            "SourceString": "Admit it. You miss me.",
+            "LocalizedString": "Admit it. You miss me."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_SteedShimmer:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "158456B74DAC473557DB07A9E0A29C11",
+        "SourceString": "Unlike these other NPCs, *I* have free will.",
+        "LocalizedString": "Unlike these other NPCs, *I* have free will."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.SteedShimmer.Dialogue",
-      "Conversation.Entry.RandomServices",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "EC3BECF9-4AA1B890-F2CEE3B7-7BF49C04",
-      "CF2C0BCC-4597A269-475E5CB1-7F1B78AF",
-      "388A9801-406B2011-228ADC98-8B19F91C",
-      "D1171444-4658CA52-BBBF9684-A2D4ED5E",
+    },
+    "OutputConnections": [
+      "B17B9AC9-46C8454B-2ACB7C88-032B7B3B",
       "02B45E56-487C7913-9E5E65A3-181F4A08",
-      "B17B9AC9-46C8454B-2ACB7C88-032B7B3B"
+      "D1171444-4658CA52-BBBF9684-A2D4ED5E",
+      "388A9801-406B2011-228ADC98-8B19F91C"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "CF2C0BCC-4597A269-475E5CB1-7F1B78AF",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_SteedShimmer:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/SteedShimmer/NPCLibrary_Conversation_SteedShimmer.1"
+    }
   }
 }

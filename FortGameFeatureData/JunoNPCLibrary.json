@@ -1,36 +1,26 @@
 {
-  "Type": "FortGameFeatureAction_AddCategoryTableToConfig",
-  "Name": "FortGameFeatureAction_AddCategoryTableToConfig_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddCategoryTableToConfig'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'JunoNPCLibrary'",
     "ObjectPath": "/JunoNPCLibrary/JunoNPCLibrary.3"
   },
   "Properties": {
-    "ConfigToCategoryTableDatas": [
+    "SourcesToAdd": [
       {
-        "Key": "/JunoAI/LWM/Juno/LagerConfigData_Juno.LagerConfigData_Juno",
-        "Value": {
-          "CategoryTableDatas": [
-            {
-              "Name": "Juno NPC Categories",
-              "CategoryTable": {
-                "AssetPathName": "/JunoNPCLibrary/LWM/Categories/Lager_CategoryTable_Juno_NPCLibrary.Lager_CategoryTable_Juno_NPCLibrary",
-                "SubPathString": ""
-              },
-              "IsEnabled": {
-                "Value": 1.0,
-                "Curve": {
-                  "CurveTable": null,
-                  "RowName": "None"
-                },
-                "RegistryType": {
-                  "Name": "None"
-                }
-              }
-            }
-          ]
+        "RegistryToAddTo": "Juno.CodexEntries",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": false,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoNPCLibrary/DataTables/DT_CodexEntry_FriendlyNPCs.DT_CodexEntry_FriendlyNPCs",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
     ]

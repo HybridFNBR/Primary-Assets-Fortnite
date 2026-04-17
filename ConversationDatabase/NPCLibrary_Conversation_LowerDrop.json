@@ -1,102 +1,358 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_LowerDrop",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_LowerDrop'",
+    "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "9DFF85E1-4B278762-0818148D-D8721BDE",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_LowerDrop:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.1"
-        }
-      },
-      {
-        "Key": "3CC2488C-4275AB61-10673487-7EDBE923",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_LowerDrop:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.12"
-        }
-      },
-      {
-        "Key": "FBDD1307-413981E9-BFC721A0-95AC3DA2",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LowerDrop:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.4"
-        }
-      },
-      {
-        "Key": "D4710BF8-4DD87F14-3910D2AF-B275BCB9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LowerDrop:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.2"
-        }
-      },
-      {
-        "Key": "03053924-46FF0943-3105D2B3-BECDF774",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LowerDrop:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.LowerDrop"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AE99ED5B495368C8E1932E9F1E9C3DD4",
+            "SourceString": "HUNTR/X is at your service. As long as you're cool about it.",
+            "LocalizedString": "HUNTR/X is at your service. As long as you're cool about it."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_LowerDrop:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "9DFF85E1-4B278762-0818148D-D8721BDE"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7136CAD140153E427EB0B2BD45283A47",
+            "SourceString": "Demons just make me wanna... GRAAAAAAH!",
+            "LocalizedString": "Demons just make me wanna... GRAAAAAAH!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_LowerDrop:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A809C0184AE414F28C2B4DB25663DC9D",
+            "SourceString": "Happy fans, happy Honmoon.",
+            "LocalizedString": "Happy fans, happy Honmoon."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_LowerDrop:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4847D90B42C4C9A746CC2A8E270ECB9C",
+            "SourceString": "In HUNTR/X vs. demons, never bet on the demons.",
+            "LocalizedString": "In HUNTR/X vs. demons, never bet on the demons."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_LowerDrop:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B29CA64F4560DC084B9714B46C305098",
+            "SourceString": "Couch! Couch! Couch! Couch!",
+            "LocalizedString": "Couch! Couch! Couch! Couch!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LowerDrop:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5D33461B4D3BB1C8C2B23EA8A2634A8E",
+            "SourceString": "Zoey and I will follow you anywhere. You're our sister.",
+            "LocalizedString": "Zoey and I will follow you anywhere. You're our sister."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LowerDrop:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AFAD843C448261F5C1C7F9B5D10356CD",
+            "SourceString": "Stay away from Rumi, demon.",
+            "LocalizedString": "Stay away from Rumi, demon."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LowerDrop:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "6D73E6A745DF966657560FAA5C23C541",
+        "SourceString": "Demons just make me wanna... GRAAAAAAH!",
+        "LocalizedString": "Demons just make me wanna... GRAAAAAAH!"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.LowerDrop.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "9DFF85E1-4B278762-0818148D-D8721BDE",
-      "3CC2488C-4275AB61-10673487-7EDBE923",
-      "FBDD1307-413981E9-BFC721A0-95AC3DA2",
+    },
+    "OutputConnections": [
+      "03053924-46FF0943-3105D2B3-BECDF774",
       "D4710BF8-4DD87F14-3910D2AF-B275BCB9",
-      "03053924-46FF0943-3105D2B3-BECDF774"
+      "FBDD1307-413981E9-BFC721A0-95AC3DA2"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "3CC2488C-4275AB61-10673487-7EDBE923",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_LowerDrop:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/LowerDrop/NPCLibrary_Conversation_LowerDrop.1"
+    }
   }
 }

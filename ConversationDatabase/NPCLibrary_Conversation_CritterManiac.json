@@ -1,93 +1,222 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_CritterManiac",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_CritterManiac'",
+    "ObjectPath": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "B2CBF763-46ACE683-109FC284-D94C9E5C",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CritterManiac:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8283E9164D5789C9DDC1A0BD057D5622",
+            "SourceString": "Has your eternal slumber been disturbed, too?",
+            "LocalizedString": "Has your eternal slumber been disturbed, too?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckTimeSinceLastPlayedMatch'NPCLibrary_Conversation_CritterManiac:Speech_C_4.FortControllerRequirement_CheckTimeSinceLastPlayedMatch_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.WhileSincePlayed"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "21F2D6864AE80C60B52F22B9D294B55B",
+            "SourceString": "Who awakens me from my bed of death?",
+            "LocalizedString": "Who awakens me from my bed of death?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_CritterManiac:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "CB64446A489C90C20265BFA44F9E9AC4",
+            "SourceString": "You are overladen with treasure, traveler. Let me help you carry the load…",
+            "LocalizedString": "You are overladen with treasure, traveler. Let me help you carry the load…"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasBars'NPCLibrary_Conversation_CritterManiac:Speech_C_4.FortControllerRequirement_HasBars_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.HighTotalBars"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6D9390094E04752970FA61B48BA2A817",
+            "SourceString": "Wrath! Have you seen my beloved in the Underworld? Take me to her, PLEASE!",
+            "LocalizedString": "Wrath! Have you seen my beloved in the Underworld? Take me to her, PLEASE!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CritterManiac:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "DFC1734C-45F1AC20-7C666797-5C38871E",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_CritterManiac:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac.8"
-        }
-      },
-      {
-        "Key": "216CC80D-498852F2-509E1A83-F1BD1D5C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CritterManiac:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac.2"
-        }
-      },
-      {
-        "Key": "90FB5F42-4742CF13-502DB3BA-9680BAE0",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CritterManiac:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "B3AE793F46ECF6B3B70162A17FAECA94",
+        "SourceString": "uuUUuuUuUugh… What is this strange new world?",
+        "LocalizedString": "uuUUuuUuUugh… What is this strange new world?"
       }
+    },
+    "OutputConnections": [
+      "90FB5F42-4742CF13-502DB3BA-9680BAE0",
+      "216CC80D-498852F2-509E1A83-F1BD1D5C"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.CritterManiac"
-        },
-        "DestinationList": [
-          "B2CBF763-46ACE683-109FC284-D94C9E5C"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "B2CBF763-46ACE683-109FC284-D94C9E5C",
-      "DFC1734C-45F1AC20-7C666797-5C38871E",
-      "216CC80D-498852F2-509E1A83-F1BD1D5C",
-      "90FB5F42-4742CF13-502DB3BA-9680BAE0"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "DFC1734C-45F1AC20-7C666797-5C38871E",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CritterManiac:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/CritterManiac/CritterManiac/NPCLibrary_Conversation_CritterManiac.1"
+    }
   }
 }

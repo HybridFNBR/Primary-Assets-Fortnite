@@ -1,102 +1,358 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_CarolinaChilli",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_CarolinaChilli'",
+    "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "222BD491-49A7E89E-8E34A7A3-32546A22",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CarolinaChilli:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.1"
-        }
-      },
-      {
-        "Key": "D4803597-454AAE14-A41C1388-5BD628FD",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_CarolinaChilli:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.12"
-        }
-      },
-      {
-        "Key": "E32AE1A0-45998583-EBC9E988-54DD7B7E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CarolinaChilli:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.4"
-        }
-      },
-      {
-        "Key": "19C19D8E-4DC51993-28B992A2-DA56AEC7",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CarolinaChilli:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.2"
-        }
-      },
-      {
-        "Key": "E89A1949-4F9D75BD-456C25B6-DA15C000",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_CarolinaChilli:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.CarolinaChili"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6620D5B34CF8F857ED92E390D9A4DA9C",
+            "SourceString": "I've got two flavors. Spicy, and extra spicy.",
+            "LocalizedString": "I've got two flavors. Spicy, and extra spicy."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_CarolinaChilli:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "222BD491-49A7E89E-8E34A7A3-32546A22"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "65BF7FEC461F04A708328B962EBF4EE6",
+            "SourceString": "Ready to spice things up?",
+            "LocalizedString": "Ready to spice things up?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CarolinaChilli:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4E4827E84FE4D7AAD35480B9DBE8FBA8",
+            "SourceString": "Extra spice inbound.",
+            "LocalizedString": "Extra spice inbound."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CarolinaChilli:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6C7BFBAF4C289D89263407821295B4B2",
+            "SourceString": "When the wasteland burns, you better burn it right back.",
+            "LocalizedString": "When the wasteland burns, you better burn it right back."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_CarolinaChilli:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "94405390425FD6D762CDE080906FF733",
+            "SourceString": "Three heads, one pod. Must get into some pretty heated arguments.",
+            "LocalizedString": "Three heads, one pod. Must get into some pretty heated arguments."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CarolinaChilli:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FC6FD1F84DB167B542A6E9BFE528F351",
+            "SourceString": "You represent No Sweat, yeah? I'm...whatever the opposite is.",
+            "LocalizedString": "You represent No Sweat, yeah? I'm...whatever the opposite is."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CarolinaChilli:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D617513245A2410A1A365CB2BC650743",
+            "SourceString": "Sheesh, and I thought I was a hot-head.",
+            "LocalizedString": "Sheesh, and I thought I was a hot-head."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_CarolinaChilli:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "B8534E9E46658477AF4EC4A0FF2D9CB3",
+        "SourceString": "Ready to spice things up?",
+        "LocalizedString": "Ready to spice things up?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.CarolinaChili.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "222BD491-49A7E89E-8E34A7A3-32546A22",
-      "D4803597-454AAE14-A41C1388-5BD628FD",
-      "E32AE1A0-45998583-EBC9E988-54DD7B7E",
+    },
+    "OutputConnections": [
+      "E89A1949-4F9D75BD-456C25B6-DA15C000",
       "19C19D8E-4DC51993-28B992A2-DA56AEC7",
-      "E89A1949-4F9D75BD-456C25B6-DA15C000"
+      "E32AE1A0-45998583-EBC9E988-54DD7B7E"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "D4803597-454AAE14-A41C1388-5BD628FD",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_CarolinaChilli:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/CarolinaChilli/NPCLibrary_Conversation_CarolinaChilli.1"
+    }
   }
 }

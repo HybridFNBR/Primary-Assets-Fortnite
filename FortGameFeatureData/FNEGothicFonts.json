@@ -1,38 +1,29 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "FNEGothicFonts",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Package": "/FNEGothicFonts/FNEGothicFonts",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'FNEGothicFonts'",
+    "ObjectPath": "/FNEGothicFonts/FNEGothicFonts.0"
+  },
   "Properties": {
-    "Actions": [
+    "SourcesToAdd": [
       {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'FNEGothicFonts:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/FNEGothicFonts/FNEGothicFonts.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "FortExposedAssetList",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
+        "RegistryToAddTo": "FNE.FontOptions",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/FNEGothicFonts/DataTables/GothicFonts_FontOptionsDataTable.GothicFonts_FontOptionsDataTable",
           "SubPathString": ""
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "AssetLists"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
-    ]
+    ],
+    "bPreloadInEditor": true
   }
 }

@@ -1,16 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddMovementModeExtension",
-  "Name": "FortGameFeatureAction_AddMovementModeExtension_1",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_1",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMovementModeExtension'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'TeaCakeIceGauntlets'",
     "ObjectPath": "/TeaCakeIceGauntlets/TeaCakeIceGauntlets.2"
   },
   "Properties": {
-    "MovementModeRuntimeRef": {
-      "AssetPathName": "/TeaCakeIceGauntlets/Gameplay/BigBomb/FMM_GuidedMotion_Leap_IceGauntlets.FMM_GuidedMotion_Leap_IceGauntlets_C",
-      "SubPathString": ""
-    }
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "ItemBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/TeaCakeIceGauntlets/BTInjection/TeaCake_IceGauntlets_FortItemInjectedBehaviors.TeaCake_IceGauntlets_FortItemInjectedBehaviors",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ]
   }
 }

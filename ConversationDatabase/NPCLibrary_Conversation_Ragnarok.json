@@ -1,93 +1,177 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Ragnarok",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Ragnarok/Ragnarok/NPCLibrary_Conversation_Ragnarok",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Ragnarok'",
+    "ObjectPath": "/NPCLibrary/NPCs/Ragnarok/Ragnarok/NPCLibrary_Conversation_Ragnarok.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "5809B1CD-41E0A30E-5AE0D192-C919DD22",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Ragnarok:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Ragnarok/Ragnarok/NPCLibrary_Conversation_Ragnarok.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "02259F0D4BFE9297754EA79EBB289B45",
+            "SourceString": "I <b>knew</> you'd come eventually.",
+            "LocalizedString": "I <b>knew</> you'd come eventually."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Ragnarok:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Ragnarok/Ragnarok/NPCLibrary_Conversation_Ragnarok.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "479A92834C95177BA066DD8F497B3A68",
+            "SourceString": " Did Blackheart say anything about me when you stopped by his vessel? Just... <b>wondering.</>",
+            "LocalizedString": " Did Blackheart say anything about me when you stopped by his vessel? Just... <b>wondering.</>"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasVisitedPOI'NPCLibrary_Conversation_Ragnarok:Speech_C_4.FortControllerRequirement_HasVisitedPOI_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Ragnarok/Ragnarok/NPCLibrary_Conversation_Ragnarok.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.VisitedSpecificPOI"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "69C8AADE4C6431DE25DEDF82416D2B9F",
+            "SourceString": " Looking like you're in rough shape there, brother.",
+            "LocalizedString": " Looking like you're in rough shape there, brother."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Ragnarok:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Ragnarok/Ragnarok/NPCLibrary_Conversation_Ragnarok.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "0352D9D1-47E6681E-C00F90BC-AD3EF75C",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Ragnarok:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Ragnarok/Ragnarok/NPCLibrary_Conversation_Ragnarok.7"
-        }
-      },
-      {
-        "Key": "D8A07C73-4C413F6D-53D0AD92-1D2CFAC9",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Ragnarok:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Ragnarok/Ragnarok/NPCLibrary_Conversation_Ragnarok.2"
-        }
-      },
-      {
-        "Key": "DA6235D9-469B3C1B-A8E3D78C-DCCDF4FF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Ragnarok:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Ragnarok/Ragnarok/NPCLibrary_Conversation_Ragnarok.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "2FD39968427215A320E6CEAC81F7F3EC",
+        "SourceString": "I await my destiny. ",
+        "LocalizedString": "I await my destiny. "
       }
+    },
+    "OutputConnections": [
+      "DA6235D9-469B3C1B-A8E3D78C-DCCDF4FF",
+      "D8A07C73-4C413F6D-53D0AD92-1D2CFAC9"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Ragnarok"
-        },
-        "DestinationList": [
-          "5809B1CD-41E0A30E-5AE0D192-C919DD22"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "5809B1CD-41E0A30E-5AE0D192-C919DD22",
-      "0352D9D1-47E6681E-C00F90BC-AD3EF75C",
-      "D8A07C73-4C413F6D-53D0AD92-1D2CFAC9",
-      "DA6235D9-469B3C1B-A8E3D78C-DCCDF4FF"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "0352D9D1-47E6681E-C00F90BC-AD3EF75C",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Ragnarok:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Ragnarok/Ragnarok/NPCLibrary_Conversation_Ragnarok.1"
+    }
   }
 }

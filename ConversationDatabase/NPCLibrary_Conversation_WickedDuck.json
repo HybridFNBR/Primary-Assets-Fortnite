@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_WickedDuck",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/WickedDuck/NPCLibrary_Conversation_WickedDuck",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_WickedDuck'",
+    "ObjectPath": "/NPCLibrary/NPCs/WickedDuck/NPCLibrary_Conversation_WickedDuck.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "7104A1FF-4638B05F-02233D9A-2E6AF1B5",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_WickedDuck:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/WickedDuck/NPCLibrary_Conversation_WickedDuck.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A92506C548672D41285390896256F56E",
+            "SourceString": "You're not one of <enemy>Kitbash's</> people, right?",
+            "LocalizedString": "You're not one of <enemy>Kitbash's</> people, right?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_WickedDuck:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/WickedDuck/NPCLibrary_Conversation_WickedDuck.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "6A10B50D-40A5624A-A3FD0084-6171CC1D",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_WickedDuck:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/WickedDuck/NPCLibrary_Conversation_WickedDuck.5"
-        }
-      },
-      {
-        "Key": "1031C65D-47D2C308-B319C088-A05A5F62",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_WickedDuck:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/WickedDuck/NPCLibrary_Conversation_WickedDuck.2"
-        }
-      },
-      {
-        "Key": "E3293510-4260C005-93A76EBA-1E07C7C0",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_WickedDuck:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/WickedDuck/NPCLibrary_Conversation_WickedDuck.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "0C20B16D487680BA52433EBD21F8C6BA",
+        "SourceString": "You didn't see me, I was never here.",
+        "LocalizedString": "You didn't see me, I was never here."
       }
+    },
+    "OutputConnections": [
+      "E3293510-4260C005-93A76EBA-1E07C7C0",
+      "1031C65D-47D2C308-B319C088-A05A5F62"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.WickedDuck"
-        },
-        "DestinationList": [
-          "7104A1FF-4638B05F-02233D9A-2E6AF1B5"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "7104A1FF-4638B05F-02233D9A-2E6AF1B5",
-      "6A10B50D-40A5624A-A3FD0084-6171CC1D",
-      "1031C65D-47D2C308-B319C088-A05A5F62",
-      "E3293510-4260C005-93A76EBA-1E07C7C0"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "6A10B50D-40A5624A-A3FD0084-6171CC1D",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_WickedDuck:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/WickedDuck/NPCLibrary_Conversation_WickedDuck.1"
+    }
   }
 }

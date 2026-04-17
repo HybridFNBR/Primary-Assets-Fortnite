@@ -1,304 +1,39 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "quest_daily_combat_15",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Combat_1/quest_daily_combat_15",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'quest_daily_combat_15'",
+    "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Combat_1/quest_daily_combat_15.0"
+  },
   "Properties": {
-    "Group": "Evergreen_BR_Combat",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "quest_daily_gameplay_22_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "TokenRewards": [
           {
-            "bIncrementByDistance": false,
-            "bUseDistance": false,
-            "bAllowSelfInflictedDamage": false,
-            "bRequireCriticalHit": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+            "TokenDefinition": {
+              "AssetPathName": "/UniversalDailyQuests/Items/Tokens/Universal_DailyQuest_Token.Universal_DailyQuest_Token",
+              "SubPathString": ""
             },
-            "DamageSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "DamagedActor": {
-              "bCanGainProgressForThisObjective": false,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Faction.Generic.Hostile"
-                  },
-                  {
-                    "TagName": "Homebase.Class"
-                  },
-                  {
-                    "TagName": "Pawn.Athena.NPC.Duel.IsBeingChallenged"
-                  },
-                  {
-                    "TagName": "Athena.Gameplay.Status.Converted"
-                  },
-                  {
-                    "TagName": "Quests.Wildlife.IsOpponent"
-                  },
-                  {
-                    "TagName": "AISpawnerData.Type"
-                  },
-                  {
-                    "TagName": "AISpawnerData.Type.Tandem"
-                  },
-                  {
-                    "TagName": "AISpawnerData.Type.Specialist"
-                  },
-                  {
-                    "TagName": "Pawn.Athena.NPC.Wildlife"
-                  },
-                  {
-                    "TagName": "Pawn.Athena.NPC.Labrador"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  5,
-                  2,
-                  4,
-                  2,
-                  1,
-                  5,
-                  0,
-                  1,
-                  2,
-                  3,
-                  4,
-                  5,
-                  2,
-                  1,
-                  1,
-                  5,
-                  3,
-                  3,
-                  6,
-                  7,
-                  8,
-                  3,
-                  1,
-                  9
-                ],
-                "UserDescription": "Opponent Tags",
-                "AutoDescription": " ALL(  ANY(  ANY( Athena.Faction.Generic.Hostile, Homebase.Class, Pawn.Athena.NPC.Duel.IsBeingChallenged, Athena.Gameplay.Status.Converted, Quests.Wildlife.IsOpponent ),  ALL(  ANY( AISpawnerData.Type ),  NONE( AISpawnerData.Type.Tandem, AISpawnerData.Type.Specialist, Pawn.Athena.NPC.Wildlife ) ) ),  NONE( Pawn.Athena.NPC.Labrador ) )"
-              }
-            },
-            "DamageType": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Weapon.Ranged.Pistol"
-                  },
-                  {
-                    "TagName": "Weapon.Ranged.Sniper"
-                  },
-                  {
-                    "TagName": "Item.Weapon.Ranged.Bow.Stink"
-                  },
-                  {
-                    "TagName": "Item.Weapon.Ranged.CherrySmokeDualRevolvers"
-                  },
-                  {
-                    "TagName": "Gameplay.Action.Attacking.Ranged"
-                  },
-                  {
-                    "TagName": "Item.Weapon.Ranged.BallisticShield"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  4,
-                  2,
-                  1,
-                  4,
-                  0,
-                  1,
-                  2,
-                  3,
-                  5,
-                  1,
-                  2,
-                  2,
-                  4,
-                  5
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY(  ANY( Weapon.Ranged.Pistol, Weapon.Ranged.Sniper, Item.Weapon.Ranged.Bow.Stink, Item.Weapon.Ranged.CherrySmokeDualRevolvers ),  ALL(  ALL( Gameplay.Action.Attacking.Ranged, Item.Weapon.Ranged.BallisticShield ) ) )"
-              }
-            },
-            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "TokenCount": 1,
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "CultureInvariantString": null
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 3,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.BR"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "UserDescription": "BR",
-      "AutoDescription": " ALL( Product.BR )"
-    },
-    "Category": {
-      "DataTable": {
-        "ObjectName": "DataTable'QuestCategoryTable'",
-        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
-      },
-      "RowName": "BRDailyChallenges"
-    },
-    "SortPriority": 2,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'quest_daily_combat_15:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Combat_1/quest_daily_combat_15.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'quest_daily_combat_15:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Combat_1/quest_daily_combat_15.1"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_ModularGates'quest_daily_combat_15:FortQuestDefinitionComponent_ModularGates_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/BattleRoyale/Combat_1/quest_daily_combat_15.2"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "quest_daily_gameplay_22_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "93DEB158445900E228D019B491F73E13",
-      "SourceString": "Hit opponents with pistols or sniper rifles",
-      "LocalizedString": "Hit opponents with pistols or sniper rifles"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "46781B99446A627056245CAE96DAAE23",
-      "SourceString": "Hit opponents with pistols or sniper rifles",
-      "LocalizedString": "Hit opponents with pistols or sniper rifles"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.BR.Daily",
-          "ChallengeCategory.XP"
         ]
       },
-      {},
       {
-        "Rarity": "EFortRarity::Common"
+        "ResourceDataTableRewards": [
+          {
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestXPReward_Evergreen'",
+                "ObjectPath": "/EvergreenQuest/Items/QuestRewards/QuestXPReward_Evergreen.0"
+              },
+              "RowName": "ChallengeReward_Daily"
+            },
+            "bHideFromUI": false
+          }
+        ]
       }
     ]
   }

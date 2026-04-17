@@ -1,17 +1,148 @@
 {
-  "Type": "CustomCharacterCharmData",
-  "Name": "CustomCharacterCharmData_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterCharmData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_Shoes_HeartThrobs'",
-    "ObjectPath": "/CosmeticShoes/Assets/ShoeParts/CP_Shoes_HeartThrobs.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_Shoes_HeartThrobs",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/CosmeticShoes/Assets/ShoeParts/CP_Shoes_HeartThrobs",
   "Properties": {
-    "PartAttachedToOverride": "EFortCustomPartType::Body",
-    "AnimClass": {
-      "AssetPathName": "/CosmeticShoes/Assets/Anim/ABP_Shoe_Base.ABP_Shoe_Base_C",
+    "GenderPermitted": "EFortCustomGender::Both",
+    "CharacterPartType": "EFortCustomPartType::ExtraPart",
+    "GameplayTags": [
+      "CharacterPart.UniquelyBudgeted",
+      "Cosmetics.Type.Shoes.Medium"
+    ],
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Shoes"
+      ],
+      "PartTypeIndex": 7
+    },
+    "PartModifierBlueprint": {
+      "AssetPathName": "/CosmeticShoes/Assets/Blueprints/B_Athena_PartModifier_Shoes_Generic_MusicReactivity.B_Athena_PartModifier_Shoes_Generic_MusicReactivity_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterCharmData'CP_Shoes_HeartThrobs:CustomCharacterCharmData_0'",
+      "ObjectPath": "/CosmeticShoes/Assets/ShoeParts/CP_Shoes_HeartThrobs.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/Game/Accessories/Hats/Mesh/Hat_Empty.Hat_Empty",
+      "SubPathString": ""
+    },
+    "SoundLibraries": [
+      {
+        "ObjectName": "SoundLibrary'SL_Footsteps_ShoesSneakers_Cosmetic'",
+        "ObjectPath": "/Game/Sounds/Fort_Player/Footsteps/Sneakers/SL_Footsteps_ShoesSneakers_Cosmetic.0"
+      }
+    ],
+    "IdleFXSocketName": "C_Root_Main_Root_Jnt",
+    "CosmeticPartDataList": [
+      {
+        "CustomizableData": {
+          "AssetPathName": "/CosmeticShoes/Assets/Mutable/COs/DA_SharedShoeCOData_Dataless.DA_SharedShoeCOData_Dataless",
+          "SubPathString": ""
+        },
+        "SkeletalMeshParameters": [
+          {
+            "ParameterName": "ShoeMesh",
+            "ParameterValue": {
+              "AssetPathName": "/CosmeticShoes/Assets/FORT_Shoes/Shoe_HeartThrobs/Meshes/HeartThrobs_Shoe.HeartThrobs_Shoe",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "MaterialParameters": [
+          {
+            "ParameterName": "ShoeMaterial",
+            "ParameterValue": {
+              "AssetPathName": "/CosmeticShoes/Assets/FORT_Shoes/Shoe_HeartThrobs/Materials/MI_HeartThrobs_Shoes.MI_HeartThrobs_Shoes",
+              "SubPathString": ""
+            }
+          }
+        ],
+        "AdditionalParameters": [],
+        "ContextualParameters": []
+      },
+      {
+        "EffectParameters": [
+          {
+            "Tag": {
+              "TagName": "CosmeticPart.VFX.Idle"
+            },
+            "Effect": {
+              "AssetPathName": "/CosmeticShoes/Assets/FORT_Shoes/Shoe_HeartThrobs/FX/NS_Shoe_HeartThrob_IdleTrails.NS_Shoe_HeartThrob_IdleTrails",
+              "SubPathString": ""
+            },
+            "LocationOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "RotationOffset": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "bIsPersistent": true,
+            "bAutoActivate": true,
+            "AttachmentParams": {
+              "SocketName": "none",
+              "AttachmentTarget": "ECharacterPartAttachmentTargetType::SkeletalMeshForAssociatedPlayerPawnPartType",
+              "AttachmentRules": {
+                "LocationRule": "EAttachmentRule::SnapToTarget",
+                "RotationRule": "EAttachmentRule::SnapToTarget",
+                "ScaleRule": "EAttachmentRule::SnapToTarget",
+                "bWeldSimulatedBodies": false
+              }
+            }
+          },
+          {
+            "Tag": {
+              "TagName": "CosmeticPart.VFX.Landing"
+            },
+            "Effect": {
+              "AssetPathName": "/CosmeticShoes/Assets/FORT_Shoes/Shoe_HeartThrobs/FX/NS_Shoe_HeartThrob_Land.NS_Shoe_HeartThrob_Land",
+              "SubPathString": ""
+            },
+            "LocationOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "RotationOffset": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "bIsPersistent": false,
+            "bAutoActivate": true,
+            "AttachmentParams": {
+              "SocketName": "None",
+              "AttachmentTarget": "ECharacterPartAttachmentTargetType::SkeletalMeshForAssociatedPlayerPawnPartType",
+              "AttachmentRules": {
+                "LocationRule": "EAttachmentRule::SnapToTarget",
+                "RotationRule": "EAttachmentRule::SnapToTarget",
+                "ScaleRule": "EAttachmentRule::SnapToTarget",
+                "bWeldSimulatedBodies": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "AdditionalMaterialScalarParameters": [
+          {
+            "ParameterInfo": {
+              "Name": "EnableFrontendFakeAudioLoop",
+              "Association": "EMaterialParameterAssociation::GlobalParameter",
+              "Index": -1
+            },
+            "ParameterValue": 1.0,
+            "ExpressionGUID": "00000000-00000000-00000000-00000000"
+          }
+        ],
+        "AdditionalParticleParameters": []
+      }
+    ]
   }
 }

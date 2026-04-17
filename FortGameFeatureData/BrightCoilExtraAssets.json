@@ -1,42 +1,29 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "BrightCoilExtraAssets",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Package": "/BrightCoilExtraAssets/BrightCoilExtraAssets",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'BrightCoilExtraAssets'",
+    "ObjectPath": "/BrightCoilExtraAssets/BrightCoilExtraAssets.0"
+  },
   "Properties": {
-    "Actions": [
+    "SourcesToAdd": [
       {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'BrightCoilExtraAssets:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/BrightCoilExtraAssets/BrightCoilExtraAssets.2"
-      },
-      {
-        "ObjectName": "GameFeatureAction_AddComponents'BrightCoilExtraAssets:GameFeatureAction_AddComponents_0'",
-        "ObjectPath": "/BrightCoilExtraAssets/BrightCoilExtraAssets.1"
-      }
-    ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "FortExposedAssetList",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
+        "RegistryToAddTo": "FNE.StormControllerDeviceVisuals",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/BrightCoilExtraAssets/StormVisuals/BrightCoil_StormVisuals.BrightCoil_StormVisuals",
           "SubPathString": ""
         },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "ExposedAssetLists"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": -1,
-          "ChunkId": -1,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
       }
-    ]
+    ],
+    "bPreloadInEditor": true
   }
 }

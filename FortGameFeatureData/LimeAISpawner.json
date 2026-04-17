@@ -1,22 +1,43 @@
 {
-  "Type": "FortGameFeatureAction_AddInjectionSupportingBehavior",
-  "Name": "FortGameFeatureAction_AddInjectionSupportingBehavior_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_1",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddInjectionSupportingBehavior'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'LimeAISpawner'",
     "ObjectPath": "/LimeAISpawner/LimeAISpawner.3"
   },
   "Properties": {
-    "InjectionSupportingBehaviors": [
+    "SourcesToAdd": [
       {
-        "AssetPathName": "/LimeAISpawner/BehaviorTrees/BT_Lime_EnemyMinifig.BT_Lime_EnemyMinifig",
-        "SubPathString": ""
+        "RegistryToAddTo": "ItemBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/LimeAISpawner/BehaviorTrees/Injection/LimeItemInjectedBehaviorsDataTable.LimeItemInjectedBehaviorsDataTable",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       },
       {
-        "AssetPathName": "/LimeAISpawner/BehaviorTrees/BT_Vk_NPC_Lime.BT_Vk_NPC_Lime",
-        "SubPathString": ""
+        "RegistryToAddTo": "PawnTagQueryBehaviors",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/JunoSharedMinifigEnemy/AI/BehaviorTrees/Injection/LimePawnTagQueryInjectedBehaviorsDataTable.LimePawnTagQueryInjectedBehaviorsDataTable",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       }
-    ]
+    ],
+    "bPreloadInEditor": true
   }
 }

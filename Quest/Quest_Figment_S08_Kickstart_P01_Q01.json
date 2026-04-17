@@ -1,18 +1,198 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Figment_S08_Kickstart_P01_Q01'",
-    "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Kickstart/Quests/P01/Quest_Figment_S08_Kickstart_P01_Q01.3"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Figment_S08_Kickstart_P01_Q01",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/Figment_S08_Quests/Items/QuestItems/Kickstart/Quests/P01/Quest_Figment_S08_Kickstart_P01_Q01",
   "Properties": {
-    "VisibilitySettings": {
-      "bCanShowTimer": false
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Figment_S08_Kickstart_P01_Q01_obj2",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Target": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Building.Type.Container.TreasureChest"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Building.Type.Container.TreasureChest )"
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Location.POI.LazyLagoon"
+                  },
+                  {
+                    "TagName": "Athena.Location.POI.SunnySteps"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  2,
+                  0,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Location.POI.LazyLagoon, Athena.Location.POI.SunnySteps )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "886DDA4747FF9FB655783C95AF5668D8",
+          "SourceString": "Search chests at Lazy Lagoon or Sunny Steps",
+          "LocalizedString": "Search chests at Lazy Lagoon or Sunny Steps"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "672770CB43DB5B1A5AA8A2B4F4A88900",
+          "SourceString": "Search chests at Lazy Lagoon or Sunny Steps",
+          "LocalizedString": "Search chests at Lazy Lagoon or Sunny Steps"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 10,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 50,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Figment"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.Figment )"
     },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false
-    }
+    "SortPriority": 1,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_S08_Kickstart_P01_Q01:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Kickstart/Quests/P01/Quest_Figment_S08_Kickstart_P01_Q01.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_S08_Kickstart_P01_Q01:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Kickstart/Quests/P01/Quest_Figment_S08_Kickstart_P01_Q01.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_Figment_S08_Kickstart_P01_Q01:FortQuestDefinitionComponent_MapMarkers_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Kickstart/Quests/P01/Quest_Figment_S08_Kickstart_P01_Q01.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Figment_S08_Kickstart_P01_Q01_obj2"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "B170263E485C8242F132D08C5A4D231F",
+      "SourceString": "Search chests at Lazy Lagoon or Sunny Steps",
+      "LocalizedString": "Search chests at Lazy Lagoon or Sunny Steps"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "AB4957074D238716A3AE4C9F31C21EA6",
+      "SourceString": "Search chests at Lazy Lagoon or Sunny Steps",
+      "LocalizedString": "Search chests at Lazy Lagoon or Sunny Steps"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "B380DFBD4F9D2D65E3B66D881E6AABC6",
+      "SourceString": "'Tis time to locate some booty in this forsaken place.",
+      "LocalizedString": "'Tis time to locate some booty in this forsaken place."
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.Figment.Kickstart.P01"
+        ]
+      }
+    ]
   }
 }

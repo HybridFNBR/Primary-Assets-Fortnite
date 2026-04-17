@@ -1,21 +1,125 @@
 {
-  "Type": "FortGameFeatureAction_ExtendCosmetics",
-  "Name": "FortGameFeatureAction_ExtendCosmetics_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_ExtendCosmetics'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'BeanstalkCosmetics'",
-    "ObjectPath": "/BeanstalkCosmetics/BeanstalkCosmetics.4"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "BeanstalkCosmetics",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/BeanstalkCosmetics/BeanstalkCosmetics",
   "Properties": {
-    "Extensions": [
+    "LevelOverlayConfig": {
+      "AssetPathName": "/BeanstalkCosmetics/Levels/BeanstalkCosmetics_LevelOverlay.BeanstalkCosmetics_LevelOverlay",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
       {
-        "AssetPathName": "/BeanstalkCosmetics/CosmeticSteps/BP_FortCosmeticStep_ApplyBeanCD.BP_FortCosmeticStep_ApplyBeanCD_C",
-        "SubPathString": ""
+        "ObjectName": "FortGameFeatureAction_ExtendCosmetics'BeanstalkCosmetics:FortGameFeatureAction_ExtendCosmetics_0'",
+        "ObjectPath": "/BeanstalkCosmetics/BeanstalkCosmetics.0"
       },
       {
-        "AssetPathName": "/Script/BeanstalkCosmeticsRuntime.FortCosmeticStep_BeanRemoveBackpack",
-        "SubPathString": ""
+        "ObjectName": "FortGameFeatureAction_PrimaryAssetBehaviors'BeanstalkCosmetics:FortGameFeatureAction_PrimaryAssetBehaviors_0'",
+        "ObjectPath": "/BeanstalkCosmetics/BeanstalkCosmetics.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_RegisterFallbackParts'BeanstalkCosmetics:FortGameFeatureAction_RegisterFallbackParts_0'",
+        "ObjectPath": "/BeanstalkCosmetics/BeanstalkCosmetics.3"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_RegisterDefaultHeroTypeFactory'BeanstalkCosmetics:FortGameFeatureAction_RegisterDefaultHeroTypeFactory_0'",
+        "ObjectPath": "/BeanstalkCosmetics/BeanstalkCosmetics.2"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "AthenaCharacter",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.AthenaCharacterItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/BeanstalkCosmetics/Cosmetics/Def/CID"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "FortHeroType",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortHeroType",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/BeanstalkCosmetics/Cosmetics/"
+          }
+        ],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/BeanstalkCosmetics/Cosmetics/HID_BeanCharacter.HID_BeanCharacter",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "BeanCosmeticsData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/BeanstalkCosmeticsRuntime.BeanCosmeticsData",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [],
+        "SpecificAssets": [
+          {
+            "AssetPathName": "/BeanstalkCosmetics/Cosmetics/Datatables/DT_BeanCosmeticsMap.DT_BeanCosmeticsMap",
+            "SubPathString": ""
+          }
+        ],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "BeanCharacterOverride",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/BeanstalkCosmeticsRuntime.BeanAthenaCharacterItemDefinitionOverride",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/BeanstalkCosmetics/Cosmetics/Def"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
       }
     ]
   }

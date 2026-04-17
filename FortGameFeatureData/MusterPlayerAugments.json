@@ -1,108 +1,28 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'MusterPlayerAugments'",
     "ObjectPath": "/MusterPlayerAugments/MusterPlayerAugments.3"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "23.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.Playground"
-              },
-              {
-                "TagName": "Plugin.Playlist.Arena"
-              },
-              {
-                "TagName": "Plugin.Playlist.BattleLab"
-              },
-              {
-                "TagName": "Athena.Playlist.Sunflower"
-              },
-              {
-                "TagName": "Athena.Playlist.PunchBerry"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              4,
-              0,
-              1,
-              2,
-              3,
-              3,
-              2,
-              4,
-              5
-            ],
-            "UserDescription": "Playlists (Excluding Reload)",
-            "AutoDescription": " ALL(  ANY( Athena.Creative, Athena.Playground, Plugin.Playlist.Arena, Plugin.Playlist.BattleLab ),  NONE( Athena.Playlist.Sunflower, Athena.Playlist.PunchBerry ) )"
-          },
-          "bMigratedFromOldData": true
+    "SourcesToAdd": [
+      {
+        "RegistryToAddTo": "Phoebe.Augments",
+        "AssetPriority": 0,
+        "bClientSource": false,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/MusterPlayerAugments/DataTables/PhoebeAugmentsDataTable.PhoebeAugmentsDataTable",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Athena.Playground"
-        },
-        {
-          "TagName": "Plugin.Playlist.Arena"
-        },
-        {
-          "TagName": "Plugin.Playlist.BattleLab"
-        },
-        {
-          "TagName": "Athena.Playlist.Sunflower"
-        },
-        {
-          "TagName": "Athena.Playlist.PunchBerry"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        5,
-        2,
-        1,
-        4,
-        0,
-        1,
-        2,
-        3,
-        3,
-        2,
-        4,
-        5
-      ],
-      "UserDescription": "Playlists (Excluding Reload)",
-      "AutoDescription": " ALL(  ANY( Athena.Creative, Athena.Playground, Plugin.Playlist.Arena, Plugin.Playlist.BattleLab ),  NONE( Athena.Playlist.Sunflower, Athena.Playlist.PunchBerry ) )"
-    }
+      }
+    ]
   }
 }

@@ -1,15 +1,71 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'LimeWeaponsCore'",
-    "ObjectPath": "/LimeWeaponsCore/LimeWeaponsCore.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "LimeWeaponsCore",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/LimeWeaponsCore/LimeWeaponsCore",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "CreativeRoot"
+    "FortDeathCauseData": {
+      "AssetPathName": "/LimeWeaponsCore/DeathCauseData.DeathCauseData",
+      "SubPathString": ""
+    },
+    "PlaylistItemsToFullyLoad": [
+      {
+        "PlaylistTags": [
+          "Athena.Creative",
+          "Athena.Playground",
+          "Playlist.Lime"
+        ],
+        "ItemIdsToFullyLoad": [
+          {
+            "PrimaryAssetType": {
+              "Name": "Ammo"
+            },
+            "PrimaryAssetName": "Lime_AmmoDataBulletsMedium"
+          },
+          {
+            "PrimaryAssetType": {
+              "Name": "Ammo"
+            },
+            "PrimaryAssetName": "Lime_AmmoDataRockets"
+          },
+          {
+            "PrimaryAssetType": {
+              "Name": "Ammo"
+            },
+            "PrimaryAssetName": "Lime_AmmoDataCrossbow"
+          }
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'LimeWeaponsCore:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/LimeWeaponsCore/LimeWeaponsCore.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Ammo",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortAmmoItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
     ]
   }
 }

@@ -1,60 +1,46 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'JunoSurvivalLowMemoryFallback'",
-    "ObjectPath": "/JunoSurvivalLowMemoryFallback/JunoSurvivalLowMemoryFallback.3"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "JunoSurvivalLowMemoryFallback",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/JunoSurvivalLowMemoryFallback/JunoSurvivalLowMemoryFallback",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Playlist.Juno.Survival"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              2,
-              1,
-              0
-            ],
-            "UserDescription": "Juno",
-            "AutoDescription": " ALL( Playlist.Juno.Survival )"
-          },
-          "bMigratedFromOldData": true
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddWorldSubsystem'JunoSurvivalLowMemoryFallback:FortGameFeatureAction_AddWorldSubsystem_0'",
+        "ObjectPath": "/JunoSurvivalLowMemoryFallback/JunoSurvivalLowMemoryFallback.2"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'JunoSurvivalLowMemoryFallback:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/JunoSurvivalLowMemoryFallback/JunoSurvivalLowMemoryFallback.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'JunoSurvivalLowMemoryFallback:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/JunoSurvivalLowMemoryFallback/JunoSurvivalLowMemoryFallback.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "LowMemoryFallbackStrategy",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/LowMemoryFallbackRuntime.LowMemoryFallbackStrategy",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/JunoSurvivalLowMemoryFallback/Strategies"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Playlist.Juno.Survival"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "UserDescription": "Juno",
-      "AutoDescription": " ALL( Playlist.Juno.Survival )"
-    }
+      }
+    ]
   }
 }

@@ -1,20 +1,26 @@
 {
-  "Type": "FortGameFeatureAction_AddMutators",
-  "Name": "FortGameFeatureAction_AddMutators_0",
+  "Type": "GameFeatureAction_AddComponents",
+  "Name": "GameFeatureAction_AddComponents_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddMutators'",
+  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'Orator'",
     "ObjectPath": "/Orator/Orator.2"
   },
   "Properties": {
-    "MutatorsToAdd": [
+    "ComponentList": [
       {
-        "Target": "EMutatorAddTarget::FortGameModeAthena",
-        "Mutator": {
-          "AssetPathName": "/Script/OratorRuntime.FortAthenaMutator_Orator",
+        "ActorClass": {
+          "AssetPathName": "/Game/Athena/Athena_PlayerController.Athena_PlayerController_C",
           "SubPathString": ""
-        }
+        },
+        "ComponentClass": {
+          "AssetPathName": "/Script/OratorRuntime.OratorControllerComponent",
+          "SubPathString": ""
+        },
+        "bClientComponent": false,
+        "bServerComponent": true,
+        "AdditionFlags": 1
       }
     ]
   }

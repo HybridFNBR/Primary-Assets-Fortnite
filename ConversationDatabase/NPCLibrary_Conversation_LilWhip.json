@@ -1,93 +1,381 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_LilWhip",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_LilWhip'",
+    "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "5CCA7709-40949F40-D4FE6691-6C1B988A",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_LilWhip:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AB1F1A3F46A3D05E38D2C682319D4F51",
+            "SourceString": "You're talking to the hardest soft-serve rapper in the game. ",
+            "LocalizedString": "You're talking to the hardest soft-serve rapper in the game. "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_LilWhip:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "597B4DDA463F3CD42730F29CD9C9E481",
+            "SourceString": "You're scheduled to watch the shop.",
+            "LocalizedString": "You're scheduled to watch the shop."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LilWhip:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "15CF0BAA4A6FE28473091ABAC1987014",
+            "SourceString": "Two kings, having a tête-à-tête. The rap gods would love this.",
+            "LocalizedString": "Two kings, having a tête-à-tête. The rap gods would love this."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LilWhip:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2077ACAD408067B8919EC993D67F9937",
+            "SourceString": "Hey girl, are you a hired assassin or is my-- Oh, you are? Haha, we're cool right?",
+            "LocalizedString": "Hey girl, are you a hired assassin or is my-- Oh, you are? Haha, we're cool right?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LilWhip:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "521E9C544F2EB6A0EA640FB5E5BCAB9E",
+            "SourceString": "Are you here to enact that justice you promised?",
+            "LocalizedString": "Are you here to enact that justice you promised?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LilWhip:Speech_C_4.FortControllerRequirement_HasCID_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "764AB6FD4FF861C9A6AF4C858A9DEF71",
+            "SourceString": "I cut your verse from \"The Armz Collector.\" I don't like being outshone RE: number of arms.",
+            "LocalizedString": "I cut your verse from \"The Armz Collector.\" I don't like being outshone RE: number of arms."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LilWhip:Speech_C_4.FortControllerRequirement_HasCID_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "74CF52BF4AF3A2ED3C42BE88E512F660",
+            "SourceString": "Does the Peace Syndicate offer protection? You know, from insurance-salesmen-slash-loan-sharks?",
+            "LocalizedString": "Does the Peace Syndicate offer protection? You know, from insurance-salesmen-slash-loan-sharks?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LilWhip:Speech_C_4.FortControllerRequirement_HasCID_7'",
+                "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0EF5A56047331F889103C88A220A2B26",
+            "SourceString": "Can I sample that breathing sound for a track?",
+            "LocalizedString": "Can I sample that breathing sound for a track?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_LilWhip:Speech_C_4.FortControllerRequirement_HasCID_9'",
+                "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 0.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "745F7C5A-442A7ADF-E8D2F1AB-C032C316",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_LilWhip:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.12"
-        }
-      },
-      {
-        "Key": "73D9A925-44C12C4C-5F9FD896-19FB3B79",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LilWhip:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.2"
-        }
-      },
-      {
-        "Key": "9B8568A9-40F14F45-3A28D29F-FA0015B0",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_LilWhip:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "202E2AE447B3D128548E94AC3FDA7C1A",
+        "SourceString": "PLEASE buy my album. I'll do anything. You need a cone guy? I know a cone guy...",
+        "LocalizedString": "PLEASE buy my album. I'll do anything. You need a cone guy? I know a cone guy..."
       }
+    },
+    "OutputConnections": [
+      "9B8568A9-40F14F45-3A28D29F-FA0015B0",
+      "73D9A925-44C12C4C-5F9FD896-19FB3B79"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.LilWhip"
-        },
-        "DestinationList": [
-          "5CCA7709-40949F40-D4FE6691-6C1B988A"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "5CCA7709-40949F40-D4FE6691-6C1B988A",
-      "745F7C5A-442A7ADF-E8D2F1AB-C032C316",
-      "73D9A925-44C12C4C-5F9FD896-19FB3B79",
-      "9B8568A9-40F14F45-3A28D29F-FA0015B0"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "745F7C5A-442A7ADF-E8D2F1AB-C032C316",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_LilWhip:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/LilWhip/LilWhip/NPCLibrary_Conversation_LilWhip.1"
+    }
   }
 }

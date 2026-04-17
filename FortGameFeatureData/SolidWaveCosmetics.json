@@ -1,59 +1,29 @@
 {
-  "Type": "FortGameFeatureData",
-  "Name": "SolidWaveCosmetics",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureData'",
-  "Package": "/SolidWaveCosmetics/SolidWaveCosmetics",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
+  "Outer": {
+    "ObjectName": "FortGameFeatureData'SolidWaveCosmetics'",
+    "ObjectPath": "/SolidWaveCosmetics/SolidWaveCosmetics.0"
+  },
   "Properties": {
-    "Actions": [
+    "SourcesToAdd": [
       {
-        "ObjectName": "GameFeatureAction_DataRegistrySource'SolidWaveCosmetics:GameFeatureAction_DataRegistrySource_0'",
-        "ObjectPath": "/SolidWaveCosmetics/SolidWaveCosmetics.1"
+        "RegistryToAddTo": "Character.AllItems",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "/SolidWaveCosmetics/DataRegistries/CID_SolidWave.CID_SolidWave",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
       }
     ],
-    "PrimaryAssetTypesToScan": [
-      {
-        "PrimaryAssetType": "FortExposedAssetList",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.FortExposedAssetList",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "UEFNExposedAssets"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 20,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      },
-      {
-        "PrimaryAssetType": "AthenaCharacter",
-        "AssetBaseClass": {
-          "AssetPathName": "/Script/FortniteGame.AthenaCharacterItemDefinition",
-          "SubPathString": ""
-        },
-        "bHasBlueprintClasses": false,
-        "bIsEditorOnly": false,
-        "Directories": [
-          {
-            "Path": "CIDs"
-          }
-        ],
-        "SpecificAssets": [],
-        "Rules": {
-          "Priority": 21,
-          "ChunkId": 10,
-          "bApplyRecursively": true,
-          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
-        }
-      }
-    ]
+    "bPreloadInEditor": true
   }
 }

@@ -1,16 +1,63 @@
 {
-  "Type": "FortGameFeatureAction_AddSubsystem",
-  "Name": "FortGameFeatureAction_AddSubsystem_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddSubsystem'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'JunoProceduralLandscape'",
-    "ObjectPath": "/JunoProceduralLandscape/JunoProceduralLandscape.3"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "JunoProceduralLandscape",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/JunoProceduralLandscape/JunoProceduralLandscape",
   "Properties": {
-    "SubsystemToAdd": {
-      "AssetPathName": "/Script/JunoProceduralLandscape.JunoLandscapeManager",
-      "SubPathString": ""
-    }
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'JunoProceduralLandscape:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/JunoProceduralLandscape/JunoProceduralLandscape.2"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'JunoProceduralLandscape:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/JunoProceduralLandscape/JunoProceduralLandscape.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddSubsystem'JunoProceduralLandscape:FortGameFeatureAction_AddSubsystem_0'",
+        "ObjectPath": "/JunoProceduralLandscape/JunoProceduralLandscape.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "JunoLandscapeGenerationItems",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/JunoProceduralLandscape.JunoLandscapeGenerationItems",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/JunoGame/Procedural"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      },
+      {
+        "PrimaryAssetType": "JunoLandscapeLayersData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/JunoProceduralLandscape.JunoLandscapeLayersData",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
+    ]
   }
 }

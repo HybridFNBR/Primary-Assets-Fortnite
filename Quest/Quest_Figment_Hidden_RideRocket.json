@@ -1,36 +1,167 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Figment_Hidden_RideRocket'",
-    "ObjectPath": "/FigmentQuests/Items/QuestItems/HiddenQuests/Quest_Figment_Hidden_RideRocket.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Figment_Hidden_RideRocket",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/FigmentQuests/Items/QuestItems/HiddenQuests/Quest_Figment_Hidden_RideRocket",
   "Properties": {
-    "InformationSettings": {
-      "CompletionText": {
-        "Namespace": "",
-        "Key": "B6915BE1434E6E833B0E2F8A93B36E72",
-        "SourceString": "Remember this??",
-        "LocalizedString": "Remember this??"
+    "NotificationIconOverride": {
+      "AssetPathName": "/FortniteCoreUI/Items/QuestItems/Categories/Art/MI_UI_QB_Misc.MI_UI_QB_Misc",
+      "SubPathString": ""
+    },
+    "QuestType": "EFortQuestType::AthenaLooseQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
       }
-    },
-    "VisibilitySettings": {
-      "bIncludedInCategories": false,
-      "bCanShowInPostMatch": false,
-      "bCanShowTimer": false
-    },
-    "ToastSettings": {
-      "bShouldDisplayStartingToast": false
-    },
-    "LockedQuestSettings": {
-      "OverrideData": {
-        "DisplayIcon": {
-          "AssetPathName": "/FortniteCoreUI/Items/QuestItems/Categories/Art/MI_UI_QB_Misc.MI_UI_QB_Misc",
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_Figment_Hidden_RideRocket_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "Verb": {
+              "TagName": "CustomVerb.PlayerRidingRocket"
+            },
+            "Subjects": [],
+            "Values": [],
+            "bIncrementByNamedValue": false,
+            "NameOfValueToIncrementBy": "None",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "252E690C457B9BDF246CC98942B84D42",
+          "SourceString": "(Hidden) Ride a rocket from a Rocket Launcher",
+          "LocalizedString": "(Hidden) Ride a rocket from a Rocket Launcher"
+        },
+        "HudShortDescription": {
+          "Namespace": "",
+          "Key": "8CBF2F594E713C3F05964FA29706DEEA",
+          "SourceString": "(Hidden) Ride a rocket from a Rocket Launcher",
+          "LocalizedString": "(Hidden) Ride a rocket from a Rocket Launcher"
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 1,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 31,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
           "SubPathString": ""
         }
       }
-    }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.Figment"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "AutoDescription": " ALL( Product.Figment )"
+    },
+    "SortPriority": 1,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Hidden_RideRocket:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/HiddenQuests/Quest_Figment_Hidden_RideRocket.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Hidden_RideRocket:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/FigmentQuests/Items/QuestItems/HiddenQuests/Quest_Figment_Hidden_RideRocket.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_Figment_Hidden_RideRocket_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "91EE7FE54F54F78D9B6586AD2804BB6F",
+      "SourceString": "(Hidden) Ride a rocket from a Rocket Launcher",
+      "LocalizedString": "(Hidden) Ride a rocket from a Rocket Launcher"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "81B6193546C795BB868E3EB76C3BB3C6",
+      "SourceString": "(Hidden) Ride a rocket from a Rocket Launcher",
+      "LocalizedString": "(Hidden) Ride a rocket from a Rocket Launcher"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.Figment.Hidden",
+          "ChallengeCategory.XP"
+        ]
+      }
+    ]
   }
 }

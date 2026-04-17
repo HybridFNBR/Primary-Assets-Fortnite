@@ -1,13 +1,193 @@
 {
-  "Type": "FortQuestDefinitionComponent_CopyProgress",
-  "Name": "FortQuestDefinitionComponent_CopyProgress_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_CopyProgress'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_Milestone_D_Q18'",
-    "ObjectPath": "/EvergreenQuest/Items/QuestItems/Milestones/Quest_Milestone_D_Q18.3"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_Milestone_D_Q18",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/EvergreenQuest/Items/QuestItems/Milestones/Quest_Milestone_D_Q18",
   "Properties": {
-    "InitialProgress": 425
+    "QuestSubtype": "EFortQuestSubtype::Milestone",
+    "QuestType": "EFortQuestType::AthenaLooseQuest",
+    "bAthenaGrantRarityToken": false,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S37_Milestone_D_Q18_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "StormStepRequirement": "EStormStepVerbRequirement::OnlyStormHolding",
+            "bFilterByStormPhase": false,
+            "StormPhase": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Exclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Playlist"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Athena.Playlist )"
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "F2F4304D42E32C23836550AF63226D0A",
+          "SourceString": "Survive Storm Phases",
+          "LocalizedString": "Survive Storm Phases"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 18,
+          "DisplayMaxStage": 20
+        },
+        "Count": 450,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 1.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        },
+        {
+          "TagName": "Product.BR.BlastBerry"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        5,
+        2,
+        2,
+        1,
+        0,
+        3,
+        1,
+        1
+      ],
+      "UserDescription": "BR Excluding BlastBerry",
+      "AutoDescription": " ALL(  ALL( Product.BR ),  NONE( Product.BR.BlastBerry ) )"
+    },
+    "SortPriority": 4,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Milestone_D_Q18:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Milestones/Quest_Milestone_D_Q18.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_CopyProgress'Quest_Milestone_D_Q18:FortQuestDefinitionComponent_CopyProgress_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Milestones/Quest_Milestone_D_Q18.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Milestone_D_Q18:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Milestones/Quest_Milestone_D_Q18.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S37_Milestone_D_Q18_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "F4EB898D4A88E69C701AA6BDA9339A95",
+      "SourceString": "Survive Storm Phases",
+      "LocalizedString": "Survive Storm Phases"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "80418534488F14BCCA19F9A66ADFBC08",
+      "SourceString": "Survive Storm Phases",
+      "LocalizedString": "Survive Storm Phases"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "ChallengeCategory.XP",
+          "QuestCategory.BR.Milestones"
+        ]
+      },
+      {
+        "Rarity": "EFortRarity::Common"
+      }
+    ]
   }
 }

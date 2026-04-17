@@ -1,120 +1,315 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_DJYonder",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_DJYonder'",
+    "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "44F22EE0-4B770D47-1D5D668F-F8A06974",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_DJYonder:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.1"
-        }
-      },
-      {
-        "Key": "13A33361-44388A44-ED036884-50D5067F",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_DJYonder:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.13"
-        }
-      },
-      {
-        "Key": "0B2E298D-4616162D-679B5FA3-A18F7812",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DJYonder:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.6"
-        }
-      },
-      {
-        "Key": "86BDD7F9-4E8F0B68-CA0D8589-8F5E5F93",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DJYonder:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.5"
-        }
-      },
-      {
-        "Key": "CE669B00-43543EB2-D4BA5F80-A5394819",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DJYonder:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.4"
-        }
-      },
-      {
-        "Key": "DE273EF1-4A79DE2F-05A42ABA-259DB5BD",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DJYonder:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.2"
-        }
-      },
-      {
-        "Key": "656EDA11-43E02AD2-FC44348C-58B583FB",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DJYonder:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.DJYonder"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C1B3653449B54ED51E6C6090124E8FD6",
+            "SourceString": "You already know my name: DJ Yonder!",
+            "LocalizedString": "You already know my name: DJ Yonder!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_DJYonder:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "44F22EE0-4B770D47-1D5D668F-F8A06974"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "EDD8FD6B415EAB37AFFE07AB1AE51981",
+            "SourceString": "I'm an artist. You wouldn't bother a painter for a selfie, would you?",
+            "LocalizedString": "I'm an artist. You wouldn't bother a painter for a selfie, would you?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_DJYonder:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "355BA99C487072E97EE0CAAAA7569383",
+            "SourceString": "If you've heard a remix on this Island: that's mine. Or perhaps Bop's.",
+            "LocalizedString": "If you've heard a remix on this Island: that's mine. Or perhaps Bop's."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_DJYonder:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C153E7D5415FCC553049F99EAB2E62B5",
+            "SourceString": "If you want to start a new 'beef', why don't you go bother your sausage friend?",
+            "LocalizedString": "If you want to start a new 'beef', why don't you go bother your sausage friend?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_DJYonder:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A9624C85482C2C2644AFE2AA4FD4E9D6",
+            "SourceString": "Control your pickle. He's been bothering me.",
+            "LocalizedString": "Control your pickle. He's been bothering me."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_DJYonder:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "7C308C6CA48B2CF88BF53E9EE24824F7",
+            "SourceString": "These Tasty Bois are getting in our way. Let's feed them to the wolves.",
+            "LocalizedString": "These Tasty Bois are getting in our way. Let's feed them to the wolves."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_DJYonder:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "355BA99C487072E97EE0CAAAA7569383",
+        "SourceString": "If you've heard a remix on this Island: that's mine. Or perhaps Bop's.",
+        "LocalizedString": "If you've heard a remix on this Island: that's mine. Or perhaps Bop's."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season36.DJYonder.CharacterStories.01",
-      "Conversation.Entry.Season36.BigDill.CharacterStories.01",
-      "Conversation.Entry.DJYonder.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "44F22EE0-4B770D47-1D5D668F-F8A06974",
-      "13A33361-44388A44-ED036884-50D5067F",
-      "0B2E298D-4616162D-679B5FA3-A18F7812",
-      "86BDD7F9-4E8F0B68-CA0D8589-8F5E5F93",
-      "CE669B00-43543EB2-D4BA5F80-A5394819",
+    },
+    "OutputConnections": [
+      "656EDA11-43E02AD2-FC44348C-58B583FB",
       "DE273EF1-4A79DE2F-05A42ABA-259DB5BD",
-      "656EDA11-43E02AD2-FC44348C-58B583FB"
+      "CE669B00-43543EB2-D4BA5F80-A5394819",
+      "86BDD7F9-4E8F0B68-CA0D8589-8F5E5F93",
+      "0B2E298D-4616162D-679B5FA3-A18F7812"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "13A33361-44388A44-ED036884-50D5067F",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_DJYonder:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/DJYonder/NPCLibrary_Conversation_DJYonder.1"
+    }
   }
 }

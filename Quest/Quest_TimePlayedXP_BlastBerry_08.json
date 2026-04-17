@@ -1,162 +1,27 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_TimePlayedXP_BlastBerry_08",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/EvergreenQuest/Items/QuestItems/Dailies/Reload/Quest_TimePlayedXP_BlastBerry_08",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_TimePlayedXP_BlastBerry_08'",
+    "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/Reload/Quest_TimePlayedXP_BlastBerry_08.0"
+  },
   "Properties": {
-    "Group": "Evergreen_BlastBerry_PlaytimeXP",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_TimePlayedXP_BlastBerry_08_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "ResourceDataTableRewards": [
           {
-            "IncrementType": "ETimeElapsedFilterIncrementType::TimeElapsed",
-            "UpdateTime": 60.0,
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestXPReward_Evergreen'",
+                "ObjectPath": "/EvergreenQuest/Items/QuestRewards/QuestXPReward_Evergreen.0"
+              },
+              "RowName": "ChallengeReward_Playtime"
             },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "B0B2A12348064C283E4A499A1FE589E1",
-          "SourceString": "Play Fortnite Reload for 120 minutes",
-          "LocalizedString": "Play Fortnite Reload for 120 minutes"
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 7200,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.BlastBerry"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Product.BlastBerry )"
-    },
-    "SortPriority": 1,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_TimePlayedXP_BlastBerry_08:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/Reload/Quest_TimePlayedXP_BlastBerry_08.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_TimePlayedXP_BlastBerry_08:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/Reload/Quest_TimePlayedXP_BlastBerry_08.1"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_ModularGates'Quest_TimePlayedXP_BlastBerry_08:FortQuestDefinitionComponent_ModularGates_0'",
-        "ObjectPath": "/EvergreenQuest/Items/QuestItems/Dailies/Reload/Quest_TimePlayedXP_BlastBerry_08.2"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_TimePlayedXP_BlastBerry_08_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "69A503194F799F5F93CFD18D9EFE7FA9",
-      "SourceString": "Play Fortnite Reload for 120 minutes",
-      "LocalizedString": "Play Fortnite Reload for 120 minutes"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "92987FEF410B3BADBACA3B95B9CB7FE6",
-      "SourceString": "Play Fortnite Reload for 120 minutes",
-      "LocalizedString": "Play Fortnite Reload for 120 minutes"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP"
         ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

@@ -1,10 +1,73 @@
 {
-  "Type": "BaseBuildingStaticMeshComponent",
-  "Name": "StaticMeshComponent0",
-  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'BaseBuildingStaticMeshComponent'",
+  "Type": "StaticMeshComponent",
+  "Name": "Cube_GEN_VARIABLE",
+  "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'StaticMeshComponent'",
   "Outer": {
-    "ObjectName": "DelMarDemolishVolume_BP_C'Default__DelMarDemolishVolume_BP_C'",
-    "ObjectPath": "/DelMarGame/Blueprints/EnvironmentalProps/DemolishVolume/DelMarDemolishVolume_BP.2"
+    "ObjectName": "BlueprintGeneratedClass'DelMarDemolishVolume_BP_C'",
+    "ObjectPath": "/DelMarGame/Blueprints/EnvironmentalProps/DemolishVolume/DelMarDemolishVolume_BP.1"
+  },
+  "Properties": {
+    "StaticMesh": {
+      "ObjectName": "StaticMesh'Cube'",
+      "ObjectPath": "/Engine/BasicShapes/Cube.1"
+    },
+    "OverrideMaterials": [
+      {
+        "ObjectName": "MaterialInstanceConstant'MI_CP_Barrier_Bounds_Placed_01'",
+        "ObjectPath": "/Game/Creative/Devices/DeviceZone_Base/Materials/MI_CP_Barrier_Bounds_Placed_01.0"
+      }
+    ],
+    "BodyInstance": {
+      "CollisionProfileName": "Custom",
+      "CollisionResponses": {
+        "ResponseArray": [
+          {
+            "Channel": "WorldStatic",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "WorldDynamic",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Pawn",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "Visibility",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Camera",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "PhysicsBody",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "Vehicle",
+            "Response": "ECollisionResponse::ECR_Overlap"
+          },
+          {
+            "Channel": "Destructible",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "FCC_Trace_WeaponWorldMulti",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "FCC_Object_NoGhost",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          },
+          {
+            "Channel": "FCC_Object_Water",
+            "Response": "ECollisionResponse::ECR_Ignore"
+          }
+        ]
+      }
+    }
   }
 }

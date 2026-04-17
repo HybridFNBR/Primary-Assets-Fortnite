@@ -1,18 +1,29 @@
 {
-  "Type": "FortGameFeatureAction_AddAbilitySets",
-  "Name": "FortGameFeatureAction_AddAbilitySets_0",
+  "Type": "GameFeatureAction_DataRegistrySource",
+  "Name": "GameFeatureAction_DataRegistrySource_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddAbilitySets'",
+  "Class": "UScriptClass'GameFeatureAction_DataRegistrySource'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'STW_FallDamageV2'",
     "ObjectPath": "/STW_FallDamageV2/STW_FallDamageV2.2"
   },
   "Properties": {
-    "AbilitySetsToAdd": [
+    "SourcesToAdd": [
       {
-        "AssetPathName": "/FallDamageV2/AS_WaterFallDamage.AS_WaterFallDamage",
-        "SubPathString": ""
+        "RegistryToAddTo": "Fort.DataRegistry",
+        "AssetPriority": 0,
+        "bClientSource": true,
+        "bServerSource": true,
+        "DataTableToAdd": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "CurveTableToAdd": {
+          "AssetPathName": "/FallDamageV2/Data/FallingDamageV2.FallingDamageV2",
+          "SubPathString": ""
+        }
       }
-    ]
+    ],
+    "bPreloadInEditor": true
   }
 }

@@ -1,30 +1,145 @@
 {
-  "Type": "Continue_C",
-  "Name": "Continue_C_0",
+  "Type": "JunoConversationTaskNode_Speech_C",
+  "Name": "JunoConversationTaskNode_Speech_C_32",
   "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "BlueprintGeneratedClass'/Game/Conversation/Continue.Continue_C'",
+  "Class": "BlueprintGeneratedClass'/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.JunoConversationTaskNode_Speech_C'",
   "Outer": {
     "ObjectName": "ConversationDatabase'Conversation_Juno_FishedUp_Encounter'",
     "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_FishedUp_Encounter.2"
   },
   "Template": {
-    "ObjectName": "Continue_C'Default__Continue_C'",
-    "ObjectPath": "/Game/Conversation/Continue.1"
+    "ObjectName": "JunoConversationTaskNode_Speech_C'Default__JunoConversationTaskNode_Speech_C'",
+    "ObjectPath": "/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.2"
   },
   "Properties": {
-    "SubNodes": [
+    "DefaultMoodReactionTag": {
+      "TagName": "Juno.Mood.Reactions.Statement.Default"
+    },
+    "bUseInlineConfig": false,
+    "ExternalContextualMessageCollection": {
+      "ObjectName": "JunoContextualMessageConfigCollection'Conversation_Juno_Bank_Encounter_FishedUp'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/ExternalMsg/Encounters/FishedUp/Conversation_Juno_Bank_Encounter_FishedUp.0"
+    },
+    "SpecializedConfigs": [
       {
-        "ObjectName": "FortConversationRequirement_ControllerRequirement'Conversation_Juno_FishedUp_Encounter:FortConversationRequirement_ControllerRequirement_0'",
-        "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_FishedUp_Encounter.6"
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Persona"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Persona )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Default"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Default"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Default'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Default.0"
+          },
+          "RowName": "ENCOUNTER_FISHED_COMPLETE"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Persona.Nonverbal"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Persona.Nonverbal )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Default_Nonverbal"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Default_Nonverbal"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Default_NV'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Default_NV.0"
+          },
+          "RowName": "ENCOUNTER_FISHED_COMPLETE"
+        }
       }
     ],
     "OutputConnections": [
-      "9F343F8C-4851BFBB-B39BEC98-329ECE76"
+      "889AA5DF-448A41D6-83E00CAC-D0DDB753"
     ],
-    "Compiled_NodeGUID": "407E8E63-4973A6C4-6CE170BF-E06BACF5",
+    "NodeName": "Encounter_fished_complete",
+    "Compiled_NodeGUID": "9F343F8C-4851BFBB-B39BEC98-329ECE76",
     "ParentNode": {
-      "ObjectName": "ConversationEntryPointNode'Conversation_Juno_FishedUp_Encounter:ConversationEntryPointNode_1'",
-      "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_FishedUp_Encounter.3"
+      "ObjectName": "Continue_C'Conversation_Juno_FishedUp_Encounter:Continue_C_0'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/Conversation_Juno_FishedUp_Encounter.0"
     }
   }
 }

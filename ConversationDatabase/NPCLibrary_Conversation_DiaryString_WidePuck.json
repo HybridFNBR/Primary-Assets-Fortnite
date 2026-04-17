@@ -1,120 +1,180 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_DiaryString_WidePuck",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_DiaryString_WidePuck'",
+    "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "E70A6820-4FA2514B-BEEA6780-3EBB73A0",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_DiaryString_WidePuck:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.1"
-        }
-      },
-      {
-        "Key": "910A1C7E-4E7DE68E-2788319A-1D097F62",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_DiaryString_WidePuck:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.10"
-        }
-      },
-      {
-        "Key": "4AF0DC7D-43E67157-6531F8A7-0473FBCD",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DiaryString_WidePuck:ConversationLinkNode_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.6"
-        }
-      },
-      {
-        "Key": "A2A09B16-47873E40-090FDBA6-C2D2DFDA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DiaryString_WidePuck:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.5"
-        }
-      },
-      {
-        "Key": "FCB53E9B-41C457B8-B85DB0AD-99890285",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DiaryString_WidePuck:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.4"
-        }
-      },
-      {
-        "Key": "AE8111EC-4FCF23CA-5D01F8AC-0E39A0DF",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DiaryString_WidePuck:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.2"
-        }
-      },
-      {
-        "Key": "177C6EB7-4A659391-A3BC8982-3C47C607",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_DiaryString_WidePuck:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.DiaryString_WidePuck"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A1FDC67A450E8C203A888584489F1C68",
+            "SourceString": "Oh good glavin! These reality fluctuations are going to invalidate so many of my hypotheses!",
+            "LocalizedString": "Oh good glavin! These reality fluctuations are going to invalidate so many of my hypotheses!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_DiaryString_WidePuck:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "E70A6820-4FA2514B-BEEA6780-3EBB73A0"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C78CBB8C4C92FD1A43F204929805E63D",
+            "SourceString": "Glavin!",
+            "LocalizedString": "Glavin!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_DiaryString_WidePuck:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "39A52E034710B39988DCA69CC5EA85C8",
+            "SourceString": "I can hardly comprehend the ramifications of such an improbable meeting...I suspect the issue is my mushy banana brain.",
+            "LocalizedString": "I can hardly comprehend the ramifications of such an improbable meeting...I suspect the issue is my mushy banana brain."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_DiaryString_WidePuck:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "038AB9BE481DB52D846FAEAD37B4024B",
+        "SourceString": "Glavin!",
+        "LocalizedString": "Glavin!"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season38.DiaryString.P04",
-      "Conversation.Entry.Season38.Story.P02.Q05.01",
-      "Conversation.Entry.Season38.Story.P02.Q02.01",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "E70A6820-4FA2514B-BEEA6780-3EBB73A0",
-      "910A1C7E-4E7DE68E-2788319A-1D097F62",
-      "4AF0DC7D-43E67157-6531F8A7-0473FBCD",
-      "A2A09B16-47873E40-090FDBA6-C2D2DFDA",
-      "FCB53E9B-41C457B8-B85DB0AD-99890285",
+    },
+    "OutputConnections": [
+      "177C6EB7-4A659391-A3BC8982-3C47C607",
       "AE8111EC-4FCF23CA-5D01F8AC-0E39A0DF",
-      "177C6EB7-4A659391-A3BC8982-3C47C607"
+      "FCB53E9B-41C457B8-B85DB0AD-99890285",
+      "A2A09B16-47873E40-090FDBA6-C2D2DFDA",
+      "4AF0DC7D-43E67157-6531F8A7-0473FBCD"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "910A1C7E-4E7DE68E-2788319A-1D097F62",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_DiaryString_WidePuck:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/DiaryString_WidePuck/NPCLibrary_Conversation_DiaryString_WidePuck.1"
+    }
   }
 }

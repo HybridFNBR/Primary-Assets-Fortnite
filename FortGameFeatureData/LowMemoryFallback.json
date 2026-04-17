@@ -1,15 +1,38 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'LowMemoryFallback'",
-    "ObjectPath": "/LowMemoryFallback/LowMemoryFallback.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "LowMemoryFallback",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/LowMemoryFallback/LowMemoryFallback",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "JunoRoot"
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'LowMemoryFallback:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/LowMemoryFallback/LowMemoryFallback.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "LowMemoryFallbackStrategy",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/LowMemoryFallbackRuntime.LowMemoryFallbackStrategy",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "/LowMemoryFallback/Strategies"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": 20,
+          "ChunkId": 10,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::AlwaysCook"
+        }
+      }
     ]
   }
 }

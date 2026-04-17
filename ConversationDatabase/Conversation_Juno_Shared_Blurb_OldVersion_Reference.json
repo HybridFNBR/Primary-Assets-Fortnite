@@ -1,25 +1,1306 @@
 {
-  "Type": "BP_JunoConversationTaskNode_GrantNPCCampReward_C",
-  "Name": "BP_JunoConversationTaskNode_GrantNPCCampReward_C_0",
+  "Type": "JunoConversationTaskNode_Speech_C",
+  "Name": "JunoConversationTaskNode_Speech_C_49",
   "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "BlueprintGeneratedClass'/JunoNPCLibrary/Convo/BP_JunoConversationTaskNode_GrantNPCCampReward.BP_JunoConversationTaskNode_GrantNPCCampReward_C'",
+  "Class": "BlueprintGeneratedClass'/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.JunoConversationTaskNode_Speech_C'",
   "Outer": {
     "ObjectName": "ConversationDatabase'Conversation_Juno_Shared_Blurb_OldVersion_Reference'",
     "ObjectPath": "/JunoNPCLibrary/Convo/Shared_Comments/Conversation_Juno_Shared_Blurb_OldVersion_Reference.30"
   },
   "Template": {
-    "ObjectName": "BP_JunoConversationTaskNode_GrantNPCCampReward_C'Default__BP_JunoConversationTaskNode_GrantNPCCampReward_C'",
-    "ObjectPath": "/JunoNPCLibrary/Convo/BP_JunoConversationTaskNode_GrantNPCCampReward.1"
+    "ObjectName": "JunoConversationTaskNode_Speech_C'Default__JunoConversationTaskNode_Speech_C'",
+    "ObjectPath": "/JunoAdventures/Conversations/TaskNodes/JunoConversationTaskNode_Speech.2"
   },
   "Properties": {
-    "OutputConnections": [
-      "74EC29C6-47F55962-21B40A94-17F59E3B",
-      "4D0EBC2A-4697E010-C01DACAC-9941CCC2"
+    "DefaultMoodReactionTag": {
+      "TagName": "Juno.Mood.Reactions.Statement.Default"
+    },
+    "bUseInlineConfig": false,
+    "ExternalContextualMessageCollection": {
+      "ObjectName": "JunoContextualMessageConfigCollection'Conversation_Juno_Bank_Quip_Visiting'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/ExternalMsg/Blurbs/Conversation_Juno_Bank_Quip_Visiting.0"
+    },
+    "SpecializedConfigs": [
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Persona"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Persona )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Default"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Default"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Default'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Default.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Persona.Nonverbal"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Persona.Nonverbal )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Default_Nonverbal"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Default_Nonverbal"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Default_NV'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Default_NV.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Explorer"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Explorer )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Explorers"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Explorers"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Explorer'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Explorer.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Pirate"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Pirate )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Pirates"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Pirates"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Pirates'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Pirates.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Cat"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Cat )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Cats"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Cats"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Cats'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Cats.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Foodie"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Foodie )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Foodies"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Foodies"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Foodies'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Foodies.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Dinosaur"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Dinosaur )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Dinosaur"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Dinosaur"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Dinosaur'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Dinosaur.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Medieval"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Medieval )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Medival"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Medival"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Medieval'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Medieval.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Western"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Western )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Western"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Western"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Western'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Western.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Seafolk"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Seafolk )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Seafolk"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Seafolk"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Seafolk'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Seafolk.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Mechanic"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Mechanic )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Mechanic"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Mechanic"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Mechanics'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Mechanics.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Archeologist"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Archeologist )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Archeology"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Archeology"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Archeologists'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Archeologists.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Treasurehunter"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Treasurehunter )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_TreasureHunter"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_TreasureHunter"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_TreasureHunter'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_TreasureHunter.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Goth"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Goth )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Goth"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Goth"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Goths'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Goths.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Farmer"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Farmer )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Farmers"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Farmers"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Farmers'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Farmers.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Lego"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Lego )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Lego"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Lego"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_LEGO'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Lego.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Fortnite"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Fortnite )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Themed_Fortnite"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Fortnite"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Fortnite'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Fortnite.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Fisherman"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Fisherman )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Theme_Fishing_Enthusiast"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Fishing_Enthusiast"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Fishing_Enthusiast'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Fishing_Enthusiast.0"
+          },
+          "RowName": "Quip_Visiting"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.MusicFan"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.MusicFan )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Theme_MusicFan"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_MusicFan"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_MusicFan'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_MusicFan.0"
+          },
+          "RowName": "QUIP_VISITING"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Osiris"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Osiris )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Theme_Osiris"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Osiris"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Osiris'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Osiris.0"
+          },
+          "RowName": "QUIP_VISITING"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Rawr"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Rawr )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Sciprt_Theme_Rawr"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Themed_Rawr"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Rawr_XD'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Rawr_XD.0"
+          },
+          "RowName": "QUIP_VISITING"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.Hardcore"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.Hardcore )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Theme_Hardcore"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Theme_Hardcore"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_Hardcore'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_Hardcore.0"
+          },
+          "RowName": "QUIP_VISITING"
+        }
+      },
+      {
+        "NPCActorTagQuery": {
+          "TokenStreamVersion": 0,
+          "TagDictionary": [
+            {
+              "TagName": "Juno.Conversation.Theme.WarriorNonverbal"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            2,
+            1,
+            0
+          ],
+          "UserDescription": "",
+          "AutoDescription": " ALL( Juno.Conversation.Theme.WarriorNonverbal )"
+        },
+        "Priority": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Priorities'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Priorities.0"
+            },
+            "RowName": "Script_Theme_WarriorNonverbal"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "Weight": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'Juno_NPC_Speech_Weight'",
+              "ObjectPath": "/JunoNPCLibrary/DataTables/Juno_NPC_Speech_Weight.0"
+            },
+            "RowName": "Script_Theme_WarriorNonverbal"
+          },
+          "RegistryType": {
+            "Name": "None"
+          }
+        },
+        "MessageConfig": {
+          "ContextualMessages": []
+        },
+        "MessageConfigTableRow": {
+          "DataTable": {
+            "ObjectName": "DataTable'Juno_Script_Theme_WarriorNonverbal'",
+            "ObjectPath": "/JunoNPCLibrary/Convo/Scripts/Juno_Script_Theme_WarriorNonverbal.0"
+          },
+          "RowName": "QUIP_VISITING"
+        }
+      }
     ],
-    "Compiled_NodeGUID": "B0154693-45BFDCF3-53C14E94-61A963E3",
+    "SubNodes": [
+      {
+        "ObjectName": "FortConversationRequirement_ControllerRequirement'Conversation_Juno_Shared_Blurb_OldVersion_Reference:FortConversationRequirement_ControllerRequirement_87'",
+        "ObjectPath": "/JunoNPCLibrary/Convo/Shared_Comments/Conversation_Juno_Shared_Blurb_OldVersion_Reference.134"
+      }
+    ],
+    "OutputConnections": [
+      "500B3649-4C8EEF2E-EF171EBB-7698C47E"
+    ],
+    "NodeName": "Speech: Say Reason fo visiting - quip_visiting",
+    "Compiled_NodeGUID": "292305EC-4FEBB670-8A862396-A58ED95E",
     "ParentNode": {
-      "ObjectName": "Continue_C'Conversation_Juno_Shared_Blurb_OldVersion_Reference:Continue_C_2'",
-      "ObjectPath": "/JunoNPCLibrary/Convo/Shared_Comments/Conversation_Juno_Shared_Blurb_OldVersion_Reference.10"
+      "ObjectName": "Continue_C'Conversation_Juno_Shared_Blurb_OldVersion_Reference:Continue_C_30'",
+      "ObjectPath": "/JunoNPCLibrary/Convo/Shared_Comments/Conversation_Juno_Shared_Blurb_OldVersion_Reference.16"
     }
   }
 }

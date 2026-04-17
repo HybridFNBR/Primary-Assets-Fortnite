@@ -1,15 +1,45 @@
 {
-  "Type": "FortGameFeatureAction_AddToRootGFP",
-  "Name": "FortGameFeatureAction_AddToRootGFP_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToRootGFP'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'STW_Biomes_Root'",
-    "ObjectPath": "/STW_Biomes_Root/STW_Biomes_Root.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "STW_Biomes_Root",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/STW_Biomes_Root/STW_Biomes_Root",
   "Properties": {
-    "RootGFPsToAddTo": [
-      "SaveTheWorldRoot"
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToSubGame'STW_Biomes_Root:FortGameFeatureAction_AddToSubGame_0'",
+        "ObjectPath": "/STW_Biomes_Root/STW_Biomes_Root.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'STW_Biomes_Root:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/STW_Biomes_Root/STW_Biomes_Root.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Map",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/Engine.World",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Maps"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
     ]
   }
 }

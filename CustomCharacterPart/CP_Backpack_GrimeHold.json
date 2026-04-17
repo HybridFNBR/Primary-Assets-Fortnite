@@ -1,21 +1,82 @@
 {
-  "Type": "CustomCharacterBackpackData",
-  "Name": "CustomCharacterBackpackData_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterBackpackData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_Backpack_GrimeHold'",
-    "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_GrimeHold.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_Backpack_GrimeHold",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_GrimeHold",
   "Properties": {
-    "AttachSocketName": "Backpack_BR",
-    "AttachmentOverrideData": {
-      "ObjectName": "CustomAccessoryAttachmentData'MaleSource'",
-      "ObjectPath": "/Game/Characters/Player/Common/BackpackScaleSettings/MaleSource.0"
+    "GenderPermitted": "EFortCustomGender::Both",
+    "CharacterPartType": "EFortCustomPartType::Backpack",
+    "bShouldHideBonesForThisPart": false,
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Backpack"
+      ],
+      "PartTypeIndex": 3
     },
-    "AnimClass": {
-      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_GrimeHold/Meshes/M_MED_GrimeHold_Pack_AnimBP.M_MED_GrimeHold_Pack_AnimBP_C",
+    "PartModifierBlueprint": {
+      "AssetPathName": "/Game/Athena/Cosmetics/Blueprints/Part_Modifiers/B_Athena_PartModifier_ToonFE_Default.B_Athena_PartModifier_ToonFE_Default_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterBackpackData'CP_Backpack_GrimeHold:CustomCharacterBackpackData_0'",
+      "ObjectPath": "/BRCosmetics/Characters/CharacterParts/Backpacks/CP_Backpack_GrimeHold.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_GrimeHold/Meshes/M_MED_GrimeHold_Pack.M_MED_GrimeHold_Pack",
+      "SubPathString": ""
+    },
+    "OverlayMaterialData": {
+      "LowQualityMaterial": {
+        "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_GrimeHold/Materials/MI_GrimeHold_Backpack_Outline.MI_GrimeHold_Backpack_Outline",
+        "SubPathString": ""
+      },
+      "HighQualityMaterial": {
+        "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_GrimeHold/Materials/MI_GrimeHold_Backpack_Outline.MI_GrimeHold_Backpack_Outline",
+        "SubPathString": ""
+      }
+    },
+    "IdleEffectNiagara": {
+      "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_GrimeHold/FX/NS_Backpack_GrimeHold_Idle.NS_Backpack_GrimeHold_Idle",
+      "SubPathString": ""
+    },
+    "bAutoActivate": true,
+    "CosmeticPartDataList": [
+      {
+        "EffectParameters": [
+          {
+            "Tag": {
+              "TagName": "CosmeticPart.VFX.Landing"
+            },
+            "Effect": {
+              "AssetPathName": "/BRCosmetics/Accessories/FORT_Backpacks/Backpack_M_MED_GrimeHold/FX/NS_Backpack_GrimeHold_Landing.NS_Backpack_GrimeHold_Landing",
+              "SubPathString": ""
+            },
+            "LocationOffset": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "RotationOffset": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "bIsPersistent": false,
+            "bAutoActivate": true,
+            "AttachmentParams": {
+              "SocketName": "base_tentacle_00_up",
+              "AttachmentTarget": "ECharacterPartAttachmentTargetType::SkeletalMeshForAssociatedPlayerPawnPartType",
+              "AttachmentRules": {
+                "LocationRule": "EAttachmentRule::SnapToTarget",
+                "RotationRule": "EAttachmentRule::SnapToTarget",
+                "ScaleRule": "EAttachmentRule::SnapToTarget",
+                "bWeldSimulatedBodies": false
+              }
+            }
+          }
+        ]
+      }
+    ]
   }
 }

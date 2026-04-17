@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_MunitionsExpert",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/MunitionsExpert/NPCLibrary_Conversation_MunitionsExpert",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_MunitionsExpert'",
+    "ObjectPath": "/NPCLibrary/NPCs/MunitionsExpert/NPCLibrary_Conversation_MunitionsExpert.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "550D13E5-48FDF423-9FA2C49A-FA727B52",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_MunitionsExpert:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/MunitionsExpert/NPCLibrary_Conversation_MunitionsExpert.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "529948F54AE715889FA3869E0D3EE59E",
+            "SourceString": "If you need a seasoned munitions expert, I'm available.",
+            "LocalizedString": "If you need a seasoned munitions expert, I'm available."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_MunitionsExpert:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/MunitionsExpert/NPCLibrary_Conversation_MunitionsExpert.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "E280AA43-45E0ABA5-8CEF51A2-A0C6E5CD",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_MunitionsExpert:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/MunitionsExpert/NPCLibrary_Conversation_MunitionsExpert.5"
-        }
-      },
-      {
-        "Key": "C2392DA2-491A0517-538C5EBD-AE7EBB99",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MunitionsExpert:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/MunitionsExpert/NPCLibrary_Conversation_MunitionsExpert.2"
-        }
-      },
-      {
-        "Key": "CDCE6F63-43E0EC40-1382A797-E97E9AB7",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MunitionsExpert:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/MunitionsExpert/NPCLibrary_Conversation_MunitionsExpert.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "60CB86524391B664D1E4C59E09AC4181",
+        "SourceString": "I can keep you supplied with ammunition. And sometimes, other things too.",
+        "LocalizedString": "I can keep you supplied with ammunition. And sometimes, other things too."
       }
+    },
+    "OutputConnections": [
+      "CDCE6F63-43E0EC40-1382A797-E97E9AB7",
+      "C2392DA2-491A0517-538C5EBD-AE7EBB99"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.MunitionsExpert"
-        },
-        "DestinationList": [
-          "550D13E5-48FDF423-9FA2C49A-FA727B52"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "550D13E5-48FDF423-9FA2C49A-FA727B52",
-      "E280AA43-45E0ABA5-8CEF51A2-A0C6E5CD",
-      "C2392DA2-491A0517-538C5EBD-AE7EBB99",
-      "CDCE6F63-43E0EC40-1382A797-E97E9AB7"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "E280AA43-45E0ABA5-8CEF51A2-A0C6E5CD",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_MunitionsExpert:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/MunitionsExpert/NPCLibrary_Conversation_MunitionsExpert.1"
+    }
   }
 }

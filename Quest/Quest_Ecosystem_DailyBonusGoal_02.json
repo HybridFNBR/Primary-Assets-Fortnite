@@ -1,200 +1,27 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_Ecosystem_DailyBonusGoal_02",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/UniversalDailyQuests/Items/QuestItems/Quest_Ecosystem_DailyBonusGoal_02",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_2",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_Ecosystem_DailyBonusGoal_02'",
+    "ObjectPath": "/UniversalDailyQuests/Items/QuestItems/Quest_Ecosystem_DailyBonusGoal_02.0"
+  },
   "Properties": {
-    "Group": "DailyEcosystemBonusGoal",
-    "QuestSubtype": "EFortQuestSubtype::PunchCard",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_Ecosystem_DailyBonusGoal_02_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "DataTableEntryRewards": [
           {
-            "IncrementType": "EAcquireIncrementType::Single",
-            "bUseItemCount": false,
-            "ItemAcquired": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Quests.Ecosystem.Dailies.Token"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Quests.Ecosystem.Dailies.Token )"
-              }
-            },
-            "ItemCount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestRewards_Ecosystem_DailyBonusGoals'",
+                "ObjectPath": "/UniversalDailyQuests/DataTables/QuestRewards_Ecosystem_DailyBonusGoals.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
+              "RowName": "DailyBonusGoal"
             },
-            "AcquireSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "3931D2224FF8719B68A0C08873A18F02",
-          "SourceString": "Complete Daily Quests in any experience",
-          "LocalizedString": "Complete Daily Quests in any experience"
-        },
-        "HudShortDescription": {
-          "Namespace": "",
-          "Key": "56588EA84E75EA0E16334581C98626F5",
-          "SourceString": "Complete Daily Quests in any experience",
-          "LocalizedString": "Complete Daily Quests in any experience"
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 2,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL( Product )"
-    },
-    "SortPriority": 2,
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Ecosystem_DailyBonusGoal_02:FortQuestDefinitionComponent_Rewards_2'",
-        "ObjectPath": "/UniversalDailyQuests/Items/QuestItems/Quest_Ecosystem_DailyBonusGoal_02.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Ecosystem_DailyBonusGoal_02:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/UniversalDailyQuests/Items/QuestItems/Quest_Ecosystem_DailyBonusGoal_02.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_Ecosystem_DailyBonusGoal_02_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "8DA5BB6C469F83B06DC47C8FCC950ECA",
-      "SourceString": "Complete Daily Quests in any experience",
-      "LocalizedString": "Complete Daily Quests in any experience"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "686C2AB64F3F8AEDA368CA8DBAD4C37D",
-      "SourceString": "Complete Daily Quests in any experience",
-      "LocalizedString": "Complete Daily Quests in any experience"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.UniversalDailies"
         ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

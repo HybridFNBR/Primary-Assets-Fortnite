@@ -1,23 +1,204 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_JumpsuitQuests_Male_03'",
-    "ObjectPath": "/JumpsuitQuests/Items/QuestItems/Quest_JumpsuitQuests_Male_03.2"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_JumpsuitQuests_Male_03",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/JumpsuitQuests/Items/QuestItems/Quest_JumpsuitQuests_Male_03",
   "Properties": {
-    "InformationSettings": {
-      "CompletionText": {
-        "Namespace": "",
-        "Key": "476AFBAE4E8AE0925F4D649E81FE7558",
-        "SourceString": "Quest Complete!",
-        "LocalizedString": "Quest Complete!"
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "ObjectiveCompletionCount": 1,
+    "CompletionPathResults": [
+      {
+        "Rewards": []
       }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S26_JumpsuitQuests_Male_03_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "PurchaseTags": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.GoldBars.Spent"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Athena.GoldBars.Spent )"
+              }
+            },
+            "bIncrementByAmountSpent": true,
+            "bUseSpentAmount": false,
+            "SpentAmountToCountForProgress": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AllowedMessages": "ECurrencySpentFilterEventBehavior::OnlyGeneral",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "071EE3C7484561A6D1B99384E5B11392",
+          "SourceString": "Spend 750 bars",
+          "LocalizedString": "Spend 750 bars"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 0,
+          "DisplayMaxStage": 0
+        },
+        "Count": 750,
+        "Stage": 1,
+        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        },
+        {
+          "TagName": "Product.BlastBerry"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ANY( Product.BR, Product.BlastBerry )"
     },
-    "VisibilitySettings": {
-      "bCanShowTimer": false
-    }
+    "SortPriority": 3,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_JumpsuitQuests_Male_03:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/JumpsuitQuests/Items/QuestItems/Quest_JumpsuitQuests_Male_03.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_JumpsuitQuests_Male_03:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/JumpsuitQuests/Items/QuestItems/Quest_JumpsuitQuests_Male_03.0"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S26_JumpsuitQuests_Male_03_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "8EBEA482402CAA1D0D05A88AB29AB414",
+      "SourceString": "Spend bars",
+      "LocalizedString": "Spend bars"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "D0171C2446C2B8D9E6AB9497422011B2",
+      "SourceString": "Spend 750 bars",
+      "LocalizedString": "Spend 750 bars"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "914DB736440F5A84219B0FBD4E6A44DC",
+      "SourceString": "Heist Rule #3: Case the target.",
+      "LocalizedString": "Heist Rule #3: Case the target."
+    },
+    "DataList": [
+      {
+        "QuantityDisplayName": {
+          "Namespace": "",
+          "Key": "6A9832B04764F4A2B349D2AB2DE62E31",
+          "SourceString": "Test QS2 Verbs",
+          "LocalizedString": "Test QS2 Verbs"
+        }
+      },
+      {
+        "Tags": [
+          "ChallengeCategory.JumpsuitQuests.Male",
+          "QuestCategory.All.ChallengeStyle.Jumpsuit.Male"
+        ]
+      }
+    ]
   }
 }

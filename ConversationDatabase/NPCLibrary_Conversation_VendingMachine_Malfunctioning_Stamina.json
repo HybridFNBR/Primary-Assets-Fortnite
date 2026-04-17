@@ -1,27 +1,97 @@
 {
-  "Type": "Back_C",
-  "Name": "Back_C_1",
+  "Type": "Speech_C",
+  "Name": "Speech_C_2",
   "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "BlueprintGeneratedClass'/Game/Conversation/Back.Back_C'",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
   "Outer": {
     "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina'",
     "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina.3"
   },
   "Template": {
-    "ObjectName": "Back_C'Default__Back_C'",
-    "ObjectPath": "/Game/Conversation/Back.0"
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
   },
   "Properties": {
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "245E666B46CA5BDE00F9E093C5860B4D",
+            "SourceString": "<b>*clunk*</> ",
+            "LocalizedString": "<b>*clunk*</> "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasOwnedTag'NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina:Speech_C_2.FortControllerRequirement_HasOwnedTag_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "8C3C30844A6B0253A85954AC19AF0844",
+        "SourceString": "...",
+        "LocalizedString": "..."
+      }
+    },
+    "SoftTaskIcon": {
+      "AssetPathName": "/Game/Athena/HUD/Interaction/T_UI_VendingMachineRandom.T_UI_VendingMachineRandom",
+      "SubPathString": ""
+    },
     "SubNodes": [
       {
-        "ObjectName": "ConversationChoiceNode'NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina:ConversationChoiceNode_5'",
-        "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina.2"
+        "ObjectName": "FortConversationChoiceWithPreviewNode'NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina:FortConversationChoiceWithPreviewNode_0'",
+        "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina.8"
+      },
+      {
+        "ObjectName": "FortConversationRequirement_HasService'NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina:FortConversationRequirement_HasService_1'",
+        "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina.9"
       }
     ],
-    "Compiled_NodeGUID": "D34DF70E-4DD5A176-537B44AF-DF1D3044",
+    "OutputConnections": [
+      "D34DF70E-4DD5A176-537B44AF-DF1D3044",
+      "2564568B-40CC0B78-8C806EAF-D1269914"
+    ],
+    "Compiled_NodeGUID": "96DFEF77-431B840A-DDAF8B9B-25A3AAB9",
     "ParentNode": {
-      "ObjectName": "Speech_C'NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina:Speech_C_2'",
-      "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina.15"
+      "ObjectName": "Speech_C'NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina:Speech_C_1'",
+      "ObjectPath": "/NPCLibrary/NPCs/NPCLibrary_Conversation_VendingMachine_Malfunctioning_Stamina.14"
     }
   }
 }

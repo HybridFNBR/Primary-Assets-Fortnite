@@ -1,207 +1,27 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_DelMar_S0_Daily_PunchCard_002",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_PunchCard_002",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_DelMar_S0_Daily_PunchCard_002'",
+    "ObjectPath": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_PunchCard_002.0"
+  },
   "Properties": {
-    "Group": "DelMar_Daily_PunchCard",
-    "QuestSubtype": "EFortQuestSubtype::PunchCard",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_DelMar_S0_Daily_PunchCard_002_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "ResourceDataTableRewards": [
           {
-            "IncrementType": "EAcquireIncrementType::Single",
-            "bUseItemCount": false,
-            "ItemAcquired": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "DelMar.Quests.DailyChallenge.Token"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( DelMar.Quests.DailyChallenge.Token )"
-              }
-            },
-            "ItemCount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestReward_DelMar_S0_XP'",
+                "ObjectPath": "/DelMarQuests/Rewards/QuestReward_DelMar_S0_XP.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
+              "RowName": "daily_punchcard_xp"
             },
-            "AcquireSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "F751115E4648EF8511EAF18D54A0FC03",
-          "SourceString": "Complete Daily Challenge Quests",
-          "LocalizedString": "Complete Daily Challenge Quests"
-        },
-        "HudShortDescription": {
-          "CultureInvariantString": null
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 6,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.DelMar"
-        },
-        {
-          "TagName": "Product.FNE.DelMar"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        2,
-        0,
-        1
-      ],
-      "AutoDescription": " ANY( Product.DelMar, Product.FNE.DelMar )"
-    },
-    "Category": {
-      "DataTable": {
-        "ObjectName": "DataTable'QuestCategoryTable'",
-        "ObjectPath": "/Game/Quests/QuestCategoryTable.0"
-      },
-      "RowName": "BRDailyChallenges"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_DelMar_S0_Daily_PunchCard_002:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_PunchCard_002.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_DelMar_S0_Daily_PunchCard_002:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/DelMarQuests/Daily/Quest_DelMar_S0_Daily_PunchCard_002.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_DelMar_S0_Daily_PunchCard_002_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "BCF5015447E31877696717B742D58CEE",
-      "SourceString": "Complete Daily Challenge Quests",
-      "LocalizedString": "Complete Daily Challenge Quests"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "3D2FE2564965B38D4702E9BFF61E9304",
-      "SourceString": "Complete Daily Challenge Quests",
-      "LocalizedString": "Complete Daily Challenge Quests"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "QuestCategory.DelMar.DailyPunchCard",
-          "ChallengeCategory.XP"
         ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

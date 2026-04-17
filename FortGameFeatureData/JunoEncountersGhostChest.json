@@ -1,59 +1,84 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'JunoEncountersGhostChest'",
-    "ObjectPath": "/JunoEncountersGhostChest/JunoEncountersGhostChest.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "JunoEncountersGhostChest",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/JunoEncountersGhostChest/JunoEncountersGhostChest",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Product.Juno"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              2,
-              1,
-              0
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ALL( Product.Juno )"
-          },
-          "bMigratedFromOldData": true
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'JunoEncountersGhostChest:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/JunoEncountersGhostChest/JunoEncountersGhostChest.1"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'JunoEncountersGhostChest:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/JunoEncountersGhostChest/JunoEncountersGhostChest.0"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "AISpawnerData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteAI.FortAthenaAISpawnerData",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "AI"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Juno"
+      },
+      {
+        "PrimaryAssetType": "ActorSpawnerData",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortAthenaActorSpawnerData",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": true,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "ActorSpawnerData"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        2,
-        1,
-        0
-      ],
-      "AutoDescription": " ALL( Product.Juno )"
-    }
+      },
+      {
+        "PrimaryAssetType": "Encounter",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/EncountersRuntime.EncounterItemDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Adventures/Encounters"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      }
+    ]
   }
 }

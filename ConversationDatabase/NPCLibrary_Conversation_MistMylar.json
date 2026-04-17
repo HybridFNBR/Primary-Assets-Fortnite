@@ -1,111 +1,551 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_MistMylar",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_MistMylar'",
+    "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "B2F003B7-4CA8C5C0-C73BA9B4-B516123A",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_MistMylar:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.1"
-        }
-      },
-      {
-        "Key": "B3EF3F5C-43F9F805-9E5024BC-C69BA23D",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_MistMylar:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.18"
-        }
-      },
-      {
-        "Key": "5E6F3B2F-44C1A726-DD9818A9-FA38FA8B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MistMylar:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.5"
-        }
-      },
-      {
-        "Key": "14574618-42577390-5D6604B6-7DF6F951",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MistMylar:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.4"
-        }
-      },
-      {
-        "Key": "7A334216-41189235-1AAF408E-0FF69755",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MistMylar:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.2"
-        }
-      },
-      {
-        "Key": "A10BD539-4F13A980-5A9B018B-049B8023",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_MistMylar:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.MistMylar"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BC1A069A49397FBEC3198E9B7B088690",
+            "SourceString": "If you somehow don't know who I am... My name is Daigo.",
+            "LocalizedString": "If you somehow don't know who I am... My name is Daigo."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.17"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "B2F003B7-4CA8C5C0-C73BA9B4-B516123A"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "43AB4AF14DB7D2E4CEC255B2D0060DD8",
+            "SourceString": "It's... humiliating, that the entire Island knows the mistakes I've made.",
+            "LocalizedString": "It's... humiliating, that the entire Island knows the mistakes I've made."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "8EEBC00B4E6DAEA7897DC5B85540E4AA",
+            "SourceString": "If you care about this Island, be ready to defend it with everything you've got.",
+            "LocalizedString": "If you care about this Island, be ready to defend it with everything you've got."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "97E3C4E04540B06BFB9F17B5389E8F48",
+            "SourceString": "I tried to save the Island. I failed. So... now, I'll help how I can.",
+            "LocalizedString": "I tried to save the Island. I failed. So... now, I'll help how I can."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B68EA1A04BF8423E75329488ADF87FBF",
+            "SourceString": "I'm the smartest person on this Island, and still... made a huge mistake.",
+            "LocalizedString": "I'm the smartest person on this Island, and still... made a huge mistake."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "03A54EF74A0C247597D81B861B694360",
+            "SourceString": "I will never let myself become a puppet for the Spirit Realm again.",
+            "LocalizedString": "I will never let myself become a puppet for the Spirit Realm again."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_5'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D025B5FC4DE74E1C19348991C5043BB3",
+            "SourceString": "I almost wish I HAD betrayed the Island. That would have been... less embarassing.",
+            "LocalizedString": "I almost wish I HAD betrayed the Island. That would have been... less embarassing."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_6'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5EDB7BED4AA1A5EB4869A8B788514327",
+            "SourceString": "If you have it in your heart to forgive my recklessness... I'm sorry.",
+            "LocalizedString": "If you have it in your heart to forgive my recklessness... I'm sorry."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "225925C44E21ACC75AC03188A27067FD",
+            "SourceString": "That weight I felt, to protect everyone... I almost let it destroy me. Be careful.",
+            "LocalizedString": "That weight I felt, to protect everyone... I almost let it destroy me. Be careful."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DA834D664C3EAA6E85A8D78826729B6E",
+            "SourceString": "Why should anyone entrust the Shard to someone like you?",
+            "LocalizedString": "Why should anyone entrust the Shard to someone like you?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.14"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C02D252C4C54B216043AC481F03246BC",
+            "SourceString": "I'm willing to do whatever it takes to save this Island. Even... *sigh* follow orders.",
+            "LocalizedString": "I'm willing to do whatever it takes to save this Island. Even... *sigh* follow orders."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.15"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4440AAC64C2B89649CD2DBB434C1C60D",
+            "SourceString": "Do you still dream of the Spirit Realm? Of what it made you become?",
+            "LocalizedString": "Do you still dream of the Spirit Realm? Of what it made you become?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_MistMylar:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.16"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 2.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "9F12539B451ED3E94C226F8CA437100B",
+        "SourceString": "I almost wish I HAD betrayed the Island. That would have been... less embarassing.",
+        "LocalizedString": "I almost wish I HAD betrayed the Island. That would have been... less embarassing."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Season37.Story.P03.Q01.C",
-      "Conversation.Entry.MistMylar.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "B2F003B7-4CA8C5C0-C73BA9B4-B516123A",
-      "B3EF3F5C-43F9F805-9E5024BC-C69BA23D",
-      "5E6F3B2F-44C1A726-DD9818A9-FA38FA8B",
-      "14574618-42577390-5D6604B6-7DF6F951",
+    },
+    "OutputConnections": [
+      "A10BD539-4F13A980-5A9B018B-049B8023",
       "7A334216-41189235-1AAF408E-0FF69755",
-      "A10BD539-4F13A980-5A9B018B-049B8023"
+      "14574618-42577390-5D6604B6-7DF6F951",
+      "5E6F3B2F-44C1A726-DD9818A9-FA38FA8B"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "B3EF3F5C-43F9F805-9E5024BC-C69BA23D",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_MistMylar:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/MistMylar/NPCLibrary_Conversation_MistMylar.1"
+    }
   }
 }

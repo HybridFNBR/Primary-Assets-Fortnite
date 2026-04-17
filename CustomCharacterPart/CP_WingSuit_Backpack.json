@@ -1,18 +1,39 @@
 {
-  "Type": "CustomCharacterBackpackData",
-  "Name": "CustomCharacterBackpackData_0",
-  "Flags": "RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'CustomCharacterBackpackData'",
-  "Outer": {
-    "ObjectName": "CustomCharacterPart'CP_WingSuit_Backpack'",
-    "ObjectPath": "/WingSuit/Gameplay/WingSuit_PhysicsFlying/CharacterParts/CP_WingSuit_Backpack.1"
-  },
+  "Type": "CustomCharacterPart",
+  "Name": "CP_WingSuit_Backpack",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'CustomCharacterPart'",
+  "Package": "/WingSuit/Gameplay/WingSuit_PhysicsFlying/CharacterParts/CP_WingSuit_Backpack",
   "Properties": {
-    "AttachSocketName": "Backpack_BR",
-    "bUseClothCollisionFromOtherParts": true,
-    "AnimClass": {
-      "AssetPathName": "/WingSuit/Animation/Game/MainPlayer/AnimAssets/JetpackAnim/JetPack_Gadget_AnimBP.JetPack_Gadget_AnimBP_C",
+    "GenderPermitted": "EFortCustomGender::Both",
+    "CharacterPartType": "EFortCustomPartType::Backpack",
+    "CosmeticPortGroupID": {
+      "PartTypeTags": [
+        "Cosmetics.PartType.Backpack"
+      ],
+      "PartTypeIndex": 3
+    },
+    "bGameplayRelevantCosmeticPart": true,
+    "PartModifierBlueprint": {
+      "AssetPathName": "/WingSuit/Gameplay/WingSuit_PhysicsFlying/CharacterParts/BP_WingSuit_Backpack_PartModifier.BP_WingSuit_Backpack_PartModifier_C",
       "SubPathString": ""
-    }
+    },
+    "AdditionalData": {
+      "ObjectName": "CustomCharacterBackpackData'CP_WingSuit_Backpack:CustomCharacterBackpackData_0'",
+      "ObjectPath": "/WingSuit/Gameplay/WingSuit_PhysicsFlying/CharacterParts/CP_WingSuit_Backpack.0"
+    },
+    "SkeletalMesh": {
+      "AssetPathName": "/WingSuit/Assets/MeshGadget/Wingsuit_Gadget.Wingsuit_Gadget",
+      "SubPathString": ""
+    },
+    "IdleEffectNiagara": {
+      "AssetPathName": "/WingSuit/VFX/NS_WingSuit_Idle.NS_WingSuit_Idle",
+      "SubPathString": ""
+    },
+    "IdleFXSocketName": "FX_Idle",
+    "IdleFXNativeCustomAttachmentParams": {
+      "SocketName": "FX_Idle"
+    },
+    "bAutoActivate": true
   }
 }

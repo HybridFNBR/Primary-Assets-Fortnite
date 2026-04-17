@@ -1,99 +1,96 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
+  "Type": "GFA_RegisterCosmeticDownloadSettings",
+  "Name": "GFA_RegisterCosmeticDownloadSettings_0",
   "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
+  "Class": "UScriptClass'GFA_RegisterCosmeticDownloadSettings'",
   "Outer": {
     "ObjectName": "FortGameFeatureData'VehicleCosmetics'",
     "ObjectPath": "/VehicleCosmetics/VehicleCosmetics.9"
   },
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "13.40"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.Core"
+    "CosmeticDownloadFeatureFlagsByType": [
+      {
+        "Key": {
+          "TagName": "IADCosmeticType.Vehicle"
+        },
+        "Value": {
+          "DefaultPolicy": "ECosmeticDownloadFeatureFlagPolicy::Enabled",
+          "FeatureStatus": [
+            {
+              "Key": {
+                "TagName": "IADFeatureFlag.LocalPlayerLoadoutLobbyPreDownload"
               },
-              {
-                "TagName": "Playlist.Test"
-              },
-              {
-                "TagName": "Athena.Playlist.Default"
-              },
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Athena.Playlist.Clyde"
+              "Value": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": {
+                    "ObjectName": "CurveTable'DownloadSettings'",
+                    "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+                  },
+                  "RowName": "FeatureFlag.Vehicle.LocalPlayerLoadoutLobbyPreDownload"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
               }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              1,
-              6,
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ],
-            "UserDescription": "",
-            "AutoDescription": " ANY( Athena.Playlist.Core, Playlist.Test, Athena.Playlist.Default, Athena.Creative, Playlist.UGC.Core, Athena.Playlist.Clyde )"
-          },
-          "bMigratedFromOldData": true
+            },
+            {
+              "Key": {
+                "TagName": "IADFeatureFlag.PartyLoadoutLobbyPreDownload"
+              },
+              "Value": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": {
+                    "ObjectName": "CurveTable'DownloadSettings'",
+                    "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+                  },
+                  "RowName": "FeatureFlag.Vehicle.PartyLoadoutLobbyPreDownload"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              }
+            },
+            {
+              "Key": {
+                "TagName": "IADFeatureFlag.PlayerStateBackgroundDownload"
+              },
+              "Value": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": {
+                    "ObjectName": "CurveTable'DownloadSettings'",
+                    "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+                  },
+                  "RowName": "FeatureFlag.Vehicle.PlayerStateBackgroundDownload"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              }
+            },
+            {
+              "Key": {
+                "TagName": "IADFeatureFlag.RelevantPawnLoadoutDownload"
+              },
+              "Value": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": {
+                    "ObjectName": "CurveTable'DownloadSettings'",
+                    "ObjectPath": "/Game/Balance/DataTables/DownloadSettings.0"
+                  },
+                  "RowName": "FeatureFlag.Vehicle.RelevantPawnLoadoutDownload"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              }
+            }
+          ]
         }
-      ]
-    },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.Core"
-        },
-        {
-          "TagName": "Playlist.Test"
-        },
-        {
-          "TagName": "Athena.Playlist.Default"
-        },
-        {
-          "TagName": "Athena.Creative"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Athena.Playlist.Clyde"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        6,
-        0,
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "AutoDescription": " ANY( Athena.Playlist.Core, Playlist.Test, Athena.Playlist.Default, Athena.Creative, Playlist.UGC.Core, Athena.Playlist.Clyde )"
-    }
+      }
+    ]
   }
 }

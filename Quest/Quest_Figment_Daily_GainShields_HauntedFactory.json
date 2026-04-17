@@ -1,244 +1,27 @@
 {
-  "Type": "AthenaDailyQuestDefinition",
-  "Name": "Quest_Figment_Daily_GainShields_HauntedFactory",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'AthenaDailyQuestDefinition'",
-  "Package": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_HauntedFactory",
+  "Type": "FortQuestDefinitionComponent_Rewards",
+  "Name": "FortQuestDefinitionComponent_Rewards_0",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestDefinitionComponent_Rewards'",
+  "Outer": {
+    "ObjectName": "AthenaDailyQuestDefinition'Quest_Figment_Daily_GainShields_HauntedFactory'",
+    "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_HauntedFactory.0"
+  },
   "Properties": {
-    "Group": "FigmentEvergreenDailyQuestLocation",
-    "QuestSubtype": "EFortQuestSubtype::Autofill",
-    "bAthenaGrantRarityToken": false,
-    "CompletionPathResults": [
+    "QuestRewardsArray": [
       {
-        "Rewards": []
-      }
-    ],
-    "Objectives": [
-      {
-        "BackendName": "Quest_Figment_Daily_GainShields_HauntedFactory_obj0",
-        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
-        "bHidden": false,
-        "bRequirePrimaryMissionCompletion": false,
-        "bCanProgressInZone": true,
-        "bDisplayDynamicAnnouncementUpdate": true,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
-        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
-        "ObjectiveFilters": [
+        "DataTableEntryRewards": [
           {
-            "IncrementBy": "EFortShieldGainIncrementType::ShieldGainAmount",
-            "bRequireFullShields": false,
-            "bRequireShieldGainedFromTeammate": false,
-            "bRequireAuthorIsTheShieldGainSource": false,
-            "bUseShieldAmountGained": false,
-            "bUseOverFullShields": false,
-            "bUseShieldGainedPercent": false,
-            "bUseTotalShieldsGained": false,
-            "ShieldGainSource": {
-              "bCanGainProgressForThisObjective": false,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "ShieldGainType": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "AmountOfShieldsGained": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
+            "TableRowEntry": {
+              "DataTable": {
+                "ObjectName": "DataTable'QuestRewards_Evergreen_Figment'",
+                "ObjectPath": "/FigmentQuests/DataTables/QuestRewards_Evergreen_Figment.0"
               },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
+              "RowName": "FigmentDailyQuestRewards"
             },
-            "ShieldsGainedOverFullAmount": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "ShieldsPercentGained": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "TotalShieldGain": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Location.POI.HauntedHills"
-                  },
-                  {
-                    "TagName": "Athena.Location.POI.FlushFactory"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Athena.Location.POI.HauntedHills, Athena.Location.POI.FlushFactory )"
-              }
-            },
-            "Context": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            }
+            "bHideFromUI": false
           }
-        ],
-        "InlineObjectiveStats": [],
-        "ObjectiveStatHandle": {
-          "DataTable": null,
-          "RowName": "None"
-        },
-        "AlternativeStatHandles": [],
-        "ItemReference": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "ItemTemplateIdOverride": "",
-        "LinkSquadID": "None",
-        "LinkSquadIndex": 0,
-        "Description": {
-          "Namespace": "",
-          "Key": "8AE954254221EE7E652B20897E082316",
-          "SourceString": "Gain shields at Haunted Hills or Flush Factory",
-          "LocalizedString": "Gain shields at Haunted Hills or Flush Factory"
-        },
-        "HudShortDescription": {
-          "Namespace": "",
-          "Key": "398350BC48297D4D420819998BE0D3F1",
-          "SourceString": "Gain shields at Haunted Hills or Flush Factory",
-          "LocalizedString": "Gain shields at Haunted Hills or Flush Factory"
-        },
-        "ObjectiveConversations": [],
-        "ObjectiveDisplayInfo": {
-          "DisplayStage": 0,
-          "DisplayMaxStage": 0
-        },
-        "Count": 50,
-        "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 50,
-        "DynamicUpdateCompletionDelay": 0.0,
-        "ScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        },
-        "FrontendScriptedAction": {
-          "AssetPathName": "",
-          "SubPathString": ""
-        }
-      }
-    ],
-    "ProductCompatibilityQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Product.Figment"
-        }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        1,
-        1,
-        0
-      ],
-      "AutoDescription": " ANY( Product.Figment )"
-    },
-    "QuestDefinitionComponents": [
-      {
-        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_Daily_GainShields_HauntedFactory:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_HauntedFactory.3"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_Figment_Daily_GainShields_HauntedFactory:FortQuestDefinitionComponent_MapMarkers_1'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_HauntedFactory.2"
-      },
-      {
-        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_Daily_GainShields_HauntedFactory:FortQuestDefinitionComponent_DisplaySettings_0'",
-        "ObjectPath": "/FigmentQuests/Items/QuestItems/EvergreenDailies/Location/IntroducedS02/Quest_Figment_Daily_GainShields_HauntedFactory.1"
-      }
-    ],
-    "CompletionPaths": [
-      {
-        "CompletionSegments": [
-          {
-            "CompletionNodes": [
-              {
-                "Objective": "Quest_Figment_Daily_GainShields_HauntedFactory_obj0"
-              }
-            ],
-            "RequiredNodeCompletions": 1,
-            "bSegmentCommitment": false
-          }
-        ],
-        "bPathCommitment": false,
-        "Context": []
-      }
-    ],
-    "ItemName": {
-      "Namespace": "",
-      "Key": "0E146C5F485FB695F64996B9FFA54B25",
-      "SourceString": "Gain shields at Haunted Hills or Flush Factory",
-      "LocalizedString": "Gain shields at Haunted Hills or Flush Factory"
-    },
-    "ItemDescription": {
-      "Namespace": "",
-      "Key": "80EF58DF4B68ACE278FC18B5C11176F8",
-      "SourceString": "Gain shields at Haunted Hills or Flush Factory",
-      "LocalizedString": "Gain shields at Haunted Hills or Flush Factory"
-    },
-    "DataList": [
-      {
-        "Tags": [
-          "ChallengeCategory.XP",
-          "QuestCategory.Figment.Dailies"
         ]
-      },
-      {},
-      {
-        "Rarity": "EFortRarity::Common"
       }
     ]
   }

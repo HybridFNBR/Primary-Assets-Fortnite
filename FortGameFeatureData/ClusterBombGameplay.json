@@ -1,102 +1,67 @@
 {
-  "Type": "FortGameFeatureAction_AddToPlaylists",
-  "Name": "FortGameFeatureAction_AddToPlaylists_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortGameFeatureAction_AddToPlaylists'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'ClusterBombGameplay'",
-    "ObjectPath": "/ClusterBombGameplay/ClusterBombGameplay.2"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "ClusterBombGameplay",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/ClusterBombGameplay/ClusterBombGameplay",
   "Properties": {
-    "Playlists": {
-      "Entries": [
-        {
-          "VersionRange": {
-            "InclusiveMin": {
-              "VersionName": "28.00"
-            },
-            "ExclusiveMax": {
-              "VersionName": "Future"
-            }
-          },
-          "PlaylistQuery": {
-            "TokenStreamVersion": 0,
-            "TagDictionary": [
-              {
-                "TagName": "Athena.Playlist.NoBuildBR"
-              },
-              {
-                "TagName": "Athena.Playlist.Test"
-              },
-              {
-                "TagName": "Playlist.Experience.PlayOnly"
-              },
-              {
-                "TagName": "Playlist.UGC.Core"
-              },
-              {
-                "TagName": "Athena.Creative"
-              },
-              {
-                "TagName": "Athena.Playlist.ForbiddenFruit"
-              }
-            ],
-            "QueryTokenStream": [
-              0,
-              1,
-              5,
-              2,
-              1,
-              5,
-              0,
-              1,
-              2,
-              3,
-              4,
-              3,
-              1,
-              5
-            ],
-            "UserDescription": "Playlists",
-            "AutoDescription": " ALL(  ANY( Athena.Playlist.NoBuildBR, Athena.Playlist.Test, Playlist.Experience.PlayOnly, Playlist.UGC.Core, Athena.Creative ),  NONE( Athena.Playlist.ForbiddenFruit ) )"
-          },
-          "bMigratedFromOldData": true
-        }
-      ]
+    "LevelOverlayConfig": {
+      "AssetPathName": "/ClusterBombGameplay/ClusterBombGameplay_LevelOverlay.ClusterBombGameplay_LevelOverlay",
+      "SubPathString": ""
     },
-    "PlaylistQuery": {
-      "TagDictionary": [
-        {
-          "TagName": "Athena.Playlist.NoBuildBR"
+    "MobileHUDWidgetRegistry": {
+      "AssetPathName": "/ClusterBombGameplay/Gameplay/HUD/ClusterBombHUDWidgetRegistry.ClusterBombHUDWidgetRegistry",
+      "SubPathString": ""
+    },
+    "GameplayCueNotifyPaths": [
+      "GameplayCues"
+    ],
+    "FortDeathCauseData": {
+      "AssetPathName": "/ClusterBombGameplay/DeathCauseData_ClusterBomb.DeathCauseData_ClusterBomb",
+      "SubPathString": ""
+    },
+    "PluginCheats": [
+      {
+        "bIgnoreRunAllSeasonCheatsCommand": false,
+        "SectionName": "Ch5S1",
+        "DisplayName": "Give Cluster Grenade",
+        "ConsoleCommands": [
+          "Cheat GiveSpecificItem /ClusterBombGameplay/Gameplay/WID_Paprika_ClusterBomb 4 4"
+        ]
+      }
+    ],
+    "Actions": [
+      {
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'ClusterBombGameplay:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/ClusterBombGameplay/ClusterBombGameplay.0"
+      },
+      {
+        "ObjectName": "FortGameFeatureAction_AddToRootGFP'ClusterBombGameplay:FortGameFeatureAction_AddToRootGFP_0'",
+        "ObjectPath": "/ClusterBombGameplay/ClusterBombGameplay.1"
+      }
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Weapon",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortWeaponItemDefinition",
+          "SubPathString": ""
         },
-        {
-          "TagName": "Athena.Playlist.Test"
-        },
-        {
-          "TagName": "Playlist.Experience.PlayOnly"
-        },
-        {
-          "TagName": "Playlist.UGC.Core"
-        },
-        {
-          "TagName": "Athena.Creative"
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Gameplay"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
         }
-      ],
-      "QueryTokenStream": [
-        0,
-        1,
-        4,
-        1,
-        1,
-        5,
-        0,
-        1,
-        2,
-        3,
-        4
-      ],
-      "UserDescription": "Playlists",
-      "AutoDescription": " ANY(  ANY( Athena.Playlist.NoBuildBR, Athena.Playlist.Test, Playlist.Experience.PlayOnly, Playlist.UGC.Core, Athena.Creative ) )"
-    }
+      }
+    ]
   }
 }

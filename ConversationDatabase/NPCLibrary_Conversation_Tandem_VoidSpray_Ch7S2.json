@@ -1,102 +1,394 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2'",
+    "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "D4CA8521-4F5605CB-B4C6A098-0E88091F",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.1"
-        }
-      },
-      {
-        "Key": "54B3112E-47967BA9-DC8572A8-9BE4A9B0",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:Speech_C_4'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.13"
-        }
-      },
-      {
-        "Key": "ABACBA09-478BB347-0EFE2D8E-E137B2D5",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.4"
-        }
-      },
-      {
-        "Key": "E37A4D1A-47B2D7CF-A2B162B1-48A27267",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.2"
-        }
-      },
-      {
-        "Key": "D37F6642-4D0D0C6D-83896D82-4D50A371",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.VoidSpray"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BA54A2F04B38DE0AD51DA281A57A3695",
+            "SourceString": "Lotta new faces around the Island, huh?",
+            "LocalizedString": "Lotta new faces around the Island, huh?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "D4CA8521-4F5605CB-B4C6A098-0E88091F"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BD0246CC4FAC5B057DB6EBA3714BC3E0",
+            "SourceString": "I'm on supply-hunting duty. Seen any good loot?",
+            "LocalizedString": "I'm on supply-hunting duty. Seen any good loot?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2DD60F844E96149BC469058F49B64A91",
+            "SourceString": "Good to see you again.",
+            "LocalizedString": "Good to see you again."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "963437B04092BEFCFD6373808081A5B2",
+            "SourceString": "Saving the world never gets old... or less stressful.",
+            "LocalizedString": "Saving the world never gets old... or less stressful."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "37474837437286EE48B6CB90D4075960",
+            "SourceString": "Foundation seems... distracted...",
+            "LocalizedString": "Foundation seems... distracted..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FC263FD7448DF1C11BE3F596D23D2A8D",
+            "SourceString": "We make a pretty good team, huh?",
+            "LocalizedString": "We make a pretty good team, huh?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "15126AB14844336EC7C241934DB497B4",
+            "SourceString": "Um, hey!",
+            "LocalizedString": "Um, hey!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4EE8D7364D741E5F65C77AA24945F1F6",
+            "SourceString": "I think about what we'd do with more time... all the time.",
+            "LocalizedString": "I think about what we'd do with more time... all the time."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "01FBE3FD4929565DCA0C38B61178C3CC",
+        "SourceString": "How're things in the field? Let me guess: bad.",
+        "LocalizedString": "How're things in the field? Let me guess: bad."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.VoidSpray.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "D4CA8521-4F5605CB-B4C6A098-0E88091F",
-      "54B3112E-47967BA9-DC8572A8-9BE4A9B0",
-      "ABACBA09-478BB347-0EFE2D8E-E137B2D5",
+    },
+    "OutputConnections": [
+      "D37F6642-4D0D0C6D-83896D82-4D50A371",
       "E37A4D1A-47B2D7CF-A2B162B1-48A27267",
-      "D37F6642-4D0D0C6D-83896D82-4D50A371"
+      "ABACBA09-478BB347-0EFE2D8E-E137B2D5"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "54B3112E-47967BA9-DC8572A8-9BE4A9B0",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibraryCH7S2/NPCs/VoidSpray/NPCLibrary_Conversation_Tandem_VoidSpray_Ch7S2.1"
+    }
   }
 }

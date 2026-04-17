@@ -1,93 +1,215 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Mystify",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Mystify/NPCLibrary_Conversation_Mystify",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Mystify'",
+    "ObjectPath": "/NPCLibrary/NPCs/Mystify/NPCLibrary_Conversation_Mystify.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "C1189DC8-4A01FA72-4BC64885-84A181B2",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Mystify:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Mystify/NPCLibrary_Conversation_Mystify.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "93BA064B40EB5C60E1EFF5A9BF1B793A",
+            "SourceString": "You here for the heist?",
+            "LocalizedString": "You here for the heist?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Mystify:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Mystify/NPCLibrary_Conversation_Mystify.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1ADF125A4B8D3EF5D3EC9BB7A7CAE8B1",
+            "SourceString": "Don't tell Cryptic I'm here. He'll get uppity.",
+            "LocalizedString": "Don't tell Cryptic I'm here. He'll get uppity."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "63B5A53B4EF6C694D99268B8036AD2D6",
+            "SourceString": "There's nothing I love more than outsmarting Cryptic.",
+            "LocalizedString": "There's nothing I love more than outsmarting Cryptic."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "2886DD6343E0B2F67E492E8F543E1818",
+            "SourceString": "If you think about it, a heist is basically performance art.",
+            "LocalizedString": "If you think about it, a heist is basically performance art."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "79B213294EE37F796719B6A9BDD212EB",
+            "SourceString": "It's not a crime if they can't catch you doing it. Probably.",
+            "LocalizedString": "It's not a crime if they can't catch you doing it. Probably."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAny",
+          "ContextRequirements": [],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "F4938F9A-4BC42273-F2E870A8-E384AB9A",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Mystify:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Mystify/NPCLibrary_Conversation_Mystify.5"
-        }
-      },
-      {
-        "Key": "68C2235F-47106F8A-D8E5BDB5-3A055049",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Mystify:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Mystify/NPCLibrary_Conversation_Mystify.2"
-        }
-      },
-      {
-        "Key": "AF86201D-4A864302-8C5C6481-389423E6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Mystify:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Mystify/NPCLibrary_Conversation_Mystify.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "B6D56B0B4C12B6327B3CDEB1E61DF99A",
+        "SourceString": "Don't tell Cryptic I'm here. He'll get uppity.",
+        "LocalizedString": "Don't tell Cryptic I'm here. He'll get uppity."
       }
+    },
+    "OutputConnections": [
+      "AF86201D-4A864302-8C5C6481-389423E6",
+      "68C2235F-47106F8A-D8E5BDB5-3A055049"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Mystify"
-        },
-        "DestinationList": [
-          "C1189DC8-4A01FA72-4BC64885-84A181B2"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "C1189DC8-4A01FA72-4BC64885-84A181B2",
-      "F4938F9A-4BC42273-F2E870A8-E384AB9A",
-      "68C2235F-47106F8A-D8E5BDB5-3A055049",
-      "AF86201D-4A864302-8C5C6481-389423E6"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "F4938F9A-4BC42273-F2E870A8-E384AB9A",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Mystify:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Mystify/NPCLibrary_Conversation_Mystify.1"
+    }
   }
 }

@@ -1,102 +1,268 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_RankedSpeeder",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_RankedSpeeder'",
+    "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "A710315E-480F6DF4-56C07BAC-20EA5BFA",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RankedSpeeder:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.1"
-        }
-      },
-      {
-        "Key": "8EF83230-4A30F779-18BBCD98-D2FD94F0",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_RankedSpeeder:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.10"
-        }
-      },
-      {
-        "Key": "65666CF3-40D5540F-73736C98-2233111C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedSpeeder:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.4"
-        }
-      },
-      {
-        "Key": "7BE42654-4CCC8EE4-0F7CBABE-437E5DDC",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedSpeeder:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.2"
-        }
-      },
-      {
-        "Key": "A11A1F19-47BEC662-9E10398A-15DAB05A",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_RankedSpeeder:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.RankedSpeeder"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BA6B5B594C5AE57D3BCC089EC120F9C6",
+            "SourceString": "Ready to ride, or are you walking?",
+            "LocalizedString": "Ready to ride, or are you walking?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_RankedSpeeder:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "A710315E-480F6DF4-56C07BAC-20EA5BFA"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "EC77694741D33B9FAEB80B825D98CD94",
+            "SourceString": "Finally, a challenge. Looking for a race?",
+            "LocalizedString": "Finally, a challenge. Looking for a race?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RankedSpeeder:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "B71FE708421E1DDFF7FC45A357E97DAD",
+            "SourceString": "I've never lost a race. I won't start now.",
+            "LocalizedString": "I've never lost a race. I won't start now."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RankedSpeeder:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "4C830CAF4DCB31BE9770ACB4E59CE677",
+            "SourceString": "Think you're faster than me? Let's find out!",
+            "LocalizedString": "Think you're faster than me? Let's find out!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RankedSpeeder:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "72457A4744EF751FAB989BBFB461C9D2",
+            "SourceString": "Take a look. I'm what REAL speed looks like.",
+            "LocalizedString": "Take a look. I'm what REAL speed looks like."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_RankedSpeeder:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "AEC7958646BCC36BEBECA4BBA3BA94F7",
+        "SourceString": "If you're looking for a fight, let's be quick about it.",
+        "LocalizedString": "If you're looking for a fight, let's be quick about it."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.RankedSpeeder.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "A710315E-480F6DF4-56C07BAC-20EA5BFA",
-      "8EF83230-4A30F779-18BBCD98-D2FD94F0",
-      "65666CF3-40D5540F-73736C98-2233111C",
+    },
+    "OutputConnections": [
+      "A11A1F19-47BEC662-9E10398A-15DAB05A",
       "7BE42654-4CCC8EE4-0F7CBABE-437E5DDC",
-      "A11A1F19-47BEC662-9E10398A-15DAB05A"
+      "65666CF3-40D5540F-73736C98-2233111C"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "8EF83230-4A30F779-18BBCD98-D2FD94F0",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_RankedSpeeder:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/RankedSpeeder/NPCLibrary_Conversation_RankedSpeeder.1"
+    }
   }
 }

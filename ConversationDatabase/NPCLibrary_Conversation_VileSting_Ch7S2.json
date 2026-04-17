@@ -1,111 +1,449 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_VileSting_Ch7S2",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_VileSting_Ch7S2'",
+    "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "9B53D39D-44749E9F-A1AE6FB5-083A39BB",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_VileSting_Ch7S2:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.1"
-        }
-      },
-      {
-        "Key": "07957756-4FCA1F4B-DEDE7388-66A22A34",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_VileSting_Ch7S2:Speech_C_4'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.14"
-        }
-      },
-      {
-        "Key": "4CC88AF2-406C4C33-4AA218A1-49777593",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_VileSting_Ch7S2:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.5"
-        }
-      },
-      {
-        "Key": "CF564A4F-4C922A18-D9A695BC-0990F37C",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_VileSting_Ch7S2:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.4"
-        }
-      },
-      {
-        "Key": "3B165A2F-4CC7A13E-E285C5A7-0F147027",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_VileSting_Ch7S2:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.2"
-        }
-      },
-      {
-        "Key": "25F81792-46A5D0B8-13CC4DAA-CF30ED82",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_VileSting_Ch7S2:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.VileSting"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "DE7B91314216DD00947049892D39E0A5",
+            "SourceString": "The Dark Voyager won't stop. Neither can we.",
+            "LocalizedString": "The Dark Voyager won't stop. Neither can we."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_VileSting_Ch7S2:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.14"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "9B53D39D-44749E9F-A1AE6FB5-083A39BB"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A92574A54419EDEA0C30518E348C4440",
+            "SourceString": "Everything okay?",
+            "LocalizedString": "Everything okay?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_VileSting_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BD89E7944DABE9471AE1C980DE19EF0C",
+            "SourceString": "Something to report?",
+            "LocalizedString": "Something to report?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_VileSting_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F96DA13248D32E7946309482A4AB4E10",
+            "SourceString": "Looper. Good to see you.",
+            "LocalizedString": "Looper. Good to see you."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_VileSting_Ch7S2:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "D5E0EE084BED648ABA074D8B4E40DE07",
+            "SourceString": "It's good to have you back.",
+            "LocalizedString": "It's good to have you back."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VileSting_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "24369F3347E4A2C408E740A8AAED2FF1",
+            "SourceString": "Wear that with honor.",
+            "LocalizedString": "Wear that with honor."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VileSting_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FF6F3B0A40410C3646DB47A47527EDA7",
+            "SourceString": "Represent him well. He was the best there was.",
+            "LocalizedString": "Represent him well. He was the best there was."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VileSting_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "0B127EC14B5D9EF065F949B2EB0C2B89",
+            "SourceString": "Don't start with me again. We have a job to do.",
+            "LocalizedString": "Don't start with me again. We have a job to do."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VileSting_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "BDAA59134C1311E64C0F6594000DB198",
+            "SourceString": "New Sanctuary will be at full power in no time.",
+            "LocalizedString": "New Sanctuary will be at full power in no time."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_VileSting_Ch7S2:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "807FD0F342048EE877330A8132344B98",
+        "SourceString": "Everything okay?",
+        "LocalizedString": "Everything okay?"
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.RandomServices",
-      "Conversation.Entry.VileSting.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "9B53D39D-44749E9F-A1AE6FB5-083A39BB",
-      "07957756-4FCA1F4B-DEDE7388-66A22A34",
-      "4CC88AF2-406C4C33-4AA218A1-49777593",
-      "CF564A4F-4C922A18-D9A695BC-0990F37C",
+    },
+    "OutputConnections": [
+      "25F81792-46A5D0B8-13CC4DAA-CF30ED82",
       "3B165A2F-4CC7A13E-E285C5A7-0F147027",
-      "25F81792-46A5D0B8-13CC4DAA-CF30ED82"
+      "CF564A4F-4C922A18-D9A695BC-0990F37C",
+      "4CC88AF2-406C4C33-4AA218A1-49777593"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "07957756-4FCA1F4B-DEDE7388-66A22A34",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_VileSting_Ch7S2:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibraryCH7S2/NPCs/VileSting/NPCLibrary_Conversation_VileSting_Ch7S2.1"
+    }
   }
 }

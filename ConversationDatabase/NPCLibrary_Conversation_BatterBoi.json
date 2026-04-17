@@ -1,111 +1,269 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_BatterBoi",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_BatterBoi'",
+    "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "7B967537-41C1E1B4-FA511EBE-F488DA4D",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BatterBoi:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.1"
-        }
-      },
-      {
-        "Key": "CA6DD7FC-4138894C-3D21B683-9E48F154",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_BatterBoi:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.11"
-        }
-      },
-      {
-        "Key": "DD7A5F47-4725694E-2FAE14AB-CE0B1915",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BatterBoi:ConversationLinkNode_3'",
-          "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.5"
-        }
-      },
-      {
-        "Key": "7D37A8B4-43B1393A-27CC87B9-32EEE5A6",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BatterBoi:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.4"
-        }
-      },
-      {
-        "Key": "A0762D0B-41A8FF76-4B132087-88DCF581",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BatterBoi:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.2"
-        }
-      },
-      {
-        "Key": "10D0D1FB-4FB81981-8D2018BA-6203676B",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_BatterBoi:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.BatterBoi"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "16107C1241B9125A68A902A9C220D754",
+            "SourceString": "Hey there, lil roll.",
+            "LocalizedString": "Hey there, lil roll."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_BatterBoi:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "7B967537-41C1E1B4-FA511EBE-F488DA4D"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E4417A044B3BCB91AFB5E99EF15E3FDC",
+            "SourceString": "These buns are fresh outta the oven, bud.",
+            "LocalizedString": "These buns are fresh outta the oven, bud."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_BatterBoi:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "C836C2814698A4CD8DF043AC4407FC78",
+            "SourceString": "Rise and lift, buddy, rise and lift.",
+            "LocalizedString": "Rise and lift, buddy, rise and lift."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_BatterBoi:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_1'",
+                "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "24A4FD594C49B901FB6032A4F51501AD",
+            "SourceString": "You don't gotta be strong to have a strong heart!",
+            "LocalizedString": "You don't gotta be strong to have a strong heart!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_BatterBoi:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "95B2807D41142180B8F8239DD7422EB5",
+            "SourceString": "Keep fighting the good fight out there, demon slayer.",
+            "LocalizedString": "Keep fighting the good fight out there, demon slayer."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_BatterBoi:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "2073EE414138B37158A77193CEE9EFFE",
+        "SourceString": "These buns are fresh outta the oven, bud.",
+        "LocalizedString": "These buns are fresh outta the oven, bud."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BatterBoi.Dialogue",
-      "Conversation.Entry.Season33.WF.Quest.04.part.03",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "7B967537-41C1E1B4-FA511EBE-F488DA4D",
-      "CA6DD7FC-4138894C-3D21B683-9E48F154",
-      "DD7A5F47-4725694E-2FAE14AB-CE0B1915",
-      "7D37A8B4-43B1393A-27CC87B9-32EEE5A6",
+    },
+    "OutputConnections": [
+      "10D0D1FB-4FB81981-8D2018BA-6203676B",
       "A0762D0B-41A8FF76-4B132087-88DCF581",
-      "10D0D1FB-4FB81981-8D2018BA-6203676B"
+      "7D37A8B4-43B1393A-27CC87B9-32EEE5A6",
+      "DD7A5F47-4725694E-2FAE14AB-CE0B1915"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "CA6DD7FC-4138894C-3D21B683-9E48F154",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_BatterBoi:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/BatterBoi/NPCLibrary_Conversation_BatterBoi.1"
+    }
   }
 }

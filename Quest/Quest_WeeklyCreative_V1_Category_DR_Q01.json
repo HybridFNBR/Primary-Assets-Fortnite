@@ -1,23 +1,210 @@
 {
-  "Type": "FortQuestDefinitionComponent_DisplaySettings",
-  "Name": "FortQuestDefinitionComponent_DisplaySettings_0",
-  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'FortQuestDefinitionComponent_DisplaySettings'",
-  "Outer": {
-    "ObjectName": "FortQuestItemDefinition_Athena'Quest_WeeklyCreative_V1_Category_DR_Q01'",
-    "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/WeeklyCreative/Category/Cat_07_Driving/Deprecated/Quest_WeeklyCreative_V1_Category_DR_Q01.3"
-  },
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_WeeklyCreative_V1_Category_DR_Q01",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/CreativePermanentQuests/Items/QuestItems/WeeklyCreative/Category/Cat_07_Driving/Deprecated/Quest_WeeklyCreative_V1_Category_DR_Q01",
   "Properties": {
-    "VisibilitySettings": {
-      "bOverrideBundleVisibilityData": true,
-      "QuestVisiblityData": {
-        "bIsVisibleWhenCompleted": true
-      },
-      "bCanShowTimer": false
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_WeeklyCreative_V1_Category_DR_Q01_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "IncrementType": "EAcquireIncrementType::TotalMatchingItemCounts",
+            "bUseItemCount": false,
+            "ItemAcquired": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Resource.XP"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Resource.XP )"
+              }
+            },
+            "ItemCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AcquireSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "QuestCategory"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  3,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " NONE( QuestCategory )"
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "9C7BB4934949447AA68354929E3F3066",
+          "SourceString": "Earn XP in Driving Creator-made Islands",
+          "LocalizedString": "Earn XP in Driving Creator-made Islands"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 1,
+          "DisplayMaxStage": 18
+        },
+        "Count": 60000,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 33,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.FNE"
+        },
+        {
+          "TagName": "LinkEntry.Category.Driving"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "AutoDescription": " ALL( Product.FNE, LinkEntry.Category.Driving )"
     },
-    "DiscoveryRowSettings": {
-      "DiscoveryOverrideLinkID": "reference_surface_category_driving",
-      "DiscoveryOverrideLinkTreatmentType": "EDiscoveryLinkTreatmentType::Category"
-    }
+    "SortPriority": 1,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_WeeklyCreative_V1_Category_DR_Q01:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/WeeklyCreative/Category/Cat_07_Driving/Deprecated/Quest_WeeklyCreative_V1_Category_DR_Q01.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_WeeklyCreative_V1_Category_DR_Q01:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/WeeklyCreative/Category/Cat_07_Driving/Deprecated/Quest_WeeklyCreative_V1_Category_DR_Q01.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_ProductCompatibilityInjector_IslandMetadata'Quest_WeeklyCreative_V1_Category_DR_Q01:FortQuestDefinitionComponent_ProductCompatibilityInjector_IslandMetadata_0'",
+        "ObjectPath": "/CreativePermanentQuests/Items/QuestItems/WeeklyCreative/Category/Cat_07_Driving/Deprecated/Quest_WeeklyCreative_V1_Category_DR_Q01.1"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_WeeklyCreative_V1_Category_DR_Q01_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "DF156ED641934A4A992CFD91B1FC5B48",
+      "SourceString": "Earn XP in Driving Creator-made Islands",
+      "LocalizedString": "Earn XP in Driving Creator-made Islands"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "8288DFEC4E5730747030EDACA24813FF",
+      "SourceString": "Earn XP in Driving Creator-made Islands",
+      "LocalizedString": "Earn XP in Driving Creator-made Islands"
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.FNE.WeeklyCreative.Category.07"
+        ]
+      }
+    ]
   }
 }

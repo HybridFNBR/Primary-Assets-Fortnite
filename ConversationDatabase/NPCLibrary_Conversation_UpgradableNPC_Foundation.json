@@ -1,102 +1,439 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_UpgradableNPC_Foundation",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_UpgradableNPC_Foundation'",
+    "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "AA2D726C-4860BE9C-FAC5DFB7-94ECA64E",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_UpgradableNPC_Foundation:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.1"
-        }
-      },
-      {
-        "Key": "3A95F951-468268EB-4E0448AF-3FFA2447",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_UpgradableNPC_Foundation:Speech_C_4'",
-          "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.13"
-        }
-      },
-      {
-        "Key": "A64C6E06-4CF2C4B6-FFC9E38B-B2B60C55",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UpgradableNPC_Foundation:ConversationLinkNode_2'",
-          "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.4"
-        }
-      },
-      {
-        "Key": "E3093471-460C68F3-34A623BE-95D3C8DA",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UpgradableNPC_Foundation:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.2"
-        }
-      },
-      {
-        "Key": "68946643-4B7A6CC3-6F16DEB2-A647EC2E",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_UpgradableNPC_Foundation:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.3"
-        }
-      }
-    ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Specialist.Foundation"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "1CF642784DA581CB23C1D3A49DB0CB77",
+            "SourceString": "Miss me?",
+            "LocalizedString": "Miss me?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_UpgradableNPC_Foundation:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.13"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         },
-        "DestinationList": [
-          "AA2D726C-4860BE9C-FAC5DFB7-94ECA64E"
-        ],
-        "EntryIdentifier": ""
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "19F262B0446DC282FDD0F2878E7562E4",
+            "SourceString": "The Dark Voyager won't get away with this.",
+            "LocalizedString": "The Dark Voyager won't get away with this."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_UpgradableNPC_Foundation:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_2'",
+                "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.5"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "FBF7C2B44239425E4CE7278F6340B97D",
+            "SourceString": "We're going to win, because we have to win.",
+            "LocalizedString": "We're going to win, because we have to win."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_UpgradableNPC_Foundation:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_3'",
+                "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.6"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "A307DB504DFB5F55E312DE953955D2CA",
+            "SourceString": "The Ice King will pay for what he did to me.",
+            "LocalizedString": "The Ice King will pay for what he did to me."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_CheckNPCMatchConversationCount'NPCLibrary_Conversation_UpgradableNPC_Foundation:Speech_C_4.FortControllerRequirement_CheckNPCMatchConversationCount_4'",
+                "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.7"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "6C1E824A47AD9C5E11CAB3B5E36AAF81",
+            "SourceString": "So... Jones' protege, huh? ",
+            "LocalizedString": "So... Jones' protege, huh? "
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UpgradableNPC_Foundation:Speech_C_4.FortControllerRequirement_HasCID_2'",
+                "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.10"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "E5A5D0984CECCB8551C7929B83563F60",
+            "SourceString": "I oughta send you back to the bus. Right now.",
+            "LocalizedString": "I oughta send you back to the bus. Right now."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UpgradableNPC_Foundation:Speech_C_4.FortControllerRequirement_HasCID_0'",
+                "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.8"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "F5CF86EF4AA6EAF28821AEA14A8A316B",
+            "SourceString": "...",
+            "LocalizedString": "..."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UpgradableNPC_Foundation:Speech_C_4.FortControllerRequirement_HasCID_1'",
+                "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.9"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "5CE8FD944A55A2D7470F7E95A5AB7A65",
+            "SourceString": "*sigh*... Please, no quipping now.",
+            "LocalizedString": "*sigh*... Please, no quipping now."
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UpgradableNPC_Foundation:Speech_C_4.FortControllerRequirement_HasCID_3'",
+                "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.11"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        },
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "AF17FAD84A8DFC5FE76FC784D839193E",
+            "SourceString": "New intel to report?",
+            "LocalizedString": "New intel to report?"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_HasCID'NPCLibrary_Conversation_UpgradableNPC_Foundation:Speech_C_4.FortControllerRequirement_HasCID_4'",
+                "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.12"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.OutfitReaction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
+        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "8A40CAAB4E41204E2E5F10999F0A6046",
+        "SourceString": "The Dark Voyager won't get away with this.",
+        "LocalizedString": "The Dark Voyager won't get away with this."
       }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.Specialist.Foundation.Dialogue",
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "AA2D726C-4860BE9C-FAC5DFB7-94ECA64E",
-      "3A95F951-468268EB-4E0448AF-3FFA2447",
-      "A64C6E06-4CF2C4B6-FFC9E38B-B2B60C55",
+    },
+    "OutputConnections": [
+      "68946643-4B7A6CC3-6F16DEB2-A647EC2E",
       "E3093471-460C68F3-34A623BE-95D3C8DA",
-      "68946643-4B7A6CC3-6F16DEB2-A647EC2E"
+      "A64C6E06-4CF2C4B6-FFC9E38B-B2B60C55"
     ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "3A95F951-468268EB-4E0448AF-3FFA2447",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_UpgradableNPC_Foundation:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCSpecialist_Foundation/NPCs/Foundation/NPCLibrary_Conversation_UpgradableNPC_Foundation.1"
+    }
   }
 }

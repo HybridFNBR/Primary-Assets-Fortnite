@@ -1,93 +1,87 @@
 {
-  "Type": "ConversationDatabase",
-  "Name": "NPCLibrary_Conversation_Beastmode",
-  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'ConversationDatabase'",
-  "Package": "/NPCLibrary/NPCs/Beastmode/NPCLibrary_Conversation_Beastmode",
+  "Type": "Speech_C",
+  "Name": "Speech_C_4",
+  "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "BlueprintGeneratedClass'/FortniteConversation/Conversation/Speech.Speech_C'",
+  "Outer": {
+    "ObjectName": "ConversationDatabase'NPCLibrary_Conversation_Beastmode'",
+    "ObjectPath": "/NPCLibrary/NPCs/Beastmode/NPCLibrary_Conversation_Beastmode.0"
+  },
+  "Template": {
+    "ObjectName": "Speech_C'Default__Speech_C'",
+    "ObjectPath": "/FortniteConversation/Conversation/Speech.7"
+  },
   "Properties": {
-    "CompilerVersion": 2,
-    "ReachableNodeMap": [
-      {
-        "Key": "C0362836-47CE8739-4F8422A1-542FC9BB",
-        "Value": {
-          "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Beastmode:ConversationEntryPointNode_7'",
-          "ObjectPath": "/NPCLibrary/NPCs/Beastmode/NPCLibrary_Conversation_Beastmode.1"
+    "SpeakerTag": {
+      "TagName": "Conversation.Participant.NPC"
+    },
+    "ListenerTag": {
+      "TagName": "Conversation.Participant.Player"
+    },
+    "GeneralConfig": {
+      "ContextualMessages": [
+        {
+          "Message": {
+            "Namespace": "",
+            "Key": "9C2CB06148F88177DE0512887C7DFA39",
+            "SourceString": "Hello! I am [AVAILABLE] as a [SPECIALIST] in [EXPLOSIVES]!",
+            "LocalizedString": "Hello! I am [AVAILABLE] as a [SPECIALIST] in [EXPLOSIVES]!"
+          },
+          "RequirementMatchPolicy": "EContextRequirementMatchPolicy::RequireAll",
+          "ContextRequirements": [
+            {
+              "ParticipantID": {
+                "TagName": "Conversation.Participant.Player"
+              },
+              "Requirement": {
+                "ObjectName": "FortControllerRequirement_IsFirstEverConversationWithNPC'NPCLibrary_Conversation_Beastmode:Speech_C_4.FortControllerRequirement_IsFirstEverConversationWithNPC_0'",
+                "ObjectPath": "/NPCLibrary/NPCs/Beastmode/NPCLibrary_Conversation_Beastmode.4"
+              }
+            }
+          ],
+          "Priority": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'NPC_Speech_Priorities'",
+                "ObjectPath": "/NPCLibrary/DataTables/NPC_Speech_Priorities.0"
+              },
+              "RowName": "Tandem.Speech.Priority.FirstEverInteraction"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "Weight": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "MetadataParameters": [],
+          "MetadataTags": []
         }
-      },
-      {
-        "Key": "9958396D-4C2A68A5-05984D86-1E5CB81C",
-        "Value": {
-          "ObjectName": "Speech_C'NPCLibrary_Conversation_Beastmode:Speech_C_4'",
-          "ObjectPath": "/NPCLibrary/NPCs/Beastmode/NPCLibrary_Conversation_Beastmode.5"
-        }
-      },
-      {
-        "Key": "5596AB44-4A9FBB34-64ACEF8A-2D18FCC7",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Beastmode:ConversationLinkNode_0'",
-          "ObjectPath": "/NPCLibrary/NPCs/Beastmode/NPCLibrary_Conversation_Beastmode.2"
-        }
-      },
-      {
-        "Key": "EC1F3A4D-4213D44B-72D459B9-C49E8C98",
-        "Value": {
-          "ObjectName": "ConversationLinkNode'NPCLibrary_Conversation_Beastmode:ConversationLinkNode_1'",
-          "ObjectPath": "/NPCLibrary/NPCs/Beastmode/NPCLibrary_Conversation_Beastmode.3"
-        }
+      ],
+      "DefaultMessage": {
+        "Namespace": "",
+        "Key": "EBF63C7E43F97EA19D93CE9C1A75E66E",
+        "SourceString": "Good day, customer! Do you need a [SPECIALIST] in [EXPLOSIVES]? Because I am programmed to do that!",
+        "LocalizedString": "Good day, customer! Do you need a [SPECIALIST] in [EXPLOSIVES]? Because I am programmed to do that!"
       }
+    },
+    "OutputConnections": [
+      "EC1F3A4D-4213D44B-72D459B9-C49E8C98",
+      "5596AB44-4A9FBB34-64ACEF8A-2D18FCC7"
     ],
-    "EntryTags": [
-      {
-        "EntryTag": {
-          "TagName": "Conversation.Entry.Beastmode"
-        },
-        "DestinationList": [
-          "C0362836-47CE8739-4F8422A1-542FC9BB"
-        ],
-        "EntryIdentifier": ""
-      }
-    ],
-    "ExitTags": [
-      "Conversation.Entry.BasicServices",
-      "Conversation.Entry.NPCLibrary.Quests"
-    ],
-    "InternalNodeIds": [
-      "C0362836-47CE8739-4F8422A1-542FC9BB",
-      "9958396D-4C2A68A5-05984D86-1E5CB81C",
-      "5596AB44-4A9FBB34-64ACEF8A-2D18FCC7",
-      "EC1F3A4D-4213D44B-72D459B9-C49E8C98"
-    ],
-    "Speakers": [
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.Player"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.406108,
-          "B": 1.0,
-          "A": 1.0,
-          "Hex": "00ABFF"
-        }
-      },
-      {
-        "FallbackName": {
-          "CultureInvariantString": null
-        },
-        "ParticipantName": {
-          "TagName": "Conversation.Participant.NPC"
-        },
-        "NodeTint": {
-          "R": 0.0,
-          "G": 0.065123,
-          "B": 0.1875,
-          "A": 1.0,
-          "Hex": "004878"
-        }
-      }
-    ]
+    "NodeName": "",
+    "Compiled_NodeGUID": "9958396D-4C2A68A5-05984D86-1E5CB81C",
+    "ParentNode": {
+      "ObjectName": "ConversationEntryPointNode'NPCLibrary_Conversation_Beastmode:ConversationEntryPointNode_7'",
+      "ObjectPath": "/NPCLibrary/NPCs/Beastmode/NPCLibrary_Conversation_Beastmode.1"
+    }
   }
 }
