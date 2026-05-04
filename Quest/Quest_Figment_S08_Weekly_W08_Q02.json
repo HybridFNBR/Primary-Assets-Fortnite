@@ -23,7 +23,34 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "EliminatedPawn": {
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "bIncrementByDamageAmount": true,
+            "bUseDamageAmount": false,
+            "bIncrementByUncappedDamage": false,
+            "bUseUncappedDamage": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
@@ -42,85 +69,65 @@
                 "AutoDescription": " ANY( Homebase.Class )"
               }
             },
-            "Killer": {
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Gameplay.Status.IsTargeting"
+                  },
+                  {
+                    "TagName": "Weapon.Melee"
+                  },
+                  {
+                    "TagName": "Athena.Vehicle"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  3,
+                  3,
+                  0,
+                  1,
+                  2
+                ],
+                "UserDescription": "",
+                "AutoDescription": " NONE( Gameplay.Status.IsTargeting, Weapon.Melee, Athena.Vehicle )"
+              }
+            },
+            "DamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "UncappedDamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [],
                 "QueryTokenStream": [],
                 "UserDescription": "",
                 "AutoDescription": ""
-              }
-            },
-            "EliminationSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Item.Weapon.Ranged.Assault.Infantry"
-                  },
-                  {
-                    "TagName": "Item.Weapon.Ranged.SMG.Suppressed"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Item.Weapon.Ranged.Assault.Infantry, Item.Weapon.Ranged.SMG.Suppressed )"
-              }
-            },
-            "AllowedTeamAffiliations": [],
-            "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
-            "bIncrementByDistance": false,
-            "bUseKillStreak": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "KillStreak": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Quests.Blank"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  2,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ALL( Athena.Quests.Blank )"
               }
             },
             "Context": {
@@ -149,22 +156,22 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "D0761E0E46E98F465E8E4B90A68815D5",
-          "SourceString": "Week 8 quest",
-          "LocalizedString": "Week 8 quest"
+          "Key": "79EC2DB54E621AE915D9FE96A3BDD2FD",
+          "SourceString": "Damage players while hip-firing",
+          "LocalizedString": "Damage players while hip-firing"
         },
         "HudShortDescription": {
           "Namespace": "",
-          "Key": "E9D687894A2108110E59848DE44AD5A0",
-          "SourceString": "Week 8 quest",
-          "LocalizedString": "Week 8 quest"
+          "Key": "234DD0E24C540BAFB7730FA472BD4737",
+          "SourceString": "Damage players while hip-firing",
+          "LocalizedString": "Damage players while hip-firing"
         },
         "ObjectiveConversations": [],
         "ObjectiveDisplayInfo": {
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 5,
+        "Count": 750,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -224,15 +231,15 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "936B5A864ED1833E10C739A99325D049",
-      "SourceString": "Week 8 quest",
-      "LocalizedString": "Week 8 quest"
+      "Key": "84F58431406D7F4133B335AB92AA19E3",
+      "SourceString": "Damage players while hip-firing",
+      "LocalizedString": "Damage players while hip-firing"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "57F5CA024125F081C881C6B2D7E6D0C7",
-      "SourceString": "Week 8 quest",
-      "LocalizedString": "Week 8 quest"
+      "Key": "47CC2B84456D3AD6287005A414CA86F0",
+      "SourceString": "Damage players while hip-firing",
+      "LocalizedString": "Damage players while hip-firing"
     },
     "DataList": [
       {

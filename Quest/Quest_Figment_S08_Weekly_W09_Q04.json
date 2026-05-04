@@ -19,16 +19,73 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "EliminatedPawn": {
+            "IncrementBy": "EFortTrickIncrementType::Single",
+            "bUseTrickPoints": true,
+            "bUseTrickCount": false,
+            "bUseAirDistance": false,
+            "bUseAirHeight": false,
+            "bUseAirTime": false,
+            "TrickPoints": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 15000
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TrickCount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "AirDistance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "AirHeight": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "AirTime": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "Vehicle": {
+              "bCanGainProgressForThisObjective": false,
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
                   {
-                    "TagName": "Homebase.Class"
+                    "TagName": "Athena.Vehicle.Jackal"
                   }
                 ],
                 "QueryTokenStream": [
@@ -39,10 +96,11 @@
                   0
                 ],
                 "UserDescription": "",
-                "AutoDescription": " ANY( Homebase.Class )"
+                "AutoDescription": " ANY( Athena.Vehicle.Jackal )"
               }
             },
-            "Killer": {
+            "Driver": {
+              "bCanGainProgressForThisObjective": false,
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [],
@@ -51,55 +109,21 @@
                 "AutoDescription": ""
               }
             },
-            "EliminationSource": {
+            "Passengers": {
+              "bCanGainProgressForThisObjective": false,
               "TagQuery": {
                 "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "phoebe.weapon.ranged.pistol"
-                  },
-                  {
-                    "TagName": "weapon.ranged.pistol"
-                  },
-                  {
-                    "TagName": "Item.Weapon.Ranged.Pistol"
-                  },
-                  {
-                    "TagName": "Item.Weapon.Ranged.Sniper"
-                  },
-                  {
-                    "TagName": "weapon.ranged.sniper"
-                  },
-                  {
-                    "TagName": "phoebe.weapon.ranged.sniper"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  6,
-                  0,
-                  1,
-                  2,
-                  3,
-                  4,
-                  5
-                ],
+                "TagDictionary": [],
+                "QueryTokenStream": [],
                 "UserDescription": "",
-                "AutoDescription": " ANY( phoebe.weapon.ranged.pistol, weapon.ranged.pistol, Item.Weapon.Ranged.Pistol, Item.Weapon.Ranged.Sniper, weapon.ranged.sniper, phoebe.weapon.ranged.sniper )"
+                "AutoDescription": ""
               }
             },
-            "AllowedTeamAffiliations": [],
-            "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
-            "bIncrementByDistance": false,
-            "bUseKillStreak": false,
-            "Distance": {
+            "bRequireAllPassengersToMatchFilter": false,
+            "bUseVehicleHealthPercent": false,
+            "bUseVehicleFuelPercent": false,
+            "BoostRequirement": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "VehicleHealthPercent": {
               "LowerBound": {
                 "Type": "ERangeBoundTypes::Inclusive",
                 "Value": 0.0
@@ -109,34 +133,24 @@
                 "Value": 0.0
               }
             },
-            "KillStreak": {
+            "VehicleFuelPercent": {
               "LowerBound": {
                 "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
+                "Value": 0.0
               },
               "UpperBound": {
                 "Type": "ERangeBoundTypes::Open",
-                "Value": 0
+                "Value": 0.0
               }
             },
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
                 "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Quests.Blank"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  2,
-                  1,
-                  0
-                ],
+                "TagDictionary": [],
+                "QueryTokenStream": [],
                 "UserDescription": "",
-                "AutoDescription": " ALL( Athena.Quests.Blank )"
+                "AutoDescription": ""
               }
             },
             "Context": {
@@ -165,22 +179,22 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "657331374474ED9598F1828A903D181F",
-          "SourceString": "Week 9 quest",
-          "LocalizedString": "Week 9 quest"
+          "Key": "EE8B7C8540BE018115A14D9BF5D60F9A",
+          "SourceString": "Land a trick of 15000 points or more on a Driftboard trick",
+          "LocalizedString": "Land a trick of 15000 points or more on a Driftboard trick"
         },
         "HudShortDescription": {
           "Namespace": "",
-          "Key": "EF9F0A214C0C7554B18417B75DAB9420",
-          "SourceString": "Week 9 quest",
-          "LocalizedString": "Week 9 quest"
+          "Key": "93F8E4D94A1F8DF9C4CA5E91E65AAC5B",
+          "SourceString": "Land a trick of 15000 points or more on a Driftboard trick",
+          "LocalizedString": "Land a trick of 15000 points or more on a Driftboard trick"
         },
         "ObjectiveConversations": [],
         "ObjectiveDisplayInfo": {
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 3,
+        "Count": 1,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -240,15 +254,15 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "263AFB6A42E714C25A28F3811E1D428A",
-      "SourceString": "Week 9 quest",
-      "LocalizedString": "Week 9 quest"
+      "Key": "5E32A25540FA0C71F5F9689AF4AA4422",
+      "SourceString": "Land a trick of 15000 points or more on a Driftboard trick",
+      "LocalizedString": "Land a trick of 15000 points or more on a Driftboard trick"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "ED4D9F124E8E0AAE4333D58B4CA43ACA",
-      "SourceString": "Week 9 quest",
-      "LocalizedString": "Week 9 quest"
+      "Key": "2E85498143E9FB4BF3E78D950BB4377B",
+      "SourceString": "Land a trick of 15000 points or more on a Driftboard trick",
+      "LocalizedString": "Land a trick of 15000 points or more on a Driftboard trick"
     },
     "DataList": [
       {

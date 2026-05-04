@@ -6,6 +6,10 @@
   "Package": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q01",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S36/T_Soldier_Character_SynthContactM_visor1_a.T_Soldier_Character_SynthContactM_visor1_a",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "CompletionPathResults": [
       {
@@ -20,17 +24,94 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
+            "Source": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
             },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
+            "Item": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Item.Consumable.Apple"
+                  },
+                  {
+                    "TagName": "Item.Consumable.Banana"
+                  },
+                  {
+                    "TagName": "Item.Consumable.Cabbage"
+                  },
+                  {
+                    "TagName": "Item.Consumable.Coconut"
+                  },
+                  {
+                    "TagName": "Item.Consumable.Corn"
+                  },
+                  {
+                    "TagName": "Item.Consumable.Pepper"
+                  },
+                  {
+                    "TagName": "Item.Consumable.ShieldMushroom"
+                  },
+                  {
+                    "TagName": "Item.Consumable.SlurpMushroom"
+                  },
+                  {
+                    "TagName": "Item.Consumable.Tomato"
+                  },
+                  {
+                    "TagName": "Item.Consumable.BushHerb"
+                  },
+                  {
+                    "TagName": "Item.Consumable.SlapperoniPizza"
+                  },
+                  {
+                    "TagName": "Item.Consumable.SlapperoniSlice"
+                  },
+                  {
+                    "TagName": "Item.Consumable.Fish"
+                  },
+                  {
+                    "TagName": "Item.Consumable.PoliteDinner"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  1,
+                  1,
+                  14,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  7,
+                  8,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ANY( Item.Consumable.Apple, Item.Consumable.Banana, Item.Consumable.Cabbage, Item.Consumable.Coconut, Item.Consumable.Corn, Item.Consumable.Pepper, Item.Consumable.ShieldMushroom, Item.Consumable.SlurpMushroom, Item.Consumable.Tomato, Item.Consumable.BushHerb, Item.Consumable.SlapperoniPizza, Item.Consumable.SlapperoniSlice, Item.Consumable.Fish, Item.Consumable.PoliteDinner ) )"
+              }
+            },
+            "bIncrementByItemCount": true,
+            "AcceptedGatherType": "EInventoryGatherType::PreviouslyGathered",
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
@@ -67,9 +148,9 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "EF0516E746141B6FC3AD79B024A0D78C",
-          "SourceString": "[Quest_S40_Weekly_W08_Q01]",
-          "LocalizedString": "[Quest_S40_Weekly_W08_Q01]"
+          "Key": "803C4E664735285CA76D38BEA056E295",
+          "SourceString": "Collect food to sustain The Visitor through their Dark Harvester Rift analysis",
+          "LocalizedString": "Collect food to sustain The Visitor through their Dark Harvester Rift analysis"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -79,9 +160,9 @@
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 10,
         "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
         "ScriptedAction": {
           "AssetPathName": "",
@@ -117,6 +198,10 @@
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S40_Weekly_W08_Q01:FortQuestDefinitionComponent_DisplaySettings_0'",
         "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q01.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_TrackedData'Quest_S40_Weekly_W08_Q01:FortQuestDefinitionComponent_TrackedData_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q01.2"
       }
     ],
     "CompletionPaths": [
@@ -139,15 +224,21 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "EF0516E746141B6FC3AD79B024A0D78C",
-      "SourceString": "[Quest_S40_Weekly_W08_Q01]",
-      "LocalizedString": "[Quest_S40_Weekly_W08_Q01]"
+      "Key": "3C5E9F5D4E07574D29BFABADEA9C1E9B",
+      "SourceString": "Collect food to sustain The Visitor through their Dark Harvester Rift analysis",
+      "LocalizedString": "Collect food to sustain The Visitor through their Dark Harvester Rift analysis"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "EF0516E746141B6FC3AD79B024A0D78C",
-      "SourceString": "[Quest_S40_Weekly_W08_Q01]",
-      "LocalizedString": "[Quest_S40_Weekly_W08_Q01]"
+      "Key": "9FEE7F3B4BAE80BCC8D732B4BB23130B",
+      "SourceString": "Collect food to sustain The Visitor through their Dark Harvester Rift analysis",
+      "LocalizedString": "Collect food to sustain The Visitor through their Dark Harvester Rift analysis"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "67CC8E7E43E3C150751DB6A7D5076B59",
+      "SourceString": "My time is too precious to waste a second of it.",
+      "LocalizedString": "My time is too precious to waste a second of it."
     },
     "DataList": [
       {

@@ -6,6 +6,10 @@
   "Package": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_07/Quest_S40_Weekly_W07_Q01",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S28/T-Soldier-Hero-UnderGroundRebel-Fashion.T-Soldier-Hero-UnderGroundRebel-Fashion",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "CompletionPathResults": [
       {
@@ -20,25 +24,49 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
-            },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
+            "TravelDirection": "EDistanceTravelDirection::Any",
+            "AxisDirections": 0,
+            "AxisBehavior": "EAxisTravelBehavior::RequireAny",
+            "bUsePerAxisSettings": false,
+            "bRequireVehicleInAir": false,
+            "BoostRequirement": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "AllowedTravelModes": [
+              "EDistanceTravelMode::Running",
+              "EDistanceTravelMode::Sprinting"
+            ],
+            "ProhibitedTravelModes": [],
+            "Vehicle": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [],
                 "QueryTokenStream": [],
                 "UserDescription": "",
                 "AutoDescription": ""
+              }
+            },
+            "AllowedVehicleSurfaces": [],
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Granted.ItemEquipped.Melee.Harvest"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Granted.ItemEquipped.Melee.Harvest )"
               }
             },
             "Context": {
@@ -67,9 +95,9 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "8289A6944CA315C16626EDB1A8CD0995",
-          "SourceString": "[Quest_S40_Weekly_W07_Q01]",
-          "LocalizedString": "[Quest_S40_Weekly_W07_Q01]"
+          "Key": "8E22D08C47BB4132F1CA668B5F46C026",
+          "SourceString": "Run distance with your pickaxe equipped to calm tensions on the island",
+          "LocalizedString": "Run distance with your pickaxe equipped to calm tensions on the island"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -79,9 +107,9 @@
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 50,
         "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
         "ScriptedAction": {
           "AssetPathName": "",
@@ -139,15 +167,21 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "8289A6944CA315C16626EDB1A8CD0995",
-      "SourceString": "[Quest_S40_Weekly_W07_Q01]",
-      "LocalizedString": "[Quest_S40_Weekly_W07_Q01]"
+      "Key": "F85508414D85B1B2AE1961819F97B5E6",
+      "SourceString": "Run distance with your pickaxe equipped to calm tensions on the island",
+      "LocalizedString": "Run distance with your pickaxe equipped to calm tensions on the island"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "8289A6944CA315C16626EDB1A8CD0995",
-      "SourceString": "[Quest_S40_Weekly_W07_Q01]",
-      "LocalizedString": "[Quest_S40_Weekly_W07_Q01]"
+      "Key": "756E2EFB45C020CC33326D99767E08E9",
+      "SourceString": "Run distance with your pickaxe equipped to calm tensions on the island",
+      "LocalizedString": "Run distance with your pickaxe equipped to calm tensions on the island"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "13742AFB42A4447C339A0B952491CF8E",
+      "SourceString": "Deep breaths everybody... we've, uh, got a Dark Voyager to focus on. Ideally together.",
+      "LocalizedString": "Deep breaths everybody... we've, uh, got a Dark Voyager to focus on. Ideally together."
     },
     "DataList": [
       {

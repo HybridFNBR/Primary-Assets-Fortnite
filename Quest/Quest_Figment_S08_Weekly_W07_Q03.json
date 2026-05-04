@@ -23,80 +23,23 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "EliminatedPawn": {
+            "Target": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
                   {
-                    "TagName": "Homebase.Class"
+                    "TagName": "Building.Type.Container"
                   }
                 ],
                 "QueryTokenStream": [
                   0,
                   1,
-                  2,
+                  8,
                   1,
                   0
                 ],
                 "UserDescription": "",
-                "AutoDescription": " ALL( Homebase.Class )"
-              }
-            },
-            "Killer": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "EliminationSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Item.Weapon.Ranged.Assault"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Item.Weapon.Ranged.Assault )"
-              }
-            },
-            "AllowedTeamAffiliations": [],
-            "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
-            "bIncrementByDistance": false,
-            "bUseKillStreak": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "KillStreak": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
+                "AutoDescription": " ALL_EXACT( Building.Type.Container )"
               }
             },
             "Author": {
@@ -105,18 +48,22 @@
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
                   {
-                    "TagName": "Athena.Quests.Blank"
+                    "TagName": "Athena.Location.POI.LootLake"
+                  },
+                  {
+                    "TagName": "Athena.Location.POI.SnobbyShores"
                   }
                 ],
                 "QueryTokenStream": [
                   0,
                   1,
+                  7,
                   2,
-                  1,
-                  0
+                  0,
+                  1
                 ],
                 "UserDescription": "",
-                "AutoDescription": " ALL( Athena.Quests.Blank )"
+                "AutoDescription": " ANY_EXACT( Athena.Location.POI.LootLake, Athena.Location.POI.SnobbyShores )"
               }
             },
             "Context": {
@@ -145,24 +92,24 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "9A2D146B4D3910BF38C4019F2EA1CED7",
-          "SourceString": "Week 7 quest",
-          "LocalizedString": "Week 7 quest"
+          "Key": "A81ED6224DE6316187B7ADBCF0AEEDE2",
+          "SourceString": "Search containers at Loot Lake or Snobby Shores",
+          "LocalizedString": "Search containers at Loot Lake or Snobby Shores"
         },
         "HudShortDescription": {
           "Namespace": "",
-          "Key": "765BABC24DD7F8D9465CC48992E99E9A",
-          "SourceString": "Week 7 quest",
-          "LocalizedString": "Week 7 quest"
+          "Key": "AB9DCF1B43BF1218BAC28AAA26B43E87",
+          "SourceString": "Search containers at Loot Lake or Snobby Shores",
+          "LocalizedString": "Search containers at Loot Lake or Snobby Shores"
         },
         "ObjectiveConversations": [],
         "ObjectiveDisplayInfo": {
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 5,
+        "Count": 10,
         "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
         "ScriptedAction": {
           "AssetPathName": "",
@@ -193,11 +140,15 @@
     "QuestDefinitionComponents": [
       {
         "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_S08_Weekly_W07_Q03:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W07/Quest_Figment_S08_Weekly_W07_Q03.1"
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W07/Quest_Figment_S08_Weekly_W07_Q03.2"
       },
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_S08_Weekly_W07_Q03:FortQuestDefinitionComponent_DisplaySettings_0'",
         "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W07/Quest_Figment_S08_Weekly_W07_Q03.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_Figment_S08_Weekly_W07_Q03:FortQuestDefinitionComponent_MapMarkers_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W07/Quest_Figment_S08_Weekly_W07_Q03.1"
       }
     ],
     "CompletionPaths": [
@@ -220,15 +171,15 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "294C0F5142CA468A72F14B8F9A1F0BB8",
-      "SourceString": "Week 7 quest",
-      "LocalizedString": "Week 7 quest"
+      "Key": "B105539D4CC06B509596D7BA3BDDB72E",
+      "SourceString": "Search containers at Loot Lake or Snobby Shores",
+      "LocalizedString": "Search containers at Loot Lake or Snobby Shores"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "5957B5EC4E218FE61F119C899382495C",
-      "SourceString": "Week 7 quest",
-      "LocalizedString": "Week 7 quest"
+      "Key": "63D83B894507289F794CCB947CD0B70E",
+      "SourceString": "Search containers at Loot Lake or Snobby Shores",
+      "LocalizedString": "Search containers at Loot Lake or Snobby Shores"
     },
     "DataList": [
       {

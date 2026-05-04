@@ -19,11 +19,11 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "EliminatedPawn": {
+            "Source": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [],
@@ -32,94 +32,66 @@
                 "AutoDescription": ""
               }
             },
-            "Killer": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "EliminationSource": {
+            "Item": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
                   {
-                    "TagName": "Trait.Explosive"
+                    "TagName": "Item.Consumable.SmallShieldPotion"
                   },
                   {
-                    "TagName": "Gameplay.Damage.Physical.Explosive"
+                    "TagName": "Item.Consumable.ShieldPotion"
+                  },
+                  {
+                    "TagName": "Item.Consumable.Paprika.ShieldPot"
+                  },
+                  {
+                    "TagName": "Item.Consumable.Paprika.ShieldSmall"
                   }
                 ],
                 "QueryTokenStream": [
                   0,
                   1,
                   1,
-                  2,
+                  4,
                   0,
-                  1
+                  1,
+                  2,
+                  3
                 ],
                 "UserDescription": "",
-                "AutoDescription": " ANY( Trait.Explosive, Gameplay.Damage.Physical.Explosive )"
+                "AutoDescription": " ANY( Item.Consumable.SmallShieldPotion, Item.Consumable.ShieldPotion, Item.Consumable.Paprika.ShieldPot, Item.Consumable.Paprika.ShieldSmall )"
               }
             },
-            "AllowedTeamAffiliations": [],
-            "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
-            "bIncrementByDistance": false,
-            "bUseKillStreak": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "KillStreak": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
+            "bIncrementByItemCount": true,
+            "AcceptedGatherType": "EInventoryGatherType::PreviouslyGathered",
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
                 "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Quests.Blank"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  2,
-                  1,
-                  0
-                ],
+                "TagDictionary": [],
+                "QueryTokenStream": [],
                 "UserDescription": "",
-                "AutoDescription": " ALL( Athena.Quests.Blank )"
+                "AutoDescription": ""
               }
             },
             "Context": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Playlist"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
                 "UserDescription": "",
-                "AutoDescription": ""
+                "AutoDescription": " ANY( Athena.Playlist )"
               }
             }
           }
@@ -139,22 +111,22 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "4419D64948928C7E8C83CBA19991A435",
-          "SourceString": "Week 10 quest",
-          "LocalizedString": "Week 10 quest"
+          "Key": "A9DF0DDD4325B04E6747538BA2534014",
+          "SourceString": "Collect Shield Potions",
+          "LocalizedString": "Collect Shield Potions"
         },
         "HudShortDescription": {
           "Namespace": "",
-          "Key": "41B01B3945B0A465316CEE803DC5EB39",
-          "SourceString": "Week 10 quest",
-          "LocalizedString": "Week 10 quest"
+          "Key": "FD0686D74145C49C793A7294CB464304",
+          "SourceString": "Collect Shield Potions",
+          "LocalizedString": "Collect Shield Potions"
         },
         "ObjectiveConversations": [],
         "ObjectiveDisplayInfo": {
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 6,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -192,6 +164,10 @@
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_S08_Weekly_W10_Q04:FortQuestDefinitionComponent_DisplaySettings_0'",
         "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W10/Quest_Figment_S08_Weekly_W10_Q04.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_TrackedData'Quest_Figment_S08_Weekly_W10_Q04:FortQuestDefinitionComponent_TrackedData_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W10/Quest_Figment_S08_Weekly_W10_Q04.2"
       }
     ],
     "CompletionPaths": [
@@ -214,15 +190,15 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "D3EA3AC9482913A01509FBA2E44A1B27",
-      "SourceString": "Week 10 quest",
-      "LocalizedString": "Week 10 quest"
+      "Key": "C05E1BCA4036964CD7F9B8BDEAFD9D98",
+      "SourceString": "Collect Shield Potions",
+      "LocalizedString": "Collect Shield Potions"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "20E501C1482F15190D14128C74A23599",
-      "SourceString": "Week 10 quest",
-      "LocalizedString": "Week 10 quest"
+      "Key": "D7AE8C884C05C7C8BA0D30A56C62E3C4",
+      "SourceString": "Collect Shield Potions",
+      "LocalizedString": "Collect Shield Potions"
     },
     "DataList": [
       {

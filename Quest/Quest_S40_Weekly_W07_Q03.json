@@ -6,6 +6,10 @@
   "Package": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_07/Quest_S40_Weekly_W07_Q03",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S28/T-Soldier-Hero-UnderGroundRebel-Fashion.T-Soldier-Hero-UnderGroundRebel-Fashion",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "CompletionPathResults": [
       {
@@ -24,13 +28,48 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
+            "Source": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
             },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
+            "Item": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Pickup.Source.PlayerElimination"
+                  },
+                  {
+                    "TagName": "Weapon"
+                  },
+                  {
+                    "TagName": "Item.Weapon"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  2,
+                  1,
+                  0,
+                  1,
+                  2,
+                  1,
+                  2
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ALL( Pickup.Source.PlayerElimination ),  ANY( Weapon, Item.Weapon ) )"
+              }
+            },
+            "bIncrementByItemCount": true,
+            "AcceptedGatherType": "EInventoryGatherType::PreviouslyGathered",
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
@@ -67,9 +106,9 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "434A2CF54EEB3F63383796A72AF0A725",
-          "SourceString": "[Quest_S40_Weekly_W07_Q03]",
-          "LocalizedString": "[Quest_S40_Weekly_W07_Q03]"
+          "Key": "27F86CE0401F2C2BC20F809ABCE1DC44",
+          "SourceString": "Collect weapons from eliminated players for The Foundation's confrontation with Dark Voyager",
+          "LocalizedString": "Collect weapons from eliminated players for The Foundation's confrontation with Dark Voyager"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -79,7 +118,7 @@
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 3,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 25,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -117,6 +156,10 @@
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S40_Weekly_W07_Q03:FortQuestDefinitionComponent_DisplaySettings_0'",
         "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_07/Quest_S40_Weekly_W07_Q03.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_TrackedData'Quest_S40_Weekly_W07_Q03:FortQuestDefinitionComponent_TrackedData_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_07/Quest_S40_Weekly_W07_Q03.2"
       }
     ],
     "CompletionPaths": [
@@ -139,15 +182,21 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "434A2CF54EEB3F63383796A72AF0A725",
-      "SourceString": "[Quest_S40_Weekly_W07_Q03]",
-      "LocalizedString": "[Quest_S40_Weekly_W07_Q03]"
+      "Key": "27F86CE0401F2C2BC20F809ABCE1DC44",
+      "SourceString": "Collect weapons from eliminated players for The Foundation's confrontation with Dark Voyager",
+      "LocalizedString": "Collect weapons from eliminated players for The Foundation's confrontation with Dark Voyager"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "434A2CF54EEB3F63383796A72AF0A725",
-      "SourceString": "[Quest_S40_Weekly_W07_Q03]",
-      "LocalizedString": "[Quest_S40_Weekly_W07_Q03]"
+      "Key": "27F86CE0401F2C2BC20F809ABCE1DC44",
+      "SourceString": "Collect weapons from eliminated players for The Foundation's confrontation with Dark Voyager",
+      "LocalizedString": "Collect weapons from eliminated players for The Foundation's confrontation with Dark Voyager"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "F441085F4828B80752DADD99CEB57C04",
+      "SourceString": "Heeey buddy! How 'bout some shiny new weapons to point at the REAL threat, huh? ",
+      "LocalizedString": "Heeey buddy! How 'bout some shiny new weapons to point at the REAL threat, huh? "
     },
     "DataList": [
       {

@@ -6,6 +6,10 @@
   "Package": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Suppressed01",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S36/T_Soldier_Character_SynthContactM_visor1_a.T_Soldier_Character_SynthContactM_visor1_a",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "CompletionPathResults": [
       {
@@ -24,27 +28,120 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
-            },
-            "Subjects": [],
-            "Values": [
-              {
-                "Key": "Week",
-                "Value": {
-                  "LowerBound": {
-                    "Type": "ERangeBoundTypes::Inclusive",
-                    "Value": 8.0
+            "EliminatedPawn": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Faction.Generic.Hostile"
                   },
-                  "UpperBound": {
-                    "Type": "ERangeBoundTypes::Inclusive",
-                    "Value": 8.0
+                  {
+                    "TagName": "Homebase.Class"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Duel.IsBeingChallenged"
+                  },
+                  {
+                    "TagName": "Athena.Gameplay.Status.Converted"
+                  },
+                  {
+                    "TagName": "Quests.Wildlife.IsOpponent"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Tandem"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Specialist"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Wildlife"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Labrador"
                   }
-                }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  4,
+                  2,
+                  1,
+                  5,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  2,
+                  1,
+                  1,
+                  5,
+                  3,
+                  3,
+                  6,
+                  7,
+                  8,
+                  3,
+                  1,
+                  9
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ANY(  ANY( Athena.Faction.Generic.Hostile, Homebase.Class, Pawn.Athena.NPC.Duel.IsBeingChallenged, Athena.Gameplay.Status.Converted, Quests.Wildlife.IsOpponent ),  ALL(  ANY( AISpawnerData.Type ),  NONE( AISpawnerData.Type.Tandem, AISpawnerData.Type.Specialist, Pawn.Athena.NPC.Wildlife ) ) ),  NONE( Pawn.Athena.NPC.Labrador ) )"
               }
-            ],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
+            },
+            "Killer": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "EliminationSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AllowedTeamAffiliations": [],
+            "ProhibitedTeamAffiliations": [],
+            "AllowedKilledPawnTypes": [],
+            "ProhibitedKilledPawnTypes": [],
+            "bAllowSelfEliminations": false,
+            "bRequirePawnWasEliminatedByConvertedPawn": false,
+            "bUseDistance": false,
+            "bIncrementByDistance": false,
+            "bUseKillStreak": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "KillStreak": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
@@ -82,8 +179,8 @@
         "Description": {
           "Namespace": "",
           "Key": "6550D1A540000793DF7C9BB9245AD1A1",
-          "SourceString": "Quest_S40_Weekly_W08_Suppressed01",
-          "LocalizedString": "Quest_S40_Weekly_W08_Suppressed01"
+          "SourceString": "Eliminate opponents",
+          "LocalizedString": "Eliminate opponents"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -93,7 +190,7 @@
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 3,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 25,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -153,15 +250,21 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "6550D1A540000793DF7C9BB9245AD1A1",
-      "SourceString": "Quest_S40_Weekly_W08_Suppressed01",
-      "LocalizedString": "Quest_S40_Weekly_W08_Suppressed01"
+      "Key": "621AEE6A4532F8577046AA8E431E1E76",
+      "SourceString": "Eliminate opponents",
+      "LocalizedString": "Eliminate opponents"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "6550D1A540000793DF7C9BB9245AD1A1",
-      "SourceString": "Quest_S40_Weekly_W08_Suppressed01",
-      "LocalizedString": "Quest_S40_Weekly_W08_Suppressed01"
+      "Key": "9202B26D4D694A417A85C5A9CA5D28C5",
+      "SourceString": "Eliminate opponents",
+      "LocalizedString": "Eliminate opponents"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "DA8AB74D466945125C1C888DD7D0DA50",
+      "SourceString": "It's time to either take action, or face consequences.",
+      "LocalizedString": "It's time to either take action, or face consequences."
     },
     "DataList": [
       {

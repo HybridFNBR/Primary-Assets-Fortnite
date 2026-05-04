@@ -6,7 +6,12 @@
   "Package": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q03",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S36/T_Soldier_Character_SynthContactM_visor1_a.T_Soldier_Character_SynthContactM_visor1_a",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "bAthenaMustCompleteInSingleMatch": true,
     "CompletionPathResults": [
       {
         "Rewards": []
@@ -24,21 +29,107 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
+            "GameplayEventTag": {
+              "TagName": "Abilities.Generic.Rift.Trigger"
             },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
+            "GameplayEventFilter": {
+              "AdvancedInstigatorClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "InstigatorTags": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [],
                 "QueryTokenStream": [],
                 "UserDescription": "",
                 "AutoDescription": ""
+              },
+              "AdvancedTargetClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "TargetTags": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              },
+              "AdvancedObject1ClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "Object1TagFilter": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              },
+              "AdvancedObject2ClassFilter": {
+                "AdvancedClassFilters": []
+              },
+              "Object2TagFilter": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              },
+              "EventMagnitude": {
+                "LowerBound": {
+                  "Type": "ERangeBoundTypes::Exclusive",
+                  "Value": 0.0
+                },
+                "UpperBound": {
+                  "Type": "ERangeBoundTypes::Open",
+                  "Value": 0.0
+                }
+              },
+              "bUseAdvancedInstigatorClassFilter": false,
+              "bUseInstigatorTags": false,
+              "bUseAdvancedTargetClassFilter": false,
+              "bUseTargetTags": false,
+              "bUseAdvancedObject1ClassFilter": false,
+              "bUseObject1Tags": false,
+              "bUseAdvancedObject2ClassFilter": false,
+              "bUseObject2Tags": false,
+              "bUseEventMagnitude": false
+            },
+            "bRequireAuthorInstigator": false,
+            "bRequireAuthorTarget": false,
+            "bIncrementByEventMagnitude": false,
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Status.Shard.Squid.Active"
+                  },
+                  {
+                    "TagName": "Status.Shard.Ice.Active"
+                  },
+                  {
+                    "TagName": "Status.Shard.Oasis.Active"
+                  },
+                  {
+                    "TagName": "Status.Shard.Nature.Active"
+                  },
+                  {
+                    "TagName": "Status.Shard.All.LowGrav"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  5,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Status.Shard.Squid.Active, Status.Shard.Ice.Active, Status.Shard.Oasis.Active, Status.Shard.Nature.Active, Status.Shard.All.LowGrav )"
               }
             },
             "Context": {
@@ -67,9 +158,9 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "FE938EBC4B6244A5D01AC195E5C00970",
-          "SourceString": "[Quest_S40_Weekly_W08_Q03]",
-          "LocalizedString": "[Quest_S40_Weekly_W08_Q03]"
+          "Key": "14BD172E4FADDB9500647F85CCCF298D",
+          "SourceString": "Rift using Zero Point Shards in the same match to help The Visitor analyze the Dark Harvester Rift",
+          "LocalizedString": "Rift using Zero Point Shards in the same match to help The Visitor analyze the Dark Harvester Rift"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -79,7 +170,7 @@
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 2,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 25,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -112,11 +203,15 @@
     "QuestDefinitionComponents": [
       {
         "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S40_Weekly_W08_Q03:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q03.1"
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q03.2"
       },
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S40_Weekly_W08_Q03:FortQuestDefinitionComponent_DisplaySettings_0'",
         "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q03.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_S40_Weekly_W08_Q03:FortQuestDefinitionComponent_MapMarkers_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q03.1"
       }
     ],
     "CompletionPaths": [
@@ -139,15 +234,21 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "FE938EBC4B6244A5D01AC195E5C00970",
-      "SourceString": "[Quest_S40_Weekly_W08_Q03]",
-      "LocalizedString": "[Quest_S40_Weekly_W08_Q03]"
+      "Key": "25E37449405B2FDD4D5301B5FF3C9EE4",
+      "SourceString": "Rift using Zero Point Shards in the same match to help The Visitor analyze the Dark Harvester Rift",
+      "LocalizedString": "Rift using Zero Point Shards in the same match to help The Visitor analyze the Dark Harvester Rift"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "FE938EBC4B6244A5D01AC195E5C00970",
-      "SourceString": "[Quest_S40_Weekly_W08_Q03]",
-      "LocalizedString": "[Quest_S40_Weekly_W08_Q03]"
+      "Key": "17A01C5842F7C97F79C9868A5ED34976",
+      "SourceString": "Rift using Zero Point Shards in the same match to help The Visitor analyze the Dark Harvester Rift",
+      "LocalizedString": "Rift using Zero Point Shards in the same match to help The Visitor analyze the Dark Harvester Rift"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "9E3D2DFA41B890F60DA01DB5BD07E64B",
+      "SourceString": "Let's see how the Dark Harvester's energy output compares to a Shard.",
+      "LocalizedString": "Let's see how the Dark Harvester's energy output compares to a Shard."
     },
     "DataList": [
       {

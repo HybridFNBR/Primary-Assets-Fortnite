@@ -1,0 +1,306 @@
+{
+  "Type": "FortQuestItemDefinition_Athena",
+  "Name": "Quest_S40_Elites_Q03",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortQuestItemDefinition_Athena'",
+  "Package": "/BattlePassS40_Quests/Items/QuestItems/Elites/Quest_S40_Elites_Q03",
+  "Properties": {
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S40/T_Soldier_CozyMechanic_Hen_L.T_Soldier_CozyMechanic_Hen_L",
+      "SubPathString": ""
+    },
+    "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "CompletionPathResults": [
+      {
+        "Rewards": []
+      }
+    ],
+    "Objectives": [
+      {
+        "BackendName": "Quest_S40_Elites_Q03_obj0",
+        "ItemEvent": "EFortQuestObjectiveItemEvent::Max_None",
+        "bHidden": false,
+        "bRequirePrimaryMissionCompletion": false,
+        "bCanProgressInZone": true,
+        "bDisplayDynamicAnnouncementUpdate": false,
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
+        "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
+        "ObjectiveFilters": [
+          {
+            "bIncrementByDistance": false,
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Faction.Generic.Hostile"
+                  },
+                  {
+                    "TagName": "Homebase.Class"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Duel.IsBeingChallenged"
+                  },
+                  {
+                    "TagName": "Athena.Gameplay.Status.Converted"
+                  },
+                  {
+                    "TagName": "Quests.Wildlife.IsOpponent"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Tandem"
+                  },
+                  {
+                    "TagName": "AISpawnerData.Type.Specialist"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Wildlife"
+                  },
+                  {
+                    "TagName": "Pawn.Athena.NPC.Labrador"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  5,
+                  2,
+                  4,
+                  2,
+                  1,
+                  5,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  2,
+                  1,
+                  1,
+                  5,
+                  3,
+                  3,
+                  6,
+                  7,
+                  8,
+                  3,
+                  1,
+                  9
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL(  ANY(  ANY( Athena.Faction.Generic.Hostile, Homebase.Class, Pawn.Athena.NPC.Duel.IsBeingChallenged, Athena.Gameplay.Status.Converted, Quests.Wildlife.IsOpponent ),  ALL(  ANY( AISpawnerData.Type ),  NONE( AISpawnerData.Type.Tandem, AISpawnerData.Type.Specialist, Pawn.Athena.NPC.Wildlife ) ) ),  NONE( Pawn.Athena.NPC.Labrador ) )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Status.Shard.All.LowGrav"
+                  },
+                  {
+                    "TagName": "Status.Shard.Ice.Active"
+                  },
+                  {
+                    "TagName": "Status.Shard.Nature.Active"
+                  },
+                  {
+                    "TagName": "Status.Shard.Oasis.Active"
+                  },
+                  {
+                    "TagName": "Status.Shard.Squid.Active"
+                  },
+                  {
+                    "TagName": "Status.Shard.Teleport.Cooldown"
+                  },
+                  {
+                    "TagName": "Granted.Athena.TeaCake.Shard.ZeroPoint.DashCharge"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  7,
+                  0,
+                  1,
+                  2,
+                  3,
+                  4,
+                  5,
+                  6
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Status.Shard.All.LowGrav, Status.Shard.Ice.Active, Status.Shard.Nature.Active, Status.Shard.Oasis.Active, Status.Shard.Squid.Active, Status.Shard.Teleport.Cooldown, Granted.Athena.TeaCake.Shard.ZeroPoint.DashCharge )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          }
+        ],
+        "InlineObjectiveStats": [],
+        "ObjectiveStatHandle": {
+          "DataTable": null,
+          "RowName": "None"
+        },
+        "AlternativeStatHandles": [],
+        "ItemReference": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "ItemTemplateIdOverride": "",
+        "LinkSquadID": "None",
+        "LinkSquadIndex": 0,
+        "Description": {
+          "Namespace": "",
+          "Key": "2EBE40FA455D0B34B5AB86AD7038AAE8",
+          "SourceString": "Hit opponents while under the effects of a Shard to read the Shard's energy signature",
+          "LocalizedString": "Hit opponents while under the effects of a Shard to read the Shard's energy signature"
+        },
+        "HudShortDescription": {
+          "CultureInvariantString": null
+        },
+        "ObjectiveConversations": [],
+        "ObjectiveDisplayInfo": {
+          "DisplayStage": 3,
+          "DisplayMaxStage": 6
+        },
+        "Count": 5,
+        "Stage": -1,
+        "DynamicStatusUpdatePercentInterval": 50,
+        "DynamicUpdateCompletionDelay": 0.0,
+        "ScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        },
+        "FrontendScriptedAction": {
+          "AssetPathName": "",
+          "SubPathString": ""
+        }
+      }
+    ],
+    "ProductCompatibilityQuery": {
+      "TagDictionary": [
+        {
+          "TagName": "Product.BR"
+        }
+      ],
+      "QueryTokenStream": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "AutoDescription": " ANY( Product.BR )"
+    },
+    "SortPriority": 3,
+    "QuestDefinitionComponents": [
+      {
+        "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S40_Elites_Q03:FortQuestDefinitionComponent_DisplaySettings_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/Elites/Quest_S40_Elites_Q03.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S40_Elites_Q03:FortQuestDefinitionComponent_Rewards_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/Elites/Quest_S40_Elites_Q03.2"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_S40_Elites_Q03:FortQuestDefinitionComponent_MapMarkers_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/Elites/Quest_S40_Elites_Q03.1"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_SharedQuest'Quest_S40_Elites_Q03:FortQuestDefinitionComponent_SharedQuest_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/Elites/Quest_S40_Elites_Q03.3"
+      }
+    ],
+    "CompletionPaths": [
+      {
+        "CompletionSegments": [
+          {
+            "CompletionNodes": [
+              {
+                "Objective": "Quest_S40_Elites_Q03_obj0"
+              }
+            ],
+            "RequiredNodeCompletions": 1,
+            "bSegmentCommitment": false
+          }
+        ],
+        "bPathCommitment": false,
+        "Context": []
+      }
+    ],
+    "GrantToProfileType": "athena",
+    "ItemName": {
+      "Namespace": "",
+      "Key": "8CB5B69B419BB88B21CB8EB396F4E7B7",
+      "SourceString": "Hit opponents while under the effects of a Shard to read the Shard's energy signature",
+      "LocalizedString": "Hit opponents while under the effects of a Shard to read the Shard's energy signature"
+    },
+    "ItemDescription": {
+      "Namespace": "",
+      "Key": "72EDA9C84505C4B834A73BB50A108DE8",
+      "SourceString": "Hit opponents while under the effects of a Shard to read the Shard's energy signature",
+      "LocalizedString": "Hit opponents while under the effects of a Shard to read the Shard's energy signature"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "6605E17A4B0C6F3FFE3FCEA56C25A907",
+      "SourceString": "We need to understand what multiple shards in one place will do to the Island.",
+      "LocalizedString": "We need to understand what multiple shards in one place will do to the Island."
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "QuestCategory.BR.S40.Elites.Quest"
+        ]
+      }
+    ]
+  }
+}

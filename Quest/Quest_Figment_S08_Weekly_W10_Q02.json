@@ -6,6 +6,7 @@
   "Package": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W10/Quest_Figment_S08_Weekly_W10_Q02",
   "Properties": {
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
+    "bAthenaMustCompleteInSingleMatch": true,
     "CompletionPathResults": [
       {
         "Rewards": []
@@ -23,56 +24,10 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "EliminatedPawn": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Killer": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "EliminationSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Trait.Explosive"
-                  },
-                  {
-                    "TagName": "Gameplay.Damage.Physical.Explosive"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Trait.Explosive, Gameplay.Damage.Physical.Explosive )"
-              }
-            },
-            "AllowedTeamAffiliations": [],
-            "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
             "bIncrementByDistance": false,
-            "bUseKillStreak": false,
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": true,
             "Distance": {
               "LowerBound": {
                 "Type": "ERangeBoundTypes::Inclusive",
@@ -83,34 +38,54 @@
                 "Value": 0.0
               }
             },
-            "KillStreak": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
               }
             },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
                   {
-                    "TagName": "Athena.Quests.Blank"
+                    "TagName": "Homebase.Class"
                   }
                 ],
                 "QueryTokenStream": [
                   0,
                   1,
-                  2,
+                  1,
                   1,
                   0
                 ],
                 "UserDescription": "",
-                "AutoDescription": " ALL( Athena.Quests.Blank )"
+                "AutoDescription": " ANY( Homebase.Class )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
               }
             },
             "Context": {
@@ -139,22 +114,22 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "A3D5A3564B10D894050F2780CE89B49B",
-          "SourceString": "Week 10 quest",
-          "LocalizedString": "Week 10 quest"
+          "Key": "B5B6D34A42047D90CFB342A0479F0B88",
+          "SourceString": "Headshot players in a single match",
+          "LocalizedString": "Headshot players in a single match"
         },
         "HudShortDescription": {
           "Namespace": "",
-          "Key": "873E87D444C62ACA95EF76BF76E31C65",
-          "SourceString": "Week 10 quest",
-          "LocalizedString": "Week 10 quest"
+          "Key": "08C85CB344A2027A7B5346B94200892F",
+          "SourceString": "Headshot players in a single match",
+          "LocalizedString": "Headshot players in a single match"
         },
         "ObjectiveConversations": [],
         "ObjectiveDisplayInfo": {
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 3,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -214,15 +189,15 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "45E2275B458FE1CF9436AD860B131B0B",
-      "SourceString": "Week 10 quest",
-      "LocalizedString": "Week 10 quest"
+      "Key": "49CC21E144533646AB016586FA2F3004",
+      "SourceString": "Headshot players in a single match",
+      "LocalizedString": "Headshot players in a single match"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "EFD5C3C442CB86885BB8EEB7857DB14A",
-      "SourceString": "Week 10 quest",
-      "LocalizedString": "Week 10 quest"
+      "Key": "1BC4719B40F57E51B7F4FF8B07FE10BF",
+      "SourceString": "Headshot players in a single match",
+      "LocalizedString": "Headshot players in a single match"
     },
     "DataList": [
       {

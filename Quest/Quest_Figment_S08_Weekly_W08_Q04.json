@@ -19,30 +19,11 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "EliminatedPawn": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Homebase.Class"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Homebase.Class )"
-              }
-            },
-            "Killer": {
+            "Source": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [],
@@ -51,15 +32,15 @@
                 "AutoDescription": ""
               }
             },
-            "EliminationSource": {
+            "Item": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
                   {
-                    "TagName": "Item.Weapon.Ranged.Assault.Infantry"
+                    "TagName": "Item.Trap"
                   },
                   {
-                    "TagName": "Item.Weapon.Ranged.SMG.Suppressed"
+                    "TagName": "trap"
                   }
                 ],
                 "QueryTokenStream": [
@@ -71,56 +52,19 @@
                   1
                 ],
                 "UserDescription": "",
-                "AutoDescription": " ANY( Item.Weapon.Ranged.Assault.Infantry, Item.Weapon.Ranged.SMG.Suppressed )"
+                "AutoDescription": " ANY( Item.Trap, trap )"
               }
             },
-            "AllowedTeamAffiliations": [],
-            "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
-            "bIncrementByDistance": false,
-            "bUseKillStreak": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "KillStreak": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
+            "bIncrementByItemCount": true,
+            "AcceptedGatherType": "EInventoryGatherType::PreviouslyGathered",
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
                 "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Quests.Blank"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  2,
-                  1,
-                  0
-                ],
+                "TagDictionary": [],
+                "QueryTokenStream": [],
                 "UserDescription": "",
-                "AutoDescription": " ALL( Athena.Quests.Blank )"
+                "AutoDescription": ""
               }
             },
             "Context": {
@@ -149,22 +93,22 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "B5882A814BEBAB430F84ADABF61A2DBF",
-          "SourceString": "Week 8 quest",
-          "LocalizedString": "Week 8 quest"
+          "Key": "A92D7D13464B2B4CD17B968ADE06A908",
+          "SourceString": "Collect Traps",
+          "LocalizedString": "Collect Traps"
         },
         "HudShortDescription": {
           "Namespace": "",
-          "Key": "E2545D134050CA08AD7BCBB02B84BC37",
-          "SourceString": "Week 8 quest",
-          "LocalizedString": "Week 8 quest"
+          "Key": "0925E10D41397B97AED9B48F98C4ADF9",
+          "SourceString": "Collect Traps",
+          "LocalizedString": "Collect Traps"
         },
         "ObjectiveConversations": [],
         "ObjectiveDisplayInfo": {
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 5,
+        "Count": 10,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -202,6 +146,10 @@
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_S08_Weekly_W08_Q04:FortQuestDefinitionComponent_DisplaySettings_0'",
         "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W08/Quest_Figment_S08_Weekly_W08_Q04.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_TrackedData'Quest_Figment_S08_Weekly_W08_Q04:FortQuestDefinitionComponent_TrackedData_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W08/Quest_Figment_S08_Weekly_W08_Q04.2"
       }
     ],
     "CompletionPaths": [
@@ -224,15 +172,15 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "FA2FFBC842DB49E2F5347A895E5B65D5",
-      "SourceString": "Week 8 quest",
-      "LocalizedString": "Week 8 quest"
+      "Key": "7B4DE59E47BF69F8F25A4BB2305F0C0D",
+      "SourceString": "Collect Traps",
+      "LocalizedString": "Collect Traps"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "3E898A864ACDCD93EC89F685A45C3E71",
-      "SourceString": "Week 8 quest",
-      "LocalizedString": "Week 8 quest"
+      "Key": "84E70CAF4C493A2156342B926E69EFCF",
+      "SourceString": "Collect Traps",
+      "LocalizedString": "Collect Traps"
     },
     "DataList": [
       {

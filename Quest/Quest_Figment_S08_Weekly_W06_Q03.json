@@ -19,84 +19,27 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "EliminatedPawn": {
+            "Target": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
                   {
-                    "TagName": "Homebase.Class"
+                    "TagName": "Building.Type.Container.TreasureChest.Common"
                   }
                 ],
                 "QueryTokenStream": [
                   0,
                   1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Homebase.Class )"
-              }
-            },
-            "Killer": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "EliminationSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Item.Weapon.Ranged.SMG"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
+                  8,
                   1,
                   0
                 ],
                 "UserDescription": "",
-                "AutoDescription": " ANY( Item.Weapon.Ranged.SMG )"
-              }
-            },
-            "AllowedTeamAffiliations": [],
-            "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
-            "bIncrementByDistance": false,
-            "bUseKillStreak": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "KillStreak": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
+                "AutoDescription": " ALL_EXACT( Building.Type.Container.TreasureChest.Common )"
               }
             },
             "Author": {
@@ -105,27 +48,41 @@
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
                   {
-                    "TagName": "Athena.Quests.Blank"
+                    "TagName": "Athena.Location.POI.HappyHamlet"
+                  },
+                  {
+                    "TagName": "Athena.Location.POI.LuckyLanding"
                   }
                 ],
                 "QueryTokenStream": [
                   0,
                   1,
+                  7,
                   2,
-                  1,
-                  0
+                  0,
+                  1
                 ],
                 "UserDescription": "",
-                "AutoDescription": " ALL( Athena.Quests.Blank )"
+                "AutoDescription": " ANY_EXACT( Athena.Location.POI.HappyHamlet, Athena.Location.POI.LuckyLanding )"
               }
             },
             "Context": {
               "TagQuery": {
                 "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Playlist.Figment"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  8,
+                  1,
+                  0
+                ],
                 "UserDescription": "",
-                "AutoDescription": ""
+                "AutoDescription": " ALL_EXACT( Athena.Playlist.Figment )"
               }
             }
           }
@@ -145,24 +102,24 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "DD7ED2E44B9E9A65D1FD018DE595BFDC",
-          "SourceString": "Week 6 quest",
-          "LocalizedString": "Week 6 quest"
+          "Key": "25A8B5914FACDCE1F04F03B660AC44F0",
+          "SourceString": "Search chests at Happy Hamlet or Lucky Landing",
+          "LocalizedString": "Search chests at Happy Hamlet or Lucky Landing"
         },
         "HudShortDescription": {
           "Namespace": "",
-          "Key": "ECB6B6C74DC63A43199893A800CA3D24",
-          "SourceString": "Week 6 quest",
-          "LocalizedString": "Week 6 quest"
+          "Key": "CE8FBF974B0FFAF3657A83830381375E",
+          "SourceString": "Search chests at Happy Hamlet or Lucky Landing",
+          "LocalizedString": "Search chests at Happy Hamlet or Lucky Landing"
         },
         "ObjectiveConversations": [],
         "ObjectiveDisplayInfo": {
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 5,
+        "Count": 10,
         "Stage": -1,
-        "DynamicStatusUpdatePercentInterval": 25,
+        "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
         "ScriptedAction": {
           "AssetPathName": "",
@@ -193,11 +150,15 @@
     "QuestDefinitionComponents": [
       {
         "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_Figment_S08_Weekly_W06_Q03:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W06/Quest_Figment_S08_Weekly_W06_Q03.1"
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W06/Quest_Figment_S08_Weekly_W06_Q03.2"
       },
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_Figment_S08_Weekly_W06_Q03:FortQuestDefinitionComponent_DisplaySettings_0'",
         "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W06/Quest_Figment_S08_Weekly_W06_Q03.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_Figment_S08_Weekly_W06_Q03:FortQuestDefinitionComponent_MapMarkers_0'",
+        "ObjectPath": "/Figment_S08_Quests/Items/QuestItems/Weekly/Quests/W06/Quest_Figment_S08_Weekly_W06_Q03.1"
       }
     ],
     "CompletionPaths": [
@@ -220,15 +181,15 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "D0BEA67D403CF888FF8D04974DE002CB",
-      "SourceString": "Week 6 quest",
-      "LocalizedString": "Week 6 quest"
+      "Key": "FA8150F14A82B89E190665917E048403",
+      "SourceString": "Search chests at Happy Hamlet or Lucky Landing",
+      "LocalizedString": "Search chests at Happy Hamlet or Lucky Landing"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "76611F50432A1BC14B7481803F372EEC",
-      "SourceString": "Week 6 quest",
-      "LocalizedString": "Week 6 quest"
+      "Key": "C2A96CD54413612CF2F3538C12DEF95B",
+      "SourceString": "Search chests at Happy Hamlet or Lucky Landing",
+      "LocalizedString": "Search chests at Happy Hamlet or Lucky Landing"
     },
     "DataList": [
       {

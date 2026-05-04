@@ -1,0 +1,63 @@
+{
+  "Type": "EncounterItemDefinition",
+  "Name": "EID_Juno_Tabasco_POIScenario_DragonArena_ShatterDragon",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'EncounterItemDefinition'",
+  "Package": "/JunoTabascoDragonArena/Encounter/EIDs/EID_Juno_Tabasco_POIScenario_DragonArena_ShatterDragon",
+  "Properties": {
+    "bUseLevel": false,
+    "ScenarioVolumeClass": {
+      "AssetPathName": "/JunoTabascoDragonArena/Encounter/EncounterVolumes/BP_Juno_Tabasco_EncounterVolume_DragonArena.BP_Juno_Tabasco_EncounterVolume_DragonArena_C",
+      "SubPathString": ""
+    },
+    "StateTreeOverride": {
+      "AssetPathName": "/JunoTabascoDragonArena/Encounter/ST/ST_Juno_Tabasco_DragonArena_ShatterDragon.ST_Juno_Tabasco_DragonArena_ShatterDragon",
+      "SubPathString": ""
+    },
+    "PlayerSuccessGameplayCueTag": {
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Juno.Encounters.Tabasco.DragonArena.Completed"
+      }
+    },
+    "LWMDensityRange": {
+      "Curve": {
+        "RowName": "Tabasco.ElementalShrine.EarthT5.Weight"
+      }
+    },
+    "CanSpawnWorldConditionDefinition": {
+      "StaticStruct": {
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        },
+        "EditableConditions": []
+      },
+      "SharedDefinition": {
+        "Conditions": {
+          "Structs": [
+            {
+              "FriendlyCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "HostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::On",
+              "FriendlyNPCs": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "EliteHostileCreatures": "EJunoWorldCondition_AIWorldSettingsExpectedValue::Any",
+              "bInvert": false,
+              "Operator": "EWorldConditionOperator::Copy",
+              "NextExpressionDepth": 0
+            }
+          ]
+        },
+        "SchemaClass": {
+          "ObjectName": "Class'EncounterWorldConditionSchema'",
+          "ObjectPath": "/Script/EncountersRuntime"
+        }
+      }
+    },
+    "DataList": [
+      {
+        "Tags": [
+          "Juno.Encounters.POI.Tabasco.DragonArena.ShatterDragon"
+        ]
+      }
+    ]
+  }
+}

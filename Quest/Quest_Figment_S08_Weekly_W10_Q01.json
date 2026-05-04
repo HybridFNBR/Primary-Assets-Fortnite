@@ -19,98 +19,72 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnComplete",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "EliminatedPawn": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "Killer": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [],
-                "QueryTokenStream": [],
-                "UserDescription": "",
-                "AutoDescription": ""
-              }
-            },
-            "EliminationSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Trait.Explosive"
-                  },
-                  {
-                    "TagName": "Gameplay.Damage.Physical.Explosive"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  2,
-                  0,
-                  1
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Trait.Explosive, Gameplay.Damage.Physical.Explosive )"
-              }
-            },
-            "AllowedTeamAffiliations": [],
-            "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
             "bIncrementByDistance": false,
-            "bUseKillStreak": false,
+            "bUseDistance": true,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
             "Distance": {
               "LowerBound": {
                 "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
+                "Value": 37.0
               },
               "UpperBound": {
                 "Type": "ERangeBoundTypes::Open",
                 "Value": 0.0
               }
             },
-            "KillStreak": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
               }
             },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
                   {
-                    "TagName": "Athena.Quests.Blank"
+                    "TagName": "Homebase.Class"
                   }
                 ],
                 "QueryTokenStream": [
                   0,
                   1,
-                  2,
+                  1,
                   1,
                   0
                 ],
                 "UserDescription": "",
-                "AutoDescription": " ALL( Athena.Quests.Blank )"
+                "AutoDescription": " ANY( Homebase.Class )"
+              }
+            },
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
               }
             },
             "Context": {
@@ -139,22 +113,22 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "C72D1D5C4B6723EEB881B5854B35EFE6",
-          "SourceString": "Week 10 quest",
-          "LocalizedString": "Week 10 quest"
+          "Key": "BF487FFC4AEEE6D86500DEB426E6BD28",
+          "SourceString": "Hit players beyond 40 meters",
+          "LocalizedString": "Hit players beyond 40 meters"
         },
         "HudShortDescription": {
           "Namespace": "",
-          "Key": "F903CD284A8620679C05909DC943D4B9",
-          "SourceString": "Week 10 quest",
-          "LocalizedString": "Week 10 quest"
+          "Key": "5383304747C17640AACACFB4AD10ECDF",
+          "SourceString": "Hit players beyond 40 meters",
+          "LocalizedString": "Hit players beyond 40 meters"
         },
         "ObjectiveConversations": [],
         "ObjectiveDisplayInfo": {
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 1,
+        "Count": 6,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 50,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -214,15 +188,15 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "9737A64D4C8CBA8154417EA66F2D637A",
-      "SourceString": "Week 10 quest",
-      "LocalizedString": "Week 10 quest"
+      "Key": "E213BB9A4D9159CCD91F86B3BE1EB53B",
+      "SourceString": "Hit players beyond 40 meters",
+      "LocalizedString": "Hit players beyond 40 meters"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "B8D1A761476F8E89DA95848BD2A94DE4",
-      "SourceString": "Week 10 quest",
-      "LocalizedString": "Week 10 quest"
+      "Key": "BE7283484DE36530BA0499AE08B2D355",
+      "SourceString": "Hit players beyond 40 meters",
+      "LocalizedString": "Hit players beyond 40 meters"
     },
     "DataList": [
       {

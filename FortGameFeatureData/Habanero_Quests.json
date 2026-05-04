@@ -1,26 +1,101 @@
 {
-  "Type": "GameFeatureAction_AddComponents",
-  "Name": "GameFeatureAction_AddComponents_0",
-  "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-  "Class": "UScriptClass'GameFeatureAction_AddComponents'",
-  "Outer": {
-    "ObjectName": "FortGameFeatureData'Habanero_Quests'",
-    "ObjectPath": "/Habanero_Quests/Habanero_Quests.1"
-  },
+  "Type": "FortGameFeatureData",
+  "Name": "Habanero_Quests",
+  "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+  "Class": "UScriptClass'FortGameFeatureData'",
+  "Package": "/Habanero_Quests/Habanero_Quests",
   "Properties": {
-    "ComponentList": [
+    "Actions": [
       {
-        "ActorClass": {
-          "AssetPathName": "/Script/FortniteGame.FortGameState",
+        "ObjectName": "FortGameFeatureAction_AddToPlaylists'Habanero_Quests:FortGameFeatureAction_AddToPlaylists_0'",
+        "ObjectPath": "/Habanero_Quests/Habanero_Quests.0"
+      },
+      null
+    ],
+    "PrimaryAssetTypesToScan": [
+      {
+        "PrimaryAssetType": "Quest",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortQuestItemDefinition",
           "SubPathString": ""
         },
-        "ComponentClass": {
-          "AssetPathName": "/Script/FortniteQuest.FortQueryRankStateComponent",
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "ChallengeBundle",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortChallengeBundleItemDefinition",
           "SubPathString": ""
         },
-        "bClientComponent": false,
-        "bServerComponent": true,
-        "AdditionFlags": 0
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "ChallengeBundleSchedule",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortChallengeBundleScheduleDefinition",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
+      },
+      {
+        "PrimaryAssetType": "Token",
+        "AssetBaseClass": {
+          "AssetPathName": "/Script/FortniteGame.FortTokenType",
+          "SubPathString": ""
+        },
+        "bHasBlueprintClasses": false,
+        "bIsEditorOnly": false,
+        "Directories": [
+          {
+            "Path": "Items/Tokens"
+          }
+        ],
+        "SpecificAssets": [],
+        "Rules": {
+          "Priority": -1,
+          "ChunkId": -1,
+          "bApplyRecursively": true,
+          "CookRule": "EPrimaryAssetCookRule::Unknown"
+        }
       }
     ]
   }

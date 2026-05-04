@@ -19,11 +19,38 @@
         "bRequirePrimaryMissionCompletion": false,
         "bCanProgressInZone": true,
         "bDisplayDynamicAnnouncementUpdate": false,
-        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::Always",
+        "DynamicStatusUpdateType": "EObjectiveStatusUpdateType::OnPercent",
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "EliminatedPawn": {
+            "bUseDistance": false,
+            "bAllowSelfInflictedDamage": false,
+            "bRequireCriticalHit": false,
+            "bIncrementByDamageAmount": true,
+            "bUseDamageAmount": false,
+            "bIncrementByUncappedDamage": false,
+            "bUseUncappedDamage": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "DamageSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "DamagedActor": {
+              "bCanGainProgressForThisObjective": false,
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [
@@ -42,81 +69,61 @@
                 "AutoDescription": " ANY( Homebase.Class )"
               }
             },
-            "Killer": {
+            "DamageType": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Item.Weapon.Ranged.Assault.Heavy"
+                  },
+                  {
+                    "TagName": "Item.Weapon.Ranged.Assault.Drum"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  2,
+                  0,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Item.Weapon.Ranged.Assault.Heavy, Item.Weapon.Ranged.Assault.Drum )"
+              }
+            },
+            "DamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "UncappedDamageAmount": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "TeamDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "SelfInflictedDamage": "EObjectiveProcessorPropertyRequirement::Prohibited",
+            "KillingBlowHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "PreviousDamageHandling": "EObjectiveProcessorPropertyRequirement::Ignored",
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
               "TagQuery": {
                 "TokenStreamVersion": 0,
                 "TagDictionary": [],
                 "QueryTokenStream": [],
                 "UserDescription": "",
                 "AutoDescription": ""
-              }
-            },
-            "EliminationSource": {
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Item.Weapon.Ranged.SMG"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  1,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ANY( Item.Weapon.Ranged.SMG )"
-              }
-            },
-            "AllowedTeamAffiliations": [],
-            "ProhibitedTeamAffiliations": [],
-            "AllowedKilledPawnTypes": [],
-            "ProhibitedKilledPawnTypes": [],
-            "bAllowSelfEliminations": false,
-            "bRequirePawnWasEliminatedByConvertedPawn": false,
-            "bUseDistance": false,
-            "bIncrementByDistance": false,
-            "bUseKillStreak": false,
-            "Distance": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0.0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0.0
-              }
-            },
-            "KillStreak": {
-              "LowerBound": {
-                "Type": "ERangeBoundTypes::Inclusive",
-                "Value": 0
-              },
-              "UpperBound": {
-                "Type": "ERangeBoundTypes::Open",
-                "Value": 0
-              }
-            },
-            "Author": {
-              "bCanGainProgressForThisObjective": true,
-              "TagQuery": {
-                "TokenStreamVersion": 0,
-                "TagDictionary": [
-                  {
-                    "TagName": "Athena.Quests.Blank"
-                  }
-                ],
-                "QueryTokenStream": [
-                  0,
-                  1,
-                  2,
-                  1,
-                  0
-                ],
-                "UserDescription": "",
-                "AutoDescription": " ALL( Athena.Quests.Blank )"
               }
             },
             "Context": {
@@ -145,22 +152,22 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "023772144A519ADBD200199D30C57FE4",
-          "SourceString": "Week 6 quest",
-          "LocalizedString": "Week 6 quest"
+          "Key": "8A182F8B4663D483B818DD916394F404",
+          "SourceString": "Damage players with the Heavy Assault Rifle or Drum Gun",
+          "LocalizedString": "Damage players with the Heavy Assault Rifle or Drum Gun"
         },
         "HudShortDescription": {
           "Namespace": "",
-          "Key": "501FBAB0450B6A28FCECB486BB0B59E0",
-          "SourceString": "Week 6 quest",
-          "LocalizedString": "Week 6 quest"
+          "Key": "0CDA724547885364030180BCA359844E",
+          "SourceString": "Damage players with the Heavy Assault Rifle or Drum Gun",
+          "LocalizedString": "Damage players with the Heavy Assault Rifle or Drum Gun"
         },
         "ObjectiveConversations": [],
         "ObjectiveDisplayInfo": {
           "DisplayStage": 0,
           "DisplayMaxStage": 0
         },
-        "Count": 5,
+        "Count": 1500,
         "Stage": -1,
         "DynamicStatusUpdatePercentInterval": 25,
         "DynamicUpdateCompletionDelay": 0.0,
@@ -220,15 +227,15 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "B45B1EBF492DA68A646D25941F49D3A0",
-      "SourceString": "Week 6 quest",
-      "LocalizedString": "Week 6 quest"
+      "Key": "C68DB65A411BA6BACD25AB9AEAB3D785",
+      "SourceString": "Damage players with the Heavy Assault Rifle or Drum Gun",
+      "LocalizedString": "Damage players with the Heavy Assault Rifle or Drum Gun"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "BD5F397B483BEECE8CF08AA66F5D9DCA",
-      "SourceString": "Week 6 quest",
-      "LocalizedString": "Week 6 quest"
+      "Key": "37BB8E68493F93D8309140AC32AFA87B",
+      "SourceString": "Damage players with the Heavy Assault Rifle or Drum Gun",
+      "LocalizedString": "Damage players with the Heavy Assault Rifle or Drum Gun"
     },
     "DataList": [
       {

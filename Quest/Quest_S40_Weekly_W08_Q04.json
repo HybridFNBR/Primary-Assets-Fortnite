@@ -6,6 +6,10 @@
   "Package": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q04",
   "Properties": {
     "QuestSubtype": "EFortQuestSubtype::WeeklyChallenge",
+    "QuestGiverWidgetIconForToast": {
+      "AssetPathName": "/BRCosmetics/UI/Foundation/Textures/Icons/Heroes/Athena/Soldier/S36/T_Soldier_Character_SynthContactM_visor1_a.T_Soldier_Character_SynthContactM_visor1_a",
+      "SubPathString": ""
+    },
     "QuestType": "EFortQuestType::AthenaChallengeBundleQuest",
     "CompletionPathResults": [
       {
@@ -24,13 +28,173 @@
         "LinkToItemManagement": "EFortFrontendInventoryFilter::Max_None",
         "ObjectiveFilters": [
           {
-            "Verb": {
-              "TagName": "CustomVerb.ImpossibleToComplete"
+            "EliminatedPawn": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Homebase.Class"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Homebase.Class )"
+              }
             },
-            "Subjects": [],
-            "Values": [],
-            "bIncrementByNamedValue": false,
-            "NameOfValueToIncrementBy": "None",
+            "Killer": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "EliminationSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AllowedTeamAffiliations": [],
+            "ProhibitedTeamAffiliations": [],
+            "AllowedKilledPawnTypes": [],
+            "ProhibitedKilledPawnTypes": [],
+            "bAllowSelfEliminations": false,
+            "bRequirePawnWasEliminatedByConvertedPawn": false,
+            "bUseDistance": false,
+            "bIncrementByDistance": false,
+            "bUseKillStreak": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "KillStreak": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
+            "Author": {
+              "bCanGainProgressForThisObjective": true,
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Athena.Location.POI.Generic.18"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  1,
+                  1,
+                  0
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ANY( Athena.Location.POI.Generic.18 )"
+              }
+            },
+            "Context": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            }
+          },
+          {
+            "EliminatedPawn": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [
+                  {
+                    "TagName": "Homebase.Class"
+                  },
+                  {
+                    "TagName": "Athena.Location.POI.Generic.18"
+                  }
+                ],
+                "QueryTokenStream": [
+                  0,
+                  1,
+                  2,
+                  2,
+                  0,
+                  1
+                ],
+                "UserDescription": "",
+                "AutoDescription": " ALL( Homebase.Class, Athena.Location.POI.Generic.18 )"
+              }
+            },
+            "Killer": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "EliminationSource": {
+              "TagQuery": {
+                "TokenStreamVersion": 0,
+                "TagDictionary": [],
+                "QueryTokenStream": [],
+                "UserDescription": "",
+                "AutoDescription": ""
+              }
+            },
+            "AllowedTeamAffiliations": [],
+            "ProhibitedTeamAffiliations": [],
+            "AllowedKilledPawnTypes": [],
+            "ProhibitedKilledPawnTypes": [],
+            "bAllowSelfEliminations": false,
+            "bRequirePawnWasEliminatedByConvertedPawn": false,
+            "bUseDistance": false,
+            "bIncrementByDistance": false,
+            "bUseKillStreak": false,
+            "Distance": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0.0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0.0
+              }
+            },
+            "KillStreak": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": 0
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": 0
+              }
+            },
             "Author": {
               "bCanGainProgressForThisObjective": true,
               "TagQuery": {
@@ -67,9 +231,9 @@
         "LinkSquadIndex": 0,
         "Description": {
           "Namespace": "",
-          "Key": "71DC8B394B2725B3894D239957421843",
-          "SourceString": "[Quest_S40_Weekly_W08_Q04]",
-          "LocalizedString": "[Quest_S40_Weekly_W08_Q04]"
+          "Key": "6DB6C373412DA7777084BEB293EA084E",
+          "SourceString": "Eliminate a player at Dark Dominion so The Visitor can focus",
+          "LocalizedString": "Eliminate a player at Dark Dominion so The Visitor can focus"
         },
         "HudShortDescription": {
           "CultureInvariantString": null
@@ -112,11 +276,15 @@
     "QuestDefinitionComponents": [
       {
         "ObjectName": "FortQuestDefinitionComponent_Rewards'Quest_S40_Weekly_W08_Q04:FortQuestDefinitionComponent_Rewards_0'",
-        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q04.1"
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q04.2"
       },
       {
         "ObjectName": "FortQuestDefinitionComponent_DisplaySettings'Quest_S40_Weekly_W08_Q04:FortQuestDefinitionComponent_DisplaySettings_0'",
         "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q04.0"
+      },
+      {
+        "ObjectName": "FortQuestDefinitionComponent_MapMarkers'Quest_S40_Weekly_W08_Q04:FortQuestDefinitionComponent_MapMarkers_0'",
+        "ObjectPath": "/BattlePassS40_Quests/Items/QuestItems/WeeklyQuests/Week_08/Quest_S40_Weekly_W08_Q04.1"
       }
     ],
     "CompletionPaths": [
@@ -139,15 +307,21 @@
     "GrantToProfileType": "athena",
     "ItemName": {
       "Namespace": "",
-      "Key": "71DC8B394B2725B3894D239957421843",
-      "SourceString": "[Quest_S40_Weekly_W08_Q04]",
-      "LocalizedString": "[Quest_S40_Weekly_W08_Q04]"
+      "Key": "1AD3C41F4CF21BA65B3B119707641C09",
+      "SourceString": "Eliminate a player at Dark Dominion so The Visitor can focus",
+      "LocalizedString": "Eliminate a player at Dark Dominion so The Visitor can focus"
     },
     "ItemDescription": {
       "Namespace": "",
-      "Key": "71DC8B394B2725B3894D239957421843",
-      "SourceString": "[Quest_S40_Weekly_W08_Q04]",
-      "LocalizedString": "[Quest_S40_Weekly_W08_Q04]"
+      "Key": "A3103A0A4430E124AF56A4A581B87648",
+      "SourceString": "Eliminate a player at Dark Dominion so The Visitor can focus",
+      "LocalizedString": "Eliminate a player at Dark Dominion so The Visitor can focus"
+    },
+    "ItemShortDescription": {
+      "Namespace": "",
+      "Key": "8F5C6E5E4B52ED6B7CC0C296C819CFF5",
+      "SourceString": "I need quiet to focus.",
+      "LocalizedString": "I need quiet to focus."
     },
     "DataList": [
       {
